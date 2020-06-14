@@ -16,12 +16,14 @@ import org.openapitools.client.ApiInvoker;
 import org.openapitools.client.ApiException;
 import org.openapitools.client.Pair;
 
+import org.openapitools.client.model.*;
 
 import java.util.*;
 
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
+import org.openapitools.client.model.Response1ObjectActivesessionGetCurrent;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
@@ -56,9 +58,9 @@ public class ActivesessionApi {
   /**
   * Get Current Activesession
   * Todo Description
-   * @return void
+   * @return Response1ObjectActivesessionGetCurrent
   */
-  public void getCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public Response1ObjectActivesessionGetCurrent 1objectActivesessionGetCurrentGet () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
@@ -88,9 +90,9 @@ public class ActivesessionApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return ;
+         return (Response1ObjectActivesessionGetCurrent) ApiInvoker.deserialize(localVarResponse, "", Response1ObjectActivesessionGetCurrent.class);
       } else {
-         return ;
+         return null;
       }
     } catch (ApiException ex) {
        throw ex;
@@ -114,7 +116,7 @@ public class ActivesessionApi {
    * Todo Description
 
   */
-  public void getCurrent (final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
+  public void 1objectActivesessionGetCurrentGet (final Response.Listener<Response1ObjectActivesessionGetCurrent> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
@@ -153,7 +155,11 @@ public class ActivesessionApi {
         new Response.Listener<String>() {
           @Override
           public void onResponse(String localVarResponse) {
-              responseListener.onResponse(localVarResponse);
+            try {
+              responseListener.onResponse((Response1ObjectActivesessionGetCurrent) ApiInvoker.deserialize(localVarResponse,  "", Response1ObjectActivesessionGetCurrent.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
           }
       }, new Response.ErrorListener() {
           @Override

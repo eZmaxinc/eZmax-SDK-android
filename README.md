@@ -65,9 +65,10 @@ public class ActivesessionApiExample {
     public static void main(String[] args) {
         ActivesessionApi apiInstance = new ActivesessionApi();
         try {
-            apiInstance.getCurrent();
+            Response1ObjectActivesessionGetCurrent result = apiInstance.1objectActivesessionGetCurrentGet();
+            System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling ActivesessionApi#getCurrent");
+            System.err.println("Exception when calling ActivesessionApi#1objectActivesessionGetCurrentGet");
             e.printStackTrace();
         }
     }
@@ -81,11 +82,17 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*ActivesessionApi* | [**getCurrent**](docs/ActivesessionApi.md#getCurrent) | **GET** /1/object/activesession/getCurrent | Get Current Activesession
+*ActivesessionApi* | [**1objectActivesessionGetCurrentGet**](docs/ActivesessionApi.md#1objectActivesessionGetCurrentGet) | **GET** /1/object/activesession/getCurrent | Get Current Activesession
 
 
 ## Documentation for Models
 
+ - [Response1ObjectActivesessionGetCurrent](docs/Response1ObjectActivesessionGetCurrent.md)
+ - [Response1ObjectActivesessionGetCurrentAllOf](docs/Response1ObjectActivesessionGetCurrentAllOf.md)
+ - [ResponseGeneric](docs/ResponseGeneric.md)
+ - [SchemaGenericObjDebug](docs/SchemaGenericObjDebug.md)
+ - [SchemaGenericObjDebugPayload](docs/SchemaGenericObjDebugPayload.md)
+ - [SchemaGenericObjSQLQuery](docs/SchemaGenericObjSQLQuery.md)
 
 
 ## Documentation for Authorization

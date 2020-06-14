@@ -22,6 +22,7 @@ import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.List;
 import java.util.Date;
+import org.openapitools.client.model.*;
 
 public class JsonUtil {
   public static GsonBuilder gsonBuilder;
@@ -56,11 +57,59 @@ public class JsonUtil {
   public static Type getListTypeForDeserialization(Class cls) {
     String className = cls.getSimpleName();
     
+    if ("Response1ObjectActivesessionGetCurrent".equalsIgnoreCase(className)) {
+      return new TypeToken<List<Response1ObjectActivesessionGetCurrent>>(){}.getType();
+    }
+    
+    if ("Response1ObjectActivesessionGetCurrentAllOf".equalsIgnoreCase(className)) {
+      return new TypeToken<List<Response1ObjectActivesessionGetCurrentAllOf>>(){}.getType();
+    }
+    
+    if ("ResponseGeneric".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ResponseGeneric>>(){}.getType();
+    }
+    
+    if ("SchemaGenericObjDebug".equalsIgnoreCase(className)) {
+      return new TypeToken<List<SchemaGenericObjDebug>>(){}.getType();
+    }
+    
+    if ("SchemaGenericObjDebugPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<SchemaGenericObjDebugPayload>>(){}.getType();
+    }
+    
+    if ("SchemaGenericObjSQLQuery".equalsIgnoreCase(className)) {
+      return new TypeToken<List<SchemaGenericObjSQLQuery>>(){}.getType();
+    }
+    
     return new TypeToken<List<Object>>(){}.getType();
   }
 
   public static Type getTypeForDeserialization(Class cls) {
     String className = cls.getSimpleName();
+    
+    if ("Response1ObjectActivesessionGetCurrent".equalsIgnoreCase(className)) {
+      return new TypeToken<Response1ObjectActivesessionGetCurrent>(){}.getType();
+    }
+    
+    if ("Response1ObjectActivesessionGetCurrentAllOf".equalsIgnoreCase(className)) {
+      return new TypeToken<Response1ObjectActivesessionGetCurrentAllOf>(){}.getType();
+    }
+    
+    if ("ResponseGeneric".equalsIgnoreCase(className)) {
+      return new TypeToken<ResponseGeneric>(){}.getType();
+    }
+    
+    if ("SchemaGenericObjDebug".equalsIgnoreCase(className)) {
+      return new TypeToken<SchemaGenericObjDebug>(){}.getType();
+    }
+    
+    if ("SchemaGenericObjDebugPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<SchemaGenericObjDebugPayload>(){}.getType();
+    }
+    
+    if ("SchemaGenericObjSQLQuery".equalsIgnoreCase(className)) {
+      return new TypeToken<SchemaGenericObjSQLQuery>(){}.getType();
+    }
     
     return new TypeToken<Object>(){}.getType();
   }

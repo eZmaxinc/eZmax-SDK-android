@@ -3,6 +3,12 @@
 README.md
 build.gradle
 docs/ActivesessionApi.md
+docs/Response1ObjectActivesessionGetCurrent.md
+docs/Response1ObjectActivesessionGetCurrentAllOf.md
+docs/ResponseGeneric.md
+docs/SchemaGenericObjDebug.md
+docs/SchemaGenericObjDebugPayload.md
+docs/SchemaGenericObjSQLQuery.md
 git_push.sh
 gradle/wrapper/gradle-wrapper.jar
 gradle/wrapper/gradle-wrapper.properties
@@ -18,6 +24,12 @@ src/main/java/org/openapitools/client/api/ActivesessionApi.java
 src/main/java/org/openapitools/client/auth/ApiKeyAuth.java
 src/main/java/org/openapitools/client/auth/Authentication.java
 src/main/java/org/openapitools/client/auth/HttpBasicAuth.java
+src/main/java/org/openapitools/client/model/Response1ObjectActivesessionGetCurrent.java
+src/main/java/org/openapitools/client/model/Response1ObjectActivesessionGetCurrentAllOf.java
+src/main/java/org/openapitools/client/model/ResponseGeneric.java
+src/main/java/org/openapitools/client/model/SchemaGenericObjDebug.java
+src/main/java/org/openapitools/client/model/SchemaGenericObjDebugPayload.java
+src/main/java/org/openapitools/client/model/SchemaGenericObjSQLQuery.java
 src/main/java/org/openapitools/client/request/DeleteRequest.java
 src/main/java/org/openapitools/client/request/GetRequest.java
 src/main/java/org/openapitools/client/request/PatchRequest.java

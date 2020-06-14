@@ -4,13 +4,13 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getCurrent**](ActivesessionApi.md#getCurrent) | **GET** /1/object/activesession/getCurrent | Get Current Activesession
+[**1objectActivesessionGetCurrentGet**](ActivesessionApi.md#1objectActivesessionGetCurrentGet) | **GET** /1/object/activesession/getCurrent | Get Current Activesession
 
 
 
-## getCurrent
+## 1objectActivesessionGetCurrentGet
 
-> getCurrent()
+> Response1ObjectActivesessionGetCurrent 1objectActivesessionGetCurrentGet()
 
 Get Current Activesession
 
@@ -24,9 +24,10 @@ Todo Description
 
 ActivesessionApi apiInstance = new ActivesessionApi();
 try {
-    apiInstance.getCurrent();
+    Response1ObjectActivesessionGetCurrent result = apiInstance.1objectActivesessionGetCurrentGet();
+    System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling ActivesessionApi#getCurrent");
+    System.err.println("Exception when calling ActivesessionApi#1objectActivesessionGetCurrentGet");
     e.printStackTrace();
 }
 ```
@@ -37,7 +38,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-null (empty response body)
+[**Response1ObjectActivesessionGetCurrent**](Response1ObjectActivesessionGetCurrent.md)
 
 ### Authorization
 
