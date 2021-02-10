@@ -23,9 +23,8 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
-import java.util.*;
-import org.openapitools.client.model.UserCreateEzsignuserV1Request;
-import org.openapitools.client.model.UserCreateEzsignuserV1Response;
+import org.openapitools.client.model.CommonResponseError;
+import org.openapitools.client.model.GlobalCustomerGetEndpointV1Response;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
@@ -37,7 +36,7 @@ import java.util.Map;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeoutException;
 
-public class ModuleUserApi {
+public class GlobalCustomerApi {
   String basePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
@@ -58,21 +57,22 @@ public class ModuleUserApi {
   }
 
   /**
-  * Create a new User of type Ezsignuser
-  * The endpoint allows to initiate the creation or a user of type Ezsignuser.  The user will be created only once the email verification process will be completed
-   * @param userCreateEzsignuserV1Request 
-   * @return UserCreateEzsignuserV1Response
+  * Get customer endpoint
+  * Retrieve the customer&#39;s specific server endpoint where to send requests. This will help locate the proper region (ie: sInfrastructureregionCode) and the proper environment (ie: sInfrastructureenvironmenttypeDescription) where the customer&#39;s data is stored.
+   * @param pksCustomerCode The customer code assigned to your account
+   * @param sInfrastructureproductCode The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed
+   * @return GlobalCustomerGetEndpointV1Response
   */
-  public UserCreateEzsignuserV1Response userCreateEzsignuserV1 (List<UserCreateEzsignuserV1Request> userCreateEzsignuserV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
-    Object postBody = userCreateEzsignuserV1Request;
-    // verify the required parameter 'userCreateEzsignuserV1Request' is set
-    if (userCreateEzsignuserV1Request == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'userCreateEzsignuserV1Request' when calling userCreateEzsignuserV1",
-        new ApiException(400, "Missing the required parameter 'userCreateEzsignuserV1Request' when calling userCreateEzsignuserV1"));
+  public GlobalCustomerGetEndpointV1Response globalCustomerGetEndpointV1 (String pksCustomerCode, String sInfrastructureproductCode) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pksCustomerCode' is set
+    if (pksCustomerCode == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pksCustomerCode' when calling globalCustomerGetEndpointV1",
+        new ApiException(400, "Missing the required parameter 'pksCustomerCode' when calling globalCustomerGetEndpointV1"));
     }
 
     // create path and map variables
-    String path = "/1/module/user/createezsignuser";
+    String path = "/1/customer/{pksCustomerCode}/endpoint".replaceAll("\\{" + "pksCustomerCode" + "\\}", apiInvoker.escapeString(pksCustomerCode.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -80,8 +80,8 @@ public class ModuleUserApi {
     Map<String, String> headerParams = new HashMap<String, String>();
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "sInfrastructureproductCode", sInfrastructureproductCode));
     String[] contentTypes = {
-      "application/json"
     };
     String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
 
@@ -97,9 +97,9 @@ public class ModuleUserApi {
     String[] authNames = new String[] { "Authorization" };
 
     try {
-      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (UserCreateEzsignuserV1Response) ApiInvoker.deserialize(localVarResponse, "", UserCreateEzsignuserV1Response.class);
+         return (GlobalCustomerGetEndpointV1Response) ApiInvoker.deserialize(localVarResponse, "", GlobalCustomerGetEndpointV1Response.class);
       } else {
          return null;
       }
@@ -121,21 +121,21 @@ public class ModuleUserApi {
   }
 
       /**
-   * Create a new User of type Ezsignuser
-   * The endpoint allows to initiate the creation or a user of type Ezsignuser.  The user will be created only once the email verification process will be completed
-   * @param userCreateEzsignuserV1Request 
+   * Get customer endpoint
+   * Retrieve the customer&#39;s specific server endpoint where to send requests. This will help locate the proper region (ie: sInfrastructureregionCode) and the proper environment (ie: sInfrastructureenvironmenttypeDescription) where the customer&#39;s data is stored.
+   * @param pksCustomerCode The customer code assigned to your account   * @param sInfrastructureproductCode The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed
   */
-  public void userCreateEzsignuserV1 (List<UserCreateEzsignuserV1Request> userCreateEzsignuserV1Request, final Response.Listener<UserCreateEzsignuserV1Response> responseListener, final Response.ErrorListener errorListener) {
-    Object postBody = userCreateEzsignuserV1Request;
+  public void globalCustomerGetEndpointV1 (String pksCustomerCode, String sInfrastructureproductCode, final Response.Listener<GlobalCustomerGetEndpointV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
 
-    // verify the required parameter 'userCreateEzsignuserV1Request' is set
-    if (userCreateEzsignuserV1Request == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'userCreateEzsignuserV1Request' when calling userCreateEzsignuserV1",
-        new ApiException(400, "Missing the required parameter 'userCreateEzsignuserV1Request' when calling userCreateEzsignuserV1"));
+    // verify the required parameter 'pksCustomerCode' is set
+    if (pksCustomerCode == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pksCustomerCode' when calling globalCustomerGetEndpointV1",
+        new ApiException(400, "Missing the required parameter 'pksCustomerCode' when calling globalCustomerGetEndpointV1"));
     }
 
     // create path and map variables
-    String path = "/1/module/user/createezsignuser".replaceAll("\\{format\\}","json");
+    String path = "/1/customer/{pksCustomerCode}/endpoint".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pksCustomerCode" + "\\}", apiInvoker.escapeString(pksCustomerCode.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -144,10 +144,11 @@ public class ModuleUserApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
 
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "sInfrastructureproductCode", sInfrastructureproductCode));
 
 
     String[] contentTypes = {
-      "application/json"
+      
     };
     String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
 
@@ -165,12 +166,12 @@ public class ModuleUserApi {
     String[] authNames = new String[] { "Authorization" };
 
     try {
-      apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames,
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
         new Response.Listener<String>() {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((UserCreateEzsignuserV1Response) ApiInvoker.deserialize(localVarResponse,  "", UserCreateEzsignuserV1Response.class));
+              responseListener.onResponse((GlobalCustomerGetEndpointV1Response) ApiInvoker.deserialize(localVarResponse,  "", GlobalCustomerGetEndpointV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

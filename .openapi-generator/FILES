@@ -92,6 +92,8 @@ docs/FranchisereferalincomeCreateObjectV1Response.md
 docs/FranchisereferalincomeCreateObjectV1ResponseMPayload.md
 docs/FranchisereferalincomeRequest.md
 docs/FranchisereferalincomeRequestCompound.md
+docs/GlobalCustomerApi.md
+docs/GlobalCustomerGetEndpointV1Response.md
 docs/ModuleUserApi.md
 docs/MultilingualApikeyDescription.md
 docs/ObjectActivesessionApi.md
@@ -137,6 +139,7 @@ src/main/java/eZmaxAPI/request/GetRequest.java
 src/main/java/eZmaxAPI/request/PatchRequest.java
 src/main/java/eZmaxAPI/request/PostRequest.java
 src/main/java/eZmaxAPI/request/PutRequest.java
+src/main/java/org/openapitools/client/api/GlobalCustomerApi.java
 src/main/java/org/openapitools/client/api/ModuleUserApi.java
 src/main/java/org/openapitools/client/api/ObjectActivesessionApi.java
 src/main/java/org/openapitools/client/api/ObjectApikeyApi.java
@@ -238,6 +241,7 @@ src/main/java/org/openapitools/client/model/FranchisereferalincomeCreateObjectV1
 src/main/java/org/openapitools/client/model/FranchisereferalincomeCreateObjectV1ResponseMPayload.java
 src/main/java/org/openapitools/client/model/FranchisereferalincomeRequest.java
 src/main/java/org/openapitools/client/model/FranchisereferalincomeRequestCompound.java
+src/main/java/org/openapitools/client/model/GlobalCustomerGetEndpointV1Response.java
 src/main/java/org/openapitools/client/model/MultilingualApikeyDescription.java
 src/main/java/org/openapitools/client/model/PhoneRequest.java
 src/main/java/org/openapitools/client/model/UserCreateEzsignuserV1Request.java

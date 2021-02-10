@@ -16,23 +16,23 @@ import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Request for the /1/object/ezsignfolder/{pkiEzsignfolderID}/send API Request
+ * Response for the /1/customer/{pksCustomerCode}/endpoint API Request
  **/
-@ApiModel(description = "Request for the /1/object/ezsignfolder/{pkiEzsignfolderID}/send API Request")
-public class EzsignfolderSendV1Request {
+@ApiModel(description = "Response for the /1/customer/{pksCustomerCode}/endpoint API Request")
+public class GlobalCustomerGetEndpointV1Response {
   
-  @SerializedName("tExtraMessage")
-  private String tExtraMessage = null;
+  @SerializedName("sEndpointURL")
+  private String sEndpointURL = null;
 
   /**
-   * A custom text message that will be added to the email sent to signatories inviting them to sign.  You can send an empty string and only the generic message will be sent.
+   * The endpoint's URL
    **/
-  @ApiModelProperty(required = true, value = "A custom text message that will be added to the email sent to signatories inviting them to sign.  You can send an empty string and only the generic message will be sent.")
-  public String getTExtraMessage() {
-    return tExtraMessage;
+  @ApiModelProperty(required = true, value = "The endpoint's URL")
+  public String getSEndpointURL() {
+    return sEndpointURL;
   }
-  public void setTExtraMessage(String tExtraMessage) {
-    this.tExtraMessage = tExtraMessage;
+  public void setSEndpointURL(String sEndpointURL) {
+    this.sEndpointURL = sEndpointURL;
   }
 
 
@@ -44,23 +44,23 @@ public class EzsignfolderSendV1Request {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    EzsignfolderSendV1Request ezsignfolderSendV1Request = (EzsignfolderSendV1Request) o;
-    return (this.tExtraMessage == null ? ezsignfolderSendV1Request.tExtraMessage == null : this.tExtraMessage.equals(ezsignfolderSendV1Request.tExtraMessage));
+    GlobalCustomerGetEndpointV1Response globalCustomerGetEndpointV1Response = (GlobalCustomerGetEndpointV1Response) o;
+    return (this.sEndpointURL == null ? globalCustomerGetEndpointV1Response.sEndpointURL == null : this.sEndpointURL.equals(globalCustomerGetEndpointV1Response.sEndpointURL));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.tExtraMessage == null ? 0: this.tExtraMessage.hashCode());
+    result = 31 * result + (this.sEndpointURL == null ? 0: this.sEndpointURL.hashCode());
     return result;
   }
 
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class EzsignfolderSendV1Request {\n");
+    sb.append("class GlobalCustomerGetEndpointV1Response {\n");
     
-    sb.append("  tExtraMessage: ").append(tExtraMessage).append("\n");
+    sb.append("  sEndpointURL: ").append(sEndpointURL).append("\n");
     sb.append("}\n");
     return sb.toString();
   }
