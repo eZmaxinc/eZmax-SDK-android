@@ -23,9 +23,7 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
-import org.openapitools.client.model.ApikeyCreateObjectV1Request;
-import org.openapitools.client.model.ApikeyCreateObjectV1Response;
-import java.util.*;
+import org.openapitools.client.model.CommonResponseError;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
@@ -37,7 +35,7 @@ import java.util.Map;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeoutException;
 
-public class ObjectApikeyApi {
+public class ModuleSsprApi {
   String basePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
@@ -58,21 +56,15 @@ public class ObjectApikeyApi {
   }
 
   /**
-  * Create a new Apikey
-  * The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
-   * @param apikeyCreateObjectV1Request 
-   * @return ApikeyCreateObjectV1Response
+  * Remind of forgotten username(s)
+  * This endpoint returns an email with the username(s) matching the email address provided in case of forgotten username
+   * @return void
   */
-  public ApikeyCreateObjectV1Response apikeyCreateObjectV1 (List<ApikeyCreateObjectV1Request> apikeyCreateObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
-    Object postBody = apikeyCreateObjectV1Request;
-    // verify the required parameter 'apikeyCreateObjectV1Request' is set
-    if (apikeyCreateObjectV1Request == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'apikeyCreateObjectV1Request' when calling apikeyCreateObjectV1",
-        new ApiException(400, "Missing the required parameter 'apikeyCreateObjectV1Request' when calling apikeyCreateObjectV1"));
-    }
+  public void ssprRemindUsernamesV1 () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
 
     // create path and map variables
-    String path = "/1/object/apikey";
+    String path = "/1/module/sspr/remindUsernames";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -81,7 +73,6 @@ public class ObjectApikeyApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
     String[] contentTypes = {
-      "application/json"
     };
     String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
 
@@ -99,9 +90,9 @@ public class ObjectApikeyApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (ApikeyCreateObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", ApikeyCreateObjectV1Response.class);
+         return ;
       } else {
-         return null;
+         return ;
       }
     } catch (ApiException ex) {
        throw ex;
@@ -121,21 +112,16 @@ public class ObjectApikeyApi {
   }
 
       /**
-   * Create a new Apikey
-   * The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
-   * @param apikeyCreateObjectV1Request 
-  */
-  public void apikeyCreateObjectV1 (List<ApikeyCreateObjectV1Request> apikeyCreateObjectV1Request, final Response.Listener<ApikeyCreateObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
-    Object postBody = apikeyCreateObjectV1Request;
+   * Remind of forgotten username(s)
+   * This endpoint returns an email with the username(s) matching the email address provided in case of forgotten username
 
-    // verify the required parameter 'apikeyCreateObjectV1Request' is set
-    if (apikeyCreateObjectV1Request == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'apikeyCreateObjectV1Request' when calling apikeyCreateObjectV1",
-        new ApiException(400, "Missing the required parameter 'apikeyCreateObjectV1Request' when calling apikeyCreateObjectV1"));
-    }
+  */
+  public void ssprRemindUsernamesV1 (final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
 
     // create path and map variables
-    String path = "/1/object/apikey".replaceAll("\\{format\\}","json");
+    String path = "/1/module/sspr/remindUsernames".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -147,7 +133,7 @@ public class ObjectApikeyApi {
 
 
     String[] contentTypes = {
-      "application/json"
+      
     };
     String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
 
@@ -169,11 +155,7 @@ public class ObjectApikeyApi {
         new Response.Listener<String>() {
           @Override
           public void onResponse(String localVarResponse) {
-            try {
-              responseListener.onResponse((ApikeyCreateObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", ApikeyCreateObjectV1Response.class));
-            } catch (ApiException exception) {
-               errorListener.onErrorResponse(new VolleyError(exception));
-            }
+              responseListener.onResponse(localVarResponse);
           }
       }, new Response.ErrorListener() {
           @Override
