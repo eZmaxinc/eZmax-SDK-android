@@ -33,8 +33,6 @@ docs/EzsigndocumentCreateObjectV1Request.md
 docs/EzsigndocumentCreateObjectV1Response.md
 docs/EzsigndocumentCreateObjectV1ResponseMPayload.md
 docs/EzsigndocumentDeleteObjectV1Response.md
-docs/EzsigndocumentEditObjectV1Request.md
-docs/EzsigndocumentEditObjectV1Response.md
 docs/EzsigndocumentGetDownloadUrlV1Response.md
 docs/EzsigndocumentGetDownloadUrlV1ResponseMPayload.md
 docs/EzsigndocumentGetObjectV1Response.md
@@ -48,8 +46,6 @@ docs/EzsignfolderCreateObjectV1Request.md
 docs/EzsignfolderCreateObjectV1Response.md
 docs/EzsignfolderCreateObjectV1ResponseMPayload.md
 docs/EzsignfolderDeleteObjectV1Response.md
-docs/EzsignfolderEditObjectV1Request.md
-docs/EzsignfolderEditObjectV1Response.md
 docs/EzsignfolderGetObjectV1Response.md
 docs/EzsignfolderGetObjectV1ResponseMPayload.md
 docs/EzsignfolderRequest.md
@@ -63,8 +59,6 @@ docs/EzsignfoldersignerassociationCreateObjectV1Request.md
 docs/EzsignfoldersignerassociationCreateObjectV1Response.md
 docs/EzsignfoldersignerassociationCreateObjectV1ResponseMPayload.md
 docs/EzsignfoldersignerassociationDeleteObjectV1Response.md
-docs/EzsignfoldersignerassociationEditObjectV1Request.md
-docs/EzsignfoldersignerassociationEditObjectV1Response.md
 docs/EzsignfoldersignerassociationGetInPersonLoginUrlV1Response.md
 docs/EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload.md
 docs/EzsignfoldersignerassociationGetObjectV1Response.md
@@ -74,8 +68,6 @@ docs/EzsignsignatureCreateObjectV1Request.md
 docs/EzsignsignatureCreateObjectV1Response.md
 docs/EzsignsignatureCreateObjectV1ResponseMPayload.md
 docs/EzsignsignatureDeleteObjectV1Response.md
-docs/EzsignsignatureEditObjectV1Request.md
-docs/EzsignsignatureEditObjectV1Response.md
 docs/EzsignsignatureGetObjectV1Response.md
 docs/EzsignsignatureRequest.md
 docs/EzsignsignatureRequestCompound.md
@@ -108,6 +100,14 @@ docs/ObjectFranchiseofficeApi.md
 docs/ObjectFranchisereferalincomeApi.md
 docs/ObjectPeriodApi.md
 docs/PhoneRequest.md
+docs/UNUSEDEzsigndocumentEditObjectV1Request.md
+docs/UNUSEDEzsigndocumentEditObjectV1Response.md
+docs/UNUSEDEzsignfolderEditObjectV1Request.md
+docs/UNUSEDEzsignfolderEditObjectV1Response.md
+docs/UNUSEDEzsignfoldersignerassociationEditObjectV1Request.md
+docs/UNUSEDEzsignfoldersignerassociationEditObjectV1Response.md
+docs/UNUSEDEzsignsignatureEditObjectV1Request.md
+docs/UNUSEDEzsignsignatureEditObjectV1Response.md
 docs/UserCreateEzsignuserV1Request.md
 docs/UserCreateEzsignuserV1Response.md
 docs/UserCreateEzsignuserV1ResponseMPayload.md
@@ -184,8 +184,6 @@ src/main/java/org/openapitools/client/model/EzsigndocumentCreateObjectV1Request.
 src/main/java/org/openapitools/client/model/EzsigndocumentCreateObjectV1Response.java
 src/main/java/org/openapitools/client/model/EzsigndocumentCreateObjectV1ResponseMPayload.java
 src/main/java/org/openapitools/client/model/EzsigndocumentDeleteObjectV1Response.java
-src/main/java/org/openapitools/client/model/EzsigndocumentEditObjectV1Request.java
-src/main/java/org/openapitools/client/model/EzsigndocumentEditObjectV1Response.java
 src/main/java/org/openapitools/client/model/EzsigndocumentGetDownloadUrlV1Response.java
 src/main/java/org/openapitools/client/model/EzsigndocumentGetDownloadUrlV1ResponseMPayload.java
 src/main/java/org/openapitools/client/model/EzsigndocumentGetObjectV1Response.java
@@ -199,8 +197,6 @@ src/main/java/org/openapitools/client/model/EzsignfolderCreateObjectV1Request.ja
 src/main/java/org/openapitools/client/model/EzsignfolderCreateObjectV1Response.java
 src/main/java/org/openapitools/client/model/EzsignfolderCreateObjectV1ResponseMPayload.java
 src/main/java/org/openapitools/client/model/EzsignfolderDeleteObjectV1Response.java
-src/main/java/org/openapitools/client/model/EzsignfolderEditObjectV1Request.java
-src/main/java/org/openapitools/client/model/EzsignfolderEditObjectV1Response.java
 src/main/java/org/openapitools/client/model/EzsignfolderGetObjectV1Response.java
 src/main/java/org/openapitools/client/model/EzsignfolderGetObjectV1ResponseMPayload.java
 src/main/java/org/openapitools/client/model/EzsignfolderRequest.java
@@ -214,8 +210,6 @@ src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationCreateO
 src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationCreateObjectV1Response.java
 src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationCreateObjectV1ResponseMPayload.java
 src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationDeleteObjectV1Response.java
-src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationEditObjectV1Request.java
-src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationEditObjectV1Response.java
 src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationGetInPersonLoginUrlV1Response.java
 src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload.java
 src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationGetObjectV1Response.java
@@ -225,8 +219,6 @@ src/main/java/org/openapitools/client/model/EzsignsignatureCreateObjectV1Request
 src/main/java/org/openapitools/client/model/EzsignsignatureCreateObjectV1Response.java
 src/main/java/org/openapitools/client/model/EzsignsignatureCreateObjectV1ResponseMPayload.java
 src/main/java/org/openapitools/client/model/EzsignsignatureDeleteObjectV1Response.java
-src/main/java/org/openapitools/client/model/EzsignsignatureEditObjectV1Request.java
-src/main/java/org/openapitools/client/model/EzsignsignatureEditObjectV1Response.java
 src/main/java/org/openapitools/client/model/EzsignsignatureGetObjectV1Response.java
 src/main/java/org/openapitools/client/model/EzsignsignatureRequest.java
 src/main/java/org/openapitools/client/model/EzsignsignatureRequestCompound.java
@@ -246,6 +238,14 @@ src/main/java/org/openapitools/client/model/FranchisereferalincomeRequestCompoun
 src/main/java/org/openapitools/client/model/GlobalCustomerGetEndpointV1Response.java
 src/main/java/org/openapitools/client/model/MultilingualApikeyDescription.java
 src/main/java/org/openapitools/client/model/PhoneRequest.java
+src/main/java/org/openapitools/client/model/UNUSEDEzsigndocumentEditObjectV1Request.java
+src/main/java/org/openapitools/client/model/UNUSEDEzsigndocumentEditObjectV1Response.java
+src/main/java/org/openapitools/client/model/UNUSEDEzsignfolderEditObjectV1Request.java
+src/main/java/org/openapitools/client/model/UNUSEDEzsignfolderEditObjectV1Response.java
+src/main/java/org/openapitools/client/model/UNUSEDEzsignfoldersignerassociationEditObjectV1Request.java
+src/main/java/org/openapitools/client/model/UNUSEDEzsignfoldersignerassociationEditObjectV1Response.java
+src/main/java/org/openapitools/client/model/UNUSEDEzsignsignatureEditObjectV1Request.java
+src/main/java/org/openapitools/client/model/UNUSEDEzsignsignatureEditObjectV1Response.java
 src/main/java/org/openapitools/client/model/UserCreateEzsignuserV1Request.java
 src/main/java/org/openapitools/client/model/UserCreateEzsignuserV1Response.java
 src/main/java/org/openapitools/client/model/UserCreateEzsignuserV1ResponseMPayload.java
