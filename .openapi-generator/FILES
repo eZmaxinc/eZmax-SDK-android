@@ -79,6 +79,7 @@ docs/FieldEEzsignfolderSendreminderfrequency.md
 docs/FieldEEzsignfolderStep.md
 docs/FieldEPhoneType.md
 docs/FieldEUserType.md
+docs/FieldEUserTypeSSPR.md
 docs/FranchisereferalincomeCreateObjectV1Request.md
 docs/FranchisereferalincomeCreateObjectV1Response.md
 docs/FranchisereferalincomeCreateObjectV1ResponseMPayload.md
@@ -100,6 +101,11 @@ docs/ObjectFranchiseofficeApi.md
 docs/ObjectFranchisereferalincomeApi.md
 docs/ObjectPeriodApi.md
 docs/PhoneRequest.md
+docs/SsprResetPasswordRequestV1Request.md
+docs/SsprResetPasswordV1Request.md
+docs/SsprSendUsernamesV1Request.md
+docs/SsprUnlockAccountRequestV1Request.md
+docs/SsprUnlockAccountV1Request.md
 docs/UNUSEDEzsigndocumentEditObjectV1Request.md
 docs/UNUSEDEzsigndocumentEditObjectV1Response.md
 docs/UNUSEDEzsignfolderEditObjectV1Request.md
@@ -230,6 +236,7 @@ src/main/java/org/openapitools/client/model/FieldEEzsignfolderSendreminderfreque
 src/main/java/org/openapitools/client/model/FieldEEzsignfolderStep.java
 src/main/java/org/openapitools/client/model/FieldEPhoneType.java
 src/main/java/org/openapitools/client/model/FieldEUserType.java
+src/main/java/org/openapitools/client/model/FieldEUserTypeSSPR.java
 src/main/java/org/openapitools/client/model/FranchisereferalincomeCreateObjectV1Request.java
 src/main/java/org/openapitools/client/model/FranchisereferalincomeCreateObjectV1Response.java
 src/main/java/org/openapitools/client/model/FranchisereferalincomeCreateObjectV1ResponseMPayload.java
@@ -238,6 +245,11 @@ src/main/java/org/openapitools/client/model/FranchisereferalincomeRequestCompoun
 src/main/java/org/openapitools/client/model/GlobalCustomerGetEndpointV1Response.java
 src/main/java/org/openapitools/client/model/MultilingualApikeyDescription.java
 src/main/java/org/openapitools/client/model/PhoneRequest.java
+src/main/java/org/openapitools/client/model/SsprResetPasswordRequestV1Request.java
+src/main/java/org/openapitools/client/model/SsprResetPasswordV1Request.java
+src/main/java/org/openapitools/client/model/SsprSendUsernamesV1Request.java
+src/main/java/org/openapitools/client/model/SsprUnlockAccountRequestV1Request.java
+src/main/java/org/openapitools/client/model/SsprUnlockAccountV1Request.java
 src/main/java/org/openapitools/client/model/UNUSEDEzsigndocumentEditObjectV1Request.java
 src/main/java/org/openapitools/client/model/UNUSEDEzsigndocumentEditObjectV1Response.java
 src/main/java/org/openapitools/client/model/UNUSEDEzsignfolderEditObjectV1Request.java

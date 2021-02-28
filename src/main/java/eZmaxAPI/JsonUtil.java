@@ -365,6 +365,10 @@ public class JsonUtil {
       return new TypeToken<List<FieldEUserType>>(){}.getType();
     }
     
+    if ("FieldEUserTypeSSPR".equalsIgnoreCase(className)) {
+      return new TypeToken<List<FieldEUserTypeSSPR>>(){}.getType();
+    }
+    
     if ("FranchisereferalincomeCreateObjectV1Request".equalsIgnoreCase(className)) {
       return new TypeToken<List<FranchisereferalincomeCreateObjectV1Request>>(){}.getType();
     }
@@ -395,6 +399,26 @@ public class JsonUtil {
     
     if ("PhoneRequest".equalsIgnoreCase(className)) {
       return new TypeToken<List<PhoneRequest>>(){}.getType();
+    }
+    
+    if ("SsprResetPasswordRequestV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<SsprResetPasswordRequestV1Request>>(){}.getType();
+    }
+    
+    if ("SsprResetPasswordV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<SsprResetPasswordV1Request>>(){}.getType();
+    }
+    
+    if ("SsprSendUsernamesV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<SsprSendUsernamesV1Request>>(){}.getType();
+    }
+    
+    if ("SsprUnlockAccountRequestV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<SsprUnlockAccountRequestV1Request>>(){}.getType();
+    }
+    
+    if ("SsprUnlockAccountV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<SsprUnlockAccountV1Request>>(){}.getType();
     }
     
     if ("UNUSEDEzsigndocumentEditObjectV1Request".equalsIgnoreCase(className)) {
@@ -795,6 +819,10 @@ public class JsonUtil {
       return new TypeToken<FieldEUserType>(){}.getType();
     }
     
+    if ("FieldEUserTypeSSPR".equalsIgnoreCase(className)) {
+      return new TypeToken<FieldEUserTypeSSPR>(){}.getType();
+    }
+    
     if ("FranchisereferalincomeCreateObjectV1Request".equalsIgnoreCase(className)) {
       return new TypeToken<FranchisereferalincomeCreateObjectV1Request>(){}.getType();
     }
@@ -825,6 +853,26 @@ public class JsonUtil {
     
     if ("PhoneRequest".equalsIgnoreCase(className)) {
       return new TypeToken<PhoneRequest>(){}.getType();
+    }
+    
+    if ("SsprResetPasswordRequestV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<SsprResetPasswordRequestV1Request>(){}.getType();
+    }
+    
+    if ("SsprResetPasswordV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<SsprResetPasswordV1Request>(){}.getType();
+    }
+    
+    if ("SsprSendUsernamesV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<SsprSendUsernamesV1Request>(){}.getType();
+    }
+    
+    if ("SsprUnlockAccountRequestV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<SsprUnlockAccountRequestV1Request>(){}.getType();
+    }
+    
+    if ("SsprUnlockAccountV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<SsprUnlockAccountV1Request>(){}.getType();
     }
     
     if ("UNUSEDEzsigndocumentEditObjectV1Request".equalsIgnoreCase(className)) {
