@@ -13,6 +13,8 @@ Name | Type | Description | Notes
 **sDepartmentNameX** | **String** | The name of the active Department in the current language | 
 **aRegisteredModules** | **List&lt;String&gt;** | An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key. | 
 **aPermissions** | **List&lt;Integer&gt;** | An array of permissions granted to the user or api key | 
+**fkiUserID** | **Integer** | The unique ID of the User | 
+**fkiApikeyID** | **Integer** | The unique ID of the Apikey | 
 
 
 ## Enum: EActivesessionSessiontypeEnum

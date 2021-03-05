@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**ssprSendUsernamesV1**](ModuleSsprApi.md#ssprSendUsernamesV1) | **POST** /1/module/sspr/sendUsernames | Send username(s)
 [**ssprUnlockAccountRequestV1**](ModuleSsprApi.md#ssprUnlockAccountRequestV1) | **POST** /1/module/sspr/unlockAccountRequest | Unlock Account Request
 [**ssprUnlockAccountV1**](ModuleSsprApi.md#ssprUnlockAccountV1) | **POST** /1/module/sspr/unlockAccount | Unlock Account
+[**ssprValidateTokenV1**](ModuleSsprApi.md#ssprValidateTokenV1) | **POST** /1/module/sspr/validateToken | Validate Token
 
 
 
@@ -222,6 +223,51 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ssprUnlockAccountV1Request** | [**SsprUnlockAccountV1Request**](SsprUnlockAccountV1Request.md)|  |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## ssprValidateTokenV1
+
+> ssprValidateTokenV1(ssprValidateTokenV1Request)
+
+Validate Token
+
+This endpoint validates if a Token is valid and not expired. If the token has less than an hour to its life, the TTL is reset to 1 hour.  sEmailAddress must be set if eUserTypeSSPR &#x3D; EzsignUser  sUserLoginname must be set if eUserTypeSSPR &#x3D; Native
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ModuleSsprApi;
+
+ModuleSsprApi apiInstance = new ModuleSsprApi();
+SsprValidateTokenV1Request ssprValidateTokenV1Request = new SsprValidateTokenV1Request(); // SsprValidateTokenV1Request | 
+try {
+    apiInstance.ssprValidateTokenV1(ssprValidateTokenV1Request);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ModuleSsprApi#ssprValidateTokenV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ssprValidateTokenV1Request** | [**SsprValidateTokenV1Request**](SsprValidateTokenV1Request.md)|  |
 
 ### Return type
 

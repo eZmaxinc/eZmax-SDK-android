@@ -17,10 +17,10 @@ import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Request for the /1/module/sspr/unlockAccount API Request
+ * Request for the /1/module/sspr/validateToken API Request
  **/
-@ApiModel(description = "Request for the /1/module/sspr/unlockAccount API Request")
-public class SsprUnlockAccountV1Request {
+@ApiModel(description = "Request for the /1/module/sspr/validateToken API Request")
+public class SsprValidateTokenV1Request {
   
   @SerializedName("pksCustomerCode")
   private String pksCustomerCode = null;
@@ -111,13 +111,13 @@ public class SsprUnlockAccountV1Request {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    SsprUnlockAccountV1Request ssprUnlockAccountV1Request = (SsprUnlockAccountV1Request) o;
-    return (this.pksCustomerCode == null ? ssprUnlockAccountV1Request.pksCustomerCode == null : this.pksCustomerCode.equals(ssprUnlockAccountV1Request.pksCustomerCode)) &&
-        (this.fkiLanguageID == null ? ssprUnlockAccountV1Request.fkiLanguageID == null : this.fkiLanguageID.equals(ssprUnlockAccountV1Request.fkiLanguageID)) &&
-        (this.eUserTypeSSPR == null ? ssprUnlockAccountV1Request.eUserTypeSSPR == null : this.eUserTypeSSPR.equals(ssprUnlockAccountV1Request.eUserTypeSSPR)) &&
-        (this.sEmailAddress == null ? ssprUnlockAccountV1Request.sEmailAddress == null : this.sEmailAddress.equals(ssprUnlockAccountV1Request.sEmailAddress)) &&
-        (this.sUserLoginname == null ? ssprUnlockAccountV1Request.sUserLoginname == null : this.sUserLoginname.equals(ssprUnlockAccountV1Request.sUserLoginname)) &&
-        (this.binUserSSPRtoken == null ? ssprUnlockAccountV1Request.binUserSSPRtoken == null : this.binUserSSPRtoken.equals(ssprUnlockAccountV1Request.binUserSSPRtoken));
+    SsprValidateTokenV1Request ssprValidateTokenV1Request = (SsprValidateTokenV1Request) o;
+    return (this.pksCustomerCode == null ? ssprValidateTokenV1Request.pksCustomerCode == null : this.pksCustomerCode.equals(ssprValidateTokenV1Request.pksCustomerCode)) &&
+        (this.fkiLanguageID == null ? ssprValidateTokenV1Request.fkiLanguageID == null : this.fkiLanguageID.equals(ssprValidateTokenV1Request.fkiLanguageID)) &&
+        (this.eUserTypeSSPR == null ? ssprValidateTokenV1Request.eUserTypeSSPR == null : this.eUserTypeSSPR.equals(ssprValidateTokenV1Request.eUserTypeSSPR)) &&
+        (this.sEmailAddress == null ? ssprValidateTokenV1Request.sEmailAddress == null : this.sEmailAddress.equals(ssprValidateTokenV1Request.sEmailAddress)) &&
+        (this.sUserLoginname == null ? ssprValidateTokenV1Request.sUserLoginname == null : this.sUserLoginname.equals(ssprValidateTokenV1Request.sUserLoginname)) &&
+        (this.binUserSSPRtoken == null ? ssprValidateTokenV1Request.binUserSSPRtoken == null : this.binUserSSPRtoken.equals(ssprValidateTokenV1Request.binUserSSPRtoken));
   }
 
   @Override
@@ -135,7 +135,7 @@ public class SsprUnlockAccountV1Request {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class SsprUnlockAccountV1Request {\n");
+    sb.append("class SsprValidateTokenV1Request {\n");
     
     sb.append("  pksCustomerCode: ").append(pksCustomerCode).append("\n");
     sb.append("  fkiLanguageID: ").append(fkiLanguageID).append("\n");
