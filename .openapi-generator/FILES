@@ -12,6 +12,9 @@ docs/ApikeyRequest.md
 docs/ApikeyRequestCompound.md
 docs/ApikeyResponse.md
 docs/AttemptResponse.md
+docs/AuthenticateAuthenticateV2Request.md
+docs/AuthenticateAuthenticateV2Response.md
+docs/AuthenticateAuthenticateV2ResponseMPayload.md
 docs/CommonAudit.md
 docs/CommonGetAutocompleteV1Response.md
 docs/CommonGetAutocompleteV1ResponseMPayload.md
@@ -87,6 +90,7 @@ docs/FranchisereferalincomeRequest.md
 docs/FranchisereferalincomeRequestCompound.md
 docs/GlobalCustomerApi.md
 docs/GlobalCustomerGetEndpointV1Response.md
+docs/ModuleAuthenticateApi.md
 docs/ModuleSsprApi.md
 docs/ModuleUserApi.md
 docs/MultilingualApikeyDescription.md
@@ -148,6 +152,7 @@ src/main/java/eZmaxAPI/request/PatchRequest.java
 src/main/java/eZmaxAPI/request/PostRequest.java
 src/main/java/eZmaxAPI/request/PutRequest.java
 src/main/java/org/openapitools/client/api/GlobalCustomerApi.java
+src/main/java/org/openapitools/client/api/ModuleAuthenticateApi.java
 src/main/java/org/openapitools/client/api/ModuleSsprApi.java
 src/main/java/org/openapitools/client/api/ModuleUserApi.java
 src/main/java/org/openapitools/client/api/ObjectActivesessionApi.java
@@ -170,6 +175,9 @@ src/main/java/org/openapitools/client/model/ApikeyRequest.java
 src/main/java/org/openapitools/client/model/ApikeyRequestCompound.java
 src/main/java/org/openapitools/client/model/ApikeyResponse.java
 src/main/java/org/openapitools/client/model/AttemptResponse.java
+src/main/java/org/openapitools/client/model/AuthenticateAuthenticateV2Request.java
+src/main/java/org/openapitools/client/model/AuthenticateAuthenticateV2Response.java
+src/main/java/org/openapitools/client/model/AuthenticateAuthenticateV2ResponseMPayload.java
 src/main/java/org/openapitools/client/model/CommonAudit.java
 src/main/java/org/openapitools/client/model/CommonGetAutocompleteV1Response.java
 src/main/java/org/openapitools/client/model/CommonGetAutocompleteV1ResponseMPayload.java
