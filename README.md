@@ -201,6 +201,7 @@ Class | Method | HTTP request | Description
  - [FieldEEzsigndocumentStep](docs/FieldEEzsigndocumentStep.md)
  - [FieldEEzsignfolderSendreminderfrequency](docs/FieldEEzsignfolderSendreminderfrequency.md)
  - [FieldEEzsignfolderStep](docs/FieldEEzsignfolderStep.md)
+ - [FieldEEzsignsignatureType](docs/FieldEEzsignsignatureType.md)
  - [FieldEPhoneType](docs/FieldEPhoneType.md)
  - [FieldEUserType](docs/FieldEUserType.md)
  - [FieldEUserTypeSSPR](docs/FieldEUserTypeSSPR.md)

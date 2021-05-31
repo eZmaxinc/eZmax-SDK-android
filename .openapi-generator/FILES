@@ -80,6 +80,7 @@ docs/EzsignsignerRequestCompoundContact.md
 docs/FieldEEzsigndocumentStep.md
 docs/FieldEEzsignfolderSendreminderfrequency.md
 docs/FieldEEzsignfolderStep.md
+docs/FieldEEzsignsignatureType.md
 docs/FieldEPhoneType.md
 docs/FieldEUserType.md
 docs/FieldEUserTypeSSPR.md
@@ -243,6 +244,7 @@ src/main/java/org/openapitools/client/model/EzsignsignerRequestCompoundContact.j
 src/main/java/org/openapitools/client/model/FieldEEzsigndocumentStep.java
 src/main/java/org/openapitools/client/model/FieldEEzsignfolderSendreminderfrequency.java
 src/main/java/org/openapitools/client/model/FieldEEzsignfolderStep.java
+src/main/java/org/openapitools/client/model/FieldEEzsignsignatureType.java
 src/main/java/org/openapitools/client/model/FieldEPhoneType.java
 src/main/java/org/openapitools/client/model/FieldEUserType.java
 src/main/java/org/openapitools/client/model/FieldEUserTypeSSPR.java
