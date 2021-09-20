@@ -9,7 +9,9 @@ Method | HTTP request | Description
 [**ezsigndocumentDeleteObjectV1**](ObjectEzsigndocumentApi.md#ezsigndocumentDeleteObjectV1) | **DELETE** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Delete an existing Ezsigndocument
 [**ezsigndocumentGetChildrenV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetChildrenV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getChildren | Retrieve an existing Ezsigndocument&#39;s children IDs
 [**ezsigndocumentGetDownloadUrlV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetDownloadUrlV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getDownloadUrl/{eDocumentType} | Retrieve a URL to download documents.
+[**ezsigndocumentGetFormDataV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetFormDataV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getFormData | Retrieve an existing Ezsigndocument&#39;s Form Data
 [**ezsigndocumentGetObjectV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetObjectV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Retrieve an existing Ezsigndocument
+[**ezsigndocumentGetWordsPositionsV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetWordsPositionsV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions | Retrieve positions X,Y of given words from a Ezsigndocument
 
 
 
@@ -157,6 +159,8 @@ Name | Type | Description  | Notes
 
 Retrieve an existing Ezsigndocument&#39;s children IDs
 
+## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+
 ### Example
 
 ```java
@@ -242,11 +246,59 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
+## ezsigndocumentGetFormDataV1
+
+> File ezsigndocumentGetFormDataV1(pkiEzsigndocumentID)
+
+Retrieve an existing Ezsigndocument&#39;s Form Data
+
+## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectEzsigndocumentApi;
+
+ObjectEzsigndocumentApi apiInstance = new ObjectEzsigndocumentApi();
+Integer pkiEzsigndocumentID = null; // Integer | The unique ID of the Ezsigndocument
+try {
+    File result = apiInstance.ezsigndocumentGetFormDataV1(pkiEzsigndocumentID);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectEzsigndocumentApi#ezsigndocumentGetFormDataV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsigndocumentID** | **Integer**| The unique ID of the Ezsigndocument | [default to null]
+
+### Return type
+
+[**File**](File.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/zip, application/json
+
+
 ## ezsigndocumentGetObjectV1
 
 > EzsigndocumentGetObjectV1Response ezsigndocumentGetObjectV1(pkiEzsigndocumentID)
 
 Retrieve an existing Ezsigndocument
+
+## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
 
 ### Example
 
@@ -283,5 +335,53 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## ezsigndocumentGetWordsPositionsV1
+
+> EzsigndocumentGetWordsPositionsV1Response ezsigndocumentGetWordsPositionsV1(pkiEzsigndocumentID, ezsigndocumentGetWordsPositionsV1Request)
+
+Retrieve positions X,Y of given words from a Ezsigndocument
+
+## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectEzsigndocumentApi;
+
+ObjectEzsigndocumentApi apiInstance = new ObjectEzsigndocumentApi();
+Integer pkiEzsigndocumentID = null; // Integer | The unique ID of the Ezsigndocument
+EzsigndocumentGetWordsPositionsV1Request ezsigndocumentGetWordsPositionsV1Request = new EzsigndocumentGetWordsPositionsV1Request(); // EzsigndocumentGetWordsPositionsV1Request | 
+try {
+    EzsigndocumentGetWordsPositionsV1Response result = apiInstance.ezsigndocumentGetWordsPositionsV1(pkiEzsigndocumentID, ezsigndocumentGetWordsPositionsV1Request);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectEzsigndocumentApi#ezsigndocumentGetWordsPositionsV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsigndocumentID** | **Integer**| The unique ID of the Ezsigndocument | [default to null]
+ **ezsigndocumentGetWordsPositionsV1Request** | [**EzsigndocumentGetWordsPositionsV1Request**](EzsigndocumentGetWordsPositionsV1Request.md)|  |
+
+### Return type
+
+[**EzsigndocumentGetWordsPositionsV1Response**](EzsigndocumentGetWordsPositionsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
 - **Accept**: application/json
 
