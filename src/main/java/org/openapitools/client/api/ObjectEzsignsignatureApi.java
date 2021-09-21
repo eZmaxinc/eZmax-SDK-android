@@ -191,7 +191,7 @@ public class ObjectEzsignsignatureApi {
   /**
   * Delete an existing Ezsignsignature
   * 
-   * @param pkiEzsignsignatureID The unique ID of the Ezsignsignature
+   * @param pkiEzsignsignatureID 
    * @return EzsignsignatureDeleteObjectV1Response
   */
   public EzsignsignatureDeleteObjectV1Response ezsignsignatureDeleteObjectV1 (Integer pkiEzsignsignatureID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
@@ -253,7 +253,7 @@ public class ObjectEzsignsignatureApi {
       /**
    * Delete an existing Ezsignsignature
    * 
-   * @param pkiEzsignsignatureID The unique ID of the Ezsignsignature
+   * @param pkiEzsignsignatureID 
   */
   public void ezsignsignatureDeleteObjectV1 (Integer pkiEzsignsignatureID, final Response.Listener<EzsignsignatureDeleteObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
@@ -318,7 +318,7 @@ public class ObjectEzsignsignatureApi {
   /**
   * Retrieve an existing Ezsignsignature&#39;s children IDs
   * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-   * @param pkiEzsignsignatureID The unique ID of the Ezsignsignature
+   * @param pkiEzsignsignatureID 
    * @return void
   */
   public void ezsignsignatureGetChildrenV1 (Integer pkiEzsignsignatureID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
@@ -380,7 +380,7 @@ public class ObjectEzsignsignatureApi {
       /**
    * Retrieve an existing Ezsignsignature&#39;s children IDs
    * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-   * @param pkiEzsignsignatureID The unique ID of the Ezsignsignature
+   * @param pkiEzsignsignatureID 
   */
   public void ezsignsignatureGetChildrenV1 (Integer pkiEzsignsignatureID, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
@@ -441,7 +441,7 @@ public class ObjectEzsignsignatureApi {
   /**
   * Retrieve an existing Ezsignsignature
   * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-   * @param pkiEzsignsignatureID The unique ID of the Ezsignsignature
+   * @param pkiEzsignsignatureID 
    * @return EzsignsignatureGetObjectV1Response
   */
   public EzsignsignatureGetObjectV1Response ezsignsignatureGetObjectV1 (Integer pkiEzsignsignatureID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
@@ -503,7 +503,7 @@ public class ObjectEzsignsignatureApi {
       /**
    * Retrieve an existing Ezsignsignature
    * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-   * @param pkiEzsignsignatureID The unique ID of the Ezsignsignature
+   * @param pkiEzsignsignatureID 
   */
   public void ezsignsignatureGetObjectV1 (Integer pkiEzsignsignatureID, final Response.Listener<EzsignsignatureGetObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;

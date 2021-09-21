@@ -13,7 +13,6 @@
 package org.openapitools.client.model;
 
 import org.openapitools.client.model.CommonAudit;
-import org.openapitools.client.model.EzsigndocumentResponseAllOf;
 import org.openapitools.client.model.FieldEEzsigndocumentStep;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
@@ -102,9 +101,9 @@ public class EzsigndocumentResponse {
   }
 
   /**
-   * The unique ID of the Ezsigntemplate
+   * The unique ID of the Ezsigndocument
    **/
-  @ApiModelProperty(required = true, value = "The unique ID of the Ezsigntemplate")
+  @ApiModelProperty(required = true, value = "The unique ID of the Ezsigndocument")
   public Integer getPkiEzsigndocumentID() {
     return pkiEzsigndocumentID;
   }

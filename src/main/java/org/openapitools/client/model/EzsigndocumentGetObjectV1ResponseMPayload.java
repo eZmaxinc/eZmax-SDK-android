@@ -102,9 +102,9 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
   }
 
   /**
-   * The unique ID of the Ezsigntemplate
+   * The unique ID of the Ezsigndocument
    **/
-  @ApiModelProperty(required = true, value = "The unique ID of the Ezsigntemplate")
+  @ApiModelProperty(required = true, value = "The unique ID of the Ezsigndocument")
   public Integer getPkiEzsigndocumentID() {
     return pkiEzsigndocumentID;
   }

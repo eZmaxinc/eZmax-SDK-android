@@ -45,6 +45,9 @@ docs/EzsigndocumentDeleteObjectV1Response.md
 docs/EzsigndocumentGetDownloadUrlV1Response.md
 docs/EzsigndocumentGetDownloadUrlV1ResponseAllOf.md
 docs/EzsigndocumentGetDownloadUrlV1ResponseMPayload.md
+docs/EzsigndocumentGetEzsignpagesV1Response.md
+docs/EzsigndocumentGetEzsignpagesV1ResponseAllOf.md
+docs/EzsigndocumentGetEzsignpagesV1ResponseMPayload.md
 docs/EzsigndocumentGetObjectV1Response.md
 docs/EzsigndocumentGetObjectV1ResponseAllOf.md
 docs/EzsigndocumentGetObjectV1ResponseMPayload.md
@@ -55,7 +58,6 @@ docs/EzsigndocumentGetWordsPositionsV1ResponseMPayload.md
 docs/EzsigndocumentRequest.md
 docs/EzsigndocumentRequestCompound.md
 docs/EzsigndocumentResponse.md
-docs/EzsigndocumentResponseAllOf.md
 docs/EzsigndocumentResponseCompound.md
 docs/EzsignfolderCreateObjectV1Request.md
 docs/EzsignfolderCreateObjectV1Response.md
@@ -84,6 +86,7 @@ docs/EzsignfoldersignerassociationGetObjectV1ResponseAllOf.md
 docs/EzsignfoldersignerassociationRequest.md
 docs/EzsignfoldersignerassociationRequestCompound.md
 docs/EzsignfoldersignerassociationRequestCompoundAllOf.md
+docs/EzsignpageResponse.md
 docs/EzsignsignatureCreateObjectV1Request.md
 docs/EzsignsignatureCreateObjectV1Response.md
 docs/EzsignsignatureCreateObjectV1ResponseAllOf.md
@@ -232,6 +235,9 @@ src/main/java/org/openapitools/client/model/EzsigndocumentDeleteObjectV1Response
 src/main/java/org/openapitools/client/model/EzsigndocumentGetDownloadUrlV1Response.java
 src/main/java/org/openapitools/client/model/EzsigndocumentGetDownloadUrlV1ResponseAllOf.java
 src/main/java/org/openapitools/client/model/EzsigndocumentGetDownloadUrlV1ResponseMPayload.java
+src/main/java/org/openapitools/client/model/EzsigndocumentGetEzsignpagesV1Response.java
+src/main/java/org/openapitools/client/model/EzsigndocumentGetEzsignpagesV1ResponseAllOf.java
+src/main/java/org/openapitools/client/model/EzsigndocumentGetEzsignpagesV1ResponseMPayload.java
 src/main/java/org/openapitools/client/model/EzsigndocumentGetObjectV1Response.java
 src/main/java/org/openapitools/client/model/EzsigndocumentGetObjectV1ResponseAllOf.java
 src/main/java/org/openapitools/client/model/EzsigndocumentGetObjectV1ResponseMPayload.java
@@ -242,7 +248,6 @@ src/main/java/org/openapitools/client/model/EzsigndocumentGetWordsPositionsV1Res
 src/main/java/org/openapitools/client/model/EzsigndocumentRequest.java
 src/main/java/org/openapitools/client/model/EzsigndocumentRequestCompound.java
 src/main/java/org/openapitools/client/model/EzsigndocumentResponse.java
-src/main/java/org/openapitools/client/model/EzsigndocumentResponseAllOf.java
 src/main/java/org/openapitools/client/model/EzsigndocumentResponseCompound.java
 src/main/java/org/openapitools/client/model/EzsignfolderCreateObjectV1Request.java
 src/main/java/org/openapitools/client/model/EzsignfolderCreateObjectV1Response.java
@@ -271,6 +276,7 @@ src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationGetObje
 src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationRequest.java
 src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationRequestCompound.java
 src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationRequestCompoundAllOf.java
+src/main/java/org/openapitools/client/model/EzsignpageResponse.java
 src/main/java/org/openapitools/client/model/EzsignsignatureCreateObjectV1Request.java
 src/main/java/org/openapitools/client/model/EzsignsignatureCreateObjectV1Response.java
 src/main/java/org/openapitools/client/model/EzsignsignatureCreateObjectV1ResponseAllOf.java

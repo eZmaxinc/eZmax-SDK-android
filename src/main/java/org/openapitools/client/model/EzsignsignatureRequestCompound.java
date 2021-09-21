@@ -50,9 +50,9 @@ public class EzsignsignatureRequestCompound {
   }
 
   /**
-   * The page number in the document where to apply the signature
+   * The page number in the Ezsigndocument
    **/
-  @ApiModelProperty(required = true, value = "The page number in the document where to apply the signature")
+  @ApiModelProperty(required = true, value = "The page number in the Ezsigndocument")
   public Integer getIEzsignpagePagenumber() {
     return iEzsignpagePagenumber;
   }
@@ -104,9 +104,9 @@ public class EzsignsignatureRequestCompound {
   }
 
   /**
-   * The unique ID of the Ezsigntemplate
+   * The unique ID of the Ezsigndocument
    **/
-  @ApiModelProperty(required = true, value = "The unique ID of the Ezsigntemplate")
+  @ApiModelProperty(required = true, value = "The unique ID of the Ezsigndocument")
   public Integer getFkiEzsigndocumentID() {
     return fkiEzsigndocumentID;
   }

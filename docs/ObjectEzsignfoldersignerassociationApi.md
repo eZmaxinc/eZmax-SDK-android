@@ -71,7 +71,7 @@ Delete an existing Ezsignfoldersignerassociation
 //import org.openapitools.client.api.ObjectEzsignfoldersignerassociationApi;
 
 ObjectEzsignfoldersignerassociationApi apiInstance = new ObjectEzsignfoldersignerassociationApi();
-Integer pkiEzsignfoldersignerassociationID = null; // Integer | The unique ID of the Ezsignfoldersignerassociation
+Integer pkiEzsignfoldersignerassociationID = null; // Integer | 
 try {
     EzsignfoldersignerassociationDeleteObjectV1Response result = apiInstance.ezsignfoldersignerassociationDeleteObjectV1(pkiEzsignfoldersignerassociationID);
     System.out.println(result);
@@ -86,7 +86,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignfoldersignerassociationID** | **Integer**| The unique ID of the Ezsignfoldersignerassociation | [default to null]
+ **pkiEzsignfoldersignerassociationID** | **Integer**|  | [default to null]
 
 ### Return type
 
@@ -117,7 +117,7 @@ Retrieve an existing Ezsignfoldersignerassociation&#39;s children IDs
 //import org.openapitools.client.api.ObjectEzsignfoldersignerassociationApi;
 
 ObjectEzsignfoldersignerassociationApi apiInstance = new ObjectEzsignfoldersignerassociationApi();
-Integer pkiEzsignfoldersignerassociationID = null; // Integer | The unique ID of the Ezsignfoldersignerassociation
+Integer pkiEzsignfoldersignerassociationID = null; // Integer | 
 try {
     apiInstance.ezsignfoldersignerassociationGetChildrenV1(pkiEzsignfoldersignerassociationID);
 } catch (ApiException e) {
@@ -131,7 +131,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignfoldersignerassociationID** | **Integer**| The unique ID of the Ezsignfoldersignerassociation | [default to null]
+ **pkiEzsignfoldersignerassociationID** | **Integer**|  | [default to null]
 
 ### Return type
 
@@ -162,7 +162,7 @@ This endpoint returns a Login Url that can be used in a browser or embedded in a
 //import org.openapitools.client.api.ObjectEzsignfoldersignerassociationApi;
 
 ObjectEzsignfoldersignerassociationApi apiInstance = new ObjectEzsignfoldersignerassociationApi();
-Integer pkiEzsignfoldersignerassociationID = null; // Integer | The unique ID of the Ezsignfoldersignerassociation
+Integer pkiEzsignfoldersignerassociationID = null; // Integer | 
 try {
     EzsignfoldersignerassociationGetInPersonLoginUrlV1Response result = apiInstance.ezsignfoldersignerassociationGetInPersonLoginUrlV1(pkiEzsignfoldersignerassociationID);
     System.out.println(result);
@@ -177,7 +177,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignfoldersignerassociationID** | **Integer**| The unique ID of the Ezsignfoldersignerassociation | [default to null]
+ **pkiEzsignfoldersignerassociationID** | **Integer**|  | [default to null]
 
 ### Return type
 
@@ -208,7 +208,7 @@ Retrieve an existing Ezsignfoldersignerassociation
 //import org.openapitools.client.api.ObjectEzsignfoldersignerassociationApi;
 
 ObjectEzsignfoldersignerassociationApi apiInstance = new ObjectEzsignfoldersignerassociationApi();
-Integer pkiEzsignfoldersignerassociationID = null; // Integer | The unique ID of the Ezsignfoldersignerassociation
+Integer pkiEzsignfoldersignerassociationID = null; // Integer | 
 try {
     EzsignfoldersignerassociationGetObjectV1Response result = apiInstance.ezsignfoldersignerassociationGetObjectV1(pkiEzsignfoldersignerassociationID);
     System.out.println(result);
@@ -223,7 +223,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignfoldersignerassociationID** | **Integer**| The unique ID of the Ezsignfoldersignerassociation | [default to null]
+ **pkiEzsignfoldersignerassociationID** | **Integer**|  | [default to null]
 
 ### Return type
 

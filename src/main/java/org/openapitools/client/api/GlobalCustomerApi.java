@@ -59,7 +59,7 @@ public class GlobalCustomerApi {
   /**
   * Get customer endpoint
   * Retrieve the customer&#39;s specific server endpoint where to send requests. This will help locate the proper region (ie: sInfrastructureregionCode) and the proper environment (ie: sInfrastructureenvironmenttypeDescription) where the customer&#39;s data is stored.
-   * @param pksCustomerCode The customer code assigned to your account
+   * @param pksCustomerCode 
    * @param sInfrastructureproductCode The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed
    * @return GlobalCustomerGetEndpointV1Response
   */
@@ -123,7 +123,7 @@ public class GlobalCustomerApi {
       /**
    * Get customer endpoint
    * Retrieve the customer&#39;s specific server endpoint where to send requests. This will help locate the proper region (ie: sInfrastructureregionCode) and the proper environment (ie: sInfrastructureenvironmenttypeDescription) where the customer&#39;s data is stored.
-   * @param pksCustomerCode The customer code assigned to your account   * @param sInfrastructureproductCode The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed
+   * @param pksCustomerCode    * @param sInfrastructureproductCode The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed
   */
   public void globalCustomerGetEndpointV1 (String pksCustomerCode, String sInfrastructureproductCode, final Response.Listener<GlobalCustomerGetEndpointV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;

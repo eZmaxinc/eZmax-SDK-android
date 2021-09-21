@@ -23,7 +23,7 @@ Retrieve the customer&#39;s specific server endpoint where to send requests. Thi
 //import org.openapitools.client.api.GlobalCustomerApi;
 
 GlobalCustomerApi apiInstance = new GlobalCustomerApi();
-String pksCustomerCode = null; // String | The customer code assigned to your account
+String pksCustomerCode = null; // String | 
 String sInfrastructureproductCode = null; // String | The infrastructure product Code  If undefined, \"appcluster01\" is assumed
 try {
     GlobalCustomerGetEndpointV1Response result = apiInstance.globalCustomerGetEndpointV1(pksCustomerCode, sInfrastructureproductCode);
@@ -39,7 +39,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pksCustomerCode** | **String**| The customer code assigned to your account | [default to null]
+ **pksCustomerCode** | **String**|  | [default to null]
  **sInfrastructureproductCode** | **String**| The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed | [optional] [default to null] [enum: appcluster01, ezsignuser]
 
 ### Return type

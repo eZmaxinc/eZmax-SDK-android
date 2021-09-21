@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**ezsigndocumentDeleteObjectV1**](ObjectEzsigndocumentApi.md#ezsigndocumentDeleteObjectV1) | **DELETE** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Delete an existing Ezsigndocument
 [**ezsigndocumentGetChildrenV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetChildrenV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getChildren | Retrieve an existing Ezsigndocument&#39;s children IDs
 [**ezsigndocumentGetDownloadUrlV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetDownloadUrlV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getDownloadUrl/{eDocumentType} | Retrieve a URL to download documents.
+[**ezsigndocumentGetEzsignpagesV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetEzsignpagesV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignpages | Retrieve an existing Ezsigndocument&#39;s Ezsignpages
 [**ezsigndocumentGetFormDataV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetFormDataV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getFormData | Retrieve an existing Ezsigndocument&#39;s Form Data
 [**ezsigndocumentGetObjectV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetObjectV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Retrieve an existing Ezsigndocument
 [**ezsigndocumentGetWordsPositionsV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetWordsPositionsV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions | Retrieve positions X,Y of given words from a Ezsigndocument
@@ -30,7 +31,7 @@ This endpoint applies a predefined template to the ezsign document. This allows 
 //import org.openapitools.client.api.ObjectEzsigndocumentApi;
 
 ObjectEzsigndocumentApi apiInstance = new ObjectEzsigndocumentApi();
-Integer pkiEzsigndocumentID = null; // Integer | The unique ID of the Ezsigndocument
+Integer pkiEzsigndocumentID = null; // Integer | 
 EzsigndocumentApplyEzsigntemplateV1Request ezsigndocumentApplyEzsigntemplateV1Request = new EzsigndocumentApplyEzsigntemplateV1Request(); // EzsigndocumentApplyEzsigntemplateV1Request | 
 try {
     EzsigndocumentApplyEzsigntemplateV1Response result = apiInstance.ezsigndocumentApplyEzsigntemplateV1(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateV1Request);
@@ -46,7 +47,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsigndocumentID** | **Integer**| The unique ID of the Ezsigndocument | [default to null]
+ **pkiEzsigndocumentID** | **Integer**|  | [default to null]
  **ezsigndocumentApplyEzsigntemplateV1Request** | [**EzsigndocumentApplyEzsigntemplateV1Request**](EzsigndocumentApplyEzsigntemplateV1Request.md)|  |
 
 ### Return type
@@ -122,7 +123,7 @@ Delete an existing Ezsigndocument
 //import org.openapitools.client.api.ObjectEzsigndocumentApi;
 
 ObjectEzsigndocumentApi apiInstance = new ObjectEzsigndocumentApi();
-Integer pkiEzsigndocumentID = null; // Integer | The unique ID of the Ezsigndocument
+Integer pkiEzsigndocumentID = null; // Integer | 
 try {
     EzsigndocumentDeleteObjectV1Response result = apiInstance.ezsigndocumentDeleteObjectV1(pkiEzsigndocumentID);
     System.out.println(result);
@@ -137,7 +138,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsigndocumentID** | **Integer**| The unique ID of the Ezsigndocument | [default to null]
+ **pkiEzsigndocumentID** | **Integer**|  | [default to null]
 
 ### Return type
 
@@ -168,7 +169,7 @@ Retrieve an existing Ezsigndocument&#39;s children IDs
 //import org.openapitools.client.api.ObjectEzsigndocumentApi;
 
 ObjectEzsigndocumentApi apiInstance = new ObjectEzsigndocumentApi();
-Integer pkiEzsigndocumentID = null; // Integer | The unique ID of the Ezsigndocument
+Integer pkiEzsigndocumentID = null; // Integer | 
 try {
     apiInstance.ezsigndocumentGetChildrenV1(pkiEzsigndocumentID);
 } catch (ApiException e) {
@@ -182,7 +183,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsigndocumentID** | **Integer**| The unique ID of the Ezsigndocument | [default to null]
+ **pkiEzsigndocumentID** | **Integer**|  | [default to null]
 
 ### Return type
 
@@ -213,7 +214,7 @@ This endpoint returns URLs to different files that can be downloaded during the 
 //import org.openapitools.client.api.ObjectEzsigndocumentApi;
 
 ObjectEzsigndocumentApi apiInstance = new ObjectEzsigndocumentApi();
-Integer pkiEzsigndocumentID = null; // Integer | The unique ID of the Ezsigndocument
+Integer pkiEzsigndocumentID = null; // Integer | 
 String eDocumentType = null; // String | The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **Signed** Is the final document once all signatures were applied. 3. **Proofdocument** Is the evidence report. 4. **Proof** Is the complete evidence archive including all of the above and more. 
 try {
     EzsigndocumentGetDownloadUrlV1Response result = apiInstance.ezsigndocumentGetDownloadUrlV1(pkiEzsigndocumentID, eDocumentType);
@@ -229,12 +230,58 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsigndocumentID** | **Integer**| The unique ID of the Ezsigndocument | [default to null]
+ **pkiEzsigndocumentID** | **Integer**|  | [default to null]
  **eDocumentType** | **String**| The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **Signed** Is the final document once all signatures were applied. 3. **Proofdocument** Is the evidence report. 4. **Proof** Is the complete evidence archive including all of the above and more.  | [default to null] [enum: Initial, Signed, Proof, Proofdocument]
 
 ### Return type
 
 [**EzsigndocumentGetDownloadUrlV1Response**](EzsigndocumentGetDownloadUrlV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## ezsigndocumentGetEzsignpagesV1
+
+> EzsigndocumentGetEzsignpagesV1Response ezsigndocumentGetEzsignpagesV1(pkiEzsigndocumentID)
+
+Retrieve an existing Ezsigndocument&#39;s Ezsignpages
+
+## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectEzsigndocumentApi;
+
+ObjectEzsigndocumentApi apiInstance = new ObjectEzsigndocumentApi();
+Integer pkiEzsigndocumentID = null; // Integer | 
+try {
+    EzsigndocumentGetEzsignpagesV1Response result = apiInstance.ezsigndocumentGetEzsignpagesV1(pkiEzsigndocumentID);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectEzsigndocumentApi#ezsigndocumentGetEzsignpagesV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsigndocumentID** | **Integer**|  | [default to null]
+
+### Return type
+
+[**EzsigndocumentGetEzsignpagesV1Response**](EzsigndocumentGetEzsignpagesV1Response.md)
 
 ### Authorization
 
@@ -261,7 +308,7 @@ Retrieve an existing Ezsigndocument&#39;s Form Data
 //import org.openapitools.client.api.ObjectEzsigndocumentApi;
 
 ObjectEzsigndocumentApi apiInstance = new ObjectEzsigndocumentApi();
-Integer pkiEzsigndocumentID = null; // Integer | The unique ID of the Ezsigndocument
+Integer pkiEzsigndocumentID = null; // Integer | 
 try {
     File result = apiInstance.ezsigndocumentGetFormDataV1(pkiEzsigndocumentID);
     System.out.println(result);
@@ -276,7 +323,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsigndocumentID** | **Integer**| The unique ID of the Ezsigndocument | [default to null]
+ **pkiEzsigndocumentID** | **Integer**|  | [default to null]
 
 ### Return type
 
@@ -307,7 +354,7 @@ Retrieve an existing Ezsigndocument
 //import org.openapitools.client.api.ObjectEzsigndocumentApi;
 
 ObjectEzsigndocumentApi apiInstance = new ObjectEzsigndocumentApi();
-Integer pkiEzsigndocumentID = null; // Integer | The unique ID of the Ezsigndocument
+Integer pkiEzsigndocumentID = null; // Integer | 
 try {
     EzsigndocumentGetObjectV1Response result = apiInstance.ezsigndocumentGetObjectV1(pkiEzsigndocumentID);
     System.out.println(result);
@@ -322,7 +369,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsigndocumentID** | **Integer**| The unique ID of the Ezsigndocument | [default to null]
+ **pkiEzsigndocumentID** | **Integer**|  | [default to null]
 
 ### Return type
 
@@ -353,7 +400,7 @@ Retrieve positions X,Y of given words from a Ezsigndocument
 //import org.openapitools.client.api.ObjectEzsigndocumentApi;
 
 ObjectEzsigndocumentApi apiInstance = new ObjectEzsigndocumentApi();
-Integer pkiEzsigndocumentID = null; // Integer | The unique ID of the Ezsigndocument
+Integer pkiEzsigndocumentID = null; // Integer | 
 EzsigndocumentGetWordsPositionsV1Request ezsigndocumentGetWordsPositionsV1Request = new EzsigndocumentGetWordsPositionsV1Request(); // EzsigndocumentGetWordsPositionsV1Request | 
 try {
     EzsigndocumentGetWordsPositionsV1Response result = apiInstance.ezsigndocumentGetWordsPositionsV1(pkiEzsigndocumentID, ezsigndocumentGetWordsPositionsV1Request);
@@ -369,7 +416,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsigndocumentID** | **Integer**| The unique ID of the Ezsigndocument | [default to null]
+ **pkiEzsigndocumentID** | **Integer**|  | [default to null]
  **ezsigndocumentGetWordsPositionsV1Request** | [**EzsigndocumentGetWordsPositionsV1Request**](EzsigndocumentGetWordsPositionsV1Request.md)|  |
 
 ### Return type

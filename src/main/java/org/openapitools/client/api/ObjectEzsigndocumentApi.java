@@ -30,6 +30,7 @@ import org.openapitools.client.model.EzsigndocumentCreateObjectV1Request;
 import org.openapitools.client.model.EzsigndocumentCreateObjectV1Response;
 import org.openapitools.client.model.EzsigndocumentDeleteObjectV1Response;
 import org.openapitools.client.model.EzsigndocumentGetDownloadUrlV1Response;
+import org.openapitools.client.model.EzsigndocumentGetEzsignpagesV1Response;
 import org.openapitools.client.model.EzsigndocumentGetObjectV1Response;
 import org.openapitools.client.model.EzsigndocumentGetWordsPositionsV1Request;
 import org.openapitools.client.model.EzsigndocumentGetWordsPositionsV1Response;
@@ -69,7 +70,7 @@ public class ObjectEzsigndocumentApi {
   /**
   * Apply an Ezsign Template to the Ezsigndocument.
   * This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
-   * @param pkiEzsigndocumentID The unique ID of the Ezsigndocument
+   * @param pkiEzsigndocumentID 
    * @param ezsigndocumentApplyEzsigntemplateV1Request 
    * @return EzsigndocumentApplyEzsigntemplateV1Response
   */
@@ -138,7 +139,7 @@ public class ObjectEzsigndocumentApi {
       /**
    * Apply an Ezsign Template to the Ezsigndocument.
    * This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
-   * @param pkiEzsigndocumentID The unique ID of the Ezsigndocument   * @param ezsigndocumentApplyEzsigntemplateV1Request 
+   * @param pkiEzsigndocumentID    * @param ezsigndocumentApplyEzsigntemplateV1Request 
   */
   public void ezsigndocumentApplyEzsigntemplateV1 (Integer pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV1Request ezsigndocumentApplyEzsigntemplateV1Request, final Response.Listener<EzsigndocumentApplyEzsigntemplateV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = ezsigndocumentApplyEzsigntemplateV1Request;
@@ -336,7 +337,7 @@ public class ObjectEzsigndocumentApi {
   /**
   * Delete an existing Ezsigndocument
   * 
-   * @param pkiEzsigndocumentID The unique ID of the Ezsigndocument
+   * @param pkiEzsigndocumentID 
    * @return EzsigndocumentDeleteObjectV1Response
   */
   public EzsigndocumentDeleteObjectV1Response ezsigndocumentDeleteObjectV1 (Integer pkiEzsigndocumentID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
@@ -398,7 +399,7 @@ public class ObjectEzsigndocumentApi {
       /**
    * Delete an existing Ezsigndocument
    * 
-   * @param pkiEzsigndocumentID The unique ID of the Ezsigndocument
+   * @param pkiEzsigndocumentID 
   */
   public void ezsigndocumentDeleteObjectV1 (Integer pkiEzsigndocumentID, final Response.Listener<EzsigndocumentDeleteObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
@@ -463,7 +464,7 @@ public class ObjectEzsigndocumentApi {
   /**
   * Retrieve an existing Ezsigndocument&#39;s children IDs
   * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-   * @param pkiEzsigndocumentID The unique ID of the Ezsigndocument
+   * @param pkiEzsigndocumentID 
    * @return void
   */
   public void ezsigndocumentGetChildrenV1 (Integer pkiEzsigndocumentID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
@@ -525,7 +526,7 @@ public class ObjectEzsigndocumentApi {
       /**
    * Retrieve an existing Ezsigndocument&#39;s children IDs
    * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-   * @param pkiEzsigndocumentID The unique ID of the Ezsigndocument
+   * @param pkiEzsigndocumentID 
   */
   public void ezsigndocumentGetChildrenV1 (Integer pkiEzsigndocumentID, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
@@ -586,7 +587,7 @@ public class ObjectEzsigndocumentApi {
   /**
   * Retrieve a URL to download documents.
   * This endpoint returns URLs to different files that can be downloaded during the signing process.  These links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
-   * @param pkiEzsigndocumentID The unique ID of the Ezsigndocument
+   * @param pkiEzsigndocumentID 
    * @param eDocumentType The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **Signed** Is the final document once all signatures were applied. 3. **Proofdocument** Is the evidence report. 4. **Proof** Is the complete evidence archive including all of the above and more. 
    * @return EzsigndocumentGetDownloadUrlV1Response
   */
@@ -654,7 +655,7 @@ public class ObjectEzsigndocumentApi {
       /**
    * Retrieve a URL to download documents.
    * This endpoint returns URLs to different files that can be downloaded during the signing process.  These links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
-   * @param pkiEzsigndocumentID The unique ID of the Ezsigndocument   * @param eDocumentType The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **Signed** Is the final document once all signatures were applied. 3. **Proofdocument** Is the evidence report. 4. **Proof** Is the complete evidence archive including all of the above and more. 
+   * @param pkiEzsigndocumentID    * @param eDocumentType The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **Signed** Is the final document once all signatures were applied. 3. **Proofdocument** Is the evidence report. 4. **Proof** Is the complete evidence archive including all of the above and more. 
   */
   public void ezsigndocumentGetDownloadUrlV1 (Integer pkiEzsigndocumentID, String eDocumentType, final Response.Listener<EzsigndocumentGetDownloadUrlV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
@@ -722,9 +723,136 @@ public class ObjectEzsigndocumentApi {
     }
   }
   /**
+  * Retrieve an existing Ezsigndocument&#39;s Ezsignpages
+  * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+   * @param pkiEzsigndocumentID 
+   * @return EzsigndocumentGetEzsignpagesV1Response
+  */
+  public EzsigndocumentGetEzsignpagesV1Response ezsigndocumentGetEzsignpagesV1 (Integer pkiEzsigndocumentID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiEzsigndocumentID' is set
+    if (pkiEzsigndocumentID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsigndocumentID' when calling ezsigndocumentGetEzsignpagesV1",
+        new ApiException(400, "Missing the required parameter 'pkiEzsigndocumentID' when calling ezsigndocumentGetEzsignpagesV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignpages".replaceAll("\\{" + "pkiEzsigndocumentID" + "\\}", apiInvoker.escapeString(pkiEzsigndocumentID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (EzsigndocumentGetEzsignpagesV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsigndocumentGetEzsignpagesV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve an existing Ezsigndocument&#39;s Ezsignpages
+   * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+   * @param pkiEzsigndocumentID 
+  */
+  public void ezsigndocumentGetEzsignpagesV1 (Integer pkiEzsigndocumentID, final Response.Listener<EzsigndocumentGetEzsignpagesV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiEzsigndocumentID' is set
+    if (pkiEzsigndocumentID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsigndocumentID' when calling ezsigndocumentGetEzsignpagesV1",
+        new ApiException(400, "Missing the required parameter 'pkiEzsigndocumentID' when calling ezsigndocumentGetEzsignpagesV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignpages".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiEzsigndocumentID" + "\\}", apiInvoker.escapeString(pkiEzsigndocumentID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((EzsigndocumentGetEzsignpagesV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsigndocumentGetEzsignpagesV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
   * Retrieve an existing Ezsigndocument&#39;s Form Data
   * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-   * @param pkiEzsigndocumentID The unique ID of the Ezsigndocument
+   * @param pkiEzsigndocumentID 
    * @return File
   */
   public File ezsigndocumentGetFormDataV1 (Integer pkiEzsigndocumentID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
@@ -786,7 +914,7 @@ public class ObjectEzsigndocumentApi {
       /**
    * Retrieve an existing Ezsigndocument&#39;s Form Data
    * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-   * @param pkiEzsigndocumentID The unique ID of the Ezsigndocument
+   * @param pkiEzsigndocumentID 
   */
   public void ezsigndocumentGetFormDataV1 (Integer pkiEzsigndocumentID, final Response.Listener<File> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
@@ -851,7 +979,7 @@ public class ObjectEzsigndocumentApi {
   /**
   * Retrieve an existing Ezsigndocument
   * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-   * @param pkiEzsigndocumentID The unique ID of the Ezsigndocument
+   * @param pkiEzsigndocumentID 
    * @return EzsigndocumentGetObjectV1Response
   */
   public EzsigndocumentGetObjectV1Response ezsigndocumentGetObjectV1 (Integer pkiEzsigndocumentID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
@@ -913,7 +1041,7 @@ public class ObjectEzsigndocumentApi {
       /**
    * Retrieve an existing Ezsigndocument
    * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-   * @param pkiEzsigndocumentID The unique ID of the Ezsigndocument
+   * @param pkiEzsigndocumentID 
   */
   public void ezsigndocumentGetObjectV1 (Integer pkiEzsigndocumentID, final Response.Listener<EzsigndocumentGetObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
@@ -978,7 +1106,7 @@ public class ObjectEzsigndocumentApi {
   /**
   * Retrieve positions X,Y of given words from a Ezsigndocument
   * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-   * @param pkiEzsigndocumentID The unique ID of the Ezsigndocument
+   * @param pkiEzsigndocumentID 
    * @param ezsigndocumentGetWordsPositionsV1Request 
    * @return EzsigndocumentGetWordsPositionsV1Response
   */
@@ -1047,7 +1175,7 @@ public class ObjectEzsigndocumentApi {
       /**
    * Retrieve positions X,Y of given words from a Ezsigndocument
    * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-   * @param pkiEzsigndocumentID The unique ID of the Ezsigndocument   * @param ezsigndocumentGetWordsPositionsV1Request 
+   * @param pkiEzsigndocumentID    * @param ezsigndocumentGetWordsPositionsV1Request 
   */
   public void ezsigndocumentGetWordsPositionsV1 (Integer pkiEzsigndocumentID, EzsigndocumentGetWordsPositionsV1Request ezsigndocumentGetWordsPositionsV1Request, final Response.Listener<EzsigndocumentGetWordsPositionsV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = ezsigndocumentGetWordsPositionsV1Request;

@@ -30,6 +30,7 @@ import org.openapitools.client.model.EzsignfolderDeleteObjectV1Response;
 import org.openapitools.client.model.EzsignfolderGetObjectV1Response;
 import org.openapitools.client.model.EzsignfolderSendV1Request;
 import org.openapitools.client.model.EzsignfolderSendV1Response;
+import java.io.File;
 import java.util.*;
 
 import org.apache.http.HttpEntity;
@@ -193,7 +194,7 @@ public class ObjectEzsignfolderApi {
   /**
   * Delete an existing Ezsignfolder
   * 
-   * @param pkiEzsignfolderID The unique ID of the Ezsignfolder
+   * @param pkiEzsignfolderID 
    * @return EzsignfolderDeleteObjectV1Response
   */
   public EzsignfolderDeleteObjectV1Response ezsignfolderDeleteObjectV1 (Integer pkiEzsignfolderID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
@@ -255,7 +256,7 @@ public class ObjectEzsignfolderApi {
       /**
    * Delete an existing Ezsignfolder
    * 
-   * @param pkiEzsignfolderID The unique ID of the Ezsignfolder
+   * @param pkiEzsignfolderID 
   */
   public void ezsignfolderDeleteObjectV1 (Integer pkiEzsignfolderID, final Response.Listener<EzsignfolderDeleteObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
@@ -320,7 +321,7 @@ public class ObjectEzsignfolderApi {
   /**
   * Retrieve an existing Ezsignfolder&#39;s children IDs
   * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-   * @param pkiEzsignfolderID The unique ID of the Ezsignfolder
+   * @param pkiEzsignfolderID 
    * @return void
   */
   public void ezsignfolderGetChildrenV1 (Integer pkiEzsignfolderID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
@@ -382,7 +383,7 @@ public class ObjectEzsignfolderApi {
       /**
    * Retrieve an existing Ezsignfolder&#39;s children IDs
    * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-   * @param pkiEzsignfolderID The unique ID of the Ezsignfolder
+   * @param pkiEzsignfolderID 
   */
   public void ezsignfolderGetChildrenV1 (Integer pkiEzsignfolderID, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
@@ -441,9 +442,136 @@ public class ObjectEzsignfolderApi {
     }
   }
   /**
+  * Retrieve an existing Ezsignfolder&#39;s forms data
+  * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+   * @param pkiEzsignfolderID 
+   * @return File
+  */
+  public File ezsignfolderGetFormsDataV1 (Integer pkiEzsignfolderID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiEzsignfolderID' is set
+    if (pkiEzsignfolderID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsignfolderID' when calling ezsignfolderGetFormsDataV1",
+        new ApiException(400, "Missing the required parameter 'pkiEzsignfolderID' when calling ezsignfolderGetFormsDataV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData".replaceAll("\\{" + "pkiEzsignfolderID" + "\\}", apiInvoker.escapeString(pkiEzsignfolderID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (File) ApiInvoker.deserialize(localVarResponse, "", File.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve an existing Ezsignfolder&#39;s forms data
+   * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+   * @param pkiEzsignfolderID 
+  */
+  public void ezsignfolderGetFormsDataV1 (Integer pkiEzsignfolderID, final Response.Listener<File> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiEzsignfolderID' is set
+    if (pkiEzsignfolderID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsignfolderID' when calling ezsignfolderGetFormsDataV1",
+        new ApiException(400, "Missing the required parameter 'pkiEzsignfolderID' when calling ezsignfolderGetFormsDataV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiEzsignfolderID" + "\\}", apiInvoker.escapeString(pkiEzsignfolderID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((File) ApiInvoker.deserialize(localVarResponse,  "", File.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
   * Retrieve an existing Ezsignfolder
   * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-   * @param pkiEzsignfolderID The unique ID of the Ezsignfolder
+   * @param pkiEzsignfolderID 
    * @return EzsignfolderGetObjectV1Response
   */
   public EzsignfolderGetObjectV1Response ezsignfolderGetObjectV1 (Integer pkiEzsignfolderID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
@@ -505,7 +633,7 @@ public class ObjectEzsignfolderApi {
       /**
    * Retrieve an existing Ezsignfolder
    * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-   * @param pkiEzsignfolderID The unique ID of the Ezsignfolder
+   * @param pkiEzsignfolderID 
   */
   public void ezsignfolderGetObjectV1 (Integer pkiEzsignfolderID, final Response.Listener<EzsignfolderGetObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
@@ -570,7 +698,7 @@ public class ObjectEzsignfolderApi {
   /**
   * Send the Ezsignfolder to the signatories for signature
   * 
-   * @param pkiEzsignfolderID The unique ID of the Ezsignfolder
+   * @param pkiEzsignfolderID 
    * @param ezsignfolderSendV1Request 
    * @return EzsignfolderSendV1Response
   */
@@ -639,7 +767,7 @@ public class ObjectEzsignfolderApi {
       /**
    * Send the Ezsignfolder to the signatories for signature
    * 
-   * @param pkiEzsignfolderID The unique ID of the Ezsignfolder   * @param ezsignfolderSendV1Request 
+   * @param pkiEzsignfolderID    * @param ezsignfolderSendV1Request 
   */
   public void ezsignfolderSendV1 (Integer pkiEzsignfolderID, EzsignfolderSendV1Request ezsignfolderSendV1Request, final Response.Listener<EzsignfolderSendV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = ezsignfolderSendV1Request;

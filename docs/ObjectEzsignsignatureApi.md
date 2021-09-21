@@ -70,7 +70,7 @@ Delete an existing Ezsignsignature
 //import org.openapitools.client.api.ObjectEzsignsignatureApi;
 
 ObjectEzsignsignatureApi apiInstance = new ObjectEzsignsignatureApi();
-Integer pkiEzsignsignatureID = null; // Integer | The unique ID of the Ezsignsignature
+Integer pkiEzsignsignatureID = null; // Integer | 
 try {
     EzsignsignatureDeleteObjectV1Response result = apiInstance.ezsignsignatureDeleteObjectV1(pkiEzsignsignatureID);
     System.out.println(result);
@@ -85,7 +85,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignsignatureID** | **Integer**| The unique ID of the Ezsignsignature | [default to null]
+ **pkiEzsignsignatureID** | **Integer**|  | [default to null]
 
 ### Return type
 
@@ -116,7 +116,7 @@ Retrieve an existing Ezsignsignature&#39;s children IDs
 //import org.openapitools.client.api.ObjectEzsignsignatureApi;
 
 ObjectEzsignsignatureApi apiInstance = new ObjectEzsignsignatureApi();
-Integer pkiEzsignsignatureID = null; // Integer | The unique ID of the Ezsignsignature
+Integer pkiEzsignsignatureID = null; // Integer | 
 try {
     apiInstance.ezsignsignatureGetChildrenV1(pkiEzsignsignatureID);
 } catch (ApiException e) {
@@ -130,7 +130,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignsignatureID** | **Integer**| The unique ID of the Ezsignsignature | [default to null]
+ **pkiEzsignsignatureID** | **Integer**|  | [default to null]
 
 ### Return type
 
@@ -161,7 +161,7 @@ Retrieve an existing Ezsignsignature
 //import org.openapitools.client.api.ObjectEzsignsignatureApi;
 
 ObjectEzsignsignatureApi apiInstance = new ObjectEzsignsignatureApi();
-Integer pkiEzsignsignatureID = null; // Integer | The unique ID of the Ezsignsignature
+Integer pkiEzsignsignatureID = null; // Integer | 
 try {
     EzsignsignatureGetObjectV1Response result = apiInstance.ezsignsignatureGetObjectV1(pkiEzsignsignatureID);
     System.out.println(result);
@@ -176,7 +176,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignsignatureID** | **Integer**| The unique ID of the Ezsignsignature | [default to null]
+ **pkiEzsignsignatureID** | **Integer**|  | [default to null]
 
 ### Return type
 

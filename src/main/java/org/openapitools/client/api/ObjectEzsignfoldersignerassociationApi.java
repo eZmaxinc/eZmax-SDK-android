@@ -192,7 +192,7 @@ public class ObjectEzsignfoldersignerassociationApi {
   /**
   * Delete an existing Ezsignfoldersignerassociation
   * 
-   * @param pkiEzsignfoldersignerassociationID The unique ID of the Ezsignfoldersignerassociation
+   * @param pkiEzsignfoldersignerassociationID 
    * @return EzsignfoldersignerassociationDeleteObjectV1Response
   */
   public EzsignfoldersignerassociationDeleteObjectV1Response ezsignfoldersignerassociationDeleteObjectV1 (Integer pkiEzsignfoldersignerassociationID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
@@ -254,7 +254,7 @@ public class ObjectEzsignfoldersignerassociationApi {
       /**
    * Delete an existing Ezsignfoldersignerassociation
    * 
-   * @param pkiEzsignfoldersignerassociationID The unique ID of the Ezsignfoldersignerassociation
+   * @param pkiEzsignfoldersignerassociationID 
   */
   public void ezsignfoldersignerassociationDeleteObjectV1 (Integer pkiEzsignfoldersignerassociationID, final Response.Listener<EzsignfoldersignerassociationDeleteObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
@@ -319,7 +319,7 @@ public class ObjectEzsignfoldersignerassociationApi {
   /**
   * Retrieve an existing Ezsignfoldersignerassociation&#39;s children IDs
   * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-   * @param pkiEzsignfoldersignerassociationID The unique ID of the Ezsignfoldersignerassociation
+   * @param pkiEzsignfoldersignerassociationID 
    * @return void
   */
   public void ezsignfoldersignerassociationGetChildrenV1 (Integer pkiEzsignfoldersignerassociationID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
@@ -381,7 +381,7 @@ public class ObjectEzsignfoldersignerassociationApi {
       /**
    * Retrieve an existing Ezsignfoldersignerassociation&#39;s children IDs
    * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-   * @param pkiEzsignfoldersignerassociationID The unique ID of the Ezsignfoldersignerassociation
+   * @param pkiEzsignfoldersignerassociationID 
   */
   public void ezsignfoldersignerassociationGetChildrenV1 (Integer pkiEzsignfoldersignerassociationID, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
@@ -442,7 +442,7 @@ public class ObjectEzsignfoldersignerassociationApi {
   /**
   * Retrieve a Login Url to allow In-Person signing
   * This endpoint returns a Login Url that can be used in a browser or embedded in an I-Frame to allow in person signing.  The signer Login type must be configured as In-Person.
-   * @param pkiEzsignfoldersignerassociationID The unique ID of the Ezsignfoldersignerassociation
+   * @param pkiEzsignfoldersignerassociationID 
    * @return EzsignfoldersignerassociationGetInPersonLoginUrlV1Response
   */
   public EzsignfoldersignerassociationGetInPersonLoginUrlV1Response ezsignfoldersignerassociationGetInPersonLoginUrlV1 (Integer pkiEzsignfoldersignerassociationID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
@@ -504,7 +504,7 @@ public class ObjectEzsignfoldersignerassociationApi {
       /**
    * Retrieve a Login Url to allow In-Person signing
    * This endpoint returns a Login Url that can be used in a browser or embedded in an I-Frame to allow in person signing.  The signer Login type must be configured as In-Person.
-   * @param pkiEzsignfoldersignerassociationID The unique ID of the Ezsignfoldersignerassociation
+   * @param pkiEzsignfoldersignerassociationID 
   */
   public void ezsignfoldersignerassociationGetInPersonLoginUrlV1 (Integer pkiEzsignfoldersignerassociationID, final Response.Listener<EzsignfoldersignerassociationGetInPersonLoginUrlV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
@@ -569,7 +569,7 @@ public class ObjectEzsignfoldersignerassociationApi {
   /**
   * Retrieve an existing Ezsignfoldersignerassociation
   * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-   * @param pkiEzsignfoldersignerassociationID The unique ID of the Ezsignfoldersignerassociation
+   * @param pkiEzsignfoldersignerassociationID 
    * @return EzsignfoldersignerassociationGetObjectV1Response
   */
   public EzsignfoldersignerassociationGetObjectV1Response ezsignfoldersignerassociationGetObjectV1 (Integer pkiEzsignfoldersignerassociationID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
@@ -631,7 +631,7 @@ public class ObjectEzsignfoldersignerassociationApi {
       /**
    * Retrieve an existing Ezsignfoldersignerassociation
    * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-   * @param pkiEzsignfoldersignerassociationID The unique ID of the Ezsignfoldersignerassociation
+   * @param pkiEzsignfoldersignerassociationID 
   */
   public void ezsignfoldersignerassociationGetObjectV1 (Integer pkiEzsignfoldersignerassociationID, final Response.Listener<EzsignfoldersignerassociationGetObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;

@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**ezsignfolderCreateObjectV1**](ObjectEzsignfolderApi.md#ezsignfolderCreateObjectV1) | **POST** /1/object/ezsignfolder | Create a new Ezsignfolder
 [**ezsignfolderDeleteObjectV1**](ObjectEzsignfolderApi.md#ezsignfolderDeleteObjectV1) | **DELETE** /1/object/ezsignfolder/{pkiEzsignfolderID} | Delete an existing Ezsignfolder
 [**ezsignfolderGetChildrenV1**](ObjectEzsignfolderApi.md#ezsignfolderGetChildrenV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getChildren | Retrieve an existing Ezsignfolder&#39;s children IDs
+[**ezsignfolderGetFormsDataV1**](ObjectEzsignfolderApi.md#ezsignfolderGetFormsDataV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData | Retrieve an existing Ezsignfolder&#39;s forms data
 [**ezsignfolderGetObjectV1**](ObjectEzsignfolderApi.md#ezsignfolderGetObjectV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID} | Retrieve an existing Ezsignfolder
 [**ezsignfolderSendV1**](ObjectEzsignfolderApi.md#ezsignfolderSendV1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/send | Send the Ezsignfolder to the signatories for signature
 
@@ -71,7 +72,7 @@ Delete an existing Ezsignfolder
 //import org.openapitools.client.api.ObjectEzsignfolderApi;
 
 ObjectEzsignfolderApi apiInstance = new ObjectEzsignfolderApi();
-Integer pkiEzsignfolderID = null; // Integer | The unique ID of the Ezsignfolder
+Integer pkiEzsignfolderID = null; // Integer | 
 try {
     EzsignfolderDeleteObjectV1Response result = apiInstance.ezsignfolderDeleteObjectV1(pkiEzsignfolderID);
     System.out.println(result);
@@ -86,7 +87,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignfolderID** | **Integer**| The unique ID of the Ezsignfolder | [default to null]
+ **pkiEzsignfolderID** | **Integer**|  | [default to null]
 
 ### Return type
 
@@ -117,7 +118,7 @@ Retrieve an existing Ezsignfolder&#39;s children IDs
 //import org.openapitools.client.api.ObjectEzsignfolderApi;
 
 ObjectEzsignfolderApi apiInstance = new ObjectEzsignfolderApi();
-Integer pkiEzsignfolderID = null; // Integer | The unique ID of the Ezsignfolder
+Integer pkiEzsignfolderID = null; // Integer | 
 try {
     apiInstance.ezsignfolderGetChildrenV1(pkiEzsignfolderID);
 } catch (ApiException e) {
@@ -131,7 +132,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignfolderID** | **Integer**| The unique ID of the Ezsignfolder | [default to null]
+ **pkiEzsignfolderID** | **Integer**|  | [default to null]
 
 ### Return type
 
@@ -145,6 +146,52 @@ null (empty response body)
 
 - **Content-Type**: Not defined
 - **Accept**: application/json
+
+
+## ezsignfolderGetFormsDataV1
+
+> File ezsignfolderGetFormsDataV1(pkiEzsignfolderID)
+
+Retrieve an existing Ezsignfolder&#39;s forms data
+
+## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectEzsignfolderApi;
+
+ObjectEzsignfolderApi apiInstance = new ObjectEzsignfolderApi();
+Integer pkiEzsignfolderID = null; // Integer | 
+try {
+    File result = apiInstance.ezsignfolderGetFormsDataV1(pkiEzsignfolderID);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectEzsignfolderApi#ezsignfolderGetFormsDataV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignfolderID** | **Integer**|  | [default to null]
+
+### Return type
+
+[**File**](File.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/zip, application/json
 
 
 ## ezsignfolderGetObjectV1
@@ -162,7 +209,7 @@ Retrieve an existing Ezsignfolder
 //import org.openapitools.client.api.ObjectEzsignfolderApi;
 
 ObjectEzsignfolderApi apiInstance = new ObjectEzsignfolderApi();
-Integer pkiEzsignfolderID = null; // Integer | The unique ID of the Ezsignfolder
+Integer pkiEzsignfolderID = null; // Integer | 
 try {
     EzsignfolderGetObjectV1Response result = apiInstance.ezsignfolderGetObjectV1(pkiEzsignfolderID);
     System.out.println(result);
@@ -177,7 +224,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignfolderID** | **Integer**| The unique ID of the Ezsignfolder | [default to null]
+ **pkiEzsignfolderID** | **Integer**|  | [default to null]
 
 ### Return type
 
@@ -206,7 +253,7 @@ Send the Ezsignfolder to the signatories for signature
 //import org.openapitools.client.api.ObjectEzsignfolderApi;
 
 ObjectEzsignfolderApi apiInstance = new ObjectEzsignfolderApi();
-Integer pkiEzsignfolderID = null; // Integer | The unique ID of the Ezsignfolder
+Integer pkiEzsignfolderID = null; // Integer | 
 EzsignfolderSendV1Request ezsignfolderSendV1Request = new EzsignfolderSendV1Request(); // EzsignfolderSendV1Request | 
 try {
     EzsignfolderSendV1Response result = apiInstance.ezsignfolderSendV1(pkiEzsignfolderID, ezsignfolderSendV1Request);
@@ -222,7 +269,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignfolderID** | **Integer**| The unique ID of the Ezsignfolder | [default to null]
+ **pkiEzsignfolderID** | **Integer**|  | [default to null]
  **ezsignfolderSendV1Request** | [**EzsignfolderSendV1Request**](EzsignfolderSendV1Request.md)|  |
 
 ### Return type
