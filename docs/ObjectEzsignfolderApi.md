@@ -150,7 +150,7 @@ null (empty response body)
 
 ## ezsignfolderGetFormsDataV1
 
-> File ezsignfolderGetFormsDataV1(pkiEzsignfolderID)
+> EzsignfolderGetFormsDataV1Response ezsignfolderGetFormsDataV1(pkiEzsignfolderID)
 
 Retrieve an existing Ezsignfolder&#39;s forms data
 
@@ -165,7 +165,7 @@ Retrieve an existing Ezsignfolder&#39;s forms data
 ObjectEzsignfolderApi apiInstance = new ObjectEzsignfolderApi();
 Integer pkiEzsignfolderID = null; // Integer | 
 try {
-    File result = apiInstance.ezsignfolderGetFormsDataV1(pkiEzsignfolderID);
+    EzsignfolderGetFormsDataV1Response result = apiInstance.ezsignfolderGetFormsDataV1(pkiEzsignfolderID);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectEzsignfolderApi#ezsignfolderGetFormsDataV1");
@@ -182,7 +182,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**File**](File.md)
+[**EzsignfolderGetFormsDataV1Response**](EzsignfolderGetFormsDataV1Response.md)
 
 ### Authorization
 
@@ -191,7 +191,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/zip, application/json
+- **Accept**: application/json, application/zip
 
 
 ## ezsignfolderGetObjectV1

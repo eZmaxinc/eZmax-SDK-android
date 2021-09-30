@@ -1,6 +1,6 @@
 
 
-# WordPositionResponse
+# CustomWordPositionResponse
 
 ## Properties
 
