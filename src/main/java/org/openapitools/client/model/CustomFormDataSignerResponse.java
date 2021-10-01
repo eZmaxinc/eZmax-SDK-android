@@ -79,9 +79,8 @@ public class CustomFormDataSignerResponse {
   }
 
   /**
-   * This array contains the labels or each Form fields in the form but WITHOUT the values
    **/
-  @ApiModelProperty(required = true, value = "This array contains the labels or each Form fields in the form but WITHOUT the values")
+  @ApiModelProperty(required = true, value = "")
   public List<EzsignformfieldgroupResponseCompound> getAObjEzsignformfieldgroupCompound() {
     return aObjEzsignformfieldgroupCompound;
   }

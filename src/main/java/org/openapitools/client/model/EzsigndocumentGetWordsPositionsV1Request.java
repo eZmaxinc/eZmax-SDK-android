@@ -22,17 +22,34 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Request for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request")
 public class EzsigndocumentGetWordsPositionsV1Request {
   
-  @SerializedName("a_sWords")
-  private List<String> aSWords = null;
+  public enum EGetEnum {
+     All,  Words, 
+  };
+  @SerializedName("eGet")
+  private EGetEnum eGet = null;
+  @SerializedName("a_sWord")
+  private List<String> aSWord = null;
 
   /**
+   * Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search in *a_sWord*.
    **/
-  @ApiModelProperty(required = true, value = "")
-  public List<String> getASWords() {
-    return aSWords;
+  @ApiModelProperty(value = "Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search in *a_sWord*.")
+  public EGetEnum getEGet() {
+    return eGet;
   }
-  public void setASWords(List<String> aSWords) {
-    this.aSWords = aSWords;
+  public void setEGet(EGetEnum eGet) {
+    this.eGet = eGet;
+  }
+
+  /**
+   * Array of words to find in the document
+   **/
+  @ApiModelProperty(value = "Array of words to find in the document")
+  public List<String> getASWord() {
+    return aSWord;
+  }
+  public void setASWord(List<String> aSWord) {
+    this.aSWord = aSWord;
   }
 
 
@@ -45,13 +62,15 @@ public class EzsigndocumentGetWordsPositionsV1Request {
       return false;
     }
     EzsigndocumentGetWordsPositionsV1Request ezsigndocumentGetWordsPositionsV1Request = (EzsigndocumentGetWordsPositionsV1Request) o;
-    return (this.aSWords == null ? ezsigndocumentGetWordsPositionsV1Request.aSWords == null : this.aSWords.equals(ezsigndocumentGetWordsPositionsV1Request.aSWords));
+    return (this.eGet == null ? ezsigndocumentGetWordsPositionsV1Request.eGet == null : this.eGet.equals(ezsigndocumentGetWordsPositionsV1Request.eGet)) &&
+        (this.aSWord == null ? ezsigndocumentGetWordsPositionsV1Request.aSWord == null : this.aSWord.equals(ezsigndocumentGetWordsPositionsV1Request.aSWord));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.aSWords == null ? 0: this.aSWords.hashCode());
+    result = 31 * result + (this.eGet == null ? 0: this.eGet.hashCode());
+    result = 31 * result + (this.aSWord == null ? 0: this.aSWord.hashCode());
     return result;
   }
 
@@ -60,7 +79,8 @@ public class EzsigndocumentGetWordsPositionsV1Request {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsigndocumentGetWordsPositionsV1Request {\n");
     
-    sb.append("  aSWords: ").append(aSWords).append("\n");
+    sb.append("  eGet: ").append(eGet).append("\n");
+    sb.append("  aSWord: ").append(aSWord).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

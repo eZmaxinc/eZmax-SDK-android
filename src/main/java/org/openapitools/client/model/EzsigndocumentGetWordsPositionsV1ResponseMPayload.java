@@ -23,19 +23,6 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request")
 public class EzsigndocumentGetWordsPositionsV1ResponseMPayload {
   
-  @SerializedName("a_sWords")
-  private List<CustomWordPositionResponse> aSWords = null;
-
-  /**
-   * An array of words with an array of pages and positions X,Y  They are returned with the sames words that was sent in the request.
-   **/
-  @ApiModelProperty(required = true, value = "An array of words with an array of pages and positions X,Y  They are returned with the sames words that was sent in the request.")
-  public List<CustomWordPositionResponse> getASWords() {
-    return aSWords;
-  }
-  public void setASWords(List<CustomWordPositionResponse> aSWords) {
-    this.aSWords = aSWords;
-  }
 
 
   @Override
@@ -47,13 +34,12 @@ public class EzsigndocumentGetWordsPositionsV1ResponseMPayload {
       return false;
     }
     EzsigndocumentGetWordsPositionsV1ResponseMPayload ezsigndocumentGetWordsPositionsV1ResponseMPayload = (EzsigndocumentGetWordsPositionsV1ResponseMPayload) o;
-    return (this.aSWords == null ? ezsigndocumentGetWordsPositionsV1ResponseMPayload.aSWords == null : this.aSWords.equals(ezsigndocumentGetWordsPositionsV1ResponseMPayload.aSWords));
+    return true;
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.aSWords == null ? 0: this.aSWords.hashCode());
     return result;
   }
 
@@ -62,7 +48,6 @@ public class EzsigndocumentGetWordsPositionsV1ResponseMPayload {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsigndocumentGetWordsPositionsV1ResponseMPayload {\n");
     
-    sb.append("  aSWords: ").append(aSWords).append("\n");
     sb.append("}\n");
     return sb.toString();
   }
