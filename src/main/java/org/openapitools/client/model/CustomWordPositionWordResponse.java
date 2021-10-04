@@ -25,8 +25,8 @@ public class CustomWordPositionWordResponse {
   
   @SerializedName("sWord")
   private String sWord = null;
-  @SerializedName("objWordPositionOccurence")
-  private List<CustomWordPositionOccurenceResponse> objWordPositionOccurence = null;
+  @SerializedName("a_objWordPositionOccurence")
+  private List<CustomWordPositionOccurenceResponse> aObjWordPositionOccurence = null;
 
   /**
    * The searched word
@@ -43,11 +43,11 @@ public class CustomWordPositionWordResponse {
    * The found occurences for the seached word
    **/
   @ApiModelProperty(required = true, value = "The found occurences for the seached word")
-  public List<CustomWordPositionOccurenceResponse> getObjWordPositionOccurence() {
-    return objWordPositionOccurence;
+  public List<CustomWordPositionOccurenceResponse> getAObjWordPositionOccurence() {
+    return aObjWordPositionOccurence;
   }
-  public void setObjWordPositionOccurence(List<CustomWordPositionOccurenceResponse> objWordPositionOccurence) {
-    this.objWordPositionOccurence = objWordPositionOccurence;
+  public void setAObjWordPositionOccurence(List<CustomWordPositionOccurenceResponse> aObjWordPositionOccurence) {
+    this.aObjWordPositionOccurence = aObjWordPositionOccurence;
   }
 
 
@@ -61,14 +61,14 @@ public class CustomWordPositionWordResponse {
     }
     CustomWordPositionWordResponse customWordPositionWordResponse = (CustomWordPositionWordResponse) o;
     return (this.sWord == null ? customWordPositionWordResponse.sWord == null : this.sWord.equals(customWordPositionWordResponse.sWord)) &&
-        (this.objWordPositionOccurence == null ? customWordPositionWordResponse.objWordPositionOccurence == null : this.objWordPositionOccurence.equals(customWordPositionWordResponse.objWordPositionOccurence));
+        (this.aObjWordPositionOccurence == null ? customWordPositionWordResponse.aObjWordPositionOccurence == null : this.aObjWordPositionOccurence.equals(customWordPositionWordResponse.aObjWordPositionOccurence));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
     result = 31 * result + (this.sWord == null ? 0: this.sWord.hashCode());
-    result = 31 * result + (this.objWordPositionOccurence == null ? 0: this.objWordPositionOccurence.hashCode());
+    result = 31 * result + (this.aObjWordPositionOccurence == null ? 0: this.aObjWordPositionOccurence.hashCode());
     return result;
   }
 
@@ -78,7 +78,7 @@ public class CustomWordPositionWordResponse {
     sb.append("class CustomWordPositionWordResponse {\n");
     
     sb.append("  sWord: ").append(sWord).append("\n");
-    sb.append("  objWordPositionOccurence: ").append(objWordPositionOccurence).append("\n");
+    sb.append("  aObjWordPositionOccurence: ").append(aObjWordPositionOccurence).append("\n");
     sb.append("}\n");
     return sb.toString();
   }
