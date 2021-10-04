@@ -19,7 +19,7 @@ import com.google.gson.annotations.SerializedName;
  * A Word Position Object
  **/
 @ApiModel(description = "A Word Position Object")
-public class CustomWordPositionResponse {
+public class CustomWordPositionOccurenceResponse {
   
   @SerializedName("iPage")
   private Integer iPage = null;
@@ -73,10 +73,10 @@ public class CustomWordPositionResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    CustomWordPositionResponse customWordPositionResponse = (CustomWordPositionResponse) o;
-    return (this.iPage == null ? customWordPositionResponse.iPage == null : this.iPage.equals(customWordPositionResponse.iPage)) &&
-        (this.iX == null ? customWordPositionResponse.iX == null : this.iX.equals(customWordPositionResponse.iX)) &&
-        (this.iY == null ? customWordPositionResponse.iY == null : this.iY.equals(customWordPositionResponse.iY));
+    CustomWordPositionOccurenceResponse customWordPositionOccurenceResponse = (CustomWordPositionOccurenceResponse) o;
+    return (this.iPage == null ? customWordPositionOccurenceResponse.iPage == null : this.iPage.equals(customWordPositionOccurenceResponse.iPage)) &&
+        (this.iX == null ? customWordPositionOccurenceResponse.iX == null : this.iX.equals(customWordPositionOccurenceResponse.iX)) &&
+        (this.iY == null ? customWordPositionOccurenceResponse.iY == null : this.iY.equals(customWordPositionOccurenceResponse.iY));
   }
 
   @Override
@@ -91,7 +91,7 @@ public class CustomWordPositionResponse {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class CustomWordPositionResponse {\n");
+    sb.append("class CustomWordPositionOccurenceResponse {\n");
     
     sb.append("  iPage: ").append(iPage).append("\n");
     sb.append("  iX: ").append(iX).append("\n");

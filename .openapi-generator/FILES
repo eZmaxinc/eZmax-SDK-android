@@ -37,7 +37,8 @@ docs/ContactinformationsRequestCompoundAllOf.md
 docs/CustomFormDataDocumentResponse.md
 docs/CustomFormDataFolderResponse.md
 docs/CustomFormDataSignerResponse.md
-docs/CustomWordPositionResponse.md
+docs/CustomWordPositionOccurenceResponse.md
+docs/CustomWordPositionWordResponse.md
 docs/EmailRequest.md
 docs/EzsigndocumentApplyEzsigntemplateV1Request.md
 docs/EzsigndocumentApplyEzsigntemplateV1Response.md
@@ -63,7 +64,6 @@ docs/EzsigndocumentGetObjectV1ResponseMPayload.md
 docs/EzsigndocumentGetWordsPositionsV1Request.md
 docs/EzsigndocumentGetWordsPositionsV1Response.md
 docs/EzsigndocumentGetWordsPositionsV1ResponseAllOf.md
-docs/EzsigndocumentGetWordsPositionsV1ResponseMPayload.md
 docs/EzsigndocumentRequest.md
 docs/EzsigndocumentRequestCompound.md
 docs/EzsigndocumentResponse.md
@@ -243,7 +243,8 @@ src/main/java/org/openapitools/client/model/ContactinformationsRequestCompoundAl
 src/main/java/org/openapitools/client/model/CustomFormDataDocumentResponse.java
 src/main/java/org/openapitools/client/model/CustomFormDataFolderResponse.java
 src/main/java/org/openapitools/client/model/CustomFormDataSignerResponse.java
-src/main/java/org/openapitools/client/model/CustomWordPositionResponse.java
+src/main/java/org/openapitools/client/model/CustomWordPositionOccurenceResponse.java
+src/main/java/org/openapitools/client/model/CustomWordPositionWordResponse.java
 src/main/java/org/openapitools/client/model/EmailRequest.java
 src/main/java/org/openapitools/client/model/EzsigndocumentApplyEzsigntemplateV1Request.java
 src/main/java/org/openapitools/client/model/EzsigndocumentApplyEzsigntemplateV1Response.java
@@ -269,7 +270,6 @@ src/main/java/org/openapitools/client/model/EzsigndocumentGetObjectV1ResponseMPa
 src/main/java/org/openapitools/client/model/EzsigndocumentGetWordsPositionsV1Request.java
 src/main/java/org/openapitools/client/model/EzsigndocumentGetWordsPositionsV1Response.java
 src/main/java/org/openapitools/client/model/EzsigndocumentGetWordsPositionsV1ResponseAllOf.java
-src/main/java/org/openapitools/client/model/EzsigndocumentGetWordsPositionsV1ResponseMPayload.java
 src/main/java/org/openapitools/client/model/EzsigndocumentRequest.java
 src/main/java/org/openapitools/client/model/EzsigndocumentRequestCompound.java
 src/main/java/org/openapitools/client/model/EzsigndocumentResponse.java

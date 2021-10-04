@@ -12,11 +12,12 @@
 
 package org.openapitools.client.model;
 
+import java.util.*;
 import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseObjDebug;
 import org.openapitools.client.model.CommonResponseObjDebugPayload;
+import org.openapitools.client.model.CustomWordPositionWordResponse;
 import org.openapitools.client.model.EzsigndocumentGetWordsPositionsV1ResponseAllOf;
-import org.openapitools.client.model.EzsigndocumentGetWordsPositionsV1ResponseMPayload;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -27,19 +28,20 @@ import com.google.gson.annotations.SerializedName;
 public class EzsigndocumentGetWordsPositionsV1Response {
   
   @SerializedName("mPayload")
-  private EzsigndocumentGetWordsPositionsV1ResponseMPayload mPayload = null;
+  private List<CustomWordPositionWordResponse> mPayload = null;
   @SerializedName("objDebugPayload")
   private CommonResponseObjDebugPayload objDebugPayload = null;
   @SerializedName("objDebug")
   private CommonResponseObjDebug objDebug = null;
 
   /**
+   * Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request
    **/
-  @ApiModelProperty(required = true, value = "")
-  public EzsigndocumentGetWordsPositionsV1ResponseMPayload getMPayload() {
+  @ApiModelProperty(required = true, value = "Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request")
+  public List<CustomWordPositionWordResponse> getMPayload() {
     return mPayload;
   }
-  public void setMPayload(EzsigndocumentGetWordsPositionsV1ResponseMPayload mPayload) {
+  public void setMPayload(List<CustomWordPositionWordResponse> mPayload) {
     this.mPayload = mPayload;
   }
 

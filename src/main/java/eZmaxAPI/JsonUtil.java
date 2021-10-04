@@ -197,8 +197,12 @@ public class JsonUtil {
       return new TypeToken<List<CustomFormDataSignerResponse>>(){}.getType();
     }
     
-    if ("CustomWordPositionResponse".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CustomWordPositionResponse>>(){}.getType();
+    if ("CustomWordPositionOccurenceResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CustomWordPositionOccurenceResponse>>(){}.getType();
+    }
+    
+    if ("CustomWordPositionWordResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CustomWordPositionWordResponse>>(){}.getType();
     }
     
     if ("EmailRequest".equalsIgnoreCase(className)) {
@@ -299,10 +303,6 @@ public class JsonUtil {
     
     if ("EzsigndocumentGetWordsPositionsV1ResponseAllOf".equalsIgnoreCase(className)) {
       return new TypeToken<List<EzsigndocumentGetWordsPositionsV1ResponseAllOf>>(){}.getType();
-    }
-    
-    if ("EzsigndocumentGetWordsPositionsV1ResponseMPayload".equalsIgnoreCase(className)) {
-      return new TypeToken<List<EzsigndocumentGetWordsPositionsV1ResponseMPayload>>(){}.getType();
     }
     
     if ("EzsigndocumentRequest".equalsIgnoreCase(className)) {
@@ -839,8 +839,12 @@ public class JsonUtil {
       return new TypeToken<CustomFormDataSignerResponse>(){}.getType();
     }
     
-    if ("CustomWordPositionResponse".equalsIgnoreCase(className)) {
-      return new TypeToken<CustomWordPositionResponse>(){}.getType();
+    if ("CustomWordPositionOccurenceResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<CustomWordPositionOccurenceResponse>(){}.getType();
+    }
+    
+    if ("CustomWordPositionWordResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<CustomWordPositionWordResponse>(){}.getType();
     }
     
     if ("EmailRequest".equalsIgnoreCase(className)) {
@@ -941,10 +945,6 @@ public class JsonUtil {
     
     if ("EzsigndocumentGetWordsPositionsV1ResponseAllOf".equalsIgnoreCase(className)) {
       return new TypeToken<EzsigndocumentGetWordsPositionsV1ResponseAllOf>(){}.getType();
-    }
-    
-    if ("EzsigndocumentGetWordsPositionsV1ResponseMPayload".equalsIgnoreCase(className)) {
-      return new TypeToken<EzsigndocumentGetWordsPositionsV1ResponseMPayload>(){}.getType();
     }
     
     if ("EzsigndocumentRequest".equalsIgnoreCase(className)) {
