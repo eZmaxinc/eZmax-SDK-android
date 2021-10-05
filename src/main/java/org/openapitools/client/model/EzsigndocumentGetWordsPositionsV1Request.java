@@ -27,18 +27,31 @@ public class EzsigndocumentGetWordsPositionsV1Request {
   };
   @SerializedName("eGet")
   private EGetEnum eGet = null;
+  @SerializedName("bWordCaseSensitive")
+  private Boolean bWordCaseSensitive = null;
   @SerializedName("a_sWord")
   private List<String> aSWord = null;
 
   /**
-   * Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search in *a_sWord*.
+   * Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search for in *a_sWord*.
    **/
-  @ApiModelProperty(value = "Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search in *a_sWord*.")
+  @ApiModelProperty(required = true, value = "Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search for in *a_sWord*.")
   public EGetEnum getEGet() {
     return eGet;
   }
   public void setEGet(EGetEnum eGet) {
     this.eGet = eGet;
+  }
+
+  /**
+   * IF *true*, words will be searched case-sensitive and results will be returned case-sensitive. IF *false*, words will be searched case-insensitive and results will be returned case-insensitive.
+   **/
+  @ApiModelProperty(required = true, value = "IF *true*, words will be searched case-sensitive and results will be returned case-sensitive. IF *false*, words will be searched case-insensitive and results will be returned case-insensitive.")
+  public Boolean getBWordCaseSensitive() {
+    return bWordCaseSensitive;
+  }
+  public void setBWordCaseSensitive(Boolean bWordCaseSensitive) {
+    this.bWordCaseSensitive = bWordCaseSensitive;
   }
 
   /**
@@ -63,6 +76,7 @@ public class EzsigndocumentGetWordsPositionsV1Request {
     }
     EzsigndocumentGetWordsPositionsV1Request ezsigndocumentGetWordsPositionsV1Request = (EzsigndocumentGetWordsPositionsV1Request) o;
     return (this.eGet == null ? ezsigndocumentGetWordsPositionsV1Request.eGet == null : this.eGet.equals(ezsigndocumentGetWordsPositionsV1Request.eGet)) &&
+        (this.bWordCaseSensitive == null ? ezsigndocumentGetWordsPositionsV1Request.bWordCaseSensitive == null : this.bWordCaseSensitive.equals(ezsigndocumentGetWordsPositionsV1Request.bWordCaseSensitive)) &&
         (this.aSWord == null ? ezsigndocumentGetWordsPositionsV1Request.aSWord == null : this.aSWord.equals(ezsigndocumentGetWordsPositionsV1Request.aSWord));
   }
 
@@ -70,6 +84,7 @@ public class EzsigndocumentGetWordsPositionsV1Request {
   public int hashCode() {
     int result = 17;
     result = 31 * result + (this.eGet == null ? 0: this.eGet.hashCode());
+    result = 31 * result + (this.bWordCaseSensitive == null ? 0: this.bWordCaseSensitive.hashCode());
     result = 31 * result + (this.aSWord == null ? 0: this.aSWord.hashCode());
     return result;
   }
@@ -80,6 +95,7 @@ public class EzsigndocumentGetWordsPositionsV1Request {
     sb.append("class EzsigndocumentGetWordsPositionsV1Request {\n");
     
     sb.append("  eGet: ").append(eGet).append("\n");
+    sb.append("  bWordCaseSensitive: ").append(bWordCaseSensitive).append("\n");
     sb.append("  aSWord: ").append(aSWord).append("\n");
     sb.append("}\n");
     return sb.toString();

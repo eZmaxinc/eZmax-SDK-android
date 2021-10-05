@@ -22,6 +22,7 @@ docs/CommonAudit.md
 docs/CommonGetAutocompleteV1Response.md
 docs/CommonGetAutocompleteV1ResponseAllOf.md
 docs/CommonGetAutocompleteV1ResponseMPayload.md
+docs/CommonGetListV1ResponseMPayload.md
 docs/CommonResponse.md
 docs/CommonResponseError.md
 docs/CommonResponseObjDebug.md
@@ -98,6 +99,11 @@ docs/EzsignfoldersignerassociationGetObjectV1ResponseAllOf.md
 docs/EzsignfoldersignerassociationRequest.md
 docs/EzsignfoldersignerassociationRequestCompound.md
 docs/EzsignfoldersignerassociationRequestCompoundAllOf.md
+docs/EzsignfoldertypeGetListV1Response.md
+docs/EzsignfoldertypeGetListV1ResponseAllOf.md
+docs/EzsignfoldertypeGetListV1ResponseMPayload.md
+docs/EzsignfoldertypeGetListV1ResponseMPayloadAllOf.md
+docs/EzsignfoldertypeListElement.md
 docs/EzsignformfieldResponse.md
 docs/EzsignformfieldResponseCompound.md
 docs/EzsignformfieldgroupResponse.md
@@ -142,6 +148,7 @@ docs/ObjectApikeyApi.md
 docs/ObjectEzsigndocumentApi.md
 docs/ObjectEzsignfolderApi.md
 docs/ObjectEzsignfoldersignerassociationApi.md
+docs/ObjectEzsignfoldertypeApi.md
 docs/ObjectEzsignsignatureApi.md
 docs/ObjectFranchisebrokerApi.md
 docs/ObjectFranchiseofficeApi.md
@@ -203,6 +210,7 @@ src/main/java/org/openapitools/client/api/ObjectApikeyApi.java
 src/main/java/org/openapitools/client/api/ObjectEzsigndocumentApi.java
 src/main/java/org/openapitools/client/api/ObjectEzsignfolderApi.java
 src/main/java/org/openapitools/client/api/ObjectEzsignfoldersignerassociationApi.java
+src/main/java/org/openapitools/client/api/ObjectEzsignfoldertypeApi.java
 src/main/java/org/openapitools/client/api/ObjectEzsignsignatureApi.java
 src/main/java/org/openapitools/client/api/ObjectFranchisebrokerApi.java
 src/main/java/org/openapitools/client/api/ObjectFranchiseofficeApi.java
@@ -228,6 +236,7 @@ src/main/java/org/openapitools/client/model/CommonAudit.java
 src/main/java/org/openapitools/client/model/CommonGetAutocompleteV1Response.java
 src/main/java/org/openapitools/client/model/CommonGetAutocompleteV1ResponseAllOf.java
 src/main/java/org/openapitools/client/model/CommonGetAutocompleteV1ResponseMPayload.java
+src/main/java/org/openapitools/client/model/CommonGetListV1ResponseMPayload.java
 src/main/java/org/openapitools/client/model/CommonResponse.java
 src/main/java/org/openapitools/client/model/CommonResponseError.java
 src/main/java/org/openapitools/client/model/CommonResponseObjDebug.java
@@ -304,6 +313,11 @@ src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationGetObje
 src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationRequest.java
 src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationRequestCompound.java
 src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationRequestCompoundAllOf.java
+src/main/java/org/openapitools/client/model/EzsignfoldertypeGetListV1Response.java
+src/main/java/org/openapitools/client/model/EzsignfoldertypeGetListV1ResponseAllOf.java
+src/main/java/org/openapitools/client/model/EzsignfoldertypeGetListV1ResponseMPayload.java
+src/main/java/org/openapitools/client/model/EzsignfoldertypeGetListV1ResponseMPayloadAllOf.java
+src/main/java/org/openapitools/client/model/EzsignfoldertypeListElement.java
 src/main/java/org/openapitools/client/model/EzsignformfieldResponse.java
 src/main/java/org/openapitools/client/model/EzsignformfieldResponseCompound.java
 src/main/java/org/openapitools/client/model/EzsignformfieldgroupResponse.java
