@@ -10,11 +10,11 @@ Method | HTTP request | Description
 
 ## ezsignfoldertypeGetListV1
 
-> EzsignfoldertypeGetListV1Response ezsignfoldertypeGetListV1()
+> EzsignfoldertypeGetListV1Response ezsignfoldertypeGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
 
 Retrieve Ezsignfoldertype list
 
-## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.  Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
 
 ### Example
 
@@ -23,8 +23,13 @@ Retrieve Ezsignfoldertype list
 //import org.openapitools.client.api.ObjectEzsignfoldertypeApi;
 
 ObjectEzsignfoldertypeApi apiInstance = new ObjectEzsignfoldertypeApi();
+String eOrderBy = null; // String | Specify how you want the results to be sorted
+Integer iRowMax = null; // Integer | 
+Integer iRowOffset = null; // Integer | 
+HeaderAcceptLanguage acceptLanguage = null; // HeaderAcceptLanguage | 
+String sFilter = null; // String | 
 try {
-    EzsignfoldertypeGetListV1Response result = apiInstance.ezsignfoldertypeGetListV1();
+    EzsignfoldertypeGetListV1Response result = apiInstance.ezsignfoldertypeGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectEzsignfoldertypeApi#ezsignfoldertypeGetListV1");
@@ -34,7 +39,14 @@ try {
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **eOrderBy** | **String**| Specify how you want the results to be sorted | [optional] [default to null] [enum: sEzsignfoldertypeNameX, sEzsignfoldertypeNameX desc]
+ **iRowMax** | **Integer**|  | [optional] [default to null]
+ **iRowOffset** | **Integer**|  | [optional] [default to null]
+ **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [default to null] [enum: *, en, fr]
+ **sFilter** | **String**|  | [optional] [default to null]
 
 ### Return type
 
@@ -47,5 +59,5 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: application/json, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
 

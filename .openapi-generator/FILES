@@ -36,8 +36,8 @@ docs/ContactinformationsRequest.md
 docs/ContactinformationsRequestCompound.md
 docs/ContactinformationsRequestCompoundAllOf.md
 docs/CustomFormDataDocumentResponse.md
-docs/CustomFormDataFolderResponse.md
 docs/CustomFormDataSignerResponse.md
+docs/CustomFormsDataFolderResponse.md
 docs/CustomWordPositionOccurenceResponse.md
 docs/CustomWordPositionWordResponse.md
 docs/EmailRequest.md
@@ -139,6 +139,7 @@ docs/FranchisereferalincomeRequestCompound.md
 docs/FranchisereferalincomeRequestCompoundAllOf.md
 docs/GlobalCustomerApi.md
 docs/GlobalCustomerGetEndpointV1Response.md
+docs/HeaderAcceptLanguage.md
 docs/ModuleAuthenticateApi.md
 docs/ModuleSsprApi.md
 docs/ModuleUserApi.md
@@ -250,8 +251,8 @@ src/main/java/org/openapitools/client/model/ContactinformationsRequest.java
 src/main/java/org/openapitools/client/model/ContactinformationsRequestCompound.java
 src/main/java/org/openapitools/client/model/ContactinformationsRequestCompoundAllOf.java
 src/main/java/org/openapitools/client/model/CustomFormDataDocumentResponse.java
-src/main/java/org/openapitools/client/model/CustomFormDataFolderResponse.java
 src/main/java/org/openapitools/client/model/CustomFormDataSignerResponse.java
+src/main/java/org/openapitools/client/model/CustomFormsDataFolderResponse.java
 src/main/java/org/openapitools/client/model/CustomWordPositionOccurenceResponse.java
 src/main/java/org/openapitools/client/model/CustomWordPositionWordResponse.java
 src/main/java/org/openapitools/client/model/EmailRequest.java
@@ -352,6 +353,7 @@ src/main/java/org/openapitools/client/model/FranchisereferalincomeRequest.java
 src/main/java/org/openapitools/client/model/FranchisereferalincomeRequestCompound.java
 src/main/java/org/openapitools/client/model/FranchisereferalincomeRequestCompoundAllOf.java
 src/main/java/org/openapitools/client/model/GlobalCustomerGetEndpointV1Response.java
+src/main/java/org/openapitools/client/model/HeaderAcceptLanguage.java
 src/main/java/org/openapitools/client/model/MultilingualApikeyDescription.java
 src/main/java/org/openapitools/client/model/PhoneRequest.java
 src/main/java/org/openapitools/client/model/SsprResetPasswordRequestV1Request.java

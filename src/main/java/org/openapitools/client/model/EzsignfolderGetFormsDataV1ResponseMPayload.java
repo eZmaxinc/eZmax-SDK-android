@@ -14,7 +14,7 @@ package org.openapitools.client.model;
 
 import java.util.*;
 import org.openapitools.client.model.CustomFormDataDocumentResponse;
-import org.openapitools.client.model.CustomFormDataFolderResponse;
+import org.openapitools.client.model.CustomFormsDataFolderResponse;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 

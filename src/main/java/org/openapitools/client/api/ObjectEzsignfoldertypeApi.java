@@ -23,7 +23,9 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
+import org.openapitools.client.model.CommonResponseError;
 import org.openapitools.client.model.EzsignfoldertypeGetListV1Response;
+import org.openapitools.client.model.HeaderAcceptLanguage;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
@@ -57,10 +59,15 @@ public class ObjectEzsignfoldertypeApi {
 
   /**
   * Retrieve Ezsignfoldertype list
-  * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+  * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.  Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
+   * @param eOrderBy Specify how you want the results to be sorted
+   * @param iRowMax 
+   * @param iRowOffset 
+   * @param acceptLanguage 
+   * @param sFilter 
    * @return EzsignfoldertypeGetListV1Response
   */
-  public EzsignfoldertypeGetListV1Response ezsignfoldertypeGetListV1 () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public EzsignfoldertypeGetListV1Response ezsignfoldertypeGetListV1 (String eOrderBy, Integer iRowMax, Integer iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
@@ -72,6 +79,11 @@ public class ObjectEzsignfoldertypeApi {
     Map<String, String> headerParams = new HashMap<String, String>();
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "eOrderBy", eOrderBy));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "iRowMax", iRowMax));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "iRowOffset", iRowOffset));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "sFilter", sFilter));
+    headerParams.put("Accept-Language", ApiInvoker.parameterToString(acceptLanguage));
     String[] contentTypes = {
     };
     String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
@@ -113,10 +125,10 @@ public class ObjectEzsignfoldertypeApi {
 
       /**
    * Retrieve Ezsignfoldertype list
-   * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-
+   * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.  Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
+   * @param eOrderBy Specify how you want the results to be sorted   * @param iRowMax    * @param iRowOffset    * @param acceptLanguage    * @param sFilter 
   */
-  public void ezsignfoldertypeGetListV1 (final Response.Listener<EzsignfoldertypeGetListV1Response> responseListener, final Response.ErrorListener errorListener) {
+  public void ezsignfoldertypeGetListV1 (String eOrderBy, Integer iRowMax, Integer iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter, final Response.Listener<EzsignfoldertypeGetListV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
@@ -130,7 +142,12 @@ public class ObjectEzsignfoldertypeApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
 
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "eOrderBy", eOrderBy));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "iRowMax", iRowMax));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "iRowOffset", iRowOffset));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "sFilter", sFilter));
 
+    headerParams.put("Accept-Language", ApiInvoker.parameterToString(acceptLanguage));
 
     String[] contentTypes = {
       

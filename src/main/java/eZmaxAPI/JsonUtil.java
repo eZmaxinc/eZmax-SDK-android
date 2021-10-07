@@ -193,12 +193,12 @@ public class JsonUtil {
       return new TypeToken<List<CustomFormDataDocumentResponse>>(){}.getType();
     }
     
-    if ("CustomFormDataFolderResponse".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CustomFormDataFolderResponse>>(){}.getType();
-    }
-    
     if ("CustomFormDataSignerResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<CustomFormDataSignerResponse>>(){}.getType();
+    }
+    
+    if ("CustomFormsDataFolderResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CustomFormsDataFolderResponse>>(){}.getType();
     }
     
     if ("CustomWordPositionOccurenceResponse".equalsIgnoreCase(className)) {
@@ -601,6 +601,10 @@ public class JsonUtil {
       return new TypeToken<List<GlobalCustomerGetEndpointV1Response>>(){}.getType();
     }
     
+    if ("HeaderAcceptLanguage".equalsIgnoreCase(className)) {
+      return new TypeToken<List<HeaderAcceptLanguage>>(){}.getType();
+    }
+    
     if ("MultilingualApikeyDescription".equalsIgnoreCase(className)) {
       return new TypeToken<List<MultilingualApikeyDescription>>(){}.getType();
     }
@@ -859,12 +863,12 @@ public class JsonUtil {
       return new TypeToken<CustomFormDataDocumentResponse>(){}.getType();
     }
     
-    if ("CustomFormDataFolderResponse".equalsIgnoreCase(className)) {
-      return new TypeToken<CustomFormDataFolderResponse>(){}.getType();
-    }
-    
     if ("CustomFormDataSignerResponse".equalsIgnoreCase(className)) {
       return new TypeToken<CustomFormDataSignerResponse>(){}.getType();
+    }
+    
+    if ("CustomFormsDataFolderResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<CustomFormsDataFolderResponse>(){}.getType();
     }
     
     if ("CustomWordPositionOccurenceResponse".equalsIgnoreCase(className)) {
@@ -1265,6 +1269,10 @@ public class JsonUtil {
     
     if ("GlobalCustomerGetEndpointV1Response".equalsIgnoreCase(className)) {
       return new TypeToken<GlobalCustomerGetEndpointV1Response>(){}.getType();
+    }
+    
+    if ("HeaderAcceptLanguage".equalsIgnoreCase(className)) {
+      return new TypeToken<HeaderAcceptLanguage>(){}.getType();
     }
     
     if ("MultilingualApikeyDescription".equalsIgnoreCase(className)) {

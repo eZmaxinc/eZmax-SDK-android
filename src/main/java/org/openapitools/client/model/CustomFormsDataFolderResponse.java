@@ -18,10 +18,10 @@ import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * A form Data Folder Object
+ * A forms Data Folder Object
  **/
-@ApiModel(description = "A form Data Folder Object")
-public class CustomFormDataFolderResponse {
+@ApiModel(description = "A forms Data Folder Object")
+public class CustomFormsDataFolderResponse {
   
   @SerializedName("pkiEzsignfolderID")
   private Integer pkiEzsignfolderID = null;
@@ -71,10 +71,10 @@ public class CustomFormDataFolderResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    CustomFormDataFolderResponse customFormDataFolderResponse = (CustomFormDataFolderResponse) o;
-    return (this.pkiEzsignfolderID == null ? customFormDataFolderResponse.pkiEzsignfolderID == null : this.pkiEzsignfolderID.equals(customFormDataFolderResponse.pkiEzsignfolderID)) &&
-        (this.sEzsignfolderDescription == null ? customFormDataFolderResponse.sEzsignfolderDescription == null : this.sEzsignfolderDescription.equals(customFormDataFolderResponse.sEzsignfolderDescription)) &&
-        (this.aObjFormDataDocument == null ? customFormDataFolderResponse.aObjFormDataDocument == null : this.aObjFormDataDocument.equals(customFormDataFolderResponse.aObjFormDataDocument));
+    CustomFormsDataFolderResponse customFormsDataFolderResponse = (CustomFormsDataFolderResponse) o;
+    return (this.pkiEzsignfolderID == null ? customFormsDataFolderResponse.pkiEzsignfolderID == null : this.pkiEzsignfolderID.equals(customFormsDataFolderResponse.pkiEzsignfolderID)) &&
+        (this.sEzsignfolderDescription == null ? customFormsDataFolderResponse.sEzsignfolderDescription == null : this.sEzsignfolderDescription.equals(customFormsDataFolderResponse.sEzsignfolderDescription)) &&
+        (this.aObjFormDataDocument == null ? customFormsDataFolderResponse.aObjFormDataDocument == null : this.aObjFormDataDocument.equals(customFormsDataFolderResponse.aObjFormDataDocument));
   }
 
   @Override
@@ -89,7 +89,7 @@ public class CustomFormDataFolderResponse {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class CustomFormDataFolderResponse {\n");
+    sb.append("class CustomFormsDataFolderResponse {\n");
     
     sb.append("  pkiEzsignfolderID: ").append(pkiEzsignfolderID).append("\n");
     sb.append("  sEzsignfolderDescription: ").append(sEzsignfolderDescription).append("\n");
