@@ -15,6 +15,7 @@ package org.openapitools.client.model;
 import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseObjDebug;
 import org.openapitools.client.model.CommonResponseObjDebugPayload;
+import org.openapitools.client.model.EzsignfolderCreateObjectV1ResponseAllOf;
 import org.openapitools.client.model.EzsignfolderCreateObjectV1ResponseMPayload;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;

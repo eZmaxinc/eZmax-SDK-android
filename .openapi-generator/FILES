@@ -71,6 +71,7 @@ docs/EzsigndocumentResponse.md
 docs/EzsigndocumentResponseCompound.md
 docs/EzsignfolderCreateObjectV1Request.md
 docs/EzsignfolderCreateObjectV1Response.md
+docs/EzsignfolderCreateObjectV1ResponseAllOf.md
 docs/EzsignfolderCreateObjectV1ResponseMPayload.md
 docs/EzsignfolderDeleteObjectV1Response.md
 docs/EzsignfolderGetFormsDataV1Response.md
@@ -286,6 +287,7 @@ src/main/java/org/openapitools/client/model/EzsigndocumentResponse.java
 src/main/java/org/openapitools/client/model/EzsigndocumentResponseCompound.java
 src/main/java/org/openapitools/client/model/EzsignfolderCreateObjectV1Request.java
 src/main/java/org/openapitools/client/model/EzsignfolderCreateObjectV1Response.java
+src/main/java/org/openapitools/client/model/EzsignfolderCreateObjectV1ResponseAllOf.java
 src/main/java/org/openapitools/client/model/EzsignfolderCreateObjectV1ResponseMPayload.java
 src/main/java/org/openapitools/client/model/EzsignfolderDeleteObjectV1Response.java
 src/main/java/org/openapitools/client/model/EzsignfolderGetFormsDataV1Response.java

@@ -333,6 +333,10 @@ public class JsonUtil {
       return new TypeToken<List<EzsignfolderCreateObjectV1Response>>(){}.getType();
     }
     
+    if ("EzsignfolderCreateObjectV1ResponseAllOf".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EzsignfolderCreateObjectV1ResponseAllOf>>(){}.getType();
+    }
+    
     if ("EzsignfolderCreateObjectV1ResponseMPayload".equalsIgnoreCase(className)) {
       return new TypeToken<List<EzsignfolderCreateObjectV1ResponseMPayload>>(){}.getType();
     }
@@ -1001,6 +1005,10 @@ public class JsonUtil {
     
     if ("EzsignfolderCreateObjectV1Response".equalsIgnoreCase(className)) {
       return new TypeToken<EzsignfolderCreateObjectV1Response>(){}.getType();
+    }
+    
+    if ("EzsignfolderCreateObjectV1ResponseAllOf".equalsIgnoreCase(className)) {
+      return new TypeToken<EzsignfolderCreateObjectV1ResponseAllOf>(){}.getType();
     }
     
     if ("EzsignfolderCreateObjectV1ResponseMPayload".equalsIgnoreCase(className)) {
