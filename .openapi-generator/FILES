@@ -25,8 +25,12 @@ docs/CommonGetAutocompleteV1ResponseMPayload.md
 docs/CommonGetListV1ResponseMPayload.md
 docs/CommonResponse.md
 docs/CommonResponseError.md
+docs/CommonResponseFilter.md
+docs/CommonResponseGetList.md
 docs/CommonResponseObjDebug.md
 docs/CommonResponseObjDebugPayload.md
+docs/CommonResponseObjDebugPayloadGetList.md
+docs/CommonResponseObjDebugPayloadGetListAllOf.md
 docs/CommonResponseObjSQLQuery.md
 docs/CommonWebhook.md
 docs/ContactRequest.md
@@ -127,6 +131,7 @@ docs/EzsignsignerRequestCompoundContact.md
 docs/FieldEEzsigndocumentStep.md
 docs/FieldEEzsignfolderSendreminderfrequency.md
 docs/FieldEEzsignfolderStep.md
+docs/FieldEEzsignfoldertypePrivacylevel.md
 docs/FieldEEzsignsignatureType.md
 docs/FieldEPhoneType.md
 docs/FieldEUserType.md
@@ -241,8 +246,12 @@ src/main/java/org/openapitools/client/model/CommonGetAutocompleteV1ResponseMPayl
 src/main/java/org/openapitools/client/model/CommonGetListV1ResponseMPayload.java
 src/main/java/org/openapitools/client/model/CommonResponse.java
 src/main/java/org/openapitools/client/model/CommonResponseError.java
+src/main/java/org/openapitools/client/model/CommonResponseFilter.java
+src/main/java/org/openapitools/client/model/CommonResponseGetList.java
 src/main/java/org/openapitools/client/model/CommonResponseObjDebug.java
 src/main/java/org/openapitools/client/model/CommonResponseObjDebugPayload.java
+src/main/java/org/openapitools/client/model/CommonResponseObjDebugPayloadGetList.java
+src/main/java/org/openapitools/client/model/CommonResponseObjDebugPayloadGetListAllOf.java
 src/main/java/org/openapitools/client/model/CommonResponseObjSQLQuery.java
 src/main/java/org/openapitools/client/model/CommonWebhook.java
 src/main/java/org/openapitools/client/model/ContactRequest.java
@@ -343,6 +352,7 @@ src/main/java/org/openapitools/client/model/EzsignsignerRequestCompoundContact.j
 src/main/java/org/openapitools/client/model/FieldEEzsigndocumentStep.java
 src/main/java/org/openapitools/client/model/FieldEEzsignfolderSendreminderfrequency.java
 src/main/java/org/openapitools/client/model/FieldEEzsignfolderStep.java
+src/main/java/org/openapitools/client/model/FieldEEzsignfoldertypePrivacylevel.java
 src/main/java/org/openapitools/client/model/FieldEEzsignsignatureType.java
 src/main/java/org/openapitools/client/model/FieldEPhoneType.java
 src/main/java/org/openapitools/client/model/FieldEUserType.java

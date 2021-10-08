@@ -12,6 +12,7 @@
 
 package org.openapitools.client.model;
 
+import org.openapitools.client.model.FieldEEzsignfoldertypePrivacylevel;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -23,8 +24,12 @@ public class EzsignfoldertypeListElement {
   
   @SerializedName("pkiEzsignfoldertypeID")
   private Integer pkiEzsignfoldertypeID = null;
+  @SerializedName("eEzsignfoldertypePrivacylevel")
+  private FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel = null;
   @SerializedName("sEzsignfoldertypeNameX")
   private String sEzsignfoldertypeNameX = null;
+  @SerializedName("bEzsignfoldertypeIsactive")
+  private Boolean bEzsignfoldertypeIsactive = null;
 
   /**
    * The unique ID of the Ezsignfoldertype.
@@ -38,6 +43,16 @@ public class EzsignfoldertypeListElement {
   }
 
   /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public FieldEEzsignfoldertypePrivacylevel getEEzsignfoldertypePrivacylevel() {
+    return eEzsignfoldertypePrivacylevel;
+  }
+  public void setEEzsignfoldertypePrivacylevel(FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel) {
+    this.eEzsignfoldertypePrivacylevel = eEzsignfoldertypePrivacylevel;
+  }
+
+  /**
    * The name of the Ezsignfoldertype in the language of the requester
    **/
   @ApiModelProperty(required = true, value = "The name of the Ezsignfoldertype in the language of the requester")
@@ -46,6 +61,17 @@ public class EzsignfoldertypeListElement {
   }
   public void setSEzsignfoldertypeNameX(String sEzsignfoldertypeNameX) {
     this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
+  }
+
+  /**
+   * Whether the Ezsignfoldertype is active or not
+   **/
+  @ApiModelProperty(required = true, value = "Whether the Ezsignfoldertype is active or not")
+  public Boolean getBEzsignfoldertypeIsactive() {
+    return bEzsignfoldertypeIsactive;
+  }
+  public void setBEzsignfoldertypeIsactive(Boolean bEzsignfoldertypeIsactive) {
+    this.bEzsignfoldertypeIsactive = bEzsignfoldertypeIsactive;
   }
 
 
@@ -59,14 +85,18 @@ public class EzsignfoldertypeListElement {
     }
     EzsignfoldertypeListElement ezsignfoldertypeListElement = (EzsignfoldertypeListElement) o;
     return (this.pkiEzsignfoldertypeID == null ? ezsignfoldertypeListElement.pkiEzsignfoldertypeID == null : this.pkiEzsignfoldertypeID.equals(ezsignfoldertypeListElement.pkiEzsignfoldertypeID)) &&
-        (this.sEzsignfoldertypeNameX == null ? ezsignfoldertypeListElement.sEzsignfoldertypeNameX == null : this.sEzsignfoldertypeNameX.equals(ezsignfoldertypeListElement.sEzsignfoldertypeNameX));
+        (this.eEzsignfoldertypePrivacylevel == null ? ezsignfoldertypeListElement.eEzsignfoldertypePrivacylevel == null : this.eEzsignfoldertypePrivacylevel.equals(ezsignfoldertypeListElement.eEzsignfoldertypePrivacylevel)) &&
+        (this.sEzsignfoldertypeNameX == null ? ezsignfoldertypeListElement.sEzsignfoldertypeNameX == null : this.sEzsignfoldertypeNameX.equals(ezsignfoldertypeListElement.sEzsignfoldertypeNameX)) &&
+        (this.bEzsignfoldertypeIsactive == null ? ezsignfoldertypeListElement.bEzsignfoldertypeIsactive == null : this.bEzsignfoldertypeIsactive.equals(ezsignfoldertypeListElement.bEzsignfoldertypeIsactive));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
     result = 31 * result + (this.pkiEzsignfoldertypeID == null ? 0: this.pkiEzsignfoldertypeID.hashCode());
+    result = 31 * result + (this.eEzsignfoldertypePrivacylevel == null ? 0: this.eEzsignfoldertypePrivacylevel.hashCode());
     result = 31 * result + (this.sEzsignfoldertypeNameX == null ? 0: this.sEzsignfoldertypeNameX.hashCode());
+    result = 31 * result + (this.bEzsignfoldertypeIsactive == null ? 0: this.bEzsignfoldertypeIsactive.hashCode());
     return result;
   }
 
@@ -76,7 +106,9 @@ public class EzsignfoldertypeListElement {
     sb.append("class EzsignfoldertypeListElement {\n");
     
     sb.append("  pkiEzsignfoldertypeID: ").append(pkiEzsignfoldertypeID).append("\n");
+    sb.append("  eEzsignfoldertypePrivacylevel: ").append(eEzsignfoldertypePrivacylevel).append("\n");
     sb.append("  sEzsignfoldertypeNameX: ").append(sEzsignfoldertypeNameX).append("\n");
+    sb.append("  bEzsignfoldertypeIsactive: ").append(bEzsignfoldertypeIsactive).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

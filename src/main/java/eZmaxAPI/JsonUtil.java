@@ -149,12 +149,28 @@ public class JsonUtil {
       return new TypeToken<List<CommonResponseError>>(){}.getType();
     }
     
+    if ("CommonResponseFilter".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CommonResponseFilter>>(){}.getType();
+    }
+    
+    if ("CommonResponseGetList".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CommonResponseGetList>>(){}.getType();
+    }
+    
     if ("CommonResponseObjDebug".equalsIgnoreCase(className)) {
       return new TypeToken<List<CommonResponseObjDebug>>(){}.getType();
     }
     
     if ("CommonResponseObjDebugPayload".equalsIgnoreCase(className)) {
       return new TypeToken<List<CommonResponseObjDebugPayload>>(){}.getType();
+    }
+    
+    if ("CommonResponseObjDebugPayloadGetList".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CommonResponseObjDebugPayloadGetList>>(){}.getType();
+    }
+    
+    if ("CommonResponseObjDebugPayloadGetListAllOf".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CommonResponseObjDebugPayloadGetListAllOf>>(){}.getType();
     }
     
     if ("CommonResponseObjSQLQuery".equalsIgnoreCase(className)) {
@@ -557,6 +573,10 @@ public class JsonUtil {
       return new TypeToken<List<FieldEEzsignfolderStep>>(){}.getType();
     }
     
+    if ("FieldEEzsignfoldertypePrivacylevel".equalsIgnoreCase(className)) {
+      return new TypeToken<List<FieldEEzsignfoldertypePrivacylevel>>(){}.getType();
+    }
+    
     if ("FieldEEzsignsignatureType".equalsIgnoreCase(className)) {
       return new TypeToken<List<FieldEEzsignsignatureType>>(){}.getType();
     }
@@ -823,12 +843,28 @@ public class JsonUtil {
       return new TypeToken<CommonResponseError>(){}.getType();
     }
     
+    if ("CommonResponseFilter".equalsIgnoreCase(className)) {
+      return new TypeToken<CommonResponseFilter>(){}.getType();
+    }
+    
+    if ("CommonResponseGetList".equalsIgnoreCase(className)) {
+      return new TypeToken<CommonResponseGetList>(){}.getType();
+    }
+    
     if ("CommonResponseObjDebug".equalsIgnoreCase(className)) {
       return new TypeToken<CommonResponseObjDebug>(){}.getType();
     }
     
     if ("CommonResponseObjDebugPayload".equalsIgnoreCase(className)) {
       return new TypeToken<CommonResponseObjDebugPayload>(){}.getType();
+    }
+    
+    if ("CommonResponseObjDebugPayloadGetList".equalsIgnoreCase(className)) {
+      return new TypeToken<CommonResponseObjDebugPayloadGetList>(){}.getType();
+    }
+    
+    if ("CommonResponseObjDebugPayloadGetListAllOf".equalsIgnoreCase(className)) {
+      return new TypeToken<CommonResponseObjDebugPayloadGetListAllOf>(){}.getType();
     }
     
     if ("CommonResponseObjSQLQuery".equalsIgnoreCase(className)) {
@@ -1229,6 +1265,10 @@ public class JsonUtil {
     
     if ("FieldEEzsignfolderStep".equalsIgnoreCase(className)) {
       return new TypeToken<FieldEEzsignfolderStep>(){}.getType();
+    }
+    
+    if ("FieldEEzsignfoldertypePrivacylevel".equalsIgnoreCase(className)) {
+      return new TypeToken<FieldEEzsignfoldertypePrivacylevel>(){}.getType();
     }
     
     if ("FieldEEzsignsignatureType".equalsIgnoreCase(className)) {
