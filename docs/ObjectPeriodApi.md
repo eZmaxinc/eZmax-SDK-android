@@ -24,7 +24,7 @@ Get the list of Periods to be used in a dropdown or autocomplete control.
 
 ObjectPeriodApi apiInstance = new ObjectPeriodApi();
 String sSelector = null; // String | The types of Periods to return
-String sQuery = null; // String | Allow to filter on the option value
+String sQuery = null; // String | Allow to filter the returned results
 try {
     CommonGetAutocompleteV1Response result = apiInstance.periodGetAutocompleteV1(sSelector, sQuery);
     System.out.println(result);
@@ -40,7 +40,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sSelector** | **String**| The types of Periods to return | [default to null] [enum: ActiveNormal, ActiveNormalAndEndOfYear, AllNormal, AllNormalAndEndOfYear]
- **sQuery** | **String**| Allow to filter on the option value | [optional] [default to null]
+ **sQuery** | **String**| Allow to filter the returned results | [optional] [default to null]
 
 ### Return type
 

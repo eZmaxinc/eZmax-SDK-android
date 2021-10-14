@@ -24,7 +24,7 @@ Get the list of Franchiseoffices to be used in a dropdown or autocomplete contro
 
 ObjectFranchiseofficeApi apiInstance = new ObjectFranchiseofficeApi();
 String sSelector = null; // String | The type of Franchiseoffices to return
-String sQuery = null; // String | Allow to filter on the option value
+String sQuery = null; // String | Allow to filter the returned results
 try {
     CommonGetAutocompleteV1Response result = apiInstance.franchiseofficeGetAutocompleteV1(sSelector, sQuery);
     System.out.println(result);
@@ -40,7 +40,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sSelector** | **String**| The type of Franchiseoffices to return | [default to null] [enum: Active, All]
- **sQuery** | **String**| Allow to filter on the option value | [optional] [default to null]
+ **sQuery** | **String**| Allow to filter the returned results | [optional] [default to null]
 
 ### Return type
 

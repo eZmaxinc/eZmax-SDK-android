@@ -14,19 +14,19 @@ package org.openapitools.client.model;
 
 import java.util.*;
 import org.openapitools.client.model.CommonGetListV1ResponseMPayload;
-import org.openapitools.client.model.EzsignfoldertypeGetListV1ResponseMPayloadAllOf;
-import org.openapitools.client.model.EzsignfoldertypeListElement;
+import org.openapitools.client.model.EzsignfolderGetListV1ResponseMPayloadAllOf;
+import org.openapitools.client.model.EzsignfolderListElement;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Payload for the /1/object/ezsignfoldertype/getList API Request
+ * Payload for the /1/object/ezsignfolder/getList API Request
  **/
-@ApiModel(description = "Payload for the /1/object/ezsignfoldertype/getList API Request")
-public class EzsignfoldertypeGetListV1ResponseMPayload {
+@ApiModel(description = "Payload for the /1/object/ezsignfolder/getList API Request")
+public class EzsignfolderGetListV1ResponseMPayload {
   
-  @SerializedName("a_objEzsignfoldertype")
-  private List<EzsignfoldertypeListElement> aObjEzsignfoldertype = null;
+  @SerializedName("a_objEzsignfolder")
+  private List<EzsignfolderListElement> aObjEzsignfolder = null;
   @SerializedName("iRowReturned")
   private Integer iRowReturned = null;
   @SerializedName("iRowFiltered")
@@ -35,11 +35,11 @@ public class EzsignfoldertypeGetListV1ResponseMPayload {
   /**
    **/
   @ApiModelProperty(required = true, value = "")
-  public List<EzsignfoldertypeListElement> getAObjEzsignfoldertype() {
-    return aObjEzsignfoldertype;
+  public List<EzsignfolderListElement> getAObjEzsignfolder() {
+    return aObjEzsignfolder;
   }
-  public void setAObjEzsignfoldertype(List<EzsignfoldertypeListElement> aObjEzsignfoldertype) {
-    this.aObjEzsignfoldertype = aObjEzsignfoldertype;
+  public void setAObjEzsignfolder(List<EzsignfolderListElement> aObjEzsignfolder) {
+    this.aObjEzsignfolder = aObjEzsignfolder;
   }
 
   /**
@@ -73,16 +73,16 @@ public class EzsignfoldertypeGetListV1ResponseMPayload {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    EzsignfoldertypeGetListV1ResponseMPayload ezsignfoldertypeGetListV1ResponseMPayload = (EzsignfoldertypeGetListV1ResponseMPayload) o;
-    return (this.aObjEzsignfoldertype == null ? ezsignfoldertypeGetListV1ResponseMPayload.aObjEzsignfoldertype == null : this.aObjEzsignfoldertype.equals(ezsignfoldertypeGetListV1ResponseMPayload.aObjEzsignfoldertype)) &&
-        (this.iRowReturned == null ? ezsignfoldertypeGetListV1ResponseMPayload.iRowReturned == null : this.iRowReturned.equals(ezsignfoldertypeGetListV1ResponseMPayload.iRowReturned)) &&
-        (this.iRowFiltered == null ? ezsignfoldertypeGetListV1ResponseMPayload.iRowFiltered == null : this.iRowFiltered.equals(ezsignfoldertypeGetListV1ResponseMPayload.iRowFiltered));
+    EzsignfolderGetListV1ResponseMPayload ezsignfolderGetListV1ResponseMPayload = (EzsignfolderGetListV1ResponseMPayload) o;
+    return (this.aObjEzsignfolder == null ? ezsignfolderGetListV1ResponseMPayload.aObjEzsignfolder == null : this.aObjEzsignfolder.equals(ezsignfolderGetListV1ResponseMPayload.aObjEzsignfolder)) &&
+        (this.iRowReturned == null ? ezsignfolderGetListV1ResponseMPayload.iRowReturned == null : this.iRowReturned.equals(ezsignfolderGetListV1ResponseMPayload.iRowReturned)) &&
+        (this.iRowFiltered == null ? ezsignfolderGetListV1ResponseMPayload.iRowFiltered == null : this.iRowFiltered.equals(ezsignfolderGetListV1ResponseMPayload.iRowFiltered));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.aObjEzsignfoldertype == null ? 0: this.aObjEzsignfoldertype.hashCode());
+    result = 31 * result + (this.aObjEzsignfolder == null ? 0: this.aObjEzsignfolder.hashCode());
     result = 31 * result + (this.iRowReturned == null ? 0: this.iRowReturned.hashCode());
     result = 31 * result + (this.iRowFiltered == null ? 0: this.iRowFiltered.hashCode());
     return result;
@@ -91,9 +91,9 @@ public class EzsignfoldertypeGetListV1ResponseMPayload {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class EzsignfoldertypeGetListV1ResponseMPayload {\n");
+    sb.append("class EzsignfolderGetListV1ResponseMPayload {\n");
     
-    sb.append("  aObjEzsignfoldertype: ").append(aObjEzsignfoldertype).append("\n");
+    sb.append("  aObjEzsignfolder: ").append(aObjEzsignfolder).append("\n");
     sb.append("  iRowReturned: ").append(iRowReturned).append("\n");
     sb.append("  iRowFiltered: ").append(iRowFiltered).append("\n");
     sb.append("}\n");

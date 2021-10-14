@@ -4,8 +4,59 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**ezsignfoldertypeGetAutocompleteV1**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypeGetAutocompleteV1) | **GET** /1/object/ezsignfoldertype/getAutocomplete/{sSelector}/ | Retrieve Ezsignfoldertypes and IDs
 [**ezsignfoldertypeGetListV1**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypeGetListV1) | **GET** /1/object/ezsignfoldertype/getList | Retrieve Ezsignfoldertype list
 
+
+
+## ezsignfoldertypeGetAutocompleteV1
+
+> CommonGetAutocompleteV1Response ezsignfoldertypeGetAutocompleteV1(sSelector, acceptLanguage, sQuery)
+
+Retrieve Ezsignfoldertypes and IDs
+
+Get the list of Ezsignfoldertypes to be used in a dropdown or autocomplete control.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectEzsignfoldertypeApi;
+
+ObjectEzsignfoldertypeApi apiInstance = new ObjectEzsignfoldertypeApi();
+String sSelector = null; // String | The type of Ezsignfoldertypes to return
+HeaderAcceptLanguage acceptLanguage = null; // HeaderAcceptLanguage | 
+String sQuery = null; // String | Allow to filter the returned results
+try {
+    CommonGetAutocompleteV1Response result = apiInstance.ezsignfoldertypeGetAutocompleteV1(sSelector, acceptLanguage, sQuery);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectEzsignfoldertypeApi#ezsignfoldertypeGetAutocompleteV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sSelector** | **String**| The type of Ezsignfoldertypes to return | [default to null] [enum: Active, All]
+ **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [default to null] [enum: *, en, fr]
+ **sQuery** | **String**| Allow to filter the returned results | [optional] [default to null]
+
+### Return type
+
+[**CommonGetAutocompleteV1Response**](CommonGetAutocompleteV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
 ## ezsignfoldertypeGetListV1
@@ -14,7 +65,7 @@ Method | HTTP request | Description
 
 Retrieve Ezsignfoldertype list
 
-## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.  Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
+Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
 
 ### Example
 

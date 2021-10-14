@@ -21,7 +21,6 @@ docs/AuthenticateAuthenticateV2ResponseMPayload.md
 docs/CommonAudit.md
 docs/CommonGetAutocompleteV1Response.md
 docs/CommonGetAutocompleteV1ResponseAllOf.md
-docs/CommonGetAutocompleteV1ResponseMPayload.md
 docs/CommonGetListV1ResponseMPayload.md
 docs/CommonResponse.md
 docs/CommonResponseError.md
@@ -39,6 +38,7 @@ docs/ContactRequestCompoundAllOf.md
 docs/ContactinformationsRequest.md
 docs/ContactinformationsRequestCompound.md
 docs/ContactinformationsRequestCompoundAllOf.md
+docs/CustomAutocompleteElementResponse.md
 docs/CustomFormDataDocumentResponse.md
 docs/CustomFormDataSignerResponse.md
 docs/CustomFormsDataFolderResponse.md
@@ -81,9 +81,14 @@ docs/EzsignfolderDeleteObjectV1Response.md
 docs/EzsignfolderGetFormsDataV1Response.md
 docs/EzsignfolderGetFormsDataV1ResponseAllOf.md
 docs/EzsignfolderGetFormsDataV1ResponseMPayload.md
+docs/EzsignfolderGetListV1Response.md
+docs/EzsignfolderGetListV1ResponseAllOf.md
+docs/EzsignfolderGetListV1ResponseMPayload.md
+docs/EzsignfolderGetListV1ResponseMPayloadAllOf.md
 docs/EzsignfolderGetObjectV1Response.md
 docs/EzsignfolderGetObjectV1ResponseAllOf.md
 docs/EzsignfolderGetObjectV1ResponseMPayload.md
+docs/EzsignfolderListElement.md
 docs/EzsignfolderRequest.md
 docs/EzsignfolderRequestCompound.md
 docs/EzsignfolderRequestCompoundAllOf.md
@@ -242,7 +247,6 @@ src/main/java/org/openapitools/client/model/AuthenticateAuthenticateV2ResponseMP
 src/main/java/org/openapitools/client/model/CommonAudit.java
 src/main/java/org/openapitools/client/model/CommonGetAutocompleteV1Response.java
 src/main/java/org/openapitools/client/model/CommonGetAutocompleteV1ResponseAllOf.java
-src/main/java/org/openapitools/client/model/CommonGetAutocompleteV1ResponseMPayload.java
 src/main/java/org/openapitools/client/model/CommonGetListV1ResponseMPayload.java
 src/main/java/org/openapitools/client/model/CommonResponse.java
 src/main/java/org/openapitools/client/model/CommonResponseError.java
@@ -260,6 +264,7 @@ src/main/java/org/openapitools/client/model/ContactRequestCompoundAllOf.java
 src/main/java/org/openapitools/client/model/ContactinformationsRequest.java
 src/main/java/org/openapitools/client/model/ContactinformationsRequestCompound.java
 src/main/java/org/openapitools/client/model/ContactinformationsRequestCompoundAllOf.java
+src/main/java/org/openapitools/client/model/CustomAutocompleteElementResponse.java
 src/main/java/org/openapitools/client/model/CustomFormDataDocumentResponse.java
 src/main/java/org/openapitools/client/model/CustomFormDataSignerResponse.java
 src/main/java/org/openapitools/client/model/CustomFormsDataFolderResponse.java
@@ -302,9 +307,14 @@ src/main/java/org/openapitools/client/model/EzsignfolderDeleteObjectV1Response.j
 src/main/java/org/openapitools/client/model/EzsignfolderGetFormsDataV1Response.java
 src/main/java/org/openapitools/client/model/EzsignfolderGetFormsDataV1ResponseAllOf.java
 src/main/java/org/openapitools/client/model/EzsignfolderGetFormsDataV1ResponseMPayload.java
+src/main/java/org/openapitools/client/model/EzsignfolderGetListV1Response.java
+src/main/java/org/openapitools/client/model/EzsignfolderGetListV1ResponseAllOf.java
+src/main/java/org/openapitools/client/model/EzsignfolderGetListV1ResponseMPayload.java
+src/main/java/org/openapitools/client/model/EzsignfolderGetListV1ResponseMPayloadAllOf.java
 src/main/java/org/openapitools/client/model/EzsignfolderGetObjectV1Response.java
 src/main/java/org/openapitools/client/model/EzsignfolderGetObjectV1ResponseAllOf.java
 src/main/java/org/openapitools/client/model/EzsignfolderGetObjectV1ResponseMPayload.java
+src/main/java/org/openapitools/client/model/EzsignfolderListElement.java
 src/main/java/org/openapitools/client/model/EzsignfolderRequest.java
 src/main/java/org/openapitools/client/model/EzsignfolderRequestCompound.java
 src/main/java/org/openapitools/client/model/EzsignfolderRequestCompoundAllOf.java

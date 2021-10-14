@@ -12,25 +12,23 @@
 
 package org.openapitools.client.model;
 
-import java.util.*;
-import org.openapitools.client.model.CustomAutocompleteElementResponse;
+import org.openapitools.client.model.EzsignfolderGetListV1ResponseMPayload;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 @ApiModel(description = "")
-public class CommonGetAutocompleteV1ResponseAllOf {
+public class EzsignfolderGetListV1ResponseAllOf {
   
   @SerializedName("mPayload")
-  private List<CustomAutocompleteElementResponse> mPayload = null;
+  private EzsignfolderGetListV1ResponseMPayload mPayload = null;
 
   /**
-   * Generic Autocomplete Response
    **/
-  @ApiModelProperty(required = true, value = "Generic Autocomplete Response")
-  public List<CustomAutocompleteElementResponse> getMPayload() {
+  @ApiModelProperty(required = true, value = "")
+  public EzsignfolderGetListV1ResponseMPayload getMPayload() {
     return mPayload;
   }
-  public void setMPayload(List<CustomAutocompleteElementResponse> mPayload) {
+  public void setMPayload(EzsignfolderGetListV1ResponseMPayload mPayload) {
     this.mPayload = mPayload;
   }
 
@@ -43,8 +41,8 @@ public class CommonGetAutocompleteV1ResponseAllOf {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    CommonGetAutocompleteV1ResponseAllOf commonGetAutocompleteV1ResponseAllOf = (CommonGetAutocompleteV1ResponseAllOf) o;
-    return (this.mPayload == null ? commonGetAutocompleteV1ResponseAllOf.mPayload == null : this.mPayload.equals(commonGetAutocompleteV1ResponseAllOf.mPayload));
+    EzsignfolderGetListV1ResponseAllOf ezsignfolderGetListV1ResponseAllOf = (EzsignfolderGetListV1ResponseAllOf) o;
+    return (this.mPayload == null ? ezsignfolderGetListV1ResponseAllOf.mPayload == null : this.mPayload.equals(ezsignfolderGetListV1ResponseAllOf.mPayload));
   }
 
   @Override
@@ -57,7 +55,7 @@ public class CommonGetAutocompleteV1ResponseAllOf {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class CommonGetAutocompleteV1ResponseAllOf {\n");
+    sb.append("class EzsignfolderGetListV1ResponseAllOf {\n");
     
     sb.append("  mPayload: ").append(mPayload).append("\n");
     sb.append("}\n");

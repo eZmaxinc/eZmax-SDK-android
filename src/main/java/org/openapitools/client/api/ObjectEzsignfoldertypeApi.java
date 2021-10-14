@@ -23,6 +23,7 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
+import org.openapitools.client.model.CommonGetAutocompleteV1Response;
 import org.openapitools.client.model.CommonResponseError;
 import org.openapitools.client.model.EzsignfoldertypeGetListV1Response;
 import org.openapitools.client.model.HeaderAcceptLanguage;
@@ -58,8 +59,141 @@ public class ObjectEzsignfoldertypeApi {
   }
 
   /**
+  * Retrieve Ezsignfoldertypes and IDs
+  * Get the list of Ezsignfoldertypes to be used in a dropdown or autocomplete control.
+   * @param sSelector The type of Ezsignfoldertypes to return
+   * @param acceptLanguage 
+   * @param sQuery Allow to filter the returned results
+   * @return CommonGetAutocompleteV1Response
+  */
+  public CommonGetAutocompleteV1Response ezsignfoldertypeGetAutocompleteV1 (String sSelector, HeaderAcceptLanguage acceptLanguage, String sQuery) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'sSelector' is set
+    if (sSelector == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'sSelector' when calling ezsignfoldertypeGetAutocompleteV1",
+        new ApiException(400, "Missing the required parameter 'sSelector' when calling ezsignfoldertypeGetAutocompleteV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/ezsignfoldertype/getAutocomplete/{sSelector}/".replaceAll("\\{" + "sSelector" + "\\}", apiInvoker.escapeString(sSelector.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "sQuery", sQuery));
+    headerParams.put("Accept-Language", ApiInvoker.parameterToString(acceptLanguage));
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (CommonGetAutocompleteV1Response) ApiInvoker.deserialize(localVarResponse, "", CommonGetAutocompleteV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve Ezsignfoldertypes and IDs
+   * Get the list of Ezsignfoldertypes to be used in a dropdown or autocomplete control.
+   * @param sSelector The type of Ezsignfoldertypes to return   * @param acceptLanguage    * @param sQuery Allow to filter the returned results
+  */
+  public void ezsignfoldertypeGetAutocompleteV1 (String sSelector, HeaderAcceptLanguage acceptLanguage, String sQuery, final Response.Listener<CommonGetAutocompleteV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'sSelector' is set
+    if (sSelector == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'sSelector' when calling ezsignfoldertypeGetAutocompleteV1",
+        new ApiException(400, "Missing the required parameter 'sSelector' when calling ezsignfoldertypeGetAutocompleteV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/ezsignfoldertype/getAutocomplete/{sSelector}/".replaceAll("\\{format\\}","json").replaceAll("\\{" + "sSelector" + "\\}", apiInvoker.escapeString(sSelector.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "sQuery", sQuery));
+
+    headerParams.put("Accept-Language", ApiInvoker.parameterToString(acceptLanguage));
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((CommonGetAutocompleteV1Response) ApiInvoker.deserialize(localVarResponse,  "", CommonGetAutocompleteV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
   * Retrieve Ezsignfoldertype list
-  * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.  Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
+  * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
    * @param eOrderBy Specify how you want the results to be sorted
    * @param iRowMax 
    * @param iRowOffset 
@@ -125,7 +259,7 @@ public class ObjectEzsignfoldertypeApi {
 
       /**
    * Retrieve Ezsignfoldertype list
-   * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.  Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
+   * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
    * @param eOrderBy Specify how you want the results to be sorted   * @param iRowMax    * @param iRowOffset    * @param acceptLanguage    * @param sFilter 
   */
   public void ezsignfoldertypeGetListV1 (String eOrderBy, Integer iRowMax, Integer iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter, final Response.Listener<EzsignfoldertypeGetListV1Response> responseListener, final Response.ErrorListener errorListener) {

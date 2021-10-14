@@ -59,7 +59,7 @@ public class ObjectFranchisebrokerApi {
   * Retrieve Franchisebrokers and IDs
   * Get the list of Franchisebrokers to be used in a dropdown or autocomplete control.
    * @param sSelector The type of Franchisebrokers to return
-   * @param sQuery Allow to filter on the option value
+   * @param sQuery Allow to filter the returned results
    * @return CommonGetAutocompleteV1Response
   */
   public CommonGetAutocompleteV1Response franchisebrokerGetAutocompleteV1 (String sSelector, String sQuery) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
@@ -122,7 +122,7 @@ public class ObjectFranchisebrokerApi {
       /**
    * Retrieve Franchisebrokers and IDs
    * Get the list of Franchisebrokers to be used in a dropdown or autocomplete control.
-   * @param sSelector The type of Franchisebrokers to return   * @param sQuery Allow to filter on the option value
+   * @param sSelector The type of Franchisebrokers to return   * @param sQuery Allow to filter the returned results
   */
   public void franchisebrokerGetAutocompleteV1 (String sSelector, String sQuery, final Response.Listener<CommonGetAutocompleteV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;

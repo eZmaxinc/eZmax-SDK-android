@@ -59,7 +59,7 @@ public class ObjectPeriodApi {
   * Retrieve Periods and IDs
   * Get the list of Periods to be used in a dropdown or autocomplete control.
    * @param sSelector The types of Periods to return
-   * @param sQuery Allow to filter on the option value
+   * @param sQuery Allow to filter the returned results
    * @return CommonGetAutocompleteV1Response
   */
   public CommonGetAutocompleteV1Response periodGetAutocompleteV1 (String sSelector, String sQuery) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
@@ -122,7 +122,7 @@ public class ObjectPeriodApi {
       /**
    * Retrieve Periods and IDs
    * Get the list of Periods to be used in a dropdown or autocomplete control.
-   * @param sSelector The types of Periods to return   * @param sQuery Allow to filter on the option value
+   * @param sSelector The types of Periods to return   * @param sQuery Allow to filter the returned results
   */
   public void periodGetAutocompleteV1 (String sSelector, String sQuery, final Response.Listener<CommonGetAutocompleteV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
