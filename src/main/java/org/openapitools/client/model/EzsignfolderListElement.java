@@ -12,6 +12,8 @@
 
 package org.openapitools.client.model;
 
+import org.openapitools.client.model.FieldEEzsignfolderStep;
+import org.openapitools.client.model.OneOfstringnull;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -23,8 +25,28 @@ public class EzsignfolderListElement {
   
   @SerializedName("pkiEzsignfolderID")
   private Integer pkiEzsignfolderID = null;
+  @SerializedName("fkiEzsignfoldertypeID")
+  private Integer fkiEzsignfoldertypeID = null;
+  @SerializedName("sEzsignfoldertypeNameX")
+  private String sEzsignfoldertypeNameX = null;
   @SerializedName("sEzsignfolderDescription")
   private String sEzsignfolderDescription = null;
+  @SerializedName("eEzsignfolderStep")
+  private FieldEEzsignfolderStep eEzsignfolderStep = null;
+  @SerializedName("dtCreatedDate")
+  private String dtCreatedDate = null;
+  @SerializedName("dtEzsignfolderSentdate")
+  private OneOfstringnull dtEzsignfolderSentdate = null;
+  @SerializedName("dtDueDate")
+  private OneOfstringnull dtDueDate = null;
+  @SerializedName("iTotalDocument")
+  private Integer iTotalDocument = null;
+  @SerializedName("iTotalDocumentEdm")
+  private Integer iTotalDocumentEdm = null;
+  @SerializedName("iTotalSignature")
+  private Integer iTotalSignature = null;
+  @SerializedName("iTotalSignatureSigned")
+  private Integer iTotalSignatureSigned = null;
 
   /**
    * The unique ID of the Ezsignfolder
@@ -38,6 +60,28 @@ public class EzsignfolderListElement {
   }
 
   /**
+   * The unique ID of the Ezsignfoldertype.
+   **/
+  @ApiModelProperty(required = true, value = "The unique ID of the Ezsignfoldertype.")
+  public Integer getFkiEzsignfoldertypeID() {
+    return fkiEzsignfoldertypeID;
+  }
+  public void setFkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
+    this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
+  }
+
+  /**
+   * The name of the Ezsignfoldertype in the language of the requester
+   **/
+  @ApiModelProperty(required = true, value = "The name of the Ezsignfoldertype in the language of the requester")
+  public String getSEzsignfoldertypeNameX() {
+    return sEzsignfoldertypeNameX;
+  }
+  public void setSEzsignfoldertypeNameX(String sEzsignfoldertypeNameX) {
+    this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
+  }
+
+  /**
    * The description of the Ezsign Folder
    **/
   @ApiModelProperty(required = true, value = "The description of the Ezsign Folder")
@@ -46,6 +90,92 @@ public class EzsignfolderListElement {
   }
   public void setSEzsignfolderDescription(String sEzsignfolderDescription) {
     this.sEzsignfolderDescription = sEzsignfolderDescription;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public FieldEEzsignfolderStep getEEzsignfolderStep() {
+    return eEzsignfolderStep;
+  }
+  public void setEEzsignfolderStep(FieldEEzsignfolderStep eEzsignfolderStep) {
+    this.eEzsignfolderStep = eEzsignfolderStep;
+  }
+
+  /**
+   * The date and time at which the object was created
+   **/
+  @ApiModelProperty(required = true, value = "The date and time at which the object was created")
+  public String getDtCreatedDate() {
+    return dtCreatedDate;
+  }
+  public void setDtCreatedDate(String dtCreatedDate) {
+    this.dtCreatedDate = dtCreatedDate;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public OneOfstringnull getDtEzsignfolderSentdate() {
+    return dtEzsignfolderSentdate;
+  }
+  public void setDtEzsignfolderSentdate(OneOfstringnull dtEzsignfolderSentdate) {
+    this.dtEzsignfolderSentdate = dtEzsignfolderSentdate;
+  }
+
+  /**
+   * The date at which no more signature will be accepted on the folder
+   **/
+  @ApiModelProperty(required = true, value = "The date at which no more signature will be accepted on the folder")
+  public OneOfstringnull getDtDueDate() {
+    return dtDueDate;
+  }
+  public void setDtDueDate(OneOfstringnull dtDueDate) {
+    this.dtDueDate = dtDueDate;
+  }
+
+  /**
+   * The total number of Ezsigndocument in the folder
+   **/
+  @ApiModelProperty(required = true, value = "The total number of Ezsigndocument in the folder")
+  public Integer getITotalDocument() {
+    return iTotalDocument;
+  }
+  public void setITotalDocument(Integer iTotalDocument) {
+    this.iTotalDocument = iTotalDocument;
+  }
+
+  /**
+   * The total number of Ezsigndocument in the folder that were saved in the edm system
+   **/
+  @ApiModelProperty(required = true, value = "The total number of Ezsigndocument in the folder that were saved in the edm system")
+  public Integer getITotalDocumentEdm() {
+    return iTotalDocumentEdm;
+  }
+  public void setITotalDocumentEdm(Integer iTotalDocumentEdm) {
+    this.iTotalDocumentEdm = iTotalDocumentEdm;
+  }
+
+  /**
+   * The total number of signature blocks in all Ezsigndocuments in the folder
+   **/
+  @ApiModelProperty(required = true, value = "The total number of signature blocks in all Ezsigndocuments in the folder")
+  public Integer getITotalSignature() {
+    return iTotalSignature;
+  }
+  public void setITotalSignature(Integer iTotalSignature) {
+    this.iTotalSignature = iTotalSignature;
+  }
+
+  /**
+   * The total number of already signed signature blocks in all Ezsigndocuments in the folder
+   **/
+  @ApiModelProperty(required = true, value = "The total number of already signed signature blocks in all Ezsigndocuments in the folder")
+  public Integer getITotalSignatureSigned() {
+    return iTotalSignatureSigned;
+  }
+  public void setITotalSignatureSigned(Integer iTotalSignatureSigned) {
+    this.iTotalSignatureSigned = iTotalSignatureSigned;
   }
 
 
@@ -59,14 +189,34 @@ public class EzsignfolderListElement {
     }
     EzsignfolderListElement ezsignfolderListElement = (EzsignfolderListElement) o;
     return (this.pkiEzsignfolderID == null ? ezsignfolderListElement.pkiEzsignfolderID == null : this.pkiEzsignfolderID.equals(ezsignfolderListElement.pkiEzsignfolderID)) &&
-        (this.sEzsignfolderDescription == null ? ezsignfolderListElement.sEzsignfolderDescription == null : this.sEzsignfolderDescription.equals(ezsignfolderListElement.sEzsignfolderDescription));
+        (this.fkiEzsignfoldertypeID == null ? ezsignfolderListElement.fkiEzsignfoldertypeID == null : this.fkiEzsignfoldertypeID.equals(ezsignfolderListElement.fkiEzsignfoldertypeID)) &&
+        (this.sEzsignfoldertypeNameX == null ? ezsignfolderListElement.sEzsignfoldertypeNameX == null : this.sEzsignfoldertypeNameX.equals(ezsignfolderListElement.sEzsignfoldertypeNameX)) &&
+        (this.sEzsignfolderDescription == null ? ezsignfolderListElement.sEzsignfolderDescription == null : this.sEzsignfolderDescription.equals(ezsignfolderListElement.sEzsignfolderDescription)) &&
+        (this.eEzsignfolderStep == null ? ezsignfolderListElement.eEzsignfolderStep == null : this.eEzsignfolderStep.equals(ezsignfolderListElement.eEzsignfolderStep)) &&
+        (this.dtCreatedDate == null ? ezsignfolderListElement.dtCreatedDate == null : this.dtCreatedDate.equals(ezsignfolderListElement.dtCreatedDate)) &&
+        (this.dtEzsignfolderSentdate == null ? ezsignfolderListElement.dtEzsignfolderSentdate == null : this.dtEzsignfolderSentdate.equals(ezsignfolderListElement.dtEzsignfolderSentdate)) &&
+        (this.dtDueDate == null ? ezsignfolderListElement.dtDueDate == null : this.dtDueDate.equals(ezsignfolderListElement.dtDueDate)) &&
+        (this.iTotalDocument == null ? ezsignfolderListElement.iTotalDocument == null : this.iTotalDocument.equals(ezsignfolderListElement.iTotalDocument)) &&
+        (this.iTotalDocumentEdm == null ? ezsignfolderListElement.iTotalDocumentEdm == null : this.iTotalDocumentEdm.equals(ezsignfolderListElement.iTotalDocumentEdm)) &&
+        (this.iTotalSignature == null ? ezsignfolderListElement.iTotalSignature == null : this.iTotalSignature.equals(ezsignfolderListElement.iTotalSignature)) &&
+        (this.iTotalSignatureSigned == null ? ezsignfolderListElement.iTotalSignatureSigned == null : this.iTotalSignatureSigned.equals(ezsignfolderListElement.iTotalSignatureSigned));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
     result = 31 * result + (this.pkiEzsignfolderID == null ? 0: this.pkiEzsignfolderID.hashCode());
+    result = 31 * result + (this.fkiEzsignfoldertypeID == null ? 0: this.fkiEzsignfoldertypeID.hashCode());
+    result = 31 * result + (this.sEzsignfoldertypeNameX == null ? 0: this.sEzsignfoldertypeNameX.hashCode());
     result = 31 * result + (this.sEzsignfolderDescription == null ? 0: this.sEzsignfolderDescription.hashCode());
+    result = 31 * result + (this.eEzsignfolderStep == null ? 0: this.eEzsignfolderStep.hashCode());
+    result = 31 * result + (this.dtCreatedDate == null ? 0: this.dtCreatedDate.hashCode());
+    result = 31 * result + (this.dtEzsignfolderSentdate == null ? 0: this.dtEzsignfolderSentdate.hashCode());
+    result = 31 * result + (this.dtDueDate == null ? 0: this.dtDueDate.hashCode());
+    result = 31 * result + (this.iTotalDocument == null ? 0: this.iTotalDocument.hashCode());
+    result = 31 * result + (this.iTotalDocumentEdm == null ? 0: this.iTotalDocumentEdm.hashCode());
+    result = 31 * result + (this.iTotalSignature == null ? 0: this.iTotalSignature.hashCode());
+    result = 31 * result + (this.iTotalSignatureSigned == null ? 0: this.iTotalSignatureSigned.hashCode());
     return result;
   }
 
@@ -76,7 +226,17 @@ public class EzsignfolderListElement {
     sb.append("class EzsignfolderListElement {\n");
     
     sb.append("  pkiEzsignfolderID: ").append(pkiEzsignfolderID).append("\n");
+    sb.append("  fkiEzsignfoldertypeID: ").append(fkiEzsignfoldertypeID).append("\n");
+    sb.append("  sEzsignfoldertypeNameX: ").append(sEzsignfoldertypeNameX).append("\n");
     sb.append("  sEzsignfolderDescription: ").append(sEzsignfolderDescription).append("\n");
+    sb.append("  eEzsignfolderStep: ").append(eEzsignfolderStep).append("\n");
+    sb.append("  dtCreatedDate: ").append(dtCreatedDate).append("\n");
+    sb.append("  dtEzsignfolderSentdate: ").append(dtEzsignfolderSentdate).append("\n");
+    sb.append("  dtDueDate: ").append(dtDueDate).append("\n");
+    sb.append("  iTotalDocument: ").append(iTotalDocument).append("\n");
+    sb.append("  iTotalDocumentEdm: ").append(iTotalDocumentEdm).append("\n");
+    sb.append("  iTotalSignature: ").append(iTotalSignature).append("\n");
+    sb.append("  iTotalSignatureSigned: ").append(iTotalSignatureSigned).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

@@ -75,7 +75,7 @@ public class ObjectEzsignfoldertypeApi {
     }
 
     // create path and map variables
-    String path = "/1/object/ezsignfoldertype/getAutocomplete/{sSelector}/".replaceAll("\\{" + "sSelector" + "\\}", apiInvoker.escapeString(sSelector.toString()));
+    String path = "/1/object/ezsignfoldertype/getAutocomplete/{sSelector}".replaceAll("\\{" + "sSelector" + "\\}", apiInvoker.escapeString(sSelector.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -139,7 +139,7 @@ public class ObjectEzsignfoldertypeApi {
     }
 
     // create path and map variables
-    String path = "/1/object/ezsignfoldertype/getAutocomplete/{sSelector}/".replaceAll("\\{format\\}","json").replaceAll("\\{" + "sSelector" + "\\}", apiInvoker.escapeString(sSelector.toString()));
+    String path = "/1/object/ezsignfoldertype/getAutocomplete/{sSelector}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "sSelector" + "\\}", apiInvoker.escapeString(sSelector.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
