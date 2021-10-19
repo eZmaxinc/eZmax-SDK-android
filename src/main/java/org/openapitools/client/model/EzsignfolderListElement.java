@@ -13,7 +13,7 @@
 package org.openapitools.client.model;
 
 import org.openapitools.client.model.FieldEEzsignfolderStep;
-import org.openapitools.client.model.OneOfstringnull;
+import org.openapitools.client.model.OneOfstringobject;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -36,9 +36,9 @@ public class EzsignfolderListElement {
   @SerializedName("dtCreatedDate")
   private String dtCreatedDate = null;
   @SerializedName("dtEzsignfolderSentdate")
-  private OneOfstringnull dtEzsignfolderSentdate = null;
+  private OneOfstringobject dtEzsignfolderSentdate = null;
   @SerializedName("dtDueDate")
-  private OneOfstringnull dtDueDate = null;
+  private OneOfstringobject dtDueDate = null;
   @SerializedName("iTotalDocument")
   private Integer iTotalDocument = null;
   @SerializedName("iTotalDocumentEdm")
@@ -116,10 +116,10 @@ public class EzsignfolderListElement {
   /**
    **/
   @ApiModelProperty(required = true, value = "")
-  public OneOfstringnull getDtEzsignfolderSentdate() {
+  public OneOfstringobject getDtEzsignfolderSentdate() {
     return dtEzsignfolderSentdate;
   }
-  public void setDtEzsignfolderSentdate(OneOfstringnull dtEzsignfolderSentdate) {
+  public void setDtEzsignfolderSentdate(OneOfstringobject dtEzsignfolderSentdate) {
     this.dtEzsignfolderSentdate = dtEzsignfolderSentdate;
   }
 
@@ -127,10 +127,10 @@ public class EzsignfolderListElement {
    * The date at which no more signature will be accepted on the folder
    **/
   @ApiModelProperty(required = true, value = "The date at which no more signature will be accepted on the folder")
-  public OneOfstringnull getDtDueDate() {
+  public OneOfstringobject getDtDueDate() {
     return dtDueDate;
   }
-  public void setDtDueDate(OneOfstringnull dtDueDate) {
+  public void setDtDueDate(OneOfstringobject dtDueDate) {
     this.dtDueDate = dtDueDate;
   }
 

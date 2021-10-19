@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## ezsignfoldertypeGetAutocompleteV1
 
-> CommonGetAutocompleteV1Response ezsignfoldertypeGetAutocompleteV1(sSelector, acceptLanguage, sQuery)
+> CommonGetAutocompleteV1Response ezsignfoldertypeGetAutocompleteV1(sSelector, sQuery, acceptLanguage)
 
 Retrieve Ezsignfoldertypes and IDs
 
@@ -25,10 +25,10 @@ Get the list of Ezsignfoldertypes to be used in a dropdown or autocomplete contr
 
 ObjectEzsignfoldertypeApi apiInstance = new ObjectEzsignfoldertypeApi();
 String sSelector = null; // String | The type of Ezsignfoldertypes to return
-HeaderAcceptLanguage acceptLanguage = null; // HeaderAcceptLanguage | 
 String sQuery = null; // String | Allow to filter the returned results
+HeaderAcceptLanguage acceptLanguage = null; // HeaderAcceptLanguage | 
 try {
-    CommonGetAutocompleteV1Response result = apiInstance.ezsignfoldertypeGetAutocompleteV1(sSelector, acceptLanguage, sQuery);
+    CommonGetAutocompleteV1Response result = apiInstance.ezsignfoldertypeGetAutocompleteV1(sSelector, sQuery, acceptLanguage);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectEzsignfoldertypeApi#ezsignfoldertypeGetAutocompleteV1");
@@ -42,8 +42,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sSelector** | **String**| The type of Ezsignfoldertypes to return | [default to null] [enum: Active, All]
- **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [default to null] [enum: *, en, fr]
  **sQuery** | **String**| Allow to filter the returned results | [optional] [default to null]
+ **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [default to null] [enum: *, en, fr]
 
 ### Return type
 

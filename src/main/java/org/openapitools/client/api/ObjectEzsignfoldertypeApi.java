@@ -62,11 +62,11 @@ public class ObjectEzsignfoldertypeApi {
   * Retrieve Ezsignfoldertypes and IDs
   * Get the list of Ezsignfoldertypes to be used in a dropdown or autocomplete control.
    * @param sSelector The type of Ezsignfoldertypes to return
-   * @param acceptLanguage 
    * @param sQuery Allow to filter the returned results
+   * @param acceptLanguage 
    * @return CommonGetAutocompleteV1Response
   */
-  public CommonGetAutocompleteV1Response ezsignfoldertypeGetAutocompleteV1 (String sSelector, HeaderAcceptLanguage acceptLanguage, String sQuery) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CommonGetAutocompleteV1Response ezsignfoldertypeGetAutocompleteV1 (String sSelector, String sQuery, HeaderAcceptLanguage acceptLanguage) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'sSelector' is set
     if (sSelector == null) {
@@ -127,9 +127,9 @@ public class ObjectEzsignfoldertypeApi {
       /**
    * Retrieve Ezsignfoldertypes and IDs
    * Get the list of Ezsignfoldertypes to be used in a dropdown or autocomplete control.
-   * @param sSelector The type of Ezsignfoldertypes to return   * @param acceptLanguage    * @param sQuery Allow to filter the returned results
+   * @param sSelector The type of Ezsignfoldertypes to return   * @param sQuery Allow to filter the returned results   * @param acceptLanguage 
   */
-  public void ezsignfoldertypeGetAutocompleteV1 (String sSelector, HeaderAcceptLanguage acceptLanguage, String sQuery, final Response.Listener<CommonGetAutocompleteV1Response> responseListener, final Response.ErrorListener errorListener) {
+  public void ezsignfoldertypeGetAutocompleteV1 (String sSelector, String sQuery, HeaderAcceptLanguage acceptLanguage, final Response.Listener<CommonGetAutocompleteV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'sSelector' is set
