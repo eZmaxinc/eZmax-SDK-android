@@ -24,6 +24,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
 import org.openapitools.client.model.CommonResponseError;
+import org.openapitools.client.model.ListGetListpresentationV1Response;
 import org.openapitools.client.model.ListSaveListpresentationV1Request;
 import org.openapitools.client.model.ListSaveListpresentationV1Response;
 
@@ -58,23 +59,150 @@ public class ModuleListApi {
   }
 
   /**
+  * Get all Listpresentation for a specific list
+  * Retrive previously saved Listpresentation
+   * @param sListName The list Name
+   * @return ListGetListpresentationV1Response
+  */
+  public ListGetListpresentationV1Response listGetListpresentationV1 (String sListName) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'sListName' is set
+    if (sListName == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'sListName' when calling listGetListpresentationV1",
+        new ApiException(400, "Missing the required parameter 'sListName' when calling listGetListpresentationV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/module/list/listpresentation/{sListName}".replaceAll("\\{" + "sListName" + "\\}", apiInvoker.escapeString(sListName.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (ListGetListpresentationV1Response) ApiInvoker.deserialize(localVarResponse, "", ListGetListpresentationV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Get all Listpresentation for a specific list
+   * Retrive previously saved Listpresentation
+   * @param sListName The list Name
+  */
+  public void listGetListpresentationV1 (String sListName, final Response.Listener<ListGetListpresentationV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'sListName' is set
+    if (sListName == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'sListName' when calling listGetListpresentationV1",
+        new ApiException(400, "Missing the required parameter 'sListName' when calling listGetListpresentationV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/module/list/listpresentation/{sListName}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "sListName" + "\\}", apiInvoker.escapeString(sListName.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((ListGetListpresentationV1Response) ApiInvoker.deserialize(localVarResponse,  "", ListGetListpresentationV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
   * Save all Listpresentation for a specific list
   * Users can create many Listpresentations for lists in the system. They can customize orber by, filters, numbers of rows, etc.
    * @param sListName The list Name
    * @param listSaveListpresentationV1Request 
    * @return ListSaveListpresentationV1Response
   */
-  public ListSaveListpresentationV1Response listListpresentationV1 (String sListName, ListSaveListpresentationV1Request listSaveListpresentationV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public ListSaveListpresentationV1Response listSaveListpresentationV1 (String sListName, ListSaveListpresentationV1Request listSaveListpresentationV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = listSaveListpresentationV1Request;
     // verify the required parameter 'sListName' is set
     if (sListName == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'sListName' when calling listListpresentationV1",
-        new ApiException(400, "Missing the required parameter 'sListName' when calling listListpresentationV1"));
+      VolleyError error = new VolleyError("Missing the required parameter 'sListName' when calling listSaveListpresentationV1",
+        new ApiException(400, "Missing the required parameter 'sListName' when calling listSaveListpresentationV1"));
     }
     // verify the required parameter 'listSaveListpresentationV1Request' is set
     if (listSaveListpresentationV1Request == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'listSaveListpresentationV1Request' when calling listListpresentationV1",
-        new ApiException(400, "Missing the required parameter 'listSaveListpresentationV1Request' when calling listListpresentationV1"));
+      VolleyError error = new VolleyError("Missing the required parameter 'listSaveListpresentationV1Request' when calling listSaveListpresentationV1",
+        new ApiException(400, "Missing the required parameter 'listSaveListpresentationV1Request' when calling listSaveListpresentationV1"));
     }
 
     // create path and map variables
@@ -131,18 +259,18 @@ public class ModuleListApi {
    * Users can create many Listpresentations for lists in the system. They can customize orber by, filters, numbers of rows, etc.
    * @param sListName The list Name   * @param listSaveListpresentationV1Request 
   */
-  public void listListpresentationV1 (String sListName, ListSaveListpresentationV1Request listSaveListpresentationV1Request, final Response.Listener<ListSaveListpresentationV1Response> responseListener, final Response.ErrorListener errorListener) {
+  public void listSaveListpresentationV1 (String sListName, ListSaveListpresentationV1Request listSaveListpresentationV1Request, final Response.Listener<ListSaveListpresentationV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = listSaveListpresentationV1Request;
 
     // verify the required parameter 'sListName' is set
     if (sListName == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'sListName' when calling listListpresentationV1",
-        new ApiException(400, "Missing the required parameter 'sListName' when calling listListpresentationV1"));
+      VolleyError error = new VolleyError("Missing the required parameter 'sListName' when calling listSaveListpresentationV1",
+        new ApiException(400, "Missing the required parameter 'sListName' when calling listSaveListpresentationV1"));
     }
     // verify the required parameter 'listSaveListpresentationV1Request' is set
     if (listSaveListpresentationV1Request == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'listSaveListpresentationV1Request' when calling listListpresentationV1",
-        new ApiException(400, "Missing the required parameter 'listSaveListpresentationV1Request' when calling listListpresentationV1"));
+      VolleyError error = new VolleyError("Missing the required parameter 'listSaveListpresentationV1Request' when calling listSaveListpresentationV1",
+        new ApiException(400, "Missing the required parameter 'listSaveListpresentationV1Request' when calling listSaveListpresentationV1"));
     }
 
     // create path and map variables

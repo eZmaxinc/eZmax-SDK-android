@@ -152,10 +152,11 @@ docs/FranchisereferalincomeRequestCompoundAllOf.md
 docs/GlobalCustomerApi.md
 docs/GlobalCustomerGetEndpointV1Response.md
 docs/HeaderAcceptLanguage.md
+docs/ListGetListpresentationV1Response.md
+docs/ListGetListpresentationV1ResponseAllOf.md
+docs/ListGetListpresentationV1ResponseMPayload.md
 docs/ListSaveListpresentationV1Request.md
 docs/ListSaveListpresentationV1Response.md
-docs/ListSaveListpresentationV1ResponseAllOf.md
-docs/ListSaveListpresentationV1ResponseMPayload.md
 docs/ListpresentationRequest.md
 docs/ModuleAuthenticateApi.md
 docs/ModuleListApi.md
@@ -385,10 +386,11 @@ src/main/java/org/openapitools/client/model/FranchisereferalincomeRequestCompoun
 src/main/java/org/openapitools/client/model/FranchisereferalincomeRequestCompoundAllOf.java
 src/main/java/org/openapitools/client/model/GlobalCustomerGetEndpointV1Response.java
 src/main/java/org/openapitools/client/model/HeaderAcceptLanguage.java
+src/main/java/org/openapitools/client/model/ListGetListpresentationV1Response.java
+src/main/java/org/openapitools/client/model/ListGetListpresentationV1ResponseAllOf.java
+src/main/java/org/openapitools/client/model/ListGetListpresentationV1ResponseMPayload.java
 src/main/java/org/openapitools/client/model/ListSaveListpresentationV1Request.java
 src/main/java/org/openapitools/client/model/ListSaveListpresentationV1Response.java
-src/main/java/org/openapitools/client/model/ListSaveListpresentationV1ResponseAllOf.java
-src/main/java/org/openapitools/client/model/ListSaveListpresentationV1ResponseMPayload.java
 src/main/java/org/openapitools/client/model/ListpresentationRequest.java
 src/main/java/org/openapitools/client/model/MultilingualApikeyDescription.java
 src/main/java/org/openapitools/client/model/PhoneRequest.java

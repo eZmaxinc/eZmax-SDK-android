@@ -653,20 +653,24 @@ public class JsonUtil {
       return new TypeToken<List<HeaderAcceptLanguage>>(){}.getType();
     }
     
+    if ("ListGetListpresentationV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ListGetListpresentationV1Response>>(){}.getType();
+    }
+    
+    if ("ListGetListpresentationV1ResponseAllOf".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ListGetListpresentationV1ResponseAllOf>>(){}.getType();
+    }
+    
+    if ("ListGetListpresentationV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ListGetListpresentationV1ResponseMPayload>>(){}.getType();
+    }
+    
     if ("ListSaveListpresentationV1Request".equalsIgnoreCase(className)) {
       return new TypeToken<List<ListSaveListpresentationV1Request>>(){}.getType();
     }
     
     if ("ListSaveListpresentationV1Response".equalsIgnoreCase(className)) {
       return new TypeToken<List<ListSaveListpresentationV1Response>>(){}.getType();
-    }
-    
-    if ("ListSaveListpresentationV1ResponseAllOf".equalsIgnoreCase(className)) {
-      return new TypeToken<List<ListSaveListpresentationV1ResponseAllOf>>(){}.getType();
-    }
-    
-    if ("ListSaveListpresentationV1ResponseMPayload".equalsIgnoreCase(className)) {
-      return new TypeToken<List<ListSaveListpresentationV1ResponseMPayload>>(){}.getType();
     }
     
     if ("ListpresentationRequest".equalsIgnoreCase(className)) {
@@ -1391,20 +1395,24 @@ public class JsonUtil {
       return new TypeToken<HeaderAcceptLanguage>(){}.getType();
     }
     
+    if ("ListGetListpresentationV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<ListGetListpresentationV1Response>(){}.getType();
+    }
+    
+    if ("ListGetListpresentationV1ResponseAllOf".equalsIgnoreCase(className)) {
+      return new TypeToken<ListGetListpresentationV1ResponseAllOf>(){}.getType();
+    }
+    
+    if ("ListGetListpresentationV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<ListGetListpresentationV1ResponseMPayload>(){}.getType();
+    }
+    
     if ("ListSaveListpresentationV1Request".equalsIgnoreCase(className)) {
       return new TypeToken<ListSaveListpresentationV1Request>(){}.getType();
     }
     
     if ("ListSaveListpresentationV1Response".equalsIgnoreCase(className)) {
       return new TypeToken<ListSaveListpresentationV1Response>(){}.getType();
-    }
-    
-    if ("ListSaveListpresentationV1ResponseAllOf".equalsIgnoreCase(className)) {
-      return new TypeToken<ListSaveListpresentationV1ResponseAllOf>(){}.getType();
-    }
-    
-    if ("ListSaveListpresentationV1ResponseMPayload".equalsIgnoreCase(className)) {
-      return new TypeToken<ListSaveListpresentationV1ResponseMPayload>(){}.getType();
     }
     
     if ("ListpresentationRequest".equalsIgnoreCase(className)) {

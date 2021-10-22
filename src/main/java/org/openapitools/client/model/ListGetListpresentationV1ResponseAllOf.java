@@ -12,23 +12,23 @@
 
 package org.openapitools.client.model;
 
-import org.openapitools.client.model.ListSaveListpresentationV1ResponseMPayload;
+import org.openapitools.client.model.ListGetListpresentationV1ResponseMPayload;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 @ApiModel(description = "")
-public class ListSaveListpresentationV1ResponseAllOf {
+public class ListGetListpresentationV1ResponseAllOf {
   
   @SerializedName("mPayload")
-  private ListSaveListpresentationV1ResponseMPayload mPayload = null;
+  private ListGetListpresentationV1ResponseMPayload mPayload = null;
 
   /**
    **/
   @ApiModelProperty(required = true, value = "")
-  public ListSaveListpresentationV1ResponseMPayload getMPayload() {
+  public ListGetListpresentationV1ResponseMPayload getMPayload() {
     return mPayload;
   }
-  public void setMPayload(ListSaveListpresentationV1ResponseMPayload mPayload) {
+  public void setMPayload(ListGetListpresentationV1ResponseMPayload mPayload) {
     this.mPayload = mPayload;
   }
 
@@ -41,8 +41,8 @@ public class ListSaveListpresentationV1ResponseAllOf {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ListSaveListpresentationV1ResponseAllOf listSaveListpresentationV1ResponseAllOf = (ListSaveListpresentationV1ResponseAllOf) o;
-    return (this.mPayload == null ? listSaveListpresentationV1ResponseAllOf.mPayload == null : this.mPayload.equals(listSaveListpresentationV1ResponseAllOf.mPayload));
+    ListGetListpresentationV1ResponseAllOf listGetListpresentationV1ResponseAllOf = (ListGetListpresentationV1ResponseAllOf) o;
+    return (this.mPayload == null ? listGetListpresentationV1ResponseAllOf.mPayload == null : this.mPayload.equals(listGetListpresentationV1ResponseAllOf.mPayload));
   }
 
   @Override
@@ -55,7 +55,7 @@ public class ListSaveListpresentationV1ResponseAllOf {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ListSaveListpresentationV1ResponseAllOf {\n");
+    sb.append("class ListGetListpresentationV1ResponseAllOf {\n");
     
     sb.append("  mPayload: ").append(mPayload).append("\n");
     sb.append("}\n");

@@ -18,10 +18,10 @@ import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Payload for the POST /1/module/list/listpresentation/{sListName} API Request
+ * Payload for the GET /1/module/list/listpresentation/{sListName} API Request
  **/
-@ApiModel(description = "Payload for the POST /1/module/list/listpresentation/{sListName} API Request")
-public class ListSaveListpresentationV1ResponseMPayload {
+@ApiModel(description = "Payload for the GET /1/module/list/listpresentation/{sListName} API Request")
+public class ListGetListpresentationV1ResponseMPayload {
   
   @SerializedName("a_objListpresentation")
   private List<ListpresentationRequest> aObjListpresentation = null;
@@ -45,8 +45,8 @@ public class ListSaveListpresentationV1ResponseMPayload {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ListSaveListpresentationV1ResponseMPayload listSaveListpresentationV1ResponseMPayload = (ListSaveListpresentationV1ResponseMPayload) o;
-    return (this.aObjListpresentation == null ? listSaveListpresentationV1ResponseMPayload.aObjListpresentation == null : this.aObjListpresentation.equals(listSaveListpresentationV1ResponseMPayload.aObjListpresentation));
+    ListGetListpresentationV1ResponseMPayload listGetListpresentationV1ResponseMPayload = (ListGetListpresentationV1ResponseMPayload) o;
+    return (this.aObjListpresentation == null ? listGetListpresentationV1ResponseMPayload.aObjListpresentation == null : this.aObjListpresentation.equals(listGetListpresentationV1ResponseMPayload.aObjListpresentation));
   }
 
   @Override
@@ -59,7 +59,7 @@ public class ListSaveListpresentationV1ResponseMPayload {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ListSaveListpresentationV1ResponseMPayload {\n");
+    sb.append("class ListGetListpresentationV1ResponseMPayload {\n");
     
     sb.append("  aObjListpresentation: ").append(aObjListpresentation).append("\n");
     sb.append("}\n");

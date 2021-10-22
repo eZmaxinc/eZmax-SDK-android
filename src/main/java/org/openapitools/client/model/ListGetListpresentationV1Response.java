@@ -15,19 +15,33 @@ package org.openapitools.client.model;
 import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseObjDebug;
 import org.openapitools.client.model.CommonResponseObjDebugPayload;
+import org.openapitools.client.model.ListGetListpresentationV1ResponseAllOf;
+import org.openapitools.client.model.ListGetListpresentationV1ResponseMPayload;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Response for the POST /1/module/list/listpresentation/{sListName} API Request
+ * Response for the GET /1/module/list/listpresentation/{sListName} API Request
  **/
-@ApiModel(description = "Response for the POST /1/module/list/listpresentation/{sListName} API Request")
-public class ListSaveListpresentationV1Response {
+@ApiModel(description = "Response for the GET /1/module/list/listpresentation/{sListName} API Request")
+public class ListGetListpresentationV1Response {
   
+  @SerializedName("mPayload")
+  private ListGetListpresentationV1ResponseMPayload mPayload = null;
   @SerializedName("objDebugPayload")
   private CommonResponseObjDebugPayload objDebugPayload = null;
   @SerializedName("objDebug")
   private CommonResponseObjDebug objDebug = null;
+
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public ListGetListpresentationV1ResponseMPayload getMPayload() {
+    return mPayload;
+  }
+  public void setMPayload(ListGetListpresentationV1ResponseMPayload mPayload) {
+    this.mPayload = mPayload;
+  }
 
   /**
    **/
@@ -58,14 +72,16 @@ public class ListSaveListpresentationV1Response {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ListSaveListpresentationV1Response listSaveListpresentationV1Response = (ListSaveListpresentationV1Response) o;
-    return (this.objDebugPayload == null ? listSaveListpresentationV1Response.objDebugPayload == null : this.objDebugPayload.equals(listSaveListpresentationV1Response.objDebugPayload)) &&
-        (this.objDebug == null ? listSaveListpresentationV1Response.objDebug == null : this.objDebug.equals(listSaveListpresentationV1Response.objDebug));
+    ListGetListpresentationV1Response listGetListpresentationV1Response = (ListGetListpresentationV1Response) o;
+    return (this.mPayload == null ? listGetListpresentationV1Response.mPayload == null : this.mPayload.equals(listGetListpresentationV1Response.mPayload)) &&
+        (this.objDebugPayload == null ? listGetListpresentationV1Response.objDebugPayload == null : this.objDebugPayload.equals(listGetListpresentationV1Response.objDebugPayload)) &&
+        (this.objDebug == null ? listGetListpresentationV1Response.objDebug == null : this.objDebug.equals(listGetListpresentationV1Response.objDebug));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
+    result = 31 * result + (this.mPayload == null ? 0: this.mPayload.hashCode());
     result = 31 * result + (this.objDebugPayload == null ? 0: this.objDebugPayload.hashCode());
     result = 31 * result + (this.objDebug == null ? 0: this.objDebug.hashCode());
     return result;
@@ -74,8 +90,9 @@ public class ListSaveListpresentationV1Response {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ListSaveListpresentationV1Response {\n");
+    sb.append("class ListGetListpresentationV1Response {\n");
     
+    sb.append("  mPayload: ").append(mPayload).append("\n");
     sb.append("  objDebugPayload: ").append(objDebugPayload).append("\n");
     sb.append("  objDebug: ").append(objDebug).append("\n");
     sb.append("}\n");
