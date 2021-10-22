@@ -96,6 +96,7 @@ docs/EzsignfolderResponse.md
 docs/EzsignfolderResponseCompound.md
 docs/EzsignfolderSendV1Request.md
 docs/EzsignfolderSendV1Response.md
+docs/EzsignfolderUnsendV1Response.md
 docs/EzsignfoldersignerassociationCreateObjectV1Request.md
 docs/EzsignfoldersignerassociationCreateObjectV1Response.md
 docs/EzsignfoldersignerassociationCreateObjectV1ResponseAllOf.md
@@ -151,7 +152,13 @@ docs/FranchisereferalincomeRequestCompoundAllOf.md
 docs/GlobalCustomerApi.md
 docs/GlobalCustomerGetEndpointV1Response.md
 docs/HeaderAcceptLanguage.md
+docs/ListSaveListpresentationV1Request.md
+docs/ListSaveListpresentationV1Response.md
+docs/ListSaveListpresentationV1ResponseAllOf.md
+docs/ListSaveListpresentationV1ResponseMPayload.md
+docs/ListpresentationRequest.md
 docs/ModuleAuthenticateApi.md
+docs/ModuleListApi.md
 docs/ModuleSsprApi.md
 docs/ModuleUserApi.md
 docs/MultilingualApikeyDescription.md
@@ -215,6 +222,7 @@ src/main/java/eZmaxAPI/request/PostRequest.java
 src/main/java/eZmaxAPI/request/PutRequest.java
 src/main/java/org/openapitools/client/api/GlobalCustomerApi.java
 src/main/java/org/openapitools/client/api/ModuleAuthenticateApi.java
+src/main/java/org/openapitools/client/api/ModuleListApi.java
 src/main/java/org/openapitools/client/api/ModuleSsprApi.java
 src/main/java/org/openapitools/client/api/ModuleUserApi.java
 src/main/java/org/openapitools/client/api/ObjectActivesessionApi.java
@@ -322,6 +330,7 @@ src/main/java/org/openapitools/client/model/EzsignfolderResponse.java
 src/main/java/org/openapitools/client/model/EzsignfolderResponseCompound.java
 src/main/java/org/openapitools/client/model/EzsignfolderSendV1Request.java
 src/main/java/org/openapitools/client/model/EzsignfolderSendV1Response.java
+src/main/java/org/openapitools/client/model/EzsignfolderUnsendV1Response.java
 src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationCreateObjectV1Request.java
 src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationCreateObjectV1Response.java
 src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationCreateObjectV1ResponseAllOf.java
@@ -376,6 +385,11 @@ src/main/java/org/openapitools/client/model/FranchisereferalincomeRequestCompoun
 src/main/java/org/openapitools/client/model/FranchisereferalincomeRequestCompoundAllOf.java
 src/main/java/org/openapitools/client/model/GlobalCustomerGetEndpointV1Response.java
 src/main/java/org/openapitools/client/model/HeaderAcceptLanguage.java
+src/main/java/org/openapitools/client/model/ListSaveListpresentationV1Request.java
+src/main/java/org/openapitools/client/model/ListSaveListpresentationV1Response.java
+src/main/java/org/openapitools/client/model/ListSaveListpresentationV1ResponseAllOf.java
+src/main/java/org/openapitools/client/model/ListSaveListpresentationV1ResponseMPayload.java
+src/main/java/org/openapitools/client/model/ListpresentationRequest.java
 src/main/java/org/openapitools/client/model/MultilingualApikeyDescription.java
 src/main/java/org/openapitools/client/model/PhoneRequest.java
 src/main/java/org/openapitools/client/model/SsprResetPasswordRequestV1Request.java

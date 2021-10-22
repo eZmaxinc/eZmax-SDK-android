@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**ezsignfolderGetListV1**](ObjectEzsignfolderApi.md#ezsignfolderGetListV1) | **GET** /1/object/ezsignfolder/getList | Retrieve Ezsignfolder list
 [**ezsignfolderGetObjectV1**](ObjectEzsignfolderApi.md#ezsignfolderGetObjectV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID} | Retrieve an existing Ezsignfolder
 [**ezsignfolderSendV1**](ObjectEzsignfolderApi.md#ezsignfolderSendV1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/send | Send the Ezsignfolder to the signatories for signature
+[**ezsignfolderUnsendV1**](ObjectEzsignfolderApi.md#ezsignfolderUnsendV1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/unsend | Unsend the Ezsignfolder
 
 
 
@@ -328,6 +329,54 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsignfolderSendV1Response**](EzsignfolderSendV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## ezsignfolderUnsendV1
+
+> EzsignfolderUnsendV1Response ezsignfolderUnsendV1(pkiEzsignfolderID, body)
+
+Unsend the Ezsignfolder
+
+Once an Ezsignfolder has been sent to signatories, it cannot be modified.  Using this endpoint, you can unsend the Ezsignfolder and make it modifiable again.  Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.  ⚠️ Warning: Any signature previously made by signatories on \&quot;Non-completed\&quot; Ezsigndocuments will be lost.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectEzsignfolderApi;
+
+ObjectEzsignfolderApi apiInstance = new ObjectEzsignfolderApi();
+Integer pkiEzsignfolderID = null; // Integer | 
+String body = "body_example"; // String | 
+try {
+    EzsignfolderUnsendV1Response result = apiInstance.ezsignfolderUnsendV1(pkiEzsignfolderID, body);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectEzsignfolderApi#ezsignfolderUnsendV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignfolderID** | **Integer**|  | [default to null]
+ **body** | **String**|  |
+
+### Return type
+
+[**EzsignfolderUnsendV1Response**](EzsignfolderUnsendV1Response.md)
 
 ### Authorization
 
