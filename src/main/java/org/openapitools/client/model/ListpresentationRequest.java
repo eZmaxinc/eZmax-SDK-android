@@ -34,6 +34,8 @@ public class ListpresentationRequest {
   private Integer iListpresentationRowMax = null;
   @SerializedName("iListpresentationRowOffset")
   private Integer iListpresentationRowOffset = null;
+  @SerializedName("bListpresentationDefault")
+  private Boolean bListpresentationDefault = null;
 
   /**
    * A descriptive for the list presentation
@@ -101,6 +103,17 @@ public class ListpresentationRequest {
     this.iListpresentationRowOffset = iListpresentationRowOffset;
   }
 
+  /**
+   * Set to true if the user chose this Listpresentation as the default one. A single element should be set to true
+   **/
+  @ApiModelProperty(required = true, value = "Set to true if the user chose this Listpresentation as the default one. A single element should be set to true")
+  public Boolean getBListpresentationDefault() {
+    return bListpresentationDefault;
+  }
+  public void setBListpresentationDefault(Boolean bListpresentationDefault) {
+    this.bListpresentationDefault = bListpresentationDefault;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -116,7 +129,8 @@ public class ListpresentationRequest {
         (this.sListpresentationOrderby == null ? listpresentationRequest.sListpresentationOrderby == null : this.sListpresentationOrderby.equals(listpresentationRequest.sListpresentationOrderby)) &&
         (this.aSColumnName == null ? listpresentationRequest.aSColumnName == null : this.aSColumnName.equals(listpresentationRequest.aSColumnName)) &&
         (this.iListpresentationRowMax == null ? listpresentationRequest.iListpresentationRowMax == null : this.iListpresentationRowMax.equals(listpresentationRequest.iListpresentationRowMax)) &&
-        (this.iListpresentationRowOffset == null ? listpresentationRequest.iListpresentationRowOffset == null : this.iListpresentationRowOffset.equals(listpresentationRequest.iListpresentationRowOffset));
+        (this.iListpresentationRowOffset == null ? listpresentationRequest.iListpresentationRowOffset == null : this.iListpresentationRowOffset.equals(listpresentationRequest.iListpresentationRowOffset)) &&
+        (this.bListpresentationDefault == null ? listpresentationRequest.bListpresentationDefault == null : this.bListpresentationDefault.equals(listpresentationRequest.bListpresentationDefault));
   }
 
   @Override
@@ -128,6 +142,7 @@ public class ListpresentationRequest {
     result = 31 * result + (this.aSColumnName == null ? 0: this.aSColumnName.hashCode());
     result = 31 * result + (this.iListpresentationRowMax == null ? 0: this.iListpresentationRowMax.hashCode());
     result = 31 * result + (this.iListpresentationRowOffset == null ? 0: this.iListpresentationRowOffset.hashCode());
+    result = 31 * result + (this.bListpresentationDefault == null ? 0: this.bListpresentationDefault.hashCode());
     return result;
   }
 
@@ -142,6 +157,7 @@ public class ListpresentationRequest {
     sb.append("  aSColumnName: ").append(aSColumnName).append("\n");
     sb.append("  iListpresentationRowMax: ").append(iListpresentationRowMax).append("\n");
     sb.append("  iListpresentationRowOffset: ").append(iListpresentationRowOffset).append("\n");
+    sb.append("  bListpresentationDefault: ").append(bListpresentationDefault).append("\n");
     sb.append("}\n");
     return sb.toString();
   }
