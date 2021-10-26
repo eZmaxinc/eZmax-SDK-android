@@ -24,6 +24,8 @@ docs/CommonGetAutocompleteV1ResponseAllOf.md
 docs/CommonGetListV1ResponseMPayload.md
 docs/CommonResponse.md
 docs/CommonResponseError.md
+docs/CommonResponseErrorSTemporaryFileUrl.md
+docs/CommonResponseErrorSTemporaryFileUrlAllOf.md
 docs/CommonResponseFilter.md
 docs/CommonResponseGetList.md
 docs/CommonResponseObjDebug.md
@@ -259,6 +261,8 @@ src/main/java/org/openapitools/client/model/CommonGetAutocompleteV1ResponseAllOf
 src/main/java/org/openapitools/client/model/CommonGetListV1ResponseMPayload.java
 src/main/java/org/openapitools/client/model/CommonResponse.java
 src/main/java/org/openapitools/client/model/CommonResponseError.java
+src/main/java/org/openapitools/client/model/CommonResponseErrorSTemporaryFileUrl.java
+src/main/java/org/openapitools/client/model/CommonResponseErrorSTemporaryFileUrlAllOf.java
 src/main/java/org/openapitools/client/model/CommonResponseFilter.java
 src/main/java/org/openapitools/client/model/CommonResponseGetList.java
 src/main/java/org/openapitools/client/model/CommonResponseObjDebug.java

@@ -24,6 +24,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
 import org.openapitools.client.model.CommonResponseError;
+import org.openapitools.client.model.CommonResponseErrorSTemporaryFileUrl;
 import org.openapitools.client.model.EzsigndocumentApplyEzsigntemplateV1Request;
 import org.openapitools.client.model.EzsigndocumentApplyEzsigntemplateV1Response;
 import org.openapitools.client.model.EzsigndocumentApplyEzsigntemplateV2Request;

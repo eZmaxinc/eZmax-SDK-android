@@ -145,6 +145,14 @@ public class JsonUtil {
       return new TypeToken<List<CommonResponseError>>(){}.getType();
     }
     
+    if ("CommonResponseErrorSTemporaryFileUrl".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CommonResponseErrorSTemporaryFileUrl>>(){}.getType();
+    }
+    
+    if ("CommonResponseErrorSTemporaryFileUrlAllOf".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CommonResponseErrorSTemporaryFileUrlAllOf>>(){}.getType();
+    }
+    
     if ("CommonResponseFilter".equalsIgnoreCase(className)) {
       return new TypeToken<List<CommonResponseFilter>>(){}.getType();
     }
@@ -885,6 +893,14 @@ public class JsonUtil {
     
     if ("CommonResponseError".equalsIgnoreCase(className)) {
       return new TypeToken<CommonResponseError>(){}.getType();
+    }
+    
+    if ("CommonResponseErrorSTemporaryFileUrl".equalsIgnoreCase(className)) {
+      return new TypeToken<CommonResponseErrorSTemporaryFileUrl>(){}.getType();
+    }
+    
+    if ("CommonResponseErrorSTemporaryFileUrlAllOf".equalsIgnoreCase(className)) {
+      return new TypeToken<CommonResponseErrorSTemporaryFileUrlAllOf>(){}.getType();
     }
     
     if ("CommonResponseFilter".equalsIgnoreCase(className)) {
