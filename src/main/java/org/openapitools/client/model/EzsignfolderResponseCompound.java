@@ -71,9 +71,9 @@ public class EzsignfolderResponseCompound {
   }
 
   /**
-   * The description of the Ezsign Folder
+   * The description of the Ezsignfolder
    **/
-  @ApiModelProperty(required = true, value = "The description of the Ezsign Folder")
+  @ApiModelProperty(required = true, value = "The description of the Ezsignfolder")
   public String getSEzsignfolderDescription() {
     return sEzsignfolderDescription;
   }

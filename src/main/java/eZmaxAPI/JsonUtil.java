@@ -237,6 +237,26 @@ public class JsonUtil {
       return new TypeToken<List<EmailRequest>>(){}.getType();
     }
     
+    if ("EzsignbulksendGetListV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EzsignbulksendGetListV1Response>>(){}.getType();
+    }
+    
+    if ("EzsignbulksendGetListV1ResponseAllOf".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EzsignbulksendGetListV1ResponseAllOf>>(){}.getType();
+    }
+    
+    if ("EzsignbulksendGetListV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EzsignbulksendGetListV1ResponseMPayload>>(){}.getType();
+    }
+    
+    if ("EzsignbulksendGetListV1ResponseMPayloadAllOf".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EzsignbulksendGetListV1ResponseMPayloadAllOf>>(){}.getType();
+    }
+    
+    if ("EzsignbulksendListElement".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EzsignbulksendListElement>>(){}.getType();
+    }
+    
     if ("EzsigndocumentApplyEzsigntemplateV1Request".equalsIgnoreCase(className)) {
       return new TypeToken<List<EzsigndocumentApplyEzsigntemplateV1Request>>(){}.getType();
     }
@@ -985,6 +1005,26 @@ public class JsonUtil {
     
     if ("EmailRequest".equalsIgnoreCase(className)) {
       return new TypeToken<EmailRequest>(){}.getType();
+    }
+    
+    if ("EzsignbulksendGetListV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<EzsignbulksendGetListV1Response>(){}.getType();
+    }
+    
+    if ("EzsignbulksendGetListV1ResponseAllOf".equalsIgnoreCase(className)) {
+      return new TypeToken<EzsignbulksendGetListV1ResponseAllOf>(){}.getType();
+    }
+    
+    if ("EzsignbulksendGetListV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<EzsignbulksendGetListV1ResponseMPayload>(){}.getType();
+    }
+    
+    if ("EzsignbulksendGetListV1ResponseMPayloadAllOf".equalsIgnoreCase(className)) {
+      return new TypeToken<EzsignbulksendGetListV1ResponseMPayloadAllOf>(){}.getType();
+    }
+    
+    if ("EzsignbulksendListElement".equalsIgnoreCase(className)) {
+      return new TypeToken<EzsignbulksendListElement>(){}.getType();
     }
     
     if ("EzsigndocumentApplyEzsigntemplateV1Request".equalsIgnoreCase(className)) {

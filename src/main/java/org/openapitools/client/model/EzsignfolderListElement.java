@@ -42,14 +42,14 @@ public class EzsignfolderListElement {
   private OneOfstringobject dtEzsignfolderSentdate = null;
   @SerializedName("dtDueDate")
   private OneOfstringobject dtDueDate = null;
-  @SerializedName("iTotalDocument")
-  private Integer iTotalDocument = null;
-  @SerializedName("iTotalDocumentEdm")
-  private Integer iTotalDocumentEdm = null;
-  @SerializedName("iTotalSignature")
-  private Integer iTotalSignature = null;
-  @SerializedName("iTotalSignatureSigned")
-  private Integer iTotalSignatureSigned = null;
+  @SerializedName("iEzsigndocument")
+  private Integer iEzsigndocument = null;
+  @SerializedName("iEzsigndocumentEdm")
+  private Integer iEzsigndocumentEdm = null;
+  @SerializedName("iEzsignsignature")
+  private Integer iEzsignsignature = null;
+  @SerializedName("iEzsignsignatureSigned")
+  private Integer iEzsignsignatureSigned = null;
 
   /**
    * The unique ID of the Ezsignfolder
@@ -95,9 +95,9 @@ public class EzsignfolderListElement {
   }
 
   /**
-   * The description of the Ezsign Folder
+   * The description of the Ezsignfolder
    **/
-  @ApiModelProperty(required = true, value = "The description of the Ezsign Folder")
+  @ApiModelProperty(required = true, value = "The description of the Ezsignfolder")
   public String getSEzsignfolderDescription() {
     return sEzsignfolderDescription;
   }
@@ -151,44 +151,44 @@ public class EzsignfolderListElement {
    * The total number of Ezsigndocument in the folder
    **/
   @ApiModelProperty(required = true, value = "The total number of Ezsigndocument in the folder")
-  public Integer getITotalDocument() {
-    return iTotalDocument;
+  public Integer getIEzsigndocument() {
+    return iEzsigndocument;
   }
-  public void setITotalDocument(Integer iTotalDocument) {
-    this.iTotalDocument = iTotalDocument;
+  public void setIEzsigndocument(Integer iEzsigndocument) {
+    this.iEzsigndocument = iEzsigndocument;
   }
 
   /**
    * The total number of Ezsigndocument in the folder that were saved in the edm system
    **/
   @ApiModelProperty(required = true, value = "The total number of Ezsigndocument in the folder that were saved in the edm system")
-  public Integer getITotalDocumentEdm() {
-    return iTotalDocumentEdm;
+  public Integer getIEzsigndocumentEdm() {
+    return iEzsigndocumentEdm;
   }
-  public void setITotalDocumentEdm(Integer iTotalDocumentEdm) {
-    this.iTotalDocumentEdm = iTotalDocumentEdm;
+  public void setIEzsigndocumentEdm(Integer iEzsigndocumentEdm) {
+    this.iEzsigndocumentEdm = iEzsigndocumentEdm;
   }
 
   /**
    * The total number of signature blocks in all Ezsigndocuments in the folder
    **/
   @ApiModelProperty(required = true, value = "The total number of signature blocks in all Ezsigndocuments in the folder")
-  public Integer getITotalSignature() {
-    return iTotalSignature;
+  public Integer getIEzsignsignature() {
+    return iEzsignsignature;
   }
-  public void setITotalSignature(Integer iTotalSignature) {
-    this.iTotalSignature = iTotalSignature;
+  public void setIEzsignsignature(Integer iEzsignsignature) {
+    this.iEzsignsignature = iEzsignsignature;
   }
 
   /**
    * The total number of already signed signature blocks in all Ezsigndocuments in the folder
    **/
   @ApiModelProperty(required = true, value = "The total number of already signed signature blocks in all Ezsigndocuments in the folder")
-  public Integer getITotalSignatureSigned() {
-    return iTotalSignatureSigned;
+  public Integer getIEzsignsignatureSigned() {
+    return iEzsignsignatureSigned;
   }
-  public void setITotalSignatureSigned(Integer iTotalSignatureSigned) {
-    this.iTotalSignatureSigned = iTotalSignatureSigned;
+  public void setIEzsignsignatureSigned(Integer iEzsignsignatureSigned) {
+    this.iEzsignsignatureSigned = iEzsignsignatureSigned;
   }
 
 
@@ -210,10 +210,10 @@ public class EzsignfolderListElement {
         (this.dtCreatedDate == null ? ezsignfolderListElement.dtCreatedDate == null : this.dtCreatedDate.equals(ezsignfolderListElement.dtCreatedDate)) &&
         (this.dtEzsignfolderSentdate == null ? ezsignfolderListElement.dtEzsignfolderSentdate == null : this.dtEzsignfolderSentdate.equals(ezsignfolderListElement.dtEzsignfolderSentdate)) &&
         (this.dtDueDate == null ? ezsignfolderListElement.dtDueDate == null : this.dtDueDate.equals(ezsignfolderListElement.dtDueDate)) &&
-        (this.iTotalDocument == null ? ezsignfolderListElement.iTotalDocument == null : this.iTotalDocument.equals(ezsignfolderListElement.iTotalDocument)) &&
-        (this.iTotalDocumentEdm == null ? ezsignfolderListElement.iTotalDocumentEdm == null : this.iTotalDocumentEdm.equals(ezsignfolderListElement.iTotalDocumentEdm)) &&
-        (this.iTotalSignature == null ? ezsignfolderListElement.iTotalSignature == null : this.iTotalSignature.equals(ezsignfolderListElement.iTotalSignature)) &&
-        (this.iTotalSignatureSigned == null ? ezsignfolderListElement.iTotalSignatureSigned == null : this.iTotalSignatureSigned.equals(ezsignfolderListElement.iTotalSignatureSigned));
+        (this.iEzsigndocument == null ? ezsignfolderListElement.iEzsigndocument == null : this.iEzsigndocument.equals(ezsignfolderListElement.iEzsigndocument)) &&
+        (this.iEzsigndocumentEdm == null ? ezsignfolderListElement.iEzsigndocumentEdm == null : this.iEzsigndocumentEdm.equals(ezsignfolderListElement.iEzsigndocumentEdm)) &&
+        (this.iEzsignsignature == null ? ezsignfolderListElement.iEzsignsignature == null : this.iEzsignsignature.equals(ezsignfolderListElement.iEzsignsignature)) &&
+        (this.iEzsignsignatureSigned == null ? ezsignfolderListElement.iEzsignsignatureSigned == null : this.iEzsignsignatureSigned.equals(ezsignfolderListElement.iEzsignsignatureSigned));
   }
 
   @Override
@@ -228,10 +228,10 @@ public class EzsignfolderListElement {
     result = 31 * result + (this.dtCreatedDate == null ? 0: this.dtCreatedDate.hashCode());
     result = 31 * result + (this.dtEzsignfolderSentdate == null ? 0: this.dtEzsignfolderSentdate.hashCode());
     result = 31 * result + (this.dtDueDate == null ? 0: this.dtDueDate.hashCode());
-    result = 31 * result + (this.iTotalDocument == null ? 0: this.iTotalDocument.hashCode());
-    result = 31 * result + (this.iTotalDocumentEdm == null ? 0: this.iTotalDocumentEdm.hashCode());
-    result = 31 * result + (this.iTotalSignature == null ? 0: this.iTotalSignature.hashCode());
-    result = 31 * result + (this.iTotalSignatureSigned == null ? 0: this.iTotalSignatureSigned.hashCode());
+    result = 31 * result + (this.iEzsigndocument == null ? 0: this.iEzsigndocument.hashCode());
+    result = 31 * result + (this.iEzsigndocumentEdm == null ? 0: this.iEzsigndocumentEdm.hashCode());
+    result = 31 * result + (this.iEzsignsignature == null ? 0: this.iEzsignsignature.hashCode());
+    result = 31 * result + (this.iEzsignsignatureSigned == null ? 0: this.iEzsignsignatureSigned.hashCode());
     return result;
   }
 
@@ -249,10 +249,10 @@ public class EzsignfolderListElement {
     sb.append("  dtCreatedDate: ").append(dtCreatedDate).append("\n");
     sb.append("  dtEzsignfolderSentdate: ").append(dtEzsignfolderSentdate).append("\n");
     sb.append("  dtDueDate: ").append(dtDueDate).append("\n");
-    sb.append("  iTotalDocument: ").append(iTotalDocument).append("\n");
-    sb.append("  iTotalDocumentEdm: ").append(iTotalDocumentEdm).append("\n");
-    sb.append("  iTotalSignature: ").append(iTotalSignature).append("\n");
-    sb.append("  iTotalSignatureSigned: ").append(iTotalSignatureSigned).append("\n");
+    sb.append("  iEzsigndocument: ").append(iEzsigndocument).append("\n");
+    sb.append("  iEzsigndocumentEdm: ").append(iEzsigndocumentEdm).append("\n");
+    sb.append("  iEzsignsignature: ").append(iEzsignsignature).append("\n");
+    sb.append("  iEzsignsignatureSigned: ").append(iEzsignsignatureSigned).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

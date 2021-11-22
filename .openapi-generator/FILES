@@ -47,6 +47,11 @@ docs/CustomFormsDataFolderResponse.md
 docs/CustomWordPositionOccurenceResponse.md
 docs/CustomWordPositionWordResponse.md
 docs/EmailRequest.md
+docs/EzsignbulksendGetListV1Response.md
+docs/EzsignbulksendGetListV1ResponseAllOf.md
+docs/EzsignbulksendGetListV1ResponseMPayload.md
+docs/EzsignbulksendGetListV1ResponseMPayloadAllOf.md
+docs/EzsignbulksendListElement.md
 docs/EzsigndocumentApplyEzsigntemplateV1Request.md
 docs/EzsigndocumentApplyEzsigntemplateV1Response.md
 docs/EzsigndocumentApplyEzsigntemplateV2Request.md
@@ -167,6 +172,7 @@ docs/ModuleUserApi.md
 docs/MultilingualApikeyDescription.md
 docs/ObjectActivesessionApi.md
 docs/ObjectApikeyApi.md
+docs/ObjectEzsignbulksendApi.md
 docs/ObjectEzsigndocumentApi.md
 docs/ObjectEzsignfolderApi.md
 docs/ObjectEzsignfoldersignerassociationApi.md
@@ -230,6 +236,7 @@ src/main/java/org/openapitools/client/api/ModuleSsprApi.java
 src/main/java/org/openapitools/client/api/ModuleUserApi.java
 src/main/java/org/openapitools/client/api/ObjectActivesessionApi.java
 src/main/java/org/openapitools/client/api/ObjectApikeyApi.java
+src/main/java/org/openapitools/client/api/ObjectEzsignbulksendApi.java
 src/main/java/org/openapitools/client/api/ObjectEzsigndocumentApi.java
 src/main/java/org/openapitools/client/api/ObjectEzsignfolderApi.java
 src/main/java/org/openapitools/client/api/ObjectEzsignfoldersignerassociationApi.java
@@ -284,6 +291,11 @@ src/main/java/org/openapitools/client/model/CustomFormsDataFolderResponse.java
 src/main/java/org/openapitools/client/model/CustomWordPositionOccurenceResponse.java
 src/main/java/org/openapitools/client/model/CustomWordPositionWordResponse.java
 src/main/java/org/openapitools/client/model/EmailRequest.java
+src/main/java/org/openapitools/client/model/EzsignbulksendGetListV1Response.java
+src/main/java/org/openapitools/client/model/EzsignbulksendGetListV1ResponseAllOf.java
+src/main/java/org/openapitools/client/model/EzsignbulksendGetListV1ResponseMPayload.java
+src/main/java/org/openapitools/client/model/EzsignbulksendGetListV1ResponseMPayloadAllOf.java
+src/main/java/org/openapitools/client/model/EzsignbulksendListElement.java
 src/main/java/org/openapitools/client/model/EzsigndocumentApplyEzsigntemplateV1Request.java
 src/main/java/org/openapitools/client/model/EzsigndocumentApplyEzsigntemplateV1Response.java
 src/main/java/org/openapitools/client/model/EzsigndocumentApplyEzsigntemplateV2Request.java
