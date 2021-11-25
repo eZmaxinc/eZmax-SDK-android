@@ -613,6 +613,26 @@ public class JsonUtil {
       return new TypeToken<List<EzsignsignerRequestCompoundContact>>(){}.getType();
     }
     
+    if ("EzsigntemplatepackageGetListV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EzsigntemplatepackageGetListV1Response>>(){}.getType();
+    }
+    
+    if ("EzsigntemplatepackageGetListV1ResponseAllOf".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EzsigntemplatepackageGetListV1ResponseAllOf>>(){}.getType();
+    }
+    
+    if ("EzsigntemplatepackageGetListV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EzsigntemplatepackageGetListV1ResponseMPayload>>(){}.getType();
+    }
+    
+    if ("EzsigntemplatepackageGetListV1ResponseMPayloadAllOf".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EzsigntemplatepackageGetListV1ResponseMPayloadAllOf>>(){}.getType();
+    }
+    
+    if ("EzsigntemplatepackageListElement".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EzsigntemplatepackageListElement>>(){}.getType();
+    }
+    
     if ("FieldEEzsigndocumentStep".equalsIgnoreCase(className)) {
       return new TypeToken<List<FieldEEzsigndocumentStep>>(){}.getType();
     }
@@ -631,6 +651,10 @@ public class JsonUtil {
     
     if ("FieldEEzsignsignatureType".equalsIgnoreCase(className)) {
       return new TypeToken<List<FieldEEzsignsignatureType>>(){}.getType();
+    }
+    
+    if ("FieldEEzsigntemplatepackageType".equalsIgnoreCase(className)) {
+      return new TypeToken<List<FieldEEzsigntemplatepackageType>>(){}.getType();
     }
     
     if ("FieldEPhoneType".equalsIgnoreCase(className)) {
@@ -1383,6 +1407,26 @@ public class JsonUtil {
       return new TypeToken<EzsignsignerRequestCompoundContact>(){}.getType();
     }
     
+    if ("EzsigntemplatepackageGetListV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<EzsigntemplatepackageGetListV1Response>(){}.getType();
+    }
+    
+    if ("EzsigntemplatepackageGetListV1ResponseAllOf".equalsIgnoreCase(className)) {
+      return new TypeToken<EzsigntemplatepackageGetListV1ResponseAllOf>(){}.getType();
+    }
+    
+    if ("EzsigntemplatepackageGetListV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<EzsigntemplatepackageGetListV1ResponseMPayload>(){}.getType();
+    }
+    
+    if ("EzsigntemplatepackageGetListV1ResponseMPayloadAllOf".equalsIgnoreCase(className)) {
+      return new TypeToken<EzsigntemplatepackageGetListV1ResponseMPayloadAllOf>(){}.getType();
+    }
+    
+    if ("EzsigntemplatepackageListElement".equalsIgnoreCase(className)) {
+      return new TypeToken<EzsigntemplatepackageListElement>(){}.getType();
+    }
+    
     if ("FieldEEzsigndocumentStep".equalsIgnoreCase(className)) {
       return new TypeToken<FieldEEzsigndocumentStep>(){}.getType();
     }
@@ -1401,6 +1445,10 @@ public class JsonUtil {
     
     if ("FieldEEzsignsignatureType".equalsIgnoreCase(className)) {
       return new TypeToken<FieldEEzsignsignatureType>(){}.getType();
+    }
+    
+    if ("FieldEEzsigntemplatepackageType".equalsIgnoreCase(className)) {
+      return new TypeToken<FieldEEzsigntemplatepackageType>(){}.getType();
     }
     
     if ("FieldEPhoneType".equalsIgnoreCase(className)) {
