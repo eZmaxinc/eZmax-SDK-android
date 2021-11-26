@@ -20,17 +20,17 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "")
 public class EzsignbulksendGetListV1ResponseMPayloadAllOf {
   
-  @SerializedName("a_objEzsignfolder")
-  private List<EzsignbulksendListElement> aObjEzsignfolder = null;
+  @SerializedName("a_objEzsignbulksend")
+  private List<EzsignbulksendListElement> aObjEzsignbulksend = null;
 
   /**
    **/
-  @ApiModelProperty(value = "")
-  public List<EzsignbulksendListElement> getAObjEzsignfolder() {
-    return aObjEzsignfolder;
+  @ApiModelProperty(required = true, value = "")
+  public List<EzsignbulksendListElement> getAObjEzsignbulksend() {
+    return aObjEzsignbulksend;
   }
-  public void setAObjEzsignfolder(List<EzsignbulksendListElement> aObjEzsignfolder) {
-    this.aObjEzsignfolder = aObjEzsignfolder;
+  public void setAObjEzsignbulksend(List<EzsignbulksendListElement> aObjEzsignbulksend) {
+    this.aObjEzsignbulksend = aObjEzsignbulksend;
   }
 
 
@@ -43,13 +43,13 @@ public class EzsignbulksendGetListV1ResponseMPayloadAllOf {
       return false;
     }
     EzsignbulksendGetListV1ResponseMPayloadAllOf ezsignbulksendGetListV1ResponseMPayloadAllOf = (EzsignbulksendGetListV1ResponseMPayloadAllOf) o;
-    return (this.aObjEzsignfolder == null ? ezsignbulksendGetListV1ResponseMPayloadAllOf.aObjEzsignfolder == null : this.aObjEzsignfolder.equals(ezsignbulksendGetListV1ResponseMPayloadAllOf.aObjEzsignfolder));
+    return (this.aObjEzsignbulksend == null ? ezsignbulksendGetListV1ResponseMPayloadAllOf.aObjEzsignbulksend == null : this.aObjEzsignbulksend.equals(ezsignbulksendGetListV1ResponseMPayloadAllOf.aObjEzsignbulksend));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.aObjEzsignfolder == null ? 0: this.aObjEzsignfolder.hashCode());
+    result = 31 * result + (this.aObjEzsignbulksend == null ? 0: this.aObjEzsignbulksend.hashCode());
     return result;
   }
 
@@ -58,7 +58,7 @@ public class EzsignbulksendGetListV1ResponseMPayloadAllOf {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignbulksendGetListV1ResponseMPayloadAllOf {\n");
     
-    sb.append("  aObjEzsignfolder: ").append(aObjEzsignfolder).append("\n");
+    sb.append("  aObjEzsignbulksend: ").append(aObjEzsignbulksend).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

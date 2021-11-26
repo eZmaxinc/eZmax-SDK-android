@@ -59,7 +59,7 @@ public class ObjectEzsigntemplatepackageApi {
 
   /**
   * Retrieve Ezsigntemplatepackage list
-  * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | ezsigntemplatepackage | Company&lt;br&gt;Department&lt;br&gt;Team&lt;br&gt;User&lt;br&gt;Usergroup |
+  * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsigntemplatepackageType | Company&lt;br&gt;Department&lt;br&gt;Team&lt;br&gt;User&lt;br&gt;Usergroup |
    * @param eOrderBy Specify how you want the results to be sorted
    * @param iRowMax 
    * @param iRowOffset 
@@ -125,7 +125,7 @@ public class ObjectEzsigntemplatepackageApi {
 
       /**
    * Retrieve Ezsigntemplatepackage list
-   * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | ezsigntemplatepackage | Company&lt;br&gt;Department&lt;br&gt;Team&lt;br&gt;User&lt;br&gt;Usergroup |
+   * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsigntemplatepackageType | Company&lt;br&gt;Department&lt;br&gt;Team&lt;br&gt;User&lt;br&gt;Usergroup |
    * @param eOrderBy Specify how you want the results to be sorted   * @param iRowMax    * @param iRowOffset    * @param acceptLanguage    * @param sFilter 
   */
   public void ezsigntemplatepackageGetListV1 (String eOrderBy, Integer iRowMax, Integer iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter, final Response.Listener<EzsigntemplatepackageGetListV1Response> responseListener, final Response.ErrorListener errorListener) {

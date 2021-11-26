@@ -6,7 +6,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjEzsignfolder** | [**List&lt;EzsignbulksendListElement&gt;**](EzsignbulksendListElement.md) |  |  [optional]
+**aObjEzsignbulksend** | [**List&lt;EzsignbulksendListElement&gt;**](EzsignbulksendListElement.md) |  | 
 
 
 
