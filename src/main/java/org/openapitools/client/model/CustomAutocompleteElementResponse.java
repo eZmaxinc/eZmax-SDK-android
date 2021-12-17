@@ -12,7 +12,6 @@
 
 package org.openapitools.client.model;
 
-import org.openapitools.client.model.OneOfintegerstring;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -27,7 +26,7 @@ public class CustomAutocompleteElementResponse {
   @SerializedName("sLabel")
   private String sLabel = null;
   @SerializedName("mValue")
-  private OneOfintegerstring mValue = null;
+  private String mValue = null;
 
   /**
    * The Category for the dropdown or an empty string if not categorized
@@ -55,10 +54,10 @@ public class CustomAutocompleteElementResponse {
    * The Unique ID of the element
    **/
   @ApiModelProperty(required = true, value = "The Unique ID of the element")
-  public OneOfintegerstring getMValue() {
+  public String getMValue() {
     return mValue;
   }
-  public void setMValue(OneOfintegerstring mValue) {
+  public void setMValue(String mValue) {
     this.mValue = mValue;
   }
 

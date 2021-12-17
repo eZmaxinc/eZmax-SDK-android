@@ -7,9 +7,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **pkiEzsigntemplatepackageID** | **Integer** | The unique ID of the Ezsigntemplatepackage | 
-**fkiDepartmentID** | [**OneOfintegerobject**](OneOfintegerobject.md) |  | 
-**fkiTeamID** | [**OneOfintegerobject**](OneOfintegerobject.md) |  | 
-**fkiEzsignfoldertypeID** | [**OneOfintegerobject**](OneOfintegerobject.md) |  | 
+**fkiDepartmentID** | **Integer** | The unique ID of the Department. | 
+**fkiTeamID** | **Integer** | The unique ID of the Team | 
+**fkiEzsignfoldertypeID** | **Integer** | The unique ID of the Ezsignfoldertype. | 
 **fkiLanguageID** | **Integer** | The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| | 
 **eEzsigntemplatepackageType** | [**FieldEEzsigntemplatepackageType**](FieldEEzsigntemplatepackageType.md) |  | 
 **sEzsigntemplatepackageDescription** | **String** | The description of the Ezsigntemplatepackage | 

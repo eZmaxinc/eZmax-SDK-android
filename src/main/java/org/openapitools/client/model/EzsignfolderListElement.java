@@ -14,7 +14,6 @@ package org.openapitools.client.model;
 
 import org.openapitools.client.model.FieldEEzsignfolderStep;
 import org.openapitools.client.model.FieldEEzsignfoldertypePrivacylevel;
-import org.openapitools.client.model.OneOfstringobject;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -39,9 +38,9 @@ public class EzsignfolderListElement {
   @SerializedName("dtCreatedDate")
   private String dtCreatedDate = null;
   @SerializedName("dtEzsignfolderSentdate")
-  private OneOfstringobject dtEzsignfolderSentdate = null;
+  private String dtEzsignfolderSentdate = null;
   @SerializedName("dtDueDate")
-  private OneOfstringobject dtDueDate = null;
+  private String dtDueDate = null;
   @SerializedName("iEzsigndocument")
   private Integer iEzsigndocument = null;
   @SerializedName("iEzsigndocumentEdm")
@@ -127,23 +126,24 @@ public class EzsignfolderListElement {
   }
 
   /**
+   * The date and time at which the Ezsign folder was sent the last time.
    **/
-  @ApiModelProperty(required = true, value = "")
-  public OneOfstringobject getDtEzsignfolderSentdate() {
+  @ApiModelProperty(required = true, value = "The date and time at which the Ezsign folder was sent the last time.")
+  public String getDtEzsignfolderSentdate() {
     return dtEzsignfolderSentdate;
   }
-  public void setDtEzsignfolderSentdate(OneOfstringobject dtEzsignfolderSentdate) {
+  public void setDtEzsignfolderSentdate(String dtEzsignfolderSentdate) {
     this.dtEzsignfolderSentdate = dtEzsignfolderSentdate;
   }
 
   /**
-   * The date at which no more signature will be accepted on the folder
+   * Represent a Date Time. The timezone is the one configured in the User's profile.
    **/
-  @ApiModelProperty(required = true, value = "The date at which no more signature will be accepted on the folder")
-  public OneOfstringobject getDtDueDate() {
+  @ApiModelProperty(required = true, value = "Represent a Date Time. The timezone is the one configured in the User's profile.")
+  public String getDtDueDate() {
     return dtDueDate;
   }
-  public void setDtDueDate(OneOfstringobject dtDueDate) {
+  public void setDtDueDate(String dtDueDate) {
     this.dtDueDate = dtDueDate;
   }
 

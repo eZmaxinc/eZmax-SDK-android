@@ -13,7 +13,6 @@
 package org.openapitools.client.model;
 
 import org.openapitools.client.model.FieldEEzsigntemplatepackageType;
-import org.openapitools.client.model.OneOfintegerobject;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -26,11 +25,11 @@ public class EzsigntemplatepackageListElement {
   @SerializedName("pkiEzsigntemplatepackageID")
   private Integer pkiEzsigntemplatepackageID = null;
   @SerializedName("fkiDepartmentID")
-  private OneOfintegerobject fkiDepartmentID = null;
+  private Integer fkiDepartmentID = null;
   @SerializedName("fkiTeamID")
-  private OneOfintegerobject fkiTeamID = null;
+  private Integer fkiTeamID = null;
   @SerializedName("fkiEzsignfoldertypeID")
-  private OneOfintegerobject fkiEzsignfoldertypeID = null;
+  private Integer fkiEzsignfoldertypeID = null;
   @SerializedName("fkiLanguageID")
   private Integer fkiLanguageID = null;
   @SerializedName("eEzsigntemplatepackageType")
@@ -54,32 +53,35 @@ public class EzsigntemplatepackageListElement {
   }
 
   /**
+   * The unique ID of the Department.
    **/
-  @ApiModelProperty(required = true, value = "")
-  public OneOfintegerobject getFkiDepartmentID() {
+  @ApiModelProperty(required = true, value = "The unique ID of the Department.")
+  public Integer getFkiDepartmentID() {
     return fkiDepartmentID;
   }
-  public void setFkiDepartmentID(OneOfintegerobject fkiDepartmentID) {
+  public void setFkiDepartmentID(Integer fkiDepartmentID) {
     this.fkiDepartmentID = fkiDepartmentID;
   }
 
   /**
+   * The unique ID of the Team
    **/
-  @ApiModelProperty(required = true, value = "")
-  public OneOfintegerobject getFkiTeamID() {
+  @ApiModelProperty(required = true, value = "The unique ID of the Team")
+  public Integer getFkiTeamID() {
     return fkiTeamID;
   }
-  public void setFkiTeamID(OneOfintegerobject fkiTeamID) {
+  public void setFkiTeamID(Integer fkiTeamID) {
     this.fkiTeamID = fkiTeamID;
   }
 
   /**
+   * The unique ID of the Ezsignfoldertype.
    **/
-  @ApiModelProperty(required = true, value = "")
-  public OneOfintegerobject getFkiEzsignfoldertypeID() {
+  @ApiModelProperty(required = true, value = "The unique ID of the Ezsignfoldertype.")
+  public Integer getFkiEzsignfoldertypeID() {
     return fkiEzsignfoldertypeID;
   }
-  public void setFkiEzsignfoldertypeID(OneOfintegerobject fkiEzsignfoldertypeID) {
+  public void setFkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
     this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
   }
 
