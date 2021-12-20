@@ -6,7 +6,6 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ezsignsignatureCreateObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignatureCreateObjectV1) | **POST** /1/object/ezsignsignature | Create a new Ezsignsignature
 [**ezsignsignatureDeleteObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignatureDeleteObjectV1) | **DELETE** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Delete an existing Ezsignsignature
-[**ezsignsignatureGetChildrenV1**](ObjectEzsignsignatureApi.md#ezsignsignatureGetChildrenV1) | **GET** /1/object/ezsignsignature/{pkiEzsignsignatureID}/getChildren | Retrieve an existing Ezsignsignature&#39;s children IDs
 [**ezsignsignatureGetObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignatureGetObjectV1) | **GET** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Retrieve an existing Ezsignsignature
 
 
@@ -90,51 +89,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsignsignatureDeleteObjectV1Response**](EzsignsignatureDeleteObjectV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## ezsignsignatureGetChildrenV1
-
-> ezsignsignatureGetChildrenV1(pkiEzsignsignatureID)
-
-Retrieve an existing Ezsignsignature&#39;s children IDs
-
-## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-
-### Example
-
-```java
-// Import classes:
-//import org.openapitools.client.api.ObjectEzsignsignatureApi;
-
-ObjectEzsignsignatureApi apiInstance = new ObjectEzsignsignatureApi();
-Integer pkiEzsignsignatureID = null; // Integer | 
-try {
-    apiInstance.ezsignsignatureGetChildrenV1(pkiEzsignsignatureID);
-} catch (ApiException e) {
-    System.err.println("Exception when calling ObjectEzsignsignatureApi#ezsignsignatureGetChildrenV1");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiEzsignsignatureID** | **Integer**|  | [default to null]
-
-### Return type
-
-null (empty response body)
 
 ### Authorization
 

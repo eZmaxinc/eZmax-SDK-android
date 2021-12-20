@@ -85,6 +85,9 @@ docs/EzsignfolderCreateObjectV1Response.md
 docs/EzsignfolderCreateObjectV1ResponseAllOf.md
 docs/EzsignfolderCreateObjectV1ResponseMPayload.md
 docs/EzsignfolderDeleteObjectV1Response.md
+docs/EzsignfolderGetEzsigndocumentsV1Response.md
+docs/EzsignfolderGetEzsigndocumentsV1ResponseAllOf.md
+docs/EzsignfolderGetEzsigndocumentsV1ResponseMPayload.md
 docs/EzsignfolderGetFormsDataV1Response.md
 docs/EzsignfolderGetFormsDataV1ResponseAllOf.md
 docs/EzsignfolderGetFormsDataV1ResponseMPayload.md
@@ -114,9 +117,12 @@ docs/EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseAllOf.md
 docs/EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload.md
 docs/EzsignfoldersignerassociationGetObjectV1Response.md
 docs/EzsignfoldersignerassociationGetObjectV1ResponseAllOf.md
+docs/EzsignfoldersignerassociationGetObjectV1ResponseMPayload.md
 docs/EzsignfoldersignerassociationRequest.md
 docs/EzsignfoldersignerassociationRequestCompound.md
 docs/EzsignfoldersignerassociationRequestCompoundAllOf.md
+docs/EzsignfoldersignerassociationResponse.md
+docs/EzsignfoldersignerassociationResponseCompound.md
 docs/EzsignfoldertypeGetListV1Response.md
 docs/EzsignfoldertypeGetListV1ResponseAllOf.md
 docs/EzsignfoldertypeGetListV1ResponseMPayload.md
@@ -337,6 +343,9 @@ src/main/java/org/openapitools/client/model/EzsignfolderCreateObjectV1Response.j
 src/main/java/org/openapitools/client/model/EzsignfolderCreateObjectV1ResponseAllOf.java
 src/main/java/org/openapitools/client/model/EzsignfolderCreateObjectV1ResponseMPayload.java
 src/main/java/org/openapitools/client/model/EzsignfolderDeleteObjectV1Response.java
+src/main/java/org/openapitools/client/model/EzsignfolderGetEzsigndocumentsV1Response.java
+src/main/java/org/openapitools/client/model/EzsignfolderGetEzsigndocumentsV1ResponseAllOf.java
+src/main/java/org/openapitools/client/model/EzsignfolderGetEzsigndocumentsV1ResponseMPayload.java
 src/main/java/org/openapitools/client/model/EzsignfolderGetFormsDataV1Response.java
 src/main/java/org/openapitools/client/model/EzsignfolderGetFormsDataV1ResponseAllOf.java
 src/main/java/org/openapitools/client/model/EzsignfolderGetFormsDataV1ResponseMPayload.java
@@ -366,9 +375,12 @@ src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationGetInPe
 src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload.java
 src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationGetObjectV1Response.java
 src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationGetObjectV1ResponseAllOf.java
+src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationGetObjectV1ResponseMPayload.java
 src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationRequest.java
 src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationRequestCompound.java
 src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationRequestCompoundAllOf.java
+src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationResponse.java
+src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationResponseCompound.java
 src/main/java/org/openapitools/client/model/EzsignfoldertypeGetListV1Response.java
 src/main/java/org/openapitools/client/model/EzsignfoldertypeGetListV1ResponseAllOf.java
 src/main/java/org/openapitools/client/model/EzsignfoldertypeGetListV1ResponseMPayload.java
