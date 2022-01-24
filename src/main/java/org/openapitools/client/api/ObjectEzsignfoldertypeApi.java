@@ -26,6 +26,7 @@ import com.android.volley.VolleyError;
 import org.openapitools.client.model.CommonGetAutocompleteV1Response;
 import org.openapitools.client.model.CommonResponseError;
 import org.openapitools.client.model.EzsignfoldertypeGetListV1Response;
+import java.io.File;
 import org.openapitools.client.model.HeaderAcceptLanguage;
 
 import org.apache.http.HttpEntity;

@@ -19,7 +19,7 @@ import com.google.gson.annotations.SerializedName;
  * A Ezsignsigner-&gt;Contact Object and children to create a complete structure
  **/
 @ApiModel(description = "A Ezsignsigner->Contact Object and children to create a complete structure")
-public class EzsignsignerRequestCompoundContact {
+public class EzsignsignerResponseCompoundContact {
   
   @SerializedName("sContactFirstname")
   private String sContactFirstname = null;
@@ -111,13 +111,13 @@ public class EzsignsignerRequestCompoundContact {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    EzsignsignerRequestCompoundContact ezsignsignerRequestCompoundContact = (EzsignsignerRequestCompoundContact) o;
-    return (this.sContactFirstname == null ? ezsignsignerRequestCompoundContact.sContactFirstname == null : this.sContactFirstname.equals(ezsignsignerRequestCompoundContact.sContactFirstname)) &&
-        (this.sContactLastname == null ? ezsignsignerRequestCompoundContact.sContactLastname == null : this.sContactLastname.equals(ezsignsignerRequestCompoundContact.sContactLastname)) &&
-        (this.fkiLanguageID == null ? ezsignsignerRequestCompoundContact.fkiLanguageID == null : this.fkiLanguageID.equals(ezsignsignerRequestCompoundContact.fkiLanguageID)) &&
-        (this.sEmailAddress == null ? ezsignsignerRequestCompoundContact.sEmailAddress == null : this.sEmailAddress.equals(ezsignsignerRequestCompoundContact.sEmailAddress)) &&
-        (this.sPhoneNumber == null ? ezsignsignerRequestCompoundContact.sPhoneNumber == null : this.sPhoneNumber.equals(ezsignsignerRequestCompoundContact.sPhoneNumber)) &&
-        (this.sPhoneNumberCell == null ? ezsignsignerRequestCompoundContact.sPhoneNumberCell == null : this.sPhoneNumberCell.equals(ezsignsignerRequestCompoundContact.sPhoneNumberCell));
+    EzsignsignerResponseCompoundContact ezsignsignerResponseCompoundContact = (EzsignsignerResponseCompoundContact) o;
+    return (this.sContactFirstname == null ? ezsignsignerResponseCompoundContact.sContactFirstname == null : this.sContactFirstname.equals(ezsignsignerResponseCompoundContact.sContactFirstname)) &&
+        (this.sContactLastname == null ? ezsignsignerResponseCompoundContact.sContactLastname == null : this.sContactLastname.equals(ezsignsignerResponseCompoundContact.sContactLastname)) &&
+        (this.fkiLanguageID == null ? ezsignsignerResponseCompoundContact.fkiLanguageID == null : this.fkiLanguageID.equals(ezsignsignerResponseCompoundContact.fkiLanguageID)) &&
+        (this.sEmailAddress == null ? ezsignsignerResponseCompoundContact.sEmailAddress == null : this.sEmailAddress.equals(ezsignsignerResponseCompoundContact.sEmailAddress)) &&
+        (this.sPhoneNumber == null ? ezsignsignerResponseCompoundContact.sPhoneNumber == null : this.sPhoneNumber.equals(ezsignsignerResponseCompoundContact.sPhoneNumber)) &&
+        (this.sPhoneNumberCell == null ? ezsignsignerResponseCompoundContact.sPhoneNumberCell == null : this.sPhoneNumberCell.equals(ezsignsignerResponseCompoundContact.sPhoneNumberCell));
   }
 
   @Override
@@ -135,7 +135,7 @@ public class EzsignsignerRequestCompoundContact {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class EzsignsignerRequestCompoundContact {\n");
+    sb.append("class EzsignsignerResponseCompoundContact {\n");
     
     sb.append("  sContactFirstname: ").append(sContactFirstname).append("\n");
     sb.append("  sContactLastname: ").append(sContactLastname).append("\n");

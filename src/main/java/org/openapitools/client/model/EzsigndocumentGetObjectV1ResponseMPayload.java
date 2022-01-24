@@ -13,7 +13,7 @@
 package org.openapitools.client.model;
 
 import org.openapitools.client.model.CommonAudit;
-import org.openapitools.client.model.EzsigndocumentResponse;
+import org.openapitools.client.model.EzsigndocumentResponseCompound;
 import org.openapitools.client.model.FieldEEzsigndocumentStep;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;

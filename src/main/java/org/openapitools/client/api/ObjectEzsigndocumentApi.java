@@ -38,6 +38,7 @@ import org.openapitools.client.model.EzsigndocumentGetFormDataV1Response;
 import org.openapitools.client.model.EzsigndocumentGetObjectV1Response;
 import org.openapitools.client.model.EzsigndocumentGetWordsPositionsV1Request;
 import org.openapitools.client.model.EzsigndocumentGetWordsPositionsV1Response;
+import java.io.File;
 import java.util.*;
 
 import org.apache.http.HttpEntity;

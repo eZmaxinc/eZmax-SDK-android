@@ -83,9 +83,9 @@ public class EzsignsignatureRequestCompound {
   }
 
   /**
-   * The step when the Ezsignsigner will be invited to sign.
+   * The step when the Ezsignsigner will be invited to sign or fill form fields
    **/
-  @ApiModelProperty(required = true, value = "The step when the Ezsignsigner will be invited to sign.")
+  @ApiModelProperty(required = true, value = "The step when the Ezsignsigner will be invited to sign or fill form fields")
   public Integer getIEzsignsignatureStep() {
     return iEzsignsignatureStep;
   }

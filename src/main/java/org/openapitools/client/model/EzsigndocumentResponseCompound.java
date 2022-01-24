@@ -12,7 +12,9 @@
 
 package org.openapitools.client.model;
 
+import java.util.*;
 import org.openapitools.client.model.CommonAudit;
+import org.openapitools.client.model.CustomEzsignfoldersignerassociationstatusResponse;
 import org.openapitools.client.model.EzsigndocumentResponse;
 import org.openapitools.client.model.FieldEEzsigndocumentStep;
 import io.swagger.annotations.*;
@@ -24,6 +26,16 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "An Ezsigndocument Object and children to create a complete structure")
 public class EzsigndocumentResponseCompound {
   
+  @SerializedName("iEzsigndocumentStepformtotal")
+  private Integer iEzsigndocumentStepformtotal = null;
+  @SerializedName("iEzsigndocumentStepformcurrent")
+  private Integer iEzsigndocumentStepformcurrent = null;
+  @SerializedName("iEzsigndocumentStepsignaturetotal")
+  private Integer iEzsigndocumentStepsignaturetotal = null;
+  @SerializedName("iEzsigndocumentStepsignatureCurrent")
+  private Integer iEzsigndocumentStepsignatureCurrent = null;
+  @SerializedName("a_objEzsignfoldersignerassociationstatus")
+  private List<CustomEzsignfoldersignerassociationstatusResponse> aObjEzsignfoldersignerassociationstatus = null;
   @SerializedName("fkiEzsignfolderID")
   private Integer fkiEzsignfolderID = null;
   @SerializedName("dtEzsigndocumentDuedate")
@@ -54,6 +66,60 @@ public class EzsigndocumentResponseCompound {
   private String sEzsigndocumentMD5signed = null;
   @SerializedName("objAudit")
   private CommonAudit objAudit = null;
+
+  /**
+   * The total number of steps in the form filling phase
+   **/
+  @ApiModelProperty(required = true, value = "The total number of steps in the form filling phase")
+  public Integer getIEzsigndocumentStepformtotal() {
+    return iEzsigndocumentStepformtotal;
+  }
+  public void setIEzsigndocumentStepformtotal(Integer iEzsigndocumentStepformtotal) {
+    this.iEzsigndocumentStepformtotal = iEzsigndocumentStepformtotal;
+  }
+
+  /**
+   * The current step in the form filling phase
+   **/
+  @ApiModelProperty(required = true, value = "The current step in the form filling phase")
+  public Integer getIEzsigndocumentStepformcurrent() {
+    return iEzsigndocumentStepformcurrent;
+  }
+  public void setIEzsigndocumentStepformcurrent(Integer iEzsigndocumentStepformcurrent) {
+    this.iEzsigndocumentStepformcurrent = iEzsigndocumentStepformcurrent;
+  }
+
+  /**
+   * The total number of steps in the signature filling phase
+   **/
+  @ApiModelProperty(required = true, value = "The total number of steps in the signature filling phase")
+  public Integer getIEzsigndocumentStepsignaturetotal() {
+    return iEzsigndocumentStepsignaturetotal;
+  }
+  public void setIEzsigndocumentStepsignaturetotal(Integer iEzsigndocumentStepsignaturetotal) {
+    this.iEzsigndocumentStepsignaturetotal = iEzsigndocumentStepsignaturetotal;
+  }
+
+  /**
+   * The current step in the signature phase
+   **/
+  @ApiModelProperty(required = true, value = "The current step in the signature phase")
+  public Integer getIEzsigndocumentStepsignatureCurrent() {
+    return iEzsigndocumentStepsignatureCurrent;
+  }
+  public void setIEzsigndocumentStepsignatureCurrent(Integer iEzsigndocumentStepsignatureCurrent) {
+    this.iEzsigndocumentStepsignatureCurrent = iEzsigndocumentStepsignatureCurrent;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public List<CustomEzsignfoldersignerassociationstatusResponse> getAObjEzsignfoldersignerassociationstatus() {
+    return aObjEzsignfoldersignerassociationstatus;
+  }
+  public void setAObjEzsignfoldersignerassociationstatus(List<CustomEzsignfoldersignerassociationstatusResponse> aObjEzsignfoldersignerassociationstatus) {
+    this.aObjEzsignfoldersignerassociationstatus = aObjEzsignfoldersignerassociationstatus;
+  }
 
   /**
    * The unique ID of the Ezsignfolder
@@ -230,7 +296,12 @@ public class EzsigndocumentResponseCompound {
       return false;
     }
     EzsigndocumentResponseCompound ezsigndocumentResponseCompound = (EzsigndocumentResponseCompound) o;
-    return (this.fkiEzsignfolderID == null ? ezsigndocumentResponseCompound.fkiEzsignfolderID == null : this.fkiEzsignfolderID.equals(ezsigndocumentResponseCompound.fkiEzsignfolderID)) &&
+    return (this.iEzsigndocumentStepformtotal == null ? ezsigndocumentResponseCompound.iEzsigndocumentStepformtotal == null : this.iEzsigndocumentStepformtotal.equals(ezsigndocumentResponseCompound.iEzsigndocumentStepformtotal)) &&
+        (this.iEzsigndocumentStepformcurrent == null ? ezsigndocumentResponseCompound.iEzsigndocumentStepformcurrent == null : this.iEzsigndocumentStepformcurrent.equals(ezsigndocumentResponseCompound.iEzsigndocumentStepformcurrent)) &&
+        (this.iEzsigndocumentStepsignaturetotal == null ? ezsigndocumentResponseCompound.iEzsigndocumentStepsignaturetotal == null : this.iEzsigndocumentStepsignaturetotal.equals(ezsigndocumentResponseCompound.iEzsigndocumentStepsignaturetotal)) &&
+        (this.iEzsigndocumentStepsignatureCurrent == null ? ezsigndocumentResponseCompound.iEzsigndocumentStepsignatureCurrent == null : this.iEzsigndocumentStepsignatureCurrent.equals(ezsigndocumentResponseCompound.iEzsigndocumentStepsignatureCurrent)) &&
+        (this.aObjEzsignfoldersignerassociationstatus == null ? ezsigndocumentResponseCompound.aObjEzsignfoldersignerassociationstatus == null : this.aObjEzsignfoldersignerassociationstatus.equals(ezsigndocumentResponseCompound.aObjEzsignfoldersignerassociationstatus)) &&
+        (this.fkiEzsignfolderID == null ? ezsigndocumentResponseCompound.fkiEzsignfolderID == null : this.fkiEzsignfolderID.equals(ezsigndocumentResponseCompound.fkiEzsignfolderID)) &&
         (this.dtEzsigndocumentDuedate == null ? ezsigndocumentResponseCompound.dtEzsigndocumentDuedate == null : this.dtEzsigndocumentDuedate.equals(ezsigndocumentResponseCompound.dtEzsigndocumentDuedate)) &&
         (this.fkiLanguageID == null ? ezsigndocumentResponseCompound.fkiLanguageID == null : this.fkiLanguageID.equals(ezsigndocumentResponseCompound.fkiLanguageID)) &&
         (this.sEzsigndocumentName == null ? ezsigndocumentResponseCompound.sEzsigndocumentName == null : this.sEzsigndocumentName.equals(ezsigndocumentResponseCompound.sEzsigndocumentName)) &&
@@ -250,6 +321,11 @@ public class EzsigndocumentResponseCompound {
   @Override
   public int hashCode() {
     int result = 17;
+    result = 31 * result + (this.iEzsigndocumentStepformtotal == null ? 0: this.iEzsigndocumentStepformtotal.hashCode());
+    result = 31 * result + (this.iEzsigndocumentStepformcurrent == null ? 0: this.iEzsigndocumentStepformcurrent.hashCode());
+    result = 31 * result + (this.iEzsigndocumentStepsignaturetotal == null ? 0: this.iEzsigndocumentStepsignaturetotal.hashCode());
+    result = 31 * result + (this.iEzsigndocumentStepsignatureCurrent == null ? 0: this.iEzsigndocumentStepsignatureCurrent.hashCode());
+    result = 31 * result + (this.aObjEzsignfoldersignerassociationstatus == null ? 0: this.aObjEzsignfoldersignerassociationstatus.hashCode());
     result = 31 * result + (this.fkiEzsignfolderID == null ? 0: this.fkiEzsignfolderID.hashCode());
     result = 31 * result + (this.dtEzsigndocumentDuedate == null ? 0: this.dtEzsigndocumentDuedate.hashCode());
     result = 31 * result + (this.fkiLanguageID == null ? 0: this.fkiLanguageID.hashCode());
@@ -273,6 +349,11 @@ public class EzsigndocumentResponseCompound {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsigndocumentResponseCompound {\n");
     
+    sb.append("  iEzsigndocumentStepformtotal: ").append(iEzsigndocumentStepformtotal).append("\n");
+    sb.append("  iEzsigndocumentStepformcurrent: ").append(iEzsigndocumentStepformcurrent).append("\n");
+    sb.append("  iEzsigndocumentStepsignaturetotal: ").append(iEzsigndocumentStepsignaturetotal).append("\n");
+    sb.append("  iEzsigndocumentStepsignatureCurrent: ").append(iEzsigndocumentStepsignatureCurrent).append("\n");
+    sb.append("  aObjEzsignfoldersignerassociationstatus: ").append(aObjEzsignfoldersignerassociationstatus).append("\n");
     sb.append("  fkiEzsignfolderID: ").append(fkiEzsignfolderID).append("\n");
     sb.append("  dtEzsigndocumentDuedate: ").append(dtEzsigndocumentDuedate).append("\n");
     sb.append("  fkiLanguageID: ").append(fkiLanguageID).append("\n");

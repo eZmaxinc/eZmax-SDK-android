@@ -12,10 +12,7 @@
 
 package org.openapitools.client.model;
 
-import java.util.*;
 import org.openapitools.client.model.EzsignfolderRequest;
-import org.openapitools.client.model.EzsignfolderRequestCompoundAllOf;
-import org.openapitools.client.model.EzsignfoldersignerassociationRequest;
 import org.openapitools.client.model.FieldEEzsignfolderSendreminderfrequency;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
@@ -26,8 +23,6 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "An Ezsignfolder Object and children to create a complete structure")
 public class EzsignfolderRequestCompound {
   
-  @SerializedName("a_Ezsignfoldersignerassociation")
-  private List<EzsignfoldersignerassociationRequest> aEzsignfoldersignerassociation = null;
   @SerializedName("fkiEzsignfoldertypeID")
   private Integer fkiEzsignfoldertypeID = null;
   @SerializedName("fkiEzsigntsarequirementID")
@@ -38,17 +33,6 @@ public class EzsignfolderRequestCompound {
   private String tEzsignfolderNote = null;
   @SerializedName("eEzsignfolderSendreminderfrequency")
   private FieldEEzsignfolderSendreminderfrequency eEzsignfolderSendreminderfrequency = null;
-
-  /**
-   * An array of signers that will be invited to sign the Ezsigndocuments
-   **/
-  @ApiModelProperty(required = true, value = "An array of signers that will be invited to sign the Ezsigndocuments")
-  public List<EzsignfoldersignerassociationRequest> getAEzsignfoldersignerassociation() {
-    return aEzsignfoldersignerassociation;
-  }
-  public void setAEzsignfoldersignerassociation(List<EzsignfoldersignerassociationRequest> aEzsignfoldersignerassociation) {
-    this.aEzsignfoldersignerassociation = aEzsignfoldersignerassociation;
-  }
 
   /**
    * The unique ID of the Ezsignfoldertype.
@@ -116,8 +100,7 @@ public class EzsignfolderRequestCompound {
       return false;
     }
     EzsignfolderRequestCompound ezsignfolderRequestCompound = (EzsignfolderRequestCompound) o;
-    return (this.aEzsignfoldersignerassociation == null ? ezsignfolderRequestCompound.aEzsignfoldersignerassociation == null : this.aEzsignfoldersignerassociation.equals(ezsignfolderRequestCompound.aEzsignfoldersignerassociation)) &&
-        (this.fkiEzsignfoldertypeID == null ? ezsignfolderRequestCompound.fkiEzsignfoldertypeID == null : this.fkiEzsignfoldertypeID.equals(ezsignfolderRequestCompound.fkiEzsignfoldertypeID)) &&
+    return (this.fkiEzsignfoldertypeID == null ? ezsignfolderRequestCompound.fkiEzsignfoldertypeID == null : this.fkiEzsignfoldertypeID.equals(ezsignfolderRequestCompound.fkiEzsignfoldertypeID)) &&
         (this.fkiEzsigntsarequirementID == null ? ezsignfolderRequestCompound.fkiEzsigntsarequirementID == null : this.fkiEzsigntsarequirementID.equals(ezsignfolderRequestCompound.fkiEzsigntsarequirementID)) &&
         (this.sEzsignfolderDescription == null ? ezsignfolderRequestCompound.sEzsignfolderDescription == null : this.sEzsignfolderDescription.equals(ezsignfolderRequestCompound.sEzsignfolderDescription)) &&
         (this.tEzsignfolderNote == null ? ezsignfolderRequestCompound.tEzsignfolderNote == null : this.tEzsignfolderNote.equals(ezsignfolderRequestCompound.tEzsignfolderNote)) &&
@@ -127,7 +110,6 @@ public class EzsignfolderRequestCompound {
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.aEzsignfoldersignerassociation == null ? 0: this.aEzsignfoldersignerassociation.hashCode());
     result = 31 * result + (this.fkiEzsignfoldertypeID == null ? 0: this.fkiEzsignfoldertypeID.hashCode());
     result = 31 * result + (this.fkiEzsigntsarequirementID == null ? 0: this.fkiEzsigntsarequirementID.hashCode());
     result = 31 * result + (this.sEzsignfolderDescription == null ? 0: this.sEzsignfolderDescription.hashCode());
@@ -141,7 +123,6 @@ public class EzsignfolderRequestCompound {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignfolderRequestCompound {\n");
     
-    sb.append("  aEzsignfoldersignerassociation: ").append(aEzsignfoldersignerassociation).append("\n");
     sb.append("  fkiEzsignfoldertypeID: ").append(fkiEzsignfoldertypeID).append("\n");
     sb.append("  fkiEzsigntsarequirementID: ").append(fkiEzsigntsarequirementID).append("\n");
     sb.append("  sEzsignfolderDescription: ").append(sEzsignfolderDescription).append("\n");

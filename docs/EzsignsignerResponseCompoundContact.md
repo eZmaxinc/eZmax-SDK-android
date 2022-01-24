@@ -1,6 +1,6 @@
 
 
-# EzsignsignerRequestCompoundContact
+# EzsignsignerResponseCompoundContact
 
 ## Properties
 

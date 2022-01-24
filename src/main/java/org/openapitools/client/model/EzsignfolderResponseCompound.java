@@ -49,6 +49,10 @@ public class EzsignfolderResponseCompound {
   private String dtEzsignfolderDuedate = null;
   @SerializedName("dtEzsignfolderSentdate")
   private String dtEzsignfolderSentdate = null;
+  @SerializedName("dtEzsignfolderScheduledarchive")
+  private String dtEzsignfolderScheduledarchive = null;
+  @SerializedName("dtEzsignfolderScheduleddestruction")
+  private String dtEzsignfolderScheduleddestruction = null;
   @SerializedName("eEzsignfolderStep")
   private FieldEEzsignfolderStep eEzsignfolderStep = null;
   @SerializedName("dtEzsignfolderClose")
@@ -190,6 +194,28 @@ public class EzsignfolderResponseCompound {
   }
 
   /**
+   * The scheduled date and time at which the Ezsignfolder should be archived.
+   **/
+  @ApiModelProperty(required = true, value = "The scheduled date and time at which the Ezsignfolder should be archived.")
+  public String getDtEzsignfolderScheduledarchive() {
+    return dtEzsignfolderScheduledarchive;
+  }
+  public void setDtEzsignfolderScheduledarchive(String dtEzsignfolderScheduledarchive) {
+    this.dtEzsignfolderScheduledarchive = dtEzsignfolderScheduledarchive;
+  }
+
+  /**
+   * The scheduled date and time at which the Ezsignfolder should be Destroyed.
+   **/
+  @ApiModelProperty(required = true, value = "The scheduled date and time at which the Ezsignfolder should be Destroyed.")
+  public String getDtEzsignfolderScheduleddestruction() {
+    return dtEzsignfolderScheduleddestruction;
+  }
+  public void setDtEzsignfolderScheduleddestruction(String dtEzsignfolderScheduleddestruction) {
+    this.dtEzsignfolderScheduleddestruction = dtEzsignfolderScheduleddestruction;
+  }
+
+  /**
    **/
   @ApiModelProperty(required = true, value = "")
   public FieldEEzsignfolderStep getEEzsignfolderStep() {
@@ -242,6 +268,8 @@ public class EzsignfolderResponseCompound {
         (this.eEzsignfolderSendreminderfrequency == null ? ezsignfolderResponseCompound.eEzsignfolderSendreminderfrequency == null : this.eEzsignfolderSendreminderfrequency.equals(ezsignfolderResponseCompound.eEzsignfolderSendreminderfrequency)) &&
         (this.dtEzsignfolderDuedate == null ? ezsignfolderResponseCompound.dtEzsignfolderDuedate == null : this.dtEzsignfolderDuedate.equals(ezsignfolderResponseCompound.dtEzsignfolderDuedate)) &&
         (this.dtEzsignfolderSentdate == null ? ezsignfolderResponseCompound.dtEzsignfolderSentdate == null : this.dtEzsignfolderSentdate.equals(ezsignfolderResponseCompound.dtEzsignfolderSentdate)) &&
+        (this.dtEzsignfolderScheduledarchive == null ? ezsignfolderResponseCompound.dtEzsignfolderScheduledarchive == null : this.dtEzsignfolderScheduledarchive.equals(ezsignfolderResponseCompound.dtEzsignfolderScheduledarchive)) &&
+        (this.dtEzsignfolderScheduleddestruction == null ? ezsignfolderResponseCompound.dtEzsignfolderScheduleddestruction == null : this.dtEzsignfolderScheduleddestruction.equals(ezsignfolderResponseCompound.dtEzsignfolderScheduleddestruction)) &&
         (this.eEzsignfolderStep == null ? ezsignfolderResponseCompound.eEzsignfolderStep == null : this.eEzsignfolderStep.equals(ezsignfolderResponseCompound.eEzsignfolderStep)) &&
         (this.dtEzsignfolderClose == null ? ezsignfolderResponseCompound.dtEzsignfolderClose == null : this.dtEzsignfolderClose.equals(ezsignfolderResponseCompound.dtEzsignfolderClose)) &&
         (this.objAudit == null ? ezsignfolderResponseCompound.objAudit == null : this.objAudit.equals(ezsignfolderResponseCompound.objAudit));
@@ -262,6 +290,8 @@ public class EzsignfolderResponseCompound {
     result = 31 * result + (this.eEzsignfolderSendreminderfrequency == null ? 0: this.eEzsignfolderSendreminderfrequency.hashCode());
     result = 31 * result + (this.dtEzsignfolderDuedate == null ? 0: this.dtEzsignfolderDuedate.hashCode());
     result = 31 * result + (this.dtEzsignfolderSentdate == null ? 0: this.dtEzsignfolderSentdate.hashCode());
+    result = 31 * result + (this.dtEzsignfolderScheduledarchive == null ? 0: this.dtEzsignfolderScheduledarchive.hashCode());
+    result = 31 * result + (this.dtEzsignfolderScheduleddestruction == null ? 0: this.dtEzsignfolderScheduleddestruction.hashCode());
     result = 31 * result + (this.eEzsignfolderStep == null ? 0: this.eEzsignfolderStep.hashCode());
     result = 31 * result + (this.dtEzsignfolderClose == null ? 0: this.dtEzsignfolderClose.hashCode());
     result = 31 * result + (this.objAudit == null ? 0: this.objAudit.hashCode());
@@ -285,6 +315,8 @@ public class EzsignfolderResponseCompound {
     sb.append("  eEzsignfolderSendreminderfrequency: ").append(eEzsignfolderSendreminderfrequency).append("\n");
     sb.append("  dtEzsignfolderDuedate: ").append(dtEzsignfolderDuedate).append("\n");
     sb.append("  dtEzsignfolderSentdate: ").append(dtEzsignfolderSentdate).append("\n");
+    sb.append("  dtEzsignfolderScheduledarchive: ").append(dtEzsignfolderScheduledarchive).append("\n");
+    sb.append("  dtEzsignfolderScheduleddestruction: ").append(dtEzsignfolderScheduleddestruction).append("\n");
     sb.append("  eEzsignfolderStep: ").append(eEzsignfolderStep).append("\n");
     sb.append("  dtEzsignfolderClose: ").append(dtEzsignfolderClose).append("\n");
     sb.append("  objAudit: ").append(objAudit).append("\n");
