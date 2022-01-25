@@ -13,7 +13,7 @@
 package org.openapitools.client.model;
 
 import org.openapitools.client.model.CommonAudit;
-import org.openapitools.client.model.EzsignfolderResponse;
+import org.openapitools.client.model.EzsignfolderResponseCompound;
 import org.openapitools.client.model.FieldEEzsignfolderSendreminderfrequency;
 import org.openapitools.client.model.FieldEEzsignfolderStep;
 import io.swagger.annotations.*;
