@@ -147,6 +147,7 @@ docs/EzsignsignatureGetObjectV1Response.md
 docs/EzsignsignatureGetObjectV1ResponseAllOf.md
 docs/EzsignsignatureRequest.md
 docs/EzsignsignatureRequestCompound.md
+docs/EzsignsignaturecustomdateRequest.md
 docs/EzsignsignerRequest.md
 docs/EzsignsignerRequestCompound.md
 docs/EzsignsignerRequestCompoundAllOf.md
@@ -413,6 +414,7 @@ src/main/java/org/openapitools/client/model/EzsignsignatureGetObjectV1Response.j
 src/main/java/org/openapitools/client/model/EzsignsignatureGetObjectV1ResponseAllOf.java
 src/main/java/org/openapitools/client/model/EzsignsignatureRequest.java
 src/main/java/org/openapitools/client/model/EzsignsignatureRequestCompound.java
+src/main/java/org/openapitools/client/model/EzsignsignaturecustomdateRequest.java
 src/main/java/org/openapitools/client/model/EzsignsignerRequest.java
 src/main/java/org/openapitools/client/model/EzsignsignerRequestCompound.java
 src/main/java/org/openapitools/client/model/EzsignsignerRequestCompoundAllOf.java

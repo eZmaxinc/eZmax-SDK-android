@@ -637,6 +637,10 @@ public class JsonUtil {
       return new TypeToken<List<EzsignsignatureRequestCompound>>(){}.getType();
     }
     
+    if ("EzsignsignaturecustomdateRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EzsignsignaturecustomdateRequest>>(){}.getType();
+    }
+    
     if ("EzsignsignerRequest".equalsIgnoreCase(className)) {
       return new TypeToken<List<EzsignsignerRequest>>(){}.getType();
     }
@@ -1485,6 +1489,10 @@ public class JsonUtil {
     
     if ("EzsignsignatureRequestCompound".equalsIgnoreCase(className)) {
       return new TypeToken<EzsignsignatureRequestCompound>(){}.getType();
+    }
+    
+    if ("EzsignsignaturecustomdateRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<EzsignsignaturecustomdateRequest>(){}.getType();
     }
     
     if ("EzsignsignerRequest".equalsIgnoreCase(className)) {
