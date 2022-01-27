@@ -13,7 +13,7 @@
 package org.openapitools.client.model;
 
 import java.util.*;
-import org.openapitools.client.model.EzsignfoldersignerassociationResponse;
+import org.openapitools.client.model.EzsignfoldersignerassociationResponseCompound;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -24,15 +24,15 @@ import com.google.gson.annotations.SerializedName;
 public class EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload {
   
   @SerializedName("a_objEzsignfoldersignerassociation")
-  private List<EzsignfoldersignerassociationResponse> aObjEzsignfoldersignerassociation = null;
+  private List<EzsignfoldersignerassociationResponseCompound> aObjEzsignfoldersignerassociation = null;
 
   /**
    **/
   @ApiModelProperty(required = true, value = "")
-  public List<EzsignfoldersignerassociationResponse> getAObjEzsignfoldersignerassociation() {
+  public List<EzsignfoldersignerassociationResponseCompound> getAObjEzsignfoldersignerassociation() {
     return aObjEzsignfoldersignerassociation;
   }
-  public void setAObjEzsignfoldersignerassociation(List<EzsignfoldersignerassociationResponse> aObjEzsignfoldersignerassociation) {
+  public void setAObjEzsignfoldersignerassociation(List<EzsignfoldersignerassociationResponseCompound> aObjEzsignfoldersignerassociation) {
     this.aObjEzsignfoldersignerassociation = aObjEzsignfoldersignerassociation;
   }
 

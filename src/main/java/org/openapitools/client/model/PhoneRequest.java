@@ -92,9 +92,9 @@ public class PhoneRequest {
   }
 
   /**
-   * The international phone number. (For phone numbers outside of North)  Do not specify the \"011\" part of the phone number used to dial an international phone number from North America.  For example for this sample phone number \"+442071838750\", you would send \"442071838750\" without the \"+\" sign.
+   * A phone number in E.164 Format
    **/
-  @ApiModelProperty(value = "The international phone number. (For phone numbers outside of North)  Do not specify the \"011\" part of the phone number used to dial an international phone number from North America.  For example for this sample phone number \"+442071838750\", you would send \"442071838750\" without the \"+\" sign.")
+  @ApiModelProperty(value = "A phone number in E.164 Format")
   public String getSPhoneInternational() {
     return sPhoneInternational;
   }

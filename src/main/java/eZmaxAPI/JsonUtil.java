@@ -557,6 +557,10 @@ public class JsonUtil {
       return new TypeToken<List<EzsignfoldersignerassociationResponseCompound>>(){}.getType();
     }
     
+    if ("EzsignfoldersignerassociationResponseCompoundUser".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EzsignfoldersignerassociationResponseCompoundUser>>(){}.getType();
+    }
+    
     if ("EzsignfoldertypeGetListV1Response".equalsIgnoreCase(className)) {
       return new TypeToken<List<EzsignfoldertypeGetListV1Response>>(){}.getType();
     }
@@ -1409,6 +1413,10 @@ public class JsonUtil {
     
     if ("EzsignfoldersignerassociationResponseCompound".equalsIgnoreCase(className)) {
       return new TypeToken<EzsignfoldersignerassociationResponseCompound>(){}.getType();
+    }
+    
+    if ("EzsignfoldersignerassociationResponseCompoundUser".equalsIgnoreCase(className)) {
+      return new TypeToken<EzsignfoldersignerassociationResponseCompoundUser>(){}.getType();
     }
     
     if ("EzsignfoldertypeGetListV1Response".equalsIgnoreCase(className)) {

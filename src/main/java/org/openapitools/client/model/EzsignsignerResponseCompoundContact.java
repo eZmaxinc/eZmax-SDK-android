@@ -29,10 +29,10 @@ public class EzsignsignerResponseCompoundContact {
   private Integer fkiLanguageID = null;
   @SerializedName("sEmailAddress")
   private String sEmailAddress = null;
-  @SerializedName("sPhoneNumber")
-  private String sPhoneNumber = null;
-  @SerializedName("sPhoneNumberCell")
-  private String sPhoneNumberCell = null;
+  @SerializedName("sPhoneE164")
+  private String sPhoneE164 = null;
+  @SerializedName("sPhoneE164Cell")
+  private String sPhoneE164Cell = null;
 
   /**
    * The First name of the contact
@@ -81,25 +81,25 @@ public class EzsignsignerResponseCompoundContact {
   }
 
   /**
-   * The Phone number of the contact. Use format \"5149901516\" for North American Numbers (Without \"1\" for long distance code) you would dial like this: 1-514-990-1516. Use format \"498945233886\" for international numbers (Without \"011\") you would dial like this: +49 89 452 33 88-6. In this example \"49\" is the country code of Germany.
+   * A phone number in E.164 Format
    **/
-  @ApiModelProperty(value = "The Phone number of the contact. Use format \"5149901516\" for North American Numbers (Without \"1\" for long distance code) you would dial like this: 1-514-990-1516. Use format \"498945233886\" for international numbers (Without \"011\") you would dial like this: +49 89 452 33 88-6. In this example \"49\" is the country code of Germany.")
-  public String getSPhoneNumber() {
-    return sPhoneNumber;
+  @ApiModelProperty(value = "A phone number in E.164 Format")
+  public String getSPhoneE164() {
+    return sPhoneE164;
   }
-  public void setSPhoneNumber(String sPhoneNumber) {
-    this.sPhoneNumber = sPhoneNumber;
+  public void setSPhoneE164(String sPhoneE164) {
+    this.sPhoneE164 = sPhoneE164;
   }
 
   /**
-   * The Cell Phone number of the contact. Use format \"5149901516\" for North American Numbers (Without \"1\" for long distance code) you would dial like this: 1-514-990-1516. Use format \"498945233886\" for international numbers (Without \"011\") you would dial like this: +49 89 452 33 88-6. In this example \"49\" is the country code of Germany.
+   * A phone number in E.164 Format
    **/
-  @ApiModelProperty(value = "The Cell Phone number of the contact. Use format \"5149901516\" for North American Numbers (Without \"1\" for long distance code) you would dial like this: 1-514-990-1516. Use format \"498945233886\" for international numbers (Without \"011\") you would dial like this: +49 89 452 33 88-6. In this example \"49\" is the country code of Germany.")
-  public String getSPhoneNumberCell() {
-    return sPhoneNumberCell;
+  @ApiModelProperty(value = "A phone number in E.164 Format")
+  public String getSPhoneE164Cell() {
+    return sPhoneE164Cell;
   }
-  public void setSPhoneNumberCell(String sPhoneNumberCell) {
-    this.sPhoneNumberCell = sPhoneNumberCell;
+  public void setSPhoneE164Cell(String sPhoneE164Cell) {
+    this.sPhoneE164Cell = sPhoneE164Cell;
   }
 
 
@@ -116,8 +116,8 @@ public class EzsignsignerResponseCompoundContact {
         (this.sContactLastname == null ? ezsignsignerResponseCompoundContact.sContactLastname == null : this.sContactLastname.equals(ezsignsignerResponseCompoundContact.sContactLastname)) &&
         (this.fkiLanguageID == null ? ezsignsignerResponseCompoundContact.fkiLanguageID == null : this.fkiLanguageID.equals(ezsignsignerResponseCompoundContact.fkiLanguageID)) &&
         (this.sEmailAddress == null ? ezsignsignerResponseCompoundContact.sEmailAddress == null : this.sEmailAddress.equals(ezsignsignerResponseCompoundContact.sEmailAddress)) &&
-        (this.sPhoneNumber == null ? ezsignsignerResponseCompoundContact.sPhoneNumber == null : this.sPhoneNumber.equals(ezsignsignerResponseCompoundContact.sPhoneNumber)) &&
-        (this.sPhoneNumberCell == null ? ezsignsignerResponseCompoundContact.sPhoneNumberCell == null : this.sPhoneNumberCell.equals(ezsignsignerResponseCompoundContact.sPhoneNumberCell));
+        (this.sPhoneE164 == null ? ezsignsignerResponseCompoundContact.sPhoneE164 == null : this.sPhoneE164.equals(ezsignsignerResponseCompoundContact.sPhoneE164)) &&
+        (this.sPhoneE164Cell == null ? ezsignsignerResponseCompoundContact.sPhoneE164Cell == null : this.sPhoneE164Cell.equals(ezsignsignerResponseCompoundContact.sPhoneE164Cell));
   }
 
   @Override
@@ -127,8 +127,8 @@ public class EzsignsignerResponseCompoundContact {
     result = 31 * result + (this.sContactLastname == null ? 0: this.sContactLastname.hashCode());
     result = 31 * result + (this.fkiLanguageID == null ? 0: this.fkiLanguageID.hashCode());
     result = 31 * result + (this.sEmailAddress == null ? 0: this.sEmailAddress.hashCode());
-    result = 31 * result + (this.sPhoneNumber == null ? 0: this.sPhoneNumber.hashCode());
-    result = 31 * result + (this.sPhoneNumberCell == null ? 0: this.sPhoneNumberCell.hashCode());
+    result = 31 * result + (this.sPhoneE164 == null ? 0: this.sPhoneE164.hashCode());
+    result = 31 * result + (this.sPhoneE164Cell == null ? 0: this.sPhoneE164Cell.hashCode());
     return result;
   }
 
@@ -141,8 +141,8 @@ public class EzsignsignerResponseCompoundContact {
     sb.append("  sContactLastname: ").append(sContactLastname).append("\n");
     sb.append("  fkiLanguageID: ").append(fkiLanguageID).append("\n");
     sb.append("  sEmailAddress: ").append(sEmailAddress).append("\n");
-    sb.append("  sPhoneNumber: ").append(sPhoneNumber).append("\n");
-    sb.append("  sPhoneNumberCell: ").append(sPhoneNumberCell).append("\n");
+    sb.append("  sPhoneE164: ").append(sPhoneE164).append("\n");
+    sb.append("  sPhoneE164Cell: ").append(sPhoneE164Cell).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

@@ -127,6 +127,7 @@ docs/EzsignfoldersignerassociationRequestCompound.md
 docs/EzsignfoldersignerassociationRequestCompoundAllOf.md
 docs/EzsignfoldersignerassociationResponse.md
 docs/EzsignfoldersignerassociationResponseCompound.md
+docs/EzsignfoldersignerassociationResponseCompoundUser.md
 docs/EzsignfoldertypeGetListV1Response.md
 docs/EzsignfoldertypeGetListV1ResponseAllOf.md
 docs/EzsignfoldertypeGetListV1ResponseMPayload.md
@@ -394,6 +395,7 @@ src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationRequest
 src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationRequestCompoundAllOf.java
 src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationResponse.java
 src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationResponseCompound.java
+src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationResponseCompoundUser.java
 src/main/java/org/openapitools/client/model/EzsignfoldertypeGetListV1Response.java
 src/main/java/org/openapitools/client/model/EzsignfoldertypeGetListV1ResponseAllOf.java
 src/main/java/org/openapitools/client/model/EzsignfoldertypeGetListV1ResponseMPayload.java
