@@ -233,6 +233,7 @@ docs/WebhookResponse.md
 docs/WebhookUserUserCreated.md
 docs/WebhookUserUserCreatedAllOf.md
 docs/WebsiteRequest.md
+docs/Xxxx.md
 git_push.sh
 gradle/wrapper/gradle-wrapper.jar
 gradle/wrapper/gradle-wrapper.properties
@@ -483,3 +484,4 @@ src/main/java/org/openapitools/client/model/WebhookResponse.java
 src/main/java/org/openapitools/client/model/WebhookUserUserCreated.java
 src/main/java/org/openapitools/client/model/WebhookUserUserCreatedAllOf.java
 src/main/java/org/openapitools/client/model/WebsiteRequest.java
+src/main/java/org/openapitools/client/model/Xxxx.java

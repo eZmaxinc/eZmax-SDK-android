@@ -21,6 +21,8 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "A Ezsignsigner->Contact Object and children to create a complete structure")
 public class EzsignsignerResponseCompoundContact {
   
+  @SerializedName("pkiContactID")
+  private Integer pkiContactID = null;
   @SerializedName("sContactFirstname")
   private String sContactFirstname = null;
   @SerializedName("sContactLastname")
@@ -33,6 +35,17 @@ public class EzsignsignerResponseCompoundContact {
   private String sPhoneE164 = null;
   @SerializedName("sPhoneE164Cell")
   private String sPhoneE164Cell = null;
+
+  /**
+   * The unique ID of the Contact
+   **/
+  @ApiModelProperty(required = true, value = "The unique ID of the Contact")
+  public Integer getPkiContactID() {
+    return pkiContactID;
+  }
+  public void setPkiContactID(Integer pkiContactID) {
+    this.pkiContactID = pkiContactID;
+  }
 
   /**
    * The First name of the contact
@@ -112,7 +125,8 @@ public class EzsignsignerResponseCompoundContact {
       return false;
     }
     EzsignsignerResponseCompoundContact ezsignsignerResponseCompoundContact = (EzsignsignerResponseCompoundContact) o;
-    return (this.sContactFirstname == null ? ezsignsignerResponseCompoundContact.sContactFirstname == null : this.sContactFirstname.equals(ezsignsignerResponseCompoundContact.sContactFirstname)) &&
+    return (this.pkiContactID == null ? ezsignsignerResponseCompoundContact.pkiContactID == null : this.pkiContactID.equals(ezsignsignerResponseCompoundContact.pkiContactID)) &&
+        (this.sContactFirstname == null ? ezsignsignerResponseCompoundContact.sContactFirstname == null : this.sContactFirstname.equals(ezsignsignerResponseCompoundContact.sContactFirstname)) &&
         (this.sContactLastname == null ? ezsignsignerResponseCompoundContact.sContactLastname == null : this.sContactLastname.equals(ezsignsignerResponseCompoundContact.sContactLastname)) &&
         (this.fkiLanguageID == null ? ezsignsignerResponseCompoundContact.fkiLanguageID == null : this.fkiLanguageID.equals(ezsignsignerResponseCompoundContact.fkiLanguageID)) &&
         (this.sEmailAddress == null ? ezsignsignerResponseCompoundContact.sEmailAddress == null : this.sEmailAddress.equals(ezsignsignerResponseCompoundContact.sEmailAddress)) &&
@@ -123,6 +137,7 @@ public class EzsignsignerResponseCompoundContact {
   @Override
   public int hashCode() {
     int result = 17;
+    result = 31 * result + (this.pkiContactID == null ? 0: this.pkiContactID.hashCode());
     result = 31 * result + (this.sContactFirstname == null ? 0: this.sContactFirstname.hashCode());
     result = 31 * result + (this.sContactLastname == null ? 0: this.sContactLastname.hashCode());
     result = 31 * result + (this.fkiLanguageID == null ? 0: this.fkiLanguageID.hashCode());
@@ -137,6 +152,7 @@ public class EzsignsignerResponseCompoundContact {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignsignerResponseCompoundContact {\n");
     
+    sb.append("  pkiContactID: ").append(pkiContactID).append("\n");
     sb.append("  sContactFirstname: ").append(sContactFirstname).append("\n");
     sb.append("  sContactLastname: ").append(sContactLastname).append("\n");
     sb.append("  fkiLanguageID: ").append(fkiLanguageID).append("\n");

@@ -909,6 +909,10 @@ public class JsonUtil {
       return new TypeToken<List<WebsiteRequest>>(){}.getType();
     }
     
+    if ("Xxxx".equalsIgnoreCase(className)) {
+      return new TypeToken<List<Xxxx>>(){}.getType();
+    }
+    
     return new TypeToken<List<Object>>(){}.getType();
   }
 
@@ -1765,6 +1769,10 @@ public class JsonUtil {
     
     if ("WebsiteRequest".equalsIgnoreCase(className)) {
       return new TypeToken<WebsiteRequest>(){}.getType();
+    }
+    
+    if ("Xxxx".equalsIgnoreCase(className)) {
+      return new TypeToken<Xxxx>(){}.getType();
     }
     
     return new TypeToken<Object>(){}.getType();
