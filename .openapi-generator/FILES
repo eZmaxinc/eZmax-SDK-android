@@ -82,6 +82,7 @@ docs/EzsigndocumentRequest.md
 docs/EzsigndocumentRequestCompound.md
 docs/EzsigndocumentResponse.md
 docs/EzsigndocumentResponseCompound.md
+docs/EzsigndocumentResponseCompoundAllOf.md
 docs/EzsignfolderCreateObjectV1Request.md
 docs/EzsignfolderCreateObjectV1Response.md
 docs/EzsignfolderCreateObjectV1ResponseAllOf.md
@@ -127,6 +128,7 @@ docs/EzsignfoldersignerassociationRequestCompound.md
 docs/EzsignfoldersignerassociationRequestCompoundAllOf.md
 docs/EzsignfoldersignerassociationResponse.md
 docs/EzsignfoldersignerassociationResponseCompound.md
+docs/EzsignfoldersignerassociationResponseCompoundAllOf.md
 docs/EzsignfoldersignerassociationResponseCompoundUser.md
 docs/EzsignfoldertypeGetListV1Response.md
 docs/EzsignfoldertypeGetListV1ResponseAllOf.md
@@ -148,6 +150,7 @@ docs/EzsignsignatureGetObjectV1Response.md
 docs/EzsignsignatureGetObjectV1ResponseAllOf.md
 docs/EzsignsignatureRequest.md
 docs/EzsignsignatureRequestCompound.md
+docs/EzsignsignatureRequestCompoundAllOf.md
 docs/EzsignsignaturecustomdateRequest.md
 docs/EzsignsignerRequest.md
 docs/EzsignsignerRequestCompound.md
@@ -162,6 +165,7 @@ docs/EzsigntemplatepackageGetListV1ResponseAllOf.md
 docs/EzsigntemplatepackageGetListV1ResponseMPayload.md
 docs/EzsigntemplatepackageGetListV1ResponseMPayloadAllOf.md
 docs/EzsigntemplatepackageListElement.md
+docs/FieldEActivesessionWeekdaystart.md
 docs/FieldEEzsigndocumentStep.md
 docs/FieldEEzsignfolderSendreminderfrequency.md
 docs/FieldEEzsignfolderStep.md
@@ -351,6 +355,7 @@ src/main/java/org/openapitools/client/model/EzsigndocumentRequest.java
 src/main/java/org/openapitools/client/model/EzsigndocumentRequestCompound.java
 src/main/java/org/openapitools/client/model/EzsigndocumentResponse.java
 src/main/java/org/openapitools/client/model/EzsigndocumentResponseCompound.java
+src/main/java/org/openapitools/client/model/EzsigndocumentResponseCompoundAllOf.java
 src/main/java/org/openapitools/client/model/EzsignfolderCreateObjectV1Request.java
 src/main/java/org/openapitools/client/model/EzsignfolderCreateObjectV1Response.java
 src/main/java/org/openapitools/client/model/EzsignfolderCreateObjectV1ResponseAllOf.java
@@ -396,6 +401,7 @@ src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationRequest
 src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationRequestCompoundAllOf.java
 src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationResponse.java
 src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationResponseCompound.java
+src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationResponseCompoundAllOf.java
 src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationResponseCompoundUser.java
 src/main/java/org/openapitools/client/model/EzsignfoldertypeGetListV1Response.java
 src/main/java/org/openapitools/client/model/EzsignfoldertypeGetListV1ResponseAllOf.java
@@ -417,6 +423,7 @@ src/main/java/org/openapitools/client/model/EzsignsignatureGetObjectV1Response.j
 src/main/java/org/openapitools/client/model/EzsignsignatureGetObjectV1ResponseAllOf.java
 src/main/java/org/openapitools/client/model/EzsignsignatureRequest.java
 src/main/java/org/openapitools/client/model/EzsignsignatureRequestCompound.java
+src/main/java/org/openapitools/client/model/EzsignsignatureRequestCompoundAllOf.java
 src/main/java/org/openapitools/client/model/EzsignsignaturecustomdateRequest.java
 src/main/java/org/openapitools/client/model/EzsignsignerRequest.java
 src/main/java/org/openapitools/client/model/EzsignsignerRequestCompound.java
@@ -431,6 +438,7 @@ src/main/java/org/openapitools/client/model/EzsigntemplatepackageGetListV1Respon
 src/main/java/org/openapitools/client/model/EzsigntemplatepackageGetListV1ResponseMPayload.java
 src/main/java/org/openapitools/client/model/EzsigntemplatepackageGetListV1ResponseMPayloadAllOf.java
 src/main/java/org/openapitools/client/model/EzsigntemplatepackageListElement.java
+src/main/java/org/openapitools/client/model/FieldEActivesessionWeekdaystart.java
 src/main/java/org/openapitools/client/model/FieldEEzsigndocumentStep.java
 src/main/java/org/openapitools/client/model/FieldEEzsignfolderSendreminderfrequency.java
 src/main/java/org/openapitools/client/model/FieldEEzsignfolderStep.java

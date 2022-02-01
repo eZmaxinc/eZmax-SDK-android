@@ -13,6 +13,7 @@
 package org.openapitools.client.model;
 
 import org.openapitools.client.model.EzsignfoldersignerassociationResponse;
+import org.openapitools.client.model.EzsignfoldersignerassociationResponseCompoundAllOf;
 import org.openapitools.client.model.EzsignfoldersignerassociationResponseCompoundUser;
 import org.openapitools.client.model.EzsignsignerResponseCompound;
 import io.swagger.annotations.*;

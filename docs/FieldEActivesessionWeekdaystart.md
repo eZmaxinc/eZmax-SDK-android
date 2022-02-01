@@ -1,0 +1,10 @@
+
+
+# FieldEActivesessionWeekdaystart
+
+## Enum
+
+
+
+
+

@@ -13,6 +13,7 @@
 package org.openapitools.client.model;
 
 import java.util.*;
+import org.openapitools.client.model.FieldEActivesessionWeekdaystart;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -29,6 +30,8 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
   };
   @SerializedName("eActivesessionSessiontype")
   private EActivesessionSessiontypeEnum eActivesessionSessiontype = null;
+  @SerializedName("eActivesessionWeekdaystart")
+  private FieldEActivesessionWeekdaystart eActivesessionWeekdaystart = null;
   @SerializedName("fkiLanguageID")
   private Integer fkiLanguageID = null;
   @SerializedName("sCompanyNameX")
@@ -64,6 +67,16 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
   }
   public void setEActivesessionSessiontype(EActivesessionSessiontypeEnum eActivesessionSessiontype) {
     this.eActivesessionSessiontype = eActivesessionSessiontype;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public FieldEActivesessionWeekdaystart getEActivesessionWeekdaystart() {
+    return eActivesessionWeekdaystart;
+  }
+  public void setEActivesessionWeekdaystart(FieldEActivesessionWeekdaystart eActivesessionWeekdaystart) {
+    this.eActivesessionWeekdaystart = eActivesessionWeekdaystart;
   }
 
   /**
@@ -157,6 +170,7 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
     ActivesessionGetCurrentV1ResponseMPayload activesessionGetCurrentV1ResponseMPayload = (ActivesessionGetCurrentV1ResponseMPayload) o;
     return (this.sCustomerCode == null ? activesessionGetCurrentV1ResponseMPayload.sCustomerCode == null : this.sCustomerCode.equals(activesessionGetCurrentV1ResponseMPayload.sCustomerCode)) &&
         (this.eActivesessionSessiontype == null ? activesessionGetCurrentV1ResponseMPayload.eActivesessionSessiontype == null : this.eActivesessionSessiontype.equals(activesessionGetCurrentV1ResponseMPayload.eActivesessionSessiontype)) &&
+        (this.eActivesessionWeekdaystart == null ? activesessionGetCurrentV1ResponseMPayload.eActivesessionWeekdaystart == null : this.eActivesessionWeekdaystart.equals(activesessionGetCurrentV1ResponseMPayload.eActivesessionWeekdaystart)) &&
         (this.fkiLanguageID == null ? activesessionGetCurrentV1ResponseMPayload.fkiLanguageID == null : this.fkiLanguageID.equals(activesessionGetCurrentV1ResponseMPayload.fkiLanguageID)) &&
         (this.sCompanyNameX == null ? activesessionGetCurrentV1ResponseMPayload.sCompanyNameX == null : this.sCompanyNameX.equals(activesessionGetCurrentV1ResponseMPayload.sCompanyNameX)) &&
         (this.sDepartmentNameX == null ? activesessionGetCurrentV1ResponseMPayload.sDepartmentNameX == null : this.sDepartmentNameX.equals(activesessionGetCurrentV1ResponseMPayload.sDepartmentNameX)) &&
@@ -171,6 +185,7 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
     int result = 17;
     result = 31 * result + (this.sCustomerCode == null ? 0: this.sCustomerCode.hashCode());
     result = 31 * result + (this.eActivesessionSessiontype == null ? 0: this.eActivesessionSessiontype.hashCode());
+    result = 31 * result + (this.eActivesessionWeekdaystart == null ? 0: this.eActivesessionWeekdaystart.hashCode());
     result = 31 * result + (this.fkiLanguageID == null ? 0: this.fkiLanguageID.hashCode());
     result = 31 * result + (this.sCompanyNameX == null ? 0: this.sCompanyNameX.hashCode());
     result = 31 * result + (this.sDepartmentNameX == null ? 0: this.sDepartmentNameX.hashCode());
@@ -188,6 +203,7 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
     
     sb.append("  sCustomerCode: ").append(sCustomerCode).append("\n");
     sb.append("  eActivesessionSessiontype: ").append(eActivesessionSessiontype).append("\n");
+    sb.append("  eActivesessionWeekdaystart: ").append(eActivesessionWeekdaystart).append("\n");
     sb.append("  fkiLanguageID: ").append(fkiLanguageID).append("\n");
     sb.append("  sCompanyNameX: ").append(sCompanyNameX).append("\n");
     sb.append("  sDepartmentNameX: ").append(sDepartmentNameX).append("\n");

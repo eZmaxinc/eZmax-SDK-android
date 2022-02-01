@@ -14,6 +14,7 @@ package org.openapitools.client.model;
 
 import java.util.*;
 import org.openapitools.client.model.EzsignsignatureRequest;
+import org.openapitools.client.model.EzsignsignatureRequestCompoundAllOf;
 import org.openapitools.client.model.EzsignsignaturecustomdateRequest;
 import org.openapitools.client.model.FieldEEzsignsignatureType;
 import io.swagger.annotations.*;

@@ -16,6 +16,7 @@ import java.util.*;
 import org.openapitools.client.model.CommonAudit;
 import org.openapitools.client.model.CustomEzsignfoldersignerassociationstatusResponse;
 import org.openapitools.client.model.EzsigndocumentResponse;
+import org.openapitools.client.model.EzsigndocumentResponseCompoundAllOf;
 import org.openapitools.client.model.FieldEEzsigndocumentStep;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
