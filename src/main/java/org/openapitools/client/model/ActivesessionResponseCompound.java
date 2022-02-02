@@ -13,7 +13,8 @@
 package org.openapitools.client.model;
 
 import java.util.*;
-import org.openapitools.client.model.ActivesessionResponseCompound;
+import org.openapitools.client.model.ActivesessionResponse;
+import org.openapitools.client.model.ActivesessionResponseCompoundAllOf;
 import org.openapitools.client.model.ActivesessionResponseCompoundApikey;
 import org.openapitools.client.model.ActivesessionResponseCompoundUser;
 import org.openapitools.client.model.FieldEActivesessionSessiontype;
@@ -25,7 +26,7 @@ import com.google.gson.annotations.SerializedName;
  * Payload for the /1/object/activesession/getCurrent API Request
  **/
 @ApiModel(description = "Payload for the /1/object/activesession/getCurrent API Request")
-public class ActivesessionGetCurrentV1ResponseMPayload {
+public class ActivesessionResponseCompound {
   
   @SerializedName("a_pkiPermissionID")
   private List<Integer> aPkiPermissionID = null;
@@ -190,19 +191,19 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ActivesessionGetCurrentV1ResponseMPayload activesessionGetCurrentV1ResponseMPayload = (ActivesessionGetCurrentV1ResponseMPayload) o;
-    return (this.aPkiPermissionID == null ? activesessionGetCurrentV1ResponseMPayload.aPkiPermissionID == null : this.aPkiPermissionID.equals(activesessionGetCurrentV1ResponseMPayload.aPkiPermissionID)) &&
-        (this.objUserReal == null ? activesessionGetCurrentV1ResponseMPayload.objUserReal == null : this.objUserReal.equals(activesessionGetCurrentV1ResponseMPayload.objUserReal)) &&
-        (this.objUserCloned == null ? activesessionGetCurrentV1ResponseMPayload.objUserCloned == null : this.objUserCloned.equals(activesessionGetCurrentV1ResponseMPayload.objUserCloned)) &&
-        (this.objApikey == null ? activesessionGetCurrentV1ResponseMPayload.objApikey == null : this.objApikey.equals(activesessionGetCurrentV1ResponseMPayload.objApikey)) &&
-        (this.aEModuleInternalname == null ? activesessionGetCurrentV1ResponseMPayload.aEModuleInternalname == null : this.aEModuleInternalname.equals(activesessionGetCurrentV1ResponseMPayload.aEModuleInternalname)) &&
-        (this.eActivesessionSessiontype == null ? activesessionGetCurrentV1ResponseMPayload.eActivesessionSessiontype == null : this.eActivesessionSessiontype.equals(activesessionGetCurrentV1ResponseMPayload.eActivesessionSessiontype)) &&
-        (this.eActivesessionWeekdaystart == null ? activesessionGetCurrentV1ResponseMPayload.eActivesessionWeekdaystart == null : this.eActivesessionWeekdaystart.equals(activesessionGetCurrentV1ResponseMPayload.eActivesessionWeekdaystart)) &&
-        (this.fkiLanguageID == null ? activesessionGetCurrentV1ResponseMPayload.fkiLanguageID == null : this.fkiLanguageID.equals(activesessionGetCurrentV1ResponseMPayload.fkiLanguageID)) &&
-        (this.sCompanyNameX == null ? activesessionGetCurrentV1ResponseMPayload.sCompanyNameX == null : this.sCompanyNameX.equals(activesessionGetCurrentV1ResponseMPayload.sCompanyNameX)) &&
-        (this.sDepartmentNameX == null ? activesessionGetCurrentV1ResponseMPayload.sDepartmentNameX == null : this.sDepartmentNameX.equals(activesessionGetCurrentV1ResponseMPayload.sDepartmentNameX)) &&
-        (this.bActivesessionDebug == null ? activesessionGetCurrentV1ResponseMPayload.bActivesessionDebug == null : this.bActivesessionDebug.equals(activesessionGetCurrentV1ResponseMPayload.bActivesessionDebug)) &&
-        (this.pksCustomerCode == null ? activesessionGetCurrentV1ResponseMPayload.pksCustomerCode == null : this.pksCustomerCode.equals(activesessionGetCurrentV1ResponseMPayload.pksCustomerCode));
+    ActivesessionResponseCompound activesessionResponseCompound = (ActivesessionResponseCompound) o;
+    return (this.aPkiPermissionID == null ? activesessionResponseCompound.aPkiPermissionID == null : this.aPkiPermissionID.equals(activesessionResponseCompound.aPkiPermissionID)) &&
+        (this.objUserReal == null ? activesessionResponseCompound.objUserReal == null : this.objUserReal.equals(activesessionResponseCompound.objUserReal)) &&
+        (this.objUserCloned == null ? activesessionResponseCompound.objUserCloned == null : this.objUserCloned.equals(activesessionResponseCompound.objUserCloned)) &&
+        (this.objApikey == null ? activesessionResponseCompound.objApikey == null : this.objApikey.equals(activesessionResponseCompound.objApikey)) &&
+        (this.aEModuleInternalname == null ? activesessionResponseCompound.aEModuleInternalname == null : this.aEModuleInternalname.equals(activesessionResponseCompound.aEModuleInternalname)) &&
+        (this.eActivesessionSessiontype == null ? activesessionResponseCompound.eActivesessionSessiontype == null : this.eActivesessionSessiontype.equals(activesessionResponseCompound.eActivesessionSessiontype)) &&
+        (this.eActivesessionWeekdaystart == null ? activesessionResponseCompound.eActivesessionWeekdaystart == null : this.eActivesessionWeekdaystart.equals(activesessionResponseCompound.eActivesessionWeekdaystart)) &&
+        (this.fkiLanguageID == null ? activesessionResponseCompound.fkiLanguageID == null : this.fkiLanguageID.equals(activesessionResponseCompound.fkiLanguageID)) &&
+        (this.sCompanyNameX == null ? activesessionResponseCompound.sCompanyNameX == null : this.sCompanyNameX.equals(activesessionResponseCompound.sCompanyNameX)) &&
+        (this.sDepartmentNameX == null ? activesessionResponseCompound.sDepartmentNameX == null : this.sDepartmentNameX.equals(activesessionResponseCompound.sDepartmentNameX)) &&
+        (this.bActivesessionDebug == null ? activesessionResponseCompound.bActivesessionDebug == null : this.bActivesessionDebug.equals(activesessionResponseCompound.bActivesessionDebug)) &&
+        (this.pksCustomerCode == null ? activesessionResponseCompound.pksCustomerCode == null : this.pksCustomerCode.equals(activesessionResponseCompound.pksCustomerCode));
   }
 
   @Override
@@ -226,7 +227,7 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ActivesessionGetCurrentV1ResponseMPayload {\n");
+    sb.append("class ActivesessionResponseCompound {\n");
     
     sb.append("  aPkiPermissionID: ").append(aPkiPermissionID).append("\n");
     sb.append("  objUserReal: ").append(objUserReal).append("\n");

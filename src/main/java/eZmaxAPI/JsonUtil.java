@@ -69,6 +69,26 @@ public class JsonUtil {
       return new TypeToken<List<ActivesessionGetCurrentV1ResponseMPayload>>(){}.getType();
     }
     
+    if ("ActivesessionResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ActivesessionResponse>>(){}.getType();
+    }
+    
+    if ("ActivesessionResponseCompound".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ActivesessionResponseCompound>>(){}.getType();
+    }
+    
+    if ("ActivesessionResponseCompoundAllOf".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ActivesessionResponseCompoundAllOf>>(){}.getType();
+    }
+    
+    if ("ActivesessionResponseCompoundApikey".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ActivesessionResponseCompoundApikey>>(){}.getType();
+    }
+    
+    if ("ActivesessionResponseCompoundUser".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ActivesessionResponseCompoundUser>>(){}.getType();
+    }
+    
     if ("AddressRequest".equalsIgnoreCase(className)) {
       return new TypeToken<List<AddressRequest>>(){}.getType();
     }
@@ -709,6 +729,10 @@ public class JsonUtil {
       return new TypeToken<List<EzsigntemplatepackageListElement>>(){}.getType();
     }
     
+    if ("FieldEActivesessionSessiontype".equalsIgnoreCase(className)) {
+      return new TypeToken<List<FieldEActivesessionSessiontype>>(){}.getType();
+    }
+    
     if ("FieldEActivesessionWeekdaystart".equalsIgnoreCase(className)) {
       return new TypeToken<List<FieldEActivesessionWeekdaystart>>(){}.getType();
     }
@@ -925,10 +949,6 @@ public class JsonUtil {
       return new TypeToken<List<WebsiteRequest>>(){}.getType();
     }
     
-    if ("Xxxx".equalsIgnoreCase(className)) {
-      return new TypeToken<List<Xxxx>>(){}.getType();
-    }
-    
     return new TypeToken<List<Object>>(){}.getType();
   }
 
@@ -945,6 +965,26 @@ public class JsonUtil {
     
     if ("ActivesessionGetCurrentV1ResponseMPayload".equalsIgnoreCase(className)) {
       return new TypeToken<ActivesessionGetCurrentV1ResponseMPayload>(){}.getType();
+    }
+    
+    if ("ActivesessionResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<ActivesessionResponse>(){}.getType();
+    }
+    
+    if ("ActivesessionResponseCompound".equalsIgnoreCase(className)) {
+      return new TypeToken<ActivesessionResponseCompound>(){}.getType();
+    }
+    
+    if ("ActivesessionResponseCompoundAllOf".equalsIgnoreCase(className)) {
+      return new TypeToken<ActivesessionResponseCompoundAllOf>(){}.getType();
+    }
+    
+    if ("ActivesessionResponseCompoundApikey".equalsIgnoreCase(className)) {
+      return new TypeToken<ActivesessionResponseCompoundApikey>(){}.getType();
+    }
+    
+    if ("ActivesessionResponseCompoundUser".equalsIgnoreCase(className)) {
+      return new TypeToken<ActivesessionResponseCompoundUser>(){}.getType();
     }
     
     if ("AddressRequest".equalsIgnoreCase(className)) {
@@ -1587,6 +1627,10 @@ public class JsonUtil {
       return new TypeToken<EzsigntemplatepackageListElement>(){}.getType();
     }
     
+    if ("FieldEActivesessionSessiontype".equalsIgnoreCase(className)) {
+      return new TypeToken<FieldEActivesessionSessiontype>(){}.getType();
+    }
+    
     if ("FieldEActivesessionWeekdaystart".equalsIgnoreCase(className)) {
       return new TypeToken<FieldEActivesessionWeekdaystart>(){}.getType();
     }
@@ -1801,10 +1845,6 @@ public class JsonUtil {
     
     if ("WebsiteRequest".equalsIgnoreCase(className)) {
       return new TypeToken<WebsiteRequest>(){}.getType();
-    }
-    
-    if ("Xxxx".equalsIgnoreCase(className)) {
-      return new TypeToken<Xxxx>(){}.getType();
     }
     
     return new TypeToken<Object>(){}.getType();

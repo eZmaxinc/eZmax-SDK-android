@@ -5,6 +5,11 @@ build.gradle
 docs/ActivesessionGetCurrentV1Response.md
 docs/ActivesessionGetCurrentV1ResponseAllOf.md
 docs/ActivesessionGetCurrentV1ResponseMPayload.md
+docs/ActivesessionResponse.md
+docs/ActivesessionResponseCompound.md
+docs/ActivesessionResponseCompoundAllOf.md
+docs/ActivesessionResponseCompoundApikey.md
+docs/ActivesessionResponseCompoundUser.md
 docs/AddressRequest.md
 docs/ApikeyCreateObjectV1Request.md
 docs/ApikeyCreateObjectV1Response.md
@@ -165,6 +170,7 @@ docs/EzsigntemplatepackageGetListV1ResponseAllOf.md
 docs/EzsigntemplatepackageGetListV1ResponseMPayload.md
 docs/EzsigntemplatepackageGetListV1ResponseMPayloadAllOf.md
 docs/EzsigntemplatepackageListElement.md
+docs/FieldEActivesessionSessiontype.md
 docs/FieldEActivesessionWeekdaystart.md
 docs/FieldEEzsigndocumentStep.md
 docs/FieldEEzsignfolderSendreminderfrequency.md
@@ -237,7 +243,6 @@ docs/WebhookResponse.md
 docs/WebhookUserUserCreated.md
 docs/WebhookUserUserCreatedAllOf.md
 docs/WebsiteRequest.md
-docs/Xxxx.md
 git_push.sh
 gradle/wrapper/gradle-wrapper.jar
 gradle/wrapper/gradle-wrapper.properties
@@ -278,6 +283,11 @@ src/main/java/org/openapitools/client/api/ObjectPeriodApi.java
 src/main/java/org/openapitools/client/model/ActivesessionGetCurrentV1Response.java
 src/main/java/org/openapitools/client/model/ActivesessionGetCurrentV1ResponseAllOf.java
 src/main/java/org/openapitools/client/model/ActivesessionGetCurrentV1ResponseMPayload.java
+src/main/java/org/openapitools/client/model/ActivesessionResponse.java
+src/main/java/org/openapitools/client/model/ActivesessionResponseCompound.java
+src/main/java/org/openapitools/client/model/ActivesessionResponseCompoundAllOf.java
+src/main/java/org/openapitools/client/model/ActivesessionResponseCompoundApikey.java
+src/main/java/org/openapitools/client/model/ActivesessionResponseCompoundUser.java
 src/main/java/org/openapitools/client/model/AddressRequest.java
 src/main/java/org/openapitools/client/model/ApikeyCreateObjectV1Request.java
 src/main/java/org/openapitools/client/model/ApikeyCreateObjectV1Response.java
@@ -438,6 +448,7 @@ src/main/java/org/openapitools/client/model/EzsigntemplatepackageGetListV1Respon
 src/main/java/org/openapitools/client/model/EzsigntemplatepackageGetListV1ResponseMPayload.java
 src/main/java/org/openapitools/client/model/EzsigntemplatepackageGetListV1ResponseMPayloadAllOf.java
 src/main/java/org/openapitools/client/model/EzsigntemplatepackageListElement.java
+src/main/java/org/openapitools/client/model/FieldEActivesessionSessiontype.java
 src/main/java/org/openapitools/client/model/FieldEActivesessionWeekdaystart.java
 src/main/java/org/openapitools/client/model/FieldEEzsigndocumentStep.java
 src/main/java/org/openapitools/client/model/FieldEEzsignfolderSendreminderfrequency.java
@@ -492,4 +503,3 @@ src/main/java/org/openapitools/client/model/WebhookResponse.java
 src/main/java/org/openapitools/client/model/WebhookUserUserCreated.java
 src/main/java/org/openapitools/client/model/WebhookUserUserCreatedAllOf.java
 src/main/java/org/openapitools/client/model/WebsiteRequest.java
-src/main/java/org/openapitools/client/model/Xxxx.java

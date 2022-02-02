@@ -1,6 +1,6 @@
 
 
-# ActivesessionGetCurrentV1ResponseMPayload
+# ActivesessionResponseCompound
 
 ## Properties
 
