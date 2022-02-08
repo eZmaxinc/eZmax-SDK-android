@@ -93,6 +93,8 @@ docs/EzsignfolderCreateObjectV1Response.md
 docs/EzsignfolderCreateObjectV1ResponseAllOf.md
 docs/EzsignfolderCreateObjectV1ResponseMPayload.md
 docs/EzsignfolderDeleteObjectV1Response.md
+docs/EzsignfolderEditObjectV1Request.md
+docs/EzsignfolderEditObjectV1Response.md
 docs/EzsignfolderGetEzsigndocumentsV1Response.md
 docs/EzsignfolderGetEzsigndocumentsV1ResponseAllOf.md
 docs/EzsignfolderGetEzsigndocumentsV1ResponseMPayload.md
@@ -371,6 +373,8 @@ src/main/java/org/openapitools/client/model/EzsignfolderCreateObjectV1Response.j
 src/main/java/org/openapitools/client/model/EzsignfolderCreateObjectV1ResponseAllOf.java
 src/main/java/org/openapitools/client/model/EzsignfolderCreateObjectV1ResponseMPayload.java
 src/main/java/org/openapitools/client/model/EzsignfolderDeleteObjectV1Response.java
+src/main/java/org/openapitools/client/model/EzsignfolderEditObjectV1Request.java
+src/main/java/org/openapitools/client/model/EzsignfolderEditObjectV1Response.java
 src/main/java/org/openapitools/client/model/EzsignfolderGetEzsigndocumentsV1Response.java
 src/main/java/org/openapitools/client/model/EzsignfolderGetEzsigndocumentsV1ResponseAllOf.java
 src/main/java/org/openapitools/client/model/EzsignfolderGetEzsigndocumentsV1ResponseMPayload.java

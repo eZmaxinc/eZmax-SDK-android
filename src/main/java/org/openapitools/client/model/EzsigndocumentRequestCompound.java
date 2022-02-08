@@ -22,6 +22,8 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "An Ezsigndocument Object and children to create a complete structure")
 public class EzsigndocumentRequestCompound {
   
+  @SerializedName("pkiEzsigndocumentID")
+  private Integer pkiEzsigndocumentID = null;
   public enum EEzsigndocumentSourceEnum {
      Base64,  Url, 
   };
@@ -48,6 +50,17 @@ public class EzsigndocumentRequestCompound {
   private Integer fkiLanguageID = null;
   @SerializedName("sEzsigndocumentName")
   private String sEzsigndocumentName = null;
+
+  /**
+   * The unique ID of the Ezsigndocument
+   **/
+  @ApiModelProperty(value = "The unique ID of the Ezsigndocument")
+  public Integer getPkiEzsigndocumentID() {
+    return pkiEzsigndocumentID;
+  }
+  public void setPkiEzsigndocumentID(Integer pkiEzsigndocumentID) {
+    this.pkiEzsigndocumentID = pkiEzsigndocumentID;
+  }
 
   /**
    * Indicates where to look for the document binary content.
@@ -171,7 +184,8 @@ public class EzsigndocumentRequestCompound {
       return false;
     }
     EzsigndocumentRequestCompound ezsigndocumentRequestCompound = (EzsigndocumentRequestCompound) o;
-    return (this.eEzsigndocumentSource == null ? ezsigndocumentRequestCompound.eEzsigndocumentSource == null : this.eEzsigndocumentSource.equals(ezsigndocumentRequestCompound.eEzsigndocumentSource)) &&
+    return (this.pkiEzsigndocumentID == null ? ezsigndocumentRequestCompound.pkiEzsigndocumentID == null : this.pkiEzsigndocumentID.equals(ezsigndocumentRequestCompound.pkiEzsigndocumentID)) &&
+        (this.eEzsigndocumentSource == null ? ezsigndocumentRequestCompound.eEzsigndocumentSource == null : this.eEzsigndocumentSource.equals(ezsigndocumentRequestCompound.eEzsigndocumentSource)) &&
         (this.eEzsigndocumentFormat == null ? ezsigndocumentRequestCompound.eEzsigndocumentFormat == null : this.eEzsigndocumentFormat.equals(ezsigndocumentRequestCompound.eEzsigndocumentFormat)) &&
         (this.sEzsigndocumentBase64 == null ? ezsigndocumentRequestCompound.sEzsigndocumentBase64 == null : this.sEzsigndocumentBase64.equals(ezsigndocumentRequestCompound.sEzsigndocumentBase64)) &&
         (this.sEzsigndocumentUrl == null ? ezsigndocumentRequestCompound.sEzsigndocumentUrl == null : this.sEzsigndocumentUrl.equals(ezsigndocumentRequestCompound.sEzsigndocumentUrl)) &&
@@ -186,6 +200,7 @@ public class EzsigndocumentRequestCompound {
   @Override
   public int hashCode() {
     int result = 17;
+    result = 31 * result + (this.pkiEzsigndocumentID == null ? 0: this.pkiEzsigndocumentID.hashCode());
     result = 31 * result + (this.eEzsigndocumentSource == null ? 0: this.eEzsigndocumentSource.hashCode());
     result = 31 * result + (this.eEzsigndocumentFormat == null ? 0: this.eEzsigndocumentFormat.hashCode());
     result = 31 * result + (this.sEzsigndocumentBase64 == null ? 0: this.sEzsigndocumentBase64.hashCode());
@@ -204,6 +219,7 @@ public class EzsigndocumentRequestCompound {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsigndocumentRequestCompound {\n");
     
+    sb.append("  pkiEzsigndocumentID: ").append(pkiEzsigndocumentID).append("\n");
     sb.append("  eEzsigndocumentSource: ").append(eEzsigndocumentSource).append("\n");
     sb.append("  eEzsigndocumentFormat: ").append(eEzsigndocumentFormat).append("\n");
     sb.append("  sEzsigndocumentBase64: ").append(sEzsigndocumentBase64).append("\n");

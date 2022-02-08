@@ -22,6 +22,8 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "An Ezsignsignature Object")
 public class EzsignsignatureRequest {
   
+  @SerializedName("pkiEzsignsignatureID")
+  private Integer pkiEzsignsignatureID = null;
   @SerializedName("fkiEzsignfoldersignerassociationID")
   private Integer fkiEzsignfoldersignerassociationID = null;
   @SerializedName("iEzsignpagePagenumber")
@@ -36,6 +38,17 @@ public class EzsignsignatureRequest {
   private FieldEEzsignsignatureType eEzsignsignatureType = null;
   @SerializedName("fkiEzsigndocumentID")
   private Integer fkiEzsigndocumentID = null;
+
+  /**
+   * The unique ID of the Ezsignsignature
+   **/
+  @ApiModelProperty(value = "The unique ID of the Ezsignsignature")
+  public Integer getPkiEzsignsignatureID() {
+    return pkiEzsignsignatureID;
+  }
+  public void setPkiEzsignsignatureID(Integer pkiEzsignsignatureID) {
+    this.pkiEzsignsignatureID = pkiEzsignsignatureID;
+  }
 
   /**
    * The unique ID of the Ezsignfoldersignerassociation
@@ -123,7 +136,8 @@ public class EzsignsignatureRequest {
       return false;
     }
     EzsignsignatureRequest ezsignsignatureRequest = (EzsignsignatureRequest) o;
-    return (this.fkiEzsignfoldersignerassociationID == null ? ezsignsignatureRequest.fkiEzsignfoldersignerassociationID == null : this.fkiEzsignfoldersignerassociationID.equals(ezsignsignatureRequest.fkiEzsignfoldersignerassociationID)) &&
+    return (this.pkiEzsignsignatureID == null ? ezsignsignatureRequest.pkiEzsignsignatureID == null : this.pkiEzsignsignatureID.equals(ezsignsignatureRequest.pkiEzsignsignatureID)) &&
+        (this.fkiEzsignfoldersignerassociationID == null ? ezsignsignatureRequest.fkiEzsignfoldersignerassociationID == null : this.fkiEzsignfoldersignerassociationID.equals(ezsignsignatureRequest.fkiEzsignfoldersignerassociationID)) &&
         (this.iEzsignpagePagenumber == null ? ezsignsignatureRequest.iEzsignpagePagenumber == null : this.iEzsignpagePagenumber.equals(ezsignsignatureRequest.iEzsignpagePagenumber)) &&
         (this.iEzsignsignatureX == null ? ezsignsignatureRequest.iEzsignsignatureX == null : this.iEzsignsignatureX.equals(ezsignsignatureRequest.iEzsignsignatureX)) &&
         (this.iEzsignsignatureY == null ? ezsignsignatureRequest.iEzsignsignatureY == null : this.iEzsignsignatureY.equals(ezsignsignatureRequest.iEzsignsignatureY)) &&
@@ -135,6 +149,7 @@ public class EzsignsignatureRequest {
   @Override
   public int hashCode() {
     int result = 17;
+    result = 31 * result + (this.pkiEzsignsignatureID == null ? 0: this.pkiEzsignsignatureID.hashCode());
     result = 31 * result + (this.fkiEzsignfoldersignerassociationID == null ? 0: this.fkiEzsignfoldersignerassociationID.hashCode());
     result = 31 * result + (this.iEzsignpagePagenumber == null ? 0: this.iEzsignpagePagenumber.hashCode());
     result = 31 * result + (this.iEzsignsignatureX == null ? 0: this.iEzsignsignatureX.hashCode());
@@ -150,6 +165,7 @@ public class EzsignsignatureRequest {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignsignatureRequest {\n");
     
+    sb.append("  pkiEzsignsignatureID: ").append(pkiEzsignsignatureID).append("\n");
     sb.append("  fkiEzsignfoldersignerassociationID: ").append(fkiEzsignfoldersignerassociationID).append("\n");
     sb.append("  iEzsignpagePagenumber: ").append(iEzsignpagePagenumber).append("\n");
     sb.append("  iEzsignsignatureX: ").append(iEzsignsignatureX).append("\n");

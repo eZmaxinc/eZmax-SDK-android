@@ -23,6 +23,8 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "An Ezsignfolder Object and children to create a complete structure")
 public class EzsignfolderRequestCompound {
   
+  @SerializedName("pkiEzsignfolderID")
+  private Integer pkiEzsignfolderID = null;
   @SerializedName("fkiEzsignfoldertypeID")
   private Integer fkiEzsignfoldertypeID = null;
   @SerializedName("fkiEzsigntsarequirementID")
@@ -33,6 +35,17 @@ public class EzsignfolderRequestCompound {
   private String tEzsignfolderNote = null;
   @SerializedName("eEzsignfolderSendreminderfrequency")
   private FieldEEzsignfolderSendreminderfrequency eEzsignfolderSendreminderfrequency = null;
+
+  /**
+   * The unique ID of the Ezsignfolder
+   **/
+  @ApiModelProperty(value = "The unique ID of the Ezsignfolder")
+  public Integer getPkiEzsignfolderID() {
+    return pkiEzsignfolderID;
+  }
+  public void setPkiEzsignfolderID(Integer pkiEzsignfolderID) {
+    this.pkiEzsignfolderID = pkiEzsignfolderID;
+  }
 
   /**
    * The unique ID of the Ezsignfoldertype.
@@ -100,7 +113,8 @@ public class EzsignfolderRequestCompound {
       return false;
     }
     EzsignfolderRequestCompound ezsignfolderRequestCompound = (EzsignfolderRequestCompound) o;
-    return (this.fkiEzsignfoldertypeID == null ? ezsignfolderRequestCompound.fkiEzsignfoldertypeID == null : this.fkiEzsignfoldertypeID.equals(ezsignfolderRequestCompound.fkiEzsignfoldertypeID)) &&
+    return (this.pkiEzsignfolderID == null ? ezsignfolderRequestCompound.pkiEzsignfolderID == null : this.pkiEzsignfolderID.equals(ezsignfolderRequestCompound.pkiEzsignfolderID)) &&
+        (this.fkiEzsignfoldertypeID == null ? ezsignfolderRequestCompound.fkiEzsignfoldertypeID == null : this.fkiEzsignfoldertypeID.equals(ezsignfolderRequestCompound.fkiEzsignfoldertypeID)) &&
         (this.fkiEzsigntsarequirementID == null ? ezsignfolderRequestCompound.fkiEzsigntsarequirementID == null : this.fkiEzsigntsarequirementID.equals(ezsignfolderRequestCompound.fkiEzsigntsarequirementID)) &&
         (this.sEzsignfolderDescription == null ? ezsignfolderRequestCompound.sEzsignfolderDescription == null : this.sEzsignfolderDescription.equals(ezsignfolderRequestCompound.sEzsignfolderDescription)) &&
         (this.tEzsignfolderNote == null ? ezsignfolderRequestCompound.tEzsignfolderNote == null : this.tEzsignfolderNote.equals(ezsignfolderRequestCompound.tEzsignfolderNote)) &&
@@ -110,6 +124,7 @@ public class EzsignfolderRequestCompound {
   @Override
   public int hashCode() {
     int result = 17;
+    result = 31 * result + (this.pkiEzsignfolderID == null ? 0: this.pkiEzsignfolderID.hashCode());
     result = 31 * result + (this.fkiEzsignfoldertypeID == null ? 0: this.fkiEzsignfoldertypeID.hashCode());
     result = 31 * result + (this.fkiEzsigntsarequirementID == null ? 0: this.fkiEzsigntsarequirementID.hashCode());
     result = 31 * result + (this.sEzsignfolderDescription == null ? 0: this.sEzsignfolderDescription.hashCode());
@@ -123,6 +138,7 @@ public class EzsignfolderRequestCompound {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignfolderRequestCompound {\n");
     
+    sb.append("  pkiEzsignfolderID: ").append(pkiEzsignfolderID).append("\n");
     sb.append("  fkiEzsignfoldertypeID: ").append(fkiEzsignfoldertypeID).append("\n");
     sb.append("  fkiEzsigntsarequirementID: ").append(fkiEzsigntsarequirementID).append("\n");
     sb.append("  sEzsignfolderDescription: ").append(sEzsignfolderDescription).append("\n");

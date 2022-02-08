@@ -26,6 +26,8 @@ public class EzsignfoldersignerassociationRequestCompound {
   
   @SerializedName("objEzsignsigner")
   private EzsignsignerRequestCompound objEzsignsigner = null;
+  @SerializedName("pkiEzsignfoldersignerassociationID")
+  private Integer pkiEzsignfoldersignerassociationID = null;
   @SerializedName("fkiUserID")
   private Integer fkiUserID = null;
   @SerializedName("fkiEzsignfolderID")
@@ -41,6 +43,17 @@ public class EzsignfoldersignerassociationRequestCompound {
   }
   public void setObjEzsignsigner(EzsignsignerRequestCompound objEzsignsigner) {
     this.objEzsignsigner = objEzsignsigner;
+  }
+
+  /**
+   * The unique ID of the Ezsignfoldersignerassociation
+   **/
+  @ApiModelProperty(value = "The unique ID of the Ezsignfoldersignerassociation")
+  public Integer getPkiEzsignfoldersignerassociationID() {
+    return pkiEzsignfoldersignerassociationID;
+  }
+  public void setPkiEzsignfoldersignerassociationID(Integer pkiEzsignfoldersignerassociationID) {
+    this.pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID;
   }
 
   /**
@@ -87,6 +100,7 @@ public class EzsignfoldersignerassociationRequestCompound {
     }
     EzsignfoldersignerassociationRequestCompound ezsignfoldersignerassociationRequestCompound = (EzsignfoldersignerassociationRequestCompound) o;
     return (this.objEzsignsigner == null ? ezsignfoldersignerassociationRequestCompound.objEzsignsigner == null : this.objEzsignsigner.equals(ezsignfoldersignerassociationRequestCompound.objEzsignsigner)) &&
+        (this.pkiEzsignfoldersignerassociationID == null ? ezsignfoldersignerassociationRequestCompound.pkiEzsignfoldersignerassociationID == null : this.pkiEzsignfoldersignerassociationID.equals(ezsignfoldersignerassociationRequestCompound.pkiEzsignfoldersignerassociationID)) &&
         (this.fkiUserID == null ? ezsignfoldersignerassociationRequestCompound.fkiUserID == null : this.fkiUserID.equals(ezsignfoldersignerassociationRequestCompound.fkiUserID)) &&
         (this.fkiEzsignfolderID == null ? ezsignfoldersignerassociationRequestCompound.fkiEzsignfolderID == null : this.fkiEzsignfolderID.equals(ezsignfoldersignerassociationRequestCompound.fkiEzsignfolderID)) &&
         (this.bEzsignfoldersignerassociationReceivecopy == null ? ezsignfoldersignerassociationRequestCompound.bEzsignfoldersignerassociationReceivecopy == null : this.bEzsignfoldersignerassociationReceivecopy.equals(ezsignfoldersignerassociationRequestCompound.bEzsignfoldersignerassociationReceivecopy));
@@ -96,6 +110,7 @@ public class EzsignfoldersignerassociationRequestCompound {
   public int hashCode() {
     int result = 17;
     result = 31 * result + (this.objEzsignsigner == null ? 0: this.objEzsignsigner.hashCode());
+    result = 31 * result + (this.pkiEzsignfoldersignerassociationID == null ? 0: this.pkiEzsignfoldersignerassociationID.hashCode());
     result = 31 * result + (this.fkiUserID == null ? 0: this.fkiUserID.hashCode());
     result = 31 * result + (this.fkiEzsignfolderID == null ? 0: this.fkiEzsignfolderID.hashCode());
     result = 31 * result + (this.bEzsignfoldersignerassociationReceivecopy == null ? 0: this.bEzsignfoldersignerassociationReceivecopy.hashCode());
@@ -108,6 +123,7 @@ public class EzsignfoldersignerassociationRequestCompound {
     sb.append("class EzsignfoldersignerassociationRequestCompound {\n");
     
     sb.append("  objEzsignsigner: ").append(objEzsignsigner).append("\n");
+    sb.append("  pkiEzsignfoldersignerassociationID: ").append(pkiEzsignfoldersignerassociationID).append("\n");
     sb.append("  fkiUserID: ").append(fkiUserID).append("\n");
     sb.append("  fkiEzsignfolderID: ").append(fkiEzsignfolderID).append("\n");
     sb.append("  bEzsignfoldersignerassociationReceivecopy: ").append(bEzsignfoldersignerassociationReceivecopy).append("\n");

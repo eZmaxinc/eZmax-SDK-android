@@ -30,6 +30,8 @@ public class FranchisereferalincomeRequestCompound {
   private AddressRequest objAddress = null;
   @SerializedName("a_objContact")
   private List<ContactRequestCompound> aObjContact = null;
+  @SerializedName("pkiFranchisereferalincomeID")
+  private Integer pkiFranchisereferalincomeID = null;
   @SerializedName("fkiFranchisebrokerID")
   private Integer fkiFranchisebrokerID = null;
   @SerializedName("fkiFranchisereferalincomeprogramID")
@@ -71,6 +73,17 @@ public class FranchisereferalincomeRequestCompound {
   }
   public void setAObjContact(List<ContactRequestCompound> aObjContact) {
     this.aObjContact = aObjContact;
+  }
+
+  /**
+   * The unique ID of the Franchisereferalincome
+   **/
+  @ApiModelProperty(value = "The unique ID of the Franchisereferalincome")
+  public Integer getPkiFranchisereferalincomeID() {
+    return pkiFranchisereferalincomeID;
+  }
+  public void setPkiFranchisereferalincomeID(Integer pkiFranchisereferalincomeID) {
+    this.pkiFranchisereferalincomeID = pkiFranchisereferalincomeID;
   }
 
   /**
@@ -205,6 +218,7 @@ public class FranchisereferalincomeRequestCompound {
     FranchisereferalincomeRequestCompound franchisereferalincomeRequestCompound = (FranchisereferalincomeRequestCompound) o;
     return (this.objAddress == null ? franchisereferalincomeRequestCompound.objAddress == null : this.objAddress.equals(franchisereferalincomeRequestCompound.objAddress)) &&
         (this.aObjContact == null ? franchisereferalincomeRequestCompound.aObjContact == null : this.aObjContact.equals(franchisereferalincomeRequestCompound.aObjContact)) &&
+        (this.pkiFranchisereferalincomeID == null ? franchisereferalincomeRequestCompound.pkiFranchisereferalincomeID == null : this.pkiFranchisereferalincomeID.equals(franchisereferalincomeRequestCompound.pkiFranchisereferalincomeID)) &&
         (this.fkiFranchisebrokerID == null ? franchisereferalincomeRequestCompound.fkiFranchisebrokerID == null : this.fkiFranchisebrokerID.equals(franchisereferalincomeRequestCompound.fkiFranchisebrokerID)) &&
         (this.fkiFranchisereferalincomeprogramID == null ? franchisereferalincomeRequestCompound.fkiFranchisereferalincomeprogramID == null : this.fkiFranchisereferalincomeprogramID.equals(franchisereferalincomeRequestCompound.fkiFranchisereferalincomeprogramID)) &&
         (this.fkiPeriodID == null ? franchisereferalincomeRequestCompound.fkiPeriodID == null : this.fkiPeriodID.equals(franchisereferalincomeRequestCompound.fkiPeriodID)) &&
@@ -223,6 +237,7 @@ public class FranchisereferalincomeRequestCompound {
     int result = 17;
     result = 31 * result + (this.objAddress == null ? 0: this.objAddress.hashCode());
     result = 31 * result + (this.aObjContact == null ? 0: this.aObjContact.hashCode());
+    result = 31 * result + (this.pkiFranchisereferalincomeID == null ? 0: this.pkiFranchisereferalincomeID.hashCode());
     result = 31 * result + (this.fkiFranchisebrokerID == null ? 0: this.fkiFranchisebrokerID.hashCode());
     result = 31 * result + (this.fkiFranchisereferalincomeprogramID == null ? 0: this.fkiFranchisereferalincomeprogramID.hashCode());
     result = 31 * result + (this.fkiPeriodID == null ? 0: this.fkiPeriodID.hashCode());
@@ -244,6 +259,7 @@ public class FranchisereferalincomeRequestCompound {
     
     sb.append("  objAddress: ").append(objAddress).append("\n");
     sb.append("  aObjContact: ").append(aObjContact).append("\n");
+    sb.append("  pkiFranchisereferalincomeID: ").append(pkiFranchisereferalincomeID).append("\n");
     sb.append("  fkiFranchisebrokerID: ").append(fkiFranchisebrokerID).append("\n");
     sb.append("  fkiFranchisereferalincomeprogramID: ").append(fkiFranchisereferalincomeprogramID).append("\n");
     sb.append("  fkiPeriodID: ").append(fkiPeriodID).append("\n");

@@ -30,6 +30,8 @@ public class EzsignsignatureRequestCompound {
   private Boolean bEzsignsignatureCustomdate = null;
   @SerializedName("a_objEzsignsignaturecustomdate")
   private List<EzsignsignaturecustomdateRequest> aObjEzsignsignaturecustomdate = null;
+  @SerializedName("pkiEzsignsignatureID")
+  private Integer pkiEzsignsignatureID = null;
   @SerializedName("fkiEzsignfoldersignerassociationID")
   private Integer fkiEzsignfoldersignerassociationID = null;
   @SerializedName("iEzsignpagePagenumber")
@@ -65,6 +67,17 @@ public class EzsignsignatureRequestCompound {
   }
   public void setAObjEzsignsignaturecustomdate(List<EzsignsignaturecustomdateRequest> aObjEzsignsignaturecustomdate) {
     this.aObjEzsignsignaturecustomdate = aObjEzsignsignaturecustomdate;
+  }
+
+  /**
+   * The unique ID of the Ezsignsignature
+   **/
+  @ApiModelProperty(value = "The unique ID of the Ezsignsignature")
+  public Integer getPkiEzsignsignatureID() {
+    return pkiEzsignsignatureID;
+  }
+  public void setPkiEzsignsignatureID(Integer pkiEzsignsignatureID) {
+    this.pkiEzsignsignatureID = pkiEzsignsignatureID;
   }
 
   /**
@@ -155,6 +168,7 @@ public class EzsignsignatureRequestCompound {
     EzsignsignatureRequestCompound ezsignsignatureRequestCompound = (EzsignsignatureRequestCompound) o;
     return (this.bEzsignsignatureCustomdate == null ? ezsignsignatureRequestCompound.bEzsignsignatureCustomdate == null : this.bEzsignsignatureCustomdate.equals(ezsignsignatureRequestCompound.bEzsignsignatureCustomdate)) &&
         (this.aObjEzsignsignaturecustomdate == null ? ezsignsignatureRequestCompound.aObjEzsignsignaturecustomdate == null : this.aObjEzsignsignaturecustomdate.equals(ezsignsignatureRequestCompound.aObjEzsignsignaturecustomdate)) &&
+        (this.pkiEzsignsignatureID == null ? ezsignsignatureRequestCompound.pkiEzsignsignatureID == null : this.pkiEzsignsignatureID.equals(ezsignsignatureRequestCompound.pkiEzsignsignatureID)) &&
         (this.fkiEzsignfoldersignerassociationID == null ? ezsignsignatureRequestCompound.fkiEzsignfoldersignerassociationID == null : this.fkiEzsignfoldersignerassociationID.equals(ezsignsignatureRequestCompound.fkiEzsignfoldersignerassociationID)) &&
         (this.iEzsignpagePagenumber == null ? ezsignsignatureRequestCompound.iEzsignpagePagenumber == null : this.iEzsignpagePagenumber.equals(ezsignsignatureRequestCompound.iEzsignpagePagenumber)) &&
         (this.iEzsignsignatureX == null ? ezsignsignatureRequestCompound.iEzsignsignatureX == null : this.iEzsignsignatureX.equals(ezsignsignatureRequestCompound.iEzsignsignatureX)) &&
@@ -169,6 +183,7 @@ public class EzsignsignatureRequestCompound {
     int result = 17;
     result = 31 * result + (this.bEzsignsignatureCustomdate == null ? 0: this.bEzsignsignatureCustomdate.hashCode());
     result = 31 * result + (this.aObjEzsignsignaturecustomdate == null ? 0: this.aObjEzsignsignaturecustomdate.hashCode());
+    result = 31 * result + (this.pkiEzsignsignatureID == null ? 0: this.pkiEzsignsignatureID.hashCode());
     result = 31 * result + (this.fkiEzsignfoldersignerassociationID == null ? 0: this.fkiEzsignfoldersignerassociationID.hashCode());
     result = 31 * result + (this.iEzsignpagePagenumber == null ? 0: this.iEzsignpagePagenumber.hashCode());
     result = 31 * result + (this.iEzsignsignatureX == null ? 0: this.iEzsignsignatureX.hashCode());
@@ -186,6 +201,7 @@ public class EzsignsignatureRequestCompound {
     
     sb.append("  bEzsignsignatureCustomdate: ").append(bEzsignsignatureCustomdate).append("\n");
     sb.append("  aObjEzsignsignaturecustomdate: ").append(aObjEzsignsignaturecustomdate).append("\n");
+    sb.append("  pkiEzsignsignatureID: ").append(pkiEzsignsignatureID).append("\n");
     sb.append("  fkiEzsignfoldersignerassociationID: ").append(fkiEzsignfoldersignerassociationID).append("\n");
     sb.append("  iEzsignpagePagenumber: ").append(iEzsignpagePagenumber).append("\n");
     sb.append("  iEzsignsignatureX: ").append(iEzsignsignatureX).append("\n");

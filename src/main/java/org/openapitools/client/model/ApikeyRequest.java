@@ -22,10 +22,23 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "An Apikey Object")
 public class ApikeyRequest {
   
+  @SerializedName("pkiApikeyID")
+  private Integer pkiApikeyID = null;
   @SerializedName("fkiUserID")
   private Integer fkiUserID = null;
   @SerializedName("objApikeyDescription")
   private MultilingualApikeyDescription objApikeyDescription = null;
+
+  /**
+   * The unique ID of the Apikey
+   **/
+  @ApiModelProperty(value = "The unique ID of the Apikey")
+  public Integer getPkiApikeyID() {
+    return pkiApikeyID;
+  }
+  public void setPkiApikeyID(Integer pkiApikeyID) {
+    this.pkiApikeyID = pkiApikeyID;
+  }
 
   /**
    * The unique ID of the User
@@ -58,13 +71,15 @@ public class ApikeyRequest {
       return false;
     }
     ApikeyRequest apikeyRequest = (ApikeyRequest) o;
-    return (this.fkiUserID == null ? apikeyRequest.fkiUserID == null : this.fkiUserID.equals(apikeyRequest.fkiUserID)) &&
+    return (this.pkiApikeyID == null ? apikeyRequest.pkiApikeyID == null : this.pkiApikeyID.equals(apikeyRequest.pkiApikeyID)) &&
+        (this.fkiUserID == null ? apikeyRequest.fkiUserID == null : this.fkiUserID.equals(apikeyRequest.fkiUserID)) &&
         (this.objApikeyDescription == null ? apikeyRequest.objApikeyDescription == null : this.objApikeyDescription.equals(apikeyRequest.objApikeyDescription));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
+    result = 31 * result + (this.pkiApikeyID == null ? 0: this.pkiApikeyID.hashCode());
     result = 31 * result + (this.fkiUserID == null ? 0: this.fkiUserID.hashCode());
     result = 31 * result + (this.objApikeyDescription == null ? 0: this.objApikeyDescription.hashCode());
     return result;
@@ -75,6 +90,7 @@ public class ApikeyRequest {
     StringBuilder sb = new StringBuilder();
     sb.append("class ApikeyRequest {\n");
     
+    sb.append("  pkiApikeyID: ").append(pkiApikeyID).append("\n");
     sb.append("  fkiUserID: ").append(fkiUserID).append("\n");
     sb.append("  objApikeyDescription: ").append(objApikeyDescription).append("\n");
     sb.append("}\n");
