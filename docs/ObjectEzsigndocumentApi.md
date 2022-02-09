@@ -13,6 +13,7 @@ Method | HTTP request | Description
 [**ezsigndocumentGetFormDataV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetFormDataV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getFormData | Retrieve an existing Ezsigndocument&#39;s Form Data
 [**ezsigndocumentGetObjectV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetObjectV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Retrieve an existing Ezsigndocument
 [**ezsigndocumentGetWordsPositionsV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetWordsPositionsV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions | Retrieve positions X,Y of given words from a Ezsigndocument
+[**ezsigndocumentPatchObjectV1**](ObjectEzsigndocumentApi.md#ezsigndocumentPatchObjectV1) | **PATCH** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Patch an existing Ezsigndocument
 
 
 
@@ -419,6 +420,52 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsigndocumentGetWordsPositionsV1Response**](EzsigndocumentGetWordsPositionsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## ezsigndocumentPatchObjectV1
+
+> EzsigndocumentPatchObjectV1Response ezsigndocumentPatchObjectV1(pkiEzsigndocumentID, ezsigndocumentPatchObjectV1Request)
+
+Patch an existing Ezsigndocument
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectEzsigndocumentApi;
+
+ObjectEzsigndocumentApi apiInstance = new ObjectEzsigndocumentApi();
+Integer pkiEzsigndocumentID = null; // Integer | 
+EzsigndocumentPatchObjectV1Request ezsigndocumentPatchObjectV1Request = new EzsigndocumentPatchObjectV1Request(); // EzsigndocumentPatchObjectV1Request | 
+try {
+    EzsigndocumentPatchObjectV1Response result = apiInstance.ezsigndocumentPatchObjectV1(pkiEzsigndocumentID, ezsigndocumentPatchObjectV1Request);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectEzsigndocumentApi#ezsigndocumentPatchObjectV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsigndocumentID** | **Integer**|  | [default to null]
+ **ezsigndocumentPatchObjectV1Request** | [**EzsigndocumentPatchObjectV1Request**](EzsigndocumentPatchObjectV1Request.md)|  |
+
+### Return type
+
+[**EzsigndocumentPatchObjectV1Response**](EzsigndocumentPatchObjectV1Response.md)
 
 ### Authorization
 

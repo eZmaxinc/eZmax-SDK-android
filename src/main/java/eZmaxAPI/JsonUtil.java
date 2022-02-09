@@ -381,12 +381,24 @@ public class JsonUtil {
       return new TypeToken<List<EzsigndocumentGetWordsPositionsV1ResponseAllOf>>(){}.getType();
     }
     
+    if ("EzsigndocumentPatchObjectV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EzsigndocumentPatchObjectV1Request>>(){}.getType();
+    }
+    
+    if ("EzsigndocumentPatchObjectV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EzsigndocumentPatchObjectV1Response>>(){}.getType();
+    }
+    
     if ("EzsigndocumentRequest".equalsIgnoreCase(className)) {
       return new TypeToken<List<EzsigndocumentRequest>>(){}.getType();
     }
     
     if ("EzsigndocumentRequestCompound".equalsIgnoreCase(className)) {
       return new TypeToken<List<EzsigndocumentRequestCompound>>(){}.getType();
+    }
+    
+    if ("EzsigndocumentRequestPatch".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EzsigndocumentRequestPatch>>(){}.getType();
     }
     
     if ("EzsigndocumentResponse".equalsIgnoreCase(className)) {
@@ -1287,12 +1299,24 @@ public class JsonUtil {
       return new TypeToken<EzsigndocumentGetWordsPositionsV1ResponseAllOf>(){}.getType();
     }
     
+    if ("EzsigndocumentPatchObjectV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<EzsigndocumentPatchObjectV1Request>(){}.getType();
+    }
+    
+    if ("EzsigndocumentPatchObjectV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<EzsigndocumentPatchObjectV1Response>(){}.getType();
+    }
+    
     if ("EzsigndocumentRequest".equalsIgnoreCase(className)) {
       return new TypeToken<EzsigndocumentRequest>(){}.getType();
     }
     
     if ("EzsigndocumentRequestCompound".equalsIgnoreCase(className)) {
       return new TypeToken<EzsigndocumentRequestCompound>(){}.getType();
+    }
+    
+    if ("EzsigndocumentRequestPatch".equalsIgnoreCase(className)) {
+      return new TypeToken<EzsigndocumentRequestPatch>(){}.getType();
     }
     
     if ("EzsigndocumentResponse".equalsIgnoreCase(className)) {

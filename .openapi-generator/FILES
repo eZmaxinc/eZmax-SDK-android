@@ -83,8 +83,11 @@ docs/EzsigndocumentGetObjectV1ResponseMPayload.md
 docs/EzsigndocumentGetWordsPositionsV1Request.md
 docs/EzsigndocumentGetWordsPositionsV1Response.md
 docs/EzsigndocumentGetWordsPositionsV1ResponseAllOf.md
+docs/EzsigndocumentPatchObjectV1Request.md
+docs/EzsigndocumentPatchObjectV1Response.md
 docs/EzsigndocumentRequest.md
 docs/EzsigndocumentRequestCompound.md
+docs/EzsigndocumentRequestPatch.md
 docs/EzsigndocumentResponse.md
 docs/EzsigndocumentResponseCompound.md
 docs/EzsigndocumentResponseCompoundAllOf.md
@@ -363,8 +366,11 @@ src/main/java/org/openapitools/client/model/EzsigndocumentGetObjectV1ResponseMPa
 src/main/java/org/openapitools/client/model/EzsigndocumentGetWordsPositionsV1Request.java
 src/main/java/org/openapitools/client/model/EzsigndocumentGetWordsPositionsV1Response.java
 src/main/java/org/openapitools/client/model/EzsigndocumentGetWordsPositionsV1ResponseAllOf.java
+src/main/java/org/openapitools/client/model/EzsigndocumentPatchObjectV1Request.java
+src/main/java/org/openapitools/client/model/EzsigndocumentPatchObjectV1Response.java
 src/main/java/org/openapitools/client/model/EzsigndocumentRequest.java
 src/main/java/org/openapitools/client/model/EzsigndocumentRequestCompound.java
+src/main/java/org/openapitools/client/model/EzsigndocumentRequestPatch.java
 src/main/java/org/openapitools/client/model/EzsigndocumentResponse.java
 src/main/java/org/openapitools/client/model/EzsigndocumentResponseCompound.java
 src/main/java/org/openapitools/client/model/EzsigndocumentResponseCompoundAllOf.java
