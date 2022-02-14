@@ -156,6 +156,8 @@ docs/EzsignsignatureCreateObjectV1Response.md
 docs/EzsignsignatureCreateObjectV1ResponseAllOf.md
 docs/EzsignsignatureCreateObjectV1ResponseMPayload.md
 docs/EzsignsignatureDeleteObjectV1Response.md
+docs/EzsignsignatureEditObjectV1Request.md
+docs/EzsignsignatureEditObjectV1Response.md
 docs/EzsignsignatureGetObjectV1Response.md
 docs/EzsignsignatureGetObjectV1ResponseAllOf.md
 docs/EzsignsignatureRequest.md
@@ -439,6 +441,8 @@ src/main/java/org/openapitools/client/model/EzsignsignatureCreateObjectV1Respons
 src/main/java/org/openapitools/client/model/EzsignsignatureCreateObjectV1ResponseAllOf.java
 src/main/java/org/openapitools/client/model/EzsignsignatureCreateObjectV1ResponseMPayload.java
 src/main/java/org/openapitools/client/model/EzsignsignatureDeleteObjectV1Response.java
+src/main/java/org/openapitools/client/model/EzsignsignatureEditObjectV1Request.java
+src/main/java/org/openapitools/client/model/EzsignsignatureEditObjectV1Response.java
 src/main/java/org/openapitools/client/model/EzsignsignatureGetObjectV1Response.java
 src/main/java/org/openapitools/client/model/EzsignsignatureGetObjectV1ResponseAllOf.java
 src/main/java/org/openapitools/client/model/EzsignsignatureRequest.java

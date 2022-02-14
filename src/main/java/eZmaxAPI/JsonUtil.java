@@ -673,6 +673,14 @@ public class JsonUtil {
       return new TypeToken<List<EzsignsignatureDeleteObjectV1Response>>(){}.getType();
     }
     
+    if ("EzsignsignatureEditObjectV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EzsignsignatureEditObjectV1Request>>(){}.getType();
+    }
+    
+    if ("EzsignsignatureEditObjectV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EzsignsignatureEditObjectV1Response>>(){}.getType();
+    }
+    
     if ("EzsignsignatureGetObjectV1Response".equalsIgnoreCase(className)) {
       return new TypeToken<List<EzsignsignatureGetObjectV1Response>>(){}.getType();
     }
@@ -1589,6 +1597,14 @@ public class JsonUtil {
     
     if ("EzsignsignatureDeleteObjectV1Response".equalsIgnoreCase(className)) {
       return new TypeToken<EzsignsignatureDeleteObjectV1Response>(){}.getType();
+    }
+    
+    if ("EzsignsignatureEditObjectV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<EzsignsignatureEditObjectV1Request>(){}.getType();
+    }
+    
+    if ("EzsignsignatureEditObjectV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<EzsignsignatureEditObjectV1Response>(){}.getType();
     }
     
     if ("EzsignsignatureGetObjectV1Response".equalsIgnoreCase(className)) {
