@@ -21,12 +21,25 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "An Ezsignsignaturecustomdate Object")
 public class EzsignsignaturecustomdateRequest {
   
+  @SerializedName("pkiEzsignsignaturecustomdateID")
+  private Integer pkiEzsignsignaturecustomdateID = null;
   @SerializedName("iEzsignsignaturecustomdateX")
   private Integer iEzsignsignaturecustomdateX = null;
   @SerializedName("iEzsignsignaturecustomdateY")
   private Integer iEzsignsignaturecustomdateY = null;
   @SerializedName("sEzsignsignaturecustomdateFormat")
   private String sEzsignsignaturecustomdateFormat = null;
+
+  /**
+   * The unique ID of the Ezsignsignaturecustomdate
+   **/
+  @ApiModelProperty(value = "The unique ID of the Ezsignsignaturecustomdate")
+  public Integer getPkiEzsignsignaturecustomdateID() {
+    return pkiEzsignsignaturecustomdateID;
+  }
+  public void setPkiEzsignsignaturecustomdateID(Integer pkiEzsignsignaturecustomdateID) {
+    this.pkiEzsignsignaturecustomdateID = pkiEzsignsignaturecustomdateID;
+  }
 
   /**
    * The X coordinate (Horizontal) where to put the custom date block on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the custom date block 2 inches from the left border of the page, you would use \"200\" for the X coordinate.
@@ -71,7 +84,8 @@ public class EzsignsignaturecustomdateRequest {
       return false;
     }
     EzsignsignaturecustomdateRequest ezsignsignaturecustomdateRequest = (EzsignsignaturecustomdateRequest) o;
-    return (this.iEzsignsignaturecustomdateX == null ? ezsignsignaturecustomdateRequest.iEzsignsignaturecustomdateX == null : this.iEzsignsignaturecustomdateX.equals(ezsignsignaturecustomdateRequest.iEzsignsignaturecustomdateX)) &&
+    return (this.pkiEzsignsignaturecustomdateID == null ? ezsignsignaturecustomdateRequest.pkiEzsignsignaturecustomdateID == null : this.pkiEzsignsignaturecustomdateID.equals(ezsignsignaturecustomdateRequest.pkiEzsignsignaturecustomdateID)) &&
+        (this.iEzsignsignaturecustomdateX == null ? ezsignsignaturecustomdateRequest.iEzsignsignaturecustomdateX == null : this.iEzsignsignaturecustomdateX.equals(ezsignsignaturecustomdateRequest.iEzsignsignaturecustomdateX)) &&
         (this.iEzsignsignaturecustomdateY == null ? ezsignsignaturecustomdateRequest.iEzsignsignaturecustomdateY == null : this.iEzsignsignaturecustomdateY.equals(ezsignsignaturecustomdateRequest.iEzsignsignaturecustomdateY)) &&
         (this.sEzsignsignaturecustomdateFormat == null ? ezsignsignaturecustomdateRequest.sEzsignsignaturecustomdateFormat == null : this.sEzsignsignaturecustomdateFormat.equals(ezsignsignaturecustomdateRequest.sEzsignsignaturecustomdateFormat));
   }
@@ -79,6 +93,7 @@ public class EzsignsignaturecustomdateRequest {
   @Override
   public int hashCode() {
     int result = 17;
+    result = 31 * result + (this.pkiEzsignsignaturecustomdateID == null ? 0: this.pkiEzsignsignaturecustomdateID.hashCode());
     result = 31 * result + (this.iEzsignsignaturecustomdateX == null ? 0: this.iEzsignsignaturecustomdateX.hashCode());
     result = 31 * result + (this.iEzsignsignaturecustomdateY == null ? 0: this.iEzsignsignaturecustomdateY.hashCode());
     result = 31 * result + (this.sEzsignsignaturecustomdateFormat == null ? 0: this.sEzsignsignaturecustomdateFormat.hashCode());
@@ -90,6 +105,7 @@ public class EzsignsignaturecustomdateRequest {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignsignaturecustomdateRequest {\n");
     
+    sb.append("  pkiEzsignsignaturecustomdateID: ").append(pkiEzsignsignaturecustomdateID).append("\n");
     sb.append("  iEzsignsignaturecustomdateX: ").append(iEzsignsignaturecustomdateX).append("\n");
     sb.append("  iEzsignsignaturecustomdateY: ").append(iEzsignsignaturecustomdateY).append("\n");
     sb.append("  sEzsignsignaturecustomdateFormat: ").append(sEzsignsignaturecustomdateFormat).append("\n");
