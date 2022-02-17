@@ -327,7 +327,7 @@ public class ObjectEzsignfolderApi {
     }
   }
   /**
-  * Modify an existing Ezsignfolder
+  * Edit an existing Ezsignfolder
   * 
    * @param pkiEzsignfolderID 
    * @param ezsignfolderEditObjectV1Request 
@@ -396,7 +396,7 @@ public class ObjectEzsignfolderApi {
   }
 
       /**
-   * Modify an existing Ezsignfolder
+   * Edit an existing Ezsignfolder
    * 
    * @param pkiEzsignfolderID    * @param ezsignfolderEditObjectV1Request 
   */

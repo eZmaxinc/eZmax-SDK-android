@@ -321,6 +321,10 @@ public class JsonUtil {
       return new TypeToken<List<EzsigndocumentDeleteObjectV1Response>>(){}.getType();
     }
     
+    if ("EzsigndocumentEditEzsignsignaturesV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EzsigndocumentEditEzsignsignaturesV1Response>>(){}.getType();
+    }
+    
     if ("EzsigndocumentGetDownloadUrlV1Response".equalsIgnoreCase(className)) {
       return new TypeToken<List<EzsigndocumentGetDownloadUrlV1Response>>(){}.getType();
     }
@@ -1245,6 +1249,10 @@ public class JsonUtil {
     
     if ("EzsigndocumentDeleteObjectV1Response".equalsIgnoreCase(className)) {
       return new TypeToken<EzsigndocumentDeleteObjectV1Response>(){}.getType();
+    }
+    
+    if ("EzsigndocumentEditEzsignsignaturesV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<EzsigndocumentEditEzsignsignaturesV1Response>(){}.getType();
     }
     
     if ("EzsigndocumentGetDownloadUrlV1Response".equalsIgnoreCase(className)) {

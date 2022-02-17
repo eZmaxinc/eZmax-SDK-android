@@ -32,6 +32,7 @@ import org.openapitools.client.model.EzsigndocumentApplyEzsigntemplateV2Response
 import org.openapitools.client.model.EzsigndocumentCreateObjectV1Request;
 import org.openapitools.client.model.EzsigndocumentCreateObjectV1Response;
 import org.openapitools.client.model.EzsigndocumentDeleteObjectV1Response;
+import org.openapitools.client.model.EzsigndocumentEditEzsignsignaturesV1Response;
 import org.openapitools.client.model.EzsigndocumentGetDownloadUrlV1Response;
 import org.openapitools.client.model.EzsigndocumentGetEzsignpagesV1Response;
 import org.openapitools.client.model.EzsigndocumentGetFormDataV1Response;
@@ -40,6 +41,7 @@ import org.openapitools.client.model.EzsigndocumentGetWordsPositionsV1Request;
 import org.openapitools.client.model.EzsigndocumentGetWordsPositionsV1Response;
 import org.openapitools.client.model.EzsigndocumentPatchObjectV1Request;
 import org.openapitools.client.model.EzsigndocumentPatchObjectV1Response;
+import org.openapitools.client.model.EzsignsignatureRequestCompound;
 import java.io.File;
 import java.util.*;
 
@@ -592,6 +594,145 @@ public class ObjectEzsigndocumentApi {
           public void onResponse(String localVarResponse) {
             try {
               responseListener.onResponse((EzsigndocumentDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsigndocumentDeleteObjectV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Edit multiple ezsignsignatures
+  * Using this endpoint, you can edit multiple ezsignsignatures at the same time.
+   * @param pkiEzsigndocumentID 
+   * @param ezsignsignatureRequestCompound 
+   * @return EzsigndocumentEditEzsignsignaturesV1Response
+  */
+  public EzsigndocumentEditEzsignsignaturesV1Response ezsigndocumentEditEzsignsignaturesV1 (Integer pkiEzsigndocumentID, List<EzsignsignatureRequestCompound> ezsignsignatureRequestCompound) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = ezsignsignatureRequestCompound;
+    // verify the required parameter 'pkiEzsigndocumentID' is set
+    if (pkiEzsigndocumentID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsigndocumentID' when calling ezsigndocumentEditEzsignsignaturesV1",
+        new ApiException(400, "Missing the required parameter 'pkiEzsigndocumentID' when calling ezsigndocumentEditEzsignsignaturesV1"));
+    }
+    // verify the required parameter 'ezsignsignatureRequestCompound' is set
+    if (ezsignsignatureRequestCompound == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'ezsignsignatureRequestCompound' when calling ezsigndocumentEditEzsignsignaturesV1",
+        new ApiException(400, "Missing the required parameter 'ezsignsignatureRequestCompound' when calling ezsigndocumentEditEzsignsignaturesV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures".replaceAll("\\{" + "pkiEzsigndocumentID" + "\\}", apiInvoker.escapeString(pkiEzsigndocumentID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (EzsigndocumentEditEzsignsignaturesV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsigndocumentEditEzsignsignaturesV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Edit multiple ezsignsignatures
+   * Using this endpoint, you can edit multiple ezsignsignatures at the same time.
+   * @param pkiEzsigndocumentID    * @param ezsignsignatureRequestCompound 
+  */
+  public void ezsigndocumentEditEzsignsignaturesV1 (Integer pkiEzsigndocumentID, List<EzsignsignatureRequestCompound> ezsignsignatureRequestCompound, final Response.Listener<EzsigndocumentEditEzsignsignaturesV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = ezsignsignatureRequestCompound;
+
+    // verify the required parameter 'pkiEzsigndocumentID' is set
+    if (pkiEzsigndocumentID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsigndocumentID' when calling ezsigndocumentEditEzsignsignaturesV1",
+        new ApiException(400, "Missing the required parameter 'pkiEzsigndocumentID' when calling ezsigndocumentEditEzsignsignaturesV1"));
+    }
+    // verify the required parameter 'ezsignsignatureRequestCompound' is set
+    if (ezsignsignatureRequestCompound == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'ezsignsignatureRequestCompound' when calling ezsigndocumentEditEzsignsignaturesV1",
+        new ApiException(400, "Missing the required parameter 'ezsignsignatureRequestCompound' when calling ezsigndocumentEditEzsignsignaturesV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiEzsigndocumentID" + "\\}", apiInvoker.escapeString(pkiEzsigndocumentID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((EzsigndocumentEditEzsignsignaturesV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsigndocumentEditEzsignsignaturesV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

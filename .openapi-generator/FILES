@@ -68,6 +68,7 @@ docs/EzsigndocumentCreateObjectV1Response.md
 docs/EzsigndocumentCreateObjectV1ResponseAllOf.md
 docs/EzsigndocumentCreateObjectV1ResponseMPayload.md
 docs/EzsigndocumentDeleteObjectV1Response.md
+docs/EzsigndocumentEditEzsignsignaturesV1Response.md
 docs/EzsigndocumentGetDownloadUrlV1Response.md
 docs/EzsigndocumentGetDownloadUrlV1ResponseAllOf.md
 docs/EzsigndocumentGetDownloadUrlV1ResponseMPayload.md
@@ -353,6 +354,7 @@ src/main/java/org/openapitools/client/model/EzsigndocumentCreateObjectV1Response
 src/main/java/org/openapitools/client/model/EzsigndocumentCreateObjectV1ResponseAllOf.java
 src/main/java/org/openapitools/client/model/EzsigndocumentCreateObjectV1ResponseMPayload.java
 src/main/java/org/openapitools/client/model/EzsigndocumentDeleteObjectV1Response.java
+src/main/java/org/openapitools/client/model/EzsigndocumentEditEzsignsignaturesV1Response.java
 src/main/java/org/openapitools/client/model/EzsigndocumentGetDownloadUrlV1Response.java
 src/main/java/org/openapitools/client/model/EzsigndocumentGetDownloadUrlV1ResponseAllOf.java
 src/main/java/org/openapitools/client/model/EzsigndocumentGetDownloadUrlV1ResponseMPayload.java
