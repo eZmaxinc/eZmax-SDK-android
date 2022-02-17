@@ -32,6 +32,7 @@ import org.openapitools.client.model.EzsigndocumentApplyEzsigntemplateV2Response
 import org.openapitools.client.model.EzsigndocumentCreateObjectV1Request;
 import org.openapitools.client.model.EzsigndocumentCreateObjectV1Response;
 import org.openapitools.client.model.EzsigndocumentDeleteObjectV1Response;
+import org.openapitools.client.model.EzsigndocumentEditEzsignsignaturesV1Request;
 import org.openapitools.client.model.EzsigndocumentEditEzsignsignaturesV1Response;
 import org.openapitools.client.model.EzsigndocumentGetDownloadUrlV1Response;
 import org.openapitools.client.model.EzsigndocumentGetEzsignpagesV1Response;
@@ -41,7 +42,6 @@ import org.openapitools.client.model.EzsigndocumentGetWordsPositionsV1Request;
 import org.openapitools.client.model.EzsigndocumentGetWordsPositionsV1Response;
 import org.openapitools.client.model.EzsigndocumentPatchObjectV1Request;
 import org.openapitools.client.model.EzsigndocumentPatchObjectV1Response;
-import org.openapitools.client.model.EzsignsignatureRequestCompound;
 import java.io.File;
 import java.util.*;
 
@@ -612,20 +612,20 @@ public class ObjectEzsigndocumentApi {
   * Edit multiple ezsignsignatures
   * Using this endpoint, you can edit multiple ezsignsignatures at the same time.
    * @param pkiEzsigndocumentID 
-   * @param ezsignsignatureRequestCompound 
+   * @param ezsigndocumentEditEzsignsignaturesV1Request 
    * @return EzsigndocumentEditEzsignsignaturesV1Response
   */
-  public EzsigndocumentEditEzsignsignaturesV1Response ezsigndocumentEditEzsignsignaturesV1 (Integer pkiEzsigndocumentID, List<EzsignsignatureRequestCompound> ezsignsignatureRequestCompound) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
-    Object postBody = ezsignsignatureRequestCompound;
+  public EzsigndocumentEditEzsignsignaturesV1Response ezsigndocumentEditEzsignsignaturesV1 (Integer pkiEzsigndocumentID, EzsigndocumentEditEzsignsignaturesV1Request ezsigndocumentEditEzsignsignaturesV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = ezsigndocumentEditEzsignsignaturesV1Request;
     // verify the required parameter 'pkiEzsigndocumentID' is set
     if (pkiEzsigndocumentID == null) {
       VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsigndocumentID' when calling ezsigndocumentEditEzsignsignaturesV1",
         new ApiException(400, "Missing the required parameter 'pkiEzsigndocumentID' when calling ezsigndocumentEditEzsignsignaturesV1"));
     }
-    // verify the required parameter 'ezsignsignatureRequestCompound' is set
-    if (ezsignsignatureRequestCompound == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'ezsignsignatureRequestCompound' when calling ezsigndocumentEditEzsignsignaturesV1",
-        new ApiException(400, "Missing the required parameter 'ezsignsignatureRequestCompound' when calling ezsigndocumentEditEzsignsignaturesV1"));
+    // verify the required parameter 'ezsigndocumentEditEzsignsignaturesV1Request' is set
+    if (ezsigndocumentEditEzsignsignaturesV1Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'ezsigndocumentEditEzsignsignaturesV1Request' when calling ezsigndocumentEditEzsignsignaturesV1",
+        new ApiException(400, "Missing the required parameter 'ezsigndocumentEditEzsignsignaturesV1Request' when calling ezsigndocumentEditEzsignsignaturesV1"));
     }
 
     // create path and map variables
@@ -680,20 +680,20 @@ public class ObjectEzsigndocumentApi {
       /**
    * Edit multiple ezsignsignatures
    * Using this endpoint, you can edit multiple ezsignsignatures at the same time.
-   * @param pkiEzsigndocumentID    * @param ezsignsignatureRequestCompound 
+   * @param pkiEzsigndocumentID    * @param ezsigndocumentEditEzsignsignaturesV1Request 
   */
-  public void ezsigndocumentEditEzsignsignaturesV1 (Integer pkiEzsigndocumentID, List<EzsignsignatureRequestCompound> ezsignsignatureRequestCompound, final Response.Listener<EzsigndocumentEditEzsignsignaturesV1Response> responseListener, final Response.ErrorListener errorListener) {
-    Object postBody = ezsignsignatureRequestCompound;
+  public void ezsigndocumentEditEzsignsignaturesV1 (Integer pkiEzsigndocumentID, EzsigndocumentEditEzsignsignaturesV1Request ezsigndocumentEditEzsignsignaturesV1Request, final Response.Listener<EzsigndocumentEditEzsignsignaturesV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = ezsigndocumentEditEzsignsignaturesV1Request;
 
     // verify the required parameter 'pkiEzsigndocumentID' is set
     if (pkiEzsigndocumentID == null) {
       VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsigndocumentID' when calling ezsigndocumentEditEzsignsignaturesV1",
         new ApiException(400, "Missing the required parameter 'pkiEzsigndocumentID' when calling ezsigndocumentEditEzsignsignaturesV1"));
     }
-    // verify the required parameter 'ezsignsignatureRequestCompound' is set
-    if (ezsignsignatureRequestCompound == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'ezsignsignatureRequestCompound' when calling ezsigndocumentEditEzsignsignaturesV1",
-        new ApiException(400, "Missing the required parameter 'ezsignsignatureRequestCompound' when calling ezsigndocumentEditEzsignsignaturesV1"));
+    // verify the required parameter 'ezsigndocumentEditEzsignsignaturesV1Request' is set
+    if (ezsigndocumentEditEzsignsignaturesV1Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'ezsigndocumentEditEzsignsignaturesV1Request' when calling ezsigndocumentEditEzsignsignaturesV1",
+        new ApiException(400, "Missing the required parameter 'ezsigndocumentEditEzsignsignaturesV1Request' when calling ezsigndocumentEditEzsignsignaturesV1"));
     }
 
     // create path and map variables
