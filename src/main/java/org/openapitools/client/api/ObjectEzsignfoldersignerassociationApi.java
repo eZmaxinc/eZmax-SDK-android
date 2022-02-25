@@ -26,6 +26,8 @@ import com.android.volley.VolleyError;
 import org.openapitools.client.model.CommonResponseError;
 import org.openapitools.client.model.EzsignfoldersignerassociationCreateObjectV1Request;
 import org.openapitools.client.model.EzsignfoldersignerassociationCreateObjectV1Response;
+import org.openapitools.client.model.EzsignfoldersignerassociationCreateObjectV2Request;
+import org.openapitools.client.model.EzsignfoldersignerassociationCreateObjectV2Response;
 import org.openapitools.client.model.EzsignfoldersignerassociationDeleteObjectV1Response;
 import org.openapitools.client.model.EzsignfoldersignerassociationGetInPersonLoginUrlV1Response;
 import org.openapitools.client.model.EzsignfoldersignerassociationGetObjectV1Response;
@@ -175,6 +177,134 @@ public class ObjectEzsignfoldersignerassociationApi {
           public void onResponse(String localVarResponse) {
             try {
               responseListener.onResponse((EzsignfoldersignerassociationCreateObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsignfoldersignerassociationCreateObjectV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Create a new Ezsignfoldersignerassociation
+  * The endpoint allows to create one or many elements at once.
+   * @param ezsignfoldersignerassociationCreateObjectV2Request 
+   * @return EzsignfoldersignerassociationCreateObjectV2Response
+  */
+  public EzsignfoldersignerassociationCreateObjectV2Response ezsignfoldersignerassociationCreateObjectV2 (EzsignfoldersignerassociationCreateObjectV2Request ezsignfoldersignerassociationCreateObjectV2Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = ezsignfoldersignerassociationCreateObjectV2Request;
+    // verify the required parameter 'ezsignfoldersignerassociationCreateObjectV2Request' is set
+    if (ezsignfoldersignerassociationCreateObjectV2Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'ezsignfoldersignerassociationCreateObjectV2Request' when calling ezsignfoldersignerassociationCreateObjectV2",
+        new ApiException(400, "Missing the required parameter 'ezsignfoldersignerassociationCreateObjectV2Request' when calling ezsignfoldersignerassociationCreateObjectV2"));
+    }
+
+    // create path and map variables
+    String path = "/2/object/ezsignfoldersignerassociation";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (EzsignfoldersignerassociationCreateObjectV2Response) ApiInvoker.deserialize(localVarResponse, "", EzsignfoldersignerassociationCreateObjectV2Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Create a new Ezsignfoldersignerassociation
+   * The endpoint allows to create one or many elements at once.
+   * @param ezsignfoldersignerassociationCreateObjectV2Request 
+  */
+  public void ezsignfoldersignerassociationCreateObjectV2 (EzsignfoldersignerassociationCreateObjectV2Request ezsignfoldersignerassociationCreateObjectV2Request, final Response.Listener<EzsignfoldersignerassociationCreateObjectV2Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = ezsignfoldersignerassociationCreateObjectV2Request;
+
+    // verify the required parameter 'ezsignfoldersignerassociationCreateObjectV2Request' is set
+    if (ezsignfoldersignerassociationCreateObjectV2Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'ezsignfoldersignerassociationCreateObjectV2Request' when calling ezsignfoldersignerassociationCreateObjectV2",
+        new ApiException(400, "Missing the required parameter 'ezsignfoldersignerassociationCreateObjectV2Request' when calling ezsignfoldersignerassociationCreateObjectV2"));
+    }
+
+    // create path and map variables
+    String path = "/2/object/ezsignfoldersignerassociation".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((EzsignfoldersignerassociationCreateObjectV2Response) ApiInvoker.deserialize(localVarResponse,  "", EzsignfoldersignerassociationCreateObjectV2Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

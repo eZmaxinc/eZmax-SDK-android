@@ -31,6 +31,8 @@ import org.openapitools.client.model.EzsigndocumentApplyEzsigntemplateV2Request;
 import org.openapitools.client.model.EzsigndocumentApplyEzsigntemplateV2Response;
 import org.openapitools.client.model.EzsigndocumentCreateObjectV1Request;
 import org.openapitools.client.model.EzsigndocumentCreateObjectV1Response;
+import org.openapitools.client.model.EzsigndocumentCreateObjectV2Request;
+import org.openapitools.client.model.EzsigndocumentCreateObjectV2Response;
 import org.openapitools.client.model.EzsigndocumentDeleteObjectV1Response;
 import org.openapitools.client.model.EzsigndocumentEditEzsignsignaturesV1Request;
 import org.openapitools.client.model.EzsigndocumentEditEzsignsignaturesV1Response;
@@ -469,6 +471,134 @@ public class ObjectEzsigndocumentApi {
           public void onResponse(String localVarResponse) {
             try {
               responseListener.onResponse((EzsigndocumentCreateObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsigndocumentCreateObjectV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Create a new Ezsigndocument
+  * The endpoint allows to create one or many elements at once.
+   * @param ezsigndocumentCreateObjectV2Request 
+   * @return EzsigndocumentCreateObjectV2Response
+  */
+  public EzsigndocumentCreateObjectV2Response ezsigndocumentCreateObjectV2 (EzsigndocumentCreateObjectV2Request ezsigndocumentCreateObjectV2Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = ezsigndocumentCreateObjectV2Request;
+    // verify the required parameter 'ezsigndocumentCreateObjectV2Request' is set
+    if (ezsigndocumentCreateObjectV2Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'ezsigndocumentCreateObjectV2Request' when calling ezsigndocumentCreateObjectV2",
+        new ApiException(400, "Missing the required parameter 'ezsigndocumentCreateObjectV2Request' when calling ezsigndocumentCreateObjectV2"));
+    }
+
+    // create path and map variables
+    String path = "/2/object/ezsigndocument";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (EzsigndocumentCreateObjectV2Response) ApiInvoker.deserialize(localVarResponse, "", EzsigndocumentCreateObjectV2Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Create a new Ezsigndocument
+   * The endpoint allows to create one or many elements at once.
+   * @param ezsigndocumentCreateObjectV2Request 
+  */
+  public void ezsigndocumentCreateObjectV2 (EzsigndocumentCreateObjectV2Request ezsigndocumentCreateObjectV2Request, final Response.Listener<EzsigndocumentCreateObjectV2Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = ezsigndocumentCreateObjectV2Request;
+
+    // verify the required parameter 'ezsigndocumentCreateObjectV2Request' is set
+    if (ezsigndocumentCreateObjectV2Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'ezsigndocumentCreateObjectV2Request' when calling ezsigndocumentCreateObjectV2",
+        new ApiException(400, "Missing the required parameter 'ezsigndocumentCreateObjectV2Request' when calling ezsigndocumentCreateObjectV2"));
+    }
+
+    // create path and map variables
+    String path = "/2/object/ezsigndocument".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((EzsigndocumentCreateObjectV2Response) ApiInvoker.deserialize(localVarResponse,  "", EzsigndocumentCreateObjectV2Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

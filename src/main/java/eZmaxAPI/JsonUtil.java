@@ -109,6 +109,22 @@ public class JsonUtil {
       return new TypeToken<List<ApikeyCreateObjectV1ResponseMPayload>>(){}.getType();
     }
     
+    if ("ApikeyCreateObjectV2Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ApikeyCreateObjectV2Request>>(){}.getType();
+    }
+    
+    if ("ApikeyCreateObjectV2Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ApikeyCreateObjectV2Response>>(){}.getType();
+    }
+    
+    if ("ApikeyCreateObjectV2ResponseAllOf".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ApikeyCreateObjectV2ResponseAllOf>>(){}.getType();
+    }
+    
+    if ("ApikeyCreateObjectV2ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ApikeyCreateObjectV2ResponseMPayload>>(){}.getType();
+    }
+    
     if ("ApikeyRequest".equalsIgnoreCase(className)) {
       return new TypeToken<List<ApikeyRequest>>(){}.getType();
     }
@@ -337,6 +353,22 @@ public class JsonUtil {
       return new TypeToken<List<EzsigndocumentCreateObjectV1ResponseMPayload>>(){}.getType();
     }
     
+    if ("EzsigndocumentCreateObjectV2Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EzsigndocumentCreateObjectV2Request>>(){}.getType();
+    }
+    
+    if ("EzsigndocumentCreateObjectV2Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EzsigndocumentCreateObjectV2Response>>(){}.getType();
+    }
+    
+    if ("EzsigndocumentCreateObjectV2ResponseAllOf".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EzsigndocumentCreateObjectV2ResponseAllOf>>(){}.getType();
+    }
+    
+    if ("EzsigndocumentCreateObjectV2ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EzsigndocumentCreateObjectV2ResponseMPayload>>(){}.getType();
+    }
+    
     if ("EzsigndocumentDeleteObjectV1Response".equalsIgnoreCase(className)) {
       return new TypeToken<List<EzsigndocumentDeleteObjectV1Response>>(){}.getType();
     }
@@ -477,6 +509,22 @@ public class JsonUtil {
       return new TypeToken<List<EzsignfolderCreateObjectV1ResponseMPayload>>(){}.getType();
     }
     
+    if ("EzsignfolderCreateObjectV2Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EzsignfolderCreateObjectV2Request>>(){}.getType();
+    }
+    
+    if ("EzsignfolderCreateObjectV2Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EzsignfolderCreateObjectV2Response>>(){}.getType();
+    }
+    
+    if ("EzsignfolderCreateObjectV2ResponseAllOf".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EzsignfolderCreateObjectV2ResponseAllOf>>(){}.getType();
+    }
+    
+    if ("EzsignfolderCreateObjectV2ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EzsignfolderCreateObjectV2ResponseMPayload>>(){}.getType();
+    }
+    
     if ("EzsignfolderDeleteObjectV1Response".equalsIgnoreCase(className)) {
       return new TypeToken<List<EzsignfolderDeleteObjectV1Response>>(){}.getType();
     }
@@ -601,6 +649,22 @@ public class JsonUtil {
       return new TypeToken<List<EzsignfoldersignerassociationCreateObjectV1ResponseMPayload>>(){}.getType();
     }
     
+    if ("EzsignfoldersignerassociationCreateObjectV2Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EzsignfoldersignerassociationCreateObjectV2Request>>(){}.getType();
+    }
+    
+    if ("EzsignfoldersignerassociationCreateObjectV2Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EzsignfoldersignerassociationCreateObjectV2Response>>(){}.getType();
+    }
+    
+    if ("EzsignfoldersignerassociationCreateObjectV2ResponseAllOf".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EzsignfoldersignerassociationCreateObjectV2ResponseAllOf>>(){}.getType();
+    }
+    
+    if ("EzsignfoldersignerassociationCreateObjectV2ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EzsignfoldersignerassociationCreateObjectV2ResponseMPayload>>(){}.getType();
+    }
+    
     if ("EzsignfoldersignerassociationDeleteObjectV1Response".equalsIgnoreCase(className)) {
       return new TypeToken<List<EzsignfoldersignerassociationDeleteObjectV1Response>>(){}.getType();
     }
@@ -715,6 +779,22 @@ public class JsonUtil {
     
     if ("EzsignsignatureCreateObjectV1ResponseMPayload".equalsIgnoreCase(className)) {
       return new TypeToken<List<EzsignsignatureCreateObjectV1ResponseMPayload>>(){}.getType();
+    }
+    
+    if ("EzsignsignatureCreateObjectV2Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EzsignsignatureCreateObjectV2Request>>(){}.getType();
+    }
+    
+    if ("EzsignsignatureCreateObjectV2Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EzsignsignatureCreateObjectV2Response>>(){}.getType();
+    }
+    
+    if ("EzsignsignatureCreateObjectV2ResponseAllOf".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EzsignsignatureCreateObjectV2ResponseAllOf>>(){}.getType();
+    }
+    
+    if ("EzsignsignatureCreateObjectV2ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EzsignsignatureCreateObjectV2ResponseMPayload>>(){}.getType();
     }
     
     if ("EzsignsignatureDeleteObjectV1Response".equalsIgnoreCase(className)) {
@@ -867,6 +947,22 @@ public class JsonUtil {
     
     if ("FranchisereferalincomeCreateObjectV1ResponseMPayload".equalsIgnoreCase(className)) {
       return new TypeToken<List<FranchisereferalincomeCreateObjectV1ResponseMPayload>>(){}.getType();
+    }
+    
+    if ("FranchisereferalincomeCreateObjectV2Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<FranchisereferalincomeCreateObjectV2Request>>(){}.getType();
+    }
+    
+    if ("FranchisereferalincomeCreateObjectV2Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<FranchisereferalincomeCreateObjectV2Response>>(){}.getType();
+    }
+    
+    if ("FranchisereferalincomeCreateObjectV2ResponseAllOf".equalsIgnoreCase(className)) {
+      return new TypeToken<List<FranchisereferalincomeCreateObjectV2ResponseAllOf>>(){}.getType();
+    }
+    
+    if ("FranchisereferalincomeCreateObjectV2ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<FranchisereferalincomeCreateObjectV2ResponseMPayload>>(){}.getType();
     }
     
     if ("FranchisereferalincomeRequest".equalsIgnoreCase(className)) {
@@ -1053,6 +1149,22 @@ public class JsonUtil {
     
     if ("ApikeyCreateObjectV1ResponseMPayload".equalsIgnoreCase(className)) {
       return new TypeToken<ApikeyCreateObjectV1ResponseMPayload>(){}.getType();
+    }
+    
+    if ("ApikeyCreateObjectV2Request".equalsIgnoreCase(className)) {
+      return new TypeToken<ApikeyCreateObjectV2Request>(){}.getType();
+    }
+    
+    if ("ApikeyCreateObjectV2Response".equalsIgnoreCase(className)) {
+      return new TypeToken<ApikeyCreateObjectV2Response>(){}.getType();
+    }
+    
+    if ("ApikeyCreateObjectV2ResponseAllOf".equalsIgnoreCase(className)) {
+      return new TypeToken<ApikeyCreateObjectV2ResponseAllOf>(){}.getType();
+    }
+    
+    if ("ApikeyCreateObjectV2ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<ApikeyCreateObjectV2ResponseMPayload>(){}.getType();
     }
     
     if ("ApikeyRequest".equalsIgnoreCase(className)) {
@@ -1283,6 +1395,22 @@ public class JsonUtil {
       return new TypeToken<EzsigndocumentCreateObjectV1ResponseMPayload>(){}.getType();
     }
     
+    if ("EzsigndocumentCreateObjectV2Request".equalsIgnoreCase(className)) {
+      return new TypeToken<EzsigndocumentCreateObjectV2Request>(){}.getType();
+    }
+    
+    if ("EzsigndocumentCreateObjectV2Response".equalsIgnoreCase(className)) {
+      return new TypeToken<EzsigndocumentCreateObjectV2Response>(){}.getType();
+    }
+    
+    if ("EzsigndocumentCreateObjectV2ResponseAllOf".equalsIgnoreCase(className)) {
+      return new TypeToken<EzsigndocumentCreateObjectV2ResponseAllOf>(){}.getType();
+    }
+    
+    if ("EzsigndocumentCreateObjectV2ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<EzsigndocumentCreateObjectV2ResponseMPayload>(){}.getType();
+    }
+    
     if ("EzsigndocumentDeleteObjectV1Response".equalsIgnoreCase(className)) {
       return new TypeToken<EzsigndocumentDeleteObjectV1Response>(){}.getType();
     }
@@ -1423,6 +1551,22 @@ public class JsonUtil {
       return new TypeToken<EzsignfolderCreateObjectV1ResponseMPayload>(){}.getType();
     }
     
+    if ("EzsignfolderCreateObjectV2Request".equalsIgnoreCase(className)) {
+      return new TypeToken<EzsignfolderCreateObjectV2Request>(){}.getType();
+    }
+    
+    if ("EzsignfolderCreateObjectV2Response".equalsIgnoreCase(className)) {
+      return new TypeToken<EzsignfolderCreateObjectV2Response>(){}.getType();
+    }
+    
+    if ("EzsignfolderCreateObjectV2ResponseAllOf".equalsIgnoreCase(className)) {
+      return new TypeToken<EzsignfolderCreateObjectV2ResponseAllOf>(){}.getType();
+    }
+    
+    if ("EzsignfolderCreateObjectV2ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<EzsignfolderCreateObjectV2ResponseMPayload>(){}.getType();
+    }
+    
     if ("EzsignfolderDeleteObjectV1Response".equalsIgnoreCase(className)) {
       return new TypeToken<EzsignfolderDeleteObjectV1Response>(){}.getType();
     }
@@ -1547,6 +1691,22 @@ public class JsonUtil {
       return new TypeToken<EzsignfoldersignerassociationCreateObjectV1ResponseMPayload>(){}.getType();
     }
     
+    if ("EzsignfoldersignerassociationCreateObjectV2Request".equalsIgnoreCase(className)) {
+      return new TypeToken<EzsignfoldersignerassociationCreateObjectV2Request>(){}.getType();
+    }
+    
+    if ("EzsignfoldersignerassociationCreateObjectV2Response".equalsIgnoreCase(className)) {
+      return new TypeToken<EzsignfoldersignerassociationCreateObjectV2Response>(){}.getType();
+    }
+    
+    if ("EzsignfoldersignerassociationCreateObjectV2ResponseAllOf".equalsIgnoreCase(className)) {
+      return new TypeToken<EzsignfoldersignerassociationCreateObjectV2ResponseAllOf>(){}.getType();
+    }
+    
+    if ("EzsignfoldersignerassociationCreateObjectV2ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<EzsignfoldersignerassociationCreateObjectV2ResponseMPayload>(){}.getType();
+    }
+    
     if ("EzsignfoldersignerassociationDeleteObjectV1Response".equalsIgnoreCase(className)) {
       return new TypeToken<EzsignfoldersignerassociationDeleteObjectV1Response>(){}.getType();
     }
@@ -1661,6 +1821,22 @@ public class JsonUtil {
     
     if ("EzsignsignatureCreateObjectV1ResponseMPayload".equalsIgnoreCase(className)) {
       return new TypeToken<EzsignsignatureCreateObjectV1ResponseMPayload>(){}.getType();
+    }
+    
+    if ("EzsignsignatureCreateObjectV2Request".equalsIgnoreCase(className)) {
+      return new TypeToken<EzsignsignatureCreateObjectV2Request>(){}.getType();
+    }
+    
+    if ("EzsignsignatureCreateObjectV2Response".equalsIgnoreCase(className)) {
+      return new TypeToken<EzsignsignatureCreateObjectV2Response>(){}.getType();
+    }
+    
+    if ("EzsignsignatureCreateObjectV2ResponseAllOf".equalsIgnoreCase(className)) {
+      return new TypeToken<EzsignsignatureCreateObjectV2ResponseAllOf>(){}.getType();
+    }
+    
+    if ("EzsignsignatureCreateObjectV2ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<EzsignsignatureCreateObjectV2ResponseMPayload>(){}.getType();
     }
     
     if ("EzsignsignatureDeleteObjectV1Response".equalsIgnoreCase(className)) {
@@ -1813,6 +1989,22 @@ public class JsonUtil {
     
     if ("FranchisereferalincomeCreateObjectV1ResponseMPayload".equalsIgnoreCase(className)) {
       return new TypeToken<FranchisereferalincomeCreateObjectV1ResponseMPayload>(){}.getType();
+    }
+    
+    if ("FranchisereferalincomeCreateObjectV2Request".equalsIgnoreCase(className)) {
+      return new TypeToken<FranchisereferalincomeCreateObjectV2Request>(){}.getType();
+    }
+    
+    if ("FranchisereferalincomeCreateObjectV2Response".equalsIgnoreCase(className)) {
+      return new TypeToken<FranchisereferalincomeCreateObjectV2Response>(){}.getType();
+    }
+    
+    if ("FranchisereferalincomeCreateObjectV2ResponseAllOf".equalsIgnoreCase(className)) {
+      return new TypeToken<FranchisereferalincomeCreateObjectV2ResponseAllOf>(){}.getType();
+    }
+    
+    if ("FranchisereferalincomeCreateObjectV2ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<FranchisereferalincomeCreateObjectV2ResponseMPayload>(){}.getType();
     }
     
     if ("FranchisereferalincomeRequest".equalsIgnoreCase(className)) {
