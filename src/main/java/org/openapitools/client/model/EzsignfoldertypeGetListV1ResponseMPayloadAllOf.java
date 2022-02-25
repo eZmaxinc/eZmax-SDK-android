@@ -24,6 +24,7 @@ public class EzsignfoldertypeGetListV1ResponseMPayloadAllOf {
   private List<EzsignfoldertypeListElement> aObjEzsignfoldertype = null;
 
   /**
+   * 
    **/
   @ApiModelProperty(required = true, value = "")
   public List<EzsignfoldertypeListElement> getAObjEzsignfoldertype() {

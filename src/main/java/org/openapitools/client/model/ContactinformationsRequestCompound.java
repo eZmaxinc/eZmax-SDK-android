@@ -46,6 +46,7 @@ public class ContactinformationsRequestCompound {
   private Integer iWebsiteDefault = null;
 
   /**
+   * 
    **/
   @ApiModelProperty(required = true, value = "")
   public List<AddressRequest> getAObjAddress() {
@@ -56,6 +57,7 @@ public class ContactinformationsRequestCompound {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(required = true, value = "")
   public List<PhoneRequest> getAObjPhone() {
@@ -66,6 +68,7 @@ public class ContactinformationsRequestCompound {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(required = true, value = "")
   public List<EmailRequest> getAObjEmail() {
@@ -76,6 +79,7 @@ public class ContactinformationsRequestCompound {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(required = true, value = "")
   public List<WebsiteRequest> getAObjWebsite() {

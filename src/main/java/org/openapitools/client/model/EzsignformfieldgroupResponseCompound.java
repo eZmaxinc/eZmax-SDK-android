@@ -42,6 +42,7 @@ public class EzsignformfieldgroupResponseCompound {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(required = true, value = "")
   public List<EzsignformfieldResponse> getAObjEzsignformfield() {

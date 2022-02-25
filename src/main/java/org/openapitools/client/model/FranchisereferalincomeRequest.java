@@ -146,9 +146,9 @@ public class FranchisereferalincomeRequest {
   }
 
   /**
-   * A comment about the transaction
+   * Comment about the transaction
    **/
-  @ApiModelProperty(required = true, value = "A comment about the transaction")
+  @ApiModelProperty(required = true, value = "Comment about the transaction")
   public String getTFranchisereferalincomeComment() {
     return tFranchisereferalincomeComment;
   }
@@ -168,6 +168,7 @@ public class FranchisereferalincomeRequest {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(required = true, value = "")
   public String getSFranchisereferalincomeRemoteid() {

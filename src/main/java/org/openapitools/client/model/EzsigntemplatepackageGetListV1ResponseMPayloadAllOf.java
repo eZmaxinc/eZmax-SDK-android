@@ -24,6 +24,7 @@ public class EzsigntemplatepackageGetListV1ResponseMPayloadAllOf {
   private List<EzsigntemplatepackageListElement> aObjEzsigntemplatepackage = null;
 
   /**
+   * 
    **/
   @ApiModelProperty(required = true, value = "")
   public List<EzsigntemplatepackageListElement> getAObjEzsigntemplatepackage() {

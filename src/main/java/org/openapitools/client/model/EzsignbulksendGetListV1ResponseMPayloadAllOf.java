@@ -24,6 +24,7 @@ public class EzsignbulksendGetListV1ResponseMPayloadAllOf {
   private List<EzsignbulksendListElement> aObjEzsignbulksend = null;
 
   /**
+   * 
    **/
   @ApiModelProperty(required = true, value = "")
   public List<EzsignbulksendListElement> getAObjEzsignbulksend() {

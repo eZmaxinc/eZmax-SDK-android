@@ -24,6 +24,7 @@ public class EzsignformfieldgroupResponseCompoundAllOf {
   private List<EzsignformfieldResponse> aObjEzsignformfield = null;
 
   /**
+   * 
    **/
   @ApiModelProperty(required = true, value = "")
   public List<EzsignformfieldResponse> getAObjEzsignformfield() {

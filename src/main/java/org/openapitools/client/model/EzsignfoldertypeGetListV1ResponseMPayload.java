@@ -33,6 +33,7 @@ public class EzsignfoldertypeGetListV1ResponseMPayload {
   private Integer iRowFiltered = null;
 
   /**
+   * 
    **/
   @ApiModelProperty(required = true, value = "")
   public List<EzsignfoldertypeListElement> getAObjEzsignfoldertype() {

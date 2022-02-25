@@ -79,6 +79,7 @@ public class CustomFormDataSignerResponse {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(required = true, value = "")
   public List<EzsignformfieldgroupResponseCompound> getAObjEzsignformfieldgroupCompound() {

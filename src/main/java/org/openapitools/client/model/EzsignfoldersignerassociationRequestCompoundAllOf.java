@@ -24,7 +24,7 @@ public class EzsignfoldersignerassociationRequestCompoundAllOf {
 
   /**
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "")
   public EzsignsignerRequestCompound getObjEzsignsigner() {
     return objEzsignsigner;
   }

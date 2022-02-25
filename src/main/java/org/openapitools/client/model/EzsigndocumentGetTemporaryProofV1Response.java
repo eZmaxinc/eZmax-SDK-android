@@ -15,19 +15,33 @@ package org.openapitools.client.model;
 import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseObjDebug;
 import org.openapitools.client.model.CommonResponseObjDebugPayload;
+import org.openapitools.client.model.EzsigndocumentGetTemporaryProofV1ResponseAllOf;
+import org.openapitools.client.model.EzsigndocumentGetTemporaryProofV1ResponseMPayload;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Response for the /1/object/ezsignfoldersignerassociation/editObject API Request
+ * Response for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getTemporaryProof API Request
  **/
-@ApiModel(description = "Response for the /1/object/ezsignfoldersignerassociation/editObject API Request")
-public class UNUSEDEzsignfoldersignerassociationEditObjectV1Response {
+@ApiModel(description = "Response for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getTemporaryProof API Request")
+public class EzsigndocumentGetTemporaryProofV1Response {
   
+  @SerializedName("mPayload")
+  private EzsigndocumentGetTemporaryProofV1ResponseMPayload mPayload = null;
   @SerializedName("objDebugPayload")
   private CommonResponseObjDebugPayload objDebugPayload = null;
   @SerializedName("objDebug")
   private CommonResponseObjDebug objDebug = null;
+
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public EzsigndocumentGetTemporaryProofV1ResponseMPayload getMPayload() {
+    return mPayload;
+  }
+  public void setMPayload(EzsigndocumentGetTemporaryProofV1ResponseMPayload mPayload) {
+    this.mPayload = mPayload;
+  }
 
   /**
    **/
@@ -58,14 +72,16 @@ public class UNUSEDEzsignfoldersignerassociationEditObjectV1Response {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    UNUSEDEzsignfoldersignerassociationEditObjectV1Response uNUSEDEzsignfoldersignerassociationEditObjectV1Response = (UNUSEDEzsignfoldersignerassociationEditObjectV1Response) o;
-    return (this.objDebugPayload == null ? uNUSEDEzsignfoldersignerassociationEditObjectV1Response.objDebugPayload == null : this.objDebugPayload.equals(uNUSEDEzsignfoldersignerassociationEditObjectV1Response.objDebugPayload)) &&
-        (this.objDebug == null ? uNUSEDEzsignfoldersignerassociationEditObjectV1Response.objDebug == null : this.objDebug.equals(uNUSEDEzsignfoldersignerassociationEditObjectV1Response.objDebug));
+    EzsigndocumentGetTemporaryProofV1Response ezsigndocumentGetTemporaryProofV1Response = (EzsigndocumentGetTemporaryProofV1Response) o;
+    return (this.mPayload == null ? ezsigndocumentGetTemporaryProofV1Response.mPayload == null : this.mPayload.equals(ezsigndocumentGetTemporaryProofV1Response.mPayload)) &&
+        (this.objDebugPayload == null ? ezsigndocumentGetTemporaryProofV1Response.objDebugPayload == null : this.objDebugPayload.equals(ezsigndocumentGetTemporaryProofV1Response.objDebugPayload)) &&
+        (this.objDebug == null ? ezsigndocumentGetTemporaryProofV1Response.objDebug == null : this.objDebug.equals(ezsigndocumentGetTemporaryProofV1Response.objDebug));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
+    result = 31 * result + (this.mPayload == null ? 0: this.mPayload.hashCode());
     result = 31 * result + (this.objDebugPayload == null ? 0: this.objDebugPayload.hashCode());
     result = 31 * result + (this.objDebug == null ? 0: this.objDebug.hashCode());
     return result;
@@ -74,8 +90,9 @@ public class UNUSEDEzsignfoldersignerassociationEditObjectV1Response {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class UNUSEDEzsignfoldersignerassociationEditObjectV1Response {\n");
+    sb.append("class EzsigndocumentGetTemporaryProofV1Response {\n");
     
+    sb.append("  mPayload: ").append(mPayload).append("\n");
     sb.append("  objDebugPayload: ").append(objDebugPayload).append("\n");
     sb.append("  objDebug: ").append(objDebug).append("\n");
     sb.append("}\n");

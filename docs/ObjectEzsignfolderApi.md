@@ -69,6 +69,8 @@ Name | Type | Description  | Notes
 
 Delete an existing Ezsignfolder
 
+
+
 ### Example
 
 ```java
@@ -112,6 +114,8 @@ Name | Type | Description  | Notes
 > EzsignfolderEditObjectV1Response ezsignfolderEditObjectV1(pkiEzsignfolderID, ezsignfolderEditObjectV1Request)
 
 Edit an existing Ezsignfolder
+
+
 
 ### Example
 
@@ -159,6 +163,8 @@ Name | Type | Description  | Notes
 
 Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments
 
+
+
 ### Example
 
 ```java
@@ -203,6 +209,8 @@ Name | Type | Description  | Notes
 
 Retrieve an existing Ezsignfolder&#39;s Ezsignfoldersignerassociations
 
+
+
 ### Example
 
 ```java
@@ -246,6 +254,8 @@ Name | Type | Description  | Notes
 > EzsignfolderGetFormsDataV1Response ezsignfolderGetFormsDataV1(pkiEzsignfolderID)
 
 Retrieve an existing Ezsignfolder&#39;s forms data
+
+
 
 ### Example
 
@@ -345,6 +355,8 @@ Name | Type | Description  | Notes
 
 Retrieve an existing Ezsignfolder
 
+
+
 ### Example
 
 ```java
@@ -388,6 +400,8 @@ Name | Type | Description  | Notes
 > EzsignfolderSendV1Response ezsignfolderSendV1(pkiEzsignfolderID, ezsignfolderSendV1Request)
 
 Send the Ezsignfolder to the signatories for signature
+
+
 
 ### Example
 
@@ -445,7 +459,7 @@ Once an Ezsignfolder has been sent to signatories, it cannot be modified.  Using
 
 ObjectEzsignfolderApi apiInstance = new ObjectEzsignfolderApi();
 Integer pkiEzsignfolderID = null; // Integer | 
-String body = "body_example"; // String | 
+Object body = null; // Object | 
 try {
     EzsignfolderUnsendV1Response result = apiInstance.ezsignfolderUnsendV1(pkiEzsignfolderID, body);
     System.out.println(result);
@@ -461,7 +475,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiEzsignfolderID** | **Integer**|  | [default to null]
- **body** | **String**|  |
+ **body** | **Object**|  |
 
 ### Return type
 

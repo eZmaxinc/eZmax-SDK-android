@@ -41,6 +41,7 @@ public class EzsigndocumentApplyEzsigntemplateV1Request {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(required = true, value = "")
   public List<String> getASEzsigntemplatesigner() {

@@ -19,10 +19,10 @@ import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Response for the /1/object/ezsignsignature/editObject API Request
+ * Response for the /1/object/ezsigndocument/{pkiEzsigndocument}/endPrematurely API Request
  **/
-@ApiModel(description = "Response for the /1/object/ezsignsignature/editObject API Request")
-public class UNUSEDEzsignsignatureEditObjectV1Response {
+@ApiModel(description = "Response for the /1/object/ezsigndocument/{pkiEzsigndocument}/endPrematurely API Request")
+public class EzsigndocumentEndPrematurelyV1Response {
   
   @SerializedName("objDebugPayload")
   private CommonResponseObjDebugPayload objDebugPayload = null;
@@ -58,9 +58,9 @@ public class UNUSEDEzsignsignatureEditObjectV1Response {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    UNUSEDEzsignsignatureEditObjectV1Response uNUSEDEzsignsignatureEditObjectV1Response = (UNUSEDEzsignsignatureEditObjectV1Response) o;
-    return (this.objDebugPayload == null ? uNUSEDEzsignsignatureEditObjectV1Response.objDebugPayload == null : this.objDebugPayload.equals(uNUSEDEzsignsignatureEditObjectV1Response.objDebugPayload)) &&
-        (this.objDebug == null ? uNUSEDEzsignsignatureEditObjectV1Response.objDebug == null : this.objDebug.equals(uNUSEDEzsignsignatureEditObjectV1Response.objDebug));
+    EzsigndocumentEndPrematurelyV1Response ezsigndocumentEndPrematurelyV1Response = (EzsigndocumentEndPrematurelyV1Response) o;
+    return (this.objDebugPayload == null ? ezsigndocumentEndPrematurelyV1Response.objDebugPayload == null : this.objDebugPayload.equals(ezsigndocumentEndPrematurelyV1Response.objDebugPayload)) &&
+        (this.objDebug == null ? ezsigndocumentEndPrematurelyV1Response.objDebug == null : this.objDebug.equals(ezsigndocumentEndPrematurelyV1Response.objDebug));
   }
 
   @Override
@@ -74,7 +74,7 @@ public class UNUSEDEzsignsignatureEditObjectV1Response {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class UNUSEDEzsignsignatureEditObjectV1Response {\n");
+    sb.append("class EzsigndocumentEndPrematurelyV1Response {\n");
     
     sb.append("  objDebugPayload: ").append(objDebugPayload).append("\n");
     sb.append("  objDebug: ").append(objDebug).append("\n");

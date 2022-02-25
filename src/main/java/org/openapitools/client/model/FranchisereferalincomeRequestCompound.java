@@ -66,6 +66,7 @@ public class FranchisereferalincomeRequestCompound {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(required = true, value = "")
   public List<ContactRequestCompound> getAObjContact() {
@@ -175,9 +176,9 @@ public class FranchisereferalincomeRequestCompound {
   }
 
   /**
-   * A comment about the transaction
+   * Comment about the transaction
    **/
-  @ApiModelProperty(required = true, value = "A comment about the transaction")
+  @ApiModelProperty(required = true, value = "Comment about the transaction")
   public String getTFranchisereferalincomeComment() {
     return tFranchisereferalincomeComment;
   }
@@ -197,6 +198,7 @@ public class FranchisereferalincomeRequestCompound {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(required = true, value = "")
   public String getSFranchisereferalincomeRemoteid() {

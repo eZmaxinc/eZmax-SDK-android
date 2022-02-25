@@ -27,6 +27,7 @@ public class ListSaveListpresentationV1Request {
   private List<ListpresentationRequest> aObjListpresentation = null;
 
   /**
+   * 
    **/
   @ApiModelProperty(required = true, value = "")
   public List<ListpresentationRequest> getAObjListpresentation() {

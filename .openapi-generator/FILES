@@ -58,7 +58,12 @@ docs/EzsignbulksendGetListV1Response.md
 docs/EzsignbulksendGetListV1ResponseAllOf.md
 docs/EzsignbulksendGetListV1ResponseMPayload.md
 docs/EzsignbulksendGetListV1ResponseMPayloadAllOf.md
+docs/EzsignbulksendGetObjectV1Response.md
+docs/EzsignbulksendGetObjectV1ResponseAllOf.md
+docs/EzsignbulksendGetObjectV1ResponseMPayload.md
 docs/EzsignbulksendListElement.md
+docs/EzsignbulksendResponse.md
+docs/EzsignbulksendResponseCompound.md
 docs/EzsigndocumentApplyEzsigntemplateV1Request.md
 docs/EzsigndocumentApplyEzsigntemplateV1Response.md
 docs/EzsigndocumentApplyEzsigntemplateV2Request.md
@@ -70,6 +75,7 @@ docs/EzsigndocumentCreateObjectV1ResponseMPayload.md
 docs/EzsigndocumentDeleteObjectV1Response.md
 docs/EzsigndocumentEditEzsignsignaturesV1Request.md
 docs/EzsigndocumentEditEzsignsignaturesV1Response.md
+docs/EzsigndocumentEndPrematurelyV1Response.md
 docs/EzsigndocumentGetDownloadUrlV1Response.md
 docs/EzsigndocumentGetDownloadUrlV1ResponseAllOf.md
 docs/EzsigndocumentGetDownloadUrlV1ResponseMPayload.md
@@ -82,6 +88,9 @@ docs/EzsigndocumentGetFormDataV1ResponseMPayload.md
 docs/EzsigndocumentGetObjectV1Response.md
 docs/EzsigndocumentGetObjectV1ResponseAllOf.md
 docs/EzsigndocumentGetObjectV1ResponseMPayload.md
+docs/EzsigndocumentGetTemporaryProofV1Response.md
+docs/EzsigndocumentGetTemporaryProofV1ResponseAllOf.md
+docs/EzsigndocumentGetTemporaryProofV1ResponseMPayload.md
 docs/EzsigndocumentGetWordsPositionsV1Request.md
 docs/EzsigndocumentGetWordsPositionsV1Response.md
 docs/EzsigndocumentGetWordsPositionsV1ResponseAllOf.md
@@ -93,6 +102,7 @@ docs/EzsigndocumentRequestPatch.md
 docs/EzsigndocumentResponse.md
 docs/EzsigndocumentResponseCompound.md
 docs/EzsigndocumentResponseCompoundAllOf.md
+docs/EzsigndocumentlogResponse.md
 docs/EzsignfolderCreateObjectV1Request.md
 docs/EzsignfolderCreateObjectV1Response.md
 docs/EzsignfolderCreateObjectV1ResponseAllOf.md
@@ -182,6 +192,7 @@ docs/EzsigntemplatepackageListElement.md
 docs/FieldEActivesessionSessiontype.md
 docs/FieldEActivesessionWeekdaystart.md
 docs/FieldEEzsigndocumentStep.md
+docs/FieldEEzsigndocumentlogType.md
 docs/FieldEEzsignfolderSendreminderfrequency.md
 docs/FieldEEzsignfolderStep.md
 docs/FieldEEzsignfoldertypePrivacylevel.md
@@ -208,7 +219,6 @@ docs/ListSaveListpresentationV1Response.md
 docs/ListpresentationRequest.md
 docs/ModuleAuthenticateApi.md
 docs/ModuleListApi.md
-docs/ModuleSsprApi.md
 docs/ModuleUserApi.md
 docs/MultilingualApikeyDescription.md
 docs/ObjectActivesessionApi.md
@@ -231,14 +241,6 @@ docs/SsprSendUsernamesV1Request.md
 docs/SsprUnlockAccountRequestV1Request.md
 docs/SsprUnlockAccountV1Request.md
 docs/SsprValidateTokenV1Request.md
-docs/UNUSEDEzsigndocumentEditObjectV1Request.md
-docs/UNUSEDEzsigndocumentEditObjectV1Response.md
-docs/UNUSEDEzsignfolderEditObjectV1Request.md
-docs/UNUSEDEzsignfolderEditObjectV1Response.md
-docs/UNUSEDEzsignfoldersignerassociationEditObjectV1Request.md
-docs/UNUSEDEzsignfoldersignerassociationEditObjectV1Response.md
-docs/UNUSEDEzsignsignatureEditObjectV1Request.md
-docs/UNUSEDEzsignsignatureEditObjectV1Response.md
 docs/UserCreateEzsignuserV1Request.md
 docs/UserCreateEzsignuserV1Response.md
 docs/UserCreateEzsignuserV1ResponseAllOf.md
@@ -274,7 +276,6 @@ src/main/java/eZmaxAPI/request/PutRequest.java
 src/main/java/org/openapitools/client/api/GlobalCustomerApi.java
 src/main/java/org/openapitools/client/api/ModuleAuthenticateApi.java
 src/main/java/org/openapitools/client/api/ModuleListApi.java
-src/main/java/org/openapitools/client/api/ModuleSsprApi.java
 src/main/java/org/openapitools/client/api/ModuleUserApi.java
 src/main/java/org/openapitools/client/api/ObjectActivesessionApi.java
 src/main/java/org/openapitools/client/api/ObjectApikeyApi.java
@@ -345,7 +346,12 @@ src/main/java/org/openapitools/client/model/EzsignbulksendGetListV1Response.java
 src/main/java/org/openapitools/client/model/EzsignbulksendGetListV1ResponseAllOf.java
 src/main/java/org/openapitools/client/model/EzsignbulksendGetListV1ResponseMPayload.java
 src/main/java/org/openapitools/client/model/EzsignbulksendGetListV1ResponseMPayloadAllOf.java
+src/main/java/org/openapitools/client/model/EzsignbulksendGetObjectV1Response.java
+src/main/java/org/openapitools/client/model/EzsignbulksendGetObjectV1ResponseAllOf.java
+src/main/java/org/openapitools/client/model/EzsignbulksendGetObjectV1ResponseMPayload.java
 src/main/java/org/openapitools/client/model/EzsignbulksendListElement.java
+src/main/java/org/openapitools/client/model/EzsignbulksendResponse.java
+src/main/java/org/openapitools/client/model/EzsignbulksendResponseCompound.java
 src/main/java/org/openapitools/client/model/EzsigndocumentApplyEzsigntemplateV1Request.java
 src/main/java/org/openapitools/client/model/EzsigndocumentApplyEzsigntemplateV1Response.java
 src/main/java/org/openapitools/client/model/EzsigndocumentApplyEzsigntemplateV2Request.java
@@ -357,6 +363,7 @@ src/main/java/org/openapitools/client/model/EzsigndocumentCreateObjectV1Response
 src/main/java/org/openapitools/client/model/EzsigndocumentDeleteObjectV1Response.java
 src/main/java/org/openapitools/client/model/EzsigndocumentEditEzsignsignaturesV1Request.java
 src/main/java/org/openapitools/client/model/EzsigndocumentEditEzsignsignaturesV1Response.java
+src/main/java/org/openapitools/client/model/EzsigndocumentEndPrematurelyV1Response.java
 src/main/java/org/openapitools/client/model/EzsigndocumentGetDownloadUrlV1Response.java
 src/main/java/org/openapitools/client/model/EzsigndocumentGetDownloadUrlV1ResponseAllOf.java
 src/main/java/org/openapitools/client/model/EzsigndocumentGetDownloadUrlV1ResponseMPayload.java
@@ -369,6 +376,9 @@ src/main/java/org/openapitools/client/model/EzsigndocumentGetFormDataV1ResponseM
 src/main/java/org/openapitools/client/model/EzsigndocumentGetObjectV1Response.java
 src/main/java/org/openapitools/client/model/EzsigndocumentGetObjectV1ResponseAllOf.java
 src/main/java/org/openapitools/client/model/EzsigndocumentGetObjectV1ResponseMPayload.java
+src/main/java/org/openapitools/client/model/EzsigndocumentGetTemporaryProofV1Response.java
+src/main/java/org/openapitools/client/model/EzsigndocumentGetTemporaryProofV1ResponseAllOf.java
+src/main/java/org/openapitools/client/model/EzsigndocumentGetTemporaryProofV1ResponseMPayload.java
 src/main/java/org/openapitools/client/model/EzsigndocumentGetWordsPositionsV1Request.java
 src/main/java/org/openapitools/client/model/EzsigndocumentGetWordsPositionsV1Response.java
 src/main/java/org/openapitools/client/model/EzsigndocumentGetWordsPositionsV1ResponseAllOf.java
@@ -380,6 +390,7 @@ src/main/java/org/openapitools/client/model/EzsigndocumentRequestPatch.java
 src/main/java/org/openapitools/client/model/EzsigndocumentResponse.java
 src/main/java/org/openapitools/client/model/EzsigndocumentResponseCompound.java
 src/main/java/org/openapitools/client/model/EzsigndocumentResponseCompoundAllOf.java
+src/main/java/org/openapitools/client/model/EzsigndocumentlogResponse.java
 src/main/java/org/openapitools/client/model/EzsignfolderCreateObjectV1Request.java
 src/main/java/org/openapitools/client/model/EzsignfolderCreateObjectV1Response.java
 src/main/java/org/openapitools/client/model/EzsignfolderCreateObjectV1ResponseAllOf.java
@@ -469,6 +480,7 @@ src/main/java/org/openapitools/client/model/EzsigntemplatepackageListElement.jav
 src/main/java/org/openapitools/client/model/FieldEActivesessionSessiontype.java
 src/main/java/org/openapitools/client/model/FieldEActivesessionWeekdaystart.java
 src/main/java/org/openapitools/client/model/FieldEEzsigndocumentStep.java
+src/main/java/org/openapitools/client/model/FieldEEzsigndocumentlogType.java
 src/main/java/org/openapitools/client/model/FieldEEzsignfolderSendreminderfrequency.java
 src/main/java/org/openapitools/client/model/FieldEEzsignfolderStep.java
 src/main/java/org/openapitools/client/model/FieldEEzsignfoldertypePrivacylevel.java
@@ -500,14 +512,6 @@ src/main/java/org/openapitools/client/model/SsprSendUsernamesV1Request.java
 src/main/java/org/openapitools/client/model/SsprUnlockAccountRequestV1Request.java
 src/main/java/org/openapitools/client/model/SsprUnlockAccountV1Request.java
 src/main/java/org/openapitools/client/model/SsprValidateTokenV1Request.java
-src/main/java/org/openapitools/client/model/UNUSEDEzsigndocumentEditObjectV1Request.java
-src/main/java/org/openapitools/client/model/UNUSEDEzsigndocumentEditObjectV1Response.java
-src/main/java/org/openapitools/client/model/UNUSEDEzsignfolderEditObjectV1Request.java
-src/main/java/org/openapitools/client/model/UNUSEDEzsignfolderEditObjectV1Response.java
-src/main/java/org/openapitools/client/model/UNUSEDEzsignfoldersignerassociationEditObjectV1Request.java
-src/main/java/org/openapitools/client/model/UNUSEDEzsignfoldersignerassociationEditObjectV1Response.java
-src/main/java/org/openapitools/client/model/UNUSEDEzsignsignatureEditObjectV1Request.java
-src/main/java/org/openapitools/client/model/UNUSEDEzsignsignatureEditObjectV1Response.java
 src/main/java/org/openapitools/client/model/UserCreateEzsignuserV1Request.java
 src/main/java/org/openapitools/client/model/UserCreateEzsignuserV1Response.java
 src/main/java/org/openapitools/client/model/UserCreateEzsignuserV1ResponseAllOf.java

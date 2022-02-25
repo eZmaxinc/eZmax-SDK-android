@@ -33,6 +33,7 @@ public class EzsignbulksendGetListV1ResponseMPayload {
   private Integer iRowFiltered = null;
 
   /**
+   * 
    **/
   @ApiModelProperty(required = true, value = "")
   public List<EzsignbulksendListElement> getAObjEzsignbulksend() {

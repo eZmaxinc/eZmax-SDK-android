@@ -33,6 +33,7 @@ public class ContactinformationsRequestCompoundAllOf {
   private List<WebsiteRequest> aObjWebsite = null;
 
   /**
+   * 
    **/
   @ApiModelProperty(required = true, value = "")
   public List<AddressRequest> getAObjAddress() {
@@ -43,6 +44,7 @@ public class ContactinformationsRequestCompoundAllOf {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(required = true, value = "")
   public List<PhoneRequest> getAObjPhone() {
@@ -53,6 +55,7 @@ public class ContactinformationsRequestCompoundAllOf {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(required = true, value = "")
   public List<EmailRequest> getAObjEmail() {
@@ -63,6 +66,7 @@ public class ContactinformationsRequestCompoundAllOf {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(required = true, value = "")
   public List<WebsiteRequest> getAObjWebsite() {

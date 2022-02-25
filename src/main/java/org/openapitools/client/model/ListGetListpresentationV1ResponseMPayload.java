@@ -27,6 +27,7 @@ public class ListGetListpresentationV1ResponseMPayload {
   private List<ListpresentationRequest> aObjListpresentation = null;
 
   /**
+   * 
    **/
   @ApiModelProperty(required = true, value = "")
   public List<ListpresentationRequest> getAObjListpresentation() {

@@ -33,6 +33,7 @@ public class EzsigntemplatepackageGetListV1ResponseMPayload {
   private Integer iRowFiltered = null;
 
   /**
+   * 
    **/
   @ApiModelProperty(required = true, value = "")
   public List<EzsigntemplatepackageListElement> getAObjEzsigntemplatepackage() {

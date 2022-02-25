@@ -150,9 +150,9 @@ public class EzsignfolderResponse {
   }
 
   /**
-   * Somes extra notes about the eZsign Folder
+   * Note about the Ezsignfolder
    **/
-  @ApiModelProperty(required = true, value = "Somes extra notes about the eZsign Folder")
+  @ApiModelProperty(required = true, value = "Note about the Ezsignfolder")
   public String getTEzsignfolderNote() {
     return tEzsignfolderNote;
   }
