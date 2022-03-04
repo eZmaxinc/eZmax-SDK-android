@@ -12,92 +12,39 @@
 
 package org.openapitools.client.model;
 
+import org.openapitools.client.model.CommonAuditdetail;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Gives informations about the user that created the object and the last user to have modified it.  If the object was never modified after creation, both Created and Modified informations will be the same.  Apikey details will only be provided if the changes were made by an API key.  
+ * Gives informations about the user that created the object and the last user to have modified it.  If the object was never modified after creation, objAuditdetailModified won&#39;t be returned. 
  **/
-@ApiModel(description = "Gives informations about the user that created the object and the last user to have modified it.  If the object was never modified after creation, both Created and Modified informations will be the same.  Apikey details will only be provided if the changes were made by an API key.  ")
+@ApiModel(description = "Gives informations about the user that created the object and the last user to have modified it.  If the object was never modified after creation, objAuditdetailModified won't be returned. ")
 public class CommonAudit {
   
-  @SerializedName("fkiUserIDCreated")
-  private Integer fkiUserIDCreated = null;
-  @SerializedName("fkiUserIDModified")
-  private Integer fkiUserIDModified = null;
-  @SerializedName("fkiApikeyIDCreated")
-  private Integer fkiApikeyIDCreated = null;
-  @SerializedName("fkiApikeyIDModified")
-  private Integer fkiApikeyIDModified = null;
-  @SerializedName("dtCreatedDate")
-  private String dtCreatedDate = null;
-  @SerializedName("dtModifiedDate")
-  private String dtModifiedDate = null;
+  @SerializedName("objAuditdetailCreated")
+  private CommonAuditdetail objAuditdetailCreated = null;
+  @SerializedName("objAuditdetailModified")
+  private CommonAuditdetail objAuditdetailModified = null;
 
   /**
-   * The unique ID of the User
    **/
-  @ApiModelProperty(required = true, value = "The unique ID of the User")
-  public Integer getFkiUserIDCreated() {
-    return fkiUserIDCreated;
+  @ApiModelProperty(required = true, value = "")
+  public CommonAuditdetail getObjAuditdetailCreated() {
+    return objAuditdetailCreated;
   }
-  public void setFkiUserIDCreated(Integer fkiUserIDCreated) {
-    this.fkiUserIDCreated = fkiUserIDCreated;
+  public void setObjAuditdetailCreated(CommonAuditdetail objAuditdetailCreated) {
+    this.objAuditdetailCreated = objAuditdetailCreated;
   }
 
   /**
-   * The unique ID of the User
    **/
-  @ApiModelProperty(required = true, value = "The unique ID of the User")
-  public Integer getFkiUserIDModified() {
-    return fkiUserIDModified;
+  @ApiModelProperty(value = "")
+  public CommonAuditdetail getObjAuditdetailModified() {
+    return objAuditdetailModified;
   }
-  public void setFkiUserIDModified(Integer fkiUserIDModified) {
-    this.fkiUserIDModified = fkiUserIDModified;
-  }
-
-  /**
-   * The unique ID of the Apikey
-   **/
-  @ApiModelProperty(value = "The unique ID of the Apikey")
-  public Integer getFkiApikeyIDCreated() {
-    return fkiApikeyIDCreated;
-  }
-  public void setFkiApikeyIDCreated(Integer fkiApikeyIDCreated) {
-    this.fkiApikeyIDCreated = fkiApikeyIDCreated;
-  }
-
-  /**
-   * The unique ID of the Apikey
-   **/
-  @ApiModelProperty(value = "The unique ID of the Apikey")
-  public Integer getFkiApikeyIDModified() {
-    return fkiApikeyIDModified;
-  }
-  public void setFkiApikeyIDModified(Integer fkiApikeyIDModified) {
-    this.fkiApikeyIDModified = fkiApikeyIDModified;
-  }
-
-  /**
-   * Represent a Date Time. The timezone is the one configured in the User's profile.
-   **/
-  @ApiModelProperty(required = true, value = "Represent a Date Time. The timezone is the one configured in the User's profile.")
-  public String getDtCreatedDate() {
-    return dtCreatedDate;
-  }
-  public void setDtCreatedDate(String dtCreatedDate) {
-    this.dtCreatedDate = dtCreatedDate;
-  }
-
-  /**
-   * Represent a Date Time. The timezone is the one configured in the User's profile.
-   **/
-  @ApiModelProperty(required = true, value = "Represent a Date Time. The timezone is the one configured in the User's profile.")
-  public String getDtModifiedDate() {
-    return dtModifiedDate;
-  }
-  public void setDtModifiedDate(String dtModifiedDate) {
-    this.dtModifiedDate = dtModifiedDate;
+  public void setObjAuditdetailModified(CommonAuditdetail objAuditdetailModified) {
+    this.objAuditdetailModified = objAuditdetailModified;
   }
 
 
@@ -110,23 +57,15 @@ public class CommonAudit {
       return false;
     }
     CommonAudit commonAudit = (CommonAudit) o;
-    return (this.fkiUserIDCreated == null ? commonAudit.fkiUserIDCreated == null : this.fkiUserIDCreated.equals(commonAudit.fkiUserIDCreated)) &&
-        (this.fkiUserIDModified == null ? commonAudit.fkiUserIDModified == null : this.fkiUserIDModified.equals(commonAudit.fkiUserIDModified)) &&
-        (this.fkiApikeyIDCreated == null ? commonAudit.fkiApikeyIDCreated == null : this.fkiApikeyIDCreated.equals(commonAudit.fkiApikeyIDCreated)) &&
-        (this.fkiApikeyIDModified == null ? commonAudit.fkiApikeyIDModified == null : this.fkiApikeyIDModified.equals(commonAudit.fkiApikeyIDModified)) &&
-        (this.dtCreatedDate == null ? commonAudit.dtCreatedDate == null : this.dtCreatedDate.equals(commonAudit.dtCreatedDate)) &&
-        (this.dtModifiedDate == null ? commonAudit.dtModifiedDate == null : this.dtModifiedDate.equals(commonAudit.dtModifiedDate));
+    return (this.objAuditdetailCreated == null ? commonAudit.objAuditdetailCreated == null : this.objAuditdetailCreated.equals(commonAudit.objAuditdetailCreated)) &&
+        (this.objAuditdetailModified == null ? commonAudit.objAuditdetailModified == null : this.objAuditdetailModified.equals(commonAudit.objAuditdetailModified));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.fkiUserIDCreated == null ? 0: this.fkiUserIDCreated.hashCode());
-    result = 31 * result + (this.fkiUserIDModified == null ? 0: this.fkiUserIDModified.hashCode());
-    result = 31 * result + (this.fkiApikeyIDCreated == null ? 0: this.fkiApikeyIDCreated.hashCode());
-    result = 31 * result + (this.fkiApikeyIDModified == null ? 0: this.fkiApikeyIDModified.hashCode());
-    result = 31 * result + (this.dtCreatedDate == null ? 0: this.dtCreatedDate.hashCode());
-    result = 31 * result + (this.dtModifiedDate == null ? 0: this.dtModifiedDate.hashCode());
+    result = 31 * result + (this.objAuditdetailCreated == null ? 0: this.objAuditdetailCreated.hashCode());
+    result = 31 * result + (this.objAuditdetailModified == null ? 0: this.objAuditdetailModified.hashCode());
     return result;
   }
 
@@ -135,12 +74,8 @@ public class CommonAudit {
     StringBuilder sb = new StringBuilder();
     sb.append("class CommonAudit {\n");
     
-    sb.append("  fkiUserIDCreated: ").append(fkiUserIDCreated).append("\n");
-    sb.append("  fkiUserIDModified: ").append(fkiUserIDModified).append("\n");
-    sb.append("  fkiApikeyIDCreated: ").append(fkiApikeyIDCreated).append("\n");
-    sb.append("  fkiApikeyIDModified: ").append(fkiApikeyIDModified).append("\n");
-    sb.append("  dtCreatedDate: ").append(dtCreatedDate).append("\n");
-    sb.append("  dtModifiedDate: ").append(dtModifiedDate).append("\n");
+    sb.append("  objAuditdetailCreated: ").append(objAuditdetailCreated).append("\n");
+    sb.append("  objAuditdetailModified: ").append(objAuditdetailModified).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

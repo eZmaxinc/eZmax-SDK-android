@@ -24,8 +24,6 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "An Ezsignsigner Object and children to create a complete structure")
 public class EzsignsignerResponseCompound {
   
-  @SerializedName("objContact")
-  private EzsignsignerResponseCompoundContact objContact = null;
   @SerializedName("pkiEzsignsignerID")
   private Integer pkiEzsignsignerID = null;
   @SerializedName("fkiTaxassignmentID")
@@ -36,16 +34,8 @@ public class EzsignsignerResponseCompound {
   private Integer fkiUserlogintypeID = null;
   @SerializedName("sUserlogintypeDescriptionX")
   private String sUserlogintypeDescriptionX = null;
-
-  /**
-   **/
-  @ApiModelProperty(required = true, value = "")
-  public EzsignsignerResponseCompoundContact getObjContact() {
-    return objContact;
-  }
-  public void setObjContact(EzsignsignerResponseCompoundContact objContact) {
-    this.objContact = objContact;
-  }
+  @SerializedName("objContact")
+  private EzsignsignerResponseCompoundContact objContact = null;
 
   /**
    * The unique ID of the Ezsignsigner
@@ -83,9 +73,9 @@ public class EzsignsignerResponseCompound {
   }
 
   /**
-   * The unique ID of the Userlogintype
+   * The unique ID of the Userlogintype  Valid values:  |Value|Description|Detail| |-|-|-| |1|**Email Only**|The Ezsignsigner will receive a secure link by email| |2|**Email and phone or SMS**|The Ezsignsigner will receive a secure link by email and will need to authenticate using SMS or Phone call. **Additional fee applies**| |3|**Email and secret question**|The Ezsignsigner will receive a secure link by email and will need to authenticate using a predefined question and answer| |4|**In person only**|The Ezsignsigner will only be able to sign \"In-Person\" and there won't be any authentication. No email will be sent for invitation to sign. Make sure you evaluate the risk of signature denial and at minimum, we recommend you use a handwritten signature type| |5|**In person with phone or SMS**|The Ezsignsigner will only be able to sign \"In-Person\" and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**|
    **/
-  @ApiModelProperty(required = true, value = "The unique ID of the Userlogintype")
+  @ApiModelProperty(required = true, value = "The unique ID of the Userlogintype  Valid values:  |Value|Description|Detail| |-|-|-| |1|**Email Only**|The Ezsignsigner will receive a secure link by email| |2|**Email and phone or SMS**|The Ezsignsigner will receive a secure link by email and will need to authenticate using SMS or Phone call. **Additional fee applies**| |3|**Email and secret question**|The Ezsignsigner will receive a secure link by email and will need to authenticate using a predefined question and answer| |4|**In person only**|The Ezsignsigner will only be able to sign \"In-Person\" and there won't be any authentication. No email will be sent for invitation to sign. Make sure you evaluate the risk of signature denial and at minimum, we recommend you use a handwritten signature type| |5|**In person with phone or SMS**|The Ezsignsigner will only be able to sign \"In-Person\" and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**|")
   public Integer getFkiUserlogintypeID() {
     return fkiUserlogintypeID;
   }
@@ -104,6 +94,16 @@ public class EzsignsignerResponseCompound {
     this.sUserlogintypeDescriptionX = sUserlogintypeDescriptionX;
   }
 
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public EzsignsignerResponseCompoundContact getObjContact() {
+    return objContact;
+  }
+  public void setObjContact(EzsignsignerResponseCompoundContact objContact) {
+    this.objContact = objContact;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -114,23 +114,23 @@ public class EzsignsignerResponseCompound {
       return false;
     }
     EzsignsignerResponseCompound ezsignsignerResponseCompound = (EzsignsignerResponseCompound) o;
-    return (this.objContact == null ? ezsignsignerResponseCompound.objContact == null : this.objContact.equals(ezsignsignerResponseCompound.objContact)) &&
-        (this.pkiEzsignsignerID == null ? ezsignsignerResponseCompound.pkiEzsignsignerID == null : this.pkiEzsignsignerID.equals(ezsignsignerResponseCompound.pkiEzsignsignerID)) &&
+    return (this.pkiEzsignsignerID == null ? ezsignsignerResponseCompound.pkiEzsignsignerID == null : this.pkiEzsignsignerID.equals(ezsignsignerResponseCompound.pkiEzsignsignerID)) &&
         (this.fkiTaxassignmentID == null ? ezsignsignerResponseCompound.fkiTaxassignmentID == null : this.fkiTaxassignmentID.equals(ezsignsignerResponseCompound.fkiTaxassignmentID)) &&
         (this.fkiSecretquestionID == null ? ezsignsignerResponseCompound.fkiSecretquestionID == null : this.fkiSecretquestionID.equals(ezsignsignerResponseCompound.fkiSecretquestionID)) &&
         (this.fkiUserlogintypeID == null ? ezsignsignerResponseCompound.fkiUserlogintypeID == null : this.fkiUserlogintypeID.equals(ezsignsignerResponseCompound.fkiUserlogintypeID)) &&
-        (this.sUserlogintypeDescriptionX == null ? ezsignsignerResponseCompound.sUserlogintypeDescriptionX == null : this.sUserlogintypeDescriptionX.equals(ezsignsignerResponseCompound.sUserlogintypeDescriptionX));
+        (this.sUserlogintypeDescriptionX == null ? ezsignsignerResponseCompound.sUserlogintypeDescriptionX == null : this.sUserlogintypeDescriptionX.equals(ezsignsignerResponseCompound.sUserlogintypeDescriptionX)) &&
+        (this.objContact == null ? ezsignsignerResponseCompound.objContact == null : this.objContact.equals(ezsignsignerResponseCompound.objContact));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.objContact == null ? 0: this.objContact.hashCode());
     result = 31 * result + (this.pkiEzsignsignerID == null ? 0: this.pkiEzsignsignerID.hashCode());
     result = 31 * result + (this.fkiTaxassignmentID == null ? 0: this.fkiTaxassignmentID.hashCode());
     result = 31 * result + (this.fkiSecretquestionID == null ? 0: this.fkiSecretquestionID.hashCode());
     result = 31 * result + (this.fkiUserlogintypeID == null ? 0: this.fkiUserlogintypeID.hashCode());
     result = 31 * result + (this.sUserlogintypeDescriptionX == null ? 0: this.sUserlogintypeDescriptionX.hashCode());
+    result = 31 * result + (this.objContact == null ? 0: this.objContact.hashCode());
     return result;
   }
 
@@ -139,12 +139,12 @@ public class EzsignsignerResponseCompound {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignsignerResponseCompound {\n");
     
-    sb.append("  objContact: ").append(objContact).append("\n");
     sb.append("  pkiEzsignsignerID: ").append(pkiEzsignsignerID).append("\n");
     sb.append("  fkiTaxassignmentID: ").append(fkiTaxassignmentID).append("\n");
     sb.append("  fkiSecretquestionID: ").append(fkiSecretquestionID).append("\n");
     sb.append("  fkiUserlogintypeID: ").append(fkiUserlogintypeID).append("\n");
     sb.append("  sUserlogintypeDescriptionX: ").append(sUserlogintypeDescriptionX).append("\n");
+    sb.append("  objContact: ").append(objContact).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

@@ -13,7 +13,7 @@
 package org.openapitools.client.model;
 
 import java.util.*;
-import org.openapitools.client.model.EzsignpageResponse;
+import org.openapitools.client.model.EzsignpageResponseCompound;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -24,16 +24,15 @@ import com.google.gson.annotations.SerializedName;
 public class EzsigndocumentGetEzsignpagesV1ResponseMPayload {
   
   @SerializedName("a_objEzsignpage")
-  private List<EzsignpageResponse> aObjEzsignpage = null;
+  private List<EzsignpageResponseCompound> aObjEzsignpage = null;
 
   /**
-   * 
    **/
   @ApiModelProperty(required = true, value = "")
-  public List<EzsignpageResponse> getAObjEzsignpage() {
+  public List<EzsignpageResponseCompound> getAObjEzsignpage() {
     return aObjEzsignpage;
   }
-  public void setAObjEzsignpage(List<EzsignpageResponse> aObjEzsignpage) {
+  public void setAObjEzsignpage(List<EzsignpageResponseCompound> aObjEzsignpage) {
     this.aObjEzsignpage = aObjEzsignpage;
   }
 

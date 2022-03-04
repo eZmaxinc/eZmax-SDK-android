@@ -6,7 +6,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjEzsignpage** | [**List&lt;EzsignpageResponse&gt;**](EzsignpageResponse.md) |  | 
+**aObjEzsignpage** | [**List&lt;EzsignpageResponseCompound&gt;**](EzsignpageResponseCompound.md) |  | 
 
 
 

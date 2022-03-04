@@ -24,8 +24,6 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "A Contact Object and children to create a complete structure")
 public class ContactRequestCompound {
   
-  @SerializedName("objContactinformations")
-  private ContactinformationsRequestCompound objContactinformations = null;
   @SerializedName("fkiContacttitleID")
   private Integer fkiContacttitleID = null;
   @SerializedName("fkiLanguageID")
@@ -38,16 +36,8 @@ public class ContactRequestCompound {
   private String sContactCompany = null;
   @SerializedName("dtContactBirthdate")
   private String dtContactBirthdate = null;
-
-  /**
-   **/
-  @ApiModelProperty(required = true, value = "")
-  public ContactinformationsRequestCompound getObjContactinformations() {
-    return objContactinformations;
-  }
-  public void setObjContactinformations(ContactinformationsRequestCompound objContactinformations) {
-    this.objContactinformations = objContactinformations;
-  }
+  @SerializedName("objContactinformations")
+  private ContactinformationsRequestCompound objContactinformations = null;
 
   /**
    * The unique ID of the Contacttitle.  Valid values:  |Value|Description| |-|-| |1|Ms.| |2|Mr.| |4|(Blank)| |5|Me (For Notaries)|
@@ -117,6 +107,16 @@ public class ContactRequestCompound {
     this.dtContactBirthdate = dtContactBirthdate;
   }
 
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public ContactinformationsRequestCompound getObjContactinformations() {
+    return objContactinformations;
+  }
+  public void setObjContactinformations(ContactinformationsRequestCompound objContactinformations) {
+    this.objContactinformations = objContactinformations;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -127,25 +127,25 @@ public class ContactRequestCompound {
       return false;
     }
     ContactRequestCompound contactRequestCompound = (ContactRequestCompound) o;
-    return (this.objContactinformations == null ? contactRequestCompound.objContactinformations == null : this.objContactinformations.equals(contactRequestCompound.objContactinformations)) &&
-        (this.fkiContacttitleID == null ? contactRequestCompound.fkiContacttitleID == null : this.fkiContacttitleID.equals(contactRequestCompound.fkiContacttitleID)) &&
+    return (this.fkiContacttitleID == null ? contactRequestCompound.fkiContacttitleID == null : this.fkiContacttitleID.equals(contactRequestCompound.fkiContacttitleID)) &&
         (this.fkiLanguageID == null ? contactRequestCompound.fkiLanguageID == null : this.fkiLanguageID.equals(contactRequestCompound.fkiLanguageID)) &&
         (this.sContactFirstname == null ? contactRequestCompound.sContactFirstname == null : this.sContactFirstname.equals(contactRequestCompound.sContactFirstname)) &&
         (this.sContactLastname == null ? contactRequestCompound.sContactLastname == null : this.sContactLastname.equals(contactRequestCompound.sContactLastname)) &&
         (this.sContactCompany == null ? contactRequestCompound.sContactCompany == null : this.sContactCompany.equals(contactRequestCompound.sContactCompany)) &&
-        (this.dtContactBirthdate == null ? contactRequestCompound.dtContactBirthdate == null : this.dtContactBirthdate.equals(contactRequestCompound.dtContactBirthdate));
+        (this.dtContactBirthdate == null ? contactRequestCompound.dtContactBirthdate == null : this.dtContactBirthdate.equals(contactRequestCompound.dtContactBirthdate)) &&
+        (this.objContactinformations == null ? contactRequestCompound.objContactinformations == null : this.objContactinformations.equals(contactRequestCompound.objContactinformations));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.objContactinformations == null ? 0: this.objContactinformations.hashCode());
     result = 31 * result + (this.fkiContacttitleID == null ? 0: this.fkiContacttitleID.hashCode());
     result = 31 * result + (this.fkiLanguageID == null ? 0: this.fkiLanguageID.hashCode());
     result = 31 * result + (this.sContactFirstname == null ? 0: this.sContactFirstname.hashCode());
     result = 31 * result + (this.sContactLastname == null ? 0: this.sContactLastname.hashCode());
     result = 31 * result + (this.sContactCompany == null ? 0: this.sContactCompany.hashCode());
     result = 31 * result + (this.dtContactBirthdate == null ? 0: this.dtContactBirthdate.hashCode());
+    result = 31 * result + (this.objContactinformations == null ? 0: this.objContactinformations.hashCode());
     return result;
   }
 
@@ -154,13 +154,13 @@ public class ContactRequestCompound {
     StringBuilder sb = new StringBuilder();
     sb.append("class ContactRequestCompound {\n");
     
-    sb.append("  objContactinformations: ").append(objContactinformations).append("\n");
     sb.append("  fkiContacttitleID: ").append(fkiContacttitleID).append("\n");
     sb.append("  fkiLanguageID: ").append(fkiLanguageID).append("\n");
     sb.append("  sContactFirstname: ").append(sContactFirstname).append("\n");
     sb.append("  sContactLastname: ").append(sContactLastname).append("\n");
     sb.append("  sContactCompany: ").append(sContactCompany).append("\n");
     sb.append("  dtContactBirthdate: ").append(dtContactBirthdate).append("\n");
+    sb.append("  objContactinformations: ").append(objContactinformations).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

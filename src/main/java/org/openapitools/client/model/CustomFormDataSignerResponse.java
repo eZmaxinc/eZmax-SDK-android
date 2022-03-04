@@ -13,7 +13,7 @@
 package org.openapitools.client.model;
 
 import java.util.*;
-import org.openapitools.client.model.EzsignformfieldgroupResponseCompound;
+import org.openapitools.client.model.CustomFormDataEzsignformfieldgroupResponse;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -31,8 +31,8 @@ public class CustomFormDataSignerResponse {
   private String sContactFirstname = null;
   @SerializedName("sContactLastname")
   private String sContactLastname = null;
-  @SerializedName("a_objEzsignformfieldgroupCompound")
-  private List<EzsignformfieldgroupResponseCompound> aObjEzsignformfieldgroupCompound = null;
+  @SerializedName("a_objEzsignformfieldgroup")
+  private List<CustomFormDataEzsignformfieldgroupResponse> aObjEzsignformfieldgroup = null;
 
   /**
    * The unique ID of the Ezsignfoldersignerassociation
@@ -79,14 +79,13 @@ public class CustomFormDataSignerResponse {
   }
 
   /**
-   * 
    **/
   @ApiModelProperty(required = true, value = "")
-  public List<EzsignformfieldgroupResponseCompound> getAObjEzsignformfieldgroupCompound() {
-    return aObjEzsignformfieldgroupCompound;
+  public List<CustomFormDataEzsignformfieldgroupResponse> getAObjEzsignformfieldgroup() {
+    return aObjEzsignformfieldgroup;
   }
-  public void setAObjEzsignformfieldgroupCompound(List<EzsignformfieldgroupResponseCompound> aObjEzsignformfieldgroupCompound) {
-    this.aObjEzsignformfieldgroupCompound = aObjEzsignformfieldgroupCompound;
+  public void setAObjEzsignformfieldgroup(List<CustomFormDataEzsignformfieldgroupResponse> aObjEzsignformfieldgroup) {
+    this.aObjEzsignformfieldgroup = aObjEzsignformfieldgroup;
   }
 
 
@@ -103,7 +102,7 @@ public class CustomFormDataSignerResponse {
         (this.fkiUserID == null ? customFormDataSignerResponse.fkiUserID == null : this.fkiUserID.equals(customFormDataSignerResponse.fkiUserID)) &&
         (this.sContactFirstname == null ? customFormDataSignerResponse.sContactFirstname == null : this.sContactFirstname.equals(customFormDataSignerResponse.sContactFirstname)) &&
         (this.sContactLastname == null ? customFormDataSignerResponse.sContactLastname == null : this.sContactLastname.equals(customFormDataSignerResponse.sContactLastname)) &&
-        (this.aObjEzsignformfieldgroupCompound == null ? customFormDataSignerResponse.aObjEzsignformfieldgroupCompound == null : this.aObjEzsignformfieldgroupCompound.equals(customFormDataSignerResponse.aObjEzsignformfieldgroupCompound));
+        (this.aObjEzsignformfieldgroup == null ? customFormDataSignerResponse.aObjEzsignformfieldgroup == null : this.aObjEzsignformfieldgroup.equals(customFormDataSignerResponse.aObjEzsignformfieldgroup));
   }
 
   @Override
@@ -113,7 +112,7 @@ public class CustomFormDataSignerResponse {
     result = 31 * result + (this.fkiUserID == null ? 0: this.fkiUserID.hashCode());
     result = 31 * result + (this.sContactFirstname == null ? 0: this.sContactFirstname.hashCode());
     result = 31 * result + (this.sContactLastname == null ? 0: this.sContactLastname.hashCode());
-    result = 31 * result + (this.aObjEzsignformfieldgroupCompound == null ? 0: this.aObjEzsignformfieldgroupCompound.hashCode());
+    result = 31 * result + (this.aObjEzsignformfieldgroup == null ? 0: this.aObjEzsignformfieldgroup.hashCode());
     return result;
   }
 
@@ -126,7 +125,7 @@ public class CustomFormDataSignerResponse {
     sb.append("  fkiUserID: ").append(fkiUserID).append("\n");
     sb.append("  sContactFirstname: ").append(sContactFirstname).append("\n");
     sb.append("  sContactLastname: ").append(sContactLastname).append("\n");
-    sb.append("  aObjEzsignformfieldgroupCompound: ").append(aObjEzsignformfieldgroupCompound).append("\n");
+    sb.append("  aObjEzsignformfieldgroup: ").append(aObjEzsignformfieldgroup).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

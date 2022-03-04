@@ -27,7 +27,6 @@ public class EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload {
   private List<EzsignfoldersignerassociationResponseCompound> aObjEzsignfoldersignerassociation = null;
 
   /**
-   * 
    **/
   @ApiModelProperty(required = true, value = "")
   public List<EzsignfoldersignerassociationResponseCompound> getAObjEzsignfoldersignerassociation() {

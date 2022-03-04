@@ -26,10 +26,6 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "A Franchisereferalincome Object and children to create a complete structure")
 public class FranchisereferalincomeRequestCompound {
   
-  @SerializedName("objAddress")
-  private AddressRequest objAddress = null;
-  @SerializedName("a_objContact")
-  private List<ContactRequestCompound> aObjContact = null;
   @SerializedName("pkiFranchisereferalincomeID")
   private Integer pkiFranchisereferalincomeID = null;
   @SerializedName("fkiFranchisebrokerID")
@@ -54,27 +50,10 @@ public class FranchisereferalincomeRequestCompound {
   private Integer fkiFranchiseofficeID = null;
   @SerializedName("sFranchisereferalincomeRemoteid")
   private String sFranchisereferalincomeRemoteid = null;
-
-  /**
-   **/
-  @ApiModelProperty(required = true, value = "")
-  public AddressRequest getObjAddress() {
-    return objAddress;
-  }
-  public void setObjAddress(AddressRequest objAddress) {
-    this.objAddress = objAddress;
-  }
-
-  /**
-   * 
-   **/
-  @ApiModelProperty(required = true, value = "")
-  public List<ContactRequestCompound> getAObjContact() {
-    return aObjContact;
-  }
-  public void setAObjContact(List<ContactRequestCompound> aObjContact) {
-    this.aObjContact = aObjContact;
-  }
+  @SerializedName("objAddress")
+  private AddressRequest objAddress = null;
+  @SerializedName("a_objContact")
+  private List<ContactRequestCompound> aObjContact = null;
 
   /**
    * The unique ID of the Franchisereferalincome
@@ -208,6 +187,26 @@ public class FranchisereferalincomeRequestCompound {
     this.sFranchisereferalincomeRemoteid = sFranchisereferalincomeRemoteid;
   }
 
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public AddressRequest getObjAddress() {
+    return objAddress;
+  }
+  public void setObjAddress(AddressRequest objAddress) {
+    this.objAddress = objAddress;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public List<ContactRequestCompound> getAObjContact() {
+    return aObjContact;
+  }
+  public void setAObjContact(List<ContactRequestCompound> aObjContact) {
+    this.aObjContact = aObjContact;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -218,9 +217,7 @@ public class FranchisereferalincomeRequestCompound {
       return false;
     }
     FranchisereferalincomeRequestCompound franchisereferalincomeRequestCompound = (FranchisereferalincomeRequestCompound) o;
-    return (this.objAddress == null ? franchisereferalincomeRequestCompound.objAddress == null : this.objAddress.equals(franchisereferalincomeRequestCompound.objAddress)) &&
-        (this.aObjContact == null ? franchisereferalincomeRequestCompound.aObjContact == null : this.aObjContact.equals(franchisereferalincomeRequestCompound.aObjContact)) &&
-        (this.pkiFranchisereferalincomeID == null ? franchisereferalincomeRequestCompound.pkiFranchisereferalincomeID == null : this.pkiFranchisereferalincomeID.equals(franchisereferalincomeRequestCompound.pkiFranchisereferalincomeID)) &&
+    return (this.pkiFranchisereferalincomeID == null ? franchisereferalincomeRequestCompound.pkiFranchisereferalincomeID == null : this.pkiFranchisereferalincomeID.equals(franchisereferalincomeRequestCompound.pkiFranchisereferalincomeID)) &&
         (this.fkiFranchisebrokerID == null ? franchisereferalincomeRequestCompound.fkiFranchisebrokerID == null : this.fkiFranchisebrokerID.equals(franchisereferalincomeRequestCompound.fkiFranchisebrokerID)) &&
         (this.fkiFranchisereferalincomeprogramID == null ? franchisereferalincomeRequestCompound.fkiFranchisereferalincomeprogramID == null : this.fkiFranchisereferalincomeprogramID.equals(franchisereferalincomeRequestCompound.fkiFranchisereferalincomeprogramID)) &&
         (this.fkiPeriodID == null ? franchisereferalincomeRequestCompound.fkiPeriodID == null : this.fkiPeriodID.equals(franchisereferalincomeRequestCompound.fkiPeriodID)) &&
@@ -231,14 +228,14 @@ public class FranchisereferalincomeRequestCompound {
         (this.dtFranchisereferalincomeDisbursed == null ? franchisereferalincomeRequestCompound.dtFranchisereferalincomeDisbursed == null : this.dtFranchisereferalincomeDisbursed.equals(franchisereferalincomeRequestCompound.dtFranchisereferalincomeDisbursed)) &&
         (this.tFranchisereferalincomeComment == null ? franchisereferalincomeRequestCompound.tFranchisereferalincomeComment == null : this.tFranchisereferalincomeComment.equals(franchisereferalincomeRequestCompound.tFranchisereferalincomeComment)) &&
         (this.fkiFranchiseofficeID == null ? franchisereferalincomeRequestCompound.fkiFranchiseofficeID == null : this.fkiFranchiseofficeID.equals(franchisereferalincomeRequestCompound.fkiFranchiseofficeID)) &&
-        (this.sFranchisereferalincomeRemoteid == null ? franchisereferalincomeRequestCompound.sFranchisereferalincomeRemoteid == null : this.sFranchisereferalincomeRemoteid.equals(franchisereferalincomeRequestCompound.sFranchisereferalincomeRemoteid));
+        (this.sFranchisereferalincomeRemoteid == null ? franchisereferalincomeRequestCompound.sFranchisereferalincomeRemoteid == null : this.sFranchisereferalincomeRemoteid.equals(franchisereferalincomeRequestCompound.sFranchisereferalincomeRemoteid)) &&
+        (this.objAddress == null ? franchisereferalincomeRequestCompound.objAddress == null : this.objAddress.equals(franchisereferalincomeRequestCompound.objAddress)) &&
+        (this.aObjContact == null ? franchisereferalincomeRequestCompound.aObjContact == null : this.aObjContact.equals(franchisereferalincomeRequestCompound.aObjContact));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.objAddress == null ? 0: this.objAddress.hashCode());
-    result = 31 * result + (this.aObjContact == null ? 0: this.aObjContact.hashCode());
     result = 31 * result + (this.pkiFranchisereferalincomeID == null ? 0: this.pkiFranchisereferalincomeID.hashCode());
     result = 31 * result + (this.fkiFranchisebrokerID == null ? 0: this.fkiFranchisebrokerID.hashCode());
     result = 31 * result + (this.fkiFranchisereferalincomeprogramID == null ? 0: this.fkiFranchisereferalincomeprogramID.hashCode());
@@ -251,6 +248,8 @@ public class FranchisereferalincomeRequestCompound {
     result = 31 * result + (this.tFranchisereferalincomeComment == null ? 0: this.tFranchisereferalincomeComment.hashCode());
     result = 31 * result + (this.fkiFranchiseofficeID == null ? 0: this.fkiFranchiseofficeID.hashCode());
     result = 31 * result + (this.sFranchisereferalincomeRemoteid == null ? 0: this.sFranchisereferalincomeRemoteid.hashCode());
+    result = 31 * result + (this.objAddress == null ? 0: this.objAddress.hashCode());
+    result = 31 * result + (this.aObjContact == null ? 0: this.aObjContact.hashCode());
     return result;
   }
 
@@ -259,8 +258,6 @@ public class FranchisereferalincomeRequestCompound {
     StringBuilder sb = new StringBuilder();
     sb.append("class FranchisereferalincomeRequestCompound {\n");
     
-    sb.append("  objAddress: ").append(objAddress).append("\n");
-    sb.append("  aObjContact: ").append(aObjContact).append("\n");
     sb.append("  pkiFranchisereferalincomeID: ").append(pkiFranchisereferalincomeID).append("\n");
     sb.append("  fkiFranchisebrokerID: ").append(fkiFranchisebrokerID).append("\n");
     sb.append("  fkiFranchisereferalincomeprogramID: ").append(fkiFranchisereferalincomeprogramID).append("\n");
@@ -273,6 +270,8 @@ public class FranchisereferalincomeRequestCompound {
     sb.append("  tFranchisereferalincomeComment: ").append(tFranchisereferalincomeComment).append("\n");
     sb.append("  fkiFranchiseofficeID: ").append(fkiFranchiseofficeID).append("\n");
     sb.append("  sFranchisereferalincomeRemoteid: ").append(sFranchisereferalincomeRemoteid).append("\n");
+    sb.append("  objAddress: ").append(objAddress).append("\n");
+    sb.append("  aObjContact: ").append(aObjContact).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

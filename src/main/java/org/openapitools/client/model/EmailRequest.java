@@ -16,9 +16,9 @@ import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * A Contact Object
+ * An Email Object
  **/
-@ApiModel(description = "A Contact Object")
+@ApiModel(description = "An Email Object")
 public class EmailRequest {
   
   @SerializedName("fkiEmailtypeID")

@@ -15,7 +15,7 @@ package org.openapitools.client.model;
 import java.util.*;
 import org.openapitools.client.model.EzsignsignatureRequest;
 import org.openapitools.client.model.EzsignsignatureRequestCompoundAllOf;
-import org.openapitools.client.model.EzsignsignaturecustomdateRequest;
+import org.openapitools.client.model.EzsignsignaturecustomdateRequestCompound;
 import org.openapitools.client.model.FieldEEzsignsignatureType;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
@@ -26,10 +26,6 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "An Ezsignsignature Object and children to create a complete structure")
 public class EzsignsignatureRequestCompound {
   
-  @SerializedName("bEzsignsignatureCustomdate")
-  private Boolean bEzsignsignatureCustomdate = null;
-  @SerializedName("a_objEzsignsignaturecustomdate")
-  private List<EzsignsignaturecustomdateRequest> aObjEzsignsignaturecustomdate = null;
   @SerializedName("pkiEzsignsignatureID")
   private Integer pkiEzsignsignatureID = null;
   @SerializedName("fkiEzsignfoldersignerassociationID")
@@ -46,28 +42,10 @@ public class EzsignsignatureRequestCompound {
   private FieldEEzsignsignatureType eEzsignsignatureType = null;
   @SerializedName("fkiEzsigndocumentID")
   private Integer fkiEzsigndocumentID = null;
-
-  /**
-   * Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is \"Name\" or \"Handwritten\")
-   **/
-  @ApiModelProperty(value = "Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is \"Name\" or \"Handwritten\")")
-  public Boolean getBEzsignsignatureCustomdate() {
-    return bEzsignsignatureCustomdate;
-  }
-  public void setBEzsignsignatureCustomdate(Boolean bEzsignsignatureCustomdate) {
-    this.bEzsignsignatureCustomdate = bEzsignsignatureCustomdate;
-  }
-
-  /**
-   * An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don't want to have a date at all.
-   **/
-  @ApiModelProperty(value = "An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don't want to have a date at all.")
-  public List<EzsignsignaturecustomdateRequest> getAObjEzsignsignaturecustomdate() {
-    return aObjEzsignsignaturecustomdate;
-  }
-  public void setAObjEzsignsignaturecustomdate(List<EzsignsignaturecustomdateRequest> aObjEzsignsignaturecustomdate) {
-    this.aObjEzsignsignaturecustomdate = aObjEzsignsignaturecustomdate;
-  }
+  @SerializedName("bEzsignsignatureCustomdate")
+  private Boolean bEzsignsignatureCustomdate = null;
+  @SerializedName("a_objEzsignsignaturecustomdate")
+  private List<EzsignsignaturecustomdateRequestCompound> aObjEzsignsignaturecustomdate = null;
 
   /**
    * The unique ID of the Ezsignsignature
@@ -103,9 +81,9 @@ public class EzsignsignatureRequestCompound {
   }
 
   /**
-   * The X coordinate (Horizontal) where to put the signature block on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the signature block 2 inches from the left border of the page, you would use \"200\" for the X coordinate.
+   * The X coordinate (Horizontal) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 2 inches from the left border of the page, you would use \"200\" for the X coordinate.
    **/
-  @ApiModelProperty(required = true, value = "The X coordinate (Horizontal) where to put the signature block on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the signature block 2 inches from the left border of the page, you would use \"200\" for the X coordinate.")
+  @ApiModelProperty(required = true, value = "The X coordinate (Horizontal) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 2 inches from the left border of the page, you would use \"200\" for the X coordinate.")
   public Integer getIEzsignsignatureX() {
     return iEzsignsignatureX;
   }
@@ -125,9 +103,9 @@ public class EzsignsignatureRequestCompound {
   }
 
   /**
-   * The step when the Ezsignsigner will be invited to sign or fill form fields
+   * The step when the Ezsignsigner will be invited to sign
    **/
-  @ApiModelProperty(required = true, value = "The step when the Ezsignsigner will be invited to sign or fill form fields")
+  @ApiModelProperty(required = true, value = "The step when the Ezsignsigner will be invited to sign")
   public Integer getIEzsignsignatureStep() {
     return iEzsignsignatureStep;
   }
@@ -156,6 +134,28 @@ public class EzsignsignatureRequestCompound {
     this.fkiEzsigndocumentID = fkiEzsigndocumentID;
   }
 
+  /**
+   * Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is \"Name\" or \"Handwritten\")
+   **/
+  @ApiModelProperty(value = "Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is \"Name\" or \"Handwritten\")")
+  public Boolean getBEzsignsignatureCustomdate() {
+    return bEzsignsignatureCustomdate;
+  }
+  public void setBEzsignsignatureCustomdate(Boolean bEzsignsignatureCustomdate) {
+    this.bEzsignsignatureCustomdate = bEzsignsignatureCustomdate;
+  }
+
+  /**
+   * An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don't want to have a date at all.
+   **/
+  @ApiModelProperty(value = "An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don't want to have a date at all.")
+  public List<EzsignsignaturecustomdateRequestCompound> getAObjEzsignsignaturecustomdate() {
+    return aObjEzsignsignaturecustomdate;
+  }
+  public void setAObjEzsignsignaturecustomdate(List<EzsignsignaturecustomdateRequestCompound> aObjEzsignsignaturecustomdate) {
+    this.aObjEzsignsignaturecustomdate = aObjEzsignsignaturecustomdate;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -166,23 +166,21 @@ public class EzsignsignatureRequestCompound {
       return false;
     }
     EzsignsignatureRequestCompound ezsignsignatureRequestCompound = (EzsignsignatureRequestCompound) o;
-    return (this.bEzsignsignatureCustomdate == null ? ezsignsignatureRequestCompound.bEzsignsignatureCustomdate == null : this.bEzsignsignatureCustomdate.equals(ezsignsignatureRequestCompound.bEzsignsignatureCustomdate)) &&
-        (this.aObjEzsignsignaturecustomdate == null ? ezsignsignatureRequestCompound.aObjEzsignsignaturecustomdate == null : this.aObjEzsignsignaturecustomdate.equals(ezsignsignatureRequestCompound.aObjEzsignsignaturecustomdate)) &&
-        (this.pkiEzsignsignatureID == null ? ezsignsignatureRequestCompound.pkiEzsignsignatureID == null : this.pkiEzsignsignatureID.equals(ezsignsignatureRequestCompound.pkiEzsignsignatureID)) &&
+    return (this.pkiEzsignsignatureID == null ? ezsignsignatureRequestCompound.pkiEzsignsignatureID == null : this.pkiEzsignsignatureID.equals(ezsignsignatureRequestCompound.pkiEzsignsignatureID)) &&
         (this.fkiEzsignfoldersignerassociationID == null ? ezsignsignatureRequestCompound.fkiEzsignfoldersignerassociationID == null : this.fkiEzsignfoldersignerassociationID.equals(ezsignsignatureRequestCompound.fkiEzsignfoldersignerassociationID)) &&
         (this.iEzsignpagePagenumber == null ? ezsignsignatureRequestCompound.iEzsignpagePagenumber == null : this.iEzsignpagePagenumber.equals(ezsignsignatureRequestCompound.iEzsignpagePagenumber)) &&
         (this.iEzsignsignatureX == null ? ezsignsignatureRequestCompound.iEzsignsignatureX == null : this.iEzsignsignatureX.equals(ezsignsignatureRequestCompound.iEzsignsignatureX)) &&
         (this.iEzsignsignatureY == null ? ezsignsignatureRequestCompound.iEzsignsignatureY == null : this.iEzsignsignatureY.equals(ezsignsignatureRequestCompound.iEzsignsignatureY)) &&
         (this.iEzsignsignatureStep == null ? ezsignsignatureRequestCompound.iEzsignsignatureStep == null : this.iEzsignsignatureStep.equals(ezsignsignatureRequestCompound.iEzsignsignatureStep)) &&
         (this.eEzsignsignatureType == null ? ezsignsignatureRequestCompound.eEzsignsignatureType == null : this.eEzsignsignatureType.equals(ezsignsignatureRequestCompound.eEzsignsignatureType)) &&
-        (this.fkiEzsigndocumentID == null ? ezsignsignatureRequestCompound.fkiEzsigndocumentID == null : this.fkiEzsigndocumentID.equals(ezsignsignatureRequestCompound.fkiEzsigndocumentID));
+        (this.fkiEzsigndocumentID == null ? ezsignsignatureRequestCompound.fkiEzsigndocumentID == null : this.fkiEzsigndocumentID.equals(ezsignsignatureRequestCompound.fkiEzsigndocumentID)) &&
+        (this.bEzsignsignatureCustomdate == null ? ezsignsignatureRequestCompound.bEzsignsignatureCustomdate == null : this.bEzsignsignatureCustomdate.equals(ezsignsignatureRequestCompound.bEzsignsignatureCustomdate)) &&
+        (this.aObjEzsignsignaturecustomdate == null ? ezsignsignatureRequestCompound.aObjEzsignsignaturecustomdate == null : this.aObjEzsignsignaturecustomdate.equals(ezsignsignatureRequestCompound.aObjEzsignsignaturecustomdate));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.bEzsignsignatureCustomdate == null ? 0: this.bEzsignsignatureCustomdate.hashCode());
-    result = 31 * result + (this.aObjEzsignsignaturecustomdate == null ? 0: this.aObjEzsignsignaturecustomdate.hashCode());
     result = 31 * result + (this.pkiEzsignsignatureID == null ? 0: this.pkiEzsignsignatureID.hashCode());
     result = 31 * result + (this.fkiEzsignfoldersignerassociationID == null ? 0: this.fkiEzsignfoldersignerassociationID.hashCode());
     result = 31 * result + (this.iEzsignpagePagenumber == null ? 0: this.iEzsignpagePagenumber.hashCode());
@@ -191,6 +189,8 @@ public class EzsignsignatureRequestCompound {
     result = 31 * result + (this.iEzsignsignatureStep == null ? 0: this.iEzsignsignatureStep.hashCode());
     result = 31 * result + (this.eEzsignsignatureType == null ? 0: this.eEzsignsignatureType.hashCode());
     result = 31 * result + (this.fkiEzsigndocumentID == null ? 0: this.fkiEzsigndocumentID.hashCode());
+    result = 31 * result + (this.bEzsignsignatureCustomdate == null ? 0: this.bEzsignsignatureCustomdate.hashCode());
+    result = 31 * result + (this.aObjEzsignsignaturecustomdate == null ? 0: this.aObjEzsignsignaturecustomdate.hashCode());
     return result;
   }
 
@@ -199,8 +199,6 @@ public class EzsignsignatureRequestCompound {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignsignatureRequestCompound {\n");
     
-    sb.append("  bEzsignsignatureCustomdate: ").append(bEzsignsignatureCustomdate).append("\n");
-    sb.append("  aObjEzsignsignaturecustomdate: ").append(aObjEzsignsignaturecustomdate).append("\n");
     sb.append("  pkiEzsignsignatureID: ").append(pkiEzsignsignatureID).append("\n");
     sb.append("  fkiEzsignfoldersignerassociationID: ").append(fkiEzsignfoldersignerassociationID).append("\n");
     sb.append("  iEzsignpagePagenumber: ").append(iEzsignpagePagenumber).append("\n");
@@ -209,6 +207,8 @@ public class EzsignsignatureRequestCompound {
     sb.append("  iEzsignsignatureStep: ").append(iEzsignsignatureStep).append("\n");
     sb.append("  eEzsignsignatureType: ").append(eEzsignsignatureType).append("\n");
     sb.append("  fkiEzsigndocumentID: ").append(fkiEzsigndocumentID).append("\n");
+    sb.append("  bEzsignsignatureCustomdate: ").append(bEzsignsignatureCustomdate).append("\n");
+    sb.append("  aObjEzsignsignaturecustomdate: ").append(aObjEzsignsignaturecustomdate).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

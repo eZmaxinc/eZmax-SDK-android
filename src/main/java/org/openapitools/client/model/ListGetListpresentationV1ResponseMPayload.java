@@ -13,7 +13,7 @@
 package org.openapitools.client.model;
 
 import java.util.*;
-import org.openapitools.client.model.ListpresentationRequest;
+import org.openapitools.client.model.ListpresentationResponseCompound;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -24,16 +24,15 @@ import com.google.gson.annotations.SerializedName;
 public class ListGetListpresentationV1ResponseMPayload {
   
   @SerializedName("a_objListpresentation")
-  private List<ListpresentationRequest> aObjListpresentation = null;
+  private List<ListpresentationResponseCompound> aObjListpresentation = null;
 
   /**
-   * 
    **/
   @ApiModelProperty(required = true, value = "")
-  public List<ListpresentationRequest> getAObjListpresentation() {
+  public List<ListpresentationResponseCompound> getAObjListpresentation() {
     return aObjListpresentation;
   }
-  public void setAObjListpresentation(List<ListpresentationRequest> aObjListpresentation) {
+  public void setAObjListpresentation(List<ListpresentationResponseCompound> aObjListpresentation) {
     this.aObjListpresentation = aObjListpresentation;
   }
 

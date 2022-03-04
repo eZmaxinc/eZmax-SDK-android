@@ -16,9 +16,9 @@ import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Generic Autocomplete Response
+ * Generic AutocompleteElement Response
  **/
-@ApiModel(description = "Generic Autocomplete Response")
+@ApiModel(description = "Generic AutocompleteElement Response")
 public class CustomAutocompleteElementResponse {
   
   @SerializedName("sCategory")

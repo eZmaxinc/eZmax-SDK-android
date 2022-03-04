@@ -6,10 +6,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjAddress** | [**List&lt;AddressRequest&gt;**](AddressRequest.md) |  | 
-**aObjPhone** | [**List&lt;PhoneRequest&gt;**](PhoneRequest.md) |  | 
-**aObjEmail** | [**List&lt;EmailRequest&gt;**](EmailRequest.md) |  | 
-**aObjWebsite** | [**List&lt;WebsiteRequest&gt;**](WebsiteRequest.md) |  | 
+**aObjAddress** | [**List&lt;AddressRequestCompound&gt;**](AddressRequestCompound.md) |  | 
+**aObjPhone** | [**List&lt;PhoneRequestCompound&gt;**](PhoneRequestCompound.md) |  | 
+**aObjEmail** | [**List&lt;EmailRequestCompound&gt;**](EmailRequestCompound.md) |  | 
+**aObjWebsite** | [**List&lt;WebsiteRequestCompound&gt;**](WebsiteRequestCompound.md) |  | 
 
 
 

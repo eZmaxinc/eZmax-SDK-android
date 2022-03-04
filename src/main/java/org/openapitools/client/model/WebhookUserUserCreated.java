@@ -13,9 +13,9 @@
 package org.openapitools.client.model;
 
 import java.util.*;
-import org.openapitools.client.model.AttemptResponse;
+import org.openapitools.client.model.AttemptResponseCompound;
 import org.openapitools.client.model.CommonWebhook;
-import org.openapitools.client.model.UserResponse;
+import org.openapitools.client.model.UserResponseCompound;
 import org.openapitools.client.model.WebhookResponse;
 import org.openapitools.client.model.WebhookUserUserCreatedAllOf;
 import io.swagger.annotations.*;
@@ -28,19 +28,19 @@ import com.google.gson.annotations.SerializedName;
 public class WebhookUserUserCreated {
   
   @SerializedName("objUser")
-  private UserResponse objUser = null;
+  private UserResponseCompound objUser = null;
   @SerializedName("objWebhook")
   private WebhookResponse objWebhook = null;
   @SerializedName("a_objAttempt")
-  private List<AttemptResponse> aObjAttempt = null;
+  private List<AttemptResponseCompound> aObjAttempt = null;
 
   /**
    **/
   @ApiModelProperty(required = true, value = "")
-  public UserResponse getObjUser() {
+  public UserResponseCompound getObjUser() {
     return objUser;
   }
-  public void setObjUser(UserResponse objUser) {
+  public void setObjUser(UserResponseCompound objUser) {
     this.objUser = objUser;
   }
 
@@ -58,10 +58,10 @@ public class WebhookUserUserCreated {
    * An array containing details of previous attempts that were made to deliver the message. The array is empty if it's the first attempt.
    **/
   @ApiModelProperty(required = true, value = "An array containing details of previous attempts that were made to deliver the message. The array is empty if it's the first attempt.")
-  public List<AttemptResponse> getAObjAttempt() {
+  public List<AttemptResponseCompound> getAObjAttempt() {
     return aObjAttempt;
   }
-  public void setAObjAttempt(List<AttemptResponse> aObjAttempt) {
+  public void setAObjAttempt(List<AttemptResponseCompound> aObjAttempt) {
     this.aObjAttempt = aObjAttempt;
   }
 

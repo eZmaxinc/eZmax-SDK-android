@@ -13,7 +13,9 @@
 package org.openapitools.client.model;
 
 import java.util.*;
-import org.openapitools.client.model.EzsignformfieldResponse;
+import org.openapitools.client.model.CustomDropdownElementResponseCompound;
+import org.openapitools.client.model.EzsignformfieldResponseCompound;
+import org.openapitools.client.model.EzsignformfieldgroupsignerResponseCompound;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -21,17 +23,40 @@ import com.google.gson.annotations.SerializedName;
 public class EzsignformfieldgroupResponseCompoundAllOf {
   
   @SerializedName("a_objEzsignformfield")
-  private List<EzsignformfieldResponse> aObjEzsignformfield = null;
+  private List<EzsignformfieldResponseCompound> aObjEzsignformfield = null;
+  @SerializedName("a_objDropdownElement")
+  private List<CustomDropdownElementResponseCompound> aObjDropdownElement = null;
+  @SerializedName("a_objEzsignformfieldgroupsigner")
+  private EzsignformfieldgroupsignerResponseCompound aObjEzsignformfieldgroupsigner = null;
 
   /**
-   * 
    **/
   @ApiModelProperty(required = true, value = "")
-  public List<EzsignformfieldResponse> getAObjEzsignformfield() {
+  public List<EzsignformfieldResponseCompound> getAObjEzsignformfield() {
     return aObjEzsignformfield;
   }
-  public void setAObjEzsignformfield(List<EzsignformfieldResponse> aObjEzsignformfield) {
+  public void setAObjEzsignformfield(List<EzsignformfieldResponseCompound> aObjEzsignformfield) {
     this.aObjEzsignformfield = aObjEzsignformfield;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public List<CustomDropdownElementResponseCompound> getAObjDropdownElement() {
+    return aObjDropdownElement;
+  }
+  public void setAObjDropdownElement(List<CustomDropdownElementResponseCompound> aObjDropdownElement) {
+    this.aObjDropdownElement = aObjDropdownElement;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public EzsignformfieldgroupsignerResponseCompound getAObjEzsignformfieldgroupsigner() {
+    return aObjEzsignformfieldgroupsigner;
+  }
+  public void setAObjEzsignformfieldgroupsigner(EzsignformfieldgroupsignerResponseCompound aObjEzsignformfieldgroupsigner) {
+    this.aObjEzsignformfieldgroupsigner = aObjEzsignformfieldgroupsigner;
   }
 
 
@@ -44,13 +69,17 @@ public class EzsignformfieldgroupResponseCompoundAllOf {
       return false;
     }
     EzsignformfieldgroupResponseCompoundAllOf ezsignformfieldgroupResponseCompoundAllOf = (EzsignformfieldgroupResponseCompoundAllOf) o;
-    return (this.aObjEzsignformfield == null ? ezsignformfieldgroupResponseCompoundAllOf.aObjEzsignformfield == null : this.aObjEzsignformfield.equals(ezsignformfieldgroupResponseCompoundAllOf.aObjEzsignformfield));
+    return (this.aObjEzsignformfield == null ? ezsignformfieldgroupResponseCompoundAllOf.aObjEzsignformfield == null : this.aObjEzsignformfield.equals(ezsignformfieldgroupResponseCompoundAllOf.aObjEzsignformfield)) &&
+        (this.aObjDropdownElement == null ? ezsignformfieldgroupResponseCompoundAllOf.aObjDropdownElement == null : this.aObjDropdownElement.equals(ezsignformfieldgroupResponseCompoundAllOf.aObjDropdownElement)) &&
+        (this.aObjEzsignformfieldgroupsigner == null ? ezsignformfieldgroupResponseCompoundAllOf.aObjEzsignformfieldgroupsigner == null : this.aObjEzsignformfieldgroupsigner.equals(ezsignformfieldgroupResponseCompoundAllOf.aObjEzsignformfieldgroupsigner));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
     result = 31 * result + (this.aObjEzsignformfield == null ? 0: this.aObjEzsignformfield.hashCode());
+    result = 31 * result + (this.aObjDropdownElement == null ? 0: this.aObjDropdownElement.hashCode());
+    result = 31 * result + (this.aObjEzsignformfieldgroupsigner == null ? 0: this.aObjEzsignformfieldgroupsigner.hashCode());
     return result;
   }
 
@@ -60,6 +89,8 @@ public class EzsignformfieldgroupResponseCompoundAllOf {
     sb.append("class EzsignformfieldgroupResponseCompoundAllOf {\n");
     
     sb.append("  aObjEzsignformfield: ").append(aObjEzsignformfield).append("\n");
+    sb.append("  aObjDropdownElement: ").append(aObjDropdownElement).append("\n");
+    sb.append("  aObjEzsignformfieldgroupsigner: ").append(aObjEzsignformfieldgroupsigner).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

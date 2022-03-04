@@ -6,7 +6,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjEzsigndocumentlog** | [**EzsigndocumentlogResponse**](EzsigndocumentlogResponse.md) |  | 
+**aObjEzsigndocumentlog** | [**EzsigndocumentlogResponseCompound**](EzsigndocumentlogResponseCompound.md) |  | 
 
 
 

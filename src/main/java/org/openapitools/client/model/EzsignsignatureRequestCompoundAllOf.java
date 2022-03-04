@@ -13,7 +13,7 @@
 package org.openapitools.client.model;
 
 import java.util.*;
-import org.openapitools.client.model.EzsignsignaturecustomdateRequest;
+import org.openapitools.client.model.EzsignsignaturecustomdateRequestCompound;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -23,7 +23,7 @@ public class EzsignsignatureRequestCompoundAllOf {
   @SerializedName("bEzsignsignatureCustomdate")
   private Boolean bEzsignsignatureCustomdate = null;
   @SerializedName("a_objEzsignsignaturecustomdate")
-  private List<EzsignsignaturecustomdateRequest> aObjEzsignsignaturecustomdate = null;
+  private List<EzsignsignaturecustomdateRequestCompound> aObjEzsignsignaturecustomdate = null;
 
   /**
    * Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is \"Name\" or \"Handwritten\")
@@ -40,10 +40,10 @@ public class EzsignsignatureRequestCompoundAllOf {
    * An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don't want to have a date at all.
    **/
   @ApiModelProperty(value = "An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don't want to have a date at all.")
-  public List<EzsignsignaturecustomdateRequest> getAObjEzsignsignaturecustomdate() {
+  public List<EzsignsignaturecustomdateRequestCompound> getAObjEzsignsignaturecustomdate() {
     return aObjEzsignsignaturecustomdate;
   }
-  public void setAObjEzsignsignaturecustomdate(List<EzsignsignaturecustomdateRequest> aObjEzsignsignaturecustomdate) {
+  public void setAObjEzsignsignaturecustomdate(List<EzsignsignaturecustomdateRequestCompound> aObjEzsignsignaturecustomdate) {
     this.aObjEzsignsignaturecustomdate = aObjEzsignsignaturecustomdate;
   }
 

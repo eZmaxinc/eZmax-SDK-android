@@ -79,7 +79,6 @@ public class CustomFormDataDocumentResponse {
   }
 
   /**
-   * 
    **/
   @ApiModelProperty(required = true, value = "")
   public List<CustomFormDataSignerResponse> getAObjFormDataSigner() {

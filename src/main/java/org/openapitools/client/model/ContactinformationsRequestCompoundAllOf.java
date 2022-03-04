@@ -13,10 +13,10 @@
 package org.openapitools.client.model;
 
 import java.util.*;
-import org.openapitools.client.model.AddressRequest;
-import org.openapitools.client.model.EmailRequest;
-import org.openapitools.client.model.PhoneRequest;
-import org.openapitools.client.model.WebsiteRequest;
+import org.openapitools.client.model.AddressRequestCompound;
+import org.openapitools.client.model.EmailRequestCompound;
+import org.openapitools.client.model.PhoneRequestCompound;
+import org.openapitools.client.model.WebsiteRequestCompound;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -24,55 +24,51 @@ import com.google.gson.annotations.SerializedName;
 public class ContactinformationsRequestCompoundAllOf {
   
   @SerializedName("a_objAddress")
-  private List<AddressRequest> aObjAddress = null;
+  private List<AddressRequestCompound> aObjAddress = null;
   @SerializedName("a_objPhone")
-  private List<PhoneRequest> aObjPhone = null;
+  private List<PhoneRequestCompound> aObjPhone = null;
   @SerializedName("a_objEmail")
-  private List<EmailRequest> aObjEmail = null;
+  private List<EmailRequestCompound> aObjEmail = null;
   @SerializedName("a_objWebsite")
-  private List<WebsiteRequest> aObjWebsite = null;
+  private List<WebsiteRequestCompound> aObjWebsite = null;
 
   /**
-   * 
    **/
   @ApiModelProperty(required = true, value = "")
-  public List<AddressRequest> getAObjAddress() {
+  public List<AddressRequestCompound> getAObjAddress() {
     return aObjAddress;
   }
-  public void setAObjAddress(List<AddressRequest> aObjAddress) {
+  public void setAObjAddress(List<AddressRequestCompound> aObjAddress) {
     this.aObjAddress = aObjAddress;
   }
 
   /**
-   * 
    **/
   @ApiModelProperty(required = true, value = "")
-  public List<PhoneRequest> getAObjPhone() {
+  public List<PhoneRequestCompound> getAObjPhone() {
     return aObjPhone;
   }
-  public void setAObjPhone(List<PhoneRequest> aObjPhone) {
+  public void setAObjPhone(List<PhoneRequestCompound> aObjPhone) {
     this.aObjPhone = aObjPhone;
   }
 
   /**
-   * 
    **/
   @ApiModelProperty(required = true, value = "")
-  public List<EmailRequest> getAObjEmail() {
+  public List<EmailRequestCompound> getAObjEmail() {
     return aObjEmail;
   }
-  public void setAObjEmail(List<EmailRequest> aObjEmail) {
+  public void setAObjEmail(List<EmailRequestCompound> aObjEmail) {
     this.aObjEmail = aObjEmail;
   }
 
   /**
-   * 
    **/
   @ApiModelProperty(required = true, value = "")
-  public List<WebsiteRequest> getAObjWebsite() {
+  public List<WebsiteRequestCompound> getAObjWebsite() {
     return aObjWebsite;
   }
-  public void setAObjWebsite(List<WebsiteRequest> aObjWebsite) {
+  public void setAObjWebsite(List<WebsiteRequestCompound> aObjWebsite) {
     this.aObjWebsite = aObjWebsite;
   }
 

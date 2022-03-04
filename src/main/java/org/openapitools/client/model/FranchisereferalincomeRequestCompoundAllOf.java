@@ -37,7 +37,6 @@ public class FranchisereferalincomeRequestCompoundAllOf {
   }
 
   /**
-   * 
    **/
   @ApiModelProperty(required = true, value = "")
   public List<ContactRequestCompound> getAObjContact() {

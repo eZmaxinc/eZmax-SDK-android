@@ -12,7 +12,7 @@
 
 package org.openapitools.client.model;
 
-import org.openapitools.client.model.EzsigndocumentlogResponse;
+import org.openapitools.client.model.EzsigndocumentlogResponseCompound;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -23,15 +23,15 @@ import com.google.gson.annotations.SerializedName;
 public class EzsigndocumentGetTemporaryProofV1ResponseMPayload {
   
   @SerializedName("a_objEzsigndocumentlog")
-  private EzsigndocumentlogResponse aObjEzsigndocumentlog = null;
+  private EzsigndocumentlogResponseCompound aObjEzsigndocumentlog = null;
 
   /**
    **/
   @ApiModelProperty(required = true, value = "")
-  public EzsigndocumentlogResponse getAObjEzsigndocumentlog() {
+  public EzsigndocumentlogResponseCompound getAObjEzsigndocumentlog() {
     return aObjEzsigndocumentlog;
   }
-  public void setAObjEzsigndocumentlog(EzsigndocumentlogResponse aObjEzsigndocumentlog) {
+  public void setAObjEzsigndocumentlog(EzsigndocumentlogResponseCompound aObjEzsigndocumentlog) {
     this.aObjEzsigndocumentlog = aObjEzsigndocumentlog;
   }
 

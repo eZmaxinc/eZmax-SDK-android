@@ -27,7 +27,6 @@ public class EzsignfolderGetEzsigndocumentsV1ResponseMPayload {
   private List<EzsigndocumentResponseCompound> aObjEzsigndocument = null;
 
   /**
-   * 
    **/
   @ApiModelProperty(required = true, value = "")
   public List<EzsigndocumentResponseCompound> getAObjEzsigndocument() {

@@ -54,7 +54,6 @@ public class EzsignfolderGetFormsDataV1ResponseMPayload {
   }
 
   /**
-   * 
    **/
   @ApiModelProperty(required = true, value = "")
   public List<CustomFormDataDocumentResponse> getAObjFormDataDocument() {

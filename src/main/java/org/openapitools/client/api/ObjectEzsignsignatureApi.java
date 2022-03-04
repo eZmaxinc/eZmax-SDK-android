@@ -588,7 +588,7 @@ public class ObjectEzsignsignatureApi {
   }
   /**
   * Retrieve an existing Ezsignsignature
-  * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+  * 
    * @param pkiEzsignsignatureID 
    * @return EzsignsignatureGetObjectV1Response
   */
@@ -650,7 +650,7 @@ public class ObjectEzsignsignatureApi {
 
       /**
    * Retrieve an existing Ezsignsignature
-   * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+   * 
    * @param pkiEzsignsignatureID 
   */
   public void ezsignsignatureGetObjectV1 (Integer pkiEzsignsignatureID, final Response.Listener<EzsignsignatureGetObjectV1Response> responseListener, final Response.ErrorListener errorListener) {

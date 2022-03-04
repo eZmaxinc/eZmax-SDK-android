@@ -13,7 +13,7 @@
 package org.openapitools.client.model;
 
 import java.util.*;
-import org.openapitools.client.model.AttemptResponse;
+import org.openapitools.client.model.AttemptResponseCompound;
 import org.openapitools.client.model.CommonWebhook;
 import org.openapitools.client.model.EzsignfolderResponse;
 import org.openapitools.client.model.WebhookEzsignFolderCompletedAllOf;
@@ -32,7 +32,7 @@ public class WebhookEzsignFolderCompleted {
   @SerializedName("objWebhook")
   private WebhookResponse objWebhook = null;
   @SerializedName("a_objAttempt")
-  private List<AttemptResponse> aObjAttempt = null;
+  private List<AttemptResponseCompound> aObjAttempt = null;
 
   /**
    **/
@@ -58,10 +58,10 @@ public class WebhookEzsignFolderCompleted {
    * An array containing details of previous attempts that were made to deliver the message. The array is empty if it's the first attempt.
    **/
   @ApiModelProperty(required = true, value = "An array containing details of previous attempts that were made to deliver the message. The array is empty if it's the first attempt.")
-  public List<AttemptResponse> getAObjAttempt() {
+  public List<AttemptResponseCompound> getAObjAttempt() {
     return aObjAttempt;
   }
-  public void setAObjAttempt(List<AttemptResponse> aObjAttempt) {
+  public void setAObjAttempt(List<AttemptResponseCompound> aObjAttempt) {
     this.aObjAttempt = aObjAttempt;
   }
 
