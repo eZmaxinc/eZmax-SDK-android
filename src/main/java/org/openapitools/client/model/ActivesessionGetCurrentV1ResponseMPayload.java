@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -16,19 +16,19 @@ import java.util.*;
 import org.openapitools.client.model.ActivesessionResponseCompound;
 import org.openapitools.client.model.ActivesessionResponseCompoundApikey;
 import org.openapitools.client.model.ActivesessionResponseCompoundUser;
-import org.openapitools.client.model.FieldEActivesessionSessiontype;
+import org.openapitools.client.model.FieldEActivesessionUsertype;
 import org.openapitools.client.model.FieldEActivesessionWeekdaystart;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Payload for the /1/object/activesession/getCurrent API Request
+ * Payload for GET /1/object/activesession/getCurrent
  **/
-@ApiModel(description = "Payload for the /1/object/activesession/getCurrent API Request")
+@ApiModel(description = "Payload for GET /1/object/activesession/getCurrent")
 public class ActivesessionGetCurrentV1ResponseMPayload {
   
-  @SerializedName("eActivesessionSessiontype")
-  private FieldEActivesessionSessiontype eActivesessionSessiontype = null;
+  @SerializedName("eActivesessionUsertype")
+  private FieldEActivesessionUsertype eActivesessionUsertype = null;
   @SerializedName("eActivesessionWeekdaystart")
   private FieldEActivesessionWeekdaystart eActivesessionWeekdaystart = null;
   @SerializedName("fkiLanguageID")
@@ -55,11 +55,11 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
   /**
    **/
   @ApiModelProperty(required = true, value = "")
-  public FieldEActivesessionSessiontype getEActivesessionSessiontype() {
-    return eActivesessionSessiontype;
+  public FieldEActivesessionUsertype getEActivesessionUsertype() {
+    return eActivesessionUsertype;
   }
-  public void setEActivesessionSessiontype(FieldEActivesessionSessiontype eActivesessionSessiontype) {
-    this.eActivesessionSessiontype = eActivesessionSessiontype;
+  public void setEActivesessionUsertype(FieldEActivesessionUsertype eActivesessionUsertype) {
+    this.eActivesessionUsertype = eActivesessionUsertype;
   }
 
   /**
@@ -191,7 +191,7 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
       return false;
     }
     ActivesessionGetCurrentV1ResponseMPayload activesessionGetCurrentV1ResponseMPayload = (ActivesessionGetCurrentV1ResponseMPayload) o;
-    return (this.eActivesessionSessiontype == null ? activesessionGetCurrentV1ResponseMPayload.eActivesessionSessiontype == null : this.eActivesessionSessiontype.equals(activesessionGetCurrentV1ResponseMPayload.eActivesessionSessiontype)) &&
+    return (this.eActivesessionUsertype == null ? activesessionGetCurrentV1ResponseMPayload.eActivesessionUsertype == null : this.eActivesessionUsertype.equals(activesessionGetCurrentV1ResponseMPayload.eActivesessionUsertype)) &&
         (this.eActivesessionWeekdaystart == null ? activesessionGetCurrentV1ResponseMPayload.eActivesessionWeekdaystart == null : this.eActivesessionWeekdaystart.equals(activesessionGetCurrentV1ResponseMPayload.eActivesessionWeekdaystart)) &&
         (this.fkiLanguageID == null ? activesessionGetCurrentV1ResponseMPayload.fkiLanguageID == null : this.fkiLanguageID.equals(activesessionGetCurrentV1ResponseMPayload.fkiLanguageID)) &&
         (this.sCompanyNameX == null ? activesessionGetCurrentV1ResponseMPayload.sCompanyNameX == null : this.sCompanyNameX.equals(activesessionGetCurrentV1ResponseMPayload.sCompanyNameX)) &&
@@ -208,7 +208,7 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.eActivesessionSessiontype == null ? 0: this.eActivesessionSessiontype.hashCode());
+    result = 31 * result + (this.eActivesessionUsertype == null ? 0: this.eActivesessionUsertype.hashCode());
     result = 31 * result + (this.eActivesessionWeekdaystart == null ? 0: this.eActivesessionWeekdaystart.hashCode());
     result = 31 * result + (this.fkiLanguageID == null ? 0: this.fkiLanguageID.hashCode());
     result = 31 * result + (this.sCompanyNameX == null ? 0: this.sCompanyNameX.hashCode());
@@ -228,7 +228,7 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
     StringBuilder sb = new StringBuilder();
     sb.append("class ActivesessionGetCurrentV1ResponseMPayload {\n");
     
-    sb.append("  eActivesessionSessiontype: ").append(eActivesessionSessiontype).append("\n");
+    sb.append("  eActivesessionUsertype: ").append(eActivesessionUsertype).append("\n");
     sb.append("  eActivesessionWeekdaystart: ").append(eActivesessionWeekdaystart).append("\n");
     sb.append("  fkiLanguageID: ").append(fkiLanguageID).append("\n");
     sb.append("  sCompanyNameX: ").append(sCompanyNameX).append("\n");

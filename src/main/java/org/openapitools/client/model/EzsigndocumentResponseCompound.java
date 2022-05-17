@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -55,6 +55,8 @@ public class EzsigndocumentResponseCompound {
   private String sEzsigndocumentMD5initial = null;
   @SerializedName("sEzsigndocumentMD5signed")
   private String sEzsigndocumentMD5signed = null;
+  @SerializedName("bEzsigndocumentEzsignform")
+  private Boolean bEzsigndocumentEzsignform = null;
   @SerializedName("objAudit")
   private CommonAudit objAudit = null;
   @SerializedName("iEzsigndocumentStepformtotal")
@@ -224,6 +226,17 @@ public class EzsigndocumentResponseCompound {
   }
 
   /**
+   * If the Ezsigndocument contains an Ezsignform or not
+   **/
+  @ApiModelProperty(required = true, value = "If the Ezsigndocument contains an Ezsignform or not")
+  public Boolean getBEzsigndocumentEzsignform() {
+    return bEzsigndocumentEzsignform;
+  }
+  public void setBEzsigndocumentEzsignform(Boolean bEzsigndocumentEzsignform) {
+    this.bEzsigndocumentEzsignform = bEzsigndocumentEzsignform;
+  }
+
+  /**
    **/
   @ApiModelProperty(required = true, value = "")
   public CommonAudit getObjAudit() {
@@ -311,6 +324,7 @@ public class EzsigndocumentResponseCompound {
         (this.iEzsigndocumentSignaturetotal == null ? ezsigndocumentResponseCompound.iEzsigndocumentSignaturetotal == null : this.iEzsigndocumentSignaturetotal.equals(ezsigndocumentResponseCompound.iEzsigndocumentSignaturetotal)) &&
         (this.sEzsigndocumentMD5initial == null ? ezsigndocumentResponseCompound.sEzsigndocumentMD5initial == null : this.sEzsigndocumentMD5initial.equals(ezsigndocumentResponseCompound.sEzsigndocumentMD5initial)) &&
         (this.sEzsigndocumentMD5signed == null ? ezsigndocumentResponseCompound.sEzsigndocumentMD5signed == null : this.sEzsigndocumentMD5signed.equals(ezsigndocumentResponseCompound.sEzsigndocumentMD5signed)) &&
+        (this.bEzsigndocumentEzsignform == null ? ezsigndocumentResponseCompound.bEzsigndocumentEzsignform == null : this.bEzsigndocumentEzsignform.equals(ezsigndocumentResponseCompound.bEzsigndocumentEzsignform)) &&
         (this.objAudit == null ? ezsigndocumentResponseCompound.objAudit == null : this.objAudit.equals(ezsigndocumentResponseCompound.objAudit)) &&
         (this.iEzsigndocumentStepformtotal == null ? ezsigndocumentResponseCompound.iEzsigndocumentStepformtotal == null : this.iEzsigndocumentStepformtotal.equals(ezsigndocumentResponseCompound.iEzsigndocumentStepformtotal)) &&
         (this.iEzsigndocumentStepformcurrent == null ? ezsigndocumentResponseCompound.iEzsigndocumentStepformcurrent == null : this.iEzsigndocumentStepformcurrent.equals(ezsigndocumentResponseCompound.iEzsigndocumentStepformcurrent)) &&
@@ -336,6 +350,7 @@ public class EzsigndocumentResponseCompound {
     result = 31 * result + (this.iEzsigndocumentSignaturetotal == null ? 0: this.iEzsigndocumentSignaturetotal.hashCode());
     result = 31 * result + (this.sEzsigndocumentMD5initial == null ? 0: this.sEzsigndocumentMD5initial.hashCode());
     result = 31 * result + (this.sEzsigndocumentMD5signed == null ? 0: this.sEzsigndocumentMD5signed.hashCode());
+    result = 31 * result + (this.bEzsigndocumentEzsignform == null ? 0: this.bEzsigndocumentEzsignform.hashCode());
     result = 31 * result + (this.objAudit == null ? 0: this.objAudit.hashCode());
     result = 31 * result + (this.iEzsigndocumentStepformtotal == null ? 0: this.iEzsigndocumentStepformtotal.hashCode());
     result = 31 * result + (this.iEzsigndocumentStepformcurrent == null ? 0: this.iEzsigndocumentStepformcurrent.hashCode());
@@ -364,6 +379,7 @@ public class EzsigndocumentResponseCompound {
     sb.append("  iEzsigndocumentSignaturetotal: ").append(iEzsigndocumentSignaturetotal).append("\n");
     sb.append("  sEzsigndocumentMD5initial: ").append(sEzsigndocumentMD5initial).append("\n");
     sb.append("  sEzsigndocumentMD5signed: ").append(sEzsigndocumentMD5signed).append("\n");
+    sb.append("  bEzsigndocumentEzsignform: ").append(bEzsigndocumentEzsignform).append("\n");
     sb.append("  objAudit: ").append(objAudit).append("\n");
     sb.append("  iEzsigndocumentStepformtotal: ").append(iEzsigndocumentStepformtotal).append("\n");
     sb.append("  iEzsigndocumentStepformcurrent: ").append(iEzsigndocumentStepformcurrent).append("\n");

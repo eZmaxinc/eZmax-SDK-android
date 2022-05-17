@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -24,6 +24,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
 import org.openapitools.client.model.CommonGetAutocompleteV1Response;
+import org.openapitools.client.model.HeaderAcceptLanguage;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
@@ -60,9 +61,10 @@ public class ObjectPeriodApi {
   * Get the list of Periods to be used in a dropdown or autocomplete control.
    * @param sSelector The types of Periods to return
    * @param sQuery Allow to filter the returned results
+   * @param acceptLanguage 
    * @return CommonGetAutocompleteV1Response
   */
-  public CommonGetAutocompleteV1Response periodGetAutocompleteV1 (String sSelector, String sQuery) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CommonGetAutocompleteV1Response periodGetAutocompleteV1 (String sSelector, String sQuery, HeaderAcceptLanguage acceptLanguage) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'sSelector' is set
     if (sSelector == null) {
@@ -80,6 +82,7 @@ public class ObjectPeriodApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
     queryParams.addAll(ApiInvoker.parameterToPairs("", "sQuery", sQuery));
+    headerParams.put("Accept-Language", ApiInvoker.parameterToString(acceptLanguage));
     String[] contentTypes = {
     };
     String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
@@ -122,9 +125,9 @@ public class ObjectPeriodApi {
       /**
    * Retrieve Periods and IDs
    * Get the list of Periods to be used in a dropdown or autocomplete control.
-   * @param sSelector The types of Periods to return   * @param sQuery Allow to filter the returned results
+   * @param sSelector The types of Periods to return   * @param sQuery Allow to filter the returned results   * @param acceptLanguage 
   */
-  public void periodGetAutocompleteV1 (String sSelector, String sQuery, final Response.Listener<CommonGetAutocompleteV1Response> responseListener, final Response.ErrorListener errorListener) {
+  public void periodGetAutocompleteV1 (String sSelector, String sQuery, HeaderAcceptLanguage acceptLanguage, final Response.Listener<CommonGetAutocompleteV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'sSelector' is set
@@ -145,6 +148,7 @@ public class ObjectPeriodApi {
 
     queryParams.addAll(ApiInvoker.parameterToPairs("", "sQuery", sQuery));
 
+    headerParams.put("Accept-Language", ApiInvoker.parameterToString(acceptLanguage));
 
     String[] contentTypes = {
       

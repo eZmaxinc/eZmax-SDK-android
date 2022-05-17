@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -12,8 +12,11 @@
 
 package org.openapitools.client.model;
 
+import java.util.*;
 import org.openapitools.client.model.CommonAudit;
+import org.openapitools.client.model.CustomEzsignfoldertransmissionResponse;
 import org.openapitools.client.model.EzsignbulksendtransmissionResponse;
+import org.openapitools.client.model.EzsignbulksendtransmissionResponseCompoundAllOf;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -33,6 +36,8 @@ public class EzsignbulksendtransmissionResponseCompound {
   private Integer iEzsignbulksendtransmissionErrors = null;
   @SerializedName("objAudit")
   private CommonAudit objAudit = null;
+  @SerializedName("a_objEzsignfoldertransmission")
+  private List<CustomEzsignfoldertransmissionResponse> aObjEzsignfoldertransmission = null;
 
   /**
    * The unique ID of the Ezsignbulksendtransmission
@@ -88,6 +93,16 @@ public class EzsignbulksendtransmissionResponseCompound {
     this.objAudit = objAudit;
   }
 
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public List<CustomEzsignfoldertransmissionResponse> getAObjEzsignfoldertransmission() {
+    return aObjEzsignfoldertransmission;
+  }
+  public void setAObjEzsignfoldertransmission(List<CustomEzsignfoldertransmissionResponse> aObjEzsignfoldertransmission) {
+    this.aObjEzsignfoldertransmission = aObjEzsignfoldertransmission;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -102,7 +117,8 @@ public class EzsignbulksendtransmissionResponseCompound {
         (this.fkiEzsignbulksendID == null ? ezsignbulksendtransmissionResponseCompound.fkiEzsignbulksendID == null : this.fkiEzsignbulksendID.equals(ezsignbulksendtransmissionResponseCompound.fkiEzsignbulksendID)) &&
         (this.sEzsignbulksendtransmissionDescription == null ? ezsignbulksendtransmissionResponseCompound.sEzsignbulksendtransmissionDescription == null : this.sEzsignbulksendtransmissionDescription.equals(ezsignbulksendtransmissionResponseCompound.sEzsignbulksendtransmissionDescription)) &&
         (this.iEzsignbulksendtransmissionErrors == null ? ezsignbulksendtransmissionResponseCompound.iEzsignbulksendtransmissionErrors == null : this.iEzsignbulksendtransmissionErrors.equals(ezsignbulksendtransmissionResponseCompound.iEzsignbulksendtransmissionErrors)) &&
-        (this.objAudit == null ? ezsignbulksendtransmissionResponseCompound.objAudit == null : this.objAudit.equals(ezsignbulksendtransmissionResponseCompound.objAudit));
+        (this.objAudit == null ? ezsignbulksendtransmissionResponseCompound.objAudit == null : this.objAudit.equals(ezsignbulksendtransmissionResponseCompound.objAudit)) &&
+        (this.aObjEzsignfoldertransmission == null ? ezsignbulksendtransmissionResponseCompound.aObjEzsignfoldertransmission == null : this.aObjEzsignfoldertransmission.equals(ezsignbulksendtransmissionResponseCompound.aObjEzsignfoldertransmission));
   }
 
   @Override
@@ -113,6 +129,7 @@ public class EzsignbulksendtransmissionResponseCompound {
     result = 31 * result + (this.sEzsignbulksendtransmissionDescription == null ? 0: this.sEzsignbulksendtransmissionDescription.hashCode());
     result = 31 * result + (this.iEzsignbulksendtransmissionErrors == null ? 0: this.iEzsignbulksendtransmissionErrors.hashCode());
     result = 31 * result + (this.objAudit == null ? 0: this.objAudit.hashCode());
+    result = 31 * result + (this.aObjEzsignfoldertransmission == null ? 0: this.aObjEzsignfoldertransmission.hashCode());
     return result;
   }
 
@@ -126,6 +143,7 @@ public class EzsignbulksendtransmissionResponseCompound {
     sb.append("  sEzsignbulksendtransmissionDescription: ").append(sEzsignbulksendtransmissionDescription).append("\n");
     sb.append("  iEzsignbulksendtransmissionErrors: ").append(iEzsignbulksendtransmissionErrors).append("\n");
     sb.append("  objAudit: ").append(objAudit).append("\n");
+    sb.append("  aObjEzsignfoldertransmission: ").append(aObjEzsignfoldertransmission).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

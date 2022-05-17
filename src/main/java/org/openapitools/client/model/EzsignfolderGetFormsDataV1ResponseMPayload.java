@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -12,55 +12,27 @@
 
 package org.openapitools.client.model;
 
-import java.util.*;
-import org.openapitools.client.model.CustomFormDataDocumentResponse;
 import org.openapitools.client.model.CustomFormsDataFolderResponse;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Payload for the /1/object/ezsignfolder/{pkiEzsigndocument}/getFormsData API Request
+ * Payload for GET /1/object/ezsignfolder/{pkiEzsigndocument}/getFormsData
  **/
-@ApiModel(description = "Payload for the /1/object/ezsignfolder/{pkiEzsigndocument}/getFormsData API Request")
+@ApiModel(description = "Payload for GET /1/object/ezsignfolder/{pkiEzsigndocument}/getFormsData")
 public class EzsignfolderGetFormsDataV1ResponseMPayload {
   
-  @SerializedName("pkiEzsignfolderID")
-  private Integer pkiEzsignfolderID = null;
-  @SerializedName("sEzsignfolderDescription")
-  private String sEzsignfolderDescription = null;
-  @SerializedName("a_objFormDataDocument")
-  private List<CustomFormDataDocumentResponse> aObjFormDataDocument = null;
-
-  /**
-   * The unique ID of the Ezsignfolder
-   **/
-  @ApiModelProperty(required = true, value = "The unique ID of the Ezsignfolder")
-  public Integer getPkiEzsignfolderID() {
-    return pkiEzsignfolderID;
-  }
-  public void setPkiEzsignfolderID(Integer pkiEzsignfolderID) {
-    this.pkiEzsignfolderID = pkiEzsignfolderID;
-  }
-
-  /**
-   * The description of the Ezsignfolder
-   **/
-  @ApiModelProperty(required = true, value = "The description of the Ezsignfolder")
-  public String getSEzsignfolderDescription() {
-    return sEzsignfolderDescription;
-  }
-  public void setSEzsignfolderDescription(String sEzsignfolderDescription) {
-    this.sEzsignfolderDescription = sEzsignfolderDescription;
-  }
+  @SerializedName("objFormsDataFolder")
+  private CustomFormsDataFolderResponse objFormsDataFolder = null;
 
   /**
    **/
   @ApiModelProperty(required = true, value = "")
-  public List<CustomFormDataDocumentResponse> getAObjFormDataDocument() {
-    return aObjFormDataDocument;
+  public CustomFormsDataFolderResponse getObjFormsDataFolder() {
+    return objFormsDataFolder;
   }
-  public void setAObjFormDataDocument(List<CustomFormDataDocumentResponse> aObjFormDataDocument) {
-    this.aObjFormDataDocument = aObjFormDataDocument;
+  public void setObjFormsDataFolder(CustomFormsDataFolderResponse objFormsDataFolder) {
+    this.objFormsDataFolder = objFormsDataFolder;
   }
 
 
@@ -73,17 +45,13 @@ public class EzsignfolderGetFormsDataV1ResponseMPayload {
       return false;
     }
     EzsignfolderGetFormsDataV1ResponseMPayload ezsignfolderGetFormsDataV1ResponseMPayload = (EzsignfolderGetFormsDataV1ResponseMPayload) o;
-    return (this.pkiEzsignfolderID == null ? ezsignfolderGetFormsDataV1ResponseMPayload.pkiEzsignfolderID == null : this.pkiEzsignfolderID.equals(ezsignfolderGetFormsDataV1ResponseMPayload.pkiEzsignfolderID)) &&
-        (this.sEzsignfolderDescription == null ? ezsignfolderGetFormsDataV1ResponseMPayload.sEzsignfolderDescription == null : this.sEzsignfolderDescription.equals(ezsignfolderGetFormsDataV1ResponseMPayload.sEzsignfolderDescription)) &&
-        (this.aObjFormDataDocument == null ? ezsignfolderGetFormsDataV1ResponseMPayload.aObjFormDataDocument == null : this.aObjFormDataDocument.equals(ezsignfolderGetFormsDataV1ResponseMPayload.aObjFormDataDocument));
+    return (this.objFormsDataFolder == null ? ezsignfolderGetFormsDataV1ResponseMPayload.objFormsDataFolder == null : this.objFormsDataFolder.equals(ezsignfolderGetFormsDataV1ResponseMPayload.objFormsDataFolder));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.pkiEzsignfolderID == null ? 0: this.pkiEzsignfolderID.hashCode());
-    result = 31 * result + (this.sEzsignfolderDescription == null ? 0: this.sEzsignfolderDescription.hashCode());
-    result = 31 * result + (this.aObjFormDataDocument == null ? 0: this.aObjFormDataDocument.hashCode());
+    result = 31 * result + (this.objFormsDataFolder == null ? 0: this.objFormsDataFolder.hashCode());
     return result;
   }
 
@@ -92,9 +60,7 @@ public class EzsignfolderGetFormsDataV1ResponseMPayload {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignfolderGetFormsDataV1ResponseMPayload {\n");
     
-    sb.append("  pkiEzsignfolderID: ").append(pkiEzsignfolderID).append("\n");
-    sb.append("  sEzsignfolderDescription: ").append(sEzsignfolderDescription).append("\n");
-    sb.append("  aObjFormDataDocument: ").append(aObjFormDataDocument).append("\n");
+    sb.append("  objFormsDataFolder: ").append(objFormsDataFolder).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

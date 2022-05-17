@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -21,9 +21,9 @@ import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Response for the /1/object/franchisereferalincome/createObject API Request
+ * Response for POST /1/object/franchisereferalincome
  **/
-@ApiModel(description = "Response for the /1/object/franchisereferalincome/createObject API Request")
+@ApiModel(description = "Response for POST /1/object/franchisereferalincome")
 public class FranchisereferalincomeCreateObjectV1Response {
   
   @SerializedName("mPayload")

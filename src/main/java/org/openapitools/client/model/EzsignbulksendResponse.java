@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -28,10 +28,16 @@ public class EzsignbulksendResponse {
   private Integer fkiEzsignfoldertypeID = null;
   @SerializedName("fkiLanguageID")
   private Integer fkiLanguageID = null;
+  @SerializedName("sLanguageNameX")
+  private String sLanguageNameX = null;
+  @SerializedName("sEzsignfoldertypeNameX")
+  private String sEzsignfoldertypeNameX = null;
   @SerializedName("sEzsignbulksendDescription")
   private String sEzsignbulksendDescription = null;
   @SerializedName("tEzsignbulksendNote")
   private String tEzsignbulksendNote = null;
+  @SerializedName("bEzsignbulksendNeedvalidation")
+  private Boolean bEzsignbulksendNeedvalidation = null;
   @SerializedName("bEzsignbulksendIsactive")
   private Boolean bEzsignbulksendIsactive = null;
   @SerializedName("objAudit")
@@ -73,6 +79,28 @@ public class EzsignbulksendResponse {
   }
 
   /**
+   * The Name of the Language in the language of the requester
+   **/
+  @ApiModelProperty(required = true, value = "The Name of the Language in the language of the requester")
+  public String getSLanguageNameX() {
+    return sLanguageNameX;
+  }
+  public void setSLanguageNameX(String sLanguageNameX) {
+    this.sLanguageNameX = sLanguageNameX;
+  }
+
+  /**
+   * The name of the Ezsignfoldertype in the language of the requester
+   **/
+  @ApiModelProperty(required = true, value = "The name of the Ezsignfoldertype in the language of the requester")
+  public String getSEzsignfoldertypeNameX() {
+    return sEzsignfoldertypeNameX;
+  }
+  public void setSEzsignfoldertypeNameX(String sEzsignfoldertypeNameX) {
+    this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
+  }
+
+  /**
    * The description of the Ezsignbulksend
    **/
   @ApiModelProperty(required = true, value = "The description of the Ezsignbulksend")
@@ -92,6 +120,17 @@ public class EzsignbulksendResponse {
   }
   public void setTEzsignbulksendNote(String tEzsignbulksendNote) {
     this.tEzsignbulksendNote = tEzsignbulksendNote;
+  }
+
+  /**
+   * Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation
+   **/
+  @ApiModelProperty(required = true, value = "Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation")
+  public Boolean getBEzsignbulksendNeedvalidation() {
+    return bEzsignbulksendNeedvalidation;
+  }
+  public void setBEzsignbulksendNeedvalidation(Boolean bEzsignbulksendNeedvalidation) {
+    this.bEzsignbulksendNeedvalidation = bEzsignbulksendNeedvalidation;
   }
 
   /**
@@ -128,8 +167,11 @@ public class EzsignbulksendResponse {
     return (this.pkiEzsignbulksendID == null ? ezsignbulksendResponse.pkiEzsignbulksendID == null : this.pkiEzsignbulksendID.equals(ezsignbulksendResponse.pkiEzsignbulksendID)) &&
         (this.fkiEzsignfoldertypeID == null ? ezsignbulksendResponse.fkiEzsignfoldertypeID == null : this.fkiEzsignfoldertypeID.equals(ezsignbulksendResponse.fkiEzsignfoldertypeID)) &&
         (this.fkiLanguageID == null ? ezsignbulksendResponse.fkiLanguageID == null : this.fkiLanguageID.equals(ezsignbulksendResponse.fkiLanguageID)) &&
+        (this.sLanguageNameX == null ? ezsignbulksendResponse.sLanguageNameX == null : this.sLanguageNameX.equals(ezsignbulksendResponse.sLanguageNameX)) &&
+        (this.sEzsignfoldertypeNameX == null ? ezsignbulksendResponse.sEzsignfoldertypeNameX == null : this.sEzsignfoldertypeNameX.equals(ezsignbulksendResponse.sEzsignfoldertypeNameX)) &&
         (this.sEzsignbulksendDescription == null ? ezsignbulksendResponse.sEzsignbulksendDescription == null : this.sEzsignbulksendDescription.equals(ezsignbulksendResponse.sEzsignbulksendDescription)) &&
         (this.tEzsignbulksendNote == null ? ezsignbulksendResponse.tEzsignbulksendNote == null : this.tEzsignbulksendNote.equals(ezsignbulksendResponse.tEzsignbulksendNote)) &&
+        (this.bEzsignbulksendNeedvalidation == null ? ezsignbulksendResponse.bEzsignbulksendNeedvalidation == null : this.bEzsignbulksendNeedvalidation.equals(ezsignbulksendResponse.bEzsignbulksendNeedvalidation)) &&
         (this.bEzsignbulksendIsactive == null ? ezsignbulksendResponse.bEzsignbulksendIsactive == null : this.bEzsignbulksendIsactive.equals(ezsignbulksendResponse.bEzsignbulksendIsactive)) &&
         (this.objAudit == null ? ezsignbulksendResponse.objAudit == null : this.objAudit.equals(ezsignbulksendResponse.objAudit));
   }
@@ -140,8 +182,11 @@ public class EzsignbulksendResponse {
     result = 31 * result + (this.pkiEzsignbulksendID == null ? 0: this.pkiEzsignbulksendID.hashCode());
     result = 31 * result + (this.fkiEzsignfoldertypeID == null ? 0: this.fkiEzsignfoldertypeID.hashCode());
     result = 31 * result + (this.fkiLanguageID == null ? 0: this.fkiLanguageID.hashCode());
+    result = 31 * result + (this.sLanguageNameX == null ? 0: this.sLanguageNameX.hashCode());
+    result = 31 * result + (this.sEzsignfoldertypeNameX == null ? 0: this.sEzsignfoldertypeNameX.hashCode());
     result = 31 * result + (this.sEzsignbulksendDescription == null ? 0: this.sEzsignbulksendDescription.hashCode());
     result = 31 * result + (this.tEzsignbulksendNote == null ? 0: this.tEzsignbulksendNote.hashCode());
+    result = 31 * result + (this.bEzsignbulksendNeedvalidation == null ? 0: this.bEzsignbulksendNeedvalidation.hashCode());
     result = 31 * result + (this.bEzsignbulksendIsactive == null ? 0: this.bEzsignbulksendIsactive.hashCode());
     result = 31 * result + (this.objAudit == null ? 0: this.objAudit.hashCode());
     return result;
@@ -155,8 +200,11 @@ public class EzsignbulksendResponse {
     sb.append("  pkiEzsignbulksendID: ").append(pkiEzsignbulksendID).append("\n");
     sb.append("  fkiEzsignfoldertypeID: ").append(fkiEzsignfoldertypeID).append("\n");
     sb.append("  fkiLanguageID: ").append(fkiLanguageID).append("\n");
+    sb.append("  sLanguageNameX: ").append(sLanguageNameX).append("\n");
+    sb.append("  sEzsignfoldertypeNameX: ").append(sEzsignfoldertypeNameX).append("\n");
     sb.append("  sEzsignbulksendDescription: ").append(sEzsignbulksendDescription).append("\n");
     sb.append("  tEzsignbulksendNote: ").append(tEzsignbulksendNote).append("\n");
+    sb.append("  bEzsignbulksendNeedvalidation: ").append(bEzsignbulksendNeedvalidation).append("\n");
     sb.append("  bEzsignbulksendIsactive: ").append(bEzsignbulksendIsactive).append("\n");
     sb.append("  objAudit: ").append(objAudit).append("\n");
     sb.append("}\n");

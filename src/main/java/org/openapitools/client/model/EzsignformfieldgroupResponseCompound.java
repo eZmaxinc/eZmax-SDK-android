@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -65,7 +65,7 @@ public class EzsignformfieldgroupResponseCompound {
   @SerializedName("a_objDropdownElement")
   private List<CustomDropdownElementResponseCompound> aObjDropdownElement = null;
   @SerializedName("a_objEzsignformfieldgroupsigner")
-  private EzsignformfieldgroupsignerResponseCompound aObjEzsignformfieldgroupsigner = null;
+  private List<EzsignformfieldgroupsignerResponseCompound> aObjEzsignformfieldgroupsigner = null;
 
   /**
    * The unique ID of the Ezsignformfieldgroup
@@ -252,10 +252,10 @@ public class EzsignformfieldgroupResponseCompound {
   /**
    **/
   @ApiModelProperty(required = true, value = "")
-  public EzsignformfieldgroupsignerResponseCompound getAObjEzsignformfieldgroupsigner() {
+  public List<EzsignformfieldgroupsignerResponseCompound> getAObjEzsignformfieldgroupsigner() {
     return aObjEzsignformfieldgroupsigner;
   }
-  public void setAObjEzsignformfieldgroupsigner(EzsignformfieldgroupsignerResponseCompound aObjEzsignformfieldgroupsigner) {
+  public void setAObjEzsignformfieldgroupsigner(List<EzsignformfieldgroupsignerResponseCompound> aObjEzsignformfieldgroupsigner) {
     this.aObjEzsignformfieldgroupsigner = aObjEzsignformfieldgroupsigner;
   }
 

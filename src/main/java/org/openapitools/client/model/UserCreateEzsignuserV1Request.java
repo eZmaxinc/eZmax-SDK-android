@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -16,9 +16,9 @@ import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Request for the /1/module/user/createEzsignuser API Request
+ * Request for POST /1/module/user/createEzsignuser
  **/
-@ApiModel(description = "Request for the /1/module/user/createEzsignuser API Request")
+@ApiModel(description = "Request for POST /1/module/user/createEzsignuser")
 public class UserCreateEzsignuserV1Request {
   
   @SerializedName("fkiLanguageID")

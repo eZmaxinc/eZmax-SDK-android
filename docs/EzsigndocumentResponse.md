@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **iEzsigndocumentSignaturetotal** | **Integer** | The number of total signatures that were requested in the Ezsigndocument. | 
 **sEzsigndocumentMD5initial** | **String** | MD5 Hash of the initial PDF Document before signatures were applied to it. | 
 **sEzsigndocumentMD5signed** | **String** | MD5 Hash of the final PDF Document after all signatures were applied to it. | 
+**bEzsigndocumentEzsignform** | **Boolean** | If the Ezsigndocument contains an Ezsignform or not | 
 **objAudit** | [**CommonAudit**](CommonAudit.md) |  | 
 
 

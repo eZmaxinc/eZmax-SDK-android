@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -17,19 +17,19 @@ import org.openapitools.client.model.ActivesessionResponse;
 import org.openapitools.client.model.ActivesessionResponseCompoundAllOf;
 import org.openapitools.client.model.ActivesessionResponseCompoundApikey;
 import org.openapitools.client.model.ActivesessionResponseCompoundUser;
-import org.openapitools.client.model.FieldEActivesessionSessiontype;
+import org.openapitools.client.model.FieldEActivesessionUsertype;
 import org.openapitools.client.model.FieldEActivesessionWeekdaystart;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Payload for the /1/object/activesession/getCurrent API Request
+ * Payload for GET /1/object/activesession/getCurrent
  **/
-@ApiModel(description = "Payload for the /1/object/activesession/getCurrent API Request")
+@ApiModel(description = "Payload for GET /1/object/activesession/getCurrent")
 public class ActivesessionResponseCompound {
   
-  @SerializedName("eActivesessionSessiontype")
-  private FieldEActivesessionSessiontype eActivesessionSessiontype = null;
+  @SerializedName("eActivesessionUsertype")
+  private FieldEActivesessionUsertype eActivesessionUsertype = null;
   @SerializedName("eActivesessionWeekdaystart")
   private FieldEActivesessionWeekdaystart eActivesessionWeekdaystart = null;
   @SerializedName("fkiLanguageID")
@@ -56,11 +56,11 @@ public class ActivesessionResponseCompound {
   /**
    **/
   @ApiModelProperty(required = true, value = "")
-  public FieldEActivesessionSessiontype getEActivesessionSessiontype() {
-    return eActivesessionSessiontype;
+  public FieldEActivesessionUsertype getEActivesessionUsertype() {
+    return eActivesessionUsertype;
   }
-  public void setEActivesessionSessiontype(FieldEActivesessionSessiontype eActivesessionSessiontype) {
-    this.eActivesessionSessiontype = eActivesessionSessiontype;
+  public void setEActivesessionUsertype(FieldEActivesessionUsertype eActivesessionUsertype) {
+    this.eActivesessionUsertype = eActivesessionUsertype;
   }
 
   /**
@@ -192,7 +192,7 @@ public class ActivesessionResponseCompound {
       return false;
     }
     ActivesessionResponseCompound activesessionResponseCompound = (ActivesessionResponseCompound) o;
-    return (this.eActivesessionSessiontype == null ? activesessionResponseCompound.eActivesessionSessiontype == null : this.eActivesessionSessiontype.equals(activesessionResponseCompound.eActivesessionSessiontype)) &&
+    return (this.eActivesessionUsertype == null ? activesessionResponseCompound.eActivesessionUsertype == null : this.eActivesessionUsertype.equals(activesessionResponseCompound.eActivesessionUsertype)) &&
         (this.eActivesessionWeekdaystart == null ? activesessionResponseCompound.eActivesessionWeekdaystart == null : this.eActivesessionWeekdaystart.equals(activesessionResponseCompound.eActivesessionWeekdaystart)) &&
         (this.fkiLanguageID == null ? activesessionResponseCompound.fkiLanguageID == null : this.fkiLanguageID.equals(activesessionResponseCompound.fkiLanguageID)) &&
         (this.sCompanyNameX == null ? activesessionResponseCompound.sCompanyNameX == null : this.sCompanyNameX.equals(activesessionResponseCompound.sCompanyNameX)) &&
@@ -209,7 +209,7 @@ public class ActivesessionResponseCompound {
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.eActivesessionSessiontype == null ? 0: this.eActivesessionSessiontype.hashCode());
+    result = 31 * result + (this.eActivesessionUsertype == null ? 0: this.eActivesessionUsertype.hashCode());
     result = 31 * result + (this.eActivesessionWeekdaystart == null ? 0: this.eActivesessionWeekdaystart.hashCode());
     result = 31 * result + (this.fkiLanguageID == null ? 0: this.fkiLanguageID.hashCode());
     result = 31 * result + (this.sCompanyNameX == null ? 0: this.sCompanyNameX.hashCode());
@@ -229,7 +229,7 @@ public class ActivesessionResponseCompound {
     StringBuilder sb = new StringBuilder();
     sb.append("class ActivesessionResponseCompound {\n");
     
-    sb.append("  eActivesessionSessiontype: ").append(eActivesessionSessiontype).append("\n");
+    sb.append("  eActivesessionUsertype: ").append(eActivesessionUsertype).append("\n");
     sb.append("  eActivesessionWeekdaystart: ").append(eActivesessionWeekdaystart).append("\n");
     sb.append("  fkiLanguageID: ").append(fkiLanguageID).append("\n");
     sb.append("  sCompanyNameX: ").append(sCompanyNameX).append("\n");

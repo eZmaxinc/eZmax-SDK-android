@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -174,7 +174,7 @@ public class EzsignfolderResponseCompound {
   /**
    * The maximum date and time at which the Ezsignfolder can be signed.
    **/
-  @ApiModelProperty(required = true, value = "The maximum date and time at which the Ezsignfolder can be signed.")
+  @ApiModelProperty(value = "The maximum date and time at which the Ezsignfolder can be signed.")
   public String getDtEzsignfolderDuedate() {
     return dtEzsignfolderDuedate;
   }
@@ -185,7 +185,7 @@ public class EzsignfolderResponseCompound {
   /**
    * The date and time at which the Ezsign folder was sent the last time.
    **/
-  @ApiModelProperty(required = true, value = "The date and time at which the Ezsign folder was sent the last time.")
+  @ApiModelProperty(value = "The date and time at which the Ezsign folder was sent the last time.")
   public String getDtEzsignfolderSentdate() {
     return dtEzsignfolderSentdate;
   }

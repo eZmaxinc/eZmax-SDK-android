@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -29,6 +29,12 @@ public class EzsignsignerRequestCompoundContact {
   private Integer fkiLanguageID = null;
   @SerializedName("sEmailAddress")
   private String sEmailAddress = null;
+  @SerializedName("sPhoneE164")
+  private String sPhoneE164 = null;
+  @SerializedName("sPhoneExtension")
+  private String sPhoneExtension = null;
+  @SerializedName("sPhoneE164Cell")
+  private String sPhoneE164Cell = null;
   @SerializedName("sPhoneNumber")
   private String sPhoneNumber = null;
   @SerializedName("sPhoneNumberCell")
@@ -81,9 +87,41 @@ public class EzsignsignerRequestCompoundContact {
   }
 
   /**
-   * The Phone number of the contact. Use format \"5149901516\" for North American Numbers (Without \"1\" for long distance code) you would dial like this: 1-514-990-1516. Use format \"498945233886\" for international numbers (Without \"011\") you would dial like this: +49 89 452 33 88-6. In this example \"49\" is the country code of Germany.
+   * A phone number in E.164 Format
    **/
-  @ApiModelProperty(value = "The Phone number of the contact. Use format \"5149901516\" for North American Numbers (Without \"1\" for long distance code) you would dial like this: 1-514-990-1516. Use format \"498945233886\" for international numbers (Without \"011\") you would dial like this: +49 89 452 33 88-6. In this example \"49\" is the country code of Germany.")
+  @ApiModelProperty(value = "A phone number in E.164 Format")
+  public String getSPhoneE164() {
+    return sPhoneE164;
+  }
+  public void setSPhoneE164(String sPhoneE164) {
+    this.sPhoneE164 = sPhoneE164;
+  }
+
+  /**
+   * The extension of the phone number.  The extension is the \"123\" section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers
+   **/
+  @ApiModelProperty(value = "The extension of the phone number.  The extension is the \"123\" section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers")
+  public String getSPhoneExtension() {
+    return sPhoneExtension;
+  }
+  public void setSPhoneExtension(String sPhoneExtension) {
+    this.sPhoneExtension = sPhoneExtension;
+  }
+
+  /**
+   * A phone number in E.164 Format
+   **/
+  @ApiModelProperty(value = "A phone number in E.164 Format")
+  public String getSPhoneE164Cell() {
+    return sPhoneE164Cell;
+  }
+  public void setSPhoneE164Cell(String sPhoneE164Cell) {
+    this.sPhoneE164Cell = sPhoneE164Cell;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
   public String getSPhoneNumber() {
     return sPhoneNumber;
   }
@@ -92,9 +130,8 @@ public class EzsignsignerRequestCompoundContact {
   }
 
   /**
-   * The Cell Phone number of the contact. Use format \"5149901516\" for North American Numbers (Without \"1\" for long distance code) you would dial like this: 1-514-990-1516. Use format \"498945233886\" for international numbers (Without \"011\") you would dial like this: +49 89 452 33 88-6. In this example \"49\" is the country code of Germany.
    **/
-  @ApiModelProperty(value = "The Cell Phone number of the contact. Use format \"5149901516\" for North American Numbers (Without \"1\" for long distance code) you would dial like this: 1-514-990-1516. Use format \"498945233886\" for international numbers (Without \"011\") you would dial like this: +49 89 452 33 88-6. In this example \"49\" is the country code of Germany.")
+  @ApiModelProperty(value = "")
   public String getSPhoneNumberCell() {
     return sPhoneNumberCell;
   }
@@ -116,6 +153,9 @@ public class EzsignsignerRequestCompoundContact {
         (this.sContactLastname == null ? ezsignsignerRequestCompoundContact.sContactLastname == null : this.sContactLastname.equals(ezsignsignerRequestCompoundContact.sContactLastname)) &&
         (this.fkiLanguageID == null ? ezsignsignerRequestCompoundContact.fkiLanguageID == null : this.fkiLanguageID.equals(ezsignsignerRequestCompoundContact.fkiLanguageID)) &&
         (this.sEmailAddress == null ? ezsignsignerRequestCompoundContact.sEmailAddress == null : this.sEmailAddress.equals(ezsignsignerRequestCompoundContact.sEmailAddress)) &&
+        (this.sPhoneE164 == null ? ezsignsignerRequestCompoundContact.sPhoneE164 == null : this.sPhoneE164.equals(ezsignsignerRequestCompoundContact.sPhoneE164)) &&
+        (this.sPhoneExtension == null ? ezsignsignerRequestCompoundContact.sPhoneExtension == null : this.sPhoneExtension.equals(ezsignsignerRequestCompoundContact.sPhoneExtension)) &&
+        (this.sPhoneE164Cell == null ? ezsignsignerRequestCompoundContact.sPhoneE164Cell == null : this.sPhoneE164Cell.equals(ezsignsignerRequestCompoundContact.sPhoneE164Cell)) &&
         (this.sPhoneNumber == null ? ezsignsignerRequestCompoundContact.sPhoneNumber == null : this.sPhoneNumber.equals(ezsignsignerRequestCompoundContact.sPhoneNumber)) &&
         (this.sPhoneNumberCell == null ? ezsignsignerRequestCompoundContact.sPhoneNumberCell == null : this.sPhoneNumberCell.equals(ezsignsignerRequestCompoundContact.sPhoneNumberCell));
   }
@@ -127,6 +167,9 @@ public class EzsignsignerRequestCompoundContact {
     result = 31 * result + (this.sContactLastname == null ? 0: this.sContactLastname.hashCode());
     result = 31 * result + (this.fkiLanguageID == null ? 0: this.fkiLanguageID.hashCode());
     result = 31 * result + (this.sEmailAddress == null ? 0: this.sEmailAddress.hashCode());
+    result = 31 * result + (this.sPhoneE164 == null ? 0: this.sPhoneE164.hashCode());
+    result = 31 * result + (this.sPhoneExtension == null ? 0: this.sPhoneExtension.hashCode());
+    result = 31 * result + (this.sPhoneE164Cell == null ? 0: this.sPhoneE164Cell.hashCode());
     result = 31 * result + (this.sPhoneNumber == null ? 0: this.sPhoneNumber.hashCode());
     result = 31 * result + (this.sPhoneNumberCell == null ? 0: this.sPhoneNumberCell.hashCode());
     return result;
@@ -141,6 +184,9 @@ public class EzsignsignerRequestCompoundContact {
     sb.append("  sContactLastname: ").append(sContactLastname).append("\n");
     sb.append("  fkiLanguageID: ").append(fkiLanguageID).append("\n");
     sb.append("  sEmailAddress: ").append(sEmailAddress).append("\n");
+    sb.append("  sPhoneE164: ").append(sPhoneE164).append("\n");
+    sb.append("  sPhoneExtension: ").append(sPhoneExtension).append("\n");
+    sb.append("  sPhoneE164Cell: ").append(sPhoneE164Cell).append("\n");
     sb.append("  sPhoneNumber: ").append(sPhoneNumber).append("\n");
     sb.append("  sPhoneNumberCell: ").append(sPhoneNumberCell).append("\n");
     sb.append("}\n");

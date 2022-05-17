@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -33,6 +33,8 @@ public class EzsignsignerResponseCompoundContact {
   private String sEmailAddress = null;
   @SerializedName("sPhoneE164")
   private String sPhoneE164 = null;
+  @SerializedName("sPhoneExtension")
+  private String sPhoneExtension = null;
   @SerializedName("sPhoneE164Cell")
   private String sPhoneE164Cell = null;
 
@@ -105,6 +107,17 @@ public class EzsignsignerResponseCompoundContact {
   }
 
   /**
+   * The extension of the phone number.  The extension is the \"123\" section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers
+   **/
+  @ApiModelProperty(value = "The extension of the phone number.  The extension is the \"123\" section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers")
+  public String getSPhoneExtension() {
+    return sPhoneExtension;
+  }
+  public void setSPhoneExtension(String sPhoneExtension) {
+    this.sPhoneExtension = sPhoneExtension;
+  }
+
+  /**
    * A phone number in E.164 Format
    **/
   @ApiModelProperty(value = "A phone number in E.164 Format")
@@ -131,6 +144,7 @@ public class EzsignsignerResponseCompoundContact {
         (this.fkiLanguageID == null ? ezsignsignerResponseCompoundContact.fkiLanguageID == null : this.fkiLanguageID.equals(ezsignsignerResponseCompoundContact.fkiLanguageID)) &&
         (this.sEmailAddress == null ? ezsignsignerResponseCompoundContact.sEmailAddress == null : this.sEmailAddress.equals(ezsignsignerResponseCompoundContact.sEmailAddress)) &&
         (this.sPhoneE164 == null ? ezsignsignerResponseCompoundContact.sPhoneE164 == null : this.sPhoneE164.equals(ezsignsignerResponseCompoundContact.sPhoneE164)) &&
+        (this.sPhoneExtension == null ? ezsignsignerResponseCompoundContact.sPhoneExtension == null : this.sPhoneExtension.equals(ezsignsignerResponseCompoundContact.sPhoneExtension)) &&
         (this.sPhoneE164Cell == null ? ezsignsignerResponseCompoundContact.sPhoneE164Cell == null : this.sPhoneE164Cell.equals(ezsignsignerResponseCompoundContact.sPhoneE164Cell));
   }
 
@@ -143,6 +157,7 @@ public class EzsignsignerResponseCompoundContact {
     result = 31 * result + (this.fkiLanguageID == null ? 0: this.fkiLanguageID.hashCode());
     result = 31 * result + (this.sEmailAddress == null ? 0: this.sEmailAddress.hashCode());
     result = 31 * result + (this.sPhoneE164 == null ? 0: this.sPhoneE164.hashCode());
+    result = 31 * result + (this.sPhoneExtension == null ? 0: this.sPhoneExtension.hashCode());
     result = 31 * result + (this.sPhoneE164Cell == null ? 0: this.sPhoneE164Cell.hashCode());
     return result;
   }
@@ -158,6 +173,7 @@ public class EzsignsignerResponseCompoundContact {
     sb.append("  fkiLanguageID: ").append(fkiLanguageID).append("\n");
     sb.append("  sEmailAddress: ").append(sEmailAddress).append("\n");
     sb.append("  sPhoneE164: ").append(sPhoneE164).append("\n");
+    sb.append("  sPhoneExtension: ").append(sPhoneExtension).append("\n");
     sb.append("  sPhoneE164Cell: ").append(sPhoneE164Cell).append("\n");
     sb.append("}\n");
     return sb.toString();

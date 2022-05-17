@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -17,9 +17,9 @@ import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Payload for the /2/object/ezsigndocument/createObject API Request
+ * Payload for POST /2/object/ezsigndocument
  **/
-@ApiModel(description = "Payload for the /2/object/ezsigndocument/createObject API Request")
+@ApiModel(description = "Payload for POST /2/object/ezsigndocument")
 public class EzsigndocumentCreateObjectV2ResponseMPayload {
   
   @SerializedName("a_pkiEzsigndocumentID")

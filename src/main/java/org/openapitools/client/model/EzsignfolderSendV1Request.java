@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -16,18 +16,18 @@ import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Request for the /1/object/ezsignfolder/{pkiEzsignfolderID}/send API Request
+ * Request for POST /1/object/ezsignfolder/{pkiEzsignfolderID}/send
  **/
-@ApiModel(description = "Request for the /1/object/ezsignfolder/{pkiEzsignfolderID}/send API Request")
+@ApiModel(description = "Request for POST /1/object/ezsignfolder/{pkiEzsignfolderID}/send")
 public class EzsignfolderSendV1Request {
   
   @SerializedName("tExtraMessage")
   private String tExtraMessage = null;
 
   /**
-   * A custom text message that will be added to the email sent to signatories inviting them to sign.  You can send an empty string and only the generic message will be sent.
+   * A custom text message that will be added to the email sent.
    **/
-  @ApiModelProperty(required = true, value = "A custom text message that will be added to the email sent to signatories inviting them to sign.  You can send an empty string and only the generic message will be sent.")
+  @ApiModelProperty(required = true, value = "A custom text message that will be added to the email sent.")
   public String getTExtraMessage() {
     return tExtraMessage;
   }

@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -19,9 +19,9 @@ import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Payload for the /1/object/ezsignfoldersignerassociation/getObject API Request
+ * Payload for GET /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}
  **/
-@ApiModel(description = "Payload for the /1/object/ezsignfoldersignerassociation/getObject API Request")
+@ApiModel(description = "Payload for GET /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}")
 public class EzsignfoldersignerassociationGetObjectV1ResponseMPayload {
   
   @SerializedName("pkiEzsignfoldersignerassociationID")

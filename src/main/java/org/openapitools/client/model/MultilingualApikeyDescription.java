@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -27,9 +27,9 @@ public class MultilingualApikeyDescription {
   private String sApikeyDescription2 = null;
 
   /**
-   * Value in French
+   * The description of the Apikey in French
    **/
-  @ApiModelProperty(value = "Value in French")
+  @ApiModelProperty(value = "The description of the Apikey in French")
   public String getSApikeyDescription1() {
     return sApikeyDescription1;
   }
@@ -38,9 +38,9 @@ public class MultilingualApikeyDescription {
   }
 
   /**
-   * Value in English
+   * The description of the Apikey in English
    **/
-  @ApiModelProperty(value = "Value in English")
+  @ApiModelProperty(value = "The description of the Apikey in English")
   public String getSApikeyDescription2() {
     return sApikeyDescription2;
   }

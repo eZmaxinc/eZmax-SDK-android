@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -39,8 +39,8 @@ public class EzsignfolderListElement {
   private String dtCreatedDate = null;
   @SerializedName("dtEzsignfolderSentdate")
   private String dtEzsignfolderSentdate = null;
-  @SerializedName("dtDueDate")
-  private String dtDueDate = null;
+  @SerializedName("dtEzsignfolderDuedate")
+  private String dtEzsignfolderDuedate = null;
   @SerializedName("iEzsigndocument")
   private Integer iEzsigndocument = null;
   @SerializedName("iEzsigndocumentEdm")
@@ -128,7 +128,7 @@ public class EzsignfolderListElement {
   /**
    * The date and time at which the Ezsign folder was sent the last time.
    **/
-  @ApiModelProperty(required = true, value = "The date and time at which the Ezsign folder was sent the last time.")
+  @ApiModelProperty(value = "The date and time at which the Ezsign folder was sent the last time.")
   public String getDtEzsignfolderSentdate() {
     return dtEzsignfolderSentdate;
   }
@@ -137,14 +137,14 @@ public class EzsignfolderListElement {
   }
 
   /**
-   * Represent a Date Time. The timezone is the one configured in the User's profile.
+   * The maximum date and time at which the Ezsignfolder can be signed.
    **/
-  @ApiModelProperty(required = true, value = "Represent a Date Time. The timezone is the one configured in the User's profile.")
-  public String getDtDueDate() {
-    return dtDueDate;
+  @ApiModelProperty(value = "The maximum date and time at which the Ezsignfolder can be signed.")
+  public String getDtEzsignfolderDuedate() {
+    return dtEzsignfolderDuedate;
   }
-  public void setDtDueDate(String dtDueDate) {
-    this.dtDueDate = dtDueDate;
+  public void setDtEzsignfolderDuedate(String dtEzsignfolderDuedate) {
+    this.dtEzsignfolderDuedate = dtEzsignfolderDuedate;
   }
 
   /**
@@ -209,7 +209,7 @@ public class EzsignfolderListElement {
         (this.eEzsignfolderStep == null ? ezsignfolderListElement.eEzsignfolderStep == null : this.eEzsignfolderStep.equals(ezsignfolderListElement.eEzsignfolderStep)) &&
         (this.dtCreatedDate == null ? ezsignfolderListElement.dtCreatedDate == null : this.dtCreatedDate.equals(ezsignfolderListElement.dtCreatedDate)) &&
         (this.dtEzsignfolderSentdate == null ? ezsignfolderListElement.dtEzsignfolderSentdate == null : this.dtEzsignfolderSentdate.equals(ezsignfolderListElement.dtEzsignfolderSentdate)) &&
-        (this.dtDueDate == null ? ezsignfolderListElement.dtDueDate == null : this.dtDueDate.equals(ezsignfolderListElement.dtDueDate)) &&
+        (this.dtEzsignfolderDuedate == null ? ezsignfolderListElement.dtEzsignfolderDuedate == null : this.dtEzsignfolderDuedate.equals(ezsignfolderListElement.dtEzsignfolderDuedate)) &&
         (this.iEzsigndocument == null ? ezsignfolderListElement.iEzsigndocument == null : this.iEzsigndocument.equals(ezsignfolderListElement.iEzsigndocument)) &&
         (this.iEzsigndocumentEdm == null ? ezsignfolderListElement.iEzsigndocumentEdm == null : this.iEzsigndocumentEdm.equals(ezsignfolderListElement.iEzsigndocumentEdm)) &&
         (this.iEzsignsignature == null ? ezsignfolderListElement.iEzsignsignature == null : this.iEzsignsignature.equals(ezsignfolderListElement.iEzsignsignature)) &&
@@ -227,7 +227,7 @@ public class EzsignfolderListElement {
     result = 31 * result + (this.eEzsignfolderStep == null ? 0: this.eEzsignfolderStep.hashCode());
     result = 31 * result + (this.dtCreatedDate == null ? 0: this.dtCreatedDate.hashCode());
     result = 31 * result + (this.dtEzsignfolderSentdate == null ? 0: this.dtEzsignfolderSentdate.hashCode());
-    result = 31 * result + (this.dtDueDate == null ? 0: this.dtDueDate.hashCode());
+    result = 31 * result + (this.dtEzsignfolderDuedate == null ? 0: this.dtEzsignfolderDuedate.hashCode());
     result = 31 * result + (this.iEzsigndocument == null ? 0: this.iEzsigndocument.hashCode());
     result = 31 * result + (this.iEzsigndocumentEdm == null ? 0: this.iEzsigndocumentEdm.hashCode());
     result = 31 * result + (this.iEzsignsignature == null ? 0: this.iEzsignsignature.hashCode());
@@ -248,7 +248,7 @@ public class EzsignfolderListElement {
     sb.append("  eEzsignfolderStep: ").append(eEzsignfolderStep).append("\n");
     sb.append("  dtCreatedDate: ").append(dtCreatedDate).append("\n");
     sb.append("  dtEzsignfolderSentdate: ").append(dtEzsignfolderSentdate).append("\n");
-    sb.append("  dtDueDate: ").append(dtDueDate).append("\n");
+    sb.append("  dtEzsignfolderDuedate: ").append(dtEzsignfolderDuedate).append("\n");
     sb.append("  iEzsigndocument: ").append(iEzsigndocument).append("\n");
     sb.append("  iEzsigndocumentEdm: ").append(iEzsigndocumentEdm).append("\n");
     sb.append("  iEzsignsignature: ").append(iEzsignsignature).append("\n");

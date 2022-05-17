@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -15,19 +15,33 @@ package org.openapitools.client.model;
 import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseObjDebug;
 import org.openapitools.client.model.CommonResponseObjDebugPayload;
+import org.openapitools.client.model.EzsigndocumentEditEzsignformfieldgroupsV1ResponseAllOf;
+import org.openapitools.client.model.EzsigndocumentEditEzsignformfieldgroupsV1ResponseMPayload;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Response for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignformfieldgroups API Request
+ * Response for PUT /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignformfieldgroups
  **/
-@ApiModel(description = "Response for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignformfieldgroups API Request")
+@ApiModel(description = "Response for PUT /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignformfieldgroups")
 public class EzsigndocumentEditEzsignformfieldgroupsV1Response {
   
+  @SerializedName("mPayload")
+  private EzsigndocumentEditEzsignformfieldgroupsV1ResponseMPayload mPayload = null;
   @SerializedName("objDebugPayload")
   private CommonResponseObjDebugPayload objDebugPayload = null;
   @SerializedName("objDebug")
   private CommonResponseObjDebug objDebug = null;
+
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public EzsigndocumentEditEzsignformfieldgroupsV1ResponseMPayload getMPayload() {
+    return mPayload;
+  }
+  public void setMPayload(EzsigndocumentEditEzsignformfieldgroupsV1ResponseMPayload mPayload) {
+    this.mPayload = mPayload;
+  }
 
   /**
    **/
@@ -59,13 +73,15 @@ public class EzsigndocumentEditEzsignformfieldgroupsV1Response {
       return false;
     }
     EzsigndocumentEditEzsignformfieldgroupsV1Response ezsigndocumentEditEzsignformfieldgroupsV1Response = (EzsigndocumentEditEzsignformfieldgroupsV1Response) o;
-    return (this.objDebugPayload == null ? ezsigndocumentEditEzsignformfieldgroupsV1Response.objDebugPayload == null : this.objDebugPayload.equals(ezsigndocumentEditEzsignformfieldgroupsV1Response.objDebugPayload)) &&
+    return (this.mPayload == null ? ezsigndocumentEditEzsignformfieldgroupsV1Response.mPayload == null : this.mPayload.equals(ezsigndocumentEditEzsignformfieldgroupsV1Response.mPayload)) &&
+        (this.objDebugPayload == null ? ezsigndocumentEditEzsignformfieldgroupsV1Response.objDebugPayload == null : this.objDebugPayload.equals(ezsigndocumentEditEzsignformfieldgroupsV1Response.objDebugPayload)) &&
         (this.objDebug == null ? ezsigndocumentEditEzsignformfieldgroupsV1Response.objDebug == null : this.objDebug.equals(ezsigndocumentEditEzsignformfieldgroupsV1Response.objDebug));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
+    result = 31 * result + (this.mPayload == null ? 0: this.mPayload.hashCode());
     result = 31 * result + (this.objDebugPayload == null ? 0: this.objDebugPayload.hashCode());
     result = 31 * result + (this.objDebug == null ? 0: this.objDebug.hashCode());
     return result;
@@ -76,6 +92,7 @@ public class EzsigndocumentEditEzsignformfieldgroupsV1Response {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsigndocumentEditEzsignformfieldgroupsV1Response {\n");
     
+    sb.append("  mPayload: ").append(mPayload).append("\n");
     sb.append("  objDebugPayload: ").append(objDebugPayload).append("\n");
     sb.append("  objDebug: ").append(objDebug).append("\n");
     sb.append("}\n");

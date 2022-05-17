@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -12,7 +12,7 @@
 
 package org.openapitools.client.model;
 
-import org.openapitools.client.model.FieldEActivesessionSessiontype;
+import org.openapitools.client.model.FieldEActivesessionUsertype;
 import org.openapitools.client.model.FieldEActivesessionWeekdaystart;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
@@ -23,8 +23,8 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "An Activesession Object")
 public class ActivesessionResponse {
   
-  @SerializedName("eActivesessionSessiontype")
-  private FieldEActivesessionSessiontype eActivesessionSessiontype = null;
+  @SerializedName("eActivesessionUsertype")
+  private FieldEActivesessionUsertype eActivesessionUsertype = null;
   @SerializedName("eActivesessionWeekdaystart")
   private FieldEActivesessionWeekdaystart eActivesessionWeekdaystart = null;
   @SerializedName("fkiLanguageID")
@@ -41,11 +41,11 @@ public class ActivesessionResponse {
   /**
    **/
   @ApiModelProperty(required = true, value = "")
-  public FieldEActivesessionSessiontype getEActivesessionSessiontype() {
-    return eActivesessionSessiontype;
+  public FieldEActivesessionUsertype getEActivesessionUsertype() {
+    return eActivesessionUsertype;
   }
-  public void setEActivesessionSessiontype(FieldEActivesessionSessiontype eActivesessionSessiontype) {
-    this.eActivesessionSessiontype = eActivesessionSessiontype;
+  public void setEActivesessionUsertype(FieldEActivesessionUsertype eActivesessionUsertype) {
+    this.eActivesessionUsertype = eActivesessionUsertype;
   }
 
   /**
@@ -125,7 +125,7 @@ public class ActivesessionResponse {
       return false;
     }
     ActivesessionResponse activesessionResponse = (ActivesessionResponse) o;
-    return (this.eActivesessionSessiontype == null ? activesessionResponse.eActivesessionSessiontype == null : this.eActivesessionSessiontype.equals(activesessionResponse.eActivesessionSessiontype)) &&
+    return (this.eActivesessionUsertype == null ? activesessionResponse.eActivesessionUsertype == null : this.eActivesessionUsertype.equals(activesessionResponse.eActivesessionUsertype)) &&
         (this.eActivesessionWeekdaystart == null ? activesessionResponse.eActivesessionWeekdaystart == null : this.eActivesessionWeekdaystart.equals(activesessionResponse.eActivesessionWeekdaystart)) &&
         (this.fkiLanguageID == null ? activesessionResponse.fkiLanguageID == null : this.fkiLanguageID.equals(activesessionResponse.fkiLanguageID)) &&
         (this.sCompanyNameX == null ? activesessionResponse.sCompanyNameX == null : this.sCompanyNameX.equals(activesessionResponse.sCompanyNameX)) &&
@@ -137,7 +137,7 @@ public class ActivesessionResponse {
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.eActivesessionSessiontype == null ? 0: this.eActivesessionSessiontype.hashCode());
+    result = 31 * result + (this.eActivesessionUsertype == null ? 0: this.eActivesessionUsertype.hashCode());
     result = 31 * result + (this.eActivesessionWeekdaystart == null ? 0: this.eActivesessionWeekdaystart.hashCode());
     result = 31 * result + (this.fkiLanguageID == null ? 0: this.fkiLanguageID.hashCode());
     result = 31 * result + (this.sCompanyNameX == null ? 0: this.sCompanyNameX.hashCode());
@@ -152,7 +152,7 @@ public class ActivesessionResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class ActivesessionResponse {\n");
     
-    sb.append("  eActivesessionSessiontype: ").append(eActivesessionSessiontype).append("\n");
+    sb.append("  eActivesessionUsertype: ").append(eActivesessionUsertype).append("\n");
     sb.append("  eActivesessionWeekdaystart: ").append(eActivesessionWeekdaystart).append("\n");
     sb.append("  fkiLanguageID: ").append(fkiLanguageID).append("\n");
     sb.append("  sCompanyNameX: ").append(sCompanyNameX).append("\n");

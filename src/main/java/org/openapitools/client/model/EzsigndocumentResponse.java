@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -51,6 +51,8 @@ public class EzsigndocumentResponse {
   private String sEzsigndocumentMD5initial = null;
   @SerializedName("sEzsigndocumentMD5signed")
   private String sEzsigndocumentMD5signed = null;
+  @SerializedName("bEzsigndocumentEzsignform")
+  private Boolean bEzsigndocumentEzsignform = null;
   @SerializedName("objAudit")
   private CommonAudit objAudit = null;
 
@@ -210,6 +212,17 @@ public class EzsigndocumentResponse {
   }
 
   /**
+   * If the Ezsigndocument contains an Ezsignform or not
+   **/
+  @ApiModelProperty(required = true, value = "If the Ezsigndocument contains an Ezsignform or not")
+  public Boolean getBEzsigndocumentEzsignform() {
+    return bEzsigndocumentEzsignform;
+  }
+  public void setBEzsigndocumentEzsignform(Boolean bEzsigndocumentEzsignform) {
+    this.bEzsigndocumentEzsignform = bEzsigndocumentEzsignform;
+  }
+
+  /**
    **/
   @ApiModelProperty(required = true, value = "")
   public CommonAudit getObjAudit() {
@@ -243,6 +256,7 @@ public class EzsigndocumentResponse {
         (this.iEzsigndocumentSignaturetotal == null ? ezsigndocumentResponse.iEzsigndocumentSignaturetotal == null : this.iEzsigndocumentSignaturetotal.equals(ezsigndocumentResponse.iEzsigndocumentSignaturetotal)) &&
         (this.sEzsigndocumentMD5initial == null ? ezsigndocumentResponse.sEzsigndocumentMD5initial == null : this.sEzsigndocumentMD5initial.equals(ezsigndocumentResponse.sEzsigndocumentMD5initial)) &&
         (this.sEzsigndocumentMD5signed == null ? ezsigndocumentResponse.sEzsigndocumentMD5signed == null : this.sEzsigndocumentMD5signed.equals(ezsigndocumentResponse.sEzsigndocumentMD5signed)) &&
+        (this.bEzsigndocumentEzsignform == null ? ezsigndocumentResponse.bEzsigndocumentEzsignform == null : this.bEzsigndocumentEzsignform.equals(ezsigndocumentResponse.bEzsigndocumentEzsignform)) &&
         (this.objAudit == null ? ezsigndocumentResponse.objAudit == null : this.objAudit.equals(ezsigndocumentResponse.objAudit));
   }
 
@@ -263,6 +277,7 @@ public class EzsigndocumentResponse {
     result = 31 * result + (this.iEzsigndocumentSignaturetotal == null ? 0: this.iEzsigndocumentSignaturetotal.hashCode());
     result = 31 * result + (this.sEzsigndocumentMD5initial == null ? 0: this.sEzsigndocumentMD5initial.hashCode());
     result = 31 * result + (this.sEzsigndocumentMD5signed == null ? 0: this.sEzsigndocumentMD5signed.hashCode());
+    result = 31 * result + (this.bEzsigndocumentEzsignform == null ? 0: this.bEzsigndocumentEzsignform.hashCode());
     result = 31 * result + (this.objAudit == null ? 0: this.objAudit.hashCode());
     return result;
   }
@@ -286,6 +301,7 @@ public class EzsigndocumentResponse {
     sb.append("  iEzsigndocumentSignaturetotal: ").append(iEzsigndocumentSignaturetotal).append("\n");
     sb.append("  sEzsigndocumentMD5initial: ").append(sEzsigndocumentMD5initial).append("\n");
     sb.append("  sEzsigndocumentMD5signed: ").append(sEzsigndocumentMD5signed).append("\n");
+    sb.append("  bEzsigndocumentEzsignform: ").append(bEzsigndocumentEzsignform).append("\n");
     sb.append("  objAudit: ").append(objAudit).append("\n");
     sb.append("}\n");
     return sb.toString();

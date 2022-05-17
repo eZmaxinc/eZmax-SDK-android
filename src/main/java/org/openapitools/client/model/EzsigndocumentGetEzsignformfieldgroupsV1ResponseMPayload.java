@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -18,9 +18,9 @@ import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Payload for the /1/object/ezsigndocument/{pkiEzsigndocument}/getEzsignformfieldgroups API Request
+ * Payload for GET /1/object/ezsigndocument/{pkiEzsigndocument}/getEzsignformfieldgroups
  **/
-@ApiModel(description = "Payload for the /1/object/ezsigndocument/{pkiEzsigndocument}/getEzsignformfieldgroups API Request")
+@ApiModel(description = "Payload for GET /1/object/ezsigndocument/{pkiEzsigndocument}/getEzsignformfieldgroups")
 public class EzsigndocumentGetEzsignformfieldgroupsV1ResponseMPayload {
   
   @SerializedName("a_objEzsignformfieldgroup")
@@ -28,7 +28,7 @@ public class EzsigndocumentGetEzsignformfieldgroupsV1ResponseMPayload {
 
   /**
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "")
   public List<EzsignformfieldgroupResponseCompound> getAObjEzsignformfieldgroup() {
     return aObjEzsignformfieldgroup;
   }

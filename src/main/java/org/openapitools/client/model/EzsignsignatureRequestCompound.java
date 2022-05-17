@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -16,6 +16,8 @@ import java.util.*;
 import org.openapitools.client.model.EzsignsignatureRequest;
 import org.openapitools.client.model.EzsignsignatureRequestCompoundAllOf;
 import org.openapitools.client.model.EzsignsignaturecustomdateRequestCompound;
+import org.openapitools.client.model.FieldEEzsignsignatureFont;
+import org.openapitools.client.model.FieldEEzsignsignatureTooltipposition;
 import org.openapitools.client.model.FieldEEzsignsignatureType;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
@@ -42,6 +44,12 @@ public class EzsignsignatureRequestCompound {
   private FieldEEzsignsignatureType eEzsignsignatureType = null;
   @SerializedName("fkiEzsigndocumentID")
   private Integer fkiEzsigndocumentID = null;
+  @SerializedName("tEzsignsignatureTooltip")
+  private String tEzsignsignatureTooltip = null;
+  @SerializedName("eEzsignsignatureTooltipposition")
+  private FieldEEzsignsignatureTooltipposition eEzsignsignatureTooltipposition = null;
+  @SerializedName("eEzsignsignatureFont")
+  private FieldEEzsignsignatureFont eEzsignsignatureFont = null;
   @SerializedName("bEzsignsignatureCustomdate")
   private Boolean bEzsignsignatureCustomdate = null;
   @SerializedName("a_objEzsignsignaturecustomdate")
@@ -92,9 +100,9 @@ public class EzsignsignatureRequestCompound {
   }
 
   /**
-   * The Y coordinate (Vertical) where to put the signature block on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the signature block 3 inches from the top border of the page, you would use \"300\" for the Y coordinate.
+   * The Y coordinate (Vertical) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 3 inches from the top border of the page, you would use \"300\" for the Y coordinate.
    **/
-  @ApiModelProperty(required = true, value = "The Y coordinate (Vertical) where to put the signature block on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the signature block 3 inches from the top border of the page, you would use \"300\" for the Y coordinate.")
+  @ApiModelProperty(required = true, value = "The Y coordinate (Vertical) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 3 inches from the top border of the page, you would use \"300\" for the Y coordinate.")
   public Integer getIEzsignsignatureY() {
     return iEzsignsignatureY;
   }
@@ -135,9 +143,40 @@ public class EzsignsignatureRequestCompound {
   }
 
   /**
-   * Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is \"Name\" or \"Handwritten\")
+   * A tooltip that will be presented to Ezsignsigner about the Ezsignsignature
    **/
-  @ApiModelProperty(value = "Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is \"Name\" or \"Handwritten\")")
+  @ApiModelProperty(value = "A tooltip that will be presented to Ezsignsigner about the Ezsignsignature")
+  public String getTEzsignsignatureTooltip() {
+    return tEzsignsignatureTooltip;
+  }
+  public void setTEzsignsignatureTooltip(String tEzsignsignatureTooltip) {
+    this.tEzsignsignatureTooltip = tEzsignsignatureTooltip;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public FieldEEzsignsignatureTooltipposition getEEzsignsignatureTooltipposition() {
+    return eEzsignsignatureTooltipposition;
+  }
+  public void setEEzsignsignatureTooltipposition(FieldEEzsignsignatureTooltipposition eEzsignsignatureTooltipposition) {
+    this.eEzsignsignatureTooltipposition = eEzsignsignatureTooltipposition;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public FieldEEzsignsignatureFont getEEzsignsignatureFont() {
+    return eEzsignsignatureFont;
+  }
+  public void setEEzsignsignatureFont(FieldEEzsignsignatureFont eEzsignsignatureFont) {
+    this.eEzsignsignatureFont = eEzsignsignatureFont;
+  }
+
+  /**
+   * Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**)
+   **/
+  @ApiModelProperty(value = "Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**)")
   public Boolean getBEzsignsignatureCustomdate() {
     return bEzsignsignatureCustomdate;
   }
@@ -174,6 +213,9 @@ public class EzsignsignatureRequestCompound {
         (this.iEzsignsignatureStep == null ? ezsignsignatureRequestCompound.iEzsignsignatureStep == null : this.iEzsignsignatureStep.equals(ezsignsignatureRequestCompound.iEzsignsignatureStep)) &&
         (this.eEzsignsignatureType == null ? ezsignsignatureRequestCompound.eEzsignsignatureType == null : this.eEzsignsignatureType.equals(ezsignsignatureRequestCompound.eEzsignsignatureType)) &&
         (this.fkiEzsigndocumentID == null ? ezsignsignatureRequestCompound.fkiEzsigndocumentID == null : this.fkiEzsigndocumentID.equals(ezsignsignatureRequestCompound.fkiEzsigndocumentID)) &&
+        (this.tEzsignsignatureTooltip == null ? ezsignsignatureRequestCompound.tEzsignsignatureTooltip == null : this.tEzsignsignatureTooltip.equals(ezsignsignatureRequestCompound.tEzsignsignatureTooltip)) &&
+        (this.eEzsignsignatureTooltipposition == null ? ezsignsignatureRequestCompound.eEzsignsignatureTooltipposition == null : this.eEzsignsignatureTooltipposition.equals(ezsignsignatureRequestCompound.eEzsignsignatureTooltipposition)) &&
+        (this.eEzsignsignatureFont == null ? ezsignsignatureRequestCompound.eEzsignsignatureFont == null : this.eEzsignsignatureFont.equals(ezsignsignatureRequestCompound.eEzsignsignatureFont)) &&
         (this.bEzsignsignatureCustomdate == null ? ezsignsignatureRequestCompound.bEzsignsignatureCustomdate == null : this.bEzsignsignatureCustomdate.equals(ezsignsignatureRequestCompound.bEzsignsignatureCustomdate)) &&
         (this.aObjEzsignsignaturecustomdate == null ? ezsignsignatureRequestCompound.aObjEzsignsignaturecustomdate == null : this.aObjEzsignsignaturecustomdate.equals(ezsignsignatureRequestCompound.aObjEzsignsignaturecustomdate));
   }
@@ -189,6 +231,9 @@ public class EzsignsignatureRequestCompound {
     result = 31 * result + (this.iEzsignsignatureStep == null ? 0: this.iEzsignsignatureStep.hashCode());
     result = 31 * result + (this.eEzsignsignatureType == null ? 0: this.eEzsignsignatureType.hashCode());
     result = 31 * result + (this.fkiEzsigndocumentID == null ? 0: this.fkiEzsigndocumentID.hashCode());
+    result = 31 * result + (this.tEzsignsignatureTooltip == null ? 0: this.tEzsignsignatureTooltip.hashCode());
+    result = 31 * result + (this.eEzsignsignatureTooltipposition == null ? 0: this.eEzsignsignatureTooltipposition.hashCode());
+    result = 31 * result + (this.eEzsignsignatureFont == null ? 0: this.eEzsignsignatureFont.hashCode());
     result = 31 * result + (this.bEzsignsignatureCustomdate == null ? 0: this.bEzsignsignatureCustomdate.hashCode());
     result = 31 * result + (this.aObjEzsignsignaturecustomdate == null ? 0: this.aObjEzsignsignaturecustomdate.hashCode());
     return result;
@@ -207,6 +252,9 @@ public class EzsignsignatureRequestCompound {
     sb.append("  iEzsignsignatureStep: ").append(iEzsignsignatureStep).append("\n");
     sb.append("  eEzsignsignatureType: ").append(eEzsignsignatureType).append("\n");
     sb.append("  fkiEzsigndocumentID: ").append(fkiEzsigndocumentID).append("\n");
+    sb.append("  tEzsignsignatureTooltip: ").append(tEzsignsignatureTooltip).append("\n");
+    sb.append("  eEzsignsignatureTooltipposition: ").append(eEzsignsignatureTooltipposition).append("\n");
+    sb.append("  eEzsignsignatureFont: ").append(eEzsignsignatureFont).append("\n");
     sb.append("  bEzsignsignatureCustomdate: ").append(bEzsignsignatureCustomdate).append("\n");
     sb.append("  aObjEzsignsignaturecustomdate: ").append(aObjEzsignsignaturecustomdate).append("\n");
     sb.append("}\n");

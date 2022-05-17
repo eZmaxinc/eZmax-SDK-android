@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -43,7 +43,7 @@ public class EzsigndocumentlogResponseCompound {
   /**
    * The unique ID of the User
    **/
-  @ApiModelProperty(required = true, value = "The unique ID of the User")
+  @ApiModelProperty(value = "The unique ID of the User")
   public Integer getFkiUserID() {
     return fkiUserID;
   }
@@ -54,7 +54,7 @@ public class EzsigndocumentlogResponseCompound {
   /**
    * The unique ID of the Ezsignsigner
    **/
-  @ApiModelProperty(required = true, value = "The unique ID of the Ezsignsigner")
+  @ApiModelProperty(value = "The unique ID of the Ezsignsigner")
   public Integer getFkiEzsignsignerID() {
     return fkiEzsignsignerID;
   }

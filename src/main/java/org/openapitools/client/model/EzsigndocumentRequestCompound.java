@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -24,8 +24,16 @@ public class EzsigndocumentRequestCompound {
   
   @SerializedName("pkiEzsigndocumentID")
   private Integer pkiEzsigndocumentID = null;
+  @SerializedName("fkiEzsignfolderID")
+  private Integer fkiEzsignfolderID = null;
+  @SerializedName("fkiEzsigntemplateID")
+  private Integer fkiEzsigntemplateID = null;
+  @SerializedName("fkiEzsignfoldersignerassociationID")
+  private Integer fkiEzsignfoldersignerassociationID = null;
+  @SerializedName("fkiLanguageID")
+  private Integer fkiLanguageID = null;
   public enum EEzsigndocumentSourceEnum {
-     Base64,  Url, 
+     Base64,  Ezsigntemplate,  Url, 
   };
   @SerializedName("eEzsigndocumentSource")
   private EEzsigndocumentSourceEnum eEzsigndocumentSource = null;
@@ -41,13 +49,14 @@ public class EzsigndocumentRequestCompound {
   @SerializedName("bEzsigndocumentForcerepair")
   private Boolean bEzsigndocumentForcerepair = true;
   @SerializedName("sEzsigndocumentPassword")
-  private String sEzsigndocumentPassword = ;
-  @SerializedName("fkiEzsignfolderID")
-  private Integer fkiEzsignfolderID = null;
+  private String sEzsigndocumentPassword = null;
+  public enum EEzsigndocumentFormEnum {
+     Keep,  Convert, 
+  };
+  @SerializedName("eEzsigndocumentForm")
+  private EEzsigndocumentFormEnum eEzsigndocumentForm = null;
   @SerializedName("dtEzsigndocumentDuedate")
   private String dtEzsigndocumentDuedate = null;
-  @SerializedName("fkiLanguageID")
-  private Integer fkiLanguageID = null;
   @SerializedName("sEzsigndocumentName")
   private String sEzsigndocumentName = null;
 
@@ -60,6 +69,52 @@ public class EzsigndocumentRequestCompound {
   }
   public void setPkiEzsigndocumentID(Integer pkiEzsigndocumentID) {
     this.pkiEzsigndocumentID = pkiEzsigndocumentID;
+  }
+
+  /**
+   * The unique ID of the Ezsignfolder
+   **/
+  @ApiModelProperty(required = true, value = "The unique ID of the Ezsignfolder")
+  public Integer getFkiEzsignfolderID() {
+    return fkiEzsignfolderID;
+  }
+  public void setFkiEzsignfolderID(Integer fkiEzsignfolderID) {
+    this.fkiEzsignfolderID = fkiEzsignfolderID;
+  }
+
+  /**
+   * The unique ID of the Ezsigntemplate
+   **/
+  @ApiModelProperty(value = "The unique ID of the Ezsigntemplate")
+  public Integer getFkiEzsigntemplateID() {
+    return fkiEzsigntemplateID;
+  }
+  public void setFkiEzsigntemplateID(Integer fkiEzsigntemplateID) {
+    this.fkiEzsigntemplateID = fkiEzsigntemplateID;
+  }
+
+  /**
+   * The unique ID of the Ezsignfoldersignerassociation
+   **/
+  @ApiModelProperty(value = "The unique ID of the Ezsignfoldersignerassociation")
+  public Integer getFkiEzsignfoldersignerassociationID() {
+    return fkiEzsignfoldersignerassociationID;
+  }
+  public void setFkiEzsignfoldersignerassociationID(Integer fkiEzsignfoldersignerassociationID) {
+    this.fkiEzsignfoldersignerassociationID = fkiEzsignfoldersignerassociationID;
+  }
+
+  /**
+   * The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
+   * minimum: 1
+   * maximum: 2
+   **/
+  @ApiModelProperty(required = true, value = "The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|")
+  public Integer getFkiLanguageID() {
+    return fkiLanguageID;
+  }
+  public void setFkiLanguageID(Integer fkiLanguageID) {
+    this.fkiLanguageID = fkiLanguageID;
   }
 
   /**
@@ -76,7 +131,7 @@ public class EzsigndocumentRequestCompound {
   /**
    * Indicates the format of the document.
    **/
-  @ApiModelProperty(required = true, value = "Indicates the format of the document.")
+  @ApiModelProperty(value = "Indicates the format of the document.")
   public EEzsigndocumentFormatEnum getEEzsigndocumentFormat() {
     return eEzsigndocumentFormat;
   }
@@ -129,14 +184,14 @@ public class EzsigndocumentRequestCompound {
   }
 
   /**
-   * The unique ID of the Ezsignfolder
+   * If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID**
    **/
-  @ApiModelProperty(required = true, value = "The unique ID of the Ezsignfolder")
-  public Integer getFkiEzsignfolderID() {
-    return fkiEzsignfolderID;
+  @ApiModelProperty(value = "If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID**")
+  public EEzsigndocumentFormEnum getEEzsigndocumentForm() {
+    return eEzsigndocumentForm;
   }
-  public void setFkiEzsignfolderID(Integer fkiEzsignfolderID) {
-    this.fkiEzsignfolderID = fkiEzsignfolderID;
+  public void setEEzsigndocumentForm(EEzsigndocumentFormEnum eEzsigndocumentForm) {
+    this.eEzsigndocumentForm = eEzsigndocumentForm;
   }
 
   /**
@@ -148,19 +203,6 @@ public class EzsigndocumentRequestCompound {
   }
   public void setDtEzsigndocumentDuedate(String dtEzsigndocumentDuedate) {
     this.dtEzsigndocumentDuedate = dtEzsigndocumentDuedate;
-  }
-
-  /**
-   * The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
-   * minimum: 1
-   * maximum: 2
-   **/
-  @ApiModelProperty(required = true, value = "The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|")
-  public Integer getFkiLanguageID() {
-    return fkiLanguageID;
-  }
-  public void setFkiLanguageID(Integer fkiLanguageID) {
-    this.fkiLanguageID = fkiLanguageID;
   }
 
   /**
@@ -185,15 +227,18 @@ public class EzsigndocumentRequestCompound {
     }
     EzsigndocumentRequestCompound ezsigndocumentRequestCompound = (EzsigndocumentRequestCompound) o;
     return (this.pkiEzsigndocumentID == null ? ezsigndocumentRequestCompound.pkiEzsigndocumentID == null : this.pkiEzsigndocumentID.equals(ezsigndocumentRequestCompound.pkiEzsigndocumentID)) &&
+        (this.fkiEzsignfolderID == null ? ezsigndocumentRequestCompound.fkiEzsignfolderID == null : this.fkiEzsignfolderID.equals(ezsigndocumentRequestCompound.fkiEzsignfolderID)) &&
+        (this.fkiEzsigntemplateID == null ? ezsigndocumentRequestCompound.fkiEzsigntemplateID == null : this.fkiEzsigntemplateID.equals(ezsigndocumentRequestCompound.fkiEzsigntemplateID)) &&
+        (this.fkiEzsignfoldersignerassociationID == null ? ezsigndocumentRequestCompound.fkiEzsignfoldersignerassociationID == null : this.fkiEzsignfoldersignerassociationID.equals(ezsigndocumentRequestCompound.fkiEzsignfoldersignerassociationID)) &&
+        (this.fkiLanguageID == null ? ezsigndocumentRequestCompound.fkiLanguageID == null : this.fkiLanguageID.equals(ezsigndocumentRequestCompound.fkiLanguageID)) &&
         (this.eEzsigndocumentSource == null ? ezsigndocumentRequestCompound.eEzsigndocumentSource == null : this.eEzsigndocumentSource.equals(ezsigndocumentRequestCompound.eEzsigndocumentSource)) &&
         (this.eEzsigndocumentFormat == null ? ezsigndocumentRequestCompound.eEzsigndocumentFormat == null : this.eEzsigndocumentFormat.equals(ezsigndocumentRequestCompound.eEzsigndocumentFormat)) &&
         (this.sEzsigndocumentBase64 == null ? ezsigndocumentRequestCompound.sEzsigndocumentBase64 == null : this.sEzsigndocumentBase64.equals(ezsigndocumentRequestCompound.sEzsigndocumentBase64)) &&
         (this.sEzsigndocumentUrl == null ? ezsigndocumentRequestCompound.sEzsigndocumentUrl == null : this.sEzsigndocumentUrl.equals(ezsigndocumentRequestCompound.sEzsigndocumentUrl)) &&
         (this.bEzsigndocumentForcerepair == null ? ezsigndocumentRequestCompound.bEzsigndocumentForcerepair == null : this.bEzsigndocumentForcerepair.equals(ezsigndocumentRequestCompound.bEzsigndocumentForcerepair)) &&
         (this.sEzsigndocumentPassword == null ? ezsigndocumentRequestCompound.sEzsigndocumentPassword == null : this.sEzsigndocumentPassword.equals(ezsigndocumentRequestCompound.sEzsigndocumentPassword)) &&
-        (this.fkiEzsignfolderID == null ? ezsigndocumentRequestCompound.fkiEzsignfolderID == null : this.fkiEzsignfolderID.equals(ezsigndocumentRequestCompound.fkiEzsignfolderID)) &&
+        (this.eEzsigndocumentForm == null ? ezsigndocumentRequestCompound.eEzsigndocumentForm == null : this.eEzsigndocumentForm.equals(ezsigndocumentRequestCompound.eEzsigndocumentForm)) &&
         (this.dtEzsigndocumentDuedate == null ? ezsigndocumentRequestCompound.dtEzsigndocumentDuedate == null : this.dtEzsigndocumentDuedate.equals(ezsigndocumentRequestCompound.dtEzsigndocumentDuedate)) &&
-        (this.fkiLanguageID == null ? ezsigndocumentRequestCompound.fkiLanguageID == null : this.fkiLanguageID.equals(ezsigndocumentRequestCompound.fkiLanguageID)) &&
         (this.sEzsigndocumentName == null ? ezsigndocumentRequestCompound.sEzsigndocumentName == null : this.sEzsigndocumentName.equals(ezsigndocumentRequestCompound.sEzsigndocumentName));
   }
 
@@ -201,15 +246,18 @@ public class EzsigndocumentRequestCompound {
   public int hashCode() {
     int result = 17;
     result = 31 * result + (this.pkiEzsigndocumentID == null ? 0: this.pkiEzsigndocumentID.hashCode());
+    result = 31 * result + (this.fkiEzsignfolderID == null ? 0: this.fkiEzsignfolderID.hashCode());
+    result = 31 * result + (this.fkiEzsigntemplateID == null ? 0: this.fkiEzsigntemplateID.hashCode());
+    result = 31 * result + (this.fkiEzsignfoldersignerassociationID == null ? 0: this.fkiEzsignfoldersignerassociationID.hashCode());
+    result = 31 * result + (this.fkiLanguageID == null ? 0: this.fkiLanguageID.hashCode());
     result = 31 * result + (this.eEzsigndocumentSource == null ? 0: this.eEzsigndocumentSource.hashCode());
     result = 31 * result + (this.eEzsigndocumentFormat == null ? 0: this.eEzsigndocumentFormat.hashCode());
     result = 31 * result + (this.sEzsigndocumentBase64 == null ? 0: this.sEzsigndocumentBase64.hashCode());
     result = 31 * result + (this.sEzsigndocumentUrl == null ? 0: this.sEzsigndocumentUrl.hashCode());
     result = 31 * result + (this.bEzsigndocumentForcerepair == null ? 0: this.bEzsigndocumentForcerepair.hashCode());
     result = 31 * result + (this.sEzsigndocumentPassword == null ? 0: this.sEzsigndocumentPassword.hashCode());
-    result = 31 * result + (this.fkiEzsignfolderID == null ? 0: this.fkiEzsignfolderID.hashCode());
+    result = 31 * result + (this.eEzsigndocumentForm == null ? 0: this.eEzsigndocumentForm.hashCode());
     result = 31 * result + (this.dtEzsigndocumentDuedate == null ? 0: this.dtEzsigndocumentDuedate.hashCode());
-    result = 31 * result + (this.fkiLanguageID == null ? 0: this.fkiLanguageID.hashCode());
     result = 31 * result + (this.sEzsigndocumentName == null ? 0: this.sEzsigndocumentName.hashCode());
     return result;
   }
@@ -220,15 +268,18 @@ public class EzsigndocumentRequestCompound {
     sb.append("class EzsigndocumentRequestCompound {\n");
     
     sb.append("  pkiEzsigndocumentID: ").append(pkiEzsigndocumentID).append("\n");
+    sb.append("  fkiEzsignfolderID: ").append(fkiEzsignfolderID).append("\n");
+    sb.append("  fkiEzsigntemplateID: ").append(fkiEzsigntemplateID).append("\n");
+    sb.append("  fkiEzsignfoldersignerassociationID: ").append(fkiEzsignfoldersignerassociationID).append("\n");
+    sb.append("  fkiLanguageID: ").append(fkiLanguageID).append("\n");
     sb.append("  eEzsigndocumentSource: ").append(eEzsigndocumentSource).append("\n");
     sb.append("  eEzsigndocumentFormat: ").append(eEzsigndocumentFormat).append("\n");
     sb.append("  sEzsigndocumentBase64: ").append(sEzsigndocumentBase64).append("\n");
     sb.append("  sEzsigndocumentUrl: ").append(sEzsigndocumentUrl).append("\n");
     sb.append("  bEzsigndocumentForcerepair: ").append(bEzsigndocumentForcerepair).append("\n");
     sb.append("  sEzsigndocumentPassword: ").append(sEzsigndocumentPassword).append("\n");
-    sb.append("  fkiEzsignfolderID: ").append(fkiEzsignfolderID).append("\n");
+    sb.append("  eEzsigndocumentForm: ").append(eEzsigndocumentForm).append("\n");
     sb.append("  dtEzsigndocumentDuedate: ").append(dtEzsigndocumentDuedate).append("\n");
-    sb.append("  fkiLanguageID: ").append(fkiLanguageID).append("\n");
     sb.append("  sEzsigndocumentName: ").append(sEzsigndocumentName).append("\n");
     sb.append("}\n");
     return sb.toString();

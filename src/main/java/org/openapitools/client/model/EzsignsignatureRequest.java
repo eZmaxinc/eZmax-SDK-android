@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -12,6 +12,8 @@
 
 package org.openapitools.client.model;
 
+import org.openapitools.client.model.FieldEEzsignsignatureFont;
+import org.openapitools.client.model.FieldEEzsignsignatureTooltipposition;
 import org.openapitools.client.model.FieldEEzsignsignatureType;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
@@ -38,6 +40,12 @@ public class EzsignsignatureRequest {
   private FieldEEzsignsignatureType eEzsignsignatureType = null;
   @SerializedName("fkiEzsigndocumentID")
   private Integer fkiEzsigndocumentID = null;
+  @SerializedName("tEzsignsignatureTooltip")
+  private String tEzsignsignatureTooltip = null;
+  @SerializedName("eEzsignsignatureTooltipposition")
+  private FieldEEzsignsignatureTooltipposition eEzsignsignatureTooltipposition = null;
+  @SerializedName("eEzsignsignatureFont")
+  private FieldEEzsignsignatureFont eEzsignsignatureFont = null;
 
   /**
    * The unique ID of the Ezsignsignature
@@ -84,9 +92,9 @@ public class EzsignsignatureRequest {
   }
 
   /**
-   * The Y coordinate (Vertical) where to put the signature block on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the signature block 3 inches from the top border of the page, you would use \"300\" for the Y coordinate.
+   * The Y coordinate (Vertical) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 3 inches from the top border of the page, you would use \"300\" for the Y coordinate.
    **/
-  @ApiModelProperty(required = true, value = "The Y coordinate (Vertical) where to put the signature block on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the signature block 3 inches from the top border of the page, you would use \"300\" for the Y coordinate.")
+  @ApiModelProperty(required = true, value = "The Y coordinate (Vertical) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 3 inches from the top border of the page, you would use \"300\" for the Y coordinate.")
   public Integer getIEzsignsignatureY() {
     return iEzsignsignatureY;
   }
@@ -126,6 +134,37 @@ public class EzsignsignatureRequest {
     this.fkiEzsigndocumentID = fkiEzsigndocumentID;
   }
 
+  /**
+   * A tooltip that will be presented to Ezsignsigner about the Ezsignsignature
+   **/
+  @ApiModelProperty(value = "A tooltip that will be presented to Ezsignsigner about the Ezsignsignature")
+  public String getTEzsignsignatureTooltip() {
+    return tEzsignsignatureTooltip;
+  }
+  public void setTEzsignsignatureTooltip(String tEzsignsignatureTooltip) {
+    this.tEzsignsignatureTooltip = tEzsignsignatureTooltip;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public FieldEEzsignsignatureTooltipposition getEEzsignsignatureTooltipposition() {
+    return eEzsignsignatureTooltipposition;
+  }
+  public void setEEzsignsignatureTooltipposition(FieldEEzsignsignatureTooltipposition eEzsignsignatureTooltipposition) {
+    this.eEzsignsignatureTooltipposition = eEzsignsignatureTooltipposition;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public FieldEEzsignsignatureFont getEEzsignsignatureFont() {
+    return eEzsignsignatureFont;
+  }
+  public void setEEzsignsignatureFont(FieldEEzsignsignatureFont eEzsignsignatureFont) {
+    this.eEzsignsignatureFont = eEzsignsignatureFont;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -143,7 +182,10 @@ public class EzsignsignatureRequest {
         (this.iEzsignsignatureY == null ? ezsignsignatureRequest.iEzsignsignatureY == null : this.iEzsignsignatureY.equals(ezsignsignatureRequest.iEzsignsignatureY)) &&
         (this.iEzsignsignatureStep == null ? ezsignsignatureRequest.iEzsignsignatureStep == null : this.iEzsignsignatureStep.equals(ezsignsignatureRequest.iEzsignsignatureStep)) &&
         (this.eEzsignsignatureType == null ? ezsignsignatureRequest.eEzsignsignatureType == null : this.eEzsignsignatureType.equals(ezsignsignatureRequest.eEzsignsignatureType)) &&
-        (this.fkiEzsigndocumentID == null ? ezsignsignatureRequest.fkiEzsigndocumentID == null : this.fkiEzsigndocumentID.equals(ezsignsignatureRequest.fkiEzsigndocumentID));
+        (this.fkiEzsigndocumentID == null ? ezsignsignatureRequest.fkiEzsigndocumentID == null : this.fkiEzsigndocumentID.equals(ezsignsignatureRequest.fkiEzsigndocumentID)) &&
+        (this.tEzsignsignatureTooltip == null ? ezsignsignatureRequest.tEzsignsignatureTooltip == null : this.tEzsignsignatureTooltip.equals(ezsignsignatureRequest.tEzsignsignatureTooltip)) &&
+        (this.eEzsignsignatureTooltipposition == null ? ezsignsignatureRequest.eEzsignsignatureTooltipposition == null : this.eEzsignsignatureTooltipposition.equals(ezsignsignatureRequest.eEzsignsignatureTooltipposition)) &&
+        (this.eEzsignsignatureFont == null ? ezsignsignatureRequest.eEzsignsignatureFont == null : this.eEzsignsignatureFont.equals(ezsignsignatureRequest.eEzsignsignatureFont));
   }
 
   @Override
@@ -157,6 +199,9 @@ public class EzsignsignatureRequest {
     result = 31 * result + (this.iEzsignsignatureStep == null ? 0: this.iEzsignsignatureStep.hashCode());
     result = 31 * result + (this.eEzsignsignatureType == null ? 0: this.eEzsignsignatureType.hashCode());
     result = 31 * result + (this.fkiEzsigndocumentID == null ? 0: this.fkiEzsigndocumentID.hashCode());
+    result = 31 * result + (this.tEzsignsignatureTooltip == null ? 0: this.tEzsignsignatureTooltip.hashCode());
+    result = 31 * result + (this.eEzsignsignatureTooltipposition == null ? 0: this.eEzsignsignatureTooltipposition.hashCode());
+    result = 31 * result + (this.eEzsignsignatureFont == null ? 0: this.eEzsignsignatureFont.hashCode());
     return result;
   }
 
@@ -173,6 +218,9 @@ public class EzsignsignatureRequest {
     sb.append("  iEzsignsignatureStep: ").append(iEzsignsignatureStep).append("\n");
     sb.append("  eEzsignsignatureType: ").append(eEzsignsignatureType).append("\n");
     sb.append("  fkiEzsigndocumentID: ").append(fkiEzsigndocumentID).append("\n");
+    sb.append("  tEzsignsignatureTooltip: ").append(tEzsignsignatureTooltip).append("\n");
+    sb.append("  eEzsignsignatureTooltipposition: ").append(eEzsignsignatureTooltipposition).append("\n");
+    sb.append("  eEzsignsignatureFont: ").append(eEzsignsignatureFont).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

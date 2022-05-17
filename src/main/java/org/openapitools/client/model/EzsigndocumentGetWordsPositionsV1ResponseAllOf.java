@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -24,9 +24,9 @@ public class EzsigndocumentGetWordsPositionsV1ResponseAllOf {
   private List<CustomWordPositionWordResponse> mPayload = null;
 
   /**
-   * Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request
+   * Payload for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions
    **/
-  @ApiModelProperty(required = true, value = "Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request")
+  @ApiModelProperty(required = true, value = "Payload for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions")
   public List<CustomWordPositionWordResponse> getMPayload() {
     return mPayload;
   }

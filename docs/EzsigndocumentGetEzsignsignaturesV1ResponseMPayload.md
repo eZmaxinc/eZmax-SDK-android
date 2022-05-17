@@ -6,7 +6,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjEzsignsignature** | [**List&lt;EzsignsignatureResponseCompound&gt;**](EzsignsignatureResponseCompound.md) |  |  [optional]
+**aObjEzsignsignature** | [**List&lt;EzsignsignatureResponseCompound&gt;**](EzsignsignatureResponseCompound.md) |  | 
 
 
 

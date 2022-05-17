@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -25,6 +25,8 @@ public class CustomAutocompleteElementResponse {
   private String sCategory = null;
   @SerializedName("sLabel")
   private String sLabel = null;
+  @SerializedName("sValue")
+  private String sValue = null;
   @SerializedName("mValue")
   private String mValue = null;
 
@@ -54,6 +56,17 @@ public class CustomAutocompleteElementResponse {
    * The Unique ID of the element
    **/
   @ApiModelProperty(required = true, value = "The Unique ID of the element")
+  public String getSValue() {
+    return sValue;
+  }
+  public void setSValue(String sValue) {
+    this.sValue = sValue;
+  }
+
+  /**
+   * The Unique ID of the element
+   **/
+  @ApiModelProperty(value = "The Unique ID of the element")
   public String getMValue() {
     return mValue;
   }
@@ -73,6 +86,7 @@ public class CustomAutocompleteElementResponse {
     CustomAutocompleteElementResponse customAutocompleteElementResponse = (CustomAutocompleteElementResponse) o;
     return (this.sCategory == null ? customAutocompleteElementResponse.sCategory == null : this.sCategory.equals(customAutocompleteElementResponse.sCategory)) &&
         (this.sLabel == null ? customAutocompleteElementResponse.sLabel == null : this.sLabel.equals(customAutocompleteElementResponse.sLabel)) &&
+        (this.sValue == null ? customAutocompleteElementResponse.sValue == null : this.sValue.equals(customAutocompleteElementResponse.sValue)) &&
         (this.mValue == null ? customAutocompleteElementResponse.mValue == null : this.mValue.equals(customAutocompleteElementResponse.mValue));
   }
 
@@ -81,6 +95,7 @@ public class CustomAutocompleteElementResponse {
     int result = 17;
     result = 31 * result + (this.sCategory == null ? 0: this.sCategory.hashCode());
     result = 31 * result + (this.sLabel == null ? 0: this.sLabel.hashCode());
+    result = 31 * result + (this.sValue == null ? 0: this.sValue.hashCode());
     result = 31 * result + (this.mValue == null ? 0: this.mValue.hashCode());
     return result;
   }
@@ -92,6 +107,7 @@ public class CustomAutocompleteElementResponse {
     
     sb.append("  sCategory: ").append(sCategory).append("\n");
     sb.append("  sLabel: ").append(sLabel).append("\n");
+    sb.append("  sValue: ").append(sValue).append("\n");
     sb.append("  mValue: ").append(mValue).append("\n");
     sb.append("}\n");
     return sb.toString();

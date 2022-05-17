@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -21,9 +21,9 @@ import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Payload for the /1/object/ezsigndocument/getObject API Request
+ * Payload for GET /1/object/ezsigndocument/{pkiEzsigndocumentID}
  **/
-@ApiModel(description = "Payload for the /1/object/ezsigndocument/getObject API Request")
+@ApiModel(description = "Payload for GET /1/object/ezsigndocument/{pkiEzsigndocumentID}")
 public class EzsigndocumentGetObjectV1ResponseMPayload {
   
   @SerializedName("fkiEzsignfolderID")
@@ -54,6 +54,8 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
   private String sEzsigndocumentMD5initial = null;
   @SerializedName("sEzsigndocumentMD5signed")
   private String sEzsigndocumentMD5signed = null;
+  @SerializedName("bEzsigndocumentEzsignform")
+  private Boolean bEzsigndocumentEzsignform = null;
   @SerializedName("objAudit")
   private CommonAudit objAudit = null;
   @SerializedName("iEzsigndocumentStepformtotal")
@@ -223,6 +225,17 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
   }
 
   /**
+   * If the Ezsigndocument contains an Ezsignform or not
+   **/
+  @ApiModelProperty(required = true, value = "If the Ezsigndocument contains an Ezsignform or not")
+  public Boolean getBEzsigndocumentEzsignform() {
+    return bEzsigndocumentEzsignform;
+  }
+  public void setBEzsigndocumentEzsignform(Boolean bEzsigndocumentEzsignform) {
+    this.bEzsigndocumentEzsignform = bEzsigndocumentEzsignform;
+  }
+
+  /**
    **/
   @ApiModelProperty(required = true, value = "")
   public CommonAudit getObjAudit() {
@@ -310,6 +323,7 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
         (this.iEzsigndocumentSignaturetotal == null ? ezsigndocumentGetObjectV1ResponseMPayload.iEzsigndocumentSignaturetotal == null : this.iEzsigndocumentSignaturetotal.equals(ezsigndocumentGetObjectV1ResponseMPayload.iEzsigndocumentSignaturetotal)) &&
         (this.sEzsigndocumentMD5initial == null ? ezsigndocumentGetObjectV1ResponseMPayload.sEzsigndocumentMD5initial == null : this.sEzsigndocumentMD5initial.equals(ezsigndocumentGetObjectV1ResponseMPayload.sEzsigndocumentMD5initial)) &&
         (this.sEzsigndocumentMD5signed == null ? ezsigndocumentGetObjectV1ResponseMPayload.sEzsigndocumentMD5signed == null : this.sEzsigndocumentMD5signed.equals(ezsigndocumentGetObjectV1ResponseMPayload.sEzsigndocumentMD5signed)) &&
+        (this.bEzsigndocumentEzsignform == null ? ezsigndocumentGetObjectV1ResponseMPayload.bEzsigndocumentEzsignform == null : this.bEzsigndocumentEzsignform.equals(ezsigndocumentGetObjectV1ResponseMPayload.bEzsigndocumentEzsignform)) &&
         (this.objAudit == null ? ezsigndocumentGetObjectV1ResponseMPayload.objAudit == null : this.objAudit.equals(ezsigndocumentGetObjectV1ResponseMPayload.objAudit)) &&
         (this.iEzsigndocumentStepformtotal == null ? ezsigndocumentGetObjectV1ResponseMPayload.iEzsigndocumentStepformtotal == null : this.iEzsigndocumentStepformtotal.equals(ezsigndocumentGetObjectV1ResponseMPayload.iEzsigndocumentStepformtotal)) &&
         (this.iEzsigndocumentStepformcurrent == null ? ezsigndocumentGetObjectV1ResponseMPayload.iEzsigndocumentStepformcurrent == null : this.iEzsigndocumentStepformcurrent.equals(ezsigndocumentGetObjectV1ResponseMPayload.iEzsigndocumentStepformcurrent)) &&
@@ -335,6 +349,7 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
     result = 31 * result + (this.iEzsigndocumentSignaturetotal == null ? 0: this.iEzsigndocumentSignaturetotal.hashCode());
     result = 31 * result + (this.sEzsigndocumentMD5initial == null ? 0: this.sEzsigndocumentMD5initial.hashCode());
     result = 31 * result + (this.sEzsigndocumentMD5signed == null ? 0: this.sEzsigndocumentMD5signed.hashCode());
+    result = 31 * result + (this.bEzsigndocumentEzsignform == null ? 0: this.bEzsigndocumentEzsignform.hashCode());
     result = 31 * result + (this.objAudit == null ? 0: this.objAudit.hashCode());
     result = 31 * result + (this.iEzsigndocumentStepformtotal == null ? 0: this.iEzsigndocumentStepformtotal.hashCode());
     result = 31 * result + (this.iEzsigndocumentStepformcurrent == null ? 0: this.iEzsigndocumentStepformcurrent.hashCode());
@@ -363,6 +378,7 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
     sb.append("  iEzsigndocumentSignaturetotal: ").append(iEzsigndocumentSignaturetotal).append("\n");
     sb.append("  sEzsigndocumentMD5initial: ").append(sEzsigndocumentMD5initial).append("\n");
     sb.append("  sEzsigndocumentMD5signed: ").append(sEzsigndocumentMD5signed).append("\n");
+    sb.append("  bEzsigndocumentEzsignform: ").append(bEzsigndocumentEzsignform).append("\n");
     sb.append("  objAudit: ").append(objAudit).append("\n");
     sb.append("  iEzsigndocumentStepformtotal: ").append(iEzsigndocumentStepformtotal).append("\n");
     sb.append("  iEzsigndocumentStepformcurrent: ").append(iEzsigndocumentStepformcurrent).append("\n");

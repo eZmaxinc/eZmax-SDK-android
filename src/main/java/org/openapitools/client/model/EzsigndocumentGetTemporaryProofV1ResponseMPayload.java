@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -12,26 +12,27 @@
 
 package org.openapitools.client.model;
 
+import java.util.*;
 import org.openapitools.client.model.EzsigndocumentlogResponseCompound;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getTemporaryProof API Request
+ * Payload for GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getTemporaryProof
  **/
-@ApiModel(description = "Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getTemporaryProof API Request")
+@ApiModel(description = "Payload for GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getTemporaryProof")
 public class EzsigndocumentGetTemporaryProofV1ResponseMPayload {
   
   @SerializedName("a_objEzsigndocumentlog")
-  private EzsigndocumentlogResponseCompound aObjEzsigndocumentlog = null;
+  private List<EzsigndocumentlogResponseCompound> aObjEzsigndocumentlog = null;
 
   /**
    **/
   @ApiModelProperty(required = true, value = "")
-  public EzsigndocumentlogResponseCompound getAObjEzsigndocumentlog() {
+  public List<EzsigndocumentlogResponseCompound> getAObjEzsigndocumentlog() {
     return aObjEzsigndocumentlog;
   }
-  public void setAObjEzsigndocumentlog(EzsigndocumentlogResponseCompound aObjEzsigndocumentlog) {
+  public void setAObjEzsigndocumentlog(List<EzsigndocumentlogResponseCompound> aObjEzsigndocumentlog) {
     this.aObjEzsigndocumentlog = aObjEzsigndocumentlog;
   }
 

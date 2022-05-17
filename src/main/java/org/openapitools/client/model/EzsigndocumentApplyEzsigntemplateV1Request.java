@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -17,9 +17,9 @@ import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Request for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate API Request
+ * Request for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate
  **/
-@ApiModel(description = "Request for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate API Request")
+@ApiModel(description = "Request for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate")
 public class EzsigndocumentApplyEzsigntemplateV1Request {
   
   @SerializedName("fkiEzsigntemplateID")
@@ -30,9 +30,9 @@ public class EzsigndocumentApplyEzsigntemplateV1Request {
   private List<Integer> aPkiEzsignfoldersignerassociationID = null;
 
   /**
-   * The unique ID of the Ezsigndocument
+   * The unique ID of the Ezsigntemplate
    **/
-  @ApiModelProperty(required = true, value = "The unique ID of the Ezsigndocument")
+  @ApiModelProperty(required = true, value = "The unique ID of the Ezsigntemplate")
   public Integer getFkiEzsigntemplateID() {
     return fkiEzsigntemplateID;
   }

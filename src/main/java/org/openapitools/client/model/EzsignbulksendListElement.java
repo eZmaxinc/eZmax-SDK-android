@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -12,7 +12,6 @@
 
 package org.openapitools.client.model;
 
-import org.openapitools.client.model.FieldEEzsignfoldertypePrivacylevel;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -30,8 +29,8 @@ public class EzsignbulksendListElement {
   private String sEzsignbulksendDescription = null;
   @SerializedName("sEzsignfoldertypeNameX")
   private String sEzsignfoldertypeNameX = null;
-  @SerializedName("eEzsignfoldertypePrivacylevel")
-  private FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel = null;
+  @SerializedName("bEzsignbulksendNeedvalidation")
+  private Boolean bEzsignbulksendNeedvalidation = null;
   @SerializedName("bEzsignbulksendIsactive")
   private Boolean bEzsignbulksendIsactive = null;
   @SerializedName("iEzsignbulksendtransmission")
@@ -90,13 +89,14 @@ public class EzsignbulksendListElement {
   }
 
   /**
+   * Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation
    **/
-  @ApiModelProperty(required = true, value = "")
-  public FieldEEzsignfoldertypePrivacylevel getEEzsignfoldertypePrivacylevel() {
-    return eEzsignfoldertypePrivacylevel;
+  @ApiModelProperty(required = true, value = "Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation")
+  public Boolean getBEzsignbulksendNeedvalidation() {
+    return bEzsignbulksendNeedvalidation;
   }
-  public void setEEzsignfoldertypePrivacylevel(FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel) {
-    this.eEzsignfoldertypePrivacylevel = eEzsignfoldertypePrivacylevel;
+  public void setBEzsignbulksendNeedvalidation(Boolean bEzsignbulksendNeedvalidation) {
+    this.bEzsignbulksendNeedvalidation = bEzsignbulksendNeedvalidation;
   }
 
   /**
@@ -179,7 +179,7 @@ public class EzsignbulksendListElement {
         (this.fkiEzsignfoldertypeID == null ? ezsignbulksendListElement.fkiEzsignfoldertypeID == null : this.fkiEzsignfoldertypeID.equals(ezsignbulksendListElement.fkiEzsignfoldertypeID)) &&
         (this.sEzsignbulksendDescription == null ? ezsignbulksendListElement.sEzsignbulksendDescription == null : this.sEzsignbulksendDescription.equals(ezsignbulksendListElement.sEzsignbulksendDescription)) &&
         (this.sEzsignfoldertypeNameX == null ? ezsignbulksendListElement.sEzsignfoldertypeNameX == null : this.sEzsignfoldertypeNameX.equals(ezsignbulksendListElement.sEzsignfoldertypeNameX)) &&
-        (this.eEzsignfoldertypePrivacylevel == null ? ezsignbulksendListElement.eEzsignfoldertypePrivacylevel == null : this.eEzsignfoldertypePrivacylevel.equals(ezsignbulksendListElement.eEzsignfoldertypePrivacylevel)) &&
+        (this.bEzsignbulksendNeedvalidation == null ? ezsignbulksendListElement.bEzsignbulksendNeedvalidation == null : this.bEzsignbulksendNeedvalidation.equals(ezsignbulksendListElement.bEzsignbulksendNeedvalidation)) &&
         (this.bEzsignbulksendIsactive == null ? ezsignbulksendListElement.bEzsignbulksendIsactive == null : this.bEzsignbulksendIsactive.equals(ezsignbulksendListElement.bEzsignbulksendIsactive)) &&
         (this.iEzsignbulksendtransmission == null ? ezsignbulksendListElement.iEzsignbulksendtransmission == null : this.iEzsignbulksendtransmission.equals(ezsignbulksendListElement.iEzsignbulksendtransmission)) &&
         (this.iEzsignfolder == null ? ezsignbulksendListElement.iEzsignfolder == null : this.iEzsignfolder.equals(ezsignbulksendListElement.iEzsignfolder)) &&
@@ -195,7 +195,7 @@ public class EzsignbulksendListElement {
     result = 31 * result + (this.fkiEzsignfoldertypeID == null ? 0: this.fkiEzsignfoldertypeID.hashCode());
     result = 31 * result + (this.sEzsignbulksendDescription == null ? 0: this.sEzsignbulksendDescription.hashCode());
     result = 31 * result + (this.sEzsignfoldertypeNameX == null ? 0: this.sEzsignfoldertypeNameX.hashCode());
-    result = 31 * result + (this.eEzsignfoldertypePrivacylevel == null ? 0: this.eEzsignfoldertypePrivacylevel.hashCode());
+    result = 31 * result + (this.bEzsignbulksendNeedvalidation == null ? 0: this.bEzsignbulksendNeedvalidation.hashCode());
     result = 31 * result + (this.bEzsignbulksendIsactive == null ? 0: this.bEzsignbulksendIsactive.hashCode());
     result = 31 * result + (this.iEzsignbulksendtransmission == null ? 0: this.iEzsignbulksendtransmission.hashCode());
     result = 31 * result + (this.iEzsignfolder == null ? 0: this.iEzsignfolder.hashCode());
@@ -214,7 +214,7 @@ public class EzsignbulksendListElement {
     sb.append("  fkiEzsignfoldertypeID: ").append(fkiEzsignfoldertypeID).append("\n");
     sb.append("  sEzsignbulksendDescription: ").append(sEzsignbulksendDescription).append("\n");
     sb.append("  sEzsignfoldertypeNameX: ").append(sEzsignfoldertypeNameX).append("\n");
-    sb.append("  eEzsignfoldertypePrivacylevel: ").append(eEzsignfoldertypePrivacylevel).append("\n");
+    sb.append("  bEzsignbulksendNeedvalidation: ").append(bEzsignbulksendNeedvalidation).append("\n");
     sb.append("  bEzsignbulksendIsactive: ").append(bEzsignbulksendIsactive).append("\n");
     sb.append("  iEzsignbulksendtransmission: ").append(iEzsignbulksendtransmission).append("\n");
     sb.append("  iEzsignfolder: ").append(iEzsignfolder).append("\n");

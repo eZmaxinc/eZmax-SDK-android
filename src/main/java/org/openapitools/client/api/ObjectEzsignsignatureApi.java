@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -32,6 +32,8 @@ import org.openapitools.client.model.EzsignsignatureDeleteObjectV1Response;
 import org.openapitools.client.model.EzsignsignatureEditObjectV1Request;
 import org.openapitools.client.model.EzsignsignatureEditObjectV1Response;
 import org.openapitools.client.model.EzsignsignatureGetObjectV1Response;
+import org.openapitools.client.model.EzsignsignatureSignV1Request;
+import org.openapitools.client.model.EzsignsignatureSignV1Response;
 import java.util.*;
 
 import org.apache.http.HttpEntity;
@@ -699,6 +701,145 @@ public class ObjectEzsignsignatureApi {
           public void onResponse(String localVarResponse) {
             try {
               responseListener.onResponse((EzsignsignatureGetObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsignsignatureGetObjectV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Sign the Ezsignsignature
+  * 
+   * @param pkiEzsignsignatureID 
+   * @param ezsignsignatureSignV1Request 
+   * @return EzsignsignatureSignV1Response
+  */
+  public EzsignsignatureSignV1Response ezsignsignatureSignV1 (Integer pkiEzsignsignatureID, EzsignsignatureSignV1Request ezsignsignatureSignV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = ezsignsignatureSignV1Request;
+    // verify the required parameter 'pkiEzsignsignatureID' is set
+    if (pkiEzsignsignatureID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsignsignatureID' when calling ezsignsignatureSignV1",
+        new ApiException(400, "Missing the required parameter 'pkiEzsignsignatureID' when calling ezsignsignatureSignV1"));
+    }
+    // verify the required parameter 'ezsignsignatureSignV1Request' is set
+    if (ezsignsignatureSignV1Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'ezsignsignatureSignV1Request' when calling ezsignsignatureSignV1",
+        new ApiException(400, "Missing the required parameter 'ezsignsignatureSignV1Request' when calling ezsignsignatureSignV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/ezsignsignature/{pkiEzsignsignatureID}/sign".replaceAll("\\{" + "pkiEzsignsignatureID" + "\\}", apiInvoker.escapeString(pkiEzsignsignatureID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (EzsignsignatureSignV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsignsignatureSignV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Sign the Ezsignsignature
+   * 
+   * @param pkiEzsignsignatureID    * @param ezsignsignatureSignV1Request 
+  */
+  public void ezsignsignatureSignV1 (Integer pkiEzsignsignatureID, EzsignsignatureSignV1Request ezsignsignatureSignV1Request, final Response.Listener<EzsignsignatureSignV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = ezsignsignatureSignV1Request;
+
+    // verify the required parameter 'pkiEzsignsignatureID' is set
+    if (pkiEzsignsignatureID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsignsignatureID' when calling ezsignsignatureSignV1",
+        new ApiException(400, "Missing the required parameter 'pkiEzsignsignatureID' when calling ezsignsignatureSignV1"));
+    }
+    // verify the required parameter 'ezsignsignatureSignV1Request' is set
+    if (ezsignsignatureSignV1Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'ezsignsignatureSignV1Request' when calling ezsignsignatureSignV1",
+        new ApiException(400, "Missing the required parameter 'ezsignsignatureSignV1Request' when calling ezsignsignatureSignV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/ezsignsignature/{pkiEzsignsignatureID}/sign".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiEzsignsignatureID" + "\\}", apiInvoker.escapeString(pkiEzsignsignatureID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((EzsignsignatureSignV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsignsignatureSignV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

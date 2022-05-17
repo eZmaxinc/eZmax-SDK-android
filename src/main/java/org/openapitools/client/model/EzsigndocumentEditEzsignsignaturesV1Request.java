@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -18,9 +18,9 @@ import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Request for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures API Request
+ * Request for PUT /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures
  **/
-@ApiModel(description = "Request for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures API Request")
+@ApiModel(description = "Request for PUT /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures")
 public class EzsigndocumentEditEzsignsignaturesV1Request {
   
   @SerializedName("a_objEzsignsignature")

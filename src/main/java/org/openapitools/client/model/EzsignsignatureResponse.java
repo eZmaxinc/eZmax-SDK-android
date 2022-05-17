@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -12,6 +12,8 @@
 
 package org.openapitools.client.model;
 
+import org.openapitools.client.model.FieldEEzsignsignatureFont;
+import org.openapitools.client.model.FieldEEzsignsignatureTooltipposition;
 import org.openapitools.client.model.FieldEEzsignsignatureType;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
@@ -24,6 +26,8 @@ public class EzsignsignatureResponse {
   
   @SerializedName("pkiEzsignsignatureID")
   private Integer pkiEzsignsignatureID = null;
+  @SerializedName("fkiEzsigndocumentID")
+  private Integer fkiEzsigndocumentID = null;
   @SerializedName("fkiEzsignfoldersignerassociationID")
   private Integer fkiEzsignfoldersignerassociationID = null;
   @SerializedName("iEzsignpagePagenumber")
@@ -36,8 +40,12 @@ public class EzsignsignatureResponse {
   private Integer iEzsignsignatureStep = null;
   @SerializedName("eEzsignsignatureType")
   private FieldEEzsignsignatureType eEzsignsignatureType = null;
-  @SerializedName("fkiEzsigndocumentID")
-  private Integer fkiEzsigndocumentID = null;
+  @SerializedName("tEzsignsignatureTooltip")
+  private String tEzsignsignatureTooltip = null;
+  @SerializedName("eEzsignsignatureTooltipposition")
+  private FieldEEzsignsignatureTooltipposition eEzsignsignatureTooltipposition = null;
+  @SerializedName("eEzsignsignatureFont")
+  private FieldEEzsignsignatureFont eEzsignsignatureFont = null;
 
   /**
    * The unique ID of the Ezsignsignature
@@ -48,6 +56,17 @@ public class EzsignsignatureResponse {
   }
   public void setPkiEzsignsignatureID(Integer pkiEzsignsignatureID) {
     this.pkiEzsignsignatureID = pkiEzsignsignatureID;
+  }
+
+  /**
+   * The unique ID of the Ezsigndocument
+   **/
+  @ApiModelProperty(required = true, value = "The unique ID of the Ezsigndocument")
+  public Integer getFkiEzsigndocumentID() {
+    return fkiEzsigndocumentID;
+  }
+  public void setFkiEzsigndocumentID(Integer fkiEzsigndocumentID) {
+    this.fkiEzsigndocumentID = fkiEzsigndocumentID;
   }
 
   /**
@@ -84,9 +103,9 @@ public class EzsignsignatureResponse {
   }
 
   /**
-   * The Y coordinate (Vertical) where to put the signature block on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the signature block 3 inches from the top border of the page, you would use \"300\" for the Y coordinate.
+   * The Y coordinate (Vertical) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 3 inches from the top border of the page, you would use \"300\" for the Y coordinate.
    **/
-  @ApiModelProperty(required = true, value = "The Y coordinate (Vertical) where to put the signature block on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the signature block 3 inches from the top border of the page, you would use \"300\" for the Y coordinate.")
+  @ApiModelProperty(required = true, value = "The Y coordinate (Vertical) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 3 inches from the top border of the page, you would use \"300\" for the Y coordinate.")
   public Integer getIEzsignsignatureY() {
     return iEzsignsignatureY;
   }
@@ -116,14 +135,34 @@ public class EzsignsignatureResponse {
   }
 
   /**
-   * The unique ID of the Ezsigndocument
+   * A tooltip that will be presented to Ezsignsigner about the Ezsignsignature
    **/
-  @ApiModelProperty(required = true, value = "The unique ID of the Ezsigndocument")
-  public Integer getFkiEzsigndocumentID() {
-    return fkiEzsigndocumentID;
+  @ApiModelProperty(value = "A tooltip that will be presented to Ezsignsigner about the Ezsignsignature")
+  public String getTEzsignsignatureTooltip() {
+    return tEzsignsignatureTooltip;
   }
-  public void setFkiEzsigndocumentID(Integer fkiEzsigndocumentID) {
-    this.fkiEzsigndocumentID = fkiEzsigndocumentID;
+  public void setTEzsignsignatureTooltip(String tEzsignsignatureTooltip) {
+    this.tEzsignsignatureTooltip = tEzsignsignatureTooltip;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public FieldEEzsignsignatureTooltipposition getEEzsignsignatureTooltipposition() {
+    return eEzsignsignatureTooltipposition;
+  }
+  public void setEEzsignsignatureTooltipposition(FieldEEzsignsignatureTooltipposition eEzsignsignatureTooltipposition) {
+    this.eEzsignsignatureTooltipposition = eEzsignsignatureTooltipposition;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public FieldEEzsignsignatureFont getEEzsignsignatureFont() {
+    return eEzsignsignatureFont;
+  }
+  public void setEEzsignsignatureFont(FieldEEzsignsignatureFont eEzsignsignatureFont) {
+    this.eEzsignsignatureFont = eEzsignsignatureFont;
   }
 
 
@@ -137,26 +176,32 @@ public class EzsignsignatureResponse {
     }
     EzsignsignatureResponse ezsignsignatureResponse = (EzsignsignatureResponse) o;
     return (this.pkiEzsignsignatureID == null ? ezsignsignatureResponse.pkiEzsignsignatureID == null : this.pkiEzsignsignatureID.equals(ezsignsignatureResponse.pkiEzsignsignatureID)) &&
+        (this.fkiEzsigndocumentID == null ? ezsignsignatureResponse.fkiEzsigndocumentID == null : this.fkiEzsigndocumentID.equals(ezsignsignatureResponse.fkiEzsigndocumentID)) &&
         (this.fkiEzsignfoldersignerassociationID == null ? ezsignsignatureResponse.fkiEzsignfoldersignerassociationID == null : this.fkiEzsignfoldersignerassociationID.equals(ezsignsignatureResponse.fkiEzsignfoldersignerassociationID)) &&
         (this.iEzsignpagePagenumber == null ? ezsignsignatureResponse.iEzsignpagePagenumber == null : this.iEzsignpagePagenumber.equals(ezsignsignatureResponse.iEzsignpagePagenumber)) &&
         (this.iEzsignsignatureX == null ? ezsignsignatureResponse.iEzsignsignatureX == null : this.iEzsignsignatureX.equals(ezsignsignatureResponse.iEzsignsignatureX)) &&
         (this.iEzsignsignatureY == null ? ezsignsignatureResponse.iEzsignsignatureY == null : this.iEzsignsignatureY.equals(ezsignsignatureResponse.iEzsignsignatureY)) &&
         (this.iEzsignsignatureStep == null ? ezsignsignatureResponse.iEzsignsignatureStep == null : this.iEzsignsignatureStep.equals(ezsignsignatureResponse.iEzsignsignatureStep)) &&
         (this.eEzsignsignatureType == null ? ezsignsignatureResponse.eEzsignsignatureType == null : this.eEzsignsignatureType.equals(ezsignsignatureResponse.eEzsignsignatureType)) &&
-        (this.fkiEzsigndocumentID == null ? ezsignsignatureResponse.fkiEzsigndocumentID == null : this.fkiEzsigndocumentID.equals(ezsignsignatureResponse.fkiEzsigndocumentID));
+        (this.tEzsignsignatureTooltip == null ? ezsignsignatureResponse.tEzsignsignatureTooltip == null : this.tEzsignsignatureTooltip.equals(ezsignsignatureResponse.tEzsignsignatureTooltip)) &&
+        (this.eEzsignsignatureTooltipposition == null ? ezsignsignatureResponse.eEzsignsignatureTooltipposition == null : this.eEzsignsignatureTooltipposition.equals(ezsignsignatureResponse.eEzsignsignatureTooltipposition)) &&
+        (this.eEzsignsignatureFont == null ? ezsignsignatureResponse.eEzsignsignatureFont == null : this.eEzsignsignatureFont.equals(ezsignsignatureResponse.eEzsignsignatureFont));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
     result = 31 * result + (this.pkiEzsignsignatureID == null ? 0: this.pkiEzsignsignatureID.hashCode());
+    result = 31 * result + (this.fkiEzsigndocumentID == null ? 0: this.fkiEzsigndocumentID.hashCode());
     result = 31 * result + (this.fkiEzsignfoldersignerassociationID == null ? 0: this.fkiEzsignfoldersignerassociationID.hashCode());
     result = 31 * result + (this.iEzsignpagePagenumber == null ? 0: this.iEzsignpagePagenumber.hashCode());
     result = 31 * result + (this.iEzsignsignatureX == null ? 0: this.iEzsignsignatureX.hashCode());
     result = 31 * result + (this.iEzsignsignatureY == null ? 0: this.iEzsignsignatureY.hashCode());
     result = 31 * result + (this.iEzsignsignatureStep == null ? 0: this.iEzsignsignatureStep.hashCode());
     result = 31 * result + (this.eEzsignsignatureType == null ? 0: this.eEzsignsignatureType.hashCode());
-    result = 31 * result + (this.fkiEzsigndocumentID == null ? 0: this.fkiEzsigndocumentID.hashCode());
+    result = 31 * result + (this.tEzsignsignatureTooltip == null ? 0: this.tEzsignsignatureTooltip.hashCode());
+    result = 31 * result + (this.eEzsignsignatureTooltipposition == null ? 0: this.eEzsignsignatureTooltipposition.hashCode());
+    result = 31 * result + (this.eEzsignsignatureFont == null ? 0: this.eEzsignsignatureFont.hashCode());
     return result;
   }
 
@@ -166,13 +211,16 @@ public class EzsignsignatureResponse {
     sb.append("class EzsignsignatureResponse {\n");
     
     sb.append("  pkiEzsignsignatureID: ").append(pkiEzsignsignatureID).append("\n");
+    sb.append("  fkiEzsigndocumentID: ").append(fkiEzsigndocumentID).append("\n");
     sb.append("  fkiEzsignfoldersignerassociationID: ").append(fkiEzsignfoldersignerassociationID).append("\n");
     sb.append("  iEzsignpagePagenumber: ").append(iEzsignpagePagenumber).append("\n");
     sb.append("  iEzsignsignatureX: ").append(iEzsignsignatureX).append("\n");
     sb.append("  iEzsignsignatureY: ").append(iEzsignsignatureY).append("\n");
     sb.append("  iEzsignsignatureStep: ").append(iEzsignsignatureStep).append("\n");
     sb.append("  eEzsignsignatureType: ").append(eEzsignsignatureType).append("\n");
-    sb.append("  fkiEzsigndocumentID: ").append(fkiEzsigndocumentID).append("\n");
+    sb.append("  tEzsignsignatureTooltip: ").append(tEzsignsignatureTooltip).append("\n");
+    sb.append("  eEzsignsignatureTooltipposition: ").append(eEzsignsignatureTooltipposition).append("\n");
+    sb.append("  eEzsignsignatureFont: ").append(eEzsignsignatureFont).append("\n");
     sb.append("}\n");
     return sb.toString();
   }
