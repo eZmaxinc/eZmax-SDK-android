@@ -15,11 +15,12 @@ Name | Type | Description | Notes
 **sEzsigntsarequirementDescriptionX** | **String** | The description of the Ezsigntsarequirement in the language of the requester | 
 **sEzsignfolderDescription** | **String** | The description of the Ezsignfolder | 
 **tEzsignfolderNote** | **String** | Note about the Ezsignfolder | 
+**bEzsignfolderIsdisposable** | **Boolean** | If the Ezsigndocument can be disposed | 
 **eEzsignfolderSendreminderfrequency** | [**FieldEEzsignfolderSendreminderfrequency**](FieldEEzsignfolderSendreminderfrequency.md) |  | 
 **dtEzsignfolderDuedate** | **String** | The maximum date and time at which the Ezsignfolder can be signed. |  [optional]
 **dtEzsignfolderSentdate** | **String** | The date and time at which the Ezsign folder was sent the last time. |  [optional]
-**dtEzsignfolderScheduledarchive** | **String** | The scheduled date and time at which the Ezsignfolder should be archived. | 
-**dtEzsignfolderScheduleddestruction** | **String** | The scheduled date and time at which the Ezsignfolder should be Destroyed. | 
+**dtEzsignfolderScheduledarchive** | **String** | The scheduled date and time at which the Ezsignfolder should be archived. |  [optional]
+**dtEzsignfolderScheduleddispose** | **String** | The scheduled date at which the Ezsignfolder should be Disposed. |  [optional]
 **eEzsignfolderStep** | [**FieldEEzsignfolderStep**](FieldEEzsignfolderStep.md) |  | 
 **dtEzsignfolderClose** | **String** | The date and time at which the folder was closed. Either by applying the last signature or by completing it prematurely. | 
 **objAudit** | [**CommonAudit**](CommonAudit.md) |  | 
