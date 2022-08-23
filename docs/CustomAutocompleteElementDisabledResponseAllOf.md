@@ -6,7 +6,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**bDisabled** | **Boolean** |  | 
+**bDisabled** | **Boolean** | Indicates if the element is disabled in the context | 
 
 
 

@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## billingentityinternalGetAutocompleteV1
 
-> CommonGetAutocompleteV1Response billingentityinternalGetAutocompleteV1(sSelector, sQuery, acceptLanguage)
+> CommonGetAutocompleteV1Response billingentityinternalGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage)
 
 Retrieve Billingentityinternals and IDs
 
@@ -24,10 +24,11 @@ Get the list of Billingentityinternal to be used in a dropdown or autocomplete c
 
 ObjectBillingentityinternalApi apiInstance = new ObjectBillingentityinternalApi();
 String sSelector = null; // String | The type of Billingentityinternals to return
+String eFilterActive = Active; // String | Specify which results we want to display.
 String sQuery = null; // String | Allow to filter the returned results
 HeaderAcceptLanguage acceptLanguage = null; // HeaderAcceptLanguage | 
 try {
-    CommonGetAutocompleteV1Response result = apiInstance.billingentityinternalGetAutocompleteV1(sSelector, sQuery, acceptLanguage);
+    CommonGetAutocompleteV1Response result = apiInstance.billingentityinternalGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectBillingentityinternalApi#billingentityinternalGetAutocompleteV1");
@@ -41,6 +42,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sSelector** | **String**| The type of Billingentityinternals to return | [default to null] [enum: All]
+ **eFilterActive** | **String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive]
  **sQuery** | **String**| Allow to filter the returned results | [optional] [default to null]
  **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [default to null] [enum: *, en, fr]
 

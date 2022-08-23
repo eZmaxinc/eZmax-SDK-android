@@ -6,7 +6,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjEzsignfoldersignerassociation** | [**List&lt;EzsignfoldersignerassociationResponseCompound&gt;**](EzsignfoldersignerassociationResponseCompound.md) |  | 
+**aObjEzsignfoldersignerassociation** | [**List&lt;CustomEzsignfoldersignerassociationActionableElementResponse&gt;**](CustomEzsignfoldersignerassociationActionableElementResponse.md) |  | 
 
 
 

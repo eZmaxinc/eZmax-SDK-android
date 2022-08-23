@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## franchisebrokerGetAutocompleteV1
 
-> CommonGetAutocompleteV1Response franchisebrokerGetAutocompleteV1(sSelector, sQuery, acceptLanguage)
+> CommonGetAutocompleteV1Response franchisebrokerGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage)
 
 Retrieve Franchisebrokers and IDs
 
@@ -24,10 +24,11 @@ Get the list of Franchisebrokers to be used in a dropdown or autocomplete contro
 
 ObjectFranchisebrokerApi apiInstance = new ObjectFranchisebrokerApi();
 String sSelector = null; // String | The type of Franchisebrokers to return
+String eFilterActive = Active; // String | Specify which results we want to display.
 String sQuery = null; // String | Allow to filter the returned results
 HeaderAcceptLanguage acceptLanguage = null; // HeaderAcceptLanguage | 
 try {
-    CommonGetAutocompleteV1Response result = apiInstance.franchisebrokerGetAutocompleteV1(sSelector, sQuery, acceptLanguage);
+    CommonGetAutocompleteV1Response result = apiInstance.franchisebrokerGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectFranchisebrokerApi#franchisebrokerGetAutocompleteV1");
@@ -41,6 +42,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sSelector** | **String**| The type of Franchisebrokers to return | [default to null] [enum: Active, All]
+ **eFilterActive** | **String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive]
  **sQuery** | **String**| Allow to filter the returned results | [optional] [default to null]
  **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [default to null] [enum: *, en, fr]
 

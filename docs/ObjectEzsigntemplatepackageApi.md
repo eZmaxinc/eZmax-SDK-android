@@ -204,7 +204,7 @@ Name | Type | Description  | Notes
 
 ## ezsigntemplatepackageGetAutocompleteV1
 
-> CommonGetAutocompleteDisabledV1Response ezsigntemplatepackageGetAutocompleteV1(sSelector, sQuery, acceptLanguage)
+> CommonGetAutocompleteDisabledV1Response ezsigntemplatepackageGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage)
 
 Retrieve Ezsigntemplatepackages and IDs
 
@@ -218,10 +218,11 @@ Get the list of Ezsigntemplatepackage to be used in a dropdown or autocomplete c
 
 ObjectEzsigntemplatepackageApi apiInstance = new ObjectEzsigntemplatepackageApi();
 String sSelector = null; // String | The type of Ezsigntemplatepackages to return
+String eFilterActive = Active; // String | Specify which results we want to display.
 String sQuery = null; // String | Allow to filter the returned results
 HeaderAcceptLanguage acceptLanguage = null; // HeaderAcceptLanguage | 
 try {
-    CommonGetAutocompleteDisabledV1Response result = apiInstance.ezsigntemplatepackageGetAutocompleteV1(sSelector, sQuery, acceptLanguage);
+    CommonGetAutocompleteDisabledV1Response result = apiInstance.ezsigntemplatepackageGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectEzsigntemplatepackageApi#ezsigntemplatepackageGetAutocompleteV1");
@@ -235,6 +236,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sSelector** | **String**| The type of Ezsigntemplatepackages to return | [default to null] [enum: All, AllMultipleCopiesDisabled]
+ **eFilterActive** | **String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive]
  **sQuery** | **String**| Allow to filter the returned results | [optional] [default to null]
  **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [default to null] [enum: *, en, fr]
 
@@ -286,7 +288,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **eOrderBy** | **String**| Specify how you want the results to be sorted | [optional] [default to null] [enum: pkiEzsigntemplatepackageID_ASC, pkiEzsigntemplatepackageID_DESC, fkiTeamID_ASC, fkiTeamID_DESC, fkiEzsignfoldertypeID_ASC, fkiEzsignfoldertypeID_DESC, fkiLanguageID_ASC, fkiLanguageID_DESC, eEzsigntemplatepackageType_ASC, eEzsigntemplatepackageType_DESC, sEzsigntemplatepackageTypedescriptionX_ASC, sEzsigntemplatepackageTypedescriptionX_DESC, sEzsigntemplatepackageDescription_ASC, sEzsigntemplatepackageDescription_DESC, bEzsigntemplatepackageIsactive_ASC, bEzsigntemplatepackageIsactive_DESC, bEzsigntemplatepackageNeedvalidation_ASC, bEzsigntemplatepackageNeedvalidation_DESC, iEzsigntemplatepackagemembership_ASC, iEzsigntemplatepackagemembership_DESC]
+ **eOrderBy** | **String**| Specify how you want the results to be sorted | [optional] [default to null] [enum: pkiEzsigntemplatepackageID_ASC, pkiEzsigntemplatepackageID_DESC, fkiTeamID_ASC, fkiTeamID_DESC, fkiEzsignfoldertypeID_ASC, fkiEzsignfoldertypeID_DESC, fkiLanguageID_ASC, fkiLanguageID_DESC, eEzsigntemplatepackageType_ASC, eEzsigntemplatepackageType_DESC, sEzsigntemplatepackageTypedescriptionX_ASC, sEzsigntemplatepackageTypedescriptionX_DESC, sEzsigntemplatepackageDescription_ASC, sEzsigntemplatepackageDescription_DESC, bEzsigntemplatepackageNeedvalidation_ASC, bEzsigntemplatepackageNeedvalidation_DESC, iEzsigntemplatepackagemembership_ASC, iEzsigntemplatepackagemembership_DESC, bEzsigntemplatepackageIsactive_ASC, bEzsigntemplatepackageIsactive_DESC]
  **iRowMax** | **Integer**|  | [optional] [default to null]
  **iRowOffset** | **Integer**|  | [optional] [default to null]
  **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [default to null] [enum: *, en, fr]
