@@ -1,0 +1,10 @@
+
+
+# FieldEEzmaxinvoicingPaymenttype
+
+## Enum
+
+
+
+
+

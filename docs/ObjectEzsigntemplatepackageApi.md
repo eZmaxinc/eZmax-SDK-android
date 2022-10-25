@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**ezsigntemplatepackageEditEzsigntemplatepackagesignersV1**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackageEditEzsigntemplatepackagesignersV1) | **PUT** /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}/editEzsigntemplatepackagesigners | Edit multiple Ezsigntemplatepackagesigners
 [**ezsigntemplatepackageEditObjectV1**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackageEditObjectV1) | **PUT** /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID} | Edit an existing Ezsigntemplatepackage
 [**ezsigntemplatepackageGetAutocompleteV1**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackageGetAutocompleteV1) | **GET** /1/object/ezsigntemplatepackage/getAutocomplete/{sSelector} | Retrieve Ezsigntemplatepackages and IDs
+[**ezsigntemplatepackageGetAutocompleteV2**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackageGetAutocompleteV2) | **GET** /2/object/ezsigntemplatepackage/getAutocomplete/{sSelector} | Retrieve Ezsigntemplatepackages and IDs
 [**ezsigntemplatepackageGetListV1**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackageGetListV1) | **GET** /1/object/ezsigntemplatepackage/getList | Retrieve Ezsigntemplatepackage list
 [**ezsigntemplatepackageGetObjectV1**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackageGetObjectV1) | **GET** /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID} | Retrieve an existing Ezsigntemplatepackage
 
@@ -243,6 +244,58 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CommonGetAutocompleteDisabledV1Response**](CommonGetAutocompleteDisabledV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## ezsigntemplatepackageGetAutocompleteV2
+
+> EzsigntemplatepackageGetAutocompleteV2Response ezsigntemplatepackageGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+
+Retrieve Ezsigntemplatepackages and IDs
+
+Get the list of Ezsigntemplatepackage to be used in a dropdown or autocomplete control.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectEzsigntemplatepackageApi;
+
+ObjectEzsigntemplatepackageApi apiInstance = new ObjectEzsigntemplatepackageApi();
+String sSelector = null; // String | The type of Ezsigntemplatepackages to return
+String eFilterActive = Active; // String | Specify which results we want to display.
+String sQuery = null; // String | Allow to filter the returned results
+HeaderAcceptLanguage acceptLanguage = null; // HeaderAcceptLanguage | 
+try {
+    EzsigntemplatepackageGetAutocompleteV2Response result = apiInstance.ezsigntemplatepackageGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectEzsigntemplatepackageApi#ezsigntemplatepackageGetAutocompleteV2");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sSelector** | **String**| The type of Ezsigntemplatepackages to return | [default to null] [enum: All, AllMultipleCopiesDisabled]
+ **eFilterActive** | **String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive]
+ **sQuery** | **String**| Allow to filter the returned results | [optional] [default to null]
+ **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [default to null] [enum: *, en, fr]
+
+### Return type
+
+[**EzsigntemplatepackageGetAutocompleteV2Response**](EzsigntemplatepackageGetAutocompleteV2Response.md)
 
 ### Authorization
 

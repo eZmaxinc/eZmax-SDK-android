@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**ezsigntemplateDeleteObjectV1**](ObjectEzsigntemplateApi.md#ezsigntemplateDeleteObjectV1) | **DELETE** /1/object/ezsigntemplate/{pkiEzsigntemplateID} | Delete an existing Ezsigntemplate
 [**ezsigntemplateEditObjectV1**](ObjectEzsigntemplateApi.md#ezsigntemplateEditObjectV1) | **PUT** /1/object/ezsigntemplate/{pkiEzsigntemplateID} | Edit an existing Ezsigntemplate
 [**ezsigntemplateGetAutocompleteV1**](ObjectEzsigntemplateApi.md#ezsigntemplateGetAutocompleteV1) | **GET** /1/object/ezsigntemplate/getAutocomplete/{sSelector} | Retrieve Ezsigntemplate and IDs
+[**ezsigntemplateGetAutocompleteV2**](ObjectEzsigntemplateApi.md#ezsigntemplateGetAutocompleteV2) | **GET** /2/object/ezsigntemplate/getAutocomplete/{sSelector} | Retrieve Ezsigntemplates and IDs
 [**ezsigntemplateGetListV1**](ObjectEzsigntemplateApi.md#ezsigntemplateGetListV1) | **GET** /1/object/ezsigntemplate/getList | Retrieve Ezsigntemplate list
 [**ezsigntemplateGetObjectV1**](ObjectEzsigntemplateApi.md#ezsigntemplateGetObjectV1) | **GET** /1/object/ezsigntemplate/{pkiEzsigntemplateID} | Retrieve an existing Ezsigntemplate
 
@@ -194,6 +195,58 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CommonGetAutocompleteV1Response**](CommonGetAutocompleteV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## ezsigntemplateGetAutocompleteV2
+
+> EzsigntemplateGetAutocompleteV2Response ezsigntemplateGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+
+Retrieve Ezsigntemplates and IDs
+
+Get the list of Ezsigntemplate to be used in a dropdown or autocomplete control.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectEzsigntemplateApi;
+
+ObjectEzsigntemplateApi apiInstance = new ObjectEzsigntemplateApi();
+String sSelector = null; // String | The type of Ezsigntemplates to return
+String eFilterActive = Active; // String | Specify which results we want to display.
+String sQuery = null; // String | Allow to filter the returned results
+HeaderAcceptLanguage acceptLanguage = null; // HeaderAcceptLanguage | 
+try {
+    EzsigntemplateGetAutocompleteV2Response result = apiInstance.ezsigntemplateGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectEzsigntemplateApi#ezsigntemplateGetAutocompleteV2");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sSelector** | **String**| The type of Ezsigntemplates to return | [default to null] [enum: All]
+ **eFilterActive** | **String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive]
+ **sQuery** | **String**| Allow to filter the returned results | [optional] [default to null]
+ **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [default to null] [enum: *, en, fr]
+
+### Return type
+
+[**EzsigntemplateGetAutocompleteV2Response**](EzsigntemplateGetAutocompleteV2Response.md)
 
 ### Authorization
 

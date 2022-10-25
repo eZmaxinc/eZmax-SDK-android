@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **eEzsignformfieldgroupSignerrequirement** | [**FieldEEzsignformfieldgroupSignerrequirement**](FieldEEzsignformfieldgroupSignerrequirement.md) |  | 
 **sEzsignformfieldgroupLabel** | **String** | The Label for the Ezsignformfieldgroup | 
 **iEzsignformfieldgroupStep** | **Integer** | The step when the Ezsignsigner will be invited to fill the form fields | 
-**sEzsignformfieldgroupDefaultvalue** | **String** | The default value for the Ezsignformfieldgroup | 
+**sEzsignformfieldgroupDefaultvalue** | **String** | The default value for the Ezsignformfieldgroup |  [optional]
 **iEzsignformfieldgroupFilledmin** | **Integer** | The minimum number of Ezsignformfield that must be filled in the Ezsignformfieldgroup | 
 **iEzsignformfieldgroupFilledmax** | **Integer** | The maximum number of Ezsignformfield that must be filled in the Ezsignformfieldgroup | 
 **bEzsignformfieldgroupReadonly** | **Boolean** | Whether the Ezsignformfieldgroup is read only or not. | 

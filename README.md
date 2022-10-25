@@ -92,13 +92,20 @@ Class | Method | HTTP request | Description
 *ObjectApikeyApi* | [**apikeyCreateObjectV1**](docs/ObjectApikeyApi.md#apikeyCreateObjectV1) | **POST** /1/object/apikey | Create a new Apikey
 *ObjectApikeyApi* | [**apikeyCreateObjectV2**](docs/ObjectApikeyApi.md#apikeyCreateObjectV2) | **POST** /2/object/apikey | Create a new Apikey
 *ObjectBillingentityinternalApi* | [**billingentityinternalGetAutocompleteV1**](docs/ObjectBillingentityinternalApi.md#billingentityinternalGetAutocompleteV1) | **GET** /1/object/billingentityinternal/getAutocomplete/{sSelector} | Retrieve Billingentityinternals and IDs
+*ObjectBillingentityinternalApi* | [**billingentityinternalGetAutocompleteV2**](docs/ObjectBillingentityinternalApi.md#billingentityinternalGetAutocompleteV2) | **GET** /2/object/billingentityinternal/getAutocomplete/{sSelector} | Retrieve Billingentityinternals and IDs
 *ObjectBrandingApi* | [**brandingCreateObjectV1**](docs/ObjectBrandingApi.md#brandingCreateObjectV1) | **POST** /1/object/branding | Create a new Branding
 *ObjectBrandingApi* | [**brandingEditObjectV1**](docs/ObjectBrandingApi.md#brandingEditObjectV1) | **PUT** /1/object/branding/{pkiBrandingID} | Edit an existing Branding
 *ObjectBrandingApi* | [**brandingGetAutocompleteV1**](docs/ObjectBrandingApi.md#brandingGetAutocompleteV1) | **GET** /1/object/branding/getAutocomplete/{sSelector} | Retrieve Brandings and IDs
+*ObjectBrandingApi* | [**brandingGetAutocompleteV2**](docs/ObjectBrandingApi.md#brandingGetAutocompleteV2) | **GET** /2/object/branding/getAutocomplete/{sSelector} | Retrieve Brandings and IDs
 *ObjectBrandingApi* | [**brandingGetListV1**](docs/ObjectBrandingApi.md#brandingGetListV1) | **GET** /1/object/branding/getList | Retrieve Branding list
 *ObjectBrandingApi* | [**brandingGetObjectV1**](docs/ObjectBrandingApi.md#brandingGetObjectV1) | **GET** /1/object/branding/{pkiBrandingID} | Retrieve an existing Branding
 *ObjectDepartmentApi* | [**departmentGetAutocompleteV1**](docs/ObjectDepartmentApi.md#departmentGetAutocompleteV1) | **GET** /1/object/department/getAutocomplete/{sSelector} | Retrieve Departments and IDs
+*ObjectDepartmentApi* | [**departmentGetAutocompleteV2**](docs/ObjectDepartmentApi.md#departmentGetAutocompleteV2) | **GET** /2/object/department/getAutocomplete/{sSelector} | Retrieve Departments and IDs
 *ObjectDepartmentApi* | [**departmentGetMembersV1**](docs/ObjectDepartmentApi.md#departmentGetMembersV1) | **GET** /1/object/department/{pkiDepartmentID}/getMembers | Retrieve an existing Department&#39;s members
+*ObjectEzmaxinvoicingApi* | [**ezmaxinvoicingGetAutocompleteV1**](docs/ObjectEzmaxinvoicingApi.md#ezmaxinvoicingGetAutocompleteV1) | **GET** /1/object/ezmaxinvoicing/getAutocomplete/{sSelector} | Retrieve Ezmaxinvoicings and IDs
+*ObjectEzmaxinvoicingApi* | [**ezmaxinvoicingGetAutocompleteV2**](docs/ObjectEzmaxinvoicingApi.md#ezmaxinvoicingGetAutocompleteV2) | **GET** /2/object/ezmaxinvoicing/getAutocomplete/{sSelector} | Retrieve Ezmaxinvoicings and IDs
+*ObjectEzmaxinvoicingApi* | [**ezmaxinvoicingGetObjectV1**](docs/ObjectEzmaxinvoicingApi.md#ezmaxinvoicingGetObjectV1) | **GET** /1/object/ezmaxinvoicing/{pkiEzmaxinvoicingID} | Retrieve an existing Ezmaxinvoicing
+*ObjectEzmaxinvoicingApi* | [**ezmaxinvoicingGetProvisionalV1**](docs/ObjectEzmaxinvoicingApi.md#ezmaxinvoicingGetProvisionalV1) | **GET** /1/object/ezmaxinvoicing/getProvisional | Retrieve provisional Ezmaxinvoicing
 *ObjectEzsignbulksendApi* | [**ezsignbulksendCreateEzsignbulksendtransmissionV1**](docs/ObjectEzsignbulksendApi.md#ezsignbulksendCreateEzsignbulksendtransmissionV1) | **POST** /1/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission | Create a new Ezsignbulksendtransmission in the Ezsignbulksend
 *ObjectEzsignbulksendApi* | [**ezsignbulksendCreateObjectV1**](docs/ObjectEzsignbulksendApi.md#ezsignbulksendCreateObjectV1) | **POST** /1/object/ezsignbulksend | Create a new Ezsignbulksend
 *ObjectEzsignbulksendApi* | [**ezsignbulksendDeleteObjectV1**](docs/ObjectEzsignbulksendApi.md#ezsignbulksendDeleteObjectV1) | **DELETE** /1/object/ezsignbulksend/{pkiEzsignbulksendID} | Delete an existing Ezsignbulksend
@@ -161,11 +168,13 @@ Class | Method | HTTP request | Description
 *ObjectEzsignfoldersignerassociationApi* | [**ezsignfoldersignerassociationCreateObjectV2**](docs/ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationCreateObjectV2) | **POST** /2/object/ezsignfoldersignerassociation | Create a new Ezsignfoldersignerassociation
 *ObjectEzsignfoldersignerassociationApi* | [**ezsignfoldersignerassociationDeleteObjectV1**](docs/ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationDeleteObjectV1) | **DELETE** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID} | Delete an existing Ezsignfoldersignerassociation
 *ObjectEzsignfoldersignerassociationApi* | [**ezsignfoldersignerassociationEditObjectV1**](docs/ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationEditObjectV1) | **PUT** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID} | Edit an existing Ezsignfoldersignerassociation
+*ObjectEzsignfoldersignerassociationApi* | [**ezsignfoldersignerassociationForceDisconnectV1**](docs/ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationForceDisconnectV1) | **POST** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/forceDisconnect | Disconnects the Ezsignfoldersignerassociation
 *ObjectEzsignfoldersignerassociationApi* | [**ezsignfoldersignerassociationGetInPersonLoginUrlV1**](docs/ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationGetInPersonLoginUrlV1) | **GET** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/getInPersonLoginUrl | Retrieve a Login Url to allow In-Person signing
 *ObjectEzsignfoldersignerassociationApi* | [**ezsignfoldersignerassociationGetObjectV1**](docs/ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationGetObjectV1) | **GET** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID} | Retrieve an existing Ezsignfoldersignerassociation
 *ObjectEzsignfoldertypeApi* | [**ezsignfoldertypeCreateObjectV1**](docs/ObjectEzsignfoldertypeApi.md#ezsignfoldertypeCreateObjectV1) | **POST** /1/object/ezsignfoldertype | Create a new Ezsignfoldertype
 *ObjectEzsignfoldertypeApi* | [**ezsignfoldertypeEditObjectV1**](docs/ObjectEzsignfoldertypeApi.md#ezsignfoldertypeEditObjectV1) | **PUT** /1/object/ezsignfoldertype/{pkiEzsignfoldertypeID} | Edit an existing Ezsignfoldertype
 *ObjectEzsignfoldertypeApi* | [**ezsignfoldertypeGetAutocompleteV1**](docs/ObjectEzsignfoldertypeApi.md#ezsignfoldertypeGetAutocompleteV1) | **GET** /1/object/ezsignfoldertype/getAutocomplete/{sSelector} | Retrieve Ezsignfoldertypes and IDs
+*ObjectEzsignfoldertypeApi* | [**ezsignfoldertypeGetAutocompleteV2**](docs/ObjectEzsignfoldertypeApi.md#ezsignfoldertypeGetAutocompleteV2) | **GET** /2/object/ezsignfoldertype/getAutocomplete/{sSelector} | Retrieve Ezsignfoldertypes and IDs
 *ObjectEzsignfoldertypeApi* | [**ezsignfoldertypeGetListV1**](docs/ObjectEzsignfoldertypeApi.md#ezsignfoldertypeGetListV1) | **GET** /1/object/ezsignfoldertype/getList | Retrieve Ezsignfoldertype list
 *ObjectEzsignfoldertypeApi* | [**ezsignfoldertypeGetObjectV1**](docs/ObjectEzsignfoldertypeApi.md#ezsignfoldertypeGetObjectV1) | **GET** /1/object/ezsignfoldertype/{pkiEzsignfoldertypeID} | Retrieve an existing Ezsignfoldertype
 *ObjectEzsignformfieldgroupApi* | [**ezsignformfieldgroupCreateObjectV1**](docs/ObjectEzsignformfieldgroupApi.md#ezsignformfieldgroupCreateObjectV1) | **POST** /1/object/ezsignformfieldgroup | Create a new Ezsignformfieldgroup
@@ -182,6 +191,7 @@ Class | Method | HTTP request | Description
 *ObjectEzsigntemplateApi* | [**ezsigntemplateDeleteObjectV1**](docs/ObjectEzsigntemplateApi.md#ezsigntemplateDeleteObjectV1) | **DELETE** /1/object/ezsigntemplate/{pkiEzsigntemplateID} | Delete an existing Ezsigntemplate
 *ObjectEzsigntemplateApi* | [**ezsigntemplateEditObjectV1**](docs/ObjectEzsigntemplateApi.md#ezsigntemplateEditObjectV1) | **PUT** /1/object/ezsigntemplate/{pkiEzsigntemplateID} | Edit an existing Ezsigntemplate
 *ObjectEzsigntemplateApi* | [**ezsigntemplateGetAutocompleteV1**](docs/ObjectEzsigntemplateApi.md#ezsigntemplateGetAutocompleteV1) | **GET** /1/object/ezsigntemplate/getAutocomplete/{sSelector} | Retrieve Ezsigntemplate and IDs
+*ObjectEzsigntemplateApi* | [**ezsigntemplateGetAutocompleteV2**](docs/ObjectEzsigntemplateApi.md#ezsigntemplateGetAutocompleteV2) | **GET** /2/object/ezsigntemplate/getAutocomplete/{sSelector} | Retrieve Ezsigntemplates and IDs
 *ObjectEzsigntemplateApi* | [**ezsigntemplateGetListV1**](docs/ObjectEzsigntemplateApi.md#ezsigntemplateGetListV1) | **GET** /1/object/ezsigntemplate/getList | Retrieve Ezsigntemplate list
 *ObjectEzsigntemplateApi* | [**ezsigntemplateGetObjectV1**](docs/ObjectEzsigntemplateApi.md#ezsigntemplateGetObjectV1) | **GET** /1/object/ezsigntemplate/{pkiEzsigntemplateID} | Retrieve an existing Ezsigntemplate
 *ObjectEzsigntemplatedocumentApi* | [**ezsigntemplatedocumentCreateObjectV1**](docs/ObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumentCreateObjectV1) | **POST** /1/object/ezsigntemplatedocument | Create a new Ezsigntemplatedocument
@@ -203,6 +213,7 @@ Class | Method | HTTP request | Description
 *ObjectEzsigntemplatepackageApi* | [**ezsigntemplatepackageEditEzsigntemplatepackagesignersV1**](docs/ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackageEditEzsigntemplatepackagesignersV1) | **PUT** /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}/editEzsigntemplatepackagesigners | Edit multiple Ezsigntemplatepackagesigners
 *ObjectEzsigntemplatepackageApi* | [**ezsigntemplatepackageEditObjectV1**](docs/ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackageEditObjectV1) | **PUT** /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID} | Edit an existing Ezsigntemplatepackage
 *ObjectEzsigntemplatepackageApi* | [**ezsigntemplatepackageGetAutocompleteV1**](docs/ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackageGetAutocompleteV1) | **GET** /1/object/ezsigntemplatepackage/getAutocomplete/{sSelector} | Retrieve Ezsigntemplatepackages and IDs
+*ObjectEzsigntemplatepackageApi* | [**ezsigntemplatepackageGetAutocompleteV2**](docs/ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackageGetAutocompleteV2) | **GET** /2/object/ezsigntemplatepackage/getAutocomplete/{sSelector} | Retrieve Ezsigntemplatepackages and IDs
 *ObjectEzsigntemplatepackageApi* | [**ezsigntemplatepackageGetListV1**](docs/ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackageGetListV1) | **GET** /1/object/ezsigntemplatepackage/getList | Retrieve Ezsigntemplatepackage list
 *ObjectEzsigntemplatepackageApi* | [**ezsigntemplatepackageGetObjectV1**](docs/ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackageGetObjectV1) | **GET** /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID} | Retrieve an existing Ezsigntemplatepackage
 *ObjectEzsigntemplatepackagemembershipApi* | [**ezsigntemplatepackagemembershipCreateObjectV1**](docs/ObjectEzsigntemplatepackagemembershipApi.md#ezsigntemplatepackagemembershipCreateObjectV1) | **POST** /1/object/ezsigntemplatepackagemembership | Create a new Ezsigntemplatepackagemembership
@@ -224,6 +235,7 @@ Class | Method | HTTP request | Description
 *ObjectEzsigntemplatesignerApi* | [**ezsigntemplatesignerEditObjectV1**](docs/ObjectEzsigntemplatesignerApi.md#ezsigntemplatesignerEditObjectV1) | **PUT** /1/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID} | Edit an existing Ezsigntemplatesigner
 *ObjectEzsigntemplatesignerApi* | [**ezsigntemplatesignerGetObjectV1**](docs/ObjectEzsigntemplatesignerApi.md#ezsigntemplatesignerGetObjectV1) | **GET** /1/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID} | Retrieve an existing Ezsigntemplatesigner
 *ObjectEzsigntsarequirementApi* | [**ezsigntsarequirementGetAutocompleteV1**](docs/ObjectEzsigntsarequirementApi.md#ezsigntsarequirementGetAutocompleteV1) | **GET** /1/object/ezsigntsarequirement/getAutocomplete/{sSelector} | Retrieve Ezsigntsarequirements and IDs
+*ObjectEzsigntsarequirementApi* | [**ezsigntsarequirementGetAutocompleteV2**](docs/ObjectEzsigntsarequirementApi.md#ezsigntsarequirementGetAutocompleteV2) | **GET** /2/object/ezsigntsarequirement/getAutocomplete/{sSelector} | Retrieve Ezsigntsarequirements and IDs
 *ObjectFranchisebrokerApi* | [**franchisebrokerGetAutocompleteV1**](docs/ObjectFranchisebrokerApi.md#franchisebrokerGetAutocompleteV1) | **GET** /1/object/franchisebroker/getAutocomplete/{sSelector} | Retrieve Franchisebrokers and IDs
 *ObjectFranchiseofficeApi* | [**franchiseofficeGetAutocompleteV1**](docs/ObjectFranchiseofficeApi.md#franchiseofficeGetAutocompleteV1) | **GET** /1/object/franchiseoffice/getAutocomplete/{sSelector} | Retrieve Franchiseoffices and IDs
 *ObjectFranchisereferalincomeApi* | [**franchisereferalincomeCreateObjectV1**](docs/ObjectFranchisereferalincomeApi.md#franchisereferalincomeCreateObjectV1) | **POST** /1/object/franchisereferalincome | Create a new Franchisereferalincome
@@ -232,17 +244,22 @@ Class | Method | HTTP request | Description
 *ObjectNotificationtestApi* | [**notificationtestGetElementsV1**](docs/ObjectNotificationtestApi.md#notificationtestGetElementsV1) | **GET** /1/object/notificationtest/{pkiNotificationtestID}/getElements | Retrieve an existing Notificationtest&#39;s Elements
 *ObjectPeriodApi* | [**periodGetAutocompleteV1**](docs/ObjectPeriodApi.md#periodGetAutocompleteV1) | **GET** /1/object/period/getAutocomplete/{sSelector} | Retrieve Periods and IDs
 *ObjectSecretquestionApi* | [**secretquestionGetAutocompleteV1**](docs/ObjectSecretquestionApi.md#secretquestionGetAutocompleteV1) | **GET** /1/object/secretquestion/getAutocomplete/{sSelector} | Retrieve Secretquestions and IDs
+*ObjectSecretquestionApi* | [**secretquestionGetAutocompleteV2**](docs/ObjectSecretquestionApi.md#secretquestionGetAutocompleteV2) | **GET** /2/object/secretquestion/getAutocomplete/{sSelector} | Retrieve Secretquestions and IDs
 *ObjectTaxassignmentApi* | [**taxassignmentGetAutocompleteV1**](docs/ObjectTaxassignmentApi.md#taxassignmentGetAutocompleteV1) | **GET** /1/object/taxassignment/getAutocomplete/{sSelector} | Retrieve Taxassignments and IDs
+*ObjectTaxassignmentApi* | [**taxassignmentGetAutocompleteV2**](docs/ObjectTaxassignmentApi.md#taxassignmentGetAutocompleteV2) | **GET** /2/object/taxassignment/getAutocomplete/{sSelector} | Retrieve Taxassignments and IDs
 *ObjectTimezoneApi* | [**timezoneGetAutocompleteV1**](docs/ObjectTimezoneApi.md#timezoneGetAutocompleteV1) | **GET** /1/object/timezone/getAutocomplete/{sSelector} | Retrieve Timezones and IDs
+*ObjectTimezoneApi* | [**timezoneGetAutocompleteV2**](docs/ObjectTimezoneApi.md#timezoneGetAutocompleteV2) | **GET** /2/object/timezone/getAutocomplete/{sSelector} | Retrieve Timezones and IDs
 *ObjectUserApi* | [**userGetAutocompleteV1**](docs/ObjectUserApi.md#userGetAutocompleteV1) | **GET** /1/object/user/getAutocomplete/{sSelector} | Retrieve Users and IDs
+*ObjectUserApi* | [**userGetAutocompleteV2**](docs/ObjectUserApi.md#userGetAutocompleteV2) | **GET** /2/object/user/getAutocomplete/{sSelector} | Retrieve Users and IDs
 *ObjectUsergroupApi* | [**usergroupGetAutocompleteV1**](docs/ObjectUsergroupApi.md#usergroupGetAutocompleteV1) | **GET** /1/object/usergroup/getAutocomplete/{sSelector} | Retrieve Usergroups and IDs
+*ObjectUsergroupApi* | [**usergroupGetAutocompleteV2**](docs/ObjectUsergroupApi.md#usergroupGetAutocompleteV2) | **GET** /2/object/usergroup/getAutocomplete/{sSelector} | Retrieve Usergroups and IDs
 *ObjectWebhookApi* | [**webhookCreateObjectV1**](docs/ObjectWebhookApi.md#webhookCreateObjectV1) | **POST** /1/object/webhook | Create a new Webhook
 *ObjectWebhookApi* | [**webhookDeleteObjectV1**](docs/ObjectWebhookApi.md#webhookDeleteObjectV1) | **DELETE** /1/object/webhook/{pkiWebhookID} | Delete an existing Webhook
 *ObjectWebhookApi* | [**webhookEditObjectV1**](docs/ObjectWebhookApi.md#webhookEditObjectV1) | **PUT** /1/object/webhook/{pkiWebhookID} | Edit an existing Webhook
 *ObjectWebhookApi* | [**webhookGetHistoryV1**](docs/ObjectWebhookApi.md#webhookGetHistoryV1) | **GET** /1/object/webhook/{pkiWebhookID}/getHistory | Retrieve the logs for recent Webhook calls
 *ObjectWebhookApi* | [**webhookGetListV1**](docs/ObjectWebhookApi.md#webhookGetListV1) | **GET** /1/object/webhook/getList | Retrieve Webhook list
 *ObjectWebhookApi* | [**webhookGetObjectV1**](docs/ObjectWebhookApi.md#webhookGetObjectV1) | **GET** /1/object/webhook/{pkiWebhookID} | Retrieve an existing Webhook
-*ObjectWebhookApi* | [**webhookTestUrlV1**](docs/ObjectWebhookApi.md#webhookTestUrlV1) | **POST** /1/object/webhook/{pkiWebhookID}/test | Test the Webhook by calling the Url
+*ObjectWebhookApi* | [**webhookTestV1**](docs/ObjectWebhookApi.md#webhookTestV1) | **POST** /1/object/webhook/{pkiWebhookID}/test | Test the Webhook by calling the Url
 
 
 ## Documentation for Models
@@ -271,12 +288,20 @@ Class | Method | HTTP request | Description
  - [ApikeyResponseCompound](docs/ApikeyResponseCompound.md)
  - [AttemptResponse](docs/AttemptResponse.md)
  - [AttemptResponseCompound](docs/AttemptResponseCompound.md)
+ - [BillingentityinternalAutocompleteElementResponse](docs/BillingentityinternalAutocompleteElementResponse.md)
+ - [BillingentityinternalGetAutocompleteV2Response](docs/BillingentityinternalGetAutocompleteV2Response.md)
+ - [BillingentityinternalGetAutocompleteV2ResponseAllOf](docs/BillingentityinternalGetAutocompleteV2ResponseAllOf.md)
+ - [BillingentityinternalGetAutocompleteV2ResponseMPayload](docs/BillingentityinternalGetAutocompleteV2ResponseMPayload.md)
+ - [BrandingAutocompleteElementResponse](docs/BrandingAutocompleteElementResponse.md)
  - [BrandingCreateObjectV1Request](docs/BrandingCreateObjectV1Request.md)
  - [BrandingCreateObjectV1Response](docs/BrandingCreateObjectV1Response.md)
  - [BrandingCreateObjectV1ResponseAllOf](docs/BrandingCreateObjectV1ResponseAllOf.md)
  - [BrandingCreateObjectV1ResponseMPayload](docs/BrandingCreateObjectV1ResponseMPayload.md)
  - [BrandingEditObjectV1Request](docs/BrandingEditObjectV1Request.md)
  - [BrandingEditObjectV1Response](docs/BrandingEditObjectV1Response.md)
+ - [BrandingGetAutocompleteV2Response](docs/BrandingGetAutocompleteV2Response.md)
+ - [BrandingGetAutocompleteV2ResponseAllOf](docs/BrandingGetAutocompleteV2ResponseAllOf.md)
+ - [BrandingGetAutocompleteV2ResponseMPayload](docs/BrandingGetAutocompleteV2ResponseMPayload.md)
  - [BrandingGetListV1Response](docs/BrandingGetListV1Response.md)
  - [BrandingGetListV1ResponseAllOf](docs/BrandingGetListV1ResponseAllOf.md)
  - [BrandingGetListV1ResponseMPayload](docs/BrandingGetListV1ResponseMPayload.md)
@@ -301,6 +326,7 @@ Class | Method | HTTP request | Description
  - [CommonResponseError](docs/CommonResponseError.md)
  - [CommonResponseErrorSTemporaryFileUrl](docs/CommonResponseErrorSTemporaryFileUrl.md)
  - [CommonResponseErrorSTemporaryFileUrlAllOf](docs/CommonResponseErrorSTemporaryFileUrlAllOf.md)
+ - [CommonResponseErrorTooManyRequests](docs/CommonResponseErrorTooManyRequests.md)
  - [CommonResponseFilter](docs/CommonResponseFilter.md)
  - [CommonResponseGetList](docs/CommonResponseGetList.md)
  - [CommonResponseObjDebug](docs/CommonResponseObjDebug.md)
@@ -320,10 +346,16 @@ Class | Method | HTTP request | Description
  - [CustomAutocompleteElementDisabledResponse](docs/CustomAutocompleteElementDisabledResponse.md)
  - [CustomAutocompleteElementDisabledResponseAllOf](docs/CustomAutocompleteElementDisabledResponseAllOf.md)
  - [CustomAutocompleteElementResponse](docs/CustomAutocompleteElementResponse.md)
+ - [CustomContactNameResponse](docs/CustomContactNameResponse.md)
  - [CustomDropdownElementRequest](docs/CustomDropdownElementRequest.md)
  - [CustomDropdownElementRequestCompound](docs/CustomDropdownElementRequestCompound.md)
  - [CustomDropdownElementResponse](docs/CustomDropdownElementResponse.md)
  - [CustomDropdownElementResponseCompound](docs/CustomDropdownElementResponseCompound.md)
+ - [CustomEzmaxinvoicingEzsigndocumentResponse](docs/CustomEzmaxinvoicingEzsigndocumentResponse.md)
+ - [CustomEzmaxinvoicingEzsigndocumentResponseAllOf](docs/CustomEzmaxinvoicingEzsigndocumentResponseAllOf.md)
+ - [CustomEzmaxinvoicingEzsignfolderResponse](docs/CustomEzmaxinvoicingEzsignfolderResponse.md)
+ - [CustomEzmaxinvoicingEzsignfolderResponseAllOf](docs/CustomEzmaxinvoicingEzsignfolderResponseAllOf.md)
+ - [CustomEzmaxpricingResponse](docs/CustomEzmaxpricingResponse.md)
  - [CustomEzsignfoldersignerassociationActionableElementResponse](docs/CustomEzsignfoldersignerassociationActionableElementResponse.md)
  - [CustomEzsignfoldersignerassociationActionableElementResponseAllOf](docs/CustomEzsignfoldersignerassociationActionableElementResponseAllOf.md)
  - [CustomEzsignfoldersignerassociationmessageRequest](docs/CustomEzsignfoldersignerassociationmessageRequest.md)
@@ -348,11 +380,51 @@ Class | Method | HTTP request | Description
  - [CustomWebhooklogResponseAllOf](docs/CustomWebhooklogResponseAllOf.md)
  - [CustomWordPositionOccurenceResponse](docs/CustomWordPositionOccurenceResponse.md)
  - [CustomWordPositionWordResponse](docs/CustomWordPositionWordResponse.md)
+ - [DepartmentAutocompleteElementResponse](docs/DepartmentAutocompleteElementResponse.md)
+ - [DepartmentGetAutocompleteV2Response](docs/DepartmentGetAutocompleteV2Response.md)
+ - [DepartmentGetAutocompleteV2ResponseAllOf](docs/DepartmentGetAutocompleteV2ResponseAllOf.md)
+ - [DepartmentGetAutocompleteV2ResponseMPayload](docs/DepartmentGetAutocompleteV2ResponseMPayload.md)
  - [DepartmentGetMembersV1Response](docs/DepartmentGetMembersV1Response.md)
  - [DepartmentGetMembersV1ResponseAllOf](docs/DepartmentGetMembersV1ResponseAllOf.md)
  - [DepartmentGetMembersV1ResponseMPayload](docs/DepartmentGetMembersV1ResponseMPayload.md)
  - [EmailRequest](docs/EmailRequest.md)
  - [EmailRequestCompound](docs/EmailRequestCompound.md)
+ - [EzmaxinvoicingAutocompleteElementResponse](docs/EzmaxinvoicingAutocompleteElementResponse.md)
+ - [EzmaxinvoicingGetAutocompleteV2Response](docs/EzmaxinvoicingGetAutocompleteV2Response.md)
+ - [EzmaxinvoicingGetAutocompleteV2ResponseAllOf](docs/EzmaxinvoicingGetAutocompleteV2ResponseAllOf.md)
+ - [EzmaxinvoicingGetAutocompleteV2ResponseMPayload](docs/EzmaxinvoicingGetAutocompleteV2ResponseMPayload.md)
+ - [EzmaxinvoicingGetObjectV1Response](docs/EzmaxinvoicingGetObjectV1Response.md)
+ - [EzmaxinvoicingGetObjectV1ResponseAllOf](docs/EzmaxinvoicingGetObjectV1ResponseAllOf.md)
+ - [EzmaxinvoicingGetObjectV1ResponseMPayload](docs/EzmaxinvoicingGetObjectV1ResponseMPayload.md)
+ - [EzmaxinvoicingGetProvisionalV1Response](docs/EzmaxinvoicingGetProvisionalV1Response.md)
+ - [EzmaxinvoicingGetProvisionalV1ResponseAllOf](docs/EzmaxinvoicingGetProvisionalV1ResponseAllOf.md)
+ - [EzmaxinvoicingGetProvisionalV1ResponseMPayload](docs/EzmaxinvoicingGetProvisionalV1ResponseMPayload.md)
+ - [EzmaxinvoicingResponse](docs/EzmaxinvoicingResponse.md)
+ - [EzmaxinvoicingResponseCompound](docs/EzmaxinvoicingResponseCompound.md)
+ - [EzmaxinvoicingResponseCompoundAllOf](docs/EzmaxinvoicingResponseCompoundAllOf.md)
+ - [EzmaxinvoicingagentResponse](docs/EzmaxinvoicingagentResponse.md)
+ - [EzmaxinvoicingagentResponseCompound](docs/EzmaxinvoicingagentResponseCompound.md)
+ - [EzmaxinvoicingagentResponseCompoundAllOf](docs/EzmaxinvoicingagentResponseCompoundAllOf.md)
+ - [EzmaxinvoicingcommissionResponse](docs/EzmaxinvoicingcommissionResponse.md)
+ - [EzmaxinvoicingcommissionResponseCompound](docs/EzmaxinvoicingcommissionResponseCompound.md)
+ - [EzmaxinvoicingcommissionResponseCompoundAllOf](docs/EzmaxinvoicingcommissionResponseCompoundAllOf.md)
+ - [EzmaxinvoicingcontractResponse](docs/EzmaxinvoicingcontractResponse.md)
+ - [EzmaxinvoicingcontractResponseCompound](docs/EzmaxinvoicingcontractResponseCompound.md)
+ - [EzmaxinvoicingsummaryexternalResponse](docs/EzmaxinvoicingsummaryexternalResponse.md)
+ - [EzmaxinvoicingsummaryexternalResponseCompound](docs/EzmaxinvoicingsummaryexternalResponseCompound.md)
+ - [EzmaxinvoicingsummaryexternalResponseCompoundAllOf](docs/EzmaxinvoicingsummaryexternalResponseCompoundAllOf.md)
+ - [EzmaxinvoicingsummaryexternaldetailResponse](docs/EzmaxinvoicingsummaryexternaldetailResponse.md)
+ - [EzmaxinvoicingsummaryexternaldetailResponseCompound](docs/EzmaxinvoicingsummaryexternaldetailResponseCompound.md)
+ - [EzmaxinvoicingsummaryglobalResponse](docs/EzmaxinvoicingsummaryglobalResponse.md)
+ - [EzmaxinvoicingsummaryglobalResponseCompound](docs/EzmaxinvoicingsummaryglobalResponseCompound.md)
+ - [EzmaxinvoicingsummaryglobalResponseCompoundAllOf](docs/EzmaxinvoicingsummaryglobalResponseCompoundAllOf.md)
+ - [EzmaxinvoicingsummaryinternalResponse](docs/EzmaxinvoicingsummaryinternalResponse.md)
+ - [EzmaxinvoicingsummaryinternalResponseCompound](docs/EzmaxinvoicingsummaryinternalResponseCompound.md)
+ - [EzmaxinvoicingsummaryinternalResponseCompoundAllOf](docs/EzmaxinvoicingsummaryinternalResponseCompoundAllOf.md)
+ - [EzmaxinvoicingsummaryinternaldetailResponse](docs/EzmaxinvoicingsummaryinternaldetailResponse.md)
+ - [EzmaxinvoicingsummaryinternaldetailResponseCompound](docs/EzmaxinvoicingsummaryinternaldetailResponseCompound.md)
+ - [EzmaxinvoicinguserResponse](docs/EzmaxinvoicinguserResponse.md)
+ - [EzmaxinvoicinguserResponseCompound](docs/EzmaxinvoicinguserResponseCompound.md)
  - [EzsignSuggestSignersV1Response](docs/EzsignSuggestSignersV1Response.md)
  - [EzsignSuggestSignersV1ResponseAllOf](docs/EzsignSuggestSignersV1ResponseAllOf.md)
  - [EzsignSuggestSignersV1ResponseMPayload](docs/EzsignSuggestSignersV1ResponseMPayload.md)
@@ -551,6 +623,7 @@ Class | Method | HTTP request | Description
  - [EzsignfoldersignerassociationDeleteObjectV1Response](docs/EzsignfoldersignerassociationDeleteObjectV1Response.md)
  - [EzsignfoldersignerassociationEditObjectV1Request](docs/EzsignfoldersignerassociationEditObjectV1Request.md)
  - [EzsignfoldersignerassociationEditObjectV1Response](docs/EzsignfoldersignerassociationEditObjectV1Response.md)
+ - [EzsignfoldersignerassociationForceDisconnectV1Response](docs/EzsignfoldersignerassociationForceDisconnectV1Response.md)
  - [EzsignfoldersignerassociationGetInPersonLoginUrlV1Response](docs/EzsignfoldersignerassociationGetInPersonLoginUrlV1Response.md)
  - [EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseAllOf](docs/EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseAllOf.md)
  - [EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload](docs/EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload.md)
@@ -564,12 +637,16 @@ Class | Method | HTTP request | Description
  - [EzsignfoldersignerassociationResponseCompound](docs/EzsignfoldersignerassociationResponseCompound.md)
  - [EzsignfoldersignerassociationResponseCompoundAllOf](docs/EzsignfoldersignerassociationResponseCompoundAllOf.md)
  - [EzsignfoldersignerassociationResponseCompoundUser](docs/EzsignfoldersignerassociationResponseCompoundUser.md)
+ - [EzsignfoldertypeAutocompleteElementResponse](docs/EzsignfoldertypeAutocompleteElementResponse.md)
  - [EzsignfoldertypeCreateObjectV1Request](docs/EzsignfoldertypeCreateObjectV1Request.md)
  - [EzsignfoldertypeCreateObjectV1Response](docs/EzsignfoldertypeCreateObjectV1Response.md)
  - [EzsignfoldertypeCreateObjectV1ResponseAllOf](docs/EzsignfoldertypeCreateObjectV1ResponseAllOf.md)
  - [EzsignfoldertypeCreateObjectV1ResponseMPayload](docs/EzsignfoldertypeCreateObjectV1ResponseMPayload.md)
  - [EzsignfoldertypeEditObjectV1Request](docs/EzsignfoldertypeEditObjectV1Request.md)
  - [EzsignfoldertypeEditObjectV1Response](docs/EzsignfoldertypeEditObjectV1Response.md)
+ - [EzsignfoldertypeGetAutocompleteV2Response](docs/EzsignfoldertypeGetAutocompleteV2Response.md)
+ - [EzsignfoldertypeGetAutocompleteV2ResponseAllOf](docs/EzsignfoldertypeGetAutocompleteV2ResponseAllOf.md)
+ - [EzsignfoldertypeGetAutocompleteV2ResponseMPayload](docs/EzsignfoldertypeGetAutocompleteV2ResponseMPayload.md)
  - [EzsignfoldertypeGetListV1Response](docs/EzsignfoldertypeGetListV1Response.md)
  - [EzsignfoldertypeGetListV1ResponseAllOf](docs/EzsignfoldertypeGetListV1ResponseAllOf.md)
  - [EzsignfoldertypeGetListV1ResponseMPayload](docs/EzsignfoldertypeGetListV1ResponseMPayload.md)
@@ -644,6 +721,7 @@ Class | Method | HTTP request | Description
  - [EzsignsignerResponseCompound](docs/EzsignsignerResponseCompound.md)
  - [EzsignsignerResponseCompoundAllOf](docs/EzsignsignerResponseCompoundAllOf.md)
  - [EzsignsignerResponseCompoundContact](docs/EzsignsignerResponseCompoundContact.md)
+ - [EzsigntemplateAutocompleteElementResponse](docs/EzsigntemplateAutocompleteElementResponse.md)
  - [EzsigntemplateCreateObjectV1Request](docs/EzsigntemplateCreateObjectV1Request.md)
  - [EzsigntemplateCreateObjectV1Response](docs/EzsigntemplateCreateObjectV1Response.md)
  - [EzsigntemplateCreateObjectV1ResponseAllOf](docs/EzsigntemplateCreateObjectV1ResponseAllOf.md)
@@ -651,6 +729,9 @@ Class | Method | HTTP request | Description
  - [EzsigntemplateDeleteObjectV1Response](docs/EzsigntemplateDeleteObjectV1Response.md)
  - [EzsigntemplateEditObjectV1Request](docs/EzsigntemplateEditObjectV1Request.md)
  - [EzsigntemplateEditObjectV1Response](docs/EzsigntemplateEditObjectV1Response.md)
+ - [EzsigntemplateGetAutocompleteV2Response](docs/EzsigntemplateGetAutocompleteV2Response.md)
+ - [EzsigntemplateGetAutocompleteV2ResponseAllOf](docs/EzsigntemplateGetAutocompleteV2ResponseAllOf.md)
+ - [EzsigntemplateGetAutocompleteV2ResponseMPayload](docs/EzsigntemplateGetAutocompleteV2ResponseMPayload.md)
  - [EzsigntemplateGetListV1Response](docs/EzsigntemplateGetListV1Response.md)
  - [EzsigntemplateGetListV1ResponseAllOf](docs/EzsigntemplateGetListV1ResponseAllOf.md)
  - [EzsigntemplateGetListV1ResponseMPayload](docs/EzsigntemplateGetListV1ResponseMPayload.md)
@@ -727,6 +808,7 @@ Class | Method | HTTP request | Description
  - [EzsigntemplateformfieldgroupsignerRequestCompound](docs/EzsigntemplateformfieldgroupsignerRequestCompound.md)
  - [EzsigntemplateformfieldgroupsignerResponse](docs/EzsigntemplateformfieldgroupsignerResponse.md)
  - [EzsigntemplateformfieldgroupsignerResponseCompound](docs/EzsigntemplateformfieldgroupsignerResponseCompound.md)
+ - [EzsigntemplatepackageAutocompleteElementResponse](docs/EzsigntemplatepackageAutocompleteElementResponse.md)
  - [EzsigntemplatepackageCreateObjectV1Request](docs/EzsigntemplatepackageCreateObjectV1Request.md)
  - [EzsigntemplatepackageCreateObjectV1Response](docs/EzsigntemplatepackageCreateObjectV1Response.md)
  - [EzsigntemplatepackageCreateObjectV1ResponseAllOf](docs/EzsigntemplatepackageCreateObjectV1ResponseAllOf.md)
@@ -738,6 +820,9 @@ Class | Method | HTTP request | Description
  - [EzsigntemplatepackageEditEzsigntemplatepackagesignersV1ResponseMPayload](docs/EzsigntemplatepackageEditEzsigntemplatepackagesignersV1ResponseMPayload.md)
  - [EzsigntemplatepackageEditObjectV1Request](docs/EzsigntemplatepackageEditObjectV1Request.md)
  - [EzsigntemplatepackageEditObjectV1Response](docs/EzsigntemplatepackageEditObjectV1Response.md)
+ - [EzsigntemplatepackageGetAutocompleteV2Response](docs/EzsigntemplatepackageGetAutocompleteV2Response.md)
+ - [EzsigntemplatepackageGetAutocompleteV2ResponseAllOf](docs/EzsigntemplatepackageGetAutocompleteV2ResponseAllOf.md)
+ - [EzsigntemplatepackageGetAutocompleteV2ResponseMPayload](docs/EzsigntemplatepackageGetAutocompleteV2ResponseMPayload.md)
  - [EzsigntemplatepackageGetListV1Response](docs/EzsigntemplatepackageGetListV1Response.md)
  - [EzsigntemplatepackageGetListV1ResponseAllOf](docs/EzsigntemplatepackageGetListV1ResponseAllOf.md)
  - [EzsigntemplatepackageGetListV1ResponseMPayload](docs/EzsigntemplatepackageGetListV1ResponseMPayload.md)
@@ -828,9 +913,18 @@ Class | Method | HTTP request | Description
  - [EzsigntemplatesignerRequestCompound](docs/EzsigntemplatesignerRequestCompound.md)
  - [EzsigntemplatesignerResponse](docs/EzsigntemplatesignerResponse.md)
  - [EzsigntemplatesignerResponseCompound](docs/EzsigntemplatesignerResponseCompound.md)
+ - [EzsigntsarequirementAutocompleteElementResponse](docs/EzsigntsarequirementAutocompleteElementResponse.md)
+ - [EzsigntsarequirementGetAutocompleteV2Response](docs/EzsigntsarequirementGetAutocompleteV2Response.md)
+ - [EzsigntsarequirementGetAutocompleteV2ResponseAllOf](docs/EzsigntsarequirementGetAutocompleteV2ResponseAllOf.md)
+ - [EzsigntsarequirementGetAutocompleteV2ResponseMPayload](docs/EzsigntsarequirementGetAutocompleteV2ResponseMPayload.md)
  - [FieldEActivesessionUsertype](docs/FieldEActivesessionUsertype.md)
  - [FieldEActivesessionWeekdaystart](docs/FieldEActivesessionWeekdaystart.md)
  - [FieldEBrandingLogo](docs/FieldEBrandingLogo.md)
+ - [FieldEEzmaxinvoicingPaymenttype](docs/FieldEEzmaxinvoicingPaymenttype.md)
+ - [FieldEEzmaxinvoicingagentVariationezmax](docs/FieldEEzmaxinvoicingagentVariationezmax.md)
+ - [FieldEEzmaxinvoicingagentVariationezsign](docs/FieldEEzmaxinvoicingagentVariationezsign.md)
+ - [FieldEEzmaxinvoicingcontractPaymenttype](docs/FieldEEzmaxinvoicingcontractPaymenttype.md)
+ - [FieldEEzmaxinvoicinguserVariationezsign](docs/FieldEEzmaxinvoicinguserVariationezsign.md)
  - [FieldEEzsigndocumentStep](docs/FieldEEzsigndocumentStep.md)
  - [FieldEEzsigndocumentlogType](docs/FieldEEzsigndocumentlogType.md)
  - [FieldEEzsignfolderSendreminderfrequency](docs/FieldEEzsignfolderSendreminderfrequency.md)
@@ -848,6 +942,7 @@ Class | Method | HTTP request | Description
  - [FieldEEzsigntemplateformfieldgroupSignerrequirement](docs/FieldEEzsigntemplateformfieldgroupSignerrequirement.md)
  - [FieldEEzsigntemplateformfieldgroupTooltipposition](docs/FieldEEzsigntemplateformfieldgroupTooltipposition.md)
  - [FieldEEzsigntemplateformfieldgroupType](docs/FieldEEzsigntemplateformfieldgroupType.md)
+ - [FieldEEzsigntemplatesignatureAttachmentnamesource](docs/FieldEEzsigntemplatesignatureAttachmentnamesource.md)
  - [FieldEEzsigntemplatesignatureFont](docs/FieldEEzsigntemplatesignatureFont.md)
  - [FieldEEzsigntemplatesignatureTooltipposition](docs/FieldEEzsigntemplatesignatureTooltipposition.md)
  - [FieldEEzsigntemplatesignatureType](docs/FieldEEzsigntemplatesignatureType.md)
@@ -873,6 +968,7 @@ Class | Method | HTTP request | Description
  - [HeaderAcceptLanguage](docs/HeaderAcceptLanguage.md)
  - [MultilingualApikeyDescription](docs/MultilingualApikeyDescription.md)
  - [MultilingualBrandingDescription](docs/MultilingualBrandingDescription.md)
+ - [MultilingualEzmaxinvoicingsummaryinternalDescription](docs/MultilingualEzmaxinvoicingsummaryinternalDescription.md)
  - [MultilingualEzsignfoldertypeName](docs/MultilingualEzsignfoldertypeName.md)
  - [MultilingualNotificationsubsectionName](docs/MultilingualNotificationsubsectionName.md)
  - [MultilingualNotificationtestName](docs/MultilingualNotificationtestName.md)
@@ -886,12 +982,32 @@ Class | Method | HTTP request | Description
  - [NotificationtestResponse](docs/NotificationtestResponse.md)
  - [PhoneRequest](docs/PhoneRequest.md)
  - [PhoneRequestCompound](docs/PhoneRequestCompound.md)
+ - [SecretquestionAutocompleteElementResponse](docs/SecretquestionAutocompleteElementResponse.md)
+ - [SecretquestionGetAutocompleteV2Response](docs/SecretquestionGetAutocompleteV2Response.md)
+ - [SecretquestionGetAutocompleteV2ResponseAllOf](docs/SecretquestionGetAutocompleteV2ResponseAllOf.md)
+ - [SecretquestionGetAutocompleteV2ResponseMPayload](docs/SecretquestionGetAutocompleteV2ResponseMPayload.md)
+ - [TaxassignmentAutocompleteElementResponse](docs/TaxassignmentAutocompleteElementResponse.md)
+ - [TaxassignmentGetAutocompleteV2Response](docs/TaxassignmentGetAutocompleteV2Response.md)
+ - [TaxassignmentGetAutocompleteV2ResponseAllOf](docs/TaxassignmentGetAutocompleteV2ResponseAllOf.md)
+ - [TaxassignmentGetAutocompleteV2ResponseMPayload](docs/TaxassignmentGetAutocompleteV2ResponseMPayload.md)
+ - [TimezoneAutocompleteElementResponse](docs/TimezoneAutocompleteElementResponse.md)
+ - [TimezoneGetAutocompleteV2Response](docs/TimezoneGetAutocompleteV2Response.md)
+ - [TimezoneGetAutocompleteV2ResponseAllOf](docs/TimezoneGetAutocompleteV2ResponseAllOf.md)
+ - [TimezoneGetAutocompleteV2ResponseMPayload](docs/TimezoneGetAutocompleteV2ResponseMPayload.md)
+ - [UserAutocompleteElementResponse](docs/UserAutocompleteElementResponse.md)
  - [UserCreateEzsignuserV1Request](docs/UserCreateEzsignuserV1Request.md)
  - [UserCreateEzsignuserV1Response](docs/UserCreateEzsignuserV1Response.md)
  - [UserCreateEzsignuserV1ResponseAllOf](docs/UserCreateEzsignuserV1ResponseAllOf.md)
  - [UserCreateEzsignuserV1ResponseMPayload](docs/UserCreateEzsignuserV1ResponseMPayload.md)
+ - [UserGetAutocompleteV2Response](docs/UserGetAutocompleteV2Response.md)
+ - [UserGetAutocompleteV2ResponseAllOf](docs/UserGetAutocompleteV2ResponseAllOf.md)
+ - [UserGetAutocompleteV2ResponseMPayload](docs/UserGetAutocompleteV2ResponseMPayload.md)
  - [UserResponse](docs/UserResponse.md)
  - [UserResponseCompound](docs/UserResponseCompound.md)
+ - [UsergroupAutocompleteElementResponse](docs/UsergroupAutocompleteElementResponse.md)
+ - [UsergroupGetAutocompleteV2Response](docs/UsergroupGetAutocompleteV2Response.md)
+ - [UsergroupGetAutocompleteV2ResponseAllOf](docs/UsergroupGetAutocompleteV2ResponseAllOf.md)
+ - [UsergroupGetAutocompleteV2ResponseMPayload](docs/UsergroupGetAutocompleteV2ResponseMPayload.md)
  - [WebhookCreateObjectV1Request](docs/WebhookCreateObjectV1Request.md)
  - [WebhookCreateObjectV1Response](docs/WebhookCreateObjectV1Response.md)
  - [WebhookCreateObjectV1ResponseAllOf](docs/WebhookCreateObjectV1ResponseAllOf.md)

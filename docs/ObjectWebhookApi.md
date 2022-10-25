@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**webhookGetHistoryV1**](ObjectWebhookApi.md#webhookGetHistoryV1) | **GET** /1/object/webhook/{pkiWebhookID}/getHistory | Retrieve the logs for recent Webhook calls
 [**webhookGetListV1**](ObjectWebhookApi.md#webhookGetListV1) | **GET** /1/object/webhook/getList | Retrieve Webhook list
 [**webhookGetObjectV1**](ObjectWebhookApi.md#webhookGetObjectV1) | **GET** /1/object/webhook/{pkiWebhookID} | Retrieve an existing Webhook
-[**webhookTestUrlV1**](ObjectWebhookApi.md#webhookTestUrlV1) | **POST** /1/object/webhook/{pkiWebhookID}/test | Test the Webhook by calling the Url
+[**webhookTestV1**](ObjectWebhookApi.md#webhookTestV1) | **POST** /1/object/webhook/{pkiWebhookID}/test | Test the Webhook by calling the Url
 
 
 
@@ -302,9 +302,9 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## webhookTestUrlV1
+## webhookTestV1
 
-> WebhookTestV1Response webhookTestUrlV1(pkiWebhookID)
+> WebhookTestV1Response webhookTestV1(pkiWebhookID, body)
 
 Test the Webhook by calling the Url
 
@@ -318,11 +318,12 @@ Test the Webhook by calling the Url
 
 ObjectWebhookApi apiInstance = new ObjectWebhookApi();
 Integer pkiWebhookID = null; // Integer | 
+Object body = null; // Object | 
 try {
-    WebhookTestV1Response result = apiInstance.webhookTestUrlV1(pkiWebhookID);
+    WebhookTestV1Response result = apiInstance.webhookTestV1(pkiWebhookID, body);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling ObjectWebhookApi#webhookTestUrlV1");
+    System.err.println("Exception when calling ObjectWebhookApi#webhookTestV1");
     e.printStackTrace();
 }
 ```
@@ -333,6 +334,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiWebhookID** | **Integer**|  | [default to null]
+ **body** | **Object**|  |
 
 ### Return type
 
@@ -344,6 +346,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
+- **Content-Type**: application/json
 - **Accept**: application/json
 

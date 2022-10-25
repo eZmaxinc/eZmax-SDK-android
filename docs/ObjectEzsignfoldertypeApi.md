@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**ezsignfoldertypeCreateObjectV1**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypeCreateObjectV1) | **POST** /1/object/ezsignfoldertype | Create a new Ezsignfoldertype
 [**ezsignfoldertypeEditObjectV1**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypeEditObjectV1) | **PUT** /1/object/ezsignfoldertype/{pkiEzsignfoldertypeID} | Edit an existing Ezsignfoldertype
 [**ezsignfoldertypeGetAutocompleteV1**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypeGetAutocompleteV1) | **GET** /1/object/ezsignfoldertype/getAutocomplete/{sSelector} | Retrieve Ezsignfoldertypes and IDs
+[**ezsignfoldertypeGetAutocompleteV2**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypeGetAutocompleteV2) | **GET** /2/object/ezsignfoldertype/getAutocomplete/{sSelector} | Retrieve Ezsignfoldertypes and IDs
 [**ezsignfoldertypeGetListV1**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypeGetListV1) | **GET** /1/object/ezsignfoldertype/getList | Retrieve Ezsignfoldertype list
 [**ezsignfoldertypeGetObjectV1**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypeGetObjectV1) | **GET** /1/object/ezsignfoldertype/{pkiEzsignfoldertypeID} | Retrieve an existing Ezsignfoldertype
 
@@ -147,6 +148,58 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CommonGetAutocompleteV1Response**](CommonGetAutocompleteV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## ezsignfoldertypeGetAutocompleteV2
+
+> EzsignfoldertypeGetAutocompleteV2Response ezsignfoldertypeGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+
+Retrieve Ezsignfoldertypes and IDs
+
+Get the list of Ezsignfoldertype to be used in a dropdown or autocomplete control.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectEzsignfoldertypeApi;
+
+ObjectEzsignfoldertypeApi apiInstance = new ObjectEzsignfoldertypeApi();
+String sSelector = null; // String | The type of Ezsignfoldertypes to return
+String eFilterActive = Active; // String | Specify which results we want to display.
+String sQuery = null; // String | Allow to filter the returned results
+HeaderAcceptLanguage acceptLanguage = null; // HeaderAcceptLanguage | 
+try {
+    EzsignfoldertypeGetAutocompleteV2Response result = apiInstance.ezsignfoldertypeGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectEzsignfoldertypeApi#ezsignfoldertypeGetAutocompleteV2");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sSelector** | **String**| The type of Ezsignfoldertypes to return | [default to null] [enum: Active, All]
+ **eFilterActive** | **String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive]
+ **sQuery** | **String**| Allow to filter the returned results | [optional] [default to null]
+ **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [default to null] [enum: *, en, fr]
+
+### Return type
+
+[**EzsignfoldertypeGetAutocompleteV2Response**](EzsignfoldertypeGetAutocompleteV2Response.md)
 
 ### Authorization
 

@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **sDepartmentNameX** | **String** | The Name of the Department in the language of the requester | 
 **bActivesessionDebug** | **Boolean** | Whether the active session is in debug or not | 
 **pksCustomerCode** | **String** | The customer code assigned to your account | 
+**fkiSystemconfigurationtypeID** | **Integer** | The unique ID of the Systemconfigurationtype |  [optional]
 
 
 

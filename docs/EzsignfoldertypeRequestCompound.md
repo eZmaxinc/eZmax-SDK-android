@@ -32,6 +32,8 @@ Name | Type | Description | Notes
 **bEzsignfoldertypeSendsummarytofullgroup** | **Boolean** | Whether we send the summary to the Usergroup that has acces to all Ezsignfolders |  [optional]
 **bEzsignfoldertypeSendsummarytolimitedgroup** | **Boolean** | Whether we send the summary to the Usergroup that has acces to only their own Ezsignfolders |  [optional]
 **bEzsignfoldertypeSendsummarytocolleague** | **Boolean** | Whether we send the summary to the colleagues | 
+**bEzsignfoldertypeIncludeproofsigner** | **Boolean** | Whether we include the proof with the signed Ezsigndocument for Ezsignsigners | 
+**bEzsignfoldertypeIncludeproofuser** | **Boolean** | Whether we include the proof with the signed Ezsigndocument for users | 
 **bEzsignfoldertypeIsactive** | **Boolean** | Whether the Ezsignfoldertype is active or not | 
 **aFkiUserIDSigned** | **List&lt;Integer&gt;** |  |  [optional]
 **aFkiUserIDSummary** | **List&lt;Integer&gt;** |  |  [optional]
