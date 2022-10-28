@@ -47,6 +47,9 @@ docs/BrandingGetListV1ResponseMPayloadAllOf.md
 docs/BrandingGetObjectV1Response.md
 docs/BrandingGetObjectV1ResponseAllOf.md
 docs/BrandingGetObjectV1ResponseMPayload.md
+docs/BrandingGetObjectV2Response.md
+docs/BrandingGetObjectV2ResponseAllOf.md
+docs/BrandingGetObjectV2ResponseMPayload.md
 docs/BrandingListElement.md
 docs/BrandingRequest.md
 docs/BrandingRequestCompound.md
@@ -134,6 +137,9 @@ docs/EzmaxinvoicingGetAutocompleteV2ResponseMPayload.md
 docs/EzmaxinvoicingGetObjectV1Response.md
 docs/EzmaxinvoicingGetObjectV1ResponseAllOf.md
 docs/EzmaxinvoicingGetObjectV1ResponseMPayload.md
+docs/EzmaxinvoicingGetObjectV2Response.md
+docs/EzmaxinvoicingGetObjectV2ResponseAllOf.md
+docs/EzmaxinvoicingGetObjectV2ResponseMPayload.md
 docs/EzmaxinvoicingGetProvisionalV1Response.md
 docs/EzmaxinvoicingGetProvisionalV1ResponseAllOf.md
 docs/EzmaxinvoicingGetProvisionalV1ResponseMPayload.md
@@ -193,6 +199,9 @@ docs/EzsignbulksendGetListV1ResponseMPayloadAllOf.md
 docs/EzsignbulksendGetObjectV1Response.md
 docs/EzsignbulksendGetObjectV1ResponseAllOf.md
 docs/EzsignbulksendGetObjectV1ResponseMPayload.md
+docs/EzsignbulksendGetObjectV2Response.md
+docs/EzsignbulksendGetObjectV2ResponseAllOf.md
+docs/EzsignbulksendGetObjectV2ResponseMPayload.md
 docs/EzsignbulksendListElement.md
 docs/EzsignbulksendReorderV1Request.md
 docs/EzsignbulksendReorderV1Response.md
@@ -209,6 +218,9 @@ docs/EzsignbulksenddocumentmappingDeleteObjectV1Response.md
 docs/EzsignbulksenddocumentmappingGetObjectV1Response.md
 docs/EzsignbulksenddocumentmappingGetObjectV1ResponseAllOf.md
 docs/EzsignbulksenddocumentmappingGetObjectV1ResponseMPayload.md
+docs/EzsignbulksenddocumentmappingGetObjectV2Response.md
+docs/EzsignbulksenddocumentmappingGetObjectV2ResponseAllOf.md
+docs/EzsignbulksenddocumentmappingGetObjectV2ResponseMPayload.md
 docs/EzsignbulksenddocumentmappingRequest.md
 docs/EzsignbulksenddocumentmappingRequestCompound.md
 docs/EzsignbulksenddocumentmappingResponse.md
@@ -222,6 +234,9 @@ docs/EzsignbulksendsignermappingDeleteObjectV1Response.md
 docs/EzsignbulksendsignermappingGetObjectV1Response.md
 docs/EzsignbulksendsignermappingGetObjectV1ResponseAllOf.md
 docs/EzsignbulksendsignermappingGetObjectV1ResponseMPayload.md
+docs/EzsignbulksendsignermappingGetObjectV2Response.md
+docs/EzsignbulksendsignermappingGetObjectV2ResponseAllOf.md
+docs/EzsignbulksendsignermappingGetObjectV2ResponseMPayload.md
 docs/EzsignbulksendsignermappingRequest.md
 docs/EzsignbulksendsignermappingRequestCompound.md
 docs/EzsignbulksendsignermappingResponse.md
@@ -232,6 +247,9 @@ docs/EzsignbulksendtransmissionGetFormsDataV1ResponseMPayload.md
 docs/EzsignbulksendtransmissionGetObjectV1Response.md
 docs/EzsignbulksendtransmissionGetObjectV1ResponseAllOf.md
 docs/EzsignbulksendtransmissionGetObjectV1ResponseMPayload.md
+docs/EzsignbulksendtransmissionGetObjectV2Response.md
+docs/EzsignbulksendtransmissionGetObjectV2ResponseAllOf.md
+docs/EzsignbulksendtransmissionGetObjectV2ResponseMPayload.md
 docs/EzsignbulksendtransmissionResponse.md
 docs/EzsignbulksendtransmissionResponseCompound.md
 docs/EzsignbulksendtransmissionResponseCompoundAllOf.md
@@ -278,6 +296,9 @@ docs/EzsigndocumentGetFormDataV1ResponseMPayload.md
 docs/EzsigndocumentGetObjectV1Response.md
 docs/EzsigndocumentGetObjectV1ResponseAllOf.md
 docs/EzsigndocumentGetObjectV1ResponseMPayload.md
+docs/EzsigndocumentGetObjectV2Response.md
+docs/EzsigndocumentGetObjectV2ResponseAllOf.md
+docs/EzsigndocumentGetObjectV2ResponseMPayload.md
 docs/EzsigndocumentGetTemporaryProofV1Response.md
 docs/EzsigndocumentGetTemporaryProofV1ResponseAllOf.md
 docs/EzsigndocumentGetTemporaryProofV1ResponseMPayload.md
@@ -330,6 +351,9 @@ docs/EzsignfolderGetListV1ResponseMPayloadAllOf.md
 docs/EzsignfolderGetObjectV1Response.md
 docs/EzsignfolderGetObjectV1ResponseAllOf.md
 docs/EzsignfolderGetObjectV1ResponseMPayload.md
+docs/EzsignfolderGetObjectV2Response.md
+docs/EzsignfolderGetObjectV2ResponseAllOf.md
+docs/EzsignfolderGetObjectV2ResponseMPayload.md
 docs/EzsignfolderImportEzsignfoldersignerassociationsV1Request.md
 docs/EzsignfolderImportEzsignfoldersignerassociationsV1Response.md
 docs/EzsignfolderImportEzsignfoldersignerassociationsV1ResponseAllOf.md
@@ -368,6 +392,9 @@ docs/EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload.md
 docs/EzsignfoldersignerassociationGetObjectV1Response.md
 docs/EzsignfoldersignerassociationGetObjectV1ResponseAllOf.md
 docs/EzsignfoldersignerassociationGetObjectV1ResponseMPayload.md
+docs/EzsignfoldersignerassociationGetObjectV2Response.md
+docs/EzsignfoldersignerassociationGetObjectV2ResponseAllOf.md
+docs/EzsignfoldersignerassociationGetObjectV2ResponseMPayload.md
 docs/EzsignfoldersignerassociationRequest.md
 docs/EzsignfoldersignerassociationRequestCompound.md
 docs/EzsignfoldersignerassociationRequestCompoundAllOf.md
@@ -392,6 +419,9 @@ docs/EzsignfoldertypeGetListV1ResponseMPayloadAllOf.md
 docs/EzsignfoldertypeGetObjectV1Response.md
 docs/EzsignfoldertypeGetObjectV1ResponseAllOf.md
 docs/EzsignfoldertypeGetObjectV1ResponseMPayload.md
+docs/EzsignfoldertypeGetObjectV2Response.md
+docs/EzsignfoldertypeGetObjectV2ResponseAllOf.md
+docs/EzsignfoldertypeGetObjectV2ResponseMPayload.md
 docs/EzsignfoldertypeListElement.md
 docs/EzsignfoldertypeRequest.md
 docs/EzsignfoldertypeRequestCompound.md
@@ -412,6 +442,9 @@ docs/EzsignformfieldgroupEditObjectV1Response.md
 docs/EzsignformfieldgroupGetObjectV1Response.md
 docs/EzsignformfieldgroupGetObjectV1ResponseAllOf.md
 docs/EzsignformfieldgroupGetObjectV1ResponseMPayload.md
+docs/EzsignformfieldgroupGetObjectV2Response.md
+docs/EzsignformfieldgroupGetObjectV2ResponseAllOf.md
+docs/EzsignformfieldgroupGetObjectV2ResponseMPayload.md
 docs/EzsignformfieldgroupRequest.md
 docs/EzsignformfieldgroupRequestCompound.md
 docs/EzsignformfieldgroupRequestCompoundAllOf.md
@@ -438,6 +471,9 @@ docs/EzsignsignatureEditObjectV1Response.md
 docs/EzsignsignatureGetObjectV1Response.md
 docs/EzsignsignatureGetObjectV1ResponseAllOf.md
 docs/EzsignsignatureGetObjectV1ResponseMPayload.md
+docs/EzsignsignatureGetObjectV2Response.md
+docs/EzsignsignatureGetObjectV2ResponseAllOf.md
+docs/EzsignsignatureGetObjectV2ResponseMPayload.md
 docs/EzsignsignatureRequest.md
 docs/EzsignsignatureRequestCompound.md
 docs/EzsignsignatureRequestCompoundAllOf.md
@@ -477,6 +513,9 @@ docs/EzsigntemplateGetListV1ResponseMPayloadAllOf.md
 docs/EzsigntemplateGetObjectV1Response.md
 docs/EzsigntemplateGetObjectV1ResponseAllOf.md
 docs/EzsigntemplateGetObjectV1ResponseMPayload.md
+docs/EzsigntemplateGetObjectV2Response.md
+docs/EzsigntemplateGetObjectV2ResponseAllOf.md
+docs/EzsigntemplateGetObjectV2ResponseMPayload.md
 docs/EzsigntemplateListElement.md
 docs/EzsigntemplateRequest.md
 docs/EzsigntemplateRequestCompound.md
@@ -510,6 +549,9 @@ docs/EzsigntemplatedocumentGetEzsigntemplatesignaturesV1ResponseMPayload.md
 docs/EzsigntemplatedocumentGetObjectV1Response.md
 docs/EzsigntemplatedocumentGetObjectV1ResponseAllOf.md
 docs/EzsigntemplatedocumentGetObjectV1ResponseMPayload.md
+docs/EzsigntemplatedocumentGetObjectV2Response.md
+docs/EzsigntemplatedocumentGetObjectV2ResponseAllOf.md
+docs/EzsigntemplatedocumentGetObjectV2ResponseMPayload.md
 docs/EzsigntemplatedocumentGetWordsPositionsV1Request.md
 docs/EzsigntemplatedocumentGetWordsPositionsV1Response.md
 docs/EzsigntemplatedocumentGetWordsPositionsV1ResponseAllOf.md
@@ -536,6 +578,9 @@ docs/EzsigntemplateformfieldgroupEditObjectV1Response.md
 docs/EzsigntemplateformfieldgroupGetObjectV1Response.md
 docs/EzsigntemplateformfieldgroupGetObjectV1ResponseAllOf.md
 docs/EzsigntemplateformfieldgroupGetObjectV1ResponseMPayload.md
+docs/EzsigntemplateformfieldgroupGetObjectV2Response.md
+docs/EzsigntemplateformfieldgroupGetObjectV2ResponseAllOf.md
+docs/EzsigntemplateformfieldgroupGetObjectV2ResponseMPayload.md
 docs/EzsigntemplateformfieldgroupRequest.md
 docs/EzsigntemplateformfieldgroupRequestCompound.md
 docs/EzsigntemplateformfieldgroupRequestCompoundAllOf.md
@@ -568,6 +613,9 @@ docs/EzsigntemplatepackageGetListV1ResponseMPayloadAllOf.md
 docs/EzsigntemplatepackageGetObjectV1Response.md
 docs/EzsigntemplatepackageGetObjectV1ResponseAllOf.md
 docs/EzsigntemplatepackageGetObjectV1ResponseMPayload.md
+docs/EzsigntemplatepackageGetObjectV2Response.md
+docs/EzsigntemplatepackageGetObjectV2ResponseAllOf.md
+docs/EzsigntemplatepackageGetObjectV2ResponseMPayload.md
 docs/EzsigntemplatepackageListElement.md
 docs/EzsigntemplatepackageRequest.md
 docs/EzsigntemplatepackageRequestCompound.md
@@ -582,6 +630,9 @@ docs/EzsigntemplatepackagemembershipDeleteObjectV1Response.md
 docs/EzsigntemplatepackagemembershipGetObjectV1Response.md
 docs/EzsigntemplatepackagemembershipGetObjectV1ResponseAllOf.md
 docs/EzsigntemplatepackagemembershipGetObjectV1ResponseMPayload.md
+docs/EzsigntemplatepackagemembershipGetObjectV2Response.md
+docs/EzsigntemplatepackagemembershipGetObjectV2ResponseAllOf.md
+docs/EzsigntemplatepackagemembershipGetObjectV2ResponseMPayload.md
 docs/EzsigntemplatepackagemembershipRequest.md
 docs/EzsigntemplatepackagemembershipRequestCompound.md
 docs/EzsigntemplatepackagemembershipResponse.md
@@ -599,6 +650,9 @@ docs/EzsigntemplatepackagesignerEditObjectV1Response.md
 docs/EzsigntemplatepackagesignerGetObjectV1Response.md
 docs/EzsigntemplatepackagesignerGetObjectV1ResponseAllOf.md
 docs/EzsigntemplatepackagesignerGetObjectV1ResponseMPayload.md
+docs/EzsigntemplatepackagesignerGetObjectV2Response.md
+docs/EzsigntemplatepackagesignerGetObjectV2ResponseAllOf.md
+docs/EzsigntemplatepackagesignerGetObjectV2ResponseMPayload.md
 docs/EzsigntemplatepackagesignerRequest.md
 docs/EzsigntemplatepackagesignerRequestCompound.md
 docs/EzsigntemplatepackagesignerResponse.md
@@ -613,6 +667,9 @@ docs/EzsigntemplatepackagesignermembershipDeleteObjectV1ResponseMPayload.md
 docs/EzsigntemplatepackagesignermembershipGetObjectV1Response.md
 docs/EzsigntemplatepackagesignermembershipGetObjectV1ResponseAllOf.md
 docs/EzsigntemplatepackagesignermembershipGetObjectV1ResponseMPayload.md
+docs/EzsigntemplatepackagesignermembershipGetObjectV2Response.md
+docs/EzsigntemplatepackagesignermembershipGetObjectV2ResponseAllOf.md
+docs/EzsigntemplatepackagesignermembershipGetObjectV2ResponseMPayload.md
 docs/EzsigntemplatepackagesignermembershipRequest.md
 docs/EzsigntemplatepackagesignermembershipRequestCompound.md
 docs/EzsigntemplatepackagesignermembershipResponse.md
@@ -627,6 +684,9 @@ docs/EzsigntemplatesignatureEditObjectV1Response.md
 docs/EzsigntemplatesignatureGetObjectV1Response.md
 docs/EzsigntemplatesignatureGetObjectV1ResponseAllOf.md
 docs/EzsigntemplatesignatureGetObjectV1ResponseMPayload.md
+docs/EzsigntemplatesignatureGetObjectV2Response.md
+docs/EzsigntemplatesignatureGetObjectV2ResponseAllOf.md
+docs/EzsigntemplatesignatureGetObjectV2ResponseMPayload.md
 docs/EzsigntemplatesignatureRequest.md
 docs/EzsigntemplatesignatureRequestCompound.md
 docs/EzsigntemplatesignatureRequestCompoundAllOf.md
@@ -647,6 +707,9 @@ docs/EzsigntemplatesignerEditObjectV1Response.md
 docs/EzsigntemplatesignerGetObjectV1Response.md
 docs/EzsigntemplatesignerGetObjectV1ResponseAllOf.md
 docs/EzsigntemplatesignerGetObjectV1ResponseMPayload.md
+docs/EzsigntemplatesignerGetObjectV2Response.md
+docs/EzsigntemplatesignerGetObjectV2ResponseAllOf.md
+docs/EzsigntemplatesignerGetObjectV2ResponseMPayload.md
 docs/EzsigntemplatesignerRequest.md
 docs/EzsigntemplatesignerRequestCompound.md
 docs/EzsigntemplatesignerResponse.md
@@ -688,6 +751,8 @@ docs/FieldENotificationpreferenceStatus.md
 docs/FieldEPhoneType.md
 docs/FieldEUserEzsignsendreminderfrequency.md
 docs/FieldEUserType.md
+docs/FieldEVersionhistoryType.md
+docs/FieldEVersionhistoryUsertype.md
 docs/FieldEWebhookEzsignevent.md
 docs/FieldEWebhookManagementevent.md
 docs/FieldEWebhookModule.md
@@ -713,6 +778,7 @@ docs/MultilingualEzmaxinvoicingsummaryinternalDescription.md
 docs/MultilingualEzsignfoldertypeName.md
 docs/MultilingualNotificationsubsectionName.md
 docs/MultilingualNotificationtestName.md
+docs/MultilingualVersionhistoryDetail.md
 docs/NotificationsectionGetNotificationtestsV1Response.md
 docs/NotificationsectionGetNotificationtestsV1ResponseAllOf.md
 docs/NotificationsectionGetNotificationtestsV1ResponseMPayload.md
@@ -758,6 +824,7 @@ docs/ObjectTaxassignmentApi.md
 docs/ObjectTimezoneApi.md
 docs/ObjectUserApi.md
 docs/ObjectUsergroupApi.md
+docs/ObjectVersionhistoryApi.md
 docs/ObjectWebhookApi.md
 docs/PhoneRequest.md
 docs/PhoneRequestCompound.md
@@ -787,6 +854,11 @@ docs/UsergroupAutocompleteElementResponse.md
 docs/UsergroupGetAutocompleteV2Response.md
 docs/UsergroupGetAutocompleteV2ResponseAllOf.md
 docs/UsergroupGetAutocompleteV2ResponseMPayload.md
+docs/VersionhistoryGetObjectV2Response.md
+docs/VersionhistoryGetObjectV2ResponseAllOf.md
+docs/VersionhistoryGetObjectV2ResponseMPayload.md
+docs/VersionhistoryResponse.md
+docs/VersionhistoryResponseCompound.md
 docs/WebhookCreateObjectV1Request.md
 docs/WebhookCreateObjectV1Response.md
 docs/WebhookCreateObjectV1ResponseAllOf.md
@@ -809,11 +881,15 @@ docs/WebhookGetListV1ResponseMPayloadAllOf.md
 docs/WebhookGetObjectV1Response.md
 docs/WebhookGetObjectV1ResponseAllOf.md
 docs/WebhookGetObjectV1ResponseMPayload.md
+docs/WebhookGetObjectV2Response.md
+docs/WebhookGetObjectV2ResponseAllOf.md
+docs/WebhookGetObjectV2ResponseMPayload.md
 docs/WebhookListElement.md
 docs/WebhookRequest.md
 docs/WebhookRequestCompound.md
 docs/WebhookResponse.md
 docs/WebhookResponseCompound.md
+docs/WebhookResponseCompoundAllOf.md
 docs/WebhookTestV1Response.md
 docs/WebhookUserUserCreated.md
 docs/WebhookUserUserCreatedAllOf.md
@@ -878,6 +954,7 @@ src/main/java/org/openapitools/client/api/ObjectTaxassignmentApi.java
 src/main/java/org/openapitools/client/api/ObjectTimezoneApi.java
 src/main/java/org/openapitools/client/api/ObjectUserApi.java
 src/main/java/org/openapitools/client/api/ObjectUsergroupApi.java
+src/main/java/org/openapitools/client/api/ObjectVersionhistoryApi.java
 src/main/java/org/openapitools/client/api/ObjectWebhookApi.java
 src/main/java/org/openapitools/client/model/ActivesessionGetCurrentV1Response.java
 src/main/java/org/openapitools/client/model/ActivesessionGetCurrentV1ResponseAllOf.java
@@ -924,6 +1001,9 @@ src/main/java/org/openapitools/client/model/BrandingGetListV1ResponseMPayloadAll
 src/main/java/org/openapitools/client/model/BrandingGetObjectV1Response.java
 src/main/java/org/openapitools/client/model/BrandingGetObjectV1ResponseAllOf.java
 src/main/java/org/openapitools/client/model/BrandingGetObjectV1ResponseMPayload.java
+src/main/java/org/openapitools/client/model/BrandingGetObjectV2Response.java
+src/main/java/org/openapitools/client/model/BrandingGetObjectV2ResponseAllOf.java
+src/main/java/org/openapitools/client/model/BrandingGetObjectV2ResponseMPayload.java
 src/main/java/org/openapitools/client/model/BrandingListElement.java
 src/main/java/org/openapitools/client/model/BrandingRequest.java
 src/main/java/org/openapitools/client/model/BrandingRequestCompound.java
@@ -1011,6 +1091,9 @@ src/main/java/org/openapitools/client/model/EzmaxinvoicingGetAutocompleteV2Respo
 src/main/java/org/openapitools/client/model/EzmaxinvoicingGetObjectV1Response.java
 src/main/java/org/openapitools/client/model/EzmaxinvoicingGetObjectV1ResponseAllOf.java
 src/main/java/org/openapitools/client/model/EzmaxinvoicingGetObjectV1ResponseMPayload.java
+src/main/java/org/openapitools/client/model/EzmaxinvoicingGetObjectV2Response.java
+src/main/java/org/openapitools/client/model/EzmaxinvoicingGetObjectV2ResponseAllOf.java
+src/main/java/org/openapitools/client/model/EzmaxinvoicingGetObjectV2ResponseMPayload.java
 src/main/java/org/openapitools/client/model/EzmaxinvoicingGetProvisionalV1Response.java
 src/main/java/org/openapitools/client/model/EzmaxinvoicingGetProvisionalV1ResponseAllOf.java
 src/main/java/org/openapitools/client/model/EzmaxinvoicingGetProvisionalV1ResponseMPayload.java
@@ -1070,6 +1153,9 @@ src/main/java/org/openapitools/client/model/EzsignbulksendGetListV1ResponseMPayl
 src/main/java/org/openapitools/client/model/EzsignbulksendGetObjectV1Response.java
 src/main/java/org/openapitools/client/model/EzsignbulksendGetObjectV1ResponseAllOf.java
 src/main/java/org/openapitools/client/model/EzsignbulksendGetObjectV1ResponseMPayload.java
+src/main/java/org/openapitools/client/model/EzsignbulksendGetObjectV2Response.java
+src/main/java/org/openapitools/client/model/EzsignbulksendGetObjectV2ResponseAllOf.java
+src/main/java/org/openapitools/client/model/EzsignbulksendGetObjectV2ResponseMPayload.java
 src/main/java/org/openapitools/client/model/EzsignbulksendListElement.java
 src/main/java/org/openapitools/client/model/EzsignbulksendReorderV1Request.java
 src/main/java/org/openapitools/client/model/EzsignbulksendReorderV1Response.java
@@ -1086,6 +1172,9 @@ src/main/java/org/openapitools/client/model/EzsignbulksenddocumentmappingDeleteO
 src/main/java/org/openapitools/client/model/EzsignbulksenddocumentmappingGetObjectV1Response.java
 src/main/java/org/openapitools/client/model/EzsignbulksenddocumentmappingGetObjectV1ResponseAllOf.java
 src/main/java/org/openapitools/client/model/EzsignbulksenddocumentmappingGetObjectV1ResponseMPayload.java
+src/main/java/org/openapitools/client/model/EzsignbulksenddocumentmappingGetObjectV2Response.java
+src/main/java/org/openapitools/client/model/EzsignbulksenddocumentmappingGetObjectV2ResponseAllOf.java
+src/main/java/org/openapitools/client/model/EzsignbulksenddocumentmappingGetObjectV2ResponseMPayload.java
 src/main/java/org/openapitools/client/model/EzsignbulksenddocumentmappingRequest.java
 src/main/java/org/openapitools/client/model/EzsignbulksenddocumentmappingRequestCompound.java
 src/main/java/org/openapitools/client/model/EzsignbulksenddocumentmappingResponse.java
@@ -1099,6 +1188,9 @@ src/main/java/org/openapitools/client/model/EzsignbulksendsignermappingDeleteObj
 src/main/java/org/openapitools/client/model/EzsignbulksendsignermappingGetObjectV1Response.java
 src/main/java/org/openapitools/client/model/EzsignbulksendsignermappingGetObjectV1ResponseAllOf.java
 src/main/java/org/openapitools/client/model/EzsignbulksendsignermappingGetObjectV1ResponseMPayload.java
+src/main/java/org/openapitools/client/model/EzsignbulksendsignermappingGetObjectV2Response.java
+src/main/java/org/openapitools/client/model/EzsignbulksendsignermappingGetObjectV2ResponseAllOf.java
+src/main/java/org/openapitools/client/model/EzsignbulksendsignermappingGetObjectV2ResponseMPayload.java
 src/main/java/org/openapitools/client/model/EzsignbulksendsignermappingRequest.java
 src/main/java/org/openapitools/client/model/EzsignbulksendsignermappingRequestCompound.java
 src/main/java/org/openapitools/client/model/EzsignbulksendsignermappingResponse.java
@@ -1109,6 +1201,9 @@ src/main/java/org/openapitools/client/model/EzsignbulksendtransmissionGetFormsDa
 src/main/java/org/openapitools/client/model/EzsignbulksendtransmissionGetObjectV1Response.java
 src/main/java/org/openapitools/client/model/EzsignbulksendtransmissionGetObjectV1ResponseAllOf.java
 src/main/java/org/openapitools/client/model/EzsignbulksendtransmissionGetObjectV1ResponseMPayload.java
+src/main/java/org/openapitools/client/model/EzsignbulksendtransmissionGetObjectV2Response.java
+src/main/java/org/openapitools/client/model/EzsignbulksendtransmissionGetObjectV2ResponseAllOf.java
+src/main/java/org/openapitools/client/model/EzsignbulksendtransmissionGetObjectV2ResponseMPayload.java
 src/main/java/org/openapitools/client/model/EzsignbulksendtransmissionResponse.java
 src/main/java/org/openapitools/client/model/EzsignbulksendtransmissionResponseCompound.java
 src/main/java/org/openapitools/client/model/EzsignbulksendtransmissionResponseCompoundAllOf.java
@@ -1155,6 +1250,9 @@ src/main/java/org/openapitools/client/model/EzsigndocumentGetFormDataV1ResponseM
 src/main/java/org/openapitools/client/model/EzsigndocumentGetObjectV1Response.java
 src/main/java/org/openapitools/client/model/EzsigndocumentGetObjectV1ResponseAllOf.java
 src/main/java/org/openapitools/client/model/EzsigndocumentGetObjectV1ResponseMPayload.java
+src/main/java/org/openapitools/client/model/EzsigndocumentGetObjectV2Response.java
+src/main/java/org/openapitools/client/model/EzsigndocumentGetObjectV2ResponseAllOf.java
+src/main/java/org/openapitools/client/model/EzsigndocumentGetObjectV2ResponseMPayload.java
 src/main/java/org/openapitools/client/model/EzsigndocumentGetTemporaryProofV1Response.java
 src/main/java/org/openapitools/client/model/EzsigndocumentGetTemporaryProofV1ResponseAllOf.java
 src/main/java/org/openapitools/client/model/EzsigndocumentGetTemporaryProofV1ResponseMPayload.java
@@ -1207,6 +1305,9 @@ src/main/java/org/openapitools/client/model/EzsignfolderGetListV1ResponseMPayloa
 src/main/java/org/openapitools/client/model/EzsignfolderGetObjectV1Response.java
 src/main/java/org/openapitools/client/model/EzsignfolderGetObjectV1ResponseAllOf.java
 src/main/java/org/openapitools/client/model/EzsignfolderGetObjectV1ResponseMPayload.java
+src/main/java/org/openapitools/client/model/EzsignfolderGetObjectV2Response.java
+src/main/java/org/openapitools/client/model/EzsignfolderGetObjectV2ResponseAllOf.java
+src/main/java/org/openapitools/client/model/EzsignfolderGetObjectV2ResponseMPayload.java
 src/main/java/org/openapitools/client/model/EzsignfolderImportEzsignfoldersignerassociationsV1Request.java
 src/main/java/org/openapitools/client/model/EzsignfolderImportEzsignfoldersignerassociationsV1Response.java
 src/main/java/org/openapitools/client/model/EzsignfolderImportEzsignfoldersignerassociationsV1ResponseAllOf.java
@@ -1245,6 +1346,9 @@ src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationGetInPe
 src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationGetObjectV1Response.java
 src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationGetObjectV1ResponseAllOf.java
 src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationGetObjectV1ResponseMPayload.java
+src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationGetObjectV2Response.java
+src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationGetObjectV2ResponseAllOf.java
+src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationGetObjectV2ResponseMPayload.java
 src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationRequest.java
 src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationRequestCompound.java
 src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationRequestCompoundAllOf.java
@@ -1269,6 +1373,9 @@ src/main/java/org/openapitools/client/model/EzsignfoldertypeGetListV1ResponseMPa
 src/main/java/org/openapitools/client/model/EzsignfoldertypeGetObjectV1Response.java
 src/main/java/org/openapitools/client/model/EzsignfoldertypeGetObjectV1ResponseAllOf.java
 src/main/java/org/openapitools/client/model/EzsignfoldertypeGetObjectV1ResponseMPayload.java
+src/main/java/org/openapitools/client/model/EzsignfoldertypeGetObjectV2Response.java
+src/main/java/org/openapitools/client/model/EzsignfoldertypeGetObjectV2ResponseAllOf.java
+src/main/java/org/openapitools/client/model/EzsignfoldertypeGetObjectV2ResponseMPayload.java
 src/main/java/org/openapitools/client/model/EzsignfoldertypeListElement.java
 src/main/java/org/openapitools/client/model/EzsignfoldertypeRequest.java
 src/main/java/org/openapitools/client/model/EzsignfoldertypeRequestCompound.java
@@ -1289,6 +1396,9 @@ src/main/java/org/openapitools/client/model/EzsignformfieldgroupEditObjectV1Resp
 src/main/java/org/openapitools/client/model/EzsignformfieldgroupGetObjectV1Response.java
 src/main/java/org/openapitools/client/model/EzsignformfieldgroupGetObjectV1ResponseAllOf.java
 src/main/java/org/openapitools/client/model/EzsignformfieldgroupGetObjectV1ResponseMPayload.java
+src/main/java/org/openapitools/client/model/EzsignformfieldgroupGetObjectV2Response.java
+src/main/java/org/openapitools/client/model/EzsignformfieldgroupGetObjectV2ResponseAllOf.java
+src/main/java/org/openapitools/client/model/EzsignformfieldgroupGetObjectV2ResponseMPayload.java
 src/main/java/org/openapitools/client/model/EzsignformfieldgroupRequest.java
 src/main/java/org/openapitools/client/model/EzsignformfieldgroupRequestCompound.java
 src/main/java/org/openapitools/client/model/EzsignformfieldgroupRequestCompoundAllOf.java
@@ -1315,6 +1425,9 @@ src/main/java/org/openapitools/client/model/EzsignsignatureEditObjectV1Response.
 src/main/java/org/openapitools/client/model/EzsignsignatureGetObjectV1Response.java
 src/main/java/org/openapitools/client/model/EzsignsignatureGetObjectV1ResponseAllOf.java
 src/main/java/org/openapitools/client/model/EzsignsignatureGetObjectV1ResponseMPayload.java
+src/main/java/org/openapitools/client/model/EzsignsignatureGetObjectV2Response.java
+src/main/java/org/openapitools/client/model/EzsignsignatureGetObjectV2ResponseAllOf.java
+src/main/java/org/openapitools/client/model/EzsignsignatureGetObjectV2ResponseMPayload.java
 src/main/java/org/openapitools/client/model/EzsignsignatureRequest.java
 src/main/java/org/openapitools/client/model/EzsignsignatureRequestCompound.java
 src/main/java/org/openapitools/client/model/EzsignsignatureRequestCompoundAllOf.java
@@ -1354,6 +1467,9 @@ src/main/java/org/openapitools/client/model/EzsigntemplateGetListV1ResponseMPayl
 src/main/java/org/openapitools/client/model/EzsigntemplateGetObjectV1Response.java
 src/main/java/org/openapitools/client/model/EzsigntemplateGetObjectV1ResponseAllOf.java
 src/main/java/org/openapitools/client/model/EzsigntemplateGetObjectV1ResponseMPayload.java
+src/main/java/org/openapitools/client/model/EzsigntemplateGetObjectV2Response.java
+src/main/java/org/openapitools/client/model/EzsigntemplateGetObjectV2ResponseAllOf.java
+src/main/java/org/openapitools/client/model/EzsigntemplateGetObjectV2ResponseMPayload.java
 src/main/java/org/openapitools/client/model/EzsigntemplateListElement.java
 src/main/java/org/openapitools/client/model/EzsigntemplateRequest.java
 src/main/java/org/openapitools/client/model/EzsigntemplateRequestCompound.java
@@ -1387,6 +1503,9 @@ src/main/java/org/openapitools/client/model/EzsigntemplatedocumentGetEzsigntempl
 src/main/java/org/openapitools/client/model/EzsigntemplatedocumentGetObjectV1Response.java
 src/main/java/org/openapitools/client/model/EzsigntemplatedocumentGetObjectV1ResponseAllOf.java
 src/main/java/org/openapitools/client/model/EzsigntemplatedocumentGetObjectV1ResponseMPayload.java
+src/main/java/org/openapitools/client/model/EzsigntemplatedocumentGetObjectV2Response.java
+src/main/java/org/openapitools/client/model/EzsigntemplatedocumentGetObjectV2ResponseAllOf.java
+src/main/java/org/openapitools/client/model/EzsigntemplatedocumentGetObjectV2ResponseMPayload.java
 src/main/java/org/openapitools/client/model/EzsigntemplatedocumentGetWordsPositionsV1Request.java
 src/main/java/org/openapitools/client/model/EzsigntemplatedocumentGetWordsPositionsV1Response.java
 src/main/java/org/openapitools/client/model/EzsigntemplatedocumentGetWordsPositionsV1ResponseAllOf.java
@@ -1413,6 +1532,9 @@ src/main/java/org/openapitools/client/model/EzsigntemplateformfieldgroupEditObje
 src/main/java/org/openapitools/client/model/EzsigntemplateformfieldgroupGetObjectV1Response.java
 src/main/java/org/openapitools/client/model/EzsigntemplateformfieldgroupGetObjectV1ResponseAllOf.java
 src/main/java/org/openapitools/client/model/EzsigntemplateformfieldgroupGetObjectV1ResponseMPayload.java
+src/main/java/org/openapitools/client/model/EzsigntemplateformfieldgroupGetObjectV2Response.java
+src/main/java/org/openapitools/client/model/EzsigntemplateformfieldgroupGetObjectV2ResponseAllOf.java
+src/main/java/org/openapitools/client/model/EzsigntemplateformfieldgroupGetObjectV2ResponseMPayload.java
 src/main/java/org/openapitools/client/model/EzsigntemplateformfieldgroupRequest.java
 src/main/java/org/openapitools/client/model/EzsigntemplateformfieldgroupRequestCompound.java
 src/main/java/org/openapitools/client/model/EzsigntemplateformfieldgroupRequestCompoundAllOf.java
@@ -1445,6 +1567,9 @@ src/main/java/org/openapitools/client/model/EzsigntemplatepackageGetListV1Respon
 src/main/java/org/openapitools/client/model/EzsigntemplatepackageGetObjectV1Response.java
 src/main/java/org/openapitools/client/model/EzsigntemplatepackageGetObjectV1ResponseAllOf.java
 src/main/java/org/openapitools/client/model/EzsigntemplatepackageGetObjectV1ResponseMPayload.java
+src/main/java/org/openapitools/client/model/EzsigntemplatepackageGetObjectV2Response.java
+src/main/java/org/openapitools/client/model/EzsigntemplatepackageGetObjectV2ResponseAllOf.java
+src/main/java/org/openapitools/client/model/EzsigntemplatepackageGetObjectV2ResponseMPayload.java
 src/main/java/org/openapitools/client/model/EzsigntemplatepackageListElement.java
 src/main/java/org/openapitools/client/model/EzsigntemplatepackageRequest.java
 src/main/java/org/openapitools/client/model/EzsigntemplatepackageRequestCompound.java
@@ -1459,6 +1584,9 @@ src/main/java/org/openapitools/client/model/EzsigntemplatepackagemembershipDelet
 src/main/java/org/openapitools/client/model/EzsigntemplatepackagemembershipGetObjectV1Response.java
 src/main/java/org/openapitools/client/model/EzsigntemplatepackagemembershipGetObjectV1ResponseAllOf.java
 src/main/java/org/openapitools/client/model/EzsigntemplatepackagemembershipGetObjectV1ResponseMPayload.java
+src/main/java/org/openapitools/client/model/EzsigntemplatepackagemembershipGetObjectV2Response.java
+src/main/java/org/openapitools/client/model/EzsigntemplatepackagemembershipGetObjectV2ResponseAllOf.java
+src/main/java/org/openapitools/client/model/EzsigntemplatepackagemembershipGetObjectV2ResponseMPayload.java
 src/main/java/org/openapitools/client/model/EzsigntemplatepackagemembershipRequest.java
 src/main/java/org/openapitools/client/model/EzsigntemplatepackagemembershipRequestCompound.java
 src/main/java/org/openapitools/client/model/EzsigntemplatepackagemembershipResponse.java
@@ -1476,6 +1604,9 @@ src/main/java/org/openapitools/client/model/EzsigntemplatepackagesignerEditObjec
 src/main/java/org/openapitools/client/model/EzsigntemplatepackagesignerGetObjectV1Response.java
 src/main/java/org/openapitools/client/model/EzsigntemplatepackagesignerGetObjectV1ResponseAllOf.java
 src/main/java/org/openapitools/client/model/EzsigntemplatepackagesignerGetObjectV1ResponseMPayload.java
+src/main/java/org/openapitools/client/model/EzsigntemplatepackagesignerGetObjectV2Response.java
+src/main/java/org/openapitools/client/model/EzsigntemplatepackagesignerGetObjectV2ResponseAllOf.java
+src/main/java/org/openapitools/client/model/EzsigntemplatepackagesignerGetObjectV2ResponseMPayload.java
 src/main/java/org/openapitools/client/model/EzsigntemplatepackagesignerRequest.java
 src/main/java/org/openapitools/client/model/EzsigntemplatepackagesignerRequestCompound.java
 src/main/java/org/openapitools/client/model/EzsigntemplatepackagesignerResponse.java
@@ -1490,6 +1621,9 @@ src/main/java/org/openapitools/client/model/Ezsigntemplatepackagesignermembershi
 src/main/java/org/openapitools/client/model/EzsigntemplatepackagesignermembershipGetObjectV1Response.java
 src/main/java/org/openapitools/client/model/EzsigntemplatepackagesignermembershipGetObjectV1ResponseAllOf.java
 src/main/java/org/openapitools/client/model/EzsigntemplatepackagesignermembershipGetObjectV1ResponseMPayload.java
+src/main/java/org/openapitools/client/model/EzsigntemplatepackagesignermembershipGetObjectV2Response.java
+src/main/java/org/openapitools/client/model/EzsigntemplatepackagesignermembershipGetObjectV2ResponseAllOf.java
+src/main/java/org/openapitools/client/model/EzsigntemplatepackagesignermembershipGetObjectV2ResponseMPayload.java
 src/main/java/org/openapitools/client/model/EzsigntemplatepackagesignermembershipRequest.java
 src/main/java/org/openapitools/client/model/EzsigntemplatepackagesignermembershipRequestCompound.java
 src/main/java/org/openapitools/client/model/EzsigntemplatepackagesignermembershipResponse.java
@@ -1504,6 +1638,9 @@ src/main/java/org/openapitools/client/model/EzsigntemplatesignatureEditObjectV1R
 src/main/java/org/openapitools/client/model/EzsigntemplatesignatureGetObjectV1Response.java
 src/main/java/org/openapitools/client/model/EzsigntemplatesignatureGetObjectV1ResponseAllOf.java
 src/main/java/org/openapitools/client/model/EzsigntemplatesignatureGetObjectV1ResponseMPayload.java
+src/main/java/org/openapitools/client/model/EzsigntemplatesignatureGetObjectV2Response.java
+src/main/java/org/openapitools/client/model/EzsigntemplatesignatureGetObjectV2ResponseAllOf.java
+src/main/java/org/openapitools/client/model/EzsigntemplatesignatureGetObjectV2ResponseMPayload.java
 src/main/java/org/openapitools/client/model/EzsigntemplatesignatureRequest.java
 src/main/java/org/openapitools/client/model/EzsigntemplatesignatureRequestCompound.java
 src/main/java/org/openapitools/client/model/EzsigntemplatesignatureRequestCompoundAllOf.java
@@ -1524,6 +1661,9 @@ src/main/java/org/openapitools/client/model/EzsigntemplatesignerEditObjectV1Resp
 src/main/java/org/openapitools/client/model/EzsigntemplatesignerGetObjectV1Response.java
 src/main/java/org/openapitools/client/model/EzsigntemplatesignerGetObjectV1ResponseAllOf.java
 src/main/java/org/openapitools/client/model/EzsigntemplatesignerGetObjectV1ResponseMPayload.java
+src/main/java/org/openapitools/client/model/EzsigntemplatesignerGetObjectV2Response.java
+src/main/java/org/openapitools/client/model/EzsigntemplatesignerGetObjectV2ResponseAllOf.java
+src/main/java/org/openapitools/client/model/EzsigntemplatesignerGetObjectV2ResponseMPayload.java
 src/main/java/org/openapitools/client/model/EzsigntemplatesignerRequest.java
 src/main/java/org/openapitools/client/model/EzsigntemplatesignerRequestCompound.java
 src/main/java/org/openapitools/client/model/EzsigntemplatesignerResponse.java
@@ -1565,6 +1705,8 @@ src/main/java/org/openapitools/client/model/FieldENotificationpreferenceStatus.j
 src/main/java/org/openapitools/client/model/FieldEPhoneType.java
 src/main/java/org/openapitools/client/model/FieldEUserEzsignsendreminderfrequency.java
 src/main/java/org/openapitools/client/model/FieldEUserType.java
+src/main/java/org/openapitools/client/model/FieldEVersionhistoryType.java
+src/main/java/org/openapitools/client/model/FieldEVersionhistoryUsertype.java
 src/main/java/org/openapitools/client/model/FieldEWebhookEzsignevent.java
 src/main/java/org/openapitools/client/model/FieldEWebhookManagementevent.java
 src/main/java/org/openapitools/client/model/FieldEWebhookModule.java
@@ -1587,6 +1729,7 @@ src/main/java/org/openapitools/client/model/MultilingualEzmaxinvoicingsummaryint
 src/main/java/org/openapitools/client/model/MultilingualEzsignfoldertypeName.java
 src/main/java/org/openapitools/client/model/MultilingualNotificationsubsectionName.java
 src/main/java/org/openapitools/client/model/MultilingualNotificationtestName.java
+src/main/java/org/openapitools/client/model/MultilingualVersionhistoryDetail.java
 src/main/java/org/openapitools/client/model/NotificationsectionGetNotificationtestsV1Response.java
 src/main/java/org/openapitools/client/model/NotificationsectionGetNotificationtestsV1ResponseAllOf.java
 src/main/java/org/openapitools/client/model/NotificationsectionGetNotificationtestsV1ResponseMPayload.java
@@ -1623,6 +1766,11 @@ src/main/java/org/openapitools/client/model/UsergroupAutocompleteElementResponse
 src/main/java/org/openapitools/client/model/UsergroupGetAutocompleteV2Response.java
 src/main/java/org/openapitools/client/model/UsergroupGetAutocompleteV2ResponseAllOf.java
 src/main/java/org/openapitools/client/model/UsergroupGetAutocompleteV2ResponseMPayload.java
+src/main/java/org/openapitools/client/model/VersionhistoryGetObjectV2Response.java
+src/main/java/org/openapitools/client/model/VersionhistoryGetObjectV2ResponseAllOf.java
+src/main/java/org/openapitools/client/model/VersionhistoryGetObjectV2ResponseMPayload.java
+src/main/java/org/openapitools/client/model/VersionhistoryResponse.java
+src/main/java/org/openapitools/client/model/VersionhistoryResponseCompound.java
 src/main/java/org/openapitools/client/model/WebhookCreateObjectV1Request.java
 src/main/java/org/openapitools/client/model/WebhookCreateObjectV1Response.java
 src/main/java/org/openapitools/client/model/WebhookCreateObjectV1ResponseAllOf.java
@@ -1645,11 +1793,15 @@ src/main/java/org/openapitools/client/model/WebhookGetListV1ResponseMPayloadAllO
 src/main/java/org/openapitools/client/model/WebhookGetObjectV1Response.java
 src/main/java/org/openapitools/client/model/WebhookGetObjectV1ResponseAllOf.java
 src/main/java/org/openapitools/client/model/WebhookGetObjectV1ResponseMPayload.java
+src/main/java/org/openapitools/client/model/WebhookGetObjectV2Response.java
+src/main/java/org/openapitools/client/model/WebhookGetObjectV2ResponseAllOf.java
+src/main/java/org/openapitools/client/model/WebhookGetObjectV2ResponseMPayload.java
 src/main/java/org/openapitools/client/model/WebhookListElement.java
 src/main/java/org/openapitools/client/model/WebhookRequest.java
 src/main/java/org/openapitools/client/model/WebhookRequestCompound.java
 src/main/java/org/openapitools/client/model/WebhookResponse.java
 src/main/java/org/openapitools/client/model/WebhookResponseCompound.java
+src/main/java/org/openapitools/client/model/WebhookResponseCompoundAllOf.java
 src/main/java/org/openapitools/client/model/WebhookTestV1Response.java
 src/main/java/org/openapitools/client/model/WebhookUserUserCreated.java
 src/main/java/org/openapitools/client/model/WebhookUserUserCreatedAllOf.java

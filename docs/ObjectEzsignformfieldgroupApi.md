@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**ezsignformfieldgroupDeleteObjectV1**](ObjectEzsignformfieldgroupApi.md#ezsignformfieldgroupDeleteObjectV1) | **DELETE** /1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID} | Delete an existing Ezsignformfieldgroup
 [**ezsignformfieldgroupEditObjectV1**](ObjectEzsignformfieldgroupApi.md#ezsignformfieldgroupEditObjectV1) | **PUT** /1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID} | Edit an existing Ezsignformfieldgroup
 [**ezsignformfieldgroupGetObjectV1**](ObjectEzsignformfieldgroupApi.md#ezsignformfieldgroupGetObjectV1) | **GET** /1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID} | Retrieve an existing Ezsignformfieldgroup
+[**ezsignformfieldgroupGetObjectV2**](ObjectEzsignformfieldgroupApi.md#ezsignformfieldgroupGetObjectV2) | **GET** /2/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID} | Retrieve an existing Ezsignformfieldgroup
 
 
 
@@ -184,6 +185,52 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsignformfieldgroupGetObjectV1Response**](EzsignformfieldgroupGetObjectV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## ezsignformfieldgroupGetObjectV2
+
+> EzsignformfieldgroupGetObjectV2Response ezsignformfieldgroupGetObjectV2(pkiEzsignformfieldgroupID)
+
+Retrieve an existing Ezsignformfieldgroup
+
+
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectEzsignformfieldgroupApi;
+
+ObjectEzsignformfieldgroupApi apiInstance = new ObjectEzsignformfieldgroupApi();
+Integer pkiEzsignformfieldgroupID = null; // Integer | 
+try {
+    EzsignformfieldgroupGetObjectV2Response result = apiInstance.ezsignformfieldgroupGetObjectV2(pkiEzsignformfieldgroupID);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectEzsignformfieldgroupApi#ezsignformfieldgroupGetObjectV2");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignformfieldgroupID** | **Integer**|  | [default to null]
+
+### Return type
+
+[**EzsignformfieldgroupGetObjectV2Response**](EzsignformfieldgroupGetObjectV2Response.md)
 
 ### Authorization
 
