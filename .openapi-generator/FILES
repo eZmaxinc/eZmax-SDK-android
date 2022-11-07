@@ -373,6 +373,8 @@ docs/EzsignfolderSendV1Request.md
 docs/EzsignfolderSendV1Response.md
 docs/EzsignfolderSendV2Request.md
 docs/EzsignfolderSendV2Response.md
+docs/EzsignfolderSendV3Request.md
+docs/EzsignfolderSendV3Response.md
 docs/EzsignfolderUnsendV1Response.md
 docs/EzsignfoldersignerassociationCreateObjectV1Request.md
 docs/EzsignfoldersignerassociationCreateObjectV1Response.md
@@ -395,9 +397,12 @@ docs/EzsignfoldersignerassociationGetObjectV1ResponseMPayload.md
 docs/EzsignfoldersignerassociationGetObjectV2Response.md
 docs/EzsignfoldersignerassociationGetObjectV2ResponseAllOf.md
 docs/EzsignfoldersignerassociationGetObjectV2ResponseMPayload.md
+docs/EzsignfoldersignerassociationPatchObjectV1Request.md
+docs/EzsignfoldersignerassociationPatchObjectV1Response.md
 docs/EzsignfoldersignerassociationRequest.md
 docs/EzsignfoldersignerassociationRequestCompound.md
 docs/EzsignfoldersignerassociationRequestCompoundAllOf.md
+docs/EzsignfoldersignerassociationRequestPatch.md
 docs/EzsignfoldersignerassociationResponse.md
 docs/EzsignfoldersignerassociationResponseCompound.md
 docs/EzsignfoldersignerassociationResponseCompoundAllOf.md
@@ -1338,6 +1343,8 @@ src/main/java/org/openapitools/client/model/EzsignfolderSendV1Request.java
 src/main/java/org/openapitools/client/model/EzsignfolderSendV1Response.java
 src/main/java/org/openapitools/client/model/EzsignfolderSendV2Request.java
 src/main/java/org/openapitools/client/model/EzsignfolderSendV2Response.java
+src/main/java/org/openapitools/client/model/EzsignfolderSendV3Request.java
+src/main/java/org/openapitools/client/model/EzsignfolderSendV3Response.java
 src/main/java/org/openapitools/client/model/EzsignfolderUnsendV1Response.java
 src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationCreateObjectV1Request.java
 src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationCreateObjectV1Response.java
@@ -1360,9 +1367,12 @@ src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationGetObje
 src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationGetObjectV2Response.java
 src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationGetObjectV2ResponseAllOf.java
 src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationGetObjectV2ResponseMPayload.java
+src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationPatchObjectV1Request.java
+src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationPatchObjectV1Response.java
 src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationRequest.java
 src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationRequestCompound.java
 src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationRequestCompoundAllOf.java
+src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationRequestPatch.java
 src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationResponse.java
 src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationResponseCompound.java
 src/main/java/org/openapitools/client/model/EzsignfoldersignerassociationResponseCompoundAllOf.java
