@@ -500,6 +500,10 @@ docs/EzsignsignerResponseCompound.md
 docs/EzsignsignerResponseCompoundAllOf.md
 docs/EzsignsignerResponseCompoundContact.md
 docs/EzsigntemplateAutocompleteElementResponse.md
+docs/EzsigntemplateCopyV1Request.md
+docs/EzsigntemplateCopyV1Response.md
+docs/EzsigntemplateCopyV1ResponseAllOf.md
+docs/EzsigntemplateCopyV1ResponseMPayload.md
 docs/EzsigntemplateCreateObjectV1Request.md
 docs/EzsigntemplateCreateObjectV1Response.md
 docs/EzsigntemplateCreateObjectV1ResponseAllOf.md
@@ -1470,6 +1474,10 @@ src/main/java/org/openapitools/client/model/EzsignsignerResponseCompound.java
 src/main/java/org/openapitools/client/model/EzsignsignerResponseCompoundAllOf.java
 src/main/java/org/openapitools/client/model/EzsignsignerResponseCompoundContact.java
 src/main/java/org/openapitools/client/model/EzsigntemplateAutocompleteElementResponse.java
+src/main/java/org/openapitools/client/model/EzsigntemplateCopyV1Request.java
+src/main/java/org/openapitools/client/model/EzsigntemplateCopyV1Response.java
+src/main/java/org/openapitools/client/model/EzsigntemplateCopyV1ResponseAllOf.java
+src/main/java/org/openapitools/client/model/EzsigntemplateCopyV1ResponseMPayload.java
 src/main/java/org/openapitools/client/model/EzsigntemplateCreateObjectV1Request.java
 src/main/java/org/openapitools/client/model/EzsigntemplateCreateObjectV1Response.java
 src/main/java/org/openapitools/client/model/EzsigntemplateCreateObjectV1ResponseAllOf.java
