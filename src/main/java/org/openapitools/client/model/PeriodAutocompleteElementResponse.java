@@ -29,9 +29,9 @@ public class PeriodAutocompleteElementResponse {
   private Boolean bPeriodIsactive = null;
 
   /**
-   * The period YYYYMM
+   * The YYYYMM of the Period
    **/
-  @ApiModelProperty(required = true, value = "The period YYYYMM")
+  @ApiModelProperty(required = true, value = "The YYYYMM of the Period")
   public String getSPeriodYYYYMM() {
     return sPeriodYYYYMM;
   }

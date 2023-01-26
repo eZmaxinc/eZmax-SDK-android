@@ -59,6 +59,8 @@ public class EzmaxinvoicingsummaryglobalResponseCompound {
   private String dEzmaxinvoicingsummaryglobalNet = null;
   @SerializedName("bEzmaxinvoicingsummaryglobalAdjustment")
   private Boolean bEzmaxinvoicingsummaryglobalAdjustment = null;
+  @SerializedName("tEzmaxproductHelpX")
+  private String tEzmaxproductHelpX = null;
   @SerializedName("a_objEzmaxinvoicingcommission")
   private List<EzmaxinvoicingcommissionResponseCompound> aObjEzmaxinvoicingcommission = null;
 
@@ -144,9 +146,9 @@ public class EzmaxinvoicingsummaryglobalResponseCompound {
   }
 
   /**
-   * The The count item calculated
+   * The count item calculated
    **/
-  @ApiModelProperty(required = true, value = "The The count item calculated")
+  @ApiModelProperty(required = true, value = "The count item calculated")
   public String getDEzmaxinvoicingsummaryglobalCountreal() {
     return dEzmaxinvoicingsummaryglobalCountreal;
   }
@@ -155,9 +157,9 @@ public class EzmaxinvoicingsummaryglobalResponseCompound {
   }
 
   /**
-   * The The count item billed
+   * The count item billed
    **/
-  @ApiModelProperty(required = true, value = "The The count item billed")
+  @ApiModelProperty(required = true, value = "The count item billed")
   public String getDEzmaxinvoicingsummaryglobalCountbilled() {
     return dEzmaxinvoicingsummaryglobalCountbilled;
   }
@@ -265,6 +267,17 @@ public class EzmaxinvoicingsummaryglobalResponseCompound {
   }
 
   /**
+   * The help message of the Ezmaxproduct in the language of the requester
+   **/
+  @ApiModelProperty(required = true, value = "The help message of the Ezmaxproduct in the language of the requester")
+  public String getTEzmaxproductHelpX() {
+    return tEzmaxproductHelpX;
+  }
+  public void setTEzmaxproductHelpX(String tEzmaxproductHelpX) {
+    this.tEzmaxproductHelpX = tEzmaxproductHelpX;
+  }
+
+  /**
    **/
   @ApiModelProperty(value = "")
   public List<EzmaxinvoicingcommissionResponseCompound> getAObjEzmaxinvoicingcommission() {
@@ -302,6 +315,7 @@ public class EzmaxinvoicingsummaryglobalResponseCompound {
         (this.dEzmaxinvoicingsummaryglobalPartner == null ? ezmaxinvoicingsummaryglobalResponseCompound.dEzmaxinvoicingsummaryglobalPartner == null : this.dEzmaxinvoicingsummaryglobalPartner.equals(ezmaxinvoicingsummaryglobalResponseCompound.dEzmaxinvoicingsummaryglobalPartner)) &&
         (this.dEzmaxinvoicingsummaryglobalNet == null ? ezmaxinvoicingsummaryglobalResponseCompound.dEzmaxinvoicingsummaryglobalNet == null : this.dEzmaxinvoicingsummaryglobalNet.equals(ezmaxinvoicingsummaryglobalResponseCompound.dEzmaxinvoicingsummaryglobalNet)) &&
         (this.bEzmaxinvoicingsummaryglobalAdjustment == null ? ezmaxinvoicingsummaryglobalResponseCompound.bEzmaxinvoicingsummaryglobalAdjustment == null : this.bEzmaxinvoicingsummaryglobalAdjustment.equals(ezmaxinvoicingsummaryglobalResponseCompound.bEzmaxinvoicingsummaryglobalAdjustment)) &&
+        (this.tEzmaxproductHelpX == null ? ezmaxinvoicingsummaryglobalResponseCompound.tEzmaxproductHelpX == null : this.tEzmaxproductHelpX.equals(ezmaxinvoicingsummaryglobalResponseCompound.tEzmaxproductHelpX)) &&
         (this.aObjEzmaxinvoicingcommission == null ? ezmaxinvoicingsummaryglobalResponseCompound.aObjEzmaxinvoicingcommission == null : this.aObjEzmaxinvoicingcommission.equals(ezmaxinvoicingsummaryglobalResponseCompound.aObjEzmaxinvoicingcommission));
   }
 
@@ -326,6 +340,7 @@ public class EzmaxinvoicingsummaryglobalResponseCompound {
     result = 31 * result + (this.dEzmaxinvoicingsummaryglobalPartner == null ? 0: this.dEzmaxinvoicingsummaryglobalPartner.hashCode());
     result = 31 * result + (this.dEzmaxinvoicingsummaryglobalNet == null ? 0: this.dEzmaxinvoicingsummaryglobalNet.hashCode());
     result = 31 * result + (this.bEzmaxinvoicingsummaryglobalAdjustment == null ? 0: this.bEzmaxinvoicingsummaryglobalAdjustment.hashCode());
+    result = 31 * result + (this.tEzmaxproductHelpX == null ? 0: this.tEzmaxproductHelpX.hashCode());
     result = 31 * result + (this.aObjEzmaxinvoicingcommission == null ? 0: this.aObjEzmaxinvoicingcommission.hashCode());
     return result;
   }
@@ -353,6 +368,7 @@ public class EzmaxinvoicingsummaryglobalResponseCompound {
     sb.append("  dEzmaxinvoicingsummaryglobalPartner: ").append(dEzmaxinvoicingsummaryglobalPartner).append("\n");
     sb.append("  dEzmaxinvoicingsummaryglobalNet: ").append(dEzmaxinvoicingsummaryglobalNet).append("\n");
     sb.append("  bEzmaxinvoicingsummaryglobalAdjustment: ").append(bEzmaxinvoicingsummaryglobalAdjustment).append("\n");
+    sb.append("  tEzmaxproductHelpX: ").append(tEzmaxproductHelpX).append("\n");
     sb.append("  aObjEzmaxinvoicingcommission: ").append(aObjEzmaxinvoicingcommission).append("\n");
     sb.append("}\n");
     return sb.toString();

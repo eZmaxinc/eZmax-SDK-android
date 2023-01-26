@@ -13,21 +13,21 @@
 package org.openapitools.client.model;
 
 import org.openapitools.client.model.CommonResponseObjDebug;
-import org.openapitools.client.model.CommonResponseObjDebugPayload;
+import org.openapitools.client.model.CommonResponseObjDebugPayloadGetList;
 import org.openapitools.client.model.CommunicationGetListV1ResponseMPayload;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Response for GET /1/module/communication/getList
+ * Response for GET /1/object/communication/getList
  **/
-@ApiModel(description = "Response for GET /1/module/communication/getList")
+@ApiModel(description = "Response for GET /1/object/communication/getList")
 public class CommunicationGetListV1Response {
   
   @SerializedName("mPayload")
   private CommunicationGetListV1ResponseMPayload mPayload = null;
   @SerializedName("objDebugPayload")
-  private CommonResponseObjDebugPayload objDebugPayload = null;
+  private CommonResponseObjDebugPayloadGetList objDebugPayload = null;
   @SerializedName("objDebug")
   private CommonResponseObjDebug objDebug = null;
 
@@ -44,10 +44,10 @@ public class CommunicationGetListV1Response {
   /**
    **/
   @ApiModelProperty(value = "")
-  public CommonResponseObjDebugPayload getObjDebugPayload() {
+  public CommonResponseObjDebugPayloadGetList getObjDebugPayload() {
     return objDebugPayload;
   }
-  public void setObjDebugPayload(CommonResponseObjDebugPayload objDebugPayload) {
+  public void setObjDebugPayload(CommonResponseObjDebugPayloadGetList objDebugPayload) {
     this.objDebugPayload = objDebugPayload;
   }
 

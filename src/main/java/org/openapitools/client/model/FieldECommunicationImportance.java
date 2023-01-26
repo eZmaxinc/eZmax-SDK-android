@@ -16,10 +16,10 @@ import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * The importance of Email for the Communication
+ * The importance of the Communication
  **/
-@ApiModel(description = "The importance of Email for the Communication")
-public class FieldECommunicationEmailimportance {
+@ApiModel(description = "The importance of the Communication")
+public class FieldECommunicationImportance {
   
 
 
@@ -31,7 +31,7 @@ public class FieldECommunicationEmailimportance {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    FieldECommunicationEmailimportance fieldECommunicationEmailimportance = (FieldECommunicationEmailimportance) o;
+    FieldECommunicationImportance fieldECommunicationImportance = (FieldECommunicationImportance) o;
     return true;
   }
 
@@ -44,7 +44,7 @@ public class FieldECommunicationEmailimportance {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class FieldECommunicationEmailimportance {\n");
+    sb.append("class FieldECommunicationImportance {\n");
     
     sb.append("}\n");
     return sb.toString();

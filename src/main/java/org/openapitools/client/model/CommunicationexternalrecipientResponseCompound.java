@@ -12,8 +12,10 @@
 
 package org.openapitools.client.model;
 
+import org.openapitools.client.model.DescriptionstaticResponseCompound;
+import org.openapitools.client.model.EmailstaticResponseCompound;
 import org.openapitools.client.model.FieldECommunicationexternalrecipientType;
-import org.openapitools.client.model.PhoneResponseCompound;
+import org.openapitools.client.model.PhonestaticResponseCompound;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -25,14 +27,14 @@ public class CommunicationexternalrecipientResponseCompound {
   
   @SerializedName("pkiCommunicationexternalrecipientID")
   private Integer pkiCommunicationexternalrecipientID = null;
-  @SerializedName("sEmailAddress")
-  private String sEmailAddress = null;
-  @SerializedName("objPhoneSms")
-  private PhoneResponseCompound objPhoneSms = null;
   @SerializedName("eCommunicationexternalrecipientType")
   private FieldECommunicationexternalrecipientType eCommunicationexternalrecipientType = null;
-  @SerializedName("sCommunicationexternalrecipientName")
-  private String sCommunicationexternalrecipientName = null;
+  @SerializedName("objDescriptionstatic")
+  private DescriptionstaticResponseCompound objDescriptionstatic = null;
+  @SerializedName("objEmailstatic")
+  private EmailstaticResponseCompound objEmailstatic = null;
+  @SerializedName("objPhonestatic")
+  private PhonestaticResponseCompound objPhonestatic = null;
 
   /**
    * The unique ID of the Communicationexternalrecipient
@@ -46,27 +48,6 @@ public class CommunicationexternalrecipientResponseCompound {
   }
 
   /**
-   * The email address.
-   **/
-  @ApiModelProperty(value = "The email address.")
-  public String getSEmailAddress() {
-    return sEmailAddress;
-  }
-  public void setSEmailAddress(String sEmailAddress) {
-    this.sEmailAddress = sEmailAddress;
-  }
-
-  /**
-   **/
-  @ApiModelProperty(value = "")
-  public PhoneResponseCompound getObjPhoneSms() {
-    return objPhoneSms;
-  }
-  public void setObjPhoneSms(PhoneResponseCompound objPhoneSms) {
-    this.objPhoneSms = objPhoneSms;
-  }
-
-  /**
    **/
   @ApiModelProperty(required = true, value = "")
   public FieldECommunicationexternalrecipientType getECommunicationexternalrecipientType() {
@@ -77,14 +58,33 @@ public class CommunicationexternalrecipientResponseCompound {
   }
 
   /**
-   * The Name of the Communicationexternalrecipient
    **/
-  @ApiModelProperty(required = true, value = "The Name of the Communicationexternalrecipient")
-  public String getSCommunicationexternalrecipientName() {
-    return sCommunicationexternalrecipientName;
+  @ApiModelProperty(required = true, value = "")
+  public DescriptionstaticResponseCompound getObjDescriptionstatic() {
+    return objDescriptionstatic;
   }
-  public void setSCommunicationexternalrecipientName(String sCommunicationexternalrecipientName) {
-    this.sCommunicationexternalrecipientName = sCommunicationexternalrecipientName;
+  public void setObjDescriptionstatic(DescriptionstaticResponseCompound objDescriptionstatic) {
+    this.objDescriptionstatic = objDescriptionstatic;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public EmailstaticResponseCompound getObjEmailstatic() {
+    return objEmailstatic;
+  }
+  public void setObjEmailstatic(EmailstaticResponseCompound objEmailstatic) {
+    this.objEmailstatic = objEmailstatic;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public PhonestaticResponseCompound getObjPhonestatic() {
+    return objPhonestatic;
+  }
+  public void setObjPhonestatic(PhonestaticResponseCompound objPhonestatic) {
+    this.objPhonestatic = objPhonestatic;
   }
 
 
@@ -98,20 +98,20 @@ public class CommunicationexternalrecipientResponseCompound {
     }
     CommunicationexternalrecipientResponseCompound communicationexternalrecipientResponseCompound = (CommunicationexternalrecipientResponseCompound) o;
     return (this.pkiCommunicationexternalrecipientID == null ? communicationexternalrecipientResponseCompound.pkiCommunicationexternalrecipientID == null : this.pkiCommunicationexternalrecipientID.equals(communicationexternalrecipientResponseCompound.pkiCommunicationexternalrecipientID)) &&
-        (this.sEmailAddress == null ? communicationexternalrecipientResponseCompound.sEmailAddress == null : this.sEmailAddress.equals(communicationexternalrecipientResponseCompound.sEmailAddress)) &&
-        (this.objPhoneSms == null ? communicationexternalrecipientResponseCompound.objPhoneSms == null : this.objPhoneSms.equals(communicationexternalrecipientResponseCompound.objPhoneSms)) &&
         (this.eCommunicationexternalrecipientType == null ? communicationexternalrecipientResponseCompound.eCommunicationexternalrecipientType == null : this.eCommunicationexternalrecipientType.equals(communicationexternalrecipientResponseCompound.eCommunicationexternalrecipientType)) &&
-        (this.sCommunicationexternalrecipientName == null ? communicationexternalrecipientResponseCompound.sCommunicationexternalrecipientName == null : this.sCommunicationexternalrecipientName.equals(communicationexternalrecipientResponseCompound.sCommunicationexternalrecipientName));
+        (this.objDescriptionstatic == null ? communicationexternalrecipientResponseCompound.objDescriptionstatic == null : this.objDescriptionstatic.equals(communicationexternalrecipientResponseCompound.objDescriptionstatic)) &&
+        (this.objEmailstatic == null ? communicationexternalrecipientResponseCompound.objEmailstatic == null : this.objEmailstatic.equals(communicationexternalrecipientResponseCompound.objEmailstatic)) &&
+        (this.objPhonestatic == null ? communicationexternalrecipientResponseCompound.objPhonestatic == null : this.objPhonestatic.equals(communicationexternalrecipientResponseCompound.objPhonestatic));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
     result = 31 * result + (this.pkiCommunicationexternalrecipientID == null ? 0: this.pkiCommunicationexternalrecipientID.hashCode());
-    result = 31 * result + (this.sEmailAddress == null ? 0: this.sEmailAddress.hashCode());
-    result = 31 * result + (this.objPhoneSms == null ? 0: this.objPhoneSms.hashCode());
     result = 31 * result + (this.eCommunicationexternalrecipientType == null ? 0: this.eCommunicationexternalrecipientType.hashCode());
-    result = 31 * result + (this.sCommunicationexternalrecipientName == null ? 0: this.sCommunicationexternalrecipientName.hashCode());
+    result = 31 * result + (this.objDescriptionstatic == null ? 0: this.objDescriptionstatic.hashCode());
+    result = 31 * result + (this.objEmailstatic == null ? 0: this.objEmailstatic.hashCode());
+    result = 31 * result + (this.objPhonestatic == null ? 0: this.objPhonestatic.hashCode());
     return result;
   }
 
@@ -121,10 +121,10 @@ public class CommunicationexternalrecipientResponseCompound {
     sb.append("class CommunicationexternalrecipientResponseCompound {\n");
     
     sb.append("  pkiCommunicationexternalrecipientID: ").append(pkiCommunicationexternalrecipientID).append("\n");
-    sb.append("  sEmailAddress: ").append(sEmailAddress).append("\n");
-    sb.append("  objPhoneSms: ").append(objPhoneSms).append("\n");
     sb.append("  eCommunicationexternalrecipientType: ").append(eCommunicationexternalrecipientType).append("\n");
-    sb.append("  sCommunicationexternalrecipientName: ").append(sCommunicationexternalrecipientName).append("\n");
+    sb.append("  objDescriptionstatic: ").append(objDescriptionstatic).append("\n");
+    sb.append("  objEmailstatic: ").append(objEmailstatic).append("\n");
+    sb.append("  objPhonestatic: ").append(objPhonestatic).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

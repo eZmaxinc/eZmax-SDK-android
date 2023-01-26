@@ -43,6 +43,8 @@ public class EzmaxinvoicingsummaryinternaldetailResponse {
   private String dEzmaxinvoicingsummaryinternaldetailTotal = null;
   @SerializedName("bEzmaxinvoicingsummaryinternaldetailAdjustment")
   private Boolean bEzmaxinvoicingsummaryinternaldetailAdjustment = null;
+  @SerializedName("tEzmaxproductHelpX")
+  private String tEzmaxproductHelpX = null;
 
   /**
    * The unique ID of the Ezmaxinvoicingsummaryinternaldetail
@@ -169,6 +171,17 @@ public class EzmaxinvoicingsummaryinternaldetailResponse {
     this.bEzmaxinvoicingsummaryinternaldetailAdjustment = bEzmaxinvoicingsummaryinternaldetailAdjustment;
   }
 
+  /**
+   * The help message of the Ezmaxproduct in the language of the requester
+   **/
+  @ApiModelProperty(required = true, value = "The help message of the Ezmaxproduct in the language of the requester")
+  public String getTEzmaxproductHelpX() {
+    return tEzmaxproductHelpX;
+  }
+  public void setTEzmaxproductHelpX(String tEzmaxproductHelpX) {
+    this.tEzmaxproductHelpX = tEzmaxproductHelpX;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -189,7 +202,8 @@ public class EzmaxinvoicingsummaryinternaldetailResponse {
         (this.dEzmaxinvoicingsummaryinternaldetailSubtotal == null ? ezmaxinvoicingsummaryinternaldetailResponse.dEzmaxinvoicingsummaryinternaldetailSubtotal == null : this.dEzmaxinvoicingsummaryinternaldetailSubtotal.equals(ezmaxinvoicingsummaryinternaldetailResponse.dEzmaxinvoicingsummaryinternaldetailSubtotal)) &&
         (this.dEzmaxinvoicingsummaryinternaldetailRebate == null ? ezmaxinvoicingsummaryinternaldetailResponse.dEzmaxinvoicingsummaryinternaldetailRebate == null : this.dEzmaxinvoicingsummaryinternaldetailRebate.equals(ezmaxinvoicingsummaryinternaldetailResponse.dEzmaxinvoicingsummaryinternaldetailRebate)) &&
         (this.dEzmaxinvoicingsummaryinternaldetailTotal == null ? ezmaxinvoicingsummaryinternaldetailResponse.dEzmaxinvoicingsummaryinternaldetailTotal == null : this.dEzmaxinvoicingsummaryinternaldetailTotal.equals(ezmaxinvoicingsummaryinternaldetailResponse.dEzmaxinvoicingsummaryinternaldetailTotal)) &&
-        (this.bEzmaxinvoicingsummaryinternaldetailAdjustment == null ? ezmaxinvoicingsummaryinternaldetailResponse.bEzmaxinvoicingsummaryinternaldetailAdjustment == null : this.bEzmaxinvoicingsummaryinternaldetailAdjustment.equals(ezmaxinvoicingsummaryinternaldetailResponse.bEzmaxinvoicingsummaryinternaldetailAdjustment));
+        (this.bEzmaxinvoicingsummaryinternaldetailAdjustment == null ? ezmaxinvoicingsummaryinternaldetailResponse.bEzmaxinvoicingsummaryinternaldetailAdjustment == null : this.bEzmaxinvoicingsummaryinternaldetailAdjustment.equals(ezmaxinvoicingsummaryinternaldetailResponse.bEzmaxinvoicingsummaryinternaldetailAdjustment)) &&
+        (this.tEzmaxproductHelpX == null ? ezmaxinvoicingsummaryinternaldetailResponse.tEzmaxproductHelpX == null : this.tEzmaxproductHelpX.equals(ezmaxinvoicingsummaryinternaldetailResponse.tEzmaxproductHelpX));
   }
 
   @Override
@@ -206,6 +220,7 @@ public class EzmaxinvoicingsummaryinternaldetailResponse {
     result = 31 * result + (this.dEzmaxinvoicingsummaryinternaldetailRebate == null ? 0: this.dEzmaxinvoicingsummaryinternaldetailRebate.hashCode());
     result = 31 * result + (this.dEzmaxinvoicingsummaryinternaldetailTotal == null ? 0: this.dEzmaxinvoicingsummaryinternaldetailTotal.hashCode());
     result = 31 * result + (this.bEzmaxinvoicingsummaryinternaldetailAdjustment == null ? 0: this.bEzmaxinvoicingsummaryinternaldetailAdjustment.hashCode());
+    result = 31 * result + (this.tEzmaxproductHelpX == null ? 0: this.tEzmaxproductHelpX.hashCode());
     return result;
   }
 
@@ -225,6 +240,7 @@ public class EzmaxinvoicingsummaryinternaldetailResponse {
     sb.append("  dEzmaxinvoicingsummaryinternaldetailRebate: ").append(dEzmaxinvoicingsummaryinternaldetailRebate).append("\n");
     sb.append("  dEzmaxinvoicingsummaryinternaldetailTotal: ").append(dEzmaxinvoicingsummaryinternaldetailTotal).append("\n");
     sb.append("  bEzmaxinvoicingsummaryinternaldetailAdjustment: ").append(bEzmaxinvoicingsummaryinternaldetailAdjustment).append("\n");
+    sb.append("  tEzmaxproductHelpX: ").append(tEzmaxproductHelpX).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

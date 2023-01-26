@@ -14,9 +14,7 @@ package org.openapitools.client.model;
 
 import java.util.*;
 import org.openapitools.client.model.CommunicationattachmentResponseCompound;
-import org.openapitools.client.model.CommunicationexternalimageResponseCompound;
 import org.openapitools.client.model.CommunicationexternalrecipientResponseCompound;
-import org.openapitools.client.model.CommunicationimageResponseCompound;
 import org.openapitools.client.model.CommunicationrecipientResponseCompound;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
@@ -30,10 +28,6 @@ public class CommunicationResponseCompoundAllOf {
   private List<CommunicationrecipientResponseCompound> aObjCommunicationrecipient = null;
   @SerializedName("a_objCommunicationexternalrecipient")
   private List<CommunicationexternalrecipientResponseCompound> aObjCommunicationexternalrecipient = null;
-  @SerializedName("a_objCommunicationimage")
-  private List<CommunicationimageResponseCompound> aObjCommunicationimage = null;
-  @SerializedName("a_objCommunicationexternalimage")
-  private List<CommunicationexternalimageResponseCompound> aObjCommunicationexternalimage = null;
 
   /**
    **/
@@ -65,26 +59,6 @@ public class CommunicationResponseCompoundAllOf {
     this.aObjCommunicationexternalrecipient = aObjCommunicationexternalrecipient;
   }
 
-  /**
-   **/
-  @ApiModelProperty(required = true, value = "")
-  public List<CommunicationimageResponseCompound> getAObjCommunicationimage() {
-    return aObjCommunicationimage;
-  }
-  public void setAObjCommunicationimage(List<CommunicationimageResponseCompound> aObjCommunicationimage) {
-    this.aObjCommunicationimage = aObjCommunicationimage;
-  }
-
-  /**
-   **/
-  @ApiModelProperty(required = true, value = "")
-  public List<CommunicationexternalimageResponseCompound> getAObjCommunicationexternalimage() {
-    return aObjCommunicationexternalimage;
-  }
-  public void setAObjCommunicationexternalimage(List<CommunicationexternalimageResponseCompound> aObjCommunicationexternalimage) {
-    this.aObjCommunicationexternalimage = aObjCommunicationexternalimage;
-  }
-
 
   @Override
   public boolean equals(Object o) {
@@ -97,9 +71,7 @@ public class CommunicationResponseCompoundAllOf {
     CommunicationResponseCompoundAllOf communicationResponseCompoundAllOf = (CommunicationResponseCompoundAllOf) o;
     return (this.aObjCommunicationattachment == null ? communicationResponseCompoundAllOf.aObjCommunicationattachment == null : this.aObjCommunicationattachment.equals(communicationResponseCompoundAllOf.aObjCommunicationattachment)) &&
         (this.aObjCommunicationrecipient == null ? communicationResponseCompoundAllOf.aObjCommunicationrecipient == null : this.aObjCommunicationrecipient.equals(communicationResponseCompoundAllOf.aObjCommunicationrecipient)) &&
-        (this.aObjCommunicationexternalrecipient == null ? communicationResponseCompoundAllOf.aObjCommunicationexternalrecipient == null : this.aObjCommunicationexternalrecipient.equals(communicationResponseCompoundAllOf.aObjCommunicationexternalrecipient)) &&
-        (this.aObjCommunicationimage == null ? communicationResponseCompoundAllOf.aObjCommunicationimage == null : this.aObjCommunicationimage.equals(communicationResponseCompoundAllOf.aObjCommunicationimage)) &&
-        (this.aObjCommunicationexternalimage == null ? communicationResponseCompoundAllOf.aObjCommunicationexternalimage == null : this.aObjCommunicationexternalimage.equals(communicationResponseCompoundAllOf.aObjCommunicationexternalimage));
+        (this.aObjCommunicationexternalrecipient == null ? communicationResponseCompoundAllOf.aObjCommunicationexternalrecipient == null : this.aObjCommunicationexternalrecipient.equals(communicationResponseCompoundAllOf.aObjCommunicationexternalrecipient));
   }
 
   @Override
@@ -108,8 +80,6 @@ public class CommunicationResponseCompoundAllOf {
     result = 31 * result + (this.aObjCommunicationattachment == null ? 0: this.aObjCommunicationattachment.hashCode());
     result = 31 * result + (this.aObjCommunicationrecipient == null ? 0: this.aObjCommunicationrecipient.hashCode());
     result = 31 * result + (this.aObjCommunicationexternalrecipient == null ? 0: this.aObjCommunicationexternalrecipient.hashCode());
-    result = 31 * result + (this.aObjCommunicationimage == null ? 0: this.aObjCommunicationimage.hashCode());
-    result = 31 * result + (this.aObjCommunicationexternalimage == null ? 0: this.aObjCommunicationexternalimage.hashCode());
     return result;
   }
 
@@ -121,8 +91,6 @@ public class CommunicationResponseCompoundAllOf {
     sb.append("  aObjCommunicationattachment: ").append(aObjCommunicationattachment).append("\n");
     sb.append("  aObjCommunicationrecipient: ").append(aObjCommunicationrecipient).append("\n");
     sb.append("  aObjCommunicationexternalrecipient: ").append(aObjCommunicationexternalrecipient).append("\n");
-    sb.append("  aObjCommunicationimage: ").append(aObjCommunicationimage).append("\n");
-    sb.append("  aObjCommunicationexternalimage: ").append(aObjCommunicationexternalimage).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

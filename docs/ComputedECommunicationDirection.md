@@ -1,0 +1,10 @@
+
+
+# ComputedECommunicationDirection
+
+## Enum
+
+
+
+
+

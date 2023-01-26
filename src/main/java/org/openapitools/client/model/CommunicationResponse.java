@@ -12,8 +12,10 @@
 
 package org.openapitools.client.model;
 
+import org.openapitools.client.model.CommonAudit;
+import org.openapitools.client.model.ComputedECommunicationDirection;
 import org.openapitools.client.model.CustomContactNameResponse;
-import org.openapitools.client.model.FieldECommunicationEmailimportance;
+import org.openapitools.client.model.FieldECommunicationImportance;
 import org.openapitools.client.model.FieldECommunicationType;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
@@ -26,16 +28,20 @@ public class CommunicationResponse {
   
   @SerializedName("pkiCommunicationID")
   private Integer pkiCommunicationID = null;
-  @SerializedName("eCommunicationEmailimportance")
-  private FieldECommunicationEmailimportance eCommunicationEmailimportance = null;
+  @SerializedName("eCommunicationImportance")
+  private FieldECommunicationImportance eCommunicationImportance = null;
   @SerializedName("eCommunicationType")
   private FieldECommunicationType eCommunicationType = null;
   @SerializedName("sCommunicationSubject")
   private String sCommunicationSubject = null;
-  @SerializedName("dtCommunicationSentdate")
-  private String dtCommunicationSentdate = null;
+  @SerializedName("eCommunicationDirection")
+  private ComputedECommunicationDirection eCommunicationDirection = null;
+  @SerializedName("iCommunicationrecipientCount")
+  private Integer iCommunicationrecipientCount = null;
   @SerializedName("objContactFrom")
   private CustomContactNameResponse objContactFrom = null;
+  @SerializedName("objAudit")
+  private CommonAudit objAudit = null;
 
   /**
    * The unique ID of the Communication.
@@ -51,12 +57,12 @@ public class CommunicationResponse {
 
   /**
    **/
-  @ApiModelProperty(value = "")
-  public FieldECommunicationEmailimportance getECommunicationEmailimportance() {
-    return eCommunicationEmailimportance;
+  @ApiModelProperty(required = true, value = "")
+  public FieldECommunicationImportance getECommunicationImportance() {
+    return eCommunicationImportance;
   }
-  public void setECommunicationEmailimportance(FieldECommunicationEmailimportance eCommunicationEmailimportance) {
-    this.eCommunicationEmailimportance = eCommunicationEmailimportance;
+  public void setECommunicationImportance(FieldECommunicationImportance eCommunicationImportance) {
+    this.eCommunicationImportance = eCommunicationImportance;
   }
 
   /**
@@ -70,9 +76,9 @@ public class CommunicationResponse {
   }
 
   /**
-   * The Subject of the Communication
+   * The subject of the Communication
    **/
-  @ApiModelProperty(required = true, value = "The Subject of the Communication")
+  @ApiModelProperty(required = true, value = "The subject of the Communication")
   public String getSCommunicationSubject() {
     return sCommunicationSubject;
   }
@@ -81,14 +87,24 @@ public class CommunicationResponse {
   }
 
   /**
-   * The send date and time at which the Communication was sent.
    **/
-  @ApiModelProperty(required = true, value = "The send date and time at which the Communication was sent.")
-  public String getDtCommunicationSentdate() {
-    return dtCommunicationSentdate;
+  @ApiModelProperty(required = true, value = "")
+  public ComputedECommunicationDirection getECommunicationDirection() {
+    return eCommunicationDirection;
   }
-  public void setDtCommunicationSentdate(String dtCommunicationSentdate) {
-    this.dtCommunicationSentdate = dtCommunicationSentdate;
+  public void setECommunicationDirection(ComputedECommunicationDirection eCommunicationDirection) {
+    this.eCommunicationDirection = eCommunicationDirection;
+  }
+
+  /**
+   * The count of Communicationrecipient
+   **/
+  @ApiModelProperty(required = true, value = "The count of Communicationrecipient")
+  public Integer getICommunicationrecipientCount() {
+    return iCommunicationrecipientCount;
+  }
+  public void setICommunicationrecipientCount(Integer iCommunicationrecipientCount) {
+    this.iCommunicationrecipientCount = iCommunicationrecipientCount;
   }
 
   /**
@@ -99,6 +115,16 @@ public class CommunicationResponse {
   }
   public void setObjContactFrom(CustomContactNameResponse objContactFrom) {
     this.objContactFrom = objContactFrom;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public CommonAudit getObjAudit() {
+    return objAudit;
+  }
+  public void setObjAudit(CommonAudit objAudit) {
+    this.objAudit = objAudit;
   }
 
 
@@ -112,22 +138,26 @@ public class CommunicationResponse {
     }
     CommunicationResponse communicationResponse = (CommunicationResponse) o;
     return (this.pkiCommunicationID == null ? communicationResponse.pkiCommunicationID == null : this.pkiCommunicationID.equals(communicationResponse.pkiCommunicationID)) &&
-        (this.eCommunicationEmailimportance == null ? communicationResponse.eCommunicationEmailimportance == null : this.eCommunicationEmailimportance.equals(communicationResponse.eCommunicationEmailimportance)) &&
+        (this.eCommunicationImportance == null ? communicationResponse.eCommunicationImportance == null : this.eCommunicationImportance.equals(communicationResponse.eCommunicationImportance)) &&
         (this.eCommunicationType == null ? communicationResponse.eCommunicationType == null : this.eCommunicationType.equals(communicationResponse.eCommunicationType)) &&
         (this.sCommunicationSubject == null ? communicationResponse.sCommunicationSubject == null : this.sCommunicationSubject.equals(communicationResponse.sCommunicationSubject)) &&
-        (this.dtCommunicationSentdate == null ? communicationResponse.dtCommunicationSentdate == null : this.dtCommunicationSentdate.equals(communicationResponse.dtCommunicationSentdate)) &&
-        (this.objContactFrom == null ? communicationResponse.objContactFrom == null : this.objContactFrom.equals(communicationResponse.objContactFrom));
+        (this.eCommunicationDirection == null ? communicationResponse.eCommunicationDirection == null : this.eCommunicationDirection.equals(communicationResponse.eCommunicationDirection)) &&
+        (this.iCommunicationrecipientCount == null ? communicationResponse.iCommunicationrecipientCount == null : this.iCommunicationrecipientCount.equals(communicationResponse.iCommunicationrecipientCount)) &&
+        (this.objContactFrom == null ? communicationResponse.objContactFrom == null : this.objContactFrom.equals(communicationResponse.objContactFrom)) &&
+        (this.objAudit == null ? communicationResponse.objAudit == null : this.objAudit.equals(communicationResponse.objAudit));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
     result = 31 * result + (this.pkiCommunicationID == null ? 0: this.pkiCommunicationID.hashCode());
-    result = 31 * result + (this.eCommunicationEmailimportance == null ? 0: this.eCommunicationEmailimportance.hashCode());
+    result = 31 * result + (this.eCommunicationImportance == null ? 0: this.eCommunicationImportance.hashCode());
     result = 31 * result + (this.eCommunicationType == null ? 0: this.eCommunicationType.hashCode());
     result = 31 * result + (this.sCommunicationSubject == null ? 0: this.sCommunicationSubject.hashCode());
-    result = 31 * result + (this.dtCommunicationSentdate == null ? 0: this.dtCommunicationSentdate.hashCode());
+    result = 31 * result + (this.eCommunicationDirection == null ? 0: this.eCommunicationDirection.hashCode());
+    result = 31 * result + (this.iCommunicationrecipientCount == null ? 0: this.iCommunicationrecipientCount.hashCode());
     result = 31 * result + (this.objContactFrom == null ? 0: this.objContactFrom.hashCode());
+    result = 31 * result + (this.objAudit == null ? 0: this.objAudit.hashCode());
     return result;
   }
 
@@ -137,11 +167,13 @@ public class CommunicationResponse {
     sb.append("class CommunicationResponse {\n");
     
     sb.append("  pkiCommunicationID: ").append(pkiCommunicationID).append("\n");
-    sb.append("  eCommunicationEmailimportance: ").append(eCommunicationEmailimportance).append("\n");
+    sb.append("  eCommunicationImportance: ").append(eCommunicationImportance).append("\n");
     sb.append("  eCommunicationType: ").append(eCommunicationType).append("\n");
     sb.append("  sCommunicationSubject: ").append(sCommunicationSubject).append("\n");
-    sb.append("  dtCommunicationSentdate: ").append(dtCommunicationSentdate).append("\n");
+    sb.append("  eCommunicationDirection: ").append(eCommunicationDirection).append("\n");
+    sb.append("  iCommunicationrecipientCount: ").append(iCommunicationrecipientCount).append("\n");
     sb.append("  objContactFrom: ").append(objContactFrom).append("\n");
+    sb.append("  objAudit: ").append(objAudit).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

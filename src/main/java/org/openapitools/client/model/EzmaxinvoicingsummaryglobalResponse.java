@@ -57,6 +57,8 @@ public class EzmaxinvoicingsummaryglobalResponse {
   private String dEzmaxinvoicingsummaryglobalNet = null;
   @SerializedName("bEzmaxinvoicingsummaryglobalAdjustment")
   private Boolean bEzmaxinvoicingsummaryglobalAdjustment = null;
+  @SerializedName("tEzmaxproductHelpX")
+  private String tEzmaxproductHelpX = null;
 
   /**
    * The unique ID of the Ezmaxinvoicingsummaryglobal
@@ -140,9 +142,9 @@ public class EzmaxinvoicingsummaryglobalResponse {
   }
 
   /**
-   * The The count item calculated
+   * The count item calculated
    **/
-  @ApiModelProperty(required = true, value = "The The count item calculated")
+  @ApiModelProperty(required = true, value = "The count item calculated")
   public String getDEzmaxinvoicingsummaryglobalCountreal() {
     return dEzmaxinvoicingsummaryglobalCountreal;
   }
@@ -151,9 +153,9 @@ public class EzmaxinvoicingsummaryglobalResponse {
   }
 
   /**
-   * The The count item billed
+   * The count item billed
    **/
-  @ApiModelProperty(required = true, value = "The The count item billed")
+  @ApiModelProperty(required = true, value = "The count item billed")
   public String getDEzmaxinvoicingsummaryglobalCountbilled() {
     return dEzmaxinvoicingsummaryglobalCountbilled;
   }
@@ -260,6 +262,17 @@ public class EzmaxinvoicingsummaryglobalResponse {
     this.bEzmaxinvoicingsummaryglobalAdjustment = bEzmaxinvoicingsummaryglobalAdjustment;
   }
 
+  /**
+   * The help message of the Ezmaxproduct in the language of the requester
+   **/
+  @ApiModelProperty(required = true, value = "The help message of the Ezmaxproduct in the language of the requester")
+  public String getTEzmaxproductHelpX() {
+    return tEzmaxproductHelpX;
+  }
+  public void setTEzmaxproductHelpX(String tEzmaxproductHelpX) {
+    this.tEzmaxproductHelpX = tEzmaxproductHelpX;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -287,7 +300,8 @@ public class EzmaxinvoicingsummaryglobalResponse {
         (this.dEzmaxinvoicingsummaryglobalRepresentative == null ? ezmaxinvoicingsummaryglobalResponse.dEzmaxinvoicingsummaryglobalRepresentative == null : this.dEzmaxinvoicingsummaryglobalRepresentative.equals(ezmaxinvoicingsummaryglobalResponse.dEzmaxinvoicingsummaryglobalRepresentative)) &&
         (this.dEzmaxinvoicingsummaryglobalPartner == null ? ezmaxinvoicingsummaryglobalResponse.dEzmaxinvoicingsummaryglobalPartner == null : this.dEzmaxinvoicingsummaryglobalPartner.equals(ezmaxinvoicingsummaryglobalResponse.dEzmaxinvoicingsummaryglobalPartner)) &&
         (this.dEzmaxinvoicingsummaryglobalNet == null ? ezmaxinvoicingsummaryglobalResponse.dEzmaxinvoicingsummaryglobalNet == null : this.dEzmaxinvoicingsummaryglobalNet.equals(ezmaxinvoicingsummaryglobalResponse.dEzmaxinvoicingsummaryglobalNet)) &&
-        (this.bEzmaxinvoicingsummaryglobalAdjustment == null ? ezmaxinvoicingsummaryglobalResponse.bEzmaxinvoicingsummaryglobalAdjustment == null : this.bEzmaxinvoicingsummaryglobalAdjustment.equals(ezmaxinvoicingsummaryglobalResponse.bEzmaxinvoicingsummaryglobalAdjustment));
+        (this.bEzmaxinvoicingsummaryglobalAdjustment == null ? ezmaxinvoicingsummaryglobalResponse.bEzmaxinvoicingsummaryglobalAdjustment == null : this.bEzmaxinvoicingsummaryglobalAdjustment.equals(ezmaxinvoicingsummaryglobalResponse.bEzmaxinvoicingsummaryglobalAdjustment)) &&
+        (this.tEzmaxproductHelpX == null ? ezmaxinvoicingsummaryglobalResponse.tEzmaxproductHelpX == null : this.tEzmaxproductHelpX.equals(ezmaxinvoicingsummaryglobalResponse.tEzmaxproductHelpX));
   }
 
   @Override
@@ -311,6 +325,7 @@ public class EzmaxinvoicingsummaryglobalResponse {
     result = 31 * result + (this.dEzmaxinvoicingsummaryglobalPartner == null ? 0: this.dEzmaxinvoicingsummaryglobalPartner.hashCode());
     result = 31 * result + (this.dEzmaxinvoicingsummaryglobalNet == null ? 0: this.dEzmaxinvoicingsummaryglobalNet.hashCode());
     result = 31 * result + (this.bEzmaxinvoicingsummaryglobalAdjustment == null ? 0: this.bEzmaxinvoicingsummaryglobalAdjustment.hashCode());
+    result = 31 * result + (this.tEzmaxproductHelpX == null ? 0: this.tEzmaxproductHelpX.hashCode());
     return result;
   }
 
@@ -337,6 +352,7 @@ public class EzmaxinvoicingsummaryglobalResponse {
     sb.append("  dEzmaxinvoicingsummaryglobalPartner: ").append(dEzmaxinvoicingsummaryglobalPartner).append("\n");
     sb.append("  dEzmaxinvoicingsummaryglobalNet: ").append(dEzmaxinvoicingsummaryglobalNet).append("\n");
     sb.append("  bEzmaxinvoicingsummaryglobalAdjustment: ").append(bEzmaxinvoicingsummaryglobalAdjustment).append("\n");
+    sb.append("  tEzmaxproductHelpX: ").append(tEzmaxproductHelpX).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

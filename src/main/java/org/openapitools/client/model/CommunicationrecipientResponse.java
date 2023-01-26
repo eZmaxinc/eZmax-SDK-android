@@ -12,8 +12,11 @@
 
 package org.openapitools.client.model;
 
+import org.openapitools.client.model.DescriptionstaticResponseCompound;
+import org.openapitools.client.model.EmailstaticResponseCompound;
+import org.openapitools.client.model.FieldECommunicationrecipientObjecttype;
 import org.openapitools.client.model.FieldECommunicationrecipientType;
-import org.openapitools.client.model.PhoneResponseCompound;
+import org.openapitools.client.model.PhonestaticResponseCompound;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -25,6 +28,8 @@ public class CommunicationrecipientResponse {
   
   @SerializedName("pkiCommunicationrecipientID")
   private Integer pkiCommunicationrecipientID = null;
+  @SerializedName("eCommunicationrecipientObjecttype")
+  private FieldECommunicationrecipientObjecttype eCommunicationrecipientObjecttype = null;
   @SerializedName("fkiAgentID")
   private Integer fkiAgentID = null;
   @SerializedName("fkiBrokerID")
@@ -41,10 +46,6 @@ public class CommunicationrecipientResponse {
   private Integer fkiFranchiseofficeID = null;
   @SerializedName("fkiUserID")
   private Integer fkiUserID = null;
-  @SerializedName("sEmailAddress")
-  private String sEmailAddress = null;
-  @SerializedName("eCommunicationrecipientType")
-  private FieldECommunicationrecipientType eCommunicationrecipientType = null;
   @SerializedName("fkiAgentincorporationID")
   private Integer fkiAgentincorporationID = null;
   @SerializedName("fkiAssistantID")
@@ -59,8 +60,14 @@ public class CommunicationrecipientResponse {
   private Integer fkiRewardmemberID = null;
   @SerializedName("fkiSupplierID")
   private Integer fkiSupplierID = null;
-  @SerializedName("objPhoneSms")
-  private PhoneResponseCompound objPhoneSms = null;
+  @SerializedName("eCommunicationrecipientType")
+  private FieldECommunicationrecipientType eCommunicationrecipientType = null;
+  @SerializedName("objDescriptionstatic")
+  private DescriptionstaticResponseCompound objDescriptionstatic = null;
+  @SerializedName("objEmailstatic")
+  private EmailstaticResponseCompound objEmailstatic = null;
+  @SerializedName("objPhonestatic")
+  private PhonestaticResponseCompound objPhonestatic = null;
 
   /**
    * The unique ID of the Communicationrecipient.
@@ -72,6 +79,16 @@ public class CommunicationrecipientResponse {
   }
   public void setPkiCommunicationrecipientID(Integer pkiCommunicationrecipientID) {
     this.pkiCommunicationrecipientID = pkiCommunicationrecipientID;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public FieldECommunicationrecipientObjecttype getECommunicationrecipientObjecttype() {
+    return eCommunicationrecipientObjecttype;
+  }
+  public void setECommunicationrecipientObjecttype(FieldECommunicationrecipientObjecttype eCommunicationrecipientObjecttype) {
+    this.eCommunicationrecipientObjecttype = eCommunicationrecipientObjecttype;
   }
 
   /**
@@ -171,27 +188,6 @@ public class CommunicationrecipientResponse {
   }
 
   /**
-   * The email address.
-   **/
-  @ApiModelProperty(value = "The email address.")
-  public String getSEmailAddress() {
-    return sEmailAddress;
-  }
-  public void setSEmailAddress(String sEmailAddress) {
-    this.sEmailAddress = sEmailAddress;
-  }
-
-  /**
-   **/
-  @ApiModelProperty(value = "")
-  public FieldECommunicationrecipientType getECommunicationrecipientType() {
-    return eCommunicationrecipientType;
-  }
-  public void setECommunicationrecipientType(FieldECommunicationrecipientType eCommunicationrecipientType) {
-    this.eCommunicationrecipientType = eCommunicationrecipientType;
-  }
-
-  /**
    * The unique ID of the Agentincorporation.
    * minimum: 0
    **/
@@ -277,12 +273,42 @@ public class CommunicationrecipientResponse {
 
   /**
    **/
-  @ApiModelProperty(value = "")
-  public PhoneResponseCompound getObjPhoneSms() {
-    return objPhoneSms;
+  @ApiModelProperty(required = true, value = "")
+  public FieldECommunicationrecipientType getECommunicationrecipientType() {
+    return eCommunicationrecipientType;
   }
-  public void setObjPhoneSms(PhoneResponseCompound objPhoneSms) {
-    this.objPhoneSms = objPhoneSms;
+  public void setECommunicationrecipientType(FieldECommunicationrecipientType eCommunicationrecipientType) {
+    this.eCommunicationrecipientType = eCommunicationrecipientType;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public DescriptionstaticResponseCompound getObjDescriptionstatic() {
+    return objDescriptionstatic;
+  }
+  public void setObjDescriptionstatic(DescriptionstaticResponseCompound objDescriptionstatic) {
+    this.objDescriptionstatic = objDescriptionstatic;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public EmailstaticResponseCompound getObjEmailstatic() {
+    return objEmailstatic;
+  }
+  public void setObjEmailstatic(EmailstaticResponseCompound objEmailstatic) {
+    this.objEmailstatic = objEmailstatic;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public PhonestaticResponseCompound getObjPhonestatic() {
+    return objPhonestatic;
+  }
+  public void setObjPhonestatic(PhonestaticResponseCompound objPhonestatic) {
+    this.objPhonestatic = objPhonestatic;
   }
 
 
@@ -296,6 +322,7 @@ public class CommunicationrecipientResponse {
     }
     CommunicationrecipientResponse communicationrecipientResponse = (CommunicationrecipientResponse) o;
     return (this.pkiCommunicationrecipientID == null ? communicationrecipientResponse.pkiCommunicationrecipientID == null : this.pkiCommunicationrecipientID.equals(communicationrecipientResponse.pkiCommunicationrecipientID)) &&
+        (this.eCommunicationrecipientObjecttype == null ? communicationrecipientResponse.eCommunicationrecipientObjecttype == null : this.eCommunicationrecipientObjecttype.equals(communicationrecipientResponse.eCommunicationrecipientObjecttype)) &&
         (this.fkiAgentID == null ? communicationrecipientResponse.fkiAgentID == null : this.fkiAgentID.equals(communicationrecipientResponse.fkiAgentID)) &&
         (this.fkiBrokerID == null ? communicationrecipientResponse.fkiBrokerID == null : this.fkiBrokerID.equals(communicationrecipientResponse.fkiBrokerID)) &&
         (this.fkiContactID == null ? communicationrecipientResponse.fkiContactID == null : this.fkiContactID.equals(communicationrecipientResponse.fkiContactID)) &&
@@ -304,8 +331,6 @@ public class CommunicationrecipientResponse {
         (this.fkiEzsignsignerID == null ? communicationrecipientResponse.fkiEzsignsignerID == null : this.fkiEzsignsignerID.equals(communicationrecipientResponse.fkiEzsignsignerID)) &&
         (this.fkiFranchiseofficeID == null ? communicationrecipientResponse.fkiFranchiseofficeID == null : this.fkiFranchiseofficeID.equals(communicationrecipientResponse.fkiFranchiseofficeID)) &&
         (this.fkiUserID == null ? communicationrecipientResponse.fkiUserID == null : this.fkiUserID.equals(communicationrecipientResponse.fkiUserID)) &&
-        (this.sEmailAddress == null ? communicationrecipientResponse.sEmailAddress == null : this.sEmailAddress.equals(communicationrecipientResponse.sEmailAddress)) &&
-        (this.eCommunicationrecipientType == null ? communicationrecipientResponse.eCommunicationrecipientType == null : this.eCommunicationrecipientType.equals(communicationrecipientResponse.eCommunicationrecipientType)) &&
         (this.fkiAgentincorporationID == null ? communicationrecipientResponse.fkiAgentincorporationID == null : this.fkiAgentincorporationID.equals(communicationrecipientResponse.fkiAgentincorporationID)) &&
         (this.fkiAssistantID == null ? communicationrecipientResponse.fkiAssistantID == null : this.fkiAssistantID.equals(communicationrecipientResponse.fkiAssistantID)) &&
         (this.fkiExternalbrokerID == null ? communicationrecipientResponse.fkiExternalbrokerID == null : this.fkiExternalbrokerID.equals(communicationrecipientResponse.fkiExternalbrokerID)) &&
@@ -313,13 +338,17 @@ public class CommunicationrecipientResponse {
         (this.fkiNotaryID == null ? communicationrecipientResponse.fkiNotaryID == null : this.fkiNotaryID.equals(communicationrecipientResponse.fkiNotaryID)) &&
         (this.fkiRewardmemberID == null ? communicationrecipientResponse.fkiRewardmemberID == null : this.fkiRewardmemberID.equals(communicationrecipientResponse.fkiRewardmemberID)) &&
         (this.fkiSupplierID == null ? communicationrecipientResponse.fkiSupplierID == null : this.fkiSupplierID.equals(communicationrecipientResponse.fkiSupplierID)) &&
-        (this.objPhoneSms == null ? communicationrecipientResponse.objPhoneSms == null : this.objPhoneSms.equals(communicationrecipientResponse.objPhoneSms));
+        (this.eCommunicationrecipientType == null ? communicationrecipientResponse.eCommunicationrecipientType == null : this.eCommunicationrecipientType.equals(communicationrecipientResponse.eCommunicationrecipientType)) &&
+        (this.objDescriptionstatic == null ? communicationrecipientResponse.objDescriptionstatic == null : this.objDescriptionstatic.equals(communicationrecipientResponse.objDescriptionstatic)) &&
+        (this.objEmailstatic == null ? communicationrecipientResponse.objEmailstatic == null : this.objEmailstatic.equals(communicationrecipientResponse.objEmailstatic)) &&
+        (this.objPhonestatic == null ? communicationrecipientResponse.objPhonestatic == null : this.objPhonestatic.equals(communicationrecipientResponse.objPhonestatic));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
     result = 31 * result + (this.pkiCommunicationrecipientID == null ? 0: this.pkiCommunicationrecipientID.hashCode());
+    result = 31 * result + (this.eCommunicationrecipientObjecttype == null ? 0: this.eCommunicationrecipientObjecttype.hashCode());
     result = 31 * result + (this.fkiAgentID == null ? 0: this.fkiAgentID.hashCode());
     result = 31 * result + (this.fkiBrokerID == null ? 0: this.fkiBrokerID.hashCode());
     result = 31 * result + (this.fkiContactID == null ? 0: this.fkiContactID.hashCode());
@@ -328,8 +357,6 @@ public class CommunicationrecipientResponse {
     result = 31 * result + (this.fkiEzsignsignerID == null ? 0: this.fkiEzsignsignerID.hashCode());
     result = 31 * result + (this.fkiFranchiseofficeID == null ? 0: this.fkiFranchiseofficeID.hashCode());
     result = 31 * result + (this.fkiUserID == null ? 0: this.fkiUserID.hashCode());
-    result = 31 * result + (this.sEmailAddress == null ? 0: this.sEmailAddress.hashCode());
-    result = 31 * result + (this.eCommunicationrecipientType == null ? 0: this.eCommunicationrecipientType.hashCode());
     result = 31 * result + (this.fkiAgentincorporationID == null ? 0: this.fkiAgentincorporationID.hashCode());
     result = 31 * result + (this.fkiAssistantID == null ? 0: this.fkiAssistantID.hashCode());
     result = 31 * result + (this.fkiExternalbrokerID == null ? 0: this.fkiExternalbrokerID.hashCode());
@@ -337,7 +364,10 @@ public class CommunicationrecipientResponse {
     result = 31 * result + (this.fkiNotaryID == null ? 0: this.fkiNotaryID.hashCode());
     result = 31 * result + (this.fkiRewardmemberID == null ? 0: this.fkiRewardmemberID.hashCode());
     result = 31 * result + (this.fkiSupplierID == null ? 0: this.fkiSupplierID.hashCode());
-    result = 31 * result + (this.objPhoneSms == null ? 0: this.objPhoneSms.hashCode());
+    result = 31 * result + (this.eCommunicationrecipientType == null ? 0: this.eCommunicationrecipientType.hashCode());
+    result = 31 * result + (this.objDescriptionstatic == null ? 0: this.objDescriptionstatic.hashCode());
+    result = 31 * result + (this.objEmailstatic == null ? 0: this.objEmailstatic.hashCode());
+    result = 31 * result + (this.objPhonestatic == null ? 0: this.objPhonestatic.hashCode());
     return result;
   }
 
@@ -347,6 +377,7 @@ public class CommunicationrecipientResponse {
     sb.append("class CommunicationrecipientResponse {\n");
     
     sb.append("  pkiCommunicationrecipientID: ").append(pkiCommunicationrecipientID).append("\n");
+    sb.append("  eCommunicationrecipientObjecttype: ").append(eCommunicationrecipientObjecttype).append("\n");
     sb.append("  fkiAgentID: ").append(fkiAgentID).append("\n");
     sb.append("  fkiBrokerID: ").append(fkiBrokerID).append("\n");
     sb.append("  fkiContactID: ").append(fkiContactID).append("\n");
@@ -355,8 +386,6 @@ public class CommunicationrecipientResponse {
     sb.append("  fkiEzsignsignerID: ").append(fkiEzsignsignerID).append("\n");
     sb.append("  fkiFranchiseofficeID: ").append(fkiFranchiseofficeID).append("\n");
     sb.append("  fkiUserID: ").append(fkiUserID).append("\n");
-    sb.append("  sEmailAddress: ").append(sEmailAddress).append("\n");
-    sb.append("  eCommunicationrecipientType: ").append(eCommunicationrecipientType).append("\n");
     sb.append("  fkiAgentincorporationID: ").append(fkiAgentincorporationID).append("\n");
     sb.append("  fkiAssistantID: ").append(fkiAssistantID).append("\n");
     sb.append("  fkiExternalbrokerID: ").append(fkiExternalbrokerID).append("\n");
@@ -364,7 +393,10 @@ public class CommunicationrecipientResponse {
     sb.append("  fkiNotaryID: ").append(fkiNotaryID).append("\n");
     sb.append("  fkiRewardmemberID: ").append(fkiRewardmemberID).append("\n");
     sb.append("  fkiSupplierID: ").append(fkiSupplierID).append("\n");
-    sb.append("  objPhoneSms: ").append(objPhoneSms).append("\n");
+    sb.append("  eCommunicationrecipientType: ").append(eCommunicationrecipientType).append("\n");
+    sb.append("  objDescriptionstatic: ").append(objDescriptionstatic).append("\n");
+    sb.append("  objEmailstatic: ").append(objEmailstatic).append("\n");
+    sb.append("  objPhonestatic: ").append(objPhonestatic).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

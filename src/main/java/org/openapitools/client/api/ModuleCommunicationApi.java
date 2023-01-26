@@ -25,7 +25,6 @@ import com.android.volley.VolleyError;
 
 import org.openapitools.client.model.CommonResponseError;
 import org.openapitools.client.model.CommunicationGetCountV1Response;
-import org.openapitools.client.model.CommunicationGetListV1Response;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
@@ -58,22 +57,22 @@ public class ModuleCommunicationApi {
   }
 
   /**
-  * Get the number of communication
-  * Get the number of communication in specified module
-   * @param eCommunicationModule Specify the requested module
+  * Retrieve Communication count
+  * 
+   * @param eCommunicationObjecttype The object type for the Communication
    * @param pkiEzsignfolderID The unique ID of the Ezsignfolder
    * @return CommunicationGetCountV1Response
   */
-  public CommunicationGetCountV1Response communicationGetCommunicationCountV1 (String eCommunicationModule, Integer pkiEzsignfolderID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CommunicationGetCountV1Response communicationGetCommunicationCountV1 (String eCommunicationObjecttype, Integer pkiEzsignfolderID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
-    // verify the required parameter 'eCommunicationModule' is set
-    if (eCommunicationModule == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'eCommunicationModule' when calling communicationGetCommunicationCountV1",
-        new ApiException(400, "Missing the required parameter 'eCommunicationModule' when calling communicationGetCommunicationCountV1"));
+    // verify the required parameter 'eCommunicationObjecttype' is set
+    if (eCommunicationObjecttype == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'eCommunicationObjecttype' when calling communicationGetCommunicationCountV1",
+        new ApiException(400, "Missing the required parameter 'eCommunicationObjecttype' when calling communicationGetCommunicationCountV1"));
     }
 
     // create path and map variables
-    String path = "/1/module/communication/getCommunicationCount";
+    String path = "/1/module/communication/getCount";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -81,7 +80,7 @@ public class ModuleCommunicationApi {
     Map<String, String> headerParams = new HashMap<String, String>();
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "eCommunicationModule", eCommunicationModule));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "eCommunicationObjecttype", eCommunicationObjecttype));
     queryParams.addAll(ApiInvoker.parameterToPairs("", "pkiEzsignfolderID", pkiEzsignfolderID));
     String[] contentTypes = {
     };
@@ -123,21 +122,21 @@ public class ModuleCommunicationApi {
   }
 
       /**
-   * Get the number of communication
-   * Get the number of communication in specified module
-   * @param eCommunicationModule Specify the requested module   * @param pkiEzsignfolderID The unique ID of the Ezsignfolder
+   * Retrieve Communication count
+   * 
+   * @param eCommunicationObjecttype The object type for the Communication   * @param pkiEzsignfolderID The unique ID of the Ezsignfolder
   */
-  public void communicationGetCommunicationCountV1 (String eCommunicationModule, Integer pkiEzsignfolderID, final Response.Listener<CommunicationGetCountV1Response> responseListener, final Response.ErrorListener errorListener) {
+  public void communicationGetCommunicationCountV1 (String eCommunicationObjecttype, Integer pkiEzsignfolderID, final Response.Listener<CommunicationGetCountV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
-    // verify the required parameter 'eCommunicationModule' is set
-    if (eCommunicationModule == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'eCommunicationModule' when calling communicationGetCommunicationCountV1",
-        new ApiException(400, "Missing the required parameter 'eCommunicationModule' when calling communicationGetCommunicationCountV1"));
+    // verify the required parameter 'eCommunicationObjecttype' is set
+    if (eCommunicationObjecttype == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'eCommunicationObjecttype' when calling communicationGetCommunicationCountV1",
+        new ApiException(400, "Missing the required parameter 'eCommunicationObjecttype' when calling communicationGetCommunicationCountV1"));
     }
 
     // create path and map variables
-    String path = "/1/module/communication/getCommunicationCount".replaceAll("\\{format\\}","json");
+    String path = "/1/module/communication/getCount".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -146,7 +145,7 @@ public class ModuleCommunicationApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
 
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "eCommunicationModule", eCommunicationModule));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "eCommunicationObjecttype", eCommunicationObjecttype));
     queryParams.addAll(ApiInvoker.parameterToPairs("", "pkiEzsignfolderID", pkiEzsignfolderID));
 
 
@@ -175,138 +174,6 @@ public class ModuleCommunicationApi {
           public void onResponse(String localVarResponse) {
             try {
               responseListener.onResponse((CommunicationGetCountV1Response) ApiInvoker.deserialize(localVarResponse,  "", CommunicationGetCountV1Response.class));
-            } catch (ApiException exception) {
-               errorListener.onErrorResponse(new VolleyError(exception));
-            }
-          }
-      }, new Response.ErrorListener() {
-          @Override
-          public void onErrorResponse(VolleyError error) {
-            errorListener.onErrorResponse(error);
-          }
-      });
-    } catch (ApiException ex) {
-      errorListener.onErrorResponse(new VolleyError(ex));
-    }
-  }
-  /**
-  * Retrieve communication list
-  * Retrieve communication list
-   * @param eCommunicationModule Specify the requested module
-   * @param pkiEzsignfolderID The unique ID of the Ezsignfolder
-   * @return CommunicationGetListV1Response
-  */
-  public CommunicationGetListV1Response communicationGetCommunicationListV1 (String eCommunicationModule, Integer pkiEzsignfolderID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
-    Object postBody = null;
-    // verify the required parameter 'eCommunicationModule' is set
-    if (eCommunicationModule == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'eCommunicationModule' when calling communicationGetCommunicationListV1",
-        new ApiException(400, "Missing the required parameter 'eCommunicationModule' when calling communicationGetCommunicationListV1"));
-    }
-
-    // create path and map variables
-    String path = "/1/module/communication/getCommunicationList";
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "eCommunicationModule", eCommunicationModule));
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "pkiEzsignfolderID", pkiEzsignfolderID));
-    String[] contentTypes = {
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
-      HttpEntity httpEntity = localVarBuilder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-    }
-
-    String[] authNames = new String[] { "Authorization" };
-
-    try {
-      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
-      if (localVarResponse != null) {
-         return (CommunicationGetListV1Response) ApiInvoker.deserialize(localVarResponse, "", CommunicationGetListV1Response.class);
-      } else {
-         return null;
-      }
-    } catch (ApiException ex) {
-       throw ex;
-    } catch (InterruptedException ex) {
-       throw ex;
-    } catch (ExecutionException ex) {
-      if (ex.getCause() instanceof VolleyError) {
-        VolleyError volleyError = (VolleyError)ex.getCause();
-        if (volleyError.networkResponse != null) {
-          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
-        }
-      }
-      throw ex;
-    } catch (TimeoutException ex) {
-      throw ex;
-    }
-  }
-
-      /**
-   * Retrieve communication list
-   * Retrieve communication list
-   * @param eCommunicationModule Specify the requested module   * @param pkiEzsignfolderID The unique ID of the Ezsignfolder
-  */
-  public void communicationGetCommunicationListV1 (String eCommunicationModule, Integer pkiEzsignfolderID, final Response.Listener<CommunicationGetListV1Response> responseListener, final Response.ErrorListener errorListener) {
-    Object postBody = null;
-
-    // verify the required parameter 'eCommunicationModule' is set
-    if (eCommunicationModule == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'eCommunicationModule' when calling communicationGetCommunicationListV1",
-        new ApiException(400, "Missing the required parameter 'eCommunicationModule' when calling communicationGetCommunicationListV1"));
-    }
-
-    // create path and map variables
-    String path = "/1/module/communication/getCommunicationList".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "eCommunicationModule", eCommunicationModule));
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "pkiEzsignfolderID", pkiEzsignfolderID));
-
-
-    String[] contentTypes = {
-      
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = localVarBuilder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-          }
-
-    String[] authNames = new String[] { "Authorization" };
-
-    try {
-      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
-        new Response.Listener<String>() {
-          @Override
-          public void onResponse(String localVarResponse) {
-            try {
-              responseListener.onResponse((CommunicationGetListV1Response) ApiInvoker.deserialize(localVarResponse,  "", CommunicationGetListV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

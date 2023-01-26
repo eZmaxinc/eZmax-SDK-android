@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **dEzmaxinvoicingsummaryinternaldetailRebate** | **String** | The rebate for the product | 
 **dEzmaxinvoicingsummaryinternaldetailTotal** | **String** | The total invoiced for the product | 
 **bEzmaxinvoicingsummaryinternaldetailAdjustment** | **Boolean** | Whether if it&#39;s an adjustment | 
+**tEzmaxproductHelpX** | **String** | The help message of the Ezmaxproduct in the language of the requester | 
 
 
 

@@ -13,8 +13,8 @@ Name | Type | Description | Notes
 **dtEzmaxinvoicingsummaryglobalStart** | **String** | The start date for the Ezmaxinvoicingsummaryglobal | 
 **dtEzmaxinvoicingsummaryglobalEnd** | **String** | The end date for the Ezmaxinvoicingsummaryglobal | 
 **iEzmaxinvoicingsummaryglobalDays** | **Integer** | The number of days for the Ezmaxinvoicingsummaryglobal | 
-**dEzmaxinvoicingsummaryglobalCountreal** | **String** | The The count item calculated | 
-**dEzmaxinvoicingsummaryglobalCountbilled** | **String** | The The count item billed | 
+**dEzmaxinvoicingsummaryglobalCountreal** | **String** | The count item calculated | 
+**dEzmaxinvoicingsummaryglobalCountbilled** | **String** | The count item billed | 
 **dEzmaxinvoicingsummaryglobalSubtotal** | **String** | The Ezmaxinvoicingsummaryglobal subtotal | 
 **dEzmaxinvoicingsummaryglobalRebateamount** | **String** | The rebate amount for the Ezmaxinvoicingsummaryglobal | 
 **dEzmaxinvoicingsummaryglobalRebatepercent** | **String** | The rebate percentage of the Ezmaxinvoicingsummaryglobal | 
@@ -24,6 +24,7 @@ Name | Type | Description | Notes
 **dEzmaxinvoicingsummaryglobalPartner** | **String** | The amount of commission for the partner |  [optional]
 **dEzmaxinvoicingsummaryglobalNet** | **String** | The net amount of the Ezmaxinvoicingsummaryglobal |  [optional]
 **bEzmaxinvoicingsummaryglobalAdjustment** | **Boolean** | Whether it is adjustment for the Ezmaxinvoicingsummaryglobal | 
+**tEzmaxproductHelpX** | **String** | The help message of the Ezmaxproduct in the language of the requester | 
 
 
 

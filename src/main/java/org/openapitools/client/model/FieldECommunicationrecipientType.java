@@ -16,9 +16,9 @@ import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * The Type for the Communicationrecipient
+ * The type for the Communicationrecipient
  **/
-@ApiModel(description = "The Type for the Communicationrecipient")
+@ApiModel(description = "The type for the Communicationrecipient")
 public class FieldECommunicationrecipientType {
   
 

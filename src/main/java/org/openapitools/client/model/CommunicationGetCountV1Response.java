@@ -19,9 +19,9 @@ import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Response for GET /1/module/communication/getCount
+ * Response for GET /1/module/communication/getCommunicationCount
  **/
-@ApiModel(description = "Response for GET /1/module/communication/getCount")
+@ApiModel(description = "Response for GET /1/module/communication/getCommunicationCount")
 public class CommunicationGetCountV1Response {
   
   @SerializedName("mPayload")

@@ -18,13 +18,17 @@ import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Payload for GET /1/module/communication/getList
+ * Payload for GET /1/object/communication/getList
  **/
-@ApiModel(description = "Payload for GET /1/module/communication/getList")
+@ApiModel(description = "Payload for GET /1/object/communication/getList")
 public class CommunicationGetListV1ResponseMPayload {
   
   @SerializedName("a_objCommunication")
   private List<CommunicationListElement> aObjCommunication = null;
+  @SerializedName("iRowReturned")
+  private Integer iRowReturned = null;
+  @SerializedName("iRowFiltered")
+  private Integer iRowFiltered = null;
 
   /**
    **/
@@ -34,6 +38,28 @@ public class CommunicationGetListV1ResponseMPayload {
   }
   public void setAObjCommunication(List<CommunicationListElement> aObjCommunication) {
     this.aObjCommunication = aObjCommunication;
+  }
+
+  /**
+   * The number of rows returned
+   **/
+  @ApiModelProperty(required = true, value = "The number of rows returned")
+  public Integer getIRowReturned() {
+    return iRowReturned;
+  }
+  public void setIRowReturned(Integer iRowReturned) {
+    this.iRowReturned = iRowReturned;
+  }
+
+  /**
+   * The number of rows matching your filters (if any) or the total number of rows
+   **/
+  @ApiModelProperty(required = true, value = "The number of rows matching your filters (if any) or the total number of rows")
+  public Integer getIRowFiltered() {
+    return iRowFiltered;
+  }
+  public void setIRowFiltered(Integer iRowFiltered) {
+    this.iRowFiltered = iRowFiltered;
   }
 
 
@@ -46,13 +72,17 @@ public class CommunicationGetListV1ResponseMPayload {
       return false;
     }
     CommunicationGetListV1ResponseMPayload communicationGetListV1ResponseMPayload = (CommunicationGetListV1ResponseMPayload) o;
-    return (this.aObjCommunication == null ? communicationGetListV1ResponseMPayload.aObjCommunication == null : this.aObjCommunication.equals(communicationGetListV1ResponseMPayload.aObjCommunication));
+    return (this.aObjCommunication == null ? communicationGetListV1ResponseMPayload.aObjCommunication == null : this.aObjCommunication.equals(communicationGetListV1ResponseMPayload.aObjCommunication)) &&
+        (this.iRowReturned == null ? communicationGetListV1ResponseMPayload.iRowReturned == null : this.iRowReturned.equals(communicationGetListV1ResponseMPayload.iRowReturned)) &&
+        (this.iRowFiltered == null ? communicationGetListV1ResponseMPayload.iRowFiltered == null : this.iRowFiltered.equals(communicationGetListV1ResponseMPayload.iRowFiltered));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
     result = 31 * result + (this.aObjCommunication == null ? 0: this.aObjCommunication.hashCode());
+    result = 31 * result + (this.iRowReturned == null ? 0: this.iRowReturned.hashCode());
+    result = 31 * result + (this.iRowFiltered == null ? 0: this.iRowFiltered.hashCode());
     return result;
   }
 
@@ -62,6 +92,8 @@ public class CommunicationGetListV1ResponseMPayload {
     sb.append("class CommunicationGetListV1ResponseMPayload {\n");
     
     sb.append("  aObjCommunication: ").append(aObjCommunication).append("\n");
+    sb.append("  iRowReturned: ").append(iRowReturned).append("\n");
+    sb.append("  iRowFiltered: ").append(iRowFiltered).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

@@ -16,18 +16,18 @@ import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Payload for GET /1/module/communication/getCount
+ * Payload for GET /1/module/communication/getCommunicationCount
  **/
-@ApiModel(description = "Payload for GET /1/module/communication/getCount")
+@ApiModel(description = "Payload for GET /1/module/communication/getCommunicationCount")
 public class CommunicationGetCountV1ResponseMPayload {
   
   @SerializedName("iCommunicationCount")
   private Integer iCommunicationCount = null;
 
   /**
-   * The number of total signatures in the Ezsigntemplate.
+   * The count of Communication.
    **/
-  @ApiModelProperty(required = true, value = "The number of total signatures in the Ezsigntemplate.")
+  @ApiModelProperty(required = true, value = "The count of Communication.")
   public Integer getICommunicationCount() {
     return iCommunicationCount;
   }

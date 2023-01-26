@@ -88,8 +88,9 @@ public class CustomEzmaxinvoicingEzsignfolderResponseAllOf {
   }
 
   /**
+   * Whether you have access to the Ezsignfolder or not
    **/
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(required = true, value = "Whether you have access to the Ezsignfolder or not")
   public Boolean getBEzsignfolderAllowed() {
     return bEzsignfolderAllowed;
   }
