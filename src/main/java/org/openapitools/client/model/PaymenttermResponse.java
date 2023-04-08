@@ -13,6 +13,7 @@
 package org.openapitools.client.model;
 
 import org.openapitools.client.model.CommonAudit;
+import org.openapitools.client.model.FieldEPaymenttermType;
 import org.openapitools.client.model.MultilingualPaymenttermDescription;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
@@ -27,6 +28,10 @@ public class PaymenttermResponse {
   private Integer pkiPaymenttermID = null;
   @SerializedName("sPaymenttermCode")
   private String sPaymenttermCode = null;
+  @SerializedName("ePaymenttermType")
+  private FieldEPaymenttermType ePaymenttermType = null;
+  @SerializedName("iPaymenttermDay")
+  private Integer iPaymenttermDay = null;
   @SerializedName("objPaymenttermDescription")
   private MultilingualPaymenttermDescription objPaymenttermDescription = null;
   @SerializedName("bPaymenttermIsactive")
@@ -54,6 +59,29 @@ public class PaymenttermResponse {
   }
   public void setSPaymenttermCode(String sPaymenttermCode) {
     this.sPaymenttermCode = sPaymenttermCode;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public FieldEPaymenttermType getEPaymenttermType() {
+    return ePaymenttermType;
+  }
+  public void setEPaymenttermType(FieldEPaymenttermType ePaymenttermType) {
+    this.ePaymenttermType = ePaymenttermType;
+  }
+
+  /**
+   * The day of the Paymentterm
+   * minimum: 0
+   * maximum: 255
+   **/
+  @ApiModelProperty(required = true, value = "The day of the Paymentterm")
+  public Integer getIPaymenttermDay() {
+    return iPaymenttermDay;
+  }
+  public void setIPaymenttermDay(Integer iPaymenttermDay) {
+    this.iPaymenttermDay = iPaymenttermDay;
   }
 
   /**
@@ -99,6 +127,8 @@ public class PaymenttermResponse {
     PaymenttermResponse paymenttermResponse = (PaymenttermResponse) o;
     return (this.pkiPaymenttermID == null ? paymenttermResponse.pkiPaymenttermID == null : this.pkiPaymenttermID.equals(paymenttermResponse.pkiPaymenttermID)) &&
         (this.sPaymenttermCode == null ? paymenttermResponse.sPaymenttermCode == null : this.sPaymenttermCode.equals(paymenttermResponse.sPaymenttermCode)) &&
+        (this.ePaymenttermType == null ? paymenttermResponse.ePaymenttermType == null : this.ePaymenttermType.equals(paymenttermResponse.ePaymenttermType)) &&
+        (this.iPaymenttermDay == null ? paymenttermResponse.iPaymenttermDay == null : this.iPaymenttermDay.equals(paymenttermResponse.iPaymenttermDay)) &&
         (this.objPaymenttermDescription == null ? paymenttermResponse.objPaymenttermDescription == null : this.objPaymenttermDescription.equals(paymenttermResponse.objPaymenttermDescription)) &&
         (this.bPaymenttermIsactive == null ? paymenttermResponse.bPaymenttermIsactive == null : this.bPaymenttermIsactive.equals(paymenttermResponse.bPaymenttermIsactive)) &&
         (this.objAudit == null ? paymenttermResponse.objAudit == null : this.objAudit.equals(paymenttermResponse.objAudit));
@@ -109,6 +139,8 @@ public class PaymenttermResponse {
     int result = 17;
     result = 31 * result + (this.pkiPaymenttermID == null ? 0: this.pkiPaymenttermID.hashCode());
     result = 31 * result + (this.sPaymenttermCode == null ? 0: this.sPaymenttermCode.hashCode());
+    result = 31 * result + (this.ePaymenttermType == null ? 0: this.ePaymenttermType.hashCode());
+    result = 31 * result + (this.iPaymenttermDay == null ? 0: this.iPaymenttermDay.hashCode());
     result = 31 * result + (this.objPaymenttermDescription == null ? 0: this.objPaymenttermDescription.hashCode());
     result = 31 * result + (this.bPaymenttermIsactive == null ? 0: this.bPaymenttermIsactive.hashCode());
     result = 31 * result + (this.objAudit == null ? 0: this.objAudit.hashCode());
@@ -122,6 +154,8 @@ public class PaymenttermResponse {
     
     sb.append("  pkiPaymenttermID: ").append(pkiPaymenttermID).append("\n");
     sb.append("  sPaymenttermCode: ").append(sPaymenttermCode).append("\n");
+    sb.append("  ePaymenttermType: ").append(ePaymenttermType).append("\n");
+    sb.append("  iPaymenttermDay: ").append(iPaymenttermDay).append("\n");
     sb.append("  objPaymenttermDescription: ").append(objPaymenttermDescription).append("\n");
     sb.append("  bPaymenttermIsactive: ").append(bPaymenttermIsactive).append("\n");
     sb.append("  objAudit: ").append(objAudit).append("\n");

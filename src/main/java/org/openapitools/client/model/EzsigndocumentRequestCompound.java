@@ -37,7 +37,7 @@ public class EzsigndocumentRequestCompound {
   @SerializedName("eEzsigndocumentSource")
   private EEzsigndocumentSourceEnum eEzsigndocumentSource = null;
   public enum EEzsigndocumentFormatEnum {
-     Pdf, 
+     Pdf,  Doc,  Docx,  Xls,  Xlsx,  Ppt,  Pptx, 
   };
   @SerializedName("eEzsigndocumentFormat")
   private EEzsigndocumentFormatEnum eEzsigndocumentFormat = null;
@@ -58,6 +58,8 @@ public class EzsigndocumentRequestCompound {
   private String dtEzsigndocumentDuedate = null;
   @SerializedName("sEzsigndocumentName")
   private String sEzsigndocumentName = null;
+  @SerializedName("sEzsigndocumentExternalid")
+  private String sEzsigndocumentExternalid = null;
 
   /**
    * The unique ID of the Ezsigndocument
@@ -219,6 +221,17 @@ public class EzsigndocumentRequestCompound {
     this.sEzsigndocumentName = sEzsigndocumentName;
   }
 
+  /**
+   * This field can be used to store an External ID from the client's system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. 
+   **/
+  @ApiModelProperty(value = "This field can be used to store an External ID from the client's system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. ")
+  public String getSEzsigndocumentExternalid() {
+    return sEzsigndocumentExternalid;
+  }
+  public void setSEzsigndocumentExternalid(String sEzsigndocumentExternalid) {
+    this.sEzsigndocumentExternalid = sEzsigndocumentExternalid;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -242,7 +255,8 @@ public class EzsigndocumentRequestCompound {
         (this.sEzsigndocumentPassword == null ? ezsigndocumentRequestCompound.sEzsigndocumentPassword == null : this.sEzsigndocumentPassword.equals(ezsigndocumentRequestCompound.sEzsigndocumentPassword)) &&
         (this.eEzsigndocumentForm == null ? ezsigndocumentRequestCompound.eEzsigndocumentForm == null : this.eEzsigndocumentForm.equals(ezsigndocumentRequestCompound.eEzsigndocumentForm)) &&
         (this.dtEzsigndocumentDuedate == null ? ezsigndocumentRequestCompound.dtEzsigndocumentDuedate == null : this.dtEzsigndocumentDuedate.equals(ezsigndocumentRequestCompound.dtEzsigndocumentDuedate)) &&
-        (this.sEzsigndocumentName == null ? ezsigndocumentRequestCompound.sEzsigndocumentName == null : this.sEzsigndocumentName.equals(ezsigndocumentRequestCompound.sEzsigndocumentName));
+        (this.sEzsigndocumentName == null ? ezsigndocumentRequestCompound.sEzsigndocumentName == null : this.sEzsigndocumentName.equals(ezsigndocumentRequestCompound.sEzsigndocumentName)) &&
+        (this.sEzsigndocumentExternalid == null ? ezsigndocumentRequestCompound.sEzsigndocumentExternalid == null : this.sEzsigndocumentExternalid.equals(ezsigndocumentRequestCompound.sEzsigndocumentExternalid));
   }
 
   @Override
@@ -262,6 +276,7 @@ public class EzsigndocumentRequestCompound {
     result = 31 * result + (this.eEzsigndocumentForm == null ? 0: this.eEzsigndocumentForm.hashCode());
     result = 31 * result + (this.dtEzsigndocumentDuedate == null ? 0: this.dtEzsigndocumentDuedate.hashCode());
     result = 31 * result + (this.sEzsigndocumentName == null ? 0: this.sEzsigndocumentName.hashCode());
+    result = 31 * result + (this.sEzsigndocumentExternalid == null ? 0: this.sEzsigndocumentExternalid.hashCode());
     return result;
   }
 
@@ -284,6 +299,7 @@ public class EzsigndocumentRequestCompound {
     sb.append("  eEzsigndocumentForm: ").append(eEzsigndocumentForm).append("\n");
     sb.append("  dtEzsigndocumentDuedate: ").append(dtEzsigndocumentDuedate).append("\n");
     sb.append("  sEzsigndocumentName: ").append(sEzsigndocumentName).append("\n");
+    sb.append("  sEzsigndocumentExternalid: ").append(sEzsigndocumentExternalid).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

@@ -31,6 +31,8 @@ public class EzsigntemplatedocumentResponseCompound {
   private Integer iEzsigntemplatedocumentPagetotal = null;
   @SerializedName("iEzsigntemplatedocumentSignaturetotal")
   private Integer iEzsigntemplatedocumentSignaturetotal = null;
+  @SerializedName("bEzsigntemplatedocumentHassignedsignatures")
+  private Boolean bEzsigntemplatedocumentHassignedsignatures = null;
 
   /**
    * The unique ID of the Ezsigntemplatedocument
@@ -90,6 +92,17 @@ public class EzsigntemplatedocumentResponseCompound {
     this.iEzsigntemplatedocumentSignaturetotal = iEzsigntemplatedocumentSignaturetotal;
   }
 
+  /**
+   * If the Ezsigntemplatedocument contains signed signatures (From internal or external sources)
+   **/
+  @ApiModelProperty(required = true, value = "If the Ezsigntemplatedocument contains signed signatures (From internal or external sources)")
+  public Boolean getBEzsigntemplatedocumentHassignedsignatures() {
+    return bEzsigntemplatedocumentHassignedsignatures;
+  }
+  public void setBEzsigntemplatedocumentHassignedsignatures(Boolean bEzsigntemplatedocumentHassignedsignatures) {
+    this.bEzsigntemplatedocumentHassignedsignatures = bEzsigntemplatedocumentHassignedsignatures;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -104,7 +117,8 @@ public class EzsigntemplatedocumentResponseCompound {
         (this.fkiEzsigntemplateID == null ? ezsigntemplatedocumentResponseCompound.fkiEzsigntemplateID == null : this.fkiEzsigntemplateID.equals(ezsigntemplatedocumentResponseCompound.fkiEzsigntemplateID)) &&
         (this.sEzsigntemplatedocumentName == null ? ezsigntemplatedocumentResponseCompound.sEzsigntemplatedocumentName == null : this.sEzsigntemplatedocumentName.equals(ezsigntemplatedocumentResponseCompound.sEzsigntemplatedocumentName)) &&
         (this.iEzsigntemplatedocumentPagetotal == null ? ezsigntemplatedocumentResponseCompound.iEzsigntemplatedocumentPagetotal == null : this.iEzsigntemplatedocumentPagetotal.equals(ezsigntemplatedocumentResponseCompound.iEzsigntemplatedocumentPagetotal)) &&
-        (this.iEzsigntemplatedocumentSignaturetotal == null ? ezsigntemplatedocumentResponseCompound.iEzsigntemplatedocumentSignaturetotal == null : this.iEzsigntemplatedocumentSignaturetotal.equals(ezsigntemplatedocumentResponseCompound.iEzsigntemplatedocumentSignaturetotal));
+        (this.iEzsigntemplatedocumentSignaturetotal == null ? ezsigntemplatedocumentResponseCompound.iEzsigntemplatedocumentSignaturetotal == null : this.iEzsigntemplatedocumentSignaturetotal.equals(ezsigntemplatedocumentResponseCompound.iEzsigntemplatedocumentSignaturetotal)) &&
+        (this.bEzsigntemplatedocumentHassignedsignatures == null ? ezsigntemplatedocumentResponseCompound.bEzsigntemplatedocumentHassignedsignatures == null : this.bEzsigntemplatedocumentHassignedsignatures.equals(ezsigntemplatedocumentResponseCompound.bEzsigntemplatedocumentHassignedsignatures));
   }
 
   @Override
@@ -115,6 +129,7 @@ public class EzsigntemplatedocumentResponseCompound {
     result = 31 * result + (this.sEzsigntemplatedocumentName == null ? 0: this.sEzsigntemplatedocumentName.hashCode());
     result = 31 * result + (this.iEzsigntemplatedocumentPagetotal == null ? 0: this.iEzsigntemplatedocumentPagetotal.hashCode());
     result = 31 * result + (this.iEzsigntemplatedocumentSignaturetotal == null ? 0: this.iEzsigntemplatedocumentSignaturetotal.hashCode());
+    result = 31 * result + (this.bEzsigntemplatedocumentHassignedsignatures == null ? 0: this.bEzsigntemplatedocumentHassignedsignatures.hashCode());
     return result;
   }
 
@@ -128,6 +143,7 @@ public class EzsigntemplatedocumentResponseCompound {
     sb.append("  sEzsigntemplatedocumentName: ").append(sEzsigntemplatedocumentName).append("\n");
     sb.append("  iEzsigntemplatedocumentPagetotal: ").append(iEzsigntemplatedocumentPagetotal).append("\n");
     sb.append("  iEzsigntemplatedocumentSignaturetotal: ").append(iEzsigntemplatedocumentSignaturetotal).append("\n");
+    sb.append("  bEzsigntemplatedocumentHassignedsignatures: ").append(bEzsigntemplatedocumentHassignedsignatures).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

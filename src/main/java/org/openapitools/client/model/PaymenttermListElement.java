@@ -12,6 +12,7 @@
 
 package org.openapitools.client.model;
 
+import org.openapitools.client.model.FieldEPaymenttermType;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -25,6 +26,10 @@ public class PaymenttermListElement {
   private Integer pkiPaymenttermID = null;
   @SerializedName("sPaymenttermCode")
   private String sPaymenttermCode = null;
+  @SerializedName("ePaymenttermType")
+  private FieldEPaymenttermType ePaymenttermType = null;
+  @SerializedName("iPaymenttermDay")
+  private Integer iPaymenttermDay = null;
   @SerializedName("sPaymenttermDescriptionX")
   private String sPaymenttermDescriptionX = null;
   @SerializedName("bPaymenttermIsactive")
@@ -50,6 +55,29 @@ public class PaymenttermListElement {
   }
   public void setSPaymenttermCode(String sPaymenttermCode) {
     this.sPaymenttermCode = sPaymenttermCode;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public FieldEPaymenttermType getEPaymenttermType() {
+    return ePaymenttermType;
+  }
+  public void setEPaymenttermType(FieldEPaymenttermType ePaymenttermType) {
+    this.ePaymenttermType = ePaymenttermType;
+  }
+
+  /**
+   * The day of the Paymentterm
+   * minimum: 0
+   * maximum: 255
+   **/
+  @ApiModelProperty(required = true, value = "The day of the Paymentterm")
+  public Integer getIPaymenttermDay() {
+    return iPaymenttermDay;
+  }
+  public void setIPaymenttermDay(Integer iPaymenttermDay) {
+    this.iPaymenttermDay = iPaymenttermDay;
   }
 
   /**
@@ -86,6 +114,8 @@ public class PaymenttermListElement {
     PaymenttermListElement paymenttermListElement = (PaymenttermListElement) o;
     return (this.pkiPaymenttermID == null ? paymenttermListElement.pkiPaymenttermID == null : this.pkiPaymenttermID.equals(paymenttermListElement.pkiPaymenttermID)) &&
         (this.sPaymenttermCode == null ? paymenttermListElement.sPaymenttermCode == null : this.sPaymenttermCode.equals(paymenttermListElement.sPaymenttermCode)) &&
+        (this.ePaymenttermType == null ? paymenttermListElement.ePaymenttermType == null : this.ePaymenttermType.equals(paymenttermListElement.ePaymenttermType)) &&
+        (this.iPaymenttermDay == null ? paymenttermListElement.iPaymenttermDay == null : this.iPaymenttermDay.equals(paymenttermListElement.iPaymenttermDay)) &&
         (this.sPaymenttermDescriptionX == null ? paymenttermListElement.sPaymenttermDescriptionX == null : this.sPaymenttermDescriptionX.equals(paymenttermListElement.sPaymenttermDescriptionX)) &&
         (this.bPaymenttermIsactive == null ? paymenttermListElement.bPaymenttermIsactive == null : this.bPaymenttermIsactive.equals(paymenttermListElement.bPaymenttermIsactive));
   }
@@ -95,6 +125,8 @@ public class PaymenttermListElement {
     int result = 17;
     result = 31 * result + (this.pkiPaymenttermID == null ? 0: this.pkiPaymenttermID.hashCode());
     result = 31 * result + (this.sPaymenttermCode == null ? 0: this.sPaymenttermCode.hashCode());
+    result = 31 * result + (this.ePaymenttermType == null ? 0: this.ePaymenttermType.hashCode());
+    result = 31 * result + (this.iPaymenttermDay == null ? 0: this.iPaymenttermDay.hashCode());
     result = 31 * result + (this.sPaymenttermDescriptionX == null ? 0: this.sPaymenttermDescriptionX.hashCode());
     result = 31 * result + (this.bPaymenttermIsactive == null ? 0: this.bPaymenttermIsactive.hashCode());
     return result;
@@ -107,6 +139,8 @@ public class PaymenttermListElement {
     
     sb.append("  pkiPaymenttermID: ").append(pkiPaymenttermID).append("\n");
     sb.append("  sPaymenttermCode: ").append(sPaymenttermCode).append("\n");
+    sb.append("  ePaymenttermType: ").append(ePaymenttermType).append("\n");
+    sb.append("  iPaymenttermDay: ").append(iPaymenttermDay).append("\n");
     sb.append("  sPaymenttermDescriptionX: ").append(sPaymenttermDescriptionX).append("\n");
     sb.append("  bPaymenttermIsactive: ").append(bPaymenttermIsactive).append("\n");
     sb.append("}\n");

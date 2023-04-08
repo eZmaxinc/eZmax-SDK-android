@@ -13,6 +13,7 @@
 package org.openapitools.client.model;
 
 import java.util.*;
+import org.openapitools.client.model.CommonAudit;
 import org.openapitools.client.model.EzsigntemplatedocumentResponse;
 import org.openapitools.client.model.EzsigntemplatesignerResponseCompound;
 import io.swagger.annotations.*;
@@ -40,6 +41,8 @@ public class EzsigntemplateGetObjectV1ResponseMPayload {
   private Boolean bEzsigntemplateAdminonly = null;
   @SerializedName("sEzsignfoldertypeNameX")
   private String sEzsignfoldertypeNameX = null;
+  @SerializedName("objAudit")
+  private CommonAudit objAudit = null;
   @SerializedName("objEzsigntemplatedocument")
   private EzsigntemplatedocumentResponse objEzsigntemplatedocument = null;
   @SerializedName("a_objEzsigntemplatesigner")
@@ -140,6 +143,16 @@ public class EzsigntemplateGetObjectV1ResponseMPayload {
 
   /**
    **/
+  @ApiModelProperty(required = true, value = "")
+  public CommonAudit getObjAudit() {
+    return objAudit;
+  }
+  public void setObjAudit(CommonAudit objAudit) {
+    this.objAudit = objAudit;
+  }
+
+  /**
+   **/
   @ApiModelProperty(value = "")
   public EzsigntemplatedocumentResponse getObjEzsigntemplatedocument() {
     return objEzsigntemplatedocument;
@@ -176,6 +189,7 @@ public class EzsigntemplateGetObjectV1ResponseMPayload {
         (this.sEzsigntemplateDescription == null ? ezsigntemplateGetObjectV1ResponseMPayload.sEzsigntemplateDescription == null : this.sEzsigntemplateDescription.equals(ezsigntemplateGetObjectV1ResponseMPayload.sEzsigntemplateDescription)) &&
         (this.bEzsigntemplateAdminonly == null ? ezsigntemplateGetObjectV1ResponseMPayload.bEzsigntemplateAdminonly == null : this.bEzsigntemplateAdminonly.equals(ezsigntemplateGetObjectV1ResponseMPayload.bEzsigntemplateAdminonly)) &&
         (this.sEzsignfoldertypeNameX == null ? ezsigntemplateGetObjectV1ResponseMPayload.sEzsignfoldertypeNameX == null : this.sEzsignfoldertypeNameX.equals(ezsigntemplateGetObjectV1ResponseMPayload.sEzsignfoldertypeNameX)) &&
+        (this.objAudit == null ? ezsigntemplateGetObjectV1ResponseMPayload.objAudit == null : this.objAudit.equals(ezsigntemplateGetObjectV1ResponseMPayload.objAudit)) &&
         (this.objEzsigntemplatedocument == null ? ezsigntemplateGetObjectV1ResponseMPayload.objEzsigntemplatedocument == null : this.objEzsigntemplatedocument.equals(ezsigntemplateGetObjectV1ResponseMPayload.objEzsigntemplatedocument)) &&
         (this.aObjEzsigntemplatesigner == null ? ezsigntemplateGetObjectV1ResponseMPayload.aObjEzsigntemplatesigner == null : this.aObjEzsigntemplatesigner.equals(ezsigntemplateGetObjectV1ResponseMPayload.aObjEzsigntemplatesigner));
   }
@@ -191,6 +205,7 @@ public class EzsigntemplateGetObjectV1ResponseMPayload {
     result = 31 * result + (this.sEzsigntemplateDescription == null ? 0: this.sEzsigntemplateDescription.hashCode());
     result = 31 * result + (this.bEzsigntemplateAdminonly == null ? 0: this.bEzsigntemplateAdminonly.hashCode());
     result = 31 * result + (this.sEzsignfoldertypeNameX == null ? 0: this.sEzsignfoldertypeNameX.hashCode());
+    result = 31 * result + (this.objAudit == null ? 0: this.objAudit.hashCode());
     result = 31 * result + (this.objEzsigntemplatedocument == null ? 0: this.objEzsigntemplatedocument.hashCode());
     result = 31 * result + (this.aObjEzsigntemplatesigner == null ? 0: this.aObjEzsigntemplatesigner.hashCode());
     return result;
@@ -209,6 +224,7 @@ public class EzsigntemplateGetObjectV1ResponseMPayload {
     sb.append("  sEzsigntemplateDescription: ").append(sEzsigntemplateDescription).append("\n");
     sb.append("  bEzsigntemplateAdminonly: ").append(bEzsigntemplateAdminonly).append("\n");
     sb.append("  sEzsignfoldertypeNameX: ").append(sEzsignfoldertypeNameX).append("\n");
+    sb.append("  objAudit: ").append(objAudit).append("\n");
     sb.append("  objEzsigntemplatedocument: ").append(objEzsigntemplatedocument).append("\n");
     sb.append("  aObjEzsigntemplatesigner: ").append(aObjEzsigntemplatesigner).append("\n");
     sb.append("}\n");

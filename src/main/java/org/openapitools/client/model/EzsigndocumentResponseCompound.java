@@ -61,8 +61,12 @@ public class EzsigndocumentResponseCompound {
   private String sEzsigndocumentMD5signed = null;
   @SerializedName("bEzsigndocumentEzsignform")
   private Boolean bEzsigndocumentEzsignform = null;
+  @SerializedName("bEzsigndocumentHassignedsignatures")
+  private Boolean bEzsigndocumentHassignedsignatures = null;
   @SerializedName("objAudit")
   private CommonAudit objAudit = null;
+  @SerializedName("sEzsigndocumentExternalid")
+  private String sEzsigndocumentExternalid = null;
   @SerializedName("iEzsigndocumentStepformtotal")
   private Integer iEzsigndocumentStepformtotal = null;
   @SerializedName("iEzsigndocumentStepformcurrent")
@@ -281,6 +285,17 @@ public class EzsigndocumentResponseCompound {
   }
 
   /**
+   * If the Ezsigndocument contains signed signatures (From internal or external sources)
+   **/
+  @ApiModelProperty(required = true, value = "If the Ezsigndocument contains signed signatures (From internal or external sources)")
+  public Boolean getBEzsigndocumentHassignedsignatures() {
+    return bEzsigndocumentHassignedsignatures;
+  }
+  public void setBEzsigndocumentHassignedsignatures(Boolean bEzsigndocumentHassignedsignatures) {
+    this.bEzsigndocumentHassignedsignatures = bEzsigndocumentHassignedsignatures;
+  }
+
+  /**
    **/
   @ApiModelProperty(required = true, value = "")
   public CommonAudit getObjAudit() {
@@ -288,6 +303,17 @@ public class EzsigndocumentResponseCompound {
   }
   public void setObjAudit(CommonAudit objAudit) {
     this.objAudit = objAudit;
+  }
+
+  /**
+   * This field can be used to store an External ID from the client's system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. 
+   **/
+  @ApiModelProperty(required = true, value = "This field can be used to store an External ID from the client's system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. ")
+  public String getSEzsigndocumentExternalid() {
+    return sEzsigndocumentExternalid;
+  }
+  public void setSEzsigndocumentExternalid(String sEzsigndocumentExternalid) {
+    this.sEzsigndocumentExternalid = sEzsigndocumentExternalid;
   }
 
   /**
@@ -372,7 +398,9 @@ public class EzsigndocumentResponseCompound {
         (this.tEzsigndocumentDeclinedtosignreason == null ? ezsigndocumentResponseCompound.tEzsigndocumentDeclinedtosignreason == null : this.tEzsigndocumentDeclinedtosignreason.equals(ezsigndocumentResponseCompound.tEzsigndocumentDeclinedtosignreason)) &&
         (this.sEzsigndocumentMD5signed == null ? ezsigndocumentResponseCompound.sEzsigndocumentMD5signed == null : this.sEzsigndocumentMD5signed.equals(ezsigndocumentResponseCompound.sEzsigndocumentMD5signed)) &&
         (this.bEzsigndocumentEzsignform == null ? ezsigndocumentResponseCompound.bEzsigndocumentEzsignform == null : this.bEzsigndocumentEzsignform.equals(ezsigndocumentResponseCompound.bEzsigndocumentEzsignform)) &&
+        (this.bEzsigndocumentHassignedsignatures == null ? ezsigndocumentResponseCompound.bEzsigndocumentHassignedsignatures == null : this.bEzsigndocumentHassignedsignatures.equals(ezsigndocumentResponseCompound.bEzsigndocumentHassignedsignatures)) &&
         (this.objAudit == null ? ezsigndocumentResponseCompound.objAudit == null : this.objAudit.equals(ezsigndocumentResponseCompound.objAudit)) &&
+        (this.sEzsigndocumentExternalid == null ? ezsigndocumentResponseCompound.sEzsigndocumentExternalid == null : this.sEzsigndocumentExternalid.equals(ezsigndocumentResponseCompound.sEzsigndocumentExternalid)) &&
         (this.iEzsigndocumentStepformtotal == null ? ezsigndocumentResponseCompound.iEzsigndocumentStepformtotal == null : this.iEzsigndocumentStepformtotal.equals(ezsigndocumentResponseCompound.iEzsigndocumentStepformtotal)) &&
         (this.iEzsigndocumentStepformcurrent == null ? ezsigndocumentResponseCompound.iEzsigndocumentStepformcurrent == null : this.iEzsigndocumentStepformcurrent.equals(ezsigndocumentResponseCompound.iEzsigndocumentStepformcurrent)) &&
         (this.iEzsigndocumentStepsignaturetotal == null ? ezsigndocumentResponseCompound.iEzsigndocumentStepsignaturetotal == null : this.iEzsigndocumentStepsignaturetotal.equals(ezsigndocumentResponseCompound.iEzsigndocumentStepsignaturetotal)) &&
@@ -401,7 +429,9 @@ public class EzsigndocumentResponseCompound {
     result = 31 * result + (this.tEzsigndocumentDeclinedtosignreason == null ? 0: this.tEzsigndocumentDeclinedtosignreason.hashCode());
     result = 31 * result + (this.sEzsigndocumentMD5signed == null ? 0: this.sEzsigndocumentMD5signed.hashCode());
     result = 31 * result + (this.bEzsigndocumentEzsignform == null ? 0: this.bEzsigndocumentEzsignform.hashCode());
+    result = 31 * result + (this.bEzsigndocumentHassignedsignatures == null ? 0: this.bEzsigndocumentHassignedsignatures.hashCode());
     result = 31 * result + (this.objAudit == null ? 0: this.objAudit.hashCode());
+    result = 31 * result + (this.sEzsigndocumentExternalid == null ? 0: this.sEzsigndocumentExternalid.hashCode());
     result = 31 * result + (this.iEzsigndocumentStepformtotal == null ? 0: this.iEzsigndocumentStepformtotal.hashCode());
     result = 31 * result + (this.iEzsigndocumentStepformcurrent == null ? 0: this.iEzsigndocumentStepformcurrent.hashCode());
     result = 31 * result + (this.iEzsigndocumentStepsignaturetotal == null ? 0: this.iEzsigndocumentStepsignaturetotal.hashCode());
@@ -433,7 +463,9 @@ public class EzsigndocumentResponseCompound {
     sb.append("  tEzsigndocumentDeclinedtosignreason: ").append(tEzsigndocumentDeclinedtosignreason).append("\n");
     sb.append("  sEzsigndocumentMD5signed: ").append(sEzsigndocumentMD5signed).append("\n");
     sb.append("  bEzsigndocumentEzsignform: ").append(bEzsigndocumentEzsignform).append("\n");
+    sb.append("  bEzsigndocumentHassignedsignatures: ").append(bEzsigndocumentHassignedsignatures).append("\n");
     sb.append("  objAudit: ").append(objAudit).append("\n");
+    sb.append("  sEzsigndocumentExternalid: ").append(sEzsigndocumentExternalid).append("\n");
     sb.append("  iEzsigndocumentStepformtotal: ").append(iEzsigndocumentStepformtotal).append("\n");
     sb.append("  iEzsigndocumentStepformcurrent: ").append(iEzsigndocumentStepformcurrent).append("\n");
     sb.append("  iEzsigndocumentStepsignaturetotal: ").append(iEzsigndocumentStepsignaturetotal).append("\n");

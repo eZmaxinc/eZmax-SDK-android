@@ -24,7 +24,11 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
 import org.openapitools.client.model.ActivesessionGetCurrentV1Response;
+import org.openapitools.client.model.ActivesessionGetListV1Response;
+import org.openapitools.client.model.CommonResponseError;
 import org.openapitools.client.model.CommonResponseRedirectSSecretquestionTextX;
+import java.io.File;
+import org.openapitools.client.model.HeaderAcceptLanguage;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
@@ -158,6 +162,137 @@ public class ObjectActivesessionApi {
           public void onResponse(String localVarResponse) {
             try {
               responseListener.onResponse((ActivesessionGetCurrentV1Response) ApiInvoker.deserialize(localVarResponse,  "", ActivesessionGetCurrentV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Retrieve Activesession list
+  * 
+   * @param eOrderBy Specify how you want the results to be sorted
+   * @param iRowMax 
+   * @param iRowOffset 
+   * @param acceptLanguage 
+   * @param sFilter 
+   * @return ActivesessionGetListV1Response
+  */
+  public ActivesessionGetListV1Response activesessionGetListV1 (String eOrderBy, Integer iRowMax, Integer iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/1/object/activesession/getList";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "eOrderBy", eOrderBy));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "iRowMax", iRowMax));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "iRowOffset", iRowOffset));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "sFilter", sFilter));
+    headerParams.put("Accept-Language", ApiInvoker.parameterToString(acceptLanguage));
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (ActivesessionGetListV1Response) ApiInvoker.deserialize(localVarResponse, "", ActivesessionGetListV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve Activesession list
+   * 
+   * @param eOrderBy Specify how you want the results to be sorted   * @param iRowMax    * @param iRowOffset    * @param acceptLanguage    * @param sFilter 
+  */
+  public void activesessionGetListV1 (String eOrderBy, Integer iRowMax, Integer iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter, final Response.Listener<ActivesessionGetListV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/1/object/activesession/getList".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "eOrderBy", eOrderBy));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "iRowMax", iRowMax));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "iRowOffset", iRowOffset));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "sFilter", sFilter));
+
+    headerParams.put("Accept-Language", ApiInvoker.parameterToString(acceptLanguage));
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((ActivesessionGetListV1Response) ApiInvoker.deserialize(localVarResponse,  "", ActivesessionGetListV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

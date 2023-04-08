@@ -18,9 +18,11 @@ import org.openapitools.client.model.CommunicationattachmentResponseCompound;
 import org.openapitools.client.model.CommunicationexternalrecipientResponseCompound;
 import org.openapitools.client.model.CommunicationrecipientResponseCompound;
 import org.openapitools.client.model.ComputedECommunicationDirection;
-import org.openapitools.client.model.CustomContactNameResponse;
+import org.openapitools.client.model.DescriptionstaticResponse;
+import org.openapitools.client.model.EmailstaticResponse;
 import org.openapitools.client.model.FieldECommunicationImportance;
 import org.openapitools.client.model.FieldECommunicationType;
+import org.openapitools.client.model.PhonestaticResponse;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -38,12 +40,18 @@ public class CommunicationResponseCompound {
   private FieldECommunicationType eCommunicationType = null;
   @SerializedName("sCommunicationSubject")
   private String sCommunicationSubject = null;
+  @SerializedName("sCommunicationBodyurl")
+  private String sCommunicationBodyurl = null;
   @SerializedName("eCommunicationDirection")
   private ComputedECommunicationDirection eCommunicationDirection = null;
   @SerializedName("iCommunicationrecipientCount")
   private Integer iCommunicationrecipientCount = null;
-  @SerializedName("objContactFrom")
-  private CustomContactNameResponse objContactFrom = null;
+  @SerializedName("objDescriptionstaticSender")
+  private DescriptionstaticResponse objDescriptionstaticSender = null;
+  @SerializedName("objEmailstaticSender")
+  private EmailstaticResponse objEmailstaticSender = null;
+  @SerializedName("objPhonestaticSender")
+  private PhonestaticResponse objPhonestaticSender = null;
   @SerializedName("objAudit")
   private CommonAudit objAudit = null;
   @SerializedName("a_objCommunicationattachment")
@@ -97,6 +105,17 @@ public class CommunicationResponseCompound {
   }
 
   /**
+   * The url of the body used as body in the Communication
+   **/
+  @ApiModelProperty(value = "The url of the body used as body in the Communication")
+  public String getSCommunicationBodyurl() {
+    return sCommunicationBodyurl;
+  }
+  public void setSCommunicationBodyurl(String sCommunicationBodyurl) {
+    this.sCommunicationBodyurl = sCommunicationBodyurl;
+  }
+
+  /**
    **/
   @ApiModelProperty(required = true, value = "")
   public ComputedECommunicationDirection getECommunicationDirection() {
@@ -119,12 +138,32 @@ public class CommunicationResponseCompound {
 
   /**
    **/
-  @ApiModelProperty(required = true, value = "")
-  public CustomContactNameResponse getObjContactFrom() {
-    return objContactFrom;
+  @ApiModelProperty(value = "")
+  public DescriptionstaticResponse getObjDescriptionstaticSender() {
+    return objDescriptionstaticSender;
   }
-  public void setObjContactFrom(CustomContactNameResponse objContactFrom) {
-    this.objContactFrom = objContactFrom;
+  public void setObjDescriptionstaticSender(DescriptionstaticResponse objDescriptionstaticSender) {
+    this.objDescriptionstaticSender = objDescriptionstaticSender;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public EmailstaticResponse getObjEmailstaticSender() {
+    return objEmailstaticSender;
+  }
+  public void setObjEmailstaticSender(EmailstaticResponse objEmailstaticSender) {
+    this.objEmailstaticSender = objEmailstaticSender;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public PhonestaticResponse getObjPhonestaticSender() {
+    return objPhonestaticSender;
+  }
+  public void setObjPhonestaticSender(PhonestaticResponse objPhonestaticSender) {
+    this.objPhonestaticSender = objPhonestaticSender;
   }
 
   /**
@@ -181,9 +220,12 @@ public class CommunicationResponseCompound {
         (this.eCommunicationImportance == null ? communicationResponseCompound.eCommunicationImportance == null : this.eCommunicationImportance.equals(communicationResponseCompound.eCommunicationImportance)) &&
         (this.eCommunicationType == null ? communicationResponseCompound.eCommunicationType == null : this.eCommunicationType.equals(communicationResponseCompound.eCommunicationType)) &&
         (this.sCommunicationSubject == null ? communicationResponseCompound.sCommunicationSubject == null : this.sCommunicationSubject.equals(communicationResponseCompound.sCommunicationSubject)) &&
+        (this.sCommunicationBodyurl == null ? communicationResponseCompound.sCommunicationBodyurl == null : this.sCommunicationBodyurl.equals(communicationResponseCompound.sCommunicationBodyurl)) &&
         (this.eCommunicationDirection == null ? communicationResponseCompound.eCommunicationDirection == null : this.eCommunicationDirection.equals(communicationResponseCompound.eCommunicationDirection)) &&
         (this.iCommunicationrecipientCount == null ? communicationResponseCompound.iCommunicationrecipientCount == null : this.iCommunicationrecipientCount.equals(communicationResponseCompound.iCommunicationrecipientCount)) &&
-        (this.objContactFrom == null ? communicationResponseCompound.objContactFrom == null : this.objContactFrom.equals(communicationResponseCompound.objContactFrom)) &&
+        (this.objDescriptionstaticSender == null ? communicationResponseCompound.objDescriptionstaticSender == null : this.objDescriptionstaticSender.equals(communicationResponseCompound.objDescriptionstaticSender)) &&
+        (this.objEmailstaticSender == null ? communicationResponseCompound.objEmailstaticSender == null : this.objEmailstaticSender.equals(communicationResponseCompound.objEmailstaticSender)) &&
+        (this.objPhonestaticSender == null ? communicationResponseCompound.objPhonestaticSender == null : this.objPhonestaticSender.equals(communicationResponseCompound.objPhonestaticSender)) &&
         (this.objAudit == null ? communicationResponseCompound.objAudit == null : this.objAudit.equals(communicationResponseCompound.objAudit)) &&
         (this.aObjCommunicationattachment == null ? communicationResponseCompound.aObjCommunicationattachment == null : this.aObjCommunicationattachment.equals(communicationResponseCompound.aObjCommunicationattachment)) &&
         (this.aObjCommunicationrecipient == null ? communicationResponseCompound.aObjCommunicationrecipient == null : this.aObjCommunicationrecipient.equals(communicationResponseCompound.aObjCommunicationrecipient)) &&
@@ -197,9 +239,12 @@ public class CommunicationResponseCompound {
     result = 31 * result + (this.eCommunicationImportance == null ? 0: this.eCommunicationImportance.hashCode());
     result = 31 * result + (this.eCommunicationType == null ? 0: this.eCommunicationType.hashCode());
     result = 31 * result + (this.sCommunicationSubject == null ? 0: this.sCommunicationSubject.hashCode());
+    result = 31 * result + (this.sCommunicationBodyurl == null ? 0: this.sCommunicationBodyurl.hashCode());
     result = 31 * result + (this.eCommunicationDirection == null ? 0: this.eCommunicationDirection.hashCode());
     result = 31 * result + (this.iCommunicationrecipientCount == null ? 0: this.iCommunicationrecipientCount.hashCode());
-    result = 31 * result + (this.objContactFrom == null ? 0: this.objContactFrom.hashCode());
+    result = 31 * result + (this.objDescriptionstaticSender == null ? 0: this.objDescriptionstaticSender.hashCode());
+    result = 31 * result + (this.objEmailstaticSender == null ? 0: this.objEmailstaticSender.hashCode());
+    result = 31 * result + (this.objPhonestaticSender == null ? 0: this.objPhonestaticSender.hashCode());
     result = 31 * result + (this.objAudit == null ? 0: this.objAudit.hashCode());
     result = 31 * result + (this.aObjCommunicationattachment == null ? 0: this.aObjCommunicationattachment.hashCode());
     result = 31 * result + (this.aObjCommunicationrecipient == null ? 0: this.aObjCommunicationrecipient.hashCode());
@@ -216,9 +261,12 @@ public class CommunicationResponseCompound {
     sb.append("  eCommunicationImportance: ").append(eCommunicationImportance).append("\n");
     sb.append("  eCommunicationType: ").append(eCommunicationType).append("\n");
     sb.append("  sCommunicationSubject: ").append(sCommunicationSubject).append("\n");
+    sb.append("  sCommunicationBodyurl: ").append(sCommunicationBodyurl).append("\n");
     sb.append("  eCommunicationDirection: ").append(eCommunicationDirection).append("\n");
     sb.append("  iCommunicationrecipientCount: ").append(iCommunicationrecipientCount).append("\n");
-    sb.append("  objContactFrom: ").append(objContactFrom).append("\n");
+    sb.append("  objDescriptionstaticSender: ").append(objDescriptionstaticSender).append("\n");
+    sb.append("  objEmailstaticSender: ").append(objEmailstaticSender).append("\n");
+    sb.append("  objPhonestaticSender: ").append(objPhonestaticSender).append("\n");
     sb.append("  objAudit: ").append(objAudit).append("\n");
     sb.append("  aObjCommunicationattachment: ").append(aObjCommunicationattachment).append("\n");
     sb.append("  aObjCommunicationrecipient: ").append(aObjCommunicationrecipient).append("\n");

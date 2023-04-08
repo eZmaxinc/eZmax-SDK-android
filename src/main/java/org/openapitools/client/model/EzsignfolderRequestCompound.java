@@ -34,6 +34,8 @@ public class EzsignfolderRequestCompound {
   private String tEzsignfolderNote = null;
   @SerializedName("eEzsignfolderSendreminderfrequency")
   private FieldEEzsignfolderSendreminderfrequency eEzsignfolderSendreminderfrequency = null;
+  @SerializedName("sEzsignfolderExternalid")
+  private String sEzsignfolderExternalid = null;
 
   /**
    * The unique ID of the Ezsignfolder
@@ -104,6 +106,17 @@ public class EzsignfolderRequestCompound {
     this.eEzsignfolderSendreminderfrequency = eEzsignfolderSendreminderfrequency;
   }
 
+  /**
+   * This field can be used to store an External ID from the client's system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. 
+   **/
+  @ApiModelProperty(value = "This field can be used to store an External ID from the client's system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. ")
+  public String getSEzsignfolderExternalid() {
+    return sEzsignfolderExternalid;
+  }
+  public void setSEzsignfolderExternalid(String sEzsignfolderExternalid) {
+    this.sEzsignfolderExternalid = sEzsignfolderExternalid;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -119,7 +132,8 @@ public class EzsignfolderRequestCompound {
         (this.fkiEzsigntsarequirementID == null ? ezsignfolderRequestCompound.fkiEzsigntsarequirementID == null : this.fkiEzsigntsarequirementID.equals(ezsignfolderRequestCompound.fkiEzsigntsarequirementID)) &&
         (this.sEzsignfolderDescription == null ? ezsignfolderRequestCompound.sEzsignfolderDescription == null : this.sEzsignfolderDescription.equals(ezsignfolderRequestCompound.sEzsignfolderDescription)) &&
         (this.tEzsignfolderNote == null ? ezsignfolderRequestCompound.tEzsignfolderNote == null : this.tEzsignfolderNote.equals(ezsignfolderRequestCompound.tEzsignfolderNote)) &&
-        (this.eEzsignfolderSendreminderfrequency == null ? ezsignfolderRequestCompound.eEzsignfolderSendreminderfrequency == null : this.eEzsignfolderSendreminderfrequency.equals(ezsignfolderRequestCompound.eEzsignfolderSendreminderfrequency));
+        (this.eEzsignfolderSendreminderfrequency == null ? ezsignfolderRequestCompound.eEzsignfolderSendreminderfrequency == null : this.eEzsignfolderSendreminderfrequency.equals(ezsignfolderRequestCompound.eEzsignfolderSendreminderfrequency)) &&
+        (this.sEzsignfolderExternalid == null ? ezsignfolderRequestCompound.sEzsignfolderExternalid == null : this.sEzsignfolderExternalid.equals(ezsignfolderRequestCompound.sEzsignfolderExternalid));
   }
 
   @Override
@@ -131,6 +145,7 @@ public class EzsignfolderRequestCompound {
     result = 31 * result + (this.sEzsignfolderDescription == null ? 0: this.sEzsignfolderDescription.hashCode());
     result = 31 * result + (this.tEzsignfolderNote == null ? 0: this.tEzsignfolderNote.hashCode());
     result = 31 * result + (this.eEzsignfolderSendreminderfrequency == null ? 0: this.eEzsignfolderSendreminderfrequency.hashCode());
+    result = 31 * result + (this.sEzsignfolderExternalid == null ? 0: this.sEzsignfolderExternalid.hashCode());
     return result;
   }
 
@@ -145,6 +160,7 @@ public class EzsignfolderRequestCompound {
     sb.append("  sEzsignfolderDescription: ").append(sEzsignfolderDescription).append("\n");
     sb.append("  tEzsignfolderNote: ").append(tEzsignfolderNote).append("\n");
     sb.append("  eEzsignfolderSendreminderfrequency: ").append(eEzsignfolderSendreminderfrequency).append("\n");
+    sb.append("  sEzsignfolderExternalid: ").append(sEzsignfolderExternalid).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

@@ -64,6 +64,8 @@ public class EzsignfolderResponse {
   private String tEzsignfolderMessage = null;
   @SerializedName("objAudit")
   private CommonAudit objAudit = null;
+  @SerializedName("sEzsignfolderExternalid")
+  private String sEzsignfolderExternalid = null;
 
   /**
    * The unique ID of the Ezsignfolder
@@ -287,6 +289,17 @@ public class EzsignfolderResponse {
     this.objAudit = objAudit;
   }
 
+  /**
+   * This field can be used to store an External ID from the client's system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. 
+   **/
+  @ApiModelProperty(required = true, value = "This field can be used to store an External ID from the client's system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. ")
+  public String getSEzsignfolderExternalid() {
+    return sEzsignfolderExternalid;
+  }
+  public void setSEzsignfolderExternalid(String sEzsignfolderExternalid) {
+    this.sEzsignfolderExternalid = sEzsignfolderExternalid;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -316,7 +329,8 @@ public class EzsignfolderResponse {
         (this.eEzsignfolderStep == null ? ezsignfolderResponse.eEzsignfolderStep == null : this.eEzsignfolderStep.equals(ezsignfolderResponse.eEzsignfolderStep)) &&
         (this.dtEzsignfolderClose == null ? ezsignfolderResponse.dtEzsignfolderClose == null : this.dtEzsignfolderClose.equals(ezsignfolderResponse.dtEzsignfolderClose)) &&
         (this.tEzsignfolderMessage == null ? ezsignfolderResponse.tEzsignfolderMessage == null : this.tEzsignfolderMessage.equals(ezsignfolderResponse.tEzsignfolderMessage)) &&
-        (this.objAudit == null ? ezsignfolderResponse.objAudit == null : this.objAudit.equals(ezsignfolderResponse.objAudit));
+        (this.objAudit == null ? ezsignfolderResponse.objAudit == null : this.objAudit.equals(ezsignfolderResponse.objAudit)) &&
+        (this.sEzsignfolderExternalid == null ? ezsignfolderResponse.sEzsignfolderExternalid == null : this.sEzsignfolderExternalid.equals(ezsignfolderResponse.sEzsignfolderExternalid));
   }
 
   @Override
@@ -342,6 +356,7 @@ public class EzsignfolderResponse {
     result = 31 * result + (this.dtEzsignfolderClose == null ? 0: this.dtEzsignfolderClose.hashCode());
     result = 31 * result + (this.tEzsignfolderMessage == null ? 0: this.tEzsignfolderMessage.hashCode());
     result = 31 * result + (this.objAudit == null ? 0: this.objAudit.hashCode());
+    result = 31 * result + (this.sEzsignfolderExternalid == null ? 0: this.sEzsignfolderExternalid.hashCode());
     return result;
   }
 
@@ -370,6 +385,7 @@ public class EzsignfolderResponse {
     sb.append("  dtEzsignfolderClose: ").append(dtEzsignfolderClose).append("\n");
     sb.append("  tEzsignfolderMessage: ").append(tEzsignfolderMessage).append("\n");
     sb.append("  objAudit: ").append(objAudit).append("\n");
+    sb.append("  sEzsignfolderExternalid: ").append(sEzsignfolderExternalid).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

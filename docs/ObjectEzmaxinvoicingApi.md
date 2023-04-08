@@ -6,7 +6,6 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ezmaxinvoicingGetAutocompleteV1**](ObjectEzmaxinvoicingApi.md#ezmaxinvoicingGetAutocompleteV1) | **GET** /1/object/ezmaxinvoicing/getAutocomplete/{sSelector} | Retrieve Ezmaxinvoicings and IDs
 [**ezmaxinvoicingGetAutocompleteV2**](ObjectEzmaxinvoicingApi.md#ezmaxinvoicingGetAutocompleteV2) | **GET** /2/object/ezmaxinvoicing/getAutocomplete/{sSelector} | Retrieve Ezmaxinvoicings and IDs
-[**ezmaxinvoicingGetObjectV1**](ObjectEzmaxinvoicingApi.md#ezmaxinvoicingGetObjectV1) | **GET** /1/object/ezmaxinvoicing/{pkiEzmaxinvoicingID} | Retrieve an existing Ezmaxinvoicing
 [**ezmaxinvoicingGetObjectV2**](ObjectEzmaxinvoicingApi.md#ezmaxinvoicingGetObjectV2) | **GET** /2/object/ezmaxinvoicing/{pkiEzmaxinvoicingID} | Retrieve an existing Ezmaxinvoicing
 [**ezmaxinvoicingGetProvisionalV1**](ObjectEzmaxinvoicingApi.md#ezmaxinvoicingGetProvisionalV1) | **GET** /1/object/ezmaxinvoicing/getProvisional | Retrieve provisional Ezmaxinvoicing
 
@@ -105,52 +104,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzmaxinvoicingGetAutocompleteV2Response**](EzmaxinvoicingGetAutocompleteV2Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## ezmaxinvoicingGetObjectV1
-
-> EzmaxinvoicingGetObjectV1Response ezmaxinvoicingGetObjectV1(pkiEzmaxinvoicingID)
-
-Retrieve an existing Ezmaxinvoicing
-
-
-
-### Example
-
-```java
-// Import classes:
-//import org.openapitools.client.api.ObjectEzmaxinvoicingApi;
-
-ObjectEzmaxinvoicingApi apiInstance = new ObjectEzmaxinvoicingApi();
-Integer pkiEzmaxinvoicingID = null; // Integer | 
-try {
-    EzmaxinvoicingGetObjectV1Response result = apiInstance.ezmaxinvoicingGetObjectV1(pkiEzmaxinvoicingID);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling ObjectEzmaxinvoicingApi#ezmaxinvoicingGetObjectV1");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiEzmaxinvoicingID** | **Integer**|  | [default to null]
-
-### Return type
-
-[**EzmaxinvoicingGetObjectV1Response**](EzmaxinvoicingGetObjectV1Response.md)
 
 ### Authorization
 

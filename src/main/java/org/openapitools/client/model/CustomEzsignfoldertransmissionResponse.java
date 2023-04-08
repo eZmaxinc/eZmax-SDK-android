@@ -26,6 +26,8 @@ public class CustomEzsignfoldertransmissionResponse {
   
   @SerializedName("pkiEzsignfolderID")
   private Integer pkiEzsignfolderID = null;
+  @SerializedName("sEzsignfolderDescription")
+  private String sEzsignfolderDescription = null;
   @SerializedName("eEzsignfolderStep")
   private FieldEEzsignfolderStep eEzsignfolderStep = null;
   @SerializedName("iEzsignfolderSignaturetotal")
@@ -45,6 +47,17 @@ public class CustomEzsignfoldertransmissionResponse {
   }
   public void setPkiEzsignfolderID(Integer pkiEzsignfolderID) {
     this.pkiEzsignfolderID = pkiEzsignfolderID;
+  }
+
+  /**
+   * The description of the Ezsignfolder
+   **/
+  @ApiModelProperty(required = true, value = "The description of the Ezsignfolder")
+  public String getSEzsignfolderDescription() {
+    return sEzsignfolderDescription;
+  }
+  public void setSEzsignfolderDescription(String sEzsignfolderDescription) {
+    this.sEzsignfolderDescription = sEzsignfolderDescription;
   }
 
   /**
@@ -100,6 +113,7 @@ public class CustomEzsignfoldertransmissionResponse {
     }
     CustomEzsignfoldertransmissionResponse customEzsignfoldertransmissionResponse = (CustomEzsignfoldertransmissionResponse) o;
     return (this.pkiEzsignfolderID == null ? customEzsignfoldertransmissionResponse.pkiEzsignfolderID == null : this.pkiEzsignfolderID.equals(customEzsignfoldertransmissionResponse.pkiEzsignfolderID)) &&
+        (this.sEzsignfolderDescription == null ? customEzsignfoldertransmissionResponse.sEzsignfolderDescription == null : this.sEzsignfolderDescription.equals(customEzsignfoldertransmissionResponse.sEzsignfolderDescription)) &&
         (this.eEzsignfolderStep == null ? customEzsignfoldertransmissionResponse.eEzsignfolderStep == null : this.eEzsignfolderStep.equals(customEzsignfoldertransmissionResponse.eEzsignfolderStep)) &&
         (this.iEzsignfolderSignaturetotal == null ? customEzsignfoldertransmissionResponse.iEzsignfolderSignaturetotal == null : this.iEzsignfolderSignaturetotal.equals(customEzsignfoldertransmissionResponse.iEzsignfolderSignaturetotal)) &&
         (this.iEzsignfolderSignaturesigned == null ? customEzsignfoldertransmissionResponse.iEzsignfolderSignaturesigned == null : this.iEzsignfolderSignaturesigned.equals(customEzsignfoldertransmissionResponse.iEzsignfolderSignaturesigned)) &&
@@ -110,6 +124,7 @@ public class CustomEzsignfoldertransmissionResponse {
   public int hashCode() {
     int result = 17;
     result = 31 * result + (this.pkiEzsignfolderID == null ? 0: this.pkiEzsignfolderID.hashCode());
+    result = 31 * result + (this.sEzsignfolderDescription == null ? 0: this.sEzsignfolderDescription.hashCode());
     result = 31 * result + (this.eEzsignfolderStep == null ? 0: this.eEzsignfolderStep.hashCode());
     result = 31 * result + (this.iEzsignfolderSignaturetotal == null ? 0: this.iEzsignfolderSignaturetotal.hashCode());
     result = 31 * result + (this.iEzsignfolderSignaturesigned == null ? 0: this.iEzsignfolderSignaturesigned.hashCode());
@@ -123,6 +138,7 @@ public class CustomEzsignfoldertransmissionResponse {
     sb.append("class CustomEzsignfoldertransmissionResponse {\n");
     
     sb.append("  pkiEzsignfolderID: ").append(pkiEzsignfolderID).append("\n");
+    sb.append("  sEzsignfolderDescription: ").append(sEzsignfolderDescription).append("\n");
     sb.append("  eEzsignfolderStep: ").append(eEzsignfolderStep).append("\n");
     sb.append("  iEzsignfolderSignaturetotal: ").append(iEzsignfolderSignaturetotal).append("\n");
     sb.append("  iEzsignfolderSignaturesigned: ").append(iEzsignfolderSignaturesigned).append("\n");

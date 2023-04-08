@@ -14,9 +14,11 @@ package org.openapitools.client.model;
 
 import org.openapitools.client.model.CommonAudit;
 import org.openapitools.client.model.ComputedECommunicationDirection;
-import org.openapitools.client.model.CustomContactNameResponse;
+import org.openapitools.client.model.DescriptionstaticResponse;
+import org.openapitools.client.model.EmailstaticResponse;
 import org.openapitools.client.model.FieldECommunicationImportance;
 import org.openapitools.client.model.FieldECommunicationType;
+import org.openapitools.client.model.PhonestaticResponse;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -34,12 +36,18 @@ public class CommunicationResponse {
   private FieldECommunicationType eCommunicationType = null;
   @SerializedName("sCommunicationSubject")
   private String sCommunicationSubject = null;
+  @SerializedName("sCommunicationBodyurl")
+  private String sCommunicationBodyurl = null;
   @SerializedName("eCommunicationDirection")
   private ComputedECommunicationDirection eCommunicationDirection = null;
   @SerializedName("iCommunicationrecipientCount")
   private Integer iCommunicationrecipientCount = null;
-  @SerializedName("objContactFrom")
-  private CustomContactNameResponse objContactFrom = null;
+  @SerializedName("objDescriptionstaticSender")
+  private DescriptionstaticResponse objDescriptionstaticSender = null;
+  @SerializedName("objEmailstaticSender")
+  private EmailstaticResponse objEmailstaticSender = null;
+  @SerializedName("objPhonestaticSender")
+  private PhonestaticResponse objPhonestaticSender = null;
   @SerializedName("objAudit")
   private CommonAudit objAudit = null;
 
@@ -87,6 +95,17 @@ public class CommunicationResponse {
   }
 
   /**
+   * The url of the body used as body in the Communication
+   **/
+  @ApiModelProperty(value = "The url of the body used as body in the Communication")
+  public String getSCommunicationBodyurl() {
+    return sCommunicationBodyurl;
+  }
+  public void setSCommunicationBodyurl(String sCommunicationBodyurl) {
+    this.sCommunicationBodyurl = sCommunicationBodyurl;
+  }
+
+  /**
    **/
   @ApiModelProperty(required = true, value = "")
   public ComputedECommunicationDirection getECommunicationDirection() {
@@ -109,12 +128,32 @@ public class CommunicationResponse {
 
   /**
    **/
-  @ApiModelProperty(required = true, value = "")
-  public CustomContactNameResponse getObjContactFrom() {
-    return objContactFrom;
+  @ApiModelProperty(value = "")
+  public DescriptionstaticResponse getObjDescriptionstaticSender() {
+    return objDescriptionstaticSender;
   }
-  public void setObjContactFrom(CustomContactNameResponse objContactFrom) {
-    this.objContactFrom = objContactFrom;
+  public void setObjDescriptionstaticSender(DescriptionstaticResponse objDescriptionstaticSender) {
+    this.objDescriptionstaticSender = objDescriptionstaticSender;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public EmailstaticResponse getObjEmailstaticSender() {
+    return objEmailstaticSender;
+  }
+  public void setObjEmailstaticSender(EmailstaticResponse objEmailstaticSender) {
+    this.objEmailstaticSender = objEmailstaticSender;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public PhonestaticResponse getObjPhonestaticSender() {
+    return objPhonestaticSender;
+  }
+  public void setObjPhonestaticSender(PhonestaticResponse objPhonestaticSender) {
+    this.objPhonestaticSender = objPhonestaticSender;
   }
 
   /**
@@ -141,9 +180,12 @@ public class CommunicationResponse {
         (this.eCommunicationImportance == null ? communicationResponse.eCommunicationImportance == null : this.eCommunicationImportance.equals(communicationResponse.eCommunicationImportance)) &&
         (this.eCommunicationType == null ? communicationResponse.eCommunicationType == null : this.eCommunicationType.equals(communicationResponse.eCommunicationType)) &&
         (this.sCommunicationSubject == null ? communicationResponse.sCommunicationSubject == null : this.sCommunicationSubject.equals(communicationResponse.sCommunicationSubject)) &&
+        (this.sCommunicationBodyurl == null ? communicationResponse.sCommunicationBodyurl == null : this.sCommunicationBodyurl.equals(communicationResponse.sCommunicationBodyurl)) &&
         (this.eCommunicationDirection == null ? communicationResponse.eCommunicationDirection == null : this.eCommunicationDirection.equals(communicationResponse.eCommunicationDirection)) &&
         (this.iCommunicationrecipientCount == null ? communicationResponse.iCommunicationrecipientCount == null : this.iCommunicationrecipientCount.equals(communicationResponse.iCommunicationrecipientCount)) &&
-        (this.objContactFrom == null ? communicationResponse.objContactFrom == null : this.objContactFrom.equals(communicationResponse.objContactFrom)) &&
+        (this.objDescriptionstaticSender == null ? communicationResponse.objDescriptionstaticSender == null : this.objDescriptionstaticSender.equals(communicationResponse.objDescriptionstaticSender)) &&
+        (this.objEmailstaticSender == null ? communicationResponse.objEmailstaticSender == null : this.objEmailstaticSender.equals(communicationResponse.objEmailstaticSender)) &&
+        (this.objPhonestaticSender == null ? communicationResponse.objPhonestaticSender == null : this.objPhonestaticSender.equals(communicationResponse.objPhonestaticSender)) &&
         (this.objAudit == null ? communicationResponse.objAudit == null : this.objAudit.equals(communicationResponse.objAudit));
   }
 
@@ -154,9 +196,12 @@ public class CommunicationResponse {
     result = 31 * result + (this.eCommunicationImportance == null ? 0: this.eCommunicationImportance.hashCode());
     result = 31 * result + (this.eCommunicationType == null ? 0: this.eCommunicationType.hashCode());
     result = 31 * result + (this.sCommunicationSubject == null ? 0: this.sCommunicationSubject.hashCode());
+    result = 31 * result + (this.sCommunicationBodyurl == null ? 0: this.sCommunicationBodyurl.hashCode());
     result = 31 * result + (this.eCommunicationDirection == null ? 0: this.eCommunicationDirection.hashCode());
     result = 31 * result + (this.iCommunicationrecipientCount == null ? 0: this.iCommunicationrecipientCount.hashCode());
-    result = 31 * result + (this.objContactFrom == null ? 0: this.objContactFrom.hashCode());
+    result = 31 * result + (this.objDescriptionstaticSender == null ? 0: this.objDescriptionstaticSender.hashCode());
+    result = 31 * result + (this.objEmailstaticSender == null ? 0: this.objEmailstaticSender.hashCode());
+    result = 31 * result + (this.objPhonestaticSender == null ? 0: this.objPhonestaticSender.hashCode());
     result = 31 * result + (this.objAudit == null ? 0: this.objAudit.hashCode());
     return result;
   }
@@ -170,9 +215,12 @@ public class CommunicationResponse {
     sb.append("  eCommunicationImportance: ").append(eCommunicationImportance).append("\n");
     sb.append("  eCommunicationType: ").append(eCommunicationType).append("\n");
     sb.append("  sCommunicationSubject: ").append(sCommunicationSubject).append("\n");
+    sb.append("  sCommunicationBodyurl: ").append(sCommunicationBodyurl).append("\n");
     sb.append("  eCommunicationDirection: ").append(eCommunicationDirection).append("\n");
     sb.append("  iCommunicationrecipientCount: ").append(iCommunicationrecipientCount).append("\n");
-    sb.append("  objContactFrom: ").append(objContactFrom).append("\n");
+    sb.append("  objDescriptionstaticSender: ").append(objDescriptionstaticSender).append("\n");
+    sb.append("  objEmailstaticSender: ").append(objEmailstaticSender).append("\n");
+    sb.append("  objPhonestaticSender: ").append(objPhonestaticSender).append("\n");
     sb.append("  objAudit: ").append(objAudit).append("\n");
     sb.append("}\n");
     return sb.toString();

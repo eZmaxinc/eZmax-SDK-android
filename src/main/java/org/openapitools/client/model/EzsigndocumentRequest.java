@@ -37,7 +37,7 @@ public class EzsigndocumentRequest {
   @SerializedName("eEzsigndocumentSource")
   private EEzsigndocumentSourceEnum eEzsigndocumentSource = null;
   public enum EEzsigndocumentFormatEnum {
-     Pdf, 
+     Pdf,  Doc,  Docx,  Xls,  Xlsx,  Ppt,  Pptx, 
   };
   @SerializedName("eEzsigndocumentFormat")
   private EEzsigndocumentFormatEnum eEzsigndocumentFormat = null;
@@ -58,6 +58,8 @@ public class EzsigndocumentRequest {
   private String dtEzsigndocumentDuedate = null;
   @SerializedName("sEzsigndocumentName")
   private String sEzsigndocumentName = null;
+  @SerializedName("sEzsigndocumentExternalid")
+  private String sEzsigndocumentExternalid = null;
 
   /**
    * The unique ID of the Ezsigndocument
@@ -219,6 +221,17 @@ public class EzsigndocumentRequest {
     this.sEzsigndocumentName = sEzsigndocumentName;
   }
 
+  /**
+   * This field can be used to store an External ID from the client's system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. 
+   **/
+  @ApiModelProperty(value = "This field can be used to store an External ID from the client's system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. ")
+  public String getSEzsigndocumentExternalid() {
+    return sEzsigndocumentExternalid;
+  }
+  public void setSEzsigndocumentExternalid(String sEzsigndocumentExternalid) {
+    this.sEzsigndocumentExternalid = sEzsigndocumentExternalid;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -242,7 +255,8 @@ public class EzsigndocumentRequest {
         (this.sEzsigndocumentPassword == null ? ezsigndocumentRequest.sEzsigndocumentPassword == null : this.sEzsigndocumentPassword.equals(ezsigndocumentRequest.sEzsigndocumentPassword)) &&
         (this.eEzsigndocumentForm == null ? ezsigndocumentRequest.eEzsigndocumentForm == null : this.eEzsigndocumentForm.equals(ezsigndocumentRequest.eEzsigndocumentForm)) &&
         (this.dtEzsigndocumentDuedate == null ? ezsigndocumentRequest.dtEzsigndocumentDuedate == null : this.dtEzsigndocumentDuedate.equals(ezsigndocumentRequest.dtEzsigndocumentDuedate)) &&
-        (this.sEzsigndocumentName == null ? ezsigndocumentRequest.sEzsigndocumentName == null : this.sEzsigndocumentName.equals(ezsigndocumentRequest.sEzsigndocumentName));
+        (this.sEzsigndocumentName == null ? ezsigndocumentRequest.sEzsigndocumentName == null : this.sEzsigndocumentName.equals(ezsigndocumentRequest.sEzsigndocumentName)) &&
+        (this.sEzsigndocumentExternalid == null ? ezsigndocumentRequest.sEzsigndocumentExternalid == null : this.sEzsigndocumentExternalid.equals(ezsigndocumentRequest.sEzsigndocumentExternalid));
   }
 
   @Override
@@ -262,6 +276,7 @@ public class EzsigndocumentRequest {
     result = 31 * result + (this.eEzsigndocumentForm == null ? 0: this.eEzsigndocumentForm.hashCode());
     result = 31 * result + (this.dtEzsigndocumentDuedate == null ? 0: this.dtEzsigndocumentDuedate.hashCode());
     result = 31 * result + (this.sEzsigndocumentName == null ? 0: this.sEzsigndocumentName.hashCode());
+    result = 31 * result + (this.sEzsigndocumentExternalid == null ? 0: this.sEzsigndocumentExternalid.hashCode());
     return result;
   }
 
@@ -284,6 +299,7 @@ public class EzsigndocumentRequest {
     sb.append("  eEzsigndocumentForm: ").append(eEzsigndocumentForm).append("\n");
     sb.append("  dtEzsigndocumentDuedate: ").append(dtEzsigndocumentDuedate).append("\n");
     sb.append("  sEzsigndocumentName: ").append(sEzsigndocumentName).append("\n");
+    sb.append("  sEzsigndocumentExternalid: ").append(sEzsigndocumentExternalid).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

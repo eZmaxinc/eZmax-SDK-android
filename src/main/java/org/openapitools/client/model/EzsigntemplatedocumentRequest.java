@@ -37,7 +37,7 @@ public class EzsigntemplatedocumentRequest {
   @SerializedName("eEzsigntemplatedocumentSource")
   private EEzsigntemplatedocumentSourceEnum eEzsigntemplatedocumentSource = null;
   public enum EEzsigntemplatedocumentFormatEnum {
-     Pdf, 
+     Pdf,  Doc,  Docx,  Xls,  Xlsx,  Ppt,  Pptx, 
   };
   @SerializedName("eEzsigntemplatedocumentFormat")
   private EEzsigntemplatedocumentFormatEnum eEzsigntemplatedocumentFormat = null;

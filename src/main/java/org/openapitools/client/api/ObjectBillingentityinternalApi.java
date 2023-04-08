@@ -23,8 +23,16 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
+import org.openapitools.client.model.BillingentityinternalCreateObjectV1Request;
+import org.openapitools.client.model.BillingentityinternalCreateObjectV1Response;
+import org.openapitools.client.model.BillingentityinternalDeleteObjectV1Response;
+import org.openapitools.client.model.BillingentityinternalEditObjectV1Request;
+import org.openapitools.client.model.BillingentityinternalEditObjectV1Response;
 import org.openapitools.client.model.BillingentityinternalGetAutocompleteV2Response;
-import org.openapitools.client.model.CommonGetAutocompleteV1Response;
+import org.openapitools.client.model.BillingentityinternalGetListV1Response;
+import org.openapitools.client.model.BillingentityinternalGetObjectV2Response;
+import org.openapitools.client.model.CommonResponseError;
+import java.io.File;
 import org.openapitools.client.model.HeaderAcceptLanguage;
 
 import org.apache.http.HttpEntity;
@@ -58,24 +66,21 @@ public class ObjectBillingentityinternalApi {
   }
 
   /**
-  * Retrieve Billingentityinternals and IDs
-  * Get the list of Billingentityinternal to be used in a dropdown or autocomplete control.
-   * @param sSelector The type of Billingentityinternals to return
-   * @param eFilterActive Specify which results we want to display.
-   * @param sQuery Allow to filter the returned results
-   * @param acceptLanguage 
-   * @return CommonGetAutocompleteV1Response
+  * Create a new Billingentityinternal
+  * The endpoint allows to create one or many elements at once.
+   * @param billingentityinternalCreateObjectV1Request 
+   * @return BillingentityinternalCreateObjectV1Response
   */
-  public CommonGetAutocompleteV1Response billingentityinternalGetAutocompleteV1 (String sSelector, String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
-    Object postBody = null;
-    // verify the required parameter 'sSelector' is set
-    if (sSelector == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'sSelector' when calling billingentityinternalGetAutocompleteV1",
-        new ApiException(400, "Missing the required parameter 'sSelector' when calling billingentityinternalGetAutocompleteV1"));
+  public BillingentityinternalCreateObjectV1Response billingentityinternalCreateObjectV1 (BillingentityinternalCreateObjectV1Request billingentityinternalCreateObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = billingentityinternalCreateObjectV1Request;
+    // verify the required parameter 'billingentityinternalCreateObjectV1Request' is set
+    if (billingentityinternalCreateObjectV1Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'billingentityinternalCreateObjectV1Request' when calling billingentityinternalCreateObjectV1",
+        new ApiException(400, "Missing the required parameter 'billingentityinternalCreateObjectV1Request' when calling billingentityinternalCreateObjectV1"));
     }
 
     // create path and map variables
-    String path = "/1/object/billingentityinternal/getAutocomplete/{sSelector}".replaceAll("\\{" + "sSelector" + "\\}", apiInvoker.escapeString(sSelector.toString()));
+    String path = "/1/object/billingentityinternal";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -83,10 +88,8 @@ public class ObjectBillingentityinternalApi {
     Map<String, String> headerParams = new HashMap<String, String>();
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "eFilterActive", eFilterActive));
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "sQuery", sQuery));
-    headerParams.put("Accept-Language", ApiInvoker.parameterToString(acceptLanguage));
     String[] contentTypes = {
+      "application/json"
     };
     String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
 
@@ -102,9 +105,9 @@ public class ObjectBillingentityinternalApi {
     String[] authNames = new String[] { "Authorization" };
 
     try {
-      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonGetAutocompleteV1Response) ApiInvoker.deserialize(localVarResponse, "", CommonGetAutocompleteV1Response.class);
+         return (BillingentityinternalCreateObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", BillingentityinternalCreateObjectV1Response.class);
       } else {
          return null;
       }
@@ -126,21 +129,21 @@ public class ObjectBillingentityinternalApi {
   }
 
       /**
-   * Retrieve Billingentityinternals and IDs
-   * Get the list of Billingentityinternal to be used in a dropdown or autocomplete control.
-   * @param sSelector The type of Billingentityinternals to return   * @param eFilterActive Specify which results we want to display.   * @param sQuery Allow to filter the returned results   * @param acceptLanguage 
+   * Create a new Billingentityinternal
+   * The endpoint allows to create one or many elements at once.
+   * @param billingentityinternalCreateObjectV1Request 
   */
-  public void billingentityinternalGetAutocompleteV1 (String sSelector, String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage, final Response.Listener<CommonGetAutocompleteV1Response> responseListener, final Response.ErrorListener errorListener) {
-    Object postBody = null;
+  public void billingentityinternalCreateObjectV1 (BillingentityinternalCreateObjectV1Request billingentityinternalCreateObjectV1Request, final Response.Listener<BillingentityinternalCreateObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = billingentityinternalCreateObjectV1Request;
 
-    // verify the required parameter 'sSelector' is set
-    if (sSelector == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'sSelector' when calling billingentityinternalGetAutocompleteV1",
-        new ApiException(400, "Missing the required parameter 'sSelector' when calling billingentityinternalGetAutocompleteV1"));
+    // verify the required parameter 'billingentityinternalCreateObjectV1Request' is set
+    if (billingentityinternalCreateObjectV1Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'billingentityinternalCreateObjectV1Request' when calling billingentityinternalCreateObjectV1",
+        new ApiException(400, "Missing the required parameter 'billingentityinternalCreateObjectV1Request' when calling billingentityinternalCreateObjectV1"));
     }
 
     // create path and map variables
-    String path = "/1/object/billingentityinternal/getAutocomplete/{sSelector}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "sSelector" + "\\}", apiInvoker.escapeString(sSelector.toString()));
+    String path = "/1/object/billingentityinternal".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -149,10 +152,134 @@ public class ObjectBillingentityinternalApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
 
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "eFilterActive", eFilterActive));
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "sQuery", sQuery));
 
-    headerParams.put("Accept-Language", ApiInvoker.parameterToString(acceptLanguage));
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((BillingentityinternalCreateObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", BillingentityinternalCreateObjectV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Delete an existing Billingentityinternal
+  * 
+   * @param pkiBillingentityinternalID The unique ID of the Billingentityinternal
+   * @return BillingentityinternalDeleteObjectV1Response
+  */
+  public BillingentityinternalDeleteObjectV1Response billingentityinternalDeleteObjectV1 (Integer pkiBillingentityinternalID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiBillingentityinternalID' is set
+    if (pkiBillingentityinternalID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiBillingentityinternalID' when calling billingentityinternalDeleteObjectV1",
+        new ApiException(400, "Missing the required parameter 'pkiBillingentityinternalID' when calling billingentityinternalDeleteObjectV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/billingentityinternal/{pkiBillingentityinternalID}".replaceAll("\\{" + "pkiBillingentityinternalID" + "\\}", apiInvoker.escapeString(pkiBillingentityinternalID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "DELETE", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (BillingentityinternalDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", BillingentityinternalDeleteObjectV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Delete an existing Billingentityinternal
+   * 
+   * @param pkiBillingentityinternalID The unique ID of the Billingentityinternal
+  */
+  public void billingentityinternalDeleteObjectV1 (Integer pkiBillingentityinternalID, final Response.Listener<BillingentityinternalDeleteObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiBillingentityinternalID' is set
+    if (pkiBillingentityinternalID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiBillingentityinternalID' when calling billingentityinternalDeleteObjectV1",
+        new ApiException(400, "Missing the required parameter 'pkiBillingentityinternalID' when calling billingentityinternalDeleteObjectV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/billingentityinternal/{pkiBillingentityinternalID}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiBillingentityinternalID" + "\\}", apiInvoker.escapeString(pkiBillingentityinternalID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
 
     String[] contentTypes = {
       
@@ -173,12 +300,151 @@ public class ObjectBillingentityinternalApi {
     String[] authNames = new String[] { "Authorization" };
 
     try {
-      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+      apiInvoker.invokeAPI(basePath, path, "DELETE", queryParams, postBody, headerParams, formParams, contentType, authNames,
         new Response.Listener<String>() {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonGetAutocompleteV1Response) ApiInvoker.deserialize(localVarResponse,  "", CommonGetAutocompleteV1Response.class));
+              responseListener.onResponse((BillingentityinternalDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", BillingentityinternalDeleteObjectV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Edit an existing Billingentityinternal
+  * 
+   * @param pkiBillingentityinternalID The unique ID of the Billingentityinternal
+   * @param billingentityinternalEditObjectV1Request 
+   * @return BillingentityinternalEditObjectV1Response
+  */
+  public BillingentityinternalEditObjectV1Response billingentityinternalEditObjectV1 (Integer pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = billingentityinternalEditObjectV1Request;
+    // verify the required parameter 'pkiBillingentityinternalID' is set
+    if (pkiBillingentityinternalID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiBillingentityinternalID' when calling billingentityinternalEditObjectV1",
+        new ApiException(400, "Missing the required parameter 'pkiBillingentityinternalID' when calling billingentityinternalEditObjectV1"));
+    }
+    // verify the required parameter 'billingentityinternalEditObjectV1Request' is set
+    if (billingentityinternalEditObjectV1Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'billingentityinternalEditObjectV1Request' when calling billingentityinternalEditObjectV1",
+        new ApiException(400, "Missing the required parameter 'billingentityinternalEditObjectV1Request' when calling billingentityinternalEditObjectV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/billingentityinternal/{pkiBillingentityinternalID}".replaceAll("\\{" + "pkiBillingentityinternalID" + "\\}", apiInvoker.escapeString(pkiBillingentityinternalID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (BillingentityinternalEditObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", BillingentityinternalEditObjectV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Edit an existing Billingentityinternal
+   * 
+   * @param pkiBillingentityinternalID The unique ID of the Billingentityinternal   * @param billingentityinternalEditObjectV1Request 
+  */
+  public void billingentityinternalEditObjectV1 (Integer pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request, final Response.Listener<BillingentityinternalEditObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = billingentityinternalEditObjectV1Request;
+
+    // verify the required parameter 'pkiBillingentityinternalID' is set
+    if (pkiBillingentityinternalID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiBillingentityinternalID' when calling billingentityinternalEditObjectV1",
+        new ApiException(400, "Missing the required parameter 'pkiBillingentityinternalID' when calling billingentityinternalEditObjectV1"));
+    }
+    // verify the required parameter 'billingentityinternalEditObjectV1Request' is set
+    if (billingentityinternalEditObjectV1Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'billingentityinternalEditObjectV1Request' when calling billingentityinternalEditObjectV1",
+        new ApiException(400, "Missing the required parameter 'billingentityinternalEditObjectV1Request' when calling billingentityinternalEditObjectV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/billingentityinternal/{pkiBillingentityinternalID}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiBillingentityinternalID" + "\\}", apiInvoker.escapeString(pkiBillingentityinternalID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((BillingentityinternalEditObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", BillingentityinternalEditObjectV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -315,6 +581,264 @@ public class ObjectBillingentityinternalApi {
           public void onResponse(String localVarResponse) {
             try {
               responseListener.onResponse((BillingentityinternalGetAutocompleteV2Response) ApiInvoker.deserialize(localVarResponse,  "", BillingentityinternalGetAutocompleteV2Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Retrieve Billingentityinternal list
+  * 
+   * @param eOrderBy Specify how you want the results to be sorted
+   * @param iRowMax 
+   * @param iRowOffset 
+   * @param acceptLanguage 
+   * @param sFilter 
+   * @return BillingentityinternalGetListV1Response
+  */
+  public BillingentityinternalGetListV1Response billingentityinternalGetListV1 (String eOrderBy, Integer iRowMax, Integer iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/1/object/billingentityinternal/getList";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "eOrderBy", eOrderBy));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "iRowMax", iRowMax));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "iRowOffset", iRowOffset));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "sFilter", sFilter));
+    headerParams.put("Accept-Language", ApiInvoker.parameterToString(acceptLanguage));
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (BillingentityinternalGetListV1Response) ApiInvoker.deserialize(localVarResponse, "", BillingentityinternalGetListV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve Billingentityinternal list
+   * 
+   * @param eOrderBy Specify how you want the results to be sorted   * @param iRowMax    * @param iRowOffset    * @param acceptLanguage    * @param sFilter 
+  */
+  public void billingentityinternalGetListV1 (String eOrderBy, Integer iRowMax, Integer iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter, final Response.Listener<BillingentityinternalGetListV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/1/object/billingentityinternal/getList".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "eOrderBy", eOrderBy));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "iRowMax", iRowMax));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "iRowOffset", iRowOffset));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "sFilter", sFilter));
+
+    headerParams.put("Accept-Language", ApiInvoker.parameterToString(acceptLanguage));
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((BillingentityinternalGetListV1Response) ApiInvoker.deserialize(localVarResponse,  "", BillingentityinternalGetListV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Retrieve an existing Billingentityinternal
+  * 
+   * @param pkiBillingentityinternalID The unique ID of the Billingentityinternal
+   * @return BillingentityinternalGetObjectV2Response
+  */
+  public BillingentityinternalGetObjectV2Response billingentityinternalGetObjectV2 (Integer pkiBillingentityinternalID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiBillingentityinternalID' is set
+    if (pkiBillingentityinternalID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiBillingentityinternalID' when calling billingentityinternalGetObjectV2",
+        new ApiException(400, "Missing the required parameter 'pkiBillingentityinternalID' when calling billingentityinternalGetObjectV2"));
+    }
+
+    // create path and map variables
+    String path = "/2/object/billingentityinternal/{pkiBillingentityinternalID}".replaceAll("\\{" + "pkiBillingentityinternalID" + "\\}", apiInvoker.escapeString(pkiBillingentityinternalID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (BillingentityinternalGetObjectV2Response) ApiInvoker.deserialize(localVarResponse, "", BillingentityinternalGetObjectV2Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve an existing Billingentityinternal
+   * 
+   * @param pkiBillingentityinternalID The unique ID of the Billingentityinternal
+  */
+  public void billingentityinternalGetObjectV2 (Integer pkiBillingentityinternalID, final Response.Listener<BillingentityinternalGetObjectV2Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiBillingentityinternalID' is set
+    if (pkiBillingentityinternalID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiBillingentityinternalID' when calling billingentityinternalGetObjectV2",
+        new ApiException(400, "Missing the required parameter 'pkiBillingentityinternalID' when calling billingentityinternalGetObjectV2"));
+    }
+
+    // create path and map variables
+    String path = "/2/object/billingentityinternal/{pkiBillingentityinternalID}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiBillingentityinternalID" + "\\}", apiInvoker.escapeString(pkiBillingentityinternalID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((BillingentityinternalGetObjectV2Response) ApiInvoker.deserialize(localVarResponse,  "", BillingentityinternalGetObjectV2Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

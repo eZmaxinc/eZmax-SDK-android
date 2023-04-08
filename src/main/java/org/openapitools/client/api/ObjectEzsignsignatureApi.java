@@ -31,7 +31,7 @@ import org.openapitools.client.model.EzsignsignatureCreateObjectV2Response;
 import org.openapitools.client.model.EzsignsignatureDeleteObjectV1Response;
 import org.openapitools.client.model.EzsignsignatureEditObjectV1Request;
 import org.openapitools.client.model.EzsignsignatureEditObjectV1Response;
-import org.openapitools.client.model.EzsignsignatureGetObjectV1Response;
+import org.openapitools.client.model.EzsignsignatureGetEzsignsignaturesAutomaticV1Response;
 import org.openapitools.client.model.EzsignsignatureGetObjectV2Response;
 import org.openapitools.client.model.EzsignsignatureSignV1Request;
 import org.openapitools.client.model.EzsignsignatureSignV1Response;
@@ -590,21 +590,15 @@ public class ObjectEzsignsignatureApi {
     }
   }
   /**
-  * Retrieve an existing Ezsignsignature
-  * 
-   * @param pkiEzsignsignatureID 
-   * @return EzsignsignatureGetObjectV1Response
+  * Retrieve all automatic Ezsignsignatures
+  * Return all the Ezsignsignatures that can be signed by the current user
+   * @return EzsignsignatureGetEzsignsignaturesAutomaticV1Response
   */
-  public EzsignsignatureGetObjectV1Response ezsignsignatureGetObjectV1 (Integer pkiEzsignsignatureID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public EzsignsignatureGetEzsignsignaturesAutomaticV1Response ezsignsignatureGetEzsignsignaturesAutomaticV1 () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
-    // verify the required parameter 'pkiEzsignsignatureID' is set
-    if (pkiEzsignsignatureID == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsignsignatureID' when calling ezsignsignatureGetObjectV1",
-        new ApiException(400, "Missing the required parameter 'pkiEzsignsignatureID' when calling ezsignsignatureGetObjectV1"));
-    }
 
     // create path and map variables
-    String path = "/1/object/ezsignsignature/{pkiEzsignsignatureID}".replaceAll("\\{" + "pkiEzsignsignatureID" + "\\}", apiInvoker.escapeString(pkiEzsignsignatureID.toString()));
+    String path = "/1/object/ezsignsignature/getEzsignsignaturesAutomatic";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -630,7 +624,7 @@ public class ObjectEzsignsignatureApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (EzsignsignatureGetObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsignsignatureGetObjectV1Response.class);
+         return (EzsignsignatureGetEzsignsignaturesAutomaticV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsignsignatureGetEzsignsignaturesAutomaticV1Response.class);
       } else {
          return null;
       }
@@ -652,21 +646,16 @@ public class ObjectEzsignsignatureApi {
   }
 
       /**
-   * Retrieve an existing Ezsignsignature
-   * 
-   * @param pkiEzsignsignatureID 
+   * Retrieve all automatic Ezsignsignatures
+   * Return all the Ezsignsignatures that can be signed by the current user
+
   */
-  public void ezsignsignatureGetObjectV1 (Integer pkiEzsignsignatureID, final Response.Listener<EzsignsignatureGetObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
+  public void ezsignsignatureGetEzsignsignaturesAutomaticV1 (final Response.Listener<EzsignsignatureGetEzsignsignaturesAutomaticV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
-    // verify the required parameter 'pkiEzsignsignatureID' is set
-    if (pkiEzsignsignatureID == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsignsignatureID' when calling ezsignsignatureGetObjectV1",
-        new ApiException(400, "Missing the required parameter 'pkiEzsignsignatureID' when calling ezsignsignatureGetObjectV1"));
-    }
 
     // create path and map variables
-    String path = "/1/object/ezsignsignature/{pkiEzsignsignatureID}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiEzsignsignatureID" + "\\}", apiInvoker.escapeString(pkiEzsignsignatureID.toString()));
+    String path = "/1/object/ezsignsignature/getEzsignsignaturesAutomatic".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -701,7 +690,7 @@ public class ObjectEzsignsignatureApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((EzsignsignatureGetObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsignsignatureGetObjectV1Response.class));
+              responseListener.onResponse((EzsignsignatureGetEzsignsignaturesAutomaticV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsignsignatureGetEzsignsignaturesAutomaticV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

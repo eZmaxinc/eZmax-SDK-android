@@ -64,6 +64,8 @@ public class EzsignfolderGetObjectV1ResponseMPayload {
   private String tEzsignfolderMessage = null;
   @SerializedName("objAudit")
   private CommonAudit objAudit = null;
+  @SerializedName("sEzsignfolderExternalid")
+  private String sEzsignfolderExternalid = null;
 
   /**
    * The unique ID of the Ezsignfolder
@@ -287,6 +289,17 @@ public class EzsignfolderGetObjectV1ResponseMPayload {
     this.objAudit = objAudit;
   }
 
+  /**
+   * This field can be used to store an External ID from the client's system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. 
+   **/
+  @ApiModelProperty(required = true, value = "This field can be used to store an External ID from the client's system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. ")
+  public String getSEzsignfolderExternalid() {
+    return sEzsignfolderExternalid;
+  }
+  public void setSEzsignfolderExternalid(String sEzsignfolderExternalid) {
+    this.sEzsignfolderExternalid = sEzsignfolderExternalid;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -316,7 +329,8 @@ public class EzsignfolderGetObjectV1ResponseMPayload {
         (this.eEzsignfolderStep == null ? ezsignfolderGetObjectV1ResponseMPayload.eEzsignfolderStep == null : this.eEzsignfolderStep.equals(ezsignfolderGetObjectV1ResponseMPayload.eEzsignfolderStep)) &&
         (this.dtEzsignfolderClose == null ? ezsignfolderGetObjectV1ResponseMPayload.dtEzsignfolderClose == null : this.dtEzsignfolderClose.equals(ezsignfolderGetObjectV1ResponseMPayload.dtEzsignfolderClose)) &&
         (this.tEzsignfolderMessage == null ? ezsignfolderGetObjectV1ResponseMPayload.tEzsignfolderMessage == null : this.tEzsignfolderMessage.equals(ezsignfolderGetObjectV1ResponseMPayload.tEzsignfolderMessage)) &&
-        (this.objAudit == null ? ezsignfolderGetObjectV1ResponseMPayload.objAudit == null : this.objAudit.equals(ezsignfolderGetObjectV1ResponseMPayload.objAudit));
+        (this.objAudit == null ? ezsignfolderGetObjectV1ResponseMPayload.objAudit == null : this.objAudit.equals(ezsignfolderGetObjectV1ResponseMPayload.objAudit)) &&
+        (this.sEzsignfolderExternalid == null ? ezsignfolderGetObjectV1ResponseMPayload.sEzsignfolderExternalid == null : this.sEzsignfolderExternalid.equals(ezsignfolderGetObjectV1ResponseMPayload.sEzsignfolderExternalid));
   }
 
   @Override
@@ -342,6 +356,7 @@ public class EzsignfolderGetObjectV1ResponseMPayload {
     result = 31 * result + (this.dtEzsignfolderClose == null ? 0: this.dtEzsignfolderClose.hashCode());
     result = 31 * result + (this.tEzsignfolderMessage == null ? 0: this.tEzsignfolderMessage.hashCode());
     result = 31 * result + (this.objAudit == null ? 0: this.objAudit.hashCode());
+    result = 31 * result + (this.sEzsignfolderExternalid == null ? 0: this.sEzsignfolderExternalid.hashCode());
     return result;
   }
 
@@ -370,6 +385,7 @@ public class EzsignfolderGetObjectV1ResponseMPayload {
     sb.append("  dtEzsignfolderClose: ").append(dtEzsignfolderClose).append("\n");
     sb.append("  tEzsignfolderMessage: ").append(tEzsignfolderMessage).append("\n");
     sb.append("  objAudit: ").append(objAudit).append("\n");
+    sb.append("  sEzsignfolderExternalid: ").append(sEzsignfolderExternalid).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

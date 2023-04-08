@@ -12,6 +12,7 @@
 
 package org.openapitools.client.model;
 
+import org.openapitools.client.model.CommonAudit;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -37,6 +38,8 @@ public class EzsigntemplateResponse {
   private Boolean bEzsigntemplateAdminonly = null;
   @SerializedName("sEzsignfoldertypeNameX")
   private String sEzsignfoldertypeNameX = null;
+  @SerializedName("objAudit")
+  private CommonAudit objAudit = null;
 
   /**
    * The unique ID of the Ezsigntemplate
@@ -131,6 +134,16 @@ public class EzsigntemplateResponse {
     this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
   }
 
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public CommonAudit getObjAudit() {
+    return objAudit;
+  }
+  public void setObjAudit(CommonAudit objAudit) {
+    this.objAudit = objAudit;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -148,7 +161,8 @@ public class EzsigntemplateResponse {
         (this.sLanguageNameX == null ? ezsigntemplateResponse.sLanguageNameX == null : this.sLanguageNameX.equals(ezsigntemplateResponse.sLanguageNameX)) &&
         (this.sEzsigntemplateDescription == null ? ezsigntemplateResponse.sEzsigntemplateDescription == null : this.sEzsigntemplateDescription.equals(ezsigntemplateResponse.sEzsigntemplateDescription)) &&
         (this.bEzsigntemplateAdminonly == null ? ezsigntemplateResponse.bEzsigntemplateAdminonly == null : this.bEzsigntemplateAdminonly.equals(ezsigntemplateResponse.bEzsigntemplateAdminonly)) &&
-        (this.sEzsignfoldertypeNameX == null ? ezsigntemplateResponse.sEzsignfoldertypeNameX == null : this.sEzsignfoldertypeNameX.equals(ezsigntemplateResponse.sEzsignfoldertypeNameX));
+        (this.sEzsignfoldertypeNameX == null ? ezsigntemplateResponse.sEzsignfoldertypeNameX == null : this.sEzsignfoldertypeNameX.equals(ezsigntemplateResponse.sEzsignfoldertypeNameX)) &&
+        (this.objAudit == null ? ezsigntemplateResponse.objAudit == null : this.objAudit.equals(ezsigntemplateResponse.objAudit));
   }
 
   @Override
@@ -162,6 +176,7 @@ public class EzsigntemplateResponse {
     result = 31 * result + (this.sEzsigntemplateDescription == null ? 0: this.sEzsigntemplateDescription.hashCode());
     result = 31 * result + (this.bEzsigntemplateAdminonly == null ? 0: this.bEzsigntemplateAdminonly.hashCode());
     result = 31 * result + (this.sEzsignfoldertypeNameX == null ? 0: this.sEzsignfoldertypeNameX.hashCode());
+    result = 31 * result + (this.objAudit == null ? 0: this.objAudit.hashCode());
     return result;
   }
 
@@ -178,6 +193,7 @@ public class EzsigntemplateResponse {
     sb.append("  sEzsigntemplateDescription: ").append(sEzsigntemplateDescription).append("\n");
     sb.append("  bEzsigntemplateAdminonly: ").append(bEzsigntemplateAdminonly).append("\n");
     sb.append("  sEzsignfoldertypeNameX: ").append(sEzsignfoldertypeNameX).append("\n");
+    sb.append("  objAudit: ").append(objAudit).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

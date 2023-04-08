@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**ezsignsignatureCreateObjectV2**](ObjectEzsignsignatureApi.md#ezsignsignatureCreateObjectV2) | **POST** /2/object/ezsignsignature | Create a new Ezsignsignature
 [**ezsignsignatureDeleteObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignatureDeleteObjectV1) | **DELETE** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Delete an existing Ezsignsignature
 [**ezsignsignatureEditObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignatureEditObjectV1) | **PUT** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Edit an existing Ezsignsignature
-[**ezsignsignatureGetObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignatureGetObjectV1) | **GET** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Retrieve an existing Ezsignsignature
+[**ezsignsignatureGetEzsignsignaturesAutomaticV1**](ObjectEzsignsignatureApi.md#ezsignsignatureGetEzsignsignaturesAutomaticV1) | **GET** /1/object/ezsignsignature/getEzsignsignaturesAutomatic | Retrieve all automatic Ezsignsignatures
 [**ezsignsignatureGetObjectV2**](ObjectEzsignsignatureApi.md#ezsignsignatureGetObjectV2) | **GET** /2/object/ezsignsignature/{pkiEzsignsignatureID} | Retrieve an existing Ezsignsignature
 [**ezsignsignatureSignV1**](ObjectEzsignsignatureApi.md#ezsignsignatureSignV1) | **POST** /1/object/ezsignsignature/{pkiEzsignsignatureID}/sign | Sign the Ezsignsignature
 
@@ -200,13 +200,13 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## ezsignsignatureGetObjectV1
+## ezsignsignatureGetEzsignsignaturesAutomaticV1
 
-> EzsignsignatureGetObjectV1Response ezsignsignatureGetObjectV1(pkiEzsignsignatureID)
+> EzsignsignatureGetEzsignsignaturesAutomaticV1Response ezsignsignatureGetEzsignsignaturesAutomaticV1()
 
-Retrieve an existing Ezsignsignature
+Retrieve all automatic Ezsignsignatures
 
-
+Return all the Ezsignsignatures that can be signed by the current user
 
 ### Example
 
@@ -215,26 +215,22 @@ Retrieve an existing Ezsignsignature
 //import org.openapitools.client.api.ObjectEzsignsignatureApi;
 
 ObjectEzsignsignatureApi apiInstance = new ObjectEzsignsignatureApi();
-Integer pkiEzsignsignatureID = null; // Integer | 
 try {
-    EzsignsignatureGetObjectV1Response result = apiInstance.ezsignsignatureGetObjectV1(pkiEzsignsignatureID);
+    EzsignsignatureGetEzsignsignaturesAutomaticV1Response result = apiInstance.ezsignsignatureGetEzsignsignaturesAutomaticV1();
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling ObjectEzsignsignatureApi#ezsignsignatureGetObjectV1");
+    System.err.println("Exception when calling ObjectEzsignsignatureApi#ezsignsignatureGetEzsignsignaturesAutomaticV1");
     e.printStackTrace();
 }
 ```
 
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiEzsignsignatureID** | **Integer**|  | [default to null]
+This endpoint does not need any parameter.
 
 ### Return type
 
-[**EzsignsignatureGetObjectV1Response**](EzsignsignatureGetObjectV1Response.md)
+[**EzsignsignatureGetEzsignsignaturesAutomaticV1Response**](EzsignsignatureGetEzsignsignaturesAutomaticV1Response.md)
 
 ### Authorization
 

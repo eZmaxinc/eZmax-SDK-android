@@ -24,8 +24,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
 import org.openapitools.client.model.CommonResponseError;
+import org.openapitools.client.model.EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1Response;
 import org.openapitools.client.model.EzsignbulksendtransmissionGetFormsDataV1Response;
-import org.openapitools.client.model.EzsignbulksendtransmissionGetObjectV1Response;
 import org.openapitools.client.model.EzsignbulksendtransmissionGetObjectV2Response;
 import java.io.File;
 
@@ -187,6 +187,133 @@ public class ObjectEzsignbulksendtransmissionApi {
     }
   }
   /**
+  * Retrieve an existing Ezsignbulksendtransmission&#39;s automatic Ezsignsignatures
+  * Return the Ezsignsignatures that can be signed by the current user at the current step in the process
+   * @param pkiEzsignbulksendtransmissionID 
+   * @return EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1Response
+  */
+  public EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1Response ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1 (Integer pkiEzsignbulksendtransmissionID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiEzsignbulksendtransmissionID' is set
+    if (pkiEzsignbulksendtransmissionID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsignbulksendtransmissionID' when calling ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1",
+        new ApiException(400, "Missing the required parameter 'pkiEzsignbulksendtransmissionID' when calling ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getEzsignsignaturesAutomatic".replaceAll("\\{" + "pkiEzsignbulksendtransmissionID" + "\\}", apiInvoker.escapeString(pkiEzsignbulksendtransmissionID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve an existing Ezsignbulksendtransmission&#39;s automatic Ezsignsignatures
+   * Return the Ezsignsignatures that can be signed by the current user at the current step in the process
+   * @param pkiEzsignbulksendtransmissionID 
+  */
+  public void ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1 (Integer pkiEzsignbulksendtransmissionID, final Response.Listener<EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiEzsignbulksendtransmissionID' is set
+    if (pkiEzsignbulksendtransmissionID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsignbulksendtransmissionID' when calling ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1",
+        new ApiException(400, "Missing the required parameter 'pkiEzsignbulksendtransmissionID' when calling ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getEzsignsignaturesAutomatic".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiEzsignbulksendtransmissionID" + "\\}", apiInvoker.escapeString(pkiEzsignbulksendtransmissionID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
   * Retrieve an existing Ezsignbulksendtransmission&#39;s forms data
   * 
    * @param pkiEzsignbulksendtransmissionID 
@@ -299,133 +426,6 @@ public class ObjectEzsignbulksendtransmissionApi {
           public void onResponse(String localVarResponse) {
             try {
               responseListener.onResponse((EzsignbulksendtransmissionGetFormsDataV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsignbulksendtransmissionGetFormsDataV1Response.class));
-            } catch (ApiException exception) {
-               errorListener.onErrorResponse(new VolleyError(exception));
-            }
-          }
-      }, new Response.ErrorListener() {
-          @Override
-          public void onErrorResponse(VolleyError error) {
-            errorListener.onErrorResponse(error);
-          }
-      });
-    } catch (ApiException ex) {
-      errorListener.onErrorResponse(new VolleyError(ex));
-    }
-  }
-  /**
-  * Retrieve an existing Ezsignbulksendtransmission
-  * 
-   * @param pkiEzsignbulksendtransmissionID 
-   * @return EzsignbulksendtransmissionGetObjectV1Response
-  */
-  public EzsignbulksendtransmissionGetObjectV1Response ezsignbulksendtransmissionGetObjectV1 (Integer pkiEzsignbulksendtransmissionID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
-    Object postBody = null;
-    // verify the required parameter 'pkiEzsignbulksendtransmissionID' is set
-    if (pkiEzsignbulksendtransmissionID == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsignbulksendtransmissionID' when calling ezsignbulksendtransmissionGetObjectV1",
-        new ApiException(400, "Missing the required parameter 'pkiEzsignbulksendtransmissionID' when calling ezsignbulksendtransmissionGetObjectV1"));
-    }
-
-    // create path and map variables
-    String path = "/1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}".replaceAll("\\{" + "pkiEzsignbulksendtransmissionID" + "\\}", apiInvoker.escapeString(pkiEzsignbulksendtransmissionID.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-    String[] contentTypes = {
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
-      HttpEntity httpEntity = localVarBuilder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-    }
-
-    String[] authNames = new String[] { "Authorization" };
-
-    try {
-      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
-      if (localVarResponse != null) {
-         return (EzsignbulksendtransmissionGetObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsignbulksendtransmissionGetObjectV1Response.class);
-      } else {
-         return null;
-      }
-    } catch (ApiException ex) {
-       throw ex;
-    } catch (InterruptedException ex) {
-       throw ex;
-    } catch (ExecutionException ex) {
-      if (ex.getCause() instanceof VolleyError) {
-        VolleyError volleyError = (VolleyError)ex.getCause();
-        if (volleyError.networkResponse != null) {
-          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
-        }
-      }
-      throw ex;
-    } catch (TimeoutException ex) {
-      throw ex;
-    }
-  }
-
-      /**
-   * Retrieve an existing Ezsignbulksendtransmission
-   * 
-   * @param pkiEzsignbulksendtransmissionID 
-  */
-  public void ezsignbulksendtransmissionGetObjectV1 (Integer pkiEzsignbulksendtransmissionID, final Response.Listener<EzsignbulksendtransmissionGetObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
-    Object postBody = null;
-
-    // verify the required parameter 'pkiEzsignbulksendtransmissionID' is set
-    if (pkiEzsignbulksendtransmissionID == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsignbulksendtransmissionID' when calling ezsignbulksendtransmissionGetObjectV1",
-        new ApiException(400, "Missing the required parameter 'pkiEzsignbulksendtransmissionID' when calling ezsignbulksendtransmissionGetObjectV1"));
-    }
-
-    // create path and map variables
-    String path = "/1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiEzsignbulksendtransmissionID" + "\\}", apiInvoker.escapeString(pkiEzsignbulksendtransmissionID.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-
-
-    String[] contentTypes = {
-      
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = localVarBuilder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-          }
-
-    String[] authNames = new String[] { "Authorization" };
-
-    try {
-      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
-        new Response.Listener<String>() {
-          @Override
-          public void onResponse(String localVarResponse) {
-            try {
-              responseListener.onResponse((EzsignbulksendtransmissionGetObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsignbulksendtransmissionGetObjectV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

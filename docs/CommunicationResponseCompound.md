@@ -10,9 +10,12 @@ Name | Type | Description | Notes
 **eCommunicationImportance** | [**FieldECommunicationImportance**](FieldECommunicationImportance.md) |  | 
 **eCommunicationType** | [**FieldECommunicationType**](FieldECommunicationType.md) |  | 
 **sCommunicationSubject** | **String** | The subject of the Communication | 
+**sCommunicationBodyurl** | **String** | The url of the body used as body in the Communication |  [optional]
 **eCommunicationDirection** | [**ComputedECommunicationDirection**](ComputedECommunicationDirection.md) |  | 
 **iCommunicationrecipientCount** | **Integer** | The count of Communicationrecipient | 
-**objContactFrom** | [**CustomContactNameResponse**](CustomContactNameResponse.md) |  | 
+**objDescriptionstaticSender** | [**DescriptionstaticResponse**](DescriptionstaticResponse.md) |  |  [optional]
+**objEmailstaticSender** | [**EmailstaticResponse**](EmailstaticResponse.md) |  |  [optional]
+**objPhonestaticSender** | [**PhonestaticResponse**](PhonestaticResponse.md) |  |  [optional]
 **objAudit** | [**CommonAudit**](CommonAudit.md) |  | 
 **aObjCommunicationattachment** | [**List&lt;CommunicationattachmentResponseCompound&gt;**](CommunicationattachmentResponseCompound.md) |  | 
 **aObjCommunicationrecipient** | [**List&lt;CommunicationrecipientResponseCompound&gt;**](CommunicationrecipientResponseCompound.md) |  | 
