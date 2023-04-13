@@ -41,7 +41,8 @@ public class UsergroupAutocompleteElementResponse {
 
   /**
    * The unique ID of the Usergroup
-   * minimum: 0
+   * minimum: 1
+   * maximum: 255
    **/
   @ApiModelProperty(required = true, value = "The unique ID of the Usergroup")
   public Integer getPkiUsergroupID() {

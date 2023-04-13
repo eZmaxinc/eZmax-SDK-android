@@ -27,9 +27,9 @@ public class MultilingualPaymenttermDescription {
   private String sPaymenttermDescription2 = null;
 
   /**
-   * The description of the Paymentterm in french
+   * The description of the Paymentterm in French
    **/
-  @ApiModelProperty(value = "The description of the Paymentterm in french")
+  @ApiModelProperty(value = "The description of the Paymentterm in French")
   public String getSPaymenttermDescription1() {
     return sPaymenttermDescription1;
   }
@@ -38,9 +38,9 @@ public class MultilingualPaymenttermDescription {
   }
 
   /**
-   * The description of the Paymentterm in english
+   * The description of the Paymentterm in English
    **/
-  @ApiModelProperty(value = "The description of the Paymentterm in english")
+  @ApiModelProperty(value = "The description of the Paymentterm in English")
   public String getSPaymenttermDescription2() {
     return sPaymenttermDescription2;
   }

@@ -27,9 +27,9 @@ public class MultilingualEzmaxinvoicingsummaryinternalDescription {
   private String sEzmaxinvoicingsummaryinternalDescription2 = null;
 
   /**
-   * The Ezmaxinvoicingsummaryinternal description in french
+   * The Ezmaxinvoicingsummaryinternal description in French
    **/
-  @ApiModelProperty(value = "The Ezmaxinvoicingsummaryinternal description in french")
+  @ApiModelProperty(value = "The Ezmaxinvoicingsummaryinternal description in French")
   public String getSEzmaxinvoicingsummaryinternalDescription1() {
     return sEzmaxinvoicingsummaryinternalDescription1;
   }
@@ -38,9 +38,9 @@ public class MultilingualEzmaxinvoicingsummaryinternalDescription {
   }
 
   /**
-   * The Ezmaxinvoicingsummaryinternal description in english
+   * The Ezmaxinvoicingsummaryinternal description in English
    **/
-  @ApiModelProperty(value = "The Ezmaxinvoicingsummaryinternal description in english")
+  @ApiModelProperty(value = "The Ezmaxinvoicingsummaryinternal description in English")
   public String getSEzmaxinvoicingsummaryinternalDescription2() {
     return sEzmaxinvoicingsummaryinternalDescription2;
   }

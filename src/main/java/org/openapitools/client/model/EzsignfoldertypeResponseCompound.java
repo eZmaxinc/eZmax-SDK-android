@@ -147,7 +147,8 @@ public class EzsignfoldertypeResponseCompound {
 
   /**
    * The unique ID of the Usergroup
-   * minimum: 0
+   * minimum: 1
+   * maximum: 255
    **/
   @ApiModelProperty(value = "The unique ID of the Usergroup")
   public Integer getFkiUsergroupID() {
@@ -159,7 +160,8 @@ public class EzsignfoldertypeResponseCompound {
 
   /**
    * The unique ID of the Usergroup
-   * minimum: 0
+   * minimum: 1
+   * maximum: 255
    **/
   @ApiModelProperty(value = "The unique ID of the Usergroup")
   public Integer getFkiUsergroupIDRestricted() {
