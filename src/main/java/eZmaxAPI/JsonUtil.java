@@ -193,10 +193,6 @@ public class JsonUtil {
       return new TypeToken<List<BillingentityinternalCreateObjectV1ResponseMPayload>>(){}.getType();
     }
     
-    if ("BillingentityinternalDeleteObjectV1Response".equalsIgnoreCase(className)) {
-      return new TypeToken<List<BillingentityinternalDeleteObjectV1Response>>(){}.getType();
-    }
-    
     if ("BillingentityinternalEditObjectV1Request".equalsIgnoreCase(className)) {
       return new TypeToken<List<BillingentityinternalEditObjectV1Request>>(){}.getType();
     }
@@ -683,18 +679,6 @@ public class JsonUtil {
     
     if ("DepartmentGetAutocompleteV2ResponseMPayload".equalsIgnoreCase(className)) {
       return new TypeToken<List<DepartmentGetAutocompleteV2ResponseMPayload>>(){}.getType();
-    }
-    
-    if ("DepartmentGetMembersV1Response".equalsIgnoreCase(className)) {
-      return new TypeToken<List<DepartmentGetMembersV1Response>>(){}.getType();
-    }
-    
-    if ("DepartmentGetMembersV1ResponseAllOf".equalsIgnoreCase(className)) {
-      return new TypeToken<List<DepartmentGetMembersV1ResponseAllOf>>(){}.getType();
-    }
-    
-    if ("DepartmentGetMembersV1ResponseMPayload".equalsIgnoreCase(className)) {
-      return new TypeToken<List<DepartmentGetMembersV1ResponseMPayload>>(){}.getType();
     }
     
     if ("DescriptionstaticResponse".equalsIgnoreCase(className)) {
@@ -3445,10 +3429,6 @@ public class JsonUtil {
       return new TypeToken<List<PaymenttermCreateObjectV1ResponseMPayload>>(){}.getType();
     }
     
-    if ("PaymenttermDeleteObjectV1Response".equalsIgnoreCase(className)) {
-      return new TypeToken<List<PaymenttermDeleteObjectV1Response>>(){}.getType();
-    }
-    
     if ("PaymenttermEditObjectV1Request".equalsIgnoreCase(className)) {
       return new TypeToken<List<PaymenttermEditObjectV1Request>>(){}.getType();
     }
@@ -3665,10 +3645,6 @@ public class JsonUtil {
       return new TypeToken<List<UsergroupCreateObjectV1ResponseMPayload>>(){}.getType();
     }
     
-    if ("UsergroupDeleteObjectV1Response".equalsIgnoreCase(className)) {
-      return new TypeToken<List<UsergroupDeleteObjectV1Response>>(){}.getType();
-    }
-    
     if ("UsergroupEditObjectV1Request".equalsIgnoreCase(className)) {
       return new TypeToken<List<UsergroupEditObjectV1Request>>(){}.getType();
     }
@@ -3703,18 +3679,6 @@ public class JsonUtil {
     
     if ("UsergroupGetListV1ResponseMPayloadAllOf".equalsIgnoreCase(className)) {
       return new TypeToken<List<UsergroupGetListV1ResponseMPayloadAllOf>>(){}.getType();
-    }
-    
-    if ("UsergroupGetMembersV1Response".equalsIgnoreCase(className)) {
-      return new TypeToken<List<UsergroupGetMembersV1Response>>(){}.getType();
-    }
-    
-    if ("UsergroupGetMembersV1ResponseAllOf".equalsIgnoreCase(className)) {
-      return new TypeToken<List<UsergroupGetMembersV1ResponseAllOf>>(){}.getType();
-    }
-    
-    if ("UsergroupGetMembersV1ResponseMPayload".equalsIgnoreCase(className)) {
-      return new TypeToken<List<UsergroupGetMembersV1ResponseMPayload>>(){}.getType();
     }
     
     if ("UsergroupGetObjectV2Response".equalsIgnoreCase(className)) {
@@ -3767,10 +3731,6 @@ public class JsonUtil {
     
     if ("VariableexpenseCreateObjectV1ResponseMPayload".equalsIgnoreCase(className)) {
       return new TypeToken<List<VariableexpenseCreateObjectV1ResponseMPayload>>(){}.getType();
-    }
-    
-    if ("VariableexpenseDeleteObjectV1Response".equalsIgnoreCase(className)) {
-      return new TypeToken<List<VariableexpenseDeleteObjectV1Response>>(){}.getType();
     }
     
     if ("VariableexpenseEditObjectV1Request".equalsIgnoreCase(className)) {
@@ -4133,10 +4093,6 @@ public class JsonUtil {
     
     if ("BillingentityinternalCreateObjectV1ResponseMPayload".equalsIgnoreCase(className)) {
       return new TypeToken<BillingentityinternalCreateObjectV1ResponseMPayload>(){}.getType();
-    }
-    
-    if ("BillingentityinternalDeleteObjectV1Response".equalsIgnoreCase(className)) {
-      return new TypeToken<BillingentityinternalDeleteObjectV1Response>(){}.getType();
     }
     
     if ("BillingentityinternalEditObjectV1Request".equalsIgnoreCase(className)) {
@@ -4625,18 +4581,6 @@ public class JsonUtil {
     
     if ("DepartmentGetAutocompleteV2ResponseMPayload".equalsIgnoreCase(className)) {
       return new TypeToken<DepartmentGetAutocompleteV2ResponseMPayload>(){}.getType();
-    }
-    
-    if ("DepartmentGetMembersV1Response".equalsIgnoreCase(className)) {
-      return new TypeToken<DepartmentGetMembersV1Response>(){}.getType();
-    }
-    
-    if ("DepartmentGetMembersV1ResponseAllOf".equalsIgnoreCase(className)) {
-      return new TypeToken<DepartmentGetMembersV1ResponseAllOf>(){}.getType();
-    }
-    
-    if ("DepartmentGetMembersV1ResponseMPayload".equalsIgnoreCase(className)) {
-      return new TypeToken<DepartmentGetMembersV1ResponseMPayload>(){}.getType();
     }
     
     if ("DescriptionstaticResponse".equalsIgnoreCase(className)) {
@@ -7387,10 +7331,6 @@ public class JsonUtil {
       return new TypeToken<PaymenttermCreateObjectV1ResponseMPayload>(){}.getType();
     }
     
-    if ("PaymenttermDeleteObjectV1Response".equalsIgnoreCase(className)) {
-      return new TypeToken<PaymenttermDeleteObjectV1Response>(){}.getType();
-    }
-    
     if ("PaymenttermEditObjectV1Request".equalsIgnoreCase(className)) {
       return new TypeToken<PaymenttermEditObjectV1Request>(){}.getType();
     }
@@ -7607,10 +7547,6 @@ public class JsonUtil {
       return new TypeToken<UsergroupCreateObjectV1ResponseMPayload>(){}.getType();
     }
     
-    if ("UsergroupDeleteObjectV1Response".equalsIgnoreCase(className)) {
-      return new TypeToken<UsergroupDeleteObjectV1Response>(){}.getType();
-    }
-    
     if ("UsergroupEditObjectV1Request".equalsIgnoreCase(className)) {
       return new TypeToken<UsergroupEditObjectV1Request>(){}.getType();
     }
@@ -7645,18 +7581,6 @@ public class JsonUtil {
     
     if ("UsergroupGetListV1ResponseMPayloadAllOf".equalsIgnoreCase(className)) {
       return new TypeToken<UsergroupGetListV1ResponseMPayloadAllOf>(){}.getType();
-    }
-    
-    if ("UsergroupGetMembersV1Response".equalsIgnoreCase(className)) {
-      return new TypeToken<UsergroupGetMembersV1Response>(){}.getType();
-    }
-    
-    if ("UsergroupGetMembersV1ResponseAllOf".equalsIgnoreCase(className)) {
-      return new TypeToken<UsergroupGetMembersV1ResponseAllOf>(){}.getType();
-    }
-    
-    if ("UsergroupGetMembersV1ResponseMPayload".equalsIgnoreCase(className)) {
-      return new TypeToken<UsergroupGetMembersV1ResponseMPayload>(){}.getType();
     }
     
     if ("UsergroupGetObjectV2Response".equalsIgnoreCase(className)) {
@@ -7709,10 +7633,6 @@ public class JsonUtil {
     
     if ("VariableexpenseCreateObjectV1ResponseMPayload".equalsIgnoreCase(className)) {
       return new TypeToken<VariableexpenseCreateObjectV1ResponseMPayload>(){}.getType();
-    }
-    
-    if ("VariableexpenseDeleteObjectV1Response".equalsIgnoreCase(className)) {
-      return new TypeToken<VariableexpenseDeleteObjectV1Response>(){}.getType();
     }
     
     if ("VariableexpenseEditObjectV1Request".equalsIgnoreCase(className)) {

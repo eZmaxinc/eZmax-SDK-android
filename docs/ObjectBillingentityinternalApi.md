@@ -5,7 +5,6 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**billingentityinternalCreateObjectV1**](ObjectBillingentityinternalApi.md#billingentityinternalCreateObjectV1) | **POST** /1/object/billingentityinternal | Create a new Billingentityinternal
-[**billingentityinternalDeleteObjectV1**](ObjectBillingentityinternalApi.md#billingentityinternalDeleteObjectV1) | **DELETE** /1/object/billingentityinternal/{pkiBillingentityinternalID} | Delete an existing Billingentityinternal
 [**billingentityinternalEditObjectV1**](ObjectBillingentityinternalApi.md#billingentityinternalEditObjectV1) | **PUT** /1/object/billingentityinternal/{pkiBillingentityinternalID} | Edit an existing Billingentityinternal
 [**billingentityinternalGetAutocompleteV2**](ObjectBillingentityinternalApi.md#billingentityinternalGetAutocompleteV2) | **GET** /2/object/billingentityinternal/getAutocomplete/{sSelector} | Retrieve Billingentityinternals and IDs
 [**billingentityinternalGetListV1**](ObjectBillingentityinternalApi.md#billingentityinternalGetListV1) | **GET** /1/object/billingentityinternal/getList | Retrieve Billingentityinternal list
@@ -56,52 +55,6 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/json
-
-
-## billingentityinternalDeleteObjectV1
-
-> BillingentityinternalDeleteObjectV1Response billingentityinternalDeleteObjectV1(pkiBillingentityinternalID)
-
-Delete an existing Billingentityinternal
-
-
-
-### Example
-
-```java
-// Import classes:
-//import org.openapitools.client.api.ObjectBillingentityinternalApi;
-
-ObjectBillingentityinternalApi apiInstance = new ObjectBillingentityinternalApi();
-Integer pkiBillingentityinternalID = null; // Integer | The unique ID of the Billingentityinternal
-try {
-    BillingentityinternalDeleteObjectV1Response result = apiInstance.billingentityinternalDeleteObjectV1(pkiBillingentityinternalID);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling ObjectBillingentityinternalApi#billingentityinternalDeleteObjectV1");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiBillingentityinternalID** | **Integer**| The unique ID of the Billingentityinternal | [default to null]
-
-### Return type
-
-[**BillingentityinternalDeleteObjectV1Response**](BillingentityinternalDeleteObjectV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
 - **Accept**: application/json
 
 

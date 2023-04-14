@@ -23,9 +23,7 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
-import org.openapitools.client.model.CommonResponseError;
 import org.openapitools.client.model.DepartmentGetAutocompleteV2Response;
-import org.openapitools.client.model.DepartmentGetMembersV1Response;
 import org.openapitools.client.model.HeaderAcceptLanguage;
 
 import org.apache.http.HttpEntity;
@@ -180,133 +178,6 @@ public class ObjectDepartmentApi {
           public void onResponse(String localVarResponse) {
             try {
               responseListener.onResponse((DepartmentGetAutocompleteV2Response) ApiInvoker.deserialize(localVarResponse,  "", DepartmentGetAutocompleteV2Response.class));
-            } catch (ApiException exception) {
-               errorListener.onErrorResponse(new VolleyError(exception));
-            }
-          }
-      }, new Response.ErrorListener() {
-          @Override
-          public void onErrorResponse(VolleyError error) {
-            errorListener.onErrorResponse(error);
-          }
-      });
-    } catch (ApiException ex) {
-      errorListener.onErrorResponse(new VolleyError(ex));
-    }
-  }
-  /**
-  * Retrieve an existing Department&#39;s members
-  * 
-   * @param pkiDepartmentID 
-   * @return DepartmentGetMembersV1Response
-  */
-  public DepartmentGetMembersV1Response departmentGetMembersV1 (Integer pkiDepartmentID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
-    Object postBody = null;
-    // verify the required parameter 'pkiDepartmentID' is set
-    if (pkiDepartmentID == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'pkiDepartmentID' when calling departmentGetMembersV1",
-        new ApiException(400, "Missing the required parameter 'pkiDepartmentID' when calling departmentGetMembersV1"));
-    }
-
-    // create path and map variables
-    String path = "/1/object/department/{pkiDepartmentID}/getMembers".replaceAll("\\{" + "pkiDepartmentID" + "\\}", apiInvoker.escapeString(pkiDepartmentID.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-    String[] contentTypes = {
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
-      HttpEntity httpEntity = localVarBuilder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-    }
-
-    String[] authNames = new String[] { "Authorization" };
-
-    try {
-      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
-      if (localVarResponse != null) {
-         return (DepartmentGetMembersV1Response) ApiInvoker.deserialize(localVarResponse, "", DepartmentGetMembersV1Response.class);
-      } else {
-         return null;
-      }
-    } catch (ApiException ex) {
-       throw ex;
-    } catch (InterruptedException ex) {
-       throw ex;
-    } catch (ExecutionException ex) {
-      if (ex.getCause() instanceof VolleyError) {
-        VolleyError volleyError = (VolleyError)ex.getCause();
-        if (volleyError.networkResponse != null) {
-          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
-        }
-      }
-      throw ex;
-    } catch (TimeoutException ex) {
-      throw ex;
-    }
-  }
-
-      /**
-   * Retrieve an existing Department&#39;s members
-   * 
-   * @param pkiDepartmentID 
-  */
-  public void departmentGetMembersV1 (Integer pkiDepartmentID, final Response.Listener<DepartmentGetMembersV1Response> responseListener, final Response.ErrorListener errorListener) {
-    Object postBody = null;
-
-    // verify the required parameter 'pkiDepartmentID' is set
-    if (pkiDepartmentID == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'pkiDepartmentID' when calling departmentGetMembersV1",
-        new ApiException(400, "Missing the required parameter 'pkiDepartmentID' when calling departmentGetMembersV1"));
-    }
-
-    // create path and map variables
-    String path = "/1/object/department/{pkiDepartmentID}/getMembers".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiDepartmentID" + "\\}", apiInvoker.escapeString(pkiDepartmentID.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-
-
-    String[] contentTypes = {
-      
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = localVarBuilder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-          }
-
-    String[] authNames = new String[] { "Authorization" };
-
-    try {
-      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
-        new Response.Listener<String>() {
-          @Override
-          public void onResponse(String localVarResponse) {
-            try {
-              responseListener.onResponse((DepartmentGetMembersV1Response) ApiInvoker.deserialize(localVarResponse,  "", DepartmentGetMembersV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

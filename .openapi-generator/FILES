@@ -36,7 +36,6 @@ docs/BillingentityinternalCreateObjectV1Request.md
 docs/BillingentityinternalCreateObjectV1Response.md
 docs/BillingentityinternalCreateObjectV1ResponseAllOf.md
 docs/BillingentityinternalCreateObjectV1ResponseMPayload.md
-docs/BillingentityinternalDeleteObjectV1Response.md
 docs/BillingentityinternalEditObjectV1Request.md
 docs/BillingentityinternalEditObjectV1Response.md
 docs/BillingentityinternalGetAutocompleteV2Response.md
@@ -159,9 +158,6 @@ docs/DepartmentAutocompleteElementResponse.md
 docs/DepartmentGetAutocompleteV2Response.md
 docs/DepartmentGetAutocompleteV2ResponseAllOf.md
 docs/DepartmentGetAutocompleteV2ResponseMPayload.md
-docs/DepartmentGetMembersV1Response.md
-docs/DepartmentGetMembersV1ResponseAllOf.md
-docs/DepartmentGetMembersV1ResponseMPayload.md
 docs/DescriptionstaticResponse.md
 docs/DescriptionstaticResponseCompound.md
 docs/EmailRequest.md
@@ -898,7 +894,6 @@ docs/PaymenttermCreateObjectV1Request.md
 docs/PaymenttermCreateObjectV1Response.md
 docs/PaymenttermCreateObjectV1ResponseAllOf.md
 docs/PaymenttermCreateObjectV1ResponseMPayload.md
-docs/PaymenttermDeleteObjectV1Response.md
 docs/PaymenttermEditObjectV1Request.md
 docs/PaymenttermEditObjectV1Response.md
 docs/PaymenttermGetAutocompleteV2Response.md
@@ -953,7 +948,6 @@ docs/UsergroupCreateObjectV1Request.md
 docs/UsergroupCreateObjectV1Response.md
 docs/UsergroupCreateObjectV1ResponseAllOf.md
 docs/UsergroupCreateObjectV1ResponseMPayload.md
-docs/UsergroupDeleteObjectV1Response.md
 docs/UsergroupEditObjectV1Request.md
 docs/UsergroupEditObjectV1Response.md
 docs/UsergroupGetAutocompleteV2Response.md
@@ -963,9 +957,6 @@ docs/UsergroupGetListV1Response.md
 docs/UsergroupGetListV1ResponseAllOf.md
 docs/UsergroupGetListV1ResponseMPayload.md
 docs/UsergroupGetListV1ResponseMPayloadAllOf.md
-docs/UsergroupGetMembersV1Response.md
-docs/UsergroupGetMembersV1ResponseAllOf.md
-docs/UsergroupGetMembersV1ResponseMPayload.md
 docs/UsergroupGetObjectV2Response.md
 docs/UsergroupGetObjectV2ResponseAllOf.md
 docs/UsergroupGetObjectV2ResponseMPayload.md
@@ -979,7 +970,6 @@ docs/VariableexpenseCreateObjectV1Request.md
 docs/VariableexpenseCreateObjectV1Response.md
 docs/VariableexpenseCreateObjectV1ResponseAllOf.md
 docs/VariableexpenseCreateObjectV1ResponseMPayload.md
-docs/VariableexpenseDeleteObjectV1Response.md
 docs/VariableexpenseEditObjectV1Request.md
 docs/VariableexpenseEditObjectV1Response.md
 docs/VariableexpenseGetAutocompleteV2Response.md
@@ -1137,7 +1127,6 @@ src/main/java/org/openapitools/client/model/BillingentityinternalCreateObjectV1R
 src/main/java/org/openapitools/client/model/BillingentityinternalCreateObjectV1Response.java
 src/main/java/org/openapitools/client/model/BillingentityinternalCreateObjectV1ResponseAllOf.java
 src/main/java/org/openapitools/client/model/BillingentityinternalCreateObjectV1ResponseMPayload.java
-src/main/java/org/openapitools/client/model/BillingentityinternalDeleteObjectV1Response.java
 src/main/java/org/openapitools/client/model/BillingentityinternalEditObjectV1Request.java
 src/main/java/org/openapitools/client/model/BillingentityinternalEditObjectV1Response.java
 src/main/java/org/openapitools/client/model/BillingentityinternalGetAutocompleteV2Response.java
@@ -1260,9 +1249,6 @@ src/main/java/org/openapitools/client/model/DepartmentAutocompleteElementRespons
 src/main/java/org/openapitools/client/model/DepartmentGetAutocompleteV2Response.java
 src/main/java/org/openapitools/client/model/DepartmentGetAutocompleteV2ResponseAllOf.java
 src/main/java/org/openapitools/client/model/DepartmentGetAutocompleteV2ResponseMPayload.java
-src/main/java/org/openapitools/client/model/DepartmentGetMembersV1Response.java
-src/main/java/org/openapitools/client/model/DepartmentGetMembersV1ResponseAllOf.java
-src/main/java/org/openapitools/client/model/DepartmentGetMembersV1ResponseMPayload.java
 src/main/java/org/openapitools/client/model/DescriptionstaticResponse.java
 src/main/java/org/openapitools/client/model/DescriptionstaticResponseCompound.java
 src/main/java/org/openapitools/client/model/EmailRequest.java
@@ -1950,7 +1936,6 @@ src/main/java/org/openapitools/client/model/PaymenttermCreateObjectV1Request.jav
 src/main/java/org/openapitools/client/model/PaymenttermCreateObjectV1Response.java
 src/main/java/org/openapitools/client/model/PaymenttermCreateObjectV1ResponseAllOf.java
 src/main/java/org/openapitools/client/model/PaymenttermCreateObjectV1ResponseMPayload.java
-src/main/java/org/openapitools/client/model/PaymenttermDeleteObjectV1Response.java
 src/main/java/org/openapitools/client/model/PaymenttermEditObjectV1Request.java
 src/main/java/org/openapitools/client/model/PaymenttermEditObjectV1Response.java
 src/main/java/org/openapitools/client/model/PaymenttermGetAutocompleteV2Response.java
@@ -2005,7 +1990,6 @@ src/main/java/org/openapitools/client/model/UsergroupCreateObjectV1Request.java
 src/main/java/org/openapitools/client/model/UsergroupCreateObjectV1Response.java
 src/main/java/org/openapitools/client/model/UsergroupCreateObjectV1ResponseAllOf.java
 src/main/java/org/openapitools/client/model/UsergroupCreateObjectV1ResponseMPayload.java
-src/main/java/org/openapitools/client/model/UsergroupDeleteObjectV1Response.java
 src/main/java/org/openapitools/client/model/UsergroupEditObjectV1Request.java
 src/main/java/org/openapitools/client/model/UsergroupEditObjectV1Response.java
 src/main/java/org/openapitools/client/model/UsergroupGetAutocompleteV2Response.java
@@ -2015,9 +1999,6 @@ src/main/java/org/openapitools/client/model/UsergroupGetListV1Response.java
 src/main/java/org/openapitools/client/model/UsergroupGetListV1ResponseAllOf.java
 src/main/java/org/openapitools/client/model/UsergroupGetListV1ResponseMPayload.java
 src/main/java/org/openapitools/client/model/UsergroupGetListV1ResponseMPayloadAllOf.java
-src/main/java/org/openapitools/client/model/UsergroupGetMembersV1Response.java
-src/main/java/org/openapitools/client/model/UsergroupGetMembersV1ResponseAllOf.java
-src/main/java/org/openapitools/client/model/UsergroupGetMembersV1ResponseMPayload.java
 src/main/java/org/openapitools/client/model/UsergroupGetObjectV2Response.java
 src/main/java/org/openapitools/client/model/UsergroupGetObjectV2ResponseAllOf.java
 src/main/java/org/openapitools/client/model/UsergroupGetObjectV2ResponseMPayload.java
@@ -2031,7 +2012,6 @@ src/main/java/org/openapitools/client/model/VariableexpenseCreateObjectV1Request
 src/main/java/org/openapitools/client/model/VariableexpenseCreateObjectV1Response.java
 src/main/java/org/openapitools/client/model/VariableexpenseCreateObjectV1ResponseAllOf.java
 src/main/java/org/openapitools/client/model/VariableexpenseCreateObjectV1ResponseMPayload.java
-src/main/java/org/openapitools/client/model/VariableexpenseDeleteObjectV1Response.java
 src/main/java/org/openapitools/client/model/VariableexpenseEditObjectV1Request.java
 src/main/java/org/openapitools/client/model/VariableexpenseEditObjectV1Response.java
 src/main/java/org/openapitools/client/model/VariableexpenseGetAutocompleteV2Response.java

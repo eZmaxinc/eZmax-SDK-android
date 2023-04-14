@@ -5,7 +5,6 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**variableexpenseCreateObjectV1**](ObjectVariableexpenseApi.md#variableexpenseCreateObjectV1) | **POST** /1/object/variableexpense | Create a new Variableexpense
-[**variableexpenseDeleteObjectV1**](ObjectVariableexpenseApi.md#variableexpenseDeleteObjectV1) | **DELETE** /1/object/variableexpense/{pkiVariableexpenseID} | Delete an existing Variableexpense
 [**variableexpenseEditObjectV1**](ObjectVariableexpenseApi.md#variableexpenseEditObjectV1) | **PUT** /1/object/variableexpense/{pkiVariableexpenseID} | Edit an existing Variableexpense
 [**variableexpenseGetAutocompleteV2**](ObjectVariableexpenseApi.md#variableexpenseGetAutocompleteV2) | **GET** /2/object/variableexpense/getAutocomplete/{sSelector} | Retrieve Variableexpenses and IDs
 [**variableexpenseGetListV1**](ObjectVariableexpenseApi.md#variableexpenseGetListV1) | **GET** /1/object/variableexpense/getList | Retrieve Variableexpense list
@@ -56,52 +55,6 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/json
-
-
-## variableexpenseDeleteObjectV1
-
-> VariableexpenseDeleteObjectV1Response variableexpenseDeleteObjectV1(pkiVariableexpenseID)
-
-Delete an existing Variableexpense
-
-
-
-### Example
-
-```java
-// Import classes:
-//import org.openapitools.client.api.ObjectVariableexpenseApi;
-
-ObjectVariableexpenseApi apiInstance = new ObjectVariableexpenseApi();
-Integer pkiVariableexpenseID = null; // Integer | The unique ID of the Variableexpense
-try {
-    VariableexpenseDeleteObjectV1Response result = apiInstance.variableexpenseDeleteObjectV1(pkiVariableexpenseID);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling ObjectVariableexpenseApi#variableexpenseDeleteObjectV1");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiVariableexpenseID** | **Integer**| The unique ID of the Variableexpense | [default to null]
-
-### Return type
-
-[**VariableexpenseDeleteObjectV1Response**](VariableexpenseDeleteObjectV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
 - **Accept**: application/json
 
 

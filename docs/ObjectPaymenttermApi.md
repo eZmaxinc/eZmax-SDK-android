@@ -5,7 +5,6 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**paymenttermCreateObjectV1**](ObjectPaymenttermApi.md#paymenttermCreateObjectV1) | **POST** /1/object/paymentterm | Create a new Paymentterm
-[**paymenttermDeleteObjectV1**](ObjectPaymenttermApi.md#paymenttermDeleteObjectV1) | **DELETE** /1/object/paymentterm/{pkiPaymenttermID} | Delete an existing Paymentterm
 [**paymenttermEditObjectV1**](ObjectPaymenttermApi.md#paymenttermEditObjectV1) | **PUT** /1/object/paymentterm/{pkiPaymenttermID} | Edit an existing Paymentterm
 [**paymenttermGetAutocompleteV2**](ObjectPaymenttermApi.md#paymenttermGetAutocompleteV2) | **GET** /2/object/paymentterm/getAutocomplete/{sSelector} | Retrieve Paymentterms and IDs
 [**paymenttermGetListV1**](ObjectPaymenttermApi.md#paymenttermGetListV1) | **GET** /1/object/paymentterm/getList | Retrieve Paymentterm list
@@ -56,52 +55,6 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/json
-
-
-## paymenttermDeleteObjectV1
-
-> PaymenttermDeleteObjectV1Response paymenttermDeleteObjectV1(pkiPaymenttermID)
-
-Delete an existing Paymentterm
-
-
-
-### Example
-
-```java
-// Import classes:
-//import org.openapitools.client.api.ObjectPaymenttermApi;
-
-ObjectPaymenttermApi apiInstance = new ObjectPaymenttermApi();
-Integer pkiPaymenttermID = null; // Integer | 
-try {
-    PaymenttermDeleteObjectV1Response result = apiInstance.paymenttermDeleteObjectV1(pkiPaymenttermID);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling ObjectPaymenttermApi#paymenttermDeleteObjectV1");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiPaymenttermID** | **Integer**|  | [default to null]
-
-### Return type
-
-[**PaymenttermDeleteObjectV1Response**](PaymenttermDeleteObjectV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
 - **Accept**: application/json
 
 
