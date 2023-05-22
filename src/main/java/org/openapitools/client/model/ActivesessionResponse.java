@@ -12,6 +12,7 @@
 
 package org.openapitools.client.model;
 
+import org.openapitools.client.model.FieldEActivesessionOrigin;
 import org.openapitools.client.model.FieldEActivesessionUsertype;
 import org.openapitools.client.model.FieldEActivesessionWeekdaystart;
 import io.swagger.annotations.*;
@@ -25,6 +26,8 @@ public class ActivesessionResponse {
   
   @SerializedName("eActivesessionUsertype")
   private FieldEActivesessionUsertype eActivesessionUsertype = null;
+  @SerializedName("eActivesessionOrigin")
+  private FieldEActivesessionOrigin eActivesessionOrigin = null;
   @SerializedName("eActivesessionWeekdaystart")
   private FieldEActivesessionWeekdaystart eActivesessionWeekdaystart = null;
   @SerializedName("fkiLanguageID")
@@ -50,6 +53,16 @@ public class ActivesessionResponse {
   }
   public void setEActivesessionUsertype(FieldEActivesessionUsertype eActivesessionUsertype) {
     this.eActivesessionUsertype = eActivesessionUsertype;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public FieldEActivesessionOrigin getEActivesessionOrigin() {
+    return eActivesessionOrigin;
+  }
+  public void setEActivesessionOrigin(FieldEActivesessionOrigin eActivesessionOrigin) {
+    this.eActivesessionOrigin = eActivesessionOrigin;
   }
 
   /**
@@ -153,6 +166,7 @@ public class ActivesessionResponse {
     }
     ActivesessionResponse activesessionResponse = (ActivesessionResponse) o;
     return (this.eActivesessionUsertype == null ? activesessionResponse.eActivesessionUsertype == null : this.eActivesessionUsertype.equals(activesessionResponse.eActivesessionUsertype)) &&
+        (this.eActivesessionOrigin == null ? activesessionResponse.eActivesessionOrigin == null : this.eActivesessionOrigin.equals(activesessionResponse.eActivesessionOrigin)) &&
         (this.eActivesessionWeekdaystart == null ? activesessionResponse.eActivesessionWeekdaystart == null : this.eActivesessionWeekdaystart.equals(activesessionResponse.eActivesessionWeekdaystart)) &&
         (this.fkiLanguageID == null ? activesessionResponse.fkiLanguageID == null : this.fkiLanguageID.equals(activesessionResponse.fkiLanguageID)) &&
         (this.sCompanyNameX == null ? activesessionResponse.sCompanyNameX == null : this.sCompanyNameX.equals(activesessionResponse.sCompanyNameX)) &&
@@ -167,6 +181,7 @@ public class ActivesessionResponse {
   public int hashCode() {
     int result = 17;
     result = 31 * result + (this.eActivesessionUsertype == null ? 0: this.eActivesessionUsertype.hashCode());
+    result = 31 * result + (this.eActivesessionOrigin == null ? 0: this.eActivesessionOrigin.hashCode());
     result = 31 * result + (this.eActivesessionWeekdaystart == null ? 0: this.eActivesessionWeekdaystart.hashCode());
     result = 31 * result + (this.fkiLanguageID == null ? 0: this.fkiLanguageID.hashCode());
     result = 31 * result + (this.sCompanyNameX == null ? 0: this.sCompanyNameX.hashCode());
@@ -184,6 +199,7 @@ public class ActivesessionResponse {
     sb.append("class ActivesessionResponse {\n");
     
     sb.append("  eActivesessionUsertype: ").append(eActivesessionUsertype).append("\n");
+    sb.append("  eActivesessionOrigin: ").append(eActivesessionOrigin).append("\n");
     sb.append("  eActivesessionWeekdaystart: ").append(eActivesessionWeekdaystart).append("\n");
     sb.append("  fkiLanguageID: ").append(fkiLanguageID).append("\n");
     sb.append("  sCompanyNameX: ").append(sCompanyNameX).append("\n");

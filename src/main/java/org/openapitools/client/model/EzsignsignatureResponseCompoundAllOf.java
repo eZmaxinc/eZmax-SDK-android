@@ -13,6 +13,7 @@
 package org.openapitools.client.model;
 
 import java.util.*;
+import org.openapitools.client.model.CustomCreditcardtransactionResponse;
 import org.openapitools.client.model.EzsignsignaturecustomdateResponseCompound;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
@@ -24,6 +25,8 @@ public class EzsignsignatureResponseCompoundAllOf {
   private Boolean bEzsignsignatureCustomdate = null;
   @SerializedName("a_objEzsignsignaturecustomdate")
   private List<EzsignsignaturecustomdateResponseCompound> aObjEzsignsignaturecustomdate = null;
+  @SerializedName("objCreditcardtransaction")
+  private CustomCreditcardtransactionResponse objCreditcardtransaction = null;
 
   /**
    * Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**)
@@ -47,6 +50,16 @@ public class EzsignsignatureResponseCompoundAllOf {
     this.aObjEzsignsignaturecustomdate = aObjEzsignsignaturecustomdate;
   }
 
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public CustomCreditcardtransactionResponse getObjCreditcardtransaction() {
+    return objCreditcardtransaction;
+  }
+  public void setObjCreditcardtransaction(CustomCreditcardtransactionResponse objCreditcardtransaction) {
+    this.objCreditcardtransaction = objCreditcardtransaction;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -58,7 +71,8 @@ public class EzsignsignatureResponseCompoundAllOf {
     }
     EzsignsignatureResponseCompoundAllOf ezsignsignatureResponseCompoundAllOf = (EzsignsignatureResponseCompoundAllOf) o;
     return (this.bEzsignsignatureCustomdate == null ? ezsignsignatureResponseCompoundAllOf.bEzsignsignatureCustomdate == null : this.bEzsignsignatureCustomdate.equals(ezsignsignatureResponseCompoundAllOf.bEzsignsignatureCustomdate)) &&
-        (this.aObjEzsignsignaturecustomdate == null ? ezsignsignatureResponseCompoundAllOf.aObjEzsignsignaturecustomdate == null : this.aObjEzsignsignaturecustomdate.equals(ezsignsignatureResponseCompoundAllOf.aObjEzsignsignaturecustomdate));
+        (this.aObjEzsignsignaturecustomdate == null ? ezsignsignatureResponseCompoundAllOf.aObjEzsignsignaturecustomdate == null : this.aObjEzsignsignaturecustomdate.equals(ezsignsignatureResponseCompoundAllOf.aObjEzsignsignaturecustomdate)) &&
+        (this.objCreditcardtransaction == null ? ezsignsignatureResponseCompoundAllOf.objCreditcardtransaction == null : this.objCreditcardtransaction.equals(ezsignsignatureResponseCompoundAllOf.objCreditcardtransaction));
   }
 
   @Override
@@ -66,6 +80,7 @@ public class EzsignsignatureResponseCompoundAllOf {
     int result = 17;
     result = 31 * result + (this.bEzsignsignatureCustomdate == null ? 0: this.bEzsignsignatureCustomdate.hashCode());
     result = 31 * result + (this.aObjEzsignsignaturecustomdate == null ? 0: this.aObjEzsignsignaturecustomdate.hashCode());
+    result = 31 * result + (this.objCreditcardtransaction == null ? 0: this.objCreditcardtransaction.hashCode());
     return result;
   }
 
@@ -76,6 +91,7 @@ public class EzsignsignatureResponseCompoundAllOf {
     
     sb.append("  bEzsignsignatureCustomdate: ").append(bEzsignsignatureCustomdate).append("\n");
     sb.append("  aObjEzsignsignaturecustomdate: ").append(aObjEzsignsignaturecustomdate).append("\n");
+    sb.append("  objCreditcardtransaction: ").append(objCreditcardtransaction).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

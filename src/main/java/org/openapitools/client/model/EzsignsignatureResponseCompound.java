@@ -13,6 +13,8 @@
 package org.openapitools.client.model;
 
 import java.util.*;
+import org.openapitools.client.model.CustomContactNameResponse;
+import org.openapitools.client.model.CustomCreditcardtransactionResponse;
 import org.openapitools.client.model.EzsignsignaturecustomdateResponseCompound;
 import org.openapitools.client.model.FieldEEzsignsignatureAttachmentnamesource;
 import org.openapitools.client.model.FieldEEzsignsignatureFont;
@@ -59,10 +61,16 @@ public class EzsignsignatureResponseCompound {
   private Boolean bEzsignsignatureRequired = null;
   @SerializedName("fkiEzsignfoldersignerassociationIDValidation")
   private Integer fkiEzsignfoldersignerassociationIDValidation = null;
+  @SerializedName("dtEzsignsignatureDate")
+  private String dtEzsignsignatureDate = null;
+  @SerializedName("objContactName")
+  private CustomContactNameResponse objContactName = null;
   @SerializedName("bEzsignsignatureCustomdate")
   private Boolean bEzsignsignatureCustomdate = null;
   @SerializedName("a_objEzsignsignaturecustomdate")
   private List<EzsignsignaturecustomdateResponseCompound> aObjEzsignsignaturecustomdate = null;
+  @SerializedName("objCreditcardtransaction")
+  private CustomCreditcardtransactionResponse objCreditcardtransaction = null;
 
   /**
    * The unique ID of the Ezsignsignature
@@ -244,6 +252,27 @@ public class EzsignsignatureResponseCompound {
   }
 
   /**
+   * The date the Ezsignsignature was signed
+   **/
+  @ApiModelProperty(value = "The date the Ezsignsignature was signed")
+  public String getDtEzsignsignatureDate() {
+    return dtEzsignsignatureDate;
+  }
+  public void setDtEzsignsignatureDate(String dtEzsignsignatureDate) {
+    this.dtEzsignsignatureDate = dtEzsignsignatureDate;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public CustomContactNameResponse getObjContactName() {
+    return objContactName;
+  }
+  public void setObjContactName(CustomContactNameResponse objContactName) {
+    this.objContactName = objContactName;
+  }
+
+  /**
    * Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**)
    **/
   @ApiModelProperty(value = "Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**)")
@@ -263,6 +292,16 @@ public class EzsignsignatureResponseCompound {
   }
   public void setAObjEzsignsignaturecustomdate(List<EzsignsignaturecustomdateResponseCompound> aObjEzsignsignaturecustomdate) {
     this.aObjEzsignsignaturecustomdate = aObjEzsignsignaturecustomdate;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public CustomCreditcardtransactionResponse getObjCreditcardtransaction() {
+    return objCreditcardtransaction;
+  }
+  public void setObjCreditcardtransaction(CustomCreditcardtransactionResponse objCreditcardtransaction) {
+    this.objCreditcardtransaction = objCreditcardtransaction;
   }
 
 
@@ -291,8 +330,11 @@ public class EzsignsignatureResponseCompound {
         (this.eEzsignsignatureAttachmentnamesource == null ? ezsignsignatureResponseCompound.eEzsignsignatureAttachmentnamesource == null : this.eEzsignsignatureAttachmentnamesource.equals(ezsignsignatureResponseCompound.eEzsignsignatureAttachmentnamesource)) &&
         (this.bEzsignsignatureRequired == null ? ezsignsignatureResponseCompound.bEzsignsignatureRequired == null : this.bEzsignsignatureRequired.equals(ezsignsignatureResponseCompound.bEzsignsignatureRequired)) &&
         (this.fkiEzsignfoldersignerassociationIDValidation == null ? ezsignsignatureResponseCompound.fkiEzsignfoldersignerassociationIDValidation == null : this.fkiEzsignfoldersignerassociationIDValidation.equals(ezsignsignatureResponseCompound.fkiEzsignfoldersignerassociationIDValidation)) &&
+        (this.dtEzsignsignatureDate == null ? ezsignsignatureResponseCompound.dtEzsignsignatureDate == null : this.dtEzsignsignatureDate.equals(ezsignsignatureResponseCompound.dtEzsignsignatureDate)) &&
+        (this.objContactName == null ? ezsignsignatureResponseCompound.objContactName == null : this.objContactName.equals(ezsignsignatureResponseCompound.objContactName)) &&
         (this.bEzsignsignatureCustomdate == null ? ezsignsignatureResponseCompound.bEzsignsignatureCustomdate == null : this.bEzsignsignatureCustomdate.equals(ezsignsignatureResponseCompound.bEzsignsignatureCustomdate)) &&
-        (this.aObjEzsignsignaturecustomdate == null ? ezsignsignatureResponseCompound.aObjEzsignsignaturecustomdate == null : this.aObjEzsignsignaturecustomdate.equals(ezsignsignatureResponseCompound.aObjEzsignsignaturecustomdate));
+        (this.aObjEzsignsignaturecustomdate == null ? ezsignsignatureResponseCompound.aObjEzsignsignaturecustomdate == null : this.aObjEzsignsignaturecustomdate.equals(ezsignsignatureResponseCompound.aObjEzsignsignaturecustomdate)) &&
+        (this.objCreditcardtransaction == null ? ezsignsignatureResponseCompound.objCreditcardtransaction == null : this.objCreditcardtransaction.equals(ezsignsignatureResponseCompound.objCreditcardtransaction));
   }
 
   @Override
@@ -314,8 +356,11 @@ public class EzsignsignatureResponseCompound {
     result = 31 * result + (this.eEzsignsignatureAttachmentnamesource == null ? 0: this.eEzsignsignatureAttachmentnamesource.hashCode());
     result = 31 * result + (this.bEzsignsignatureRequired == null ? 0: this.bEzsignsignatureRequired.hashCode());
     result = 31 * result + (this.fkiEzsignfoldersignerassociationIDValidation == null ? 0: this.fkiEzsignfoldersignerassociationIDValidation.hashCode());
+    result = 31 * result + (this.dtEzsignsignatureDate == null ? 0: this.dtEzsignsignatureDate.hashCode());
+    result = 31 * result + (this.objContactName == null ? 0: this.objContactName.hashCode());
     result = 31 * result + (this.bEzsignsignatureCustomdate == null ? 0: this.bEzsignsignatureCustomdate.hashCode());
     result = 31 * result + (this.aObjEzsignsignaturecustomdate == null ? 0: this.aObjEzsignsignaturecustomdate.hashCode());
+    result = 31 * result + (this.objCreditcardtransaction == null ? 0: this.objCreditcardtransaction.hashCode());
     return result;
   }
 
@@ -340,8 +385,11 @@ public class EzsignsignatureResponseCompound {
     sb.append("  eEzsignsignatureAttachmentnamesource: ").append(eEzsignsignatureAttachmentnamesource).append("\n");
     sb.append("  bEzsignsignatureRequired: ").append(bEzsignsignatureRequired).append("\n");
     sb.append("  fkiEzsignfoldersignerassociationIDValidation: ").append(fkiEzsignfoldersignerassociationIDValidation).append("\n");
+    sb.append("  dtEzsignsignatureDate: ").append(dtEzsignsignatureDate).append("\n");
+    sb.append("  objContactName: ").append(objContactName).append("\n");
     sb.append("  bEzsignsignatureCustomdate: ").append(bEzsignsignatureCustomdate).append("\n");
     sb.append("  aObjEzsignsignaturecustomdate: ").append(aObjEzsignsignaturecustomdate).append("\n");
+    sb.append("  objCreditcardtransaction: ").append(objCreditcardtransaction).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

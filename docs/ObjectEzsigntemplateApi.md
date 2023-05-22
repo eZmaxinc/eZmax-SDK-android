@@ -271,8 +271,8 @@ Enum values that can be filtered in query parameter *sFilter*:  | Variable | Val
 
 ObjectEzsigntemplateApi apiInstance = new ObjectEzsigntemplateApi();
 String eOrderBy = null; // String | Specify how you want the results to be sorted
-Integer iRowMax = null; // Integer | 
-Integer iRowOffset = null; // Integer | 
+Integer iRowMax = 10000; // Integer | 
+Integer iRowOffset = 0; // Integer | 
 HeaderAcceptLanguage acceptLanguage = null; // HeaderAcceptLanguage | 
 String sFilter = null; // String | 
 try {
@@ -290,8 +290,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **eOrderBy** | **String**| Specify how you want the results to be sorted | [optional] [default to null] [enum: pkiEzsigntemplateID_ASC, pkiEzsigntemplateID_DESC, fkiTeamID_ASC, fkiTeamID_DESC, fkiEzsignfoldertypeID_ASC, fkiEzsignfoldertypeID_DESC, fkiUserIDOwner_ASC, fkiUserIDOwner_DESC, fkiLanguageID_ASC, fkiLanguageID_DESC, eEzsigntemplateType_ASC, eEzsigntemplateType_DESC, sEzsigntemplateTypedescriptionX_ASC, sEzsigntemplateTypedescriptionX_DESC, sEzsigntemplatedocumentDescription_ASC, sEzsigntemplatedocumentDescription_DESC, iEzsigntemplatedocumentPagetotal_ASC, iEzsigntemplatedocumentPagetotal_DESC, iEzsigntemplateSignaturetotal_ASC, iEzsigntemplateSignaturetotal_DESC]
- **iRowMax** | **Integer**|  | [optional] [default to null]
- **iRowOffset** | **Integer**|  | [optional] [default to null]
+ **iRowMax** | **Integer**|  | [optional] [default to 10000]
+ **iRowOffset** | **Integer**|  | [optional] [default to 0]
  **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [default to null] [enum: *, en, fr]
  **sFilter** | **String**|  | [optional] [default to null]
 

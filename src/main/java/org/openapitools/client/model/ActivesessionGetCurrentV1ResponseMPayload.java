@@ -15,6 +15,7 @@ package org.openapitools.client.model;
 import java.util.*;
 import org.openapitools.client.model.ActivesessionResponseCompoundApikey;
 import org.openapitools.client.model.ActivesessionResponseCompoundUser;
+import org.openapitools.client.model.FieldEActivesessionOrigin;
 import org.openapitools.client.model.FieldEActivesessionUsertype;
 import org.openapitools.client.model.FieldEActivesessionWeekdaystart;
 import io.swagger.annotations.*;
@@ -28,6 +29,8 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
   
   @SerializedName("eActivesessionUsertype")
   private FieldEActivesessionUsertype eActivesessionUsertype = null;
+  @SerializedName("eActivesessionOrigin")
+  private FieldEActivesessionOrigin eActivesessionOrigin = null;
   @SerializedName("eActivesessionWeekdaystart")
   private FieldEActivesessionWeekdaystart eActivesessionWeekdaystart = null;
   @SerializedName("fkiLanguageID")
@@ -63,6 +66,16 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
   }
   public void setEActivesessionUsertype(FieldEActivesessionUsertype eActivesessionUsertype) {
     this.eActivesessionUsertype = eActivesessionUsertype;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public FieldEActivesessionOrigin getEActivesessionOrigin() {
+    return eActivesessionOrigin;
+  }
+  public void setEActivesessionOrigin(FieldEActivesessionOrigin eActivesessionOrigin) {
+    this.eActivesessionOrigin = eActivesessionOrigin;
   }
 
   /**
@@ -218,6 +231,7 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
     }
     ActivesessionGetCurrentV1ResponseMPayload activesessionGetCurrentV1ResponseMPayload = (ActivesessionGetCurrentV1ResponseMPayload) o;
     return (this.eActivesessionUsertype == null ? activesessionGetCurrentV1ResponseMPayload.eActivesessionUsertype == null : this.eActivesessionUsertype.equals(activesessionGetCurrentV1ResponseMPayload.eActivesessionUsertype)) &&
+        (this.eActivesessionOrigin == null ? activesessionGetCurrentV1ResponseMPayload.eActivesessionOrigin == null : this.eActivesessionOrigin.equals(activesessionGetCurrentV1ResponseMPayload.eActivesessionOrigin)) &&
         (this.eActivesessionWeekdaystart == null ? activesessionGetCurrentV1ResponseMPayload.eActivesessionWeekdaystart == null : this.eActivesessionWeekdaystart.equals(activesessionGetCurrentV1ResponseMPayload.eActivesessionWeekdaystart)) &&
         (this.fkiLanguageID == null ? activesessionGetCurrentV1ResponseMPayload.fkiLanguageID == null : this.fkiLanguageID.equals(activesessionGetCurrentV1ResponseMPayload.fkiLanguageID)) &&
         (this.sCompanyNameX == null ? activesessionGetCurrentV1ResponseMPayload.sCompanyNameX == null : this.sCompanyNameX.equals(activesessionGetCurrentV1ResponseMPayload.sCompanyNameX)) &&
@@ -237,6 +251,7 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
   public int hashCode() {
     int result = 17;
     result = 31 * result + (this.eActivesessionUsertype == null ? 0: this.eActivesessionUsertype.hashCode());
+    result = 31 * result + (this.eActivesessionOrigin == null ? 0: this.eActivesessionOrigin.hashCode());
     result = 31 * result + (this.eActivesessionWeekdaystart == null ? 0: this.eActivesessionWeekdaystart.hashCode());
     result = 31 * result + (this.fkiLanguageID == null ? 0: this.fkiLanguageID.hashCode());
     result = 31 * result + (this.sCompanyNameX == null ? 0: this.sCompanyNameX.hashCode());
@@ -259,6 +274,7 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
     sb.append("class ActivesessionGetCurrentV1ResponseMPayload {\n");
     
     sb.append("  eActivesessionUsertype: ").append(eActivesessionUsertype).append("\n");
+    sb.append("  eActivesessionOrigin: ").append(eActivesessionOrigin).append("\n");
     sb.append("  eActivesessionWeekdaystart: ").append(eActivesessionWeekdaystart).append("\n");
     sb.append("  fkiLanguageID: ").append(fkiLanguageID).append("\n");
     sb.append("  sCompanyNameX: ").append(sCompanyNameX).append("\n");

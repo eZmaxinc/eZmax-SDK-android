@@ -174,8 +174,8 @@ Enum values that can be filtered in query parameter *sFilter*:  | Variable | Val
 
 ObjectBrandingApi apiInstance = new ObjectBrandingApi();
 String eOrderBy = null; // String | Specify how you want the results to be sorted
-Integer iRowMax = null; // Integer | 
-Integer iRowOffset = null; // Integer | 
+Integer iRowMax = 10000; // Integer | 
+Integer iRowOffset = 0; // Integer | 
 HeaderAcceptLanguage acceptLanguage = null; // HeaderAcceptLanguage | 
 String sFilter = null; // String | 
 try {
@@ -193,8 +193,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **eOrderBy** | **String**| Specify how you want the results to be sorted | [optional] [default to null] [enum: pkiBrandingID_ASC, pkiBrandingID_DESC, sBrandingDescriptionX_ASC, sBrandingDescriptionX_DESC, iBrandingColortext_ASC, iBrandingColortext_DESC, iBrandingColortextlinkbox_ASC, iBrandingColortextlinkbox_DESC, iBrandingColortextbutton_ASC, iBrandingColortextbutton_DESC, iBrandingColorbackground_ASC, iBrandingColorbackground_DESC, iBrandingColorbackgroundbutton_ASC, iBrandingColorbackgroundbutton_DESC, iBrandingColorbackgroundsmallbox_ASC, iBrandingColorbackgroundsmallbox_DESC, bBrandingIsactive_ASC, bBrandingIsactive_DESC]
- **iRowMax** | **Integer**|  | [optional] [default to null]
- **iRowOffset** | **Integer**|  | [optional] [default to null]
+ **iRowMax** | **Integer**|  | [optional] [default to 10000]
+ **iRowOffset** | **Integer**|  | [optional] [default to 0]
  **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [default to null] [enum: *, en, fr]
  **sFilter** | **String**|  | [optional] [default to null]
 

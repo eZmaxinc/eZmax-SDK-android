@@ -22,6 +22,8 @@ Name | Type | Description | Notes
 **eEzsignsignatureAttachmentnamesource** | [**FieldEEzsignsignatureAttachmentnamesource**](FieldEEzsignsignatureAttachmentnamesource.md) |  |  [optional]
 **bEzsignsignatureRequired** | **Boolean** | Whether the Ezsignsignature is required or not. This field is relevant only with Ezsignsignature with eEzsignsignatureType &#x3D; Attachments. |  [optional]
 **fkiEzsignfoldersignerassociationIDValidation** | **Integer** | The unique ID of the Ezsignfoldersignerassociation |  [optional]
+**dtEzsignsignatureDate** | **String** | The date the Ezsignsignature was signed |  [optional]
+**objContactName** | [**CustomContactNameResponse**](CustomContactNameResponse.md) |  | 
 
 
 

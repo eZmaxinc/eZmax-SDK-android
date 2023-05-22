@@ -25,6 +25,8 @@ public class UsergroupListElement {
   private Integer pkiUsergroupID = null;
   @SerializedName("sUsergroupNameX")
   private String sUsergroupNameX = null;
+  @SerializedName("iCountUser")
+  private Integer iCountUser = null;
 
   /**
    * The unique ID of the Usergroup
@@ -50,6 +52,19 @@ public class UsergroupListElement {
     this.sUsergroupNameX = sUsergroupNameX;
   }
 
+  /**
+   * Numer of user in group
+   * minimum: 0
+   * maximum: 16777215
+   **/
+  @ApiModelProperty(required = true, value = "Numer of user in group")
+  public Integer getICountUser() {
+    return iCountUser;
+  }
+  public void setICountUser(Integer iCountUser) {
+    this.iCountUser = iCountUser;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -61,7 +76,8 @@ public class UsergroupListElement {
     }
     UsergroupListElement usergroupListElement = (UsergroupListElement) o;
     return (this.pkiUsergroupID == null ? usergroupListElement.pkiUsergroupID == null : this.pkiUsergroupID.equals(usergroupListElement.pkiUsergroupID)) &&
-        (this.sUsergroupNameX == null ? usergroupListElement.sUsergroupNameX == null : this.sUsergroupNameX.equals(usergroupListElement.sUsergroupNameX));
+        (this.sUsergroupNameX == null ? usergroupListElement.sUsergroupNameX == null : this.sUsergroupNameX.equals(usergroupListElement.sUsergroupNameX)) &&
+        (this.iCountUser == null ? usergroupListElement.iCountUser == null : this.iCountUser.equals(usergroupListElement.iCountUser));
   }
 
   @Override
@@ -69,6 +85,7 @@ public class UsergroupListElement {
     int result = 17;
     result = 31 * result + (this.pkiUsergroupID == null ? 0: this.pkiUsergroupID.hashCode());
     result = 31 * result + (this.sUsergroupNameX == null ? 0: this.sUsergroupNameX.hashCode());
+    result = 31 * result + (this.iCountUser == null ? 0: this.iCountUser.hashCode());
     return result;
   }
 
@@ -79,6 +96,7 @@ public class UsergroupListElement {
     
     sb.append("  pkiUsergroupID: ").append(pkiUsergroupID).append("\n");
     sb.append("  sUsergroupNameX: ").append(sUsergroupNameX).append("\n");
+    sb.append("  iCountUser: ").append(iCountUser).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

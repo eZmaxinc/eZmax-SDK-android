@@ -21,23 +21,12 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "A Billingentityinternal AutocompleteElement Response")
 public class BillingentityinternalAutocompleteElementResponse {
   
-  @SerializedName("sBillingentityinternalDescriptionX")
-  private String sBillingentityinternalDescriptionX = null;
   @SerializedName("pkiBillingentityinternalID")
   private Integer pkiBillingentityinternalID = null;
+  @SerializedName("sBillingentityinternalDescriptionX")
+  private String sBillingentityinternalDescriptionX = null;
   @SerializedName("bBillingentityinternalIsactive")
   private Boolean bBillingentityinternalIsactive = null;
-
-  /**
-   * The description of the Billingentityinternal in the language of the requester
-   **/
-  @ApiModelProperty(required = true, value = "The description of the Billingentityinternal in the language of the requester")
-  public String getSBillingentityinternalDescriptionX() {
-    return sBillingentityinternalDescriptionX;
-  }
-  public void setSBillingentityinternalDescriptionX(String sBillingentityinternalDescriptionX) {
-    this.sBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;
-  }
 
   /**
    * The unique ID of the Billingentityinternal.
@@ -49,6 +38,17 @@ public class BillingentityinternalAutocompleteElementResponse {
   }
   public void setPkiBillingentityinternalID(Integer pkiBillingentityinternalID) {
     this.pkiBillingentityinternalID = pkiBillingentityinternalID;
+  }
+
+  /**
+   * The description of the Billingentityinternal in the language of the requester
+   **/
+  @ApiModelProperty(required = true, value = "The description of the Billingentityinternal in the language of the requester")
+  public String getSBillingentityinternalDescriptionX() {
+    return sBillingentityinternalDescriptionX;
+  }
+  public void setSBillingentityinternalDescriptionX(String sBillingentityinternalDescriptionX) {
+    this.sBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;
   }
 
   /**
@@ -72,16 +72,16 @@ public class BillingentityinternalAutocompleteElementResponse {
       return false;
     }
     BillingentityinternalAutocompleteElementResponse billingentityinternalAutocompleteElementResponse = (BillingentityinternalAutocompleteElementResponse) o;
-    return (this.sBillingentityinternalDescriptionX == null ? billingentityinternalAutocompleteElementResponse.sBillingentityinternalDescriptionX == null : this.sBillingentityinternalDescriptionX.equals(billingentityinternalAutocompleteElementResponse.sBillingentityinternalDescriptionX)) &&
-        (this.pkiBillingentityinternalID == null ? billingentityinternalAutocompleteElementResponse.pkiBillingentityinternalID == null : this.pkiBillingentityinternalID.equals(billingentityinternalAutocompleteElementResponse.pkiBillingentityinternalID)) &&
+    return (this.pkiBillingentityinternalID == null ? billingentityinternalAutocompleteElementResponse.pkiBillingentityinternalID == null : this.pkiBillingentityinternalID.equals(billingentityinternalAutocompleteElementResponse.pkiBillingentityinternalID)) &&
+        (this.sBillingentityinternalDescriptionX == null ? billingentityinternalAutocompleteElementResponse.sBillingentityinternalDescriptionX == null : this.sBillingentityinternalDescriptionX.equals(billingentityinternalAutocompleteElementResponse.sBillingentityinternalDescriptionX)) &&
         (this.bBillingentityinternalIsactive == null ? billingentityinternalAutocompleteElementResponse.bBillingentityinternalIsactive == null : this.bBillingentityinternalIsactive.equals(billingentityinternalAutocompleteElementResponse.bBillingentityinternalIsactive));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.sBillingentityinternalDescriptionX == null ? 0: this.sBillingentityinternalDescriptionX.hashCode());
     result = 31 * result + (this.pkiBillingentityinternalID == null ? 0: this.pkiBillingentityinternalID.hashCode());
+    result = 31 * result + (this.sBillingentityinternalDescriptionX == null ? 0: this.sBillingentityinternalDescriptionX.hashCode());
     result = 31 * result + (this.bBillingentityinternalIsactive == null ? 0: this.bBillingentityinternalIsactive.hashCode());
     return result;
   }
@@ -91,8 +91,8 @@ public class BillingentityinternalAutocompleteElementResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingentityinternalAutocompleteElementResponse {\n");
     
-    sb.append("  sBillingentityinternalDescriptionX: ").append(sBillingentityinternalDescriptionX).append("\n");
     sb.append("  pkiBillingentityinternalID: ").append(pkiBillingentityinternalID).append("\n");
+    sb.append("  sBillingentityinternalDescriptionX: ").append(sBillingentityinternalDescriptionX).append("\n");
     sb.append("  bBillingentityinternalIsactive: ").append(bBillingentityinternalIsactive).append("\n");
     sb.append("}\n");
     return sb.toString();

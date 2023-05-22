@@ -12,6 +12,7 @@
 
 package org.openapitools.client.model;
 
+import org.openapitools.client.model.CustomContactNameResponse;
 import org.openapitools.client.model.FieldEEzsignsignatureAttachmentnamesource;
 import org.openapitools.client.model.FieldEEzsignsignatureFont;
 import org.openapitools.client.model.FieldEEzsignsignatureTooltipposition;
@@ -57,6 +58,10 @@ public class EzsignsignatureResponse {
   private Boolean bEzsignsignatureRequired = null;
   @SerializedName("fkiEzsignfoldersignerassociationIDValidation")
   private Integer fkiEzsignfoldersignerassociationIDValidation = null;
+  @SerializedName("dtEzsignsignatureDate")
+  private String dtEzsignsignatureDate = null;
+  @SerializedName("objContactName")
+  private CustomContactNameResponse objContactName = null;
 
   /**
    * The unique ID of the Ezsignsignature
@@ -237,6 +242,27 @@ public class EzsignsignatureResponse {
     this.fkiEzsignfoldersignerassociationIDValidation = fkiEzsignfoldersignerassociationIDValidation;
   }
 
+  /**
+   * The date the Ezsignsignature was signed
+   **/
+  @ApiModelProperty(value = "The date the Ezsignsignature was signed")
+  public String getDtEzsignsignatureDate() {
+    return dtEzsignsignatureDate;
+  }
+  public void setDtEzsignsignatureDate(String dtEzsignsignatureDate) {
+    this.dtEzsignsignatureDate = dtEzsignsignatureDate;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public CustomContactNameResponse getObjContactName() {
+    return objContactName;
+  }
+  public void setObjContactName(CustomContactNameResponse objContactName) {
+    this.objContactName = objContactName;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -262,7 +288,9 @@ public class EzsignsignatureResponse {
         (this.sEzsignsignatureAttachmentdescription == null ? ezsignsignatureResponse.sEzsignsignatureAttachmentdescription == null : this.sEzsignsignatureAttachmentdescription.equals(ezsignsignatureResponse.sEzsignsignatureAttachmentdescription)) &&
         (this.eEzsignsignatureAttachmentnamesource == null ? ezsignsignatureResponse.eEzsignsignatureAttachmentnamesource == null : this.eEzsignsignatureAttachmentnamesource.equals(ezsignsignatureResponse.eEzsignsignatureAttachmentnamesource)) &&
         (this.bEzsignsignatureRequired == null ? ezsignsignatureResponse.bEzsignsignatureRequired == null : this.bEzsignsignatureRequired.equals(ezsignsignatureResponse.bEzsignsignatureRequired)) &&
-        (this.fkiEzsignfoldersignerassociationIDValidation == null ? ezsignsignatureResponse.fkiEzsignfoldersignerassociationIDValidation == null : this.fkiEzsignfoldersignerassociationIDValidation.equals(ezsignsignatureResponse.fkiEzsignfoldersignerassociationIDValidation));
+        (this.fkiEzsignfoldersignerassociationIDValidation == null ? ezsignsignatureResponse.fkiEzsignfoldersignerassociationIDValidation == null : this.fkiEzsignfoldersignerassociationIDValidation.equals(ezsignsignatureResponse.fkiEzsignfoldersignerassociationIDValidation)) &&
+        (this.dtEzsignsignatureDate == null ? ezsignsignatureResponse.dtEzsignsignatureDate == null : this.dtEzsignsignatureDate.equals(ezsignsignatureResponse.dtEzsignsignatureDate)) &&
+        (this.objContactName == null ? ezsignsignatureResponse.objContactName == null : this.objContactName.equals(ezsignsignatureResponse.objContactName));
   }
 
   @Override
@@ -284,6 +312,8 @@ public class EzsignsignatureResponse {
     result = 31 * result + (this.eEzsignsignatureAttachmentnamesource == null ? 0: this.eEzsignsignatureAttachmentnamesource.hashCode());
     result = 31 * result + (this.bEzsignsignatureRequired == null ? 0: this.bEzsignsignatureRequired.hashCode());
     result = 31 * result + (this.fkiEzsignfoldersignerassociationIDValidation == null ? 0: this.fkiEzsignfoldersignerassociationIDValidation.hashCode());
+    result = 31 * result + (this.dtEzsignsignatureDate == null ? 0: this.dtEzsignsignatureDate.hashCode());
+    result = 31 * result + (this.objContactName == null ? 0: this.objContactName.hashCode());
     return result;
   }
 
@@ -308,6 +338,8 @@ public class EzsignsignatureResponse {
     sb.append("  eEzsignsignatureAttachmentnamesource: ").append(eEzsignsignatureAttachmentnamesource).append("\n");
     sb.append("  bEzsignsignatureRequired: ").append(bEzsignsignatureRequired).append("\n");
     sb.append("  fkiEzsignfoldersignerassociationIDValidation: ").append(fkiEzsignfoldersignerassociationIDValidation).append("\n");
+    sb.append("  dtEzsignsignatureDate: ").append(dtEzsignsignatureDate).append("\n");
+    sb.append("  objContactName: ").append(objContactName).append("\n");
     sb.append("}\n");
     return sb.toString();
   }
