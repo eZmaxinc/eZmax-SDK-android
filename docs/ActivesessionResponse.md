@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **bActivesessionIssuperadmin** | **Boolean** | Whether the active session is superadmin or not | 
 **pksCustomerCode** | **String** | The customer code assigned to your account | 
 **fkiSystemconfigurationtypeID** | **Integer** | The unique ID of the Systemconfigurationtype |  [optional]
+**fkiSignatureID** | **Integer** | The unique ID of the Signature |  [optional]
 
 
 

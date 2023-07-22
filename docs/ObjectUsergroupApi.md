@@ -6,9 +6,13 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**usergroupCreateObjectV1**](ObjectUsergroupApi.md#usergroupCreateObjectV1) | **POST** /1/object/usergroup | Create a new Usergroup
 [**usergroupEditObjectV1**](ObjectUsergroupApi.md#usergroupEditObjectV1) | **PUT** /1/object/usergroup/{pkiUsergroupID} | Edit an existing Usergroup
+[**usergroupEditPermissionsV1**](ObjectUsergroupApi.md#usergroupEditPermissionsV1) | **PUT** /1/object/usergroup/{pkiUsergroupID}/editPermissions | Edit multiple Permissions
+[**usergroupEditUsergroupmembershipsV1**](ObjectUsergroupApi.md#usergroupEditUsergroupmembershipsV1) | **PUT** /1/object/usergroup/{pkiUsergroupID}/editUsergroupmemberships | Edit multiple Usergroupmemberships
 [**usergroupGetAutocompleteV2**](ObjectUsergroupApi.md#usergroupGetAutocompleteV2) | **GET** /2/object/usergroup/getAutocomplete/{sSelector} | Retrieve Usergroups and IDs
 [**usergroupGetListV1**](ObjectUsergroupApi.md#usergroupGetListV1) | **GET** /1/object/usergroup/getList | Retrieve Usergroup list
 [**usergroupGetObjectV2**](ObjectUsergroupApi.md#usergroupGetObjectV2) | **GET** /2/object/usergroup/{pkiUsergroupID} | Retrieve an existing Usergroup
+[**usergroupGetPermissionsV1**](ObjectUsergroupApi.md#usergroupGetPermissionsV1) | **GET** /1/object/usergroup/{pkiUsergroupID}/getPermissions | Retrieve an existing Usergroup&#39;s Permissions
+[**usergroupGetUsergroupmembershipsV1**](ObjectUsergroupApi.md#usergroupGetUsergroupmembershipsV1) | **GET** /1/object/usergroup/{pkiUsergroupID}/getUsergroupmemberships | Retrieve an existing Usergroup&#39;s Usergroupmemberships
 
 
 
@@ -73,7 +77,7 @@ Edit an existing Usergroup
 //import org.openapitools.client.api.ObjectUsergroupApi;
 
 ObjectUsergroupApi apiInstance = new ObjectUsergroupApi();
-Integer pkiUsergroupID = null; // Integer | The unique ID of the Usergroup
+Integer pkiUsergroupID = null; // Integer | 
 UsergroupEditObjectV1Request usergroupEditObjectV1Request = new UsergroupEditObjectV1Request(); // UsergroupEditObjectV1Request | 
 try {
     UsergroupEditObjectV1Response result = apiInstance.usergroupEditObjectV1(pkiUsergroupID, usergroupEditObjectV1Request);
@@ -89,12 +93,108 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiUsergroupID** | **Integer**| The unique ID of the Usergroup | [default to null]
+ **pkiUsergroupID** | **Integer**|  | [default to null]
  **usergroupEditObjectV1Request** | [**UsergroupEditObjectV1Request**](UsergroupEditObjectV1Request.md)|  |
 
 ### Return type
 
 [**UsergroupEditObjectV1Response**](UsergroupEditObjectV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## usergroupEditPermissionsV1
+
+> UsergroupEditPermissionsV1Response usergroupEditPermissionsV1(pkiUsergroupID, usergroupEditPermissionsV1Request)
+
+Edit multiple Permissions
+
+Using this endpoint, you can edit multiple Permissions at the same time.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectUsergroupApi;
+
+ObjectUsergroupApi apiInstance = new ObjectUsergroupApi();
+Integer pkiUsergroupID = null; // Integer | 
+UsergroupEditPermissionsV1Request usergroupEditPermissionsV1Request = new UsergroupEditPermissionsV1Request(); // UsergroupEditPermissionsV1Request | 
+try {
+    UsergroupEditPermissionsV1Response result = apiInstance.usergroupEditPermissionsV1(pkiUsergroupID, usergroupEditPermissionsV1Request);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectUsergroupApi#usergroupEditPermissionsV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiUsergroupID** | **Integer**|  | [default to null]
+ **usergroupEditPermissionsV1Request** | [**UsergroupEditPermissionsV1Request**](UsergroupEditPermissionsV1Request.md)|  |
+
+### Return type
+
+[**UsergroupEditPermissionsV1Response**](UsergroupEditPermissionsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## usergroupEditUsergroupmembershipsV1
+
+> UsergroupEditUsergroupmembershipsV1Response usergroupEditUsergroupmembershipsV1(pkiUsergroupID, usergroupEditUsergroupmembershipsV1Request)
+
+Edit multiple Usergroupmemberships
+
+Using this endpoint, you can edit multiple Usergroupmemberships at the same time.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectUsergroupApi;
+
+ObjectUsergroupApi apiInstance = new ObjectUsergroupApi();
+Integer pkiUsergroupID = null; // Integer | 
+UsergroupEditUsergroupmembershipsV1Request usergroupEditUsergroupmembershipsV1Request = new UsergroupEditUsergroupmembershipsV1Request(); // UsergroupEditUsergroupmembershipsV1Request | 
+try {
+    UsergroupEditUsergroupmembershipsV1Response result = apiInstance.usergroupEditUsergroupmembershipsV1(pkiUsergroupID, usergroupEditUsergroupmembershipsV1Request);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectUsergroupApi#usergroupEditUsergroupmembershipsV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiUsergroupID** | **Integer**|  | [default to null]
+ **usergroupEditUsergroupmembershipsV1Request** | [**UsergroupEditUsergroupmembershipsV1Request**](UsergroupEditUsergroupmembershipsV1Request.md)|  |
+
+### Return type
+
+[**UsergroupEditUsergroupmembershipsV1Response**](UsergroupEditUsergroupmembershipsV1Response.md)
 
 ### Authorization
 
@@ -227,7 +327,7 @@ Retrieve an existing Usergroup
 //import org.openapitools.client.api.ObjectUsergroupApi;
 
 ObjectUsergroupApi apiInstance = new ObjectUsergroupApi();
-Integer pkiUsergroupID = null; // Integer | The unique ID of the Usergroup
+Integer pkiUsergroupID = null; // Integer | 
 try {
     UsergroupGetObjectV2Response result = apiInstance.usergroupGetObjectV2(pkiUsergroupID);
     System.out.println(result);
@@ -242,11 +342,99 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiUsergroupID** | **Integer**| The unique ID of the Usergroup | [default to null]
+ **pkiUsergroupID** | **Integer**|  | [default to null]
 
 ### Return type
 
 [**UsergroupGetObjectV2Response**](UsergroupGetObjectV2Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## usergroupGetPermissionsV1
+
+> UsergroupGetPermissionsV1Response usergroupGetPermissionsV1(pkiUsergroupID)
+
+Retrieve an existing Usergroup&#39;s Permissions
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectUsergroupApi;
+
+ObjectUsergroupApi apiInstance = new ObjectUsergroupApi();
+Integer pkiUsergroupID = null; // Integer | 
+try {
+    UsergroupGetPermissionsV1Response result = apiInstance.usergroupGetPermissionsV1(pkiUsergroupID);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectUsergroupApi#usergroupGetPermissionsV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiUsergroupID** | **Integer**|  | [default to null]
+
+### Return type
+
+[**UsergroupGetPermissionsV1Response**](UsergroupGetPermissionsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## usergroupGetUsergroupmembershipsV1
+
+> UsergroupGetUsergroupmembershipsV1Response usergroupGetUsergroupmembershipsV1(pkiUsergroupID)
+
+Retrieve an existing Usergroup&#39;s Usergroupmemberships
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectUsergroupApi;
+
+ObjectUsergroupApi apiInstance = new ObjectUsergroupApi();
+Integer pkiUsergroupID = null; // Integer | 
+try {
+    UsergroupGetUsergroupmembershipsV1Response result = apiInstance.usergroupGetUsergroupmembershipsV1(pkiUsergroupID);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectUsergroupApi#usergroupGetUsergroupmembershipsV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiUsergroupID** | **Integer**|  | [default to null]
+
+### Return type
+
+[**UsergroupGetUsergroupmembershipsV1Response**](UsergroupGetUsergroupmembershipsV1Response.md)
 
 ### Authorization
 

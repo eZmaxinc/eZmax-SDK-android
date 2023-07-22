@@ -1,0 +1,10 @@
+
+
+# EnumTextvalidation
+
+## Enum
+
+
+
+
+

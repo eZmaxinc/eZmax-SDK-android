@@ -89,10 +89,16 @@ Class | Method | HTTP request | Description
 *GlobalEzmaxcustomerApi* | [**globalEzmaxcustomerGetConfigurationV1**](docs/GlobalEzmaxcustomerApi.md#globalEzmaxcustomerGetConfigurationV1) | **GET** /1/ezmaxcustomer/{pksEzmaxcustomerCode}/getConfiguration | Get ezmaxcustomer configuration
 *ModuleEzsignApi* | [**ezsignSuggestSignersV1**](docs/ModuleEzsignApi.md#ezsignSuggestSignersV1) | **GET** /1/module/ezsign/suggestSigners | Suggest signers
 *ModuleEzsignApi* | [**ezsignSuggestTemplatesV1**](docs/ModuleEzsignApi.md#ezsignSuggestTemplatesV1) | **GET** /1/module/ezsign/suggestTemplates | Suggest templates
+*ModuleReportApi* | [**reportGetReportFromCacheV1**](docs/ModuleReportApi.md#reportGetReportFromCacheV1) | **GET** /1/module/report/getReportFromCache/{sReportgroupCacheID} | Retrieve report from cache
 *ModuleUserApi* | [**userCreateEzsignuserV1**](docs/ModuleUserApi.md#userCreateEzsignuserV1) | **POST** /1/module/user/createezsignuser | Create a new User of type Ezsignuser
 *ObjectActivesessionApi* | [**activesessionGetCurrentV1**](docs/ObjectActivesessionApi.md#activesessionGetCurrentV1) | **GET** /1/object/activesession/getCurrent | Get Current Activesession
 *ObjectActivesessionApi* | [**activesessionGetListV1**](docs/ObjectActivesessionApi.md#activesessionGetListV1) | **GET** /1/object/activesession/getList | Retrieve Activesession list
 *ObjectApikeyApi* | [**apikeyCreateObjectV2**](docs/ObjectApikeyApi.md#apikeyCreateObjectV2) | **POST** /2/object/apikey | Create a new Apikey
+*ObjectApikeyApi* | [**apikeyEditObjectV1**](docs/ObjectApikeyApi.md#apikeyEditObjectV1) | **PUT** /1/object/apikey/{pkiApikeyID} | Edit an existing Apikey
+*ObjectApikeyApi* | [**apikeyEditPermissionsV1**](docs/ObjectApikeyApi.md#apikeyEditPermissionsV1) | **PUT** /1/object/apikey/{pkiApikeyID}/editPermissions | Edit multiple Permissions
+*ObjectApikeyApi* | [**apikeyGetObjectV2**](docs/ObjectApikeyApi.md#apikeyGetObjectV2) | **GET** /2/object/apikey/{pkiApikeyID} | Retrieve an existing Apikey
+*ObjectApikeyApi* | [**apikeyGetPermissionsV1**](docs/ObjectApikeyApi.md#apikeyGetPermissionsV1) | **GET** /1/object/apikey/{pkiApikeyID}/getPermissions | Retrieve an existing Apikey&#39;s Permissions
+*ObjectApikeyApi* | [**apikeyGetSubnetsV1**](docs/ObjectApikeyApi.md#apikeyGetSubnetsV1) | **GET** /1/object/apikey/{pkiApikeyID}/getSubnets | Retrieve an existing Apikey&#39;s subnets
 *ObjectBillingentityexternalApi* | [**billingentityexternalGetAutocompleteV2**](docs/ObjectBillingentityexternalApi.md#billingentityexternalGetAutocompleteV2) | **GET** /2/object/billingentityexternal/getAutocomplete/{sSelector} | Retrieve Billingentityexternals and IDs
 *ObjectBillingentityinternalApi* | [**billingentityinternalCreateObjectV1**](docs/ObjectBillingentityinternalApi.md#billingentityinternalCreateObjectV1) | **POST** /1/object/billingentityinternal | Create a new Billingentityinternal
 *ObjectBillingentityinternalApi* | [**billingentityinternalEditObjectV1**](docs/ObjectBillingentityinternalApi.md#billingentityinternalEditObjectV1) | **PUT** /1/object/billingentityinternal/{pkiBillingentityinternalID} | Edit an existing Billingentityinternal
@@ -106,6 +112,7 @@ Class | Method | HTTP request | Description
 *ObjectBrandingApi* | [**brandingGetObjectV2**](docs/ObjectBrandingApi.md#brandingGetObjectV2) | **GET** /2/object/branding/{pkiBrandingID} | Retrieve an existing Branding
 *ObjectClonehistoryApi* | [**clonehistoryGetListV1**](docs/ObjectClonehistoryApi.md#clonehistoryGetListV1) | **GET** /1/object/clonehistory/getList | Retrieve Clonehistory list
 *ObjectCommunicationApi* | [**communicationGetObjectV2**](docs/ObjectCommunicationApi.md#communicationGetObjectV2) | **GET** /2/object/communication/{pkiCommunicationID} | Retrieve an existing Communication
+*ObjectCompanyApi* | [**companyGetAutocompleteV2**](docs/ObjectCompanyApi.md#companyGetAutocompleteV2) | **GET** /2/object/company/getAutocomplete/{sSelector} | Retrieve Companys and IDs
 *ObjectDepartmentApi* | [**departmentGetAutocompleteV2**](docs/ObjectDepartmentApi.md#departmentGetAutocompleteV2) | **GET** /2/object/department/getAutocomplete/{sSelector} | Retrieve Departments and IDs
 *ObjectEzmaxinvoicingApi* | [**ezmaxinvoicingGetAutocompleteV1**](docs/ObjectEzmaxinvoicingApi.md#ezmaxinvoicingGetAutocompleteV1) | **GET** /1/object/ezmaxinvoicing/getAutocomplete/{sSelector} | Retrieve Ezmaxinvoicings and IDs
 *ObjectEzmaxinvoicingApi* | [**ezmaxinvoicingGetAutocompleteV2**](docs/ObjectEzmaxinvoicingApi.md#ezmaxinvoicingGetAutocompleteV2) | **GET** /2/object/ezmaxinvoicing/getAutocomplete/{sSelector} | Retrieve Ezmaxinvoicings and IDs
@@ -137,6 +144,7 @@ Class | Method | HTTP request | Description
 *ObjectEzsigndocumentApi* | [**ezsigndocumentApplyEzsigntemplateV2**](docs/ObjectEzsigndocumentApi.md#ezsigndocumentApplyEzsigntemplateV2) | **POST** /2/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplate | Apply an Ezsigntemplate to the Ezsigndocument.
 *ObjectEzsigndocumentApi* | [**ezsigndocumentCreateObjectV1**](docs/ObjectEzsigndocumentApi.md#ezsigndocumentCreateObjectV1) | **POST** /1/object/ezsigndocument | Create a new Ezsigndocument
 *ObjectEzsigndocumentApi* | [**ezsigndocumentCreateObjectV2**](docs/ObjectEzsigndocumentApi.md#ezsigndocumentCreateObjectV2) | **POST** /2/object/ezsigndocument | Create a new Ezsigndocument
+*ObjectEzsigndocumentApi* | [**ezsigndocumentDeclineToSignV1**](docs/ObjectEzsigndocumentApi.md#ezsigndocumentDeclineToSignV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/declineToSign | Decline to sign
 *ObjectEzsigndocumentApi* | [**ezsigndocumentDeleteObjectV1**](docs/ObjectEzsigndocumentApi.md#ezsigndocumentDeleteObjectV1) | **DELETE** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Delete an existing Ezsigndocument
 *ObjectEzsigndocumentApi* | [**ezsigndocumentEditEzsignformfieldgroupsV1**](docs/ObjectEzsigndocumentApi.md#ezsigndocumentEditEzsignformfieldgroupsV1) | **PUT** /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignformfieldgroups | Edit multiple Ezsignformfieldgroups
 *ObjectEzsigndocumentApi* | [**ezsigndocumentEditEzsignsignaturesV1**](docs/ObjectEzsigndocumentApi.md#ezsigndocumentEditEzsignsignaturesV1) | **PUT** /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures | Edit multiple Ezsignsignatures
@@ -156,6 +164,7 @@ Class | Method | HTTP request | Description
 *ObjectEzsigndocumentApi* | [**ezsigndocumentGetTemporaryProofV1**](docs/ObjectEzsigndocumentApi.md#ezsigndocumentGetTemporaryProofV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getTemporaryProof | Retrieve the temporary proof
 *ObjectEzsigndocumentApi* | [**ezsigndocumentGetWordsPositionsV1**](docs/ObjectEzsigndocumentApi.md#ezsigndocumentGetWordsPositionsV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions | Retrieve positions X,Y of given words from a Ezsigndocument
 *ObjectEzsigndocumentApi* | [**ezsigndocumentPatchObjectV1**](docs/ObjectEzsigndocumentApi.md#ezsigndocumentPatchObjectV1) | **PATCH** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Patch an existing Ezsigndocument
+*ObjectEzsigndocumentApi* | [**ezsigndocumentSubmitEzsignformV1**](docs/ObjectEzsigndocumentApi.md#ezsigndocumentSubmitEzsignformV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/submitEzsignform | Submit the Ezsignform
 *ObjectEzsigndocumentApi* | [**ezsigndocumentUnsendV1**](docs/ObjectEzsigndocumentApi.md#ezsigndocumentUnsendV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/unsend | Unsend the Ezsigndocument
 *ObjectEzsignfolderApi* | [**ezsignfolderArchiveV1**](docs/ObjectEzsignfolderApi.md#ezsignfolderArchiveV1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/archive | Archive the Ezsignfolder
 *ObjectEzsignfolderApi* | [**ezsignfolderBatchDownloadV1**](docs/ObjectEzsignfolderApi.md#ezsignfolderBatchDownloadV1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/batchDownload | Download multiples files from an Ezsignfolder
@@ -201,10 +210,12 @@ Class | Method | HTTP request | Description
 *ObjectEzsignformfieldgroupApi* | [**ezsignformfieldgroupDeleteObjectV1**](docs/ObjectEzsignformfieldgroupApi.md#ezsignformfieldgroupDeleteObjectV1) | **DELETE** /1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID} | Delete an existing Ezsignformfieldgroup
 *ObjectEzsignformfieldgroupApi* | [**ezsignformfieldgroupEditObjectV1**](docs/ObjectEzsignformfieldgroupApi.md#ezsignformfieldgroupEditObjectV1) | **PUT** /1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID} | Edit an existing Ezsignformfieldgroup
 *ObjectEzsignformfieldgroupApi* | [**ezsignformfieldgroupGetObjectV2**](docs/ObjectEzsignformfieldgroupApi.md#ezsignformfieldgroupGetObjectV2) | **GET** /2/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID} | Retrieve an existing Ezsignformfieldgroup
+*ObjectEzsignpageApi* | [**ezsignpageConsultV1**](docs/ObjectEzsignpageApi.md#ezsignpageConsultV1) | **POST** /1/object/ezsignpage/{pkiEzsignpageID}/consult | Consult an Ezsignpage
 *ObjectEzsignsignatureApi* | [**ezsignsignatureCreateObjectV1**](docs/ObjectEzsignsignatureApi.md#ezsignsignatureCreateObjectV1) | **POST** /1/object/ezsignsignature | Create a new Ezsignsignature
 *ObjectEzsignsignatureApi* | [**ezsignsignatureCreateObjectV2**](docs/ObjectEzsignsignatureApi.md#ezsignsignatureCreateObjectV2) | **POST** /2/object/ezsignsignature | Create a new Ezsignsignature
 *ObjectEzsignsignatureApi* | [**ezsignsignatureDeleteObjectV1**](docs/ObjectEzsignsignatureApi.md#ezsignsignatureDeleteObjectV1) | **DELETE** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Delete an existing Ezsignsignature
 *ObjectEzsignsignatureApi* | [**ezsignsignatureEditObjectV1**](docs/ObjectEzsignsignatureApi.md#ezsignsignatureEditObjectV1) | **PUT** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Edit an existing Ezsignsignature
+*ObjectEzsignsignatureApi* | [**ezsignsignatureGetEzsignsignatureattachmentV1**](docs/ObjectEzsignsignatureApi.md#ezsignsignatureGetEzsignsignatureattachmentV1) | **GET** /1/object/ezsignsignature/{pkiEzsignsignatureID}/getEzsignsignatureattachment | Retrieve an existing Ezsignsignature&#39;s Ezsignsignatureattachments
 *ObjectEzsignsignatureApi* | [**ezsignsignatureGetEzsignsignaturesAutomaticV1**](docs/ObjectEzsignsignatureApi.md#ezsignsignatureGetEzsignsignaturesAutomaticV1) | **GET** /1/object/ezsignsignature/getEzsignsignaturesAutomatic | Retrieve all automatic Ezsignsignatures
 *ObjectEzsignsignatureApi* | [**ezsignsignatureGetObjectV2**](docs/ObjectEzsignsignatureApi.md#ezsignsignatureGetObjectV2) | **GET** /2/object/ezsignsignature/{pkiEzsignsignatureID} | Retrieve an existing Ezsignsignature
 *ObjectEzsignsignatureApi* | [**ezsignsignatureSignV1**](docs/ObjectEzsignsignatureApi.md#ezsignsignatureSignV1) | **POST** /1/object/ezsignsignature/{pkiEzsignsignatureID}/sign | Sign the Ezsignsignature
@@ -263,6 +274,7 @@ Class | Method | HTTP request | Description
 *ObjectFranchiseofficeApi* | [**franchiseofficeGetAutocompleteV2**](docs/ObjectFranchiseofficeApi.md#franchiseofficeGetAutocompleteV2) | **GET** /2/object/franchiseoffice/getAutocomplete/{sSelector} | Retrieve Franchiseoffices and IDs
 *ObjectFranchisereferalincomeApi* | [**franchisereferalincomeCreateObjectV1**](docs/ObjectFranchisereferalincomeApi.md#franchisereferalincomeCreateObjectV1) | **POST** /1/object/franchisereferalincome | Create a new Franchisereferalincome
 *ObjectFranchisereferalincomeApi* | [**franchisereferalincomeCreateObjectV2**](docs/ObjectFranchisereferalincomeApi.md#franchisereferalincomeCreateObjectV2) | **POST** /2/object/franchisereferalincome | Create a new Franchisereferalincome
+*ObjectModulegroupApi* | [**modulegroupGetAllV1**](docs/ObjectModulegroupApi.md#modulegroupGetAllV1) | **GET** /1/object/modulegroup/getAll/{eContext} | Retrieve all Modulegroups
 *ObjectNotificationsectionApi* | [**notificationsectionGetNotificationtestsV1**](docs/ObjectNotificationsectionApi.md#notificationsectionGetNotificationtestsV1) | **GET** /1/object/notificationsection/{pkiNotificationsectionID}/getNotificationtests | Retrieve an existing Notificationsection&#39;s Notificationtests
 *ObjectNotificationtestApi* | [**notificationtestGetElementsV1**](docs/ObjectNotificationtestApi.md#notificationtestGetElementsV1) | **GET** /1/object/notificationtest/{pkiNotificationtestID}/getElements | Retrieve an existing Notificationtest&#39;s Elements
 *ObjectPaymenttermApi* | [**paymenttermCreateObjectV1**](docs/ObjectPaymenttermApi.md#paymenttermCreateObjectV1) | **POST** /1/object/paymentterm | Create a new Paymentterm
@@ -272,16 +284,47 @@ Class | Method | HTTP request | Description
 *ObjectPaymenttermApi* | [**paymenttermGetObjectV2**](docs/ObjectPaymenttermApi.md#paymenttermGetObjectV2) | **GET** /2/object/paymentterm/{pkiPaymenttermID} | Retrieve an existing Paymentterm
 *ObjectPeriodApi* | [**periodGetAutocompleteV1**](docs/ObjectPeriodApi.md#periodGetAutocompleteV1) | **GET** /1/object/period/getAutocomplete/{sSelector} | Retrieve Periods and IDs
 *ObjectPeriodApi* | [**periodGetAutocompleteV2**](docs/ObjectPeriodApi.md#periodGetAutocompleteV2) | **GET** /2/object/period/getAutocomplete/{sSelector} | Retrieve Periods and IDs
+*ObjectPermissionApi* | [**permissionCreateObjectV1**](docs/ObjectPermissionApi.md#permissionCreateObjectV1) | **POST** /1/object/permission | Create a new Permission
+*ObjectPermissionApi* | [**permissionDeleteObjectV1**](docs/ObjectPermissionApi.md#permissionDeleteObjectV1) | **DELETE** /1/object/permission/{pkiPermissionID} | Delete an existing Permission
+*ObjectPermissionApi* | [**permissionEditObjectV1**](docs/ObjectPermissionApi.md#permissionEditObjectV1) | **PUT** /1/object/permission/{pkiPermissionID} | Edit an existing Permission
+*ObjectPermissionApi* | [**permissionGetObjectV2**](docs/ObjectPermissionApi.md#permissionGetObjectV2) | **GET** /2/object/permission/{pkiPermissionID} | Retrieve an existing Permission
 *ObjectSecretquestionApi* | [**secretquestionGetAutocompleteV2**](docs/ObjectSecretquestionApi.md#secretquestionGetAutocompleteV2) | **GET** /2/object/secretquestion/getAutocomplete/{sSelector} | Retrieve Secretquestions and IDs
 *ObjectSessionhistoryApi* | [**sessionhistoryGetListV1**](docs/ObjectSessionhistoryApi.md#sessionhistoryGetListV1) | **GET** /1/object/sessionhistory/getList | Retrieve Sessionhistory list
+*ObjectSignatureApi* | [**signatureCreateObjectV1**](docs/ObjectSignatureApi.md#signatureCreateObjectV1) | **POST** /1/object/signature | Create a new Signature
+*ObjectSignatureApi* | [**signatureDeleteObjectV1**](docs/ObjectSignatureApi.md#signatureDeleteObjectV1) | **DELETE** /1/object/signature/{pkiSignatureID} | Delete an existing Signature
+*ObjectSignatureApi* | [**signatureEditObjectV1**](docs/ObjectSignatureApi.md#signatureEditObjectV1) | **PUT** /1/object/signature/{pkiSignatureID} | Edit an existing Signature
+*ObjectSignatureApi* | [**signatureGetObjectV2**](docs/ObjectSignatureApi.md#signatureGetObjectV2) | **GET** /2/object/signature/{pkiSignatureID} | Retrieve an existing Signature
+*ObjectSubnetApi* | [**subnetCreateObjectV1**](docs/ObjectSubnetApi.md#subnetCreateObjectV1) | **POST** /1/object/subnet | Create a new Subnet
+*ObjectSubnetApi* | [**subnetDeleteObjectV1**](docs/ObjectSubnetApi.md#subnetDeleteObjectV1) | **DELETE** /1/object/subnet/{pkiSubnetID} | Delete an existing Subnet
+*ObjectSubnetApi* | [**subnetEditObjectV1**](docs/ObjectSubnetApi.md#subnetEditObjectV1) | **PUT** /1/object/subnet/{pkiSubnetID} | Edit an existing Subnet
+*ObjectSubnetApi* | [**subnetGetObjectV2**](docs/ObjectSubnetApi.md#subnetGetObjectV2) | **GET** /2/object/subnet/{pkiSubnetID} | Retrieve an existing Subnet
+*ObjectSystemconfigurationApi* | [**systemconfigurationEditObjectV1**](docs/ObjectSystemconfigurationApi.md#systemconfigurationEditObjectV1) | **PUT** /1/object/systemconfiguration/{pkiSystemconfigurationID} | Edit an existing Systemconfiguration
+*ObjectSystemconfigurationApi* | [**systemconfigurationGetObjectV2**](docs/ObjectSystemconfigurationApi.md#systemconfigurationGetObjectV2) | **GET** /2/object/systemconfiguration/{pkiSystemconfigurationID} | Retrieve an existing Systemconfiguration
 *ObjectTaxassignmentApi* | [**taxassignmentGetAutocompleteV2**](docs/ObjectTaxassignmentApi.md#taxassignmentGetAutocompleteV2) | **GET** /2/object/taxassignment/getAutocomplete/{sSelector} | Retrieve Taxassignments and IDs
 *ObjectTimezoneApi* | [**timezoneGetAutocompleteV2**](docs/ObjectTimezoneApi.md#timezoneGetAutocompleteV2) | **GET** /2/object/timezone/getAutocomplete/{sSelector} | Retrieve Timezones and IDs
+*ObjectUserApi* | [**userCreateObjectV1**](docs/ObjectUserApi.md#userCreateObjectV1) | **POST** /1/object/user | Create a new User
+*ObjectUserApi* | [**userEditObjectV1**](docs/ObjectUserApi.md#userEditObjectV1) | **PUT** /1/object/user/{pkiUserID} | Edit an existing User
+*ObjectUserApi* | [**userEditPermissionsV1**](docs/ObjectUserApi.md#userEditPermissionsV1) | **PUT** /1/object/user/{pkiUserID}/editPermissions | Edit multiple Permissions
 *ObjectUserApi* | [**userGetAutocompleteV2**](docs/ObjectUserApi.md#userGetAutocompleteV2) | **GET** /2/object/user/getAutocomplete/{sSelector} | Retrieve Users and IDs
+*ObjectUserApi* | [**userGetEffectivePermissionsV1**](docs/ObjectUserApi.md#userGetEffectivePermissionsV1) | **GET** /1/object/user/{pkiUserID}/getEffectivePermissions | Retrieve an existing User&#39;s Effective Permissions
+*ObjectUserApi* | [**userGetListV1**](docs/ObjectUserApi.md#userGetListV1) | **GET** /1/object/user/getList | Retrieve User list
+*ObjectUserApi* | [**userGetObjectV2**](docs/ObjectUserApi.md#userGetObjectV2) | **GET** /2/object/user/{pkiUserID} | Retrieve an existing User
+*ObjectUserApi* | [**userGetPermissionsV1**](docs/ObjectUserApi.md#userGetPermissionsV1) | **GET** /1/object/user/{pkiUserID}/getPermissions | Retrieve an existing User&#39;s Permissions
+*ObjectUserApi* | [**userGetSubnetsV1**](docs/ObjectUserApi.md#userGetSubnetsV1) | **GET** /1/object/user/{pkiUserID}/getSubnets | Retrieve an existing User&#39;s Subnets
 *ObjectUsergroupApi* | [**usergroupCreateObjectV1**](docs/ObjectUsergroupApi.md#usergroupCreateObjectV1) | **POST** /1/object/usergroup | Create a new Usergroup
 *ObjectUsergroupApi* | [**usergroupEditObjectV1**](docs/ObjectUsergroupApi.md#usergroupEditObjectV1) | **PUT** /1/object/usergroup/{pkiUsergroupID} | Edit an existing Usergroup
+*ObjectUsergroupApi* | [**usergroupEditPermissionsV1**](docs/ObjectUsergroupApi.md#usergroupEditPermissionsV1) | **PUT** /1/object/usergroup/{pkiUsergroupID}/editPermissions | Edit multiple Permissions
+*ObjectUsergroupApi* | [**usergroupEditUsergroupmembershipsV1**](docs/ObjectUsergroupApi.md#usergroupEditUsergroupmembershipsV1) | **PUT** /1/object/usergroup/{pkiUsergroupID}/editUsergroupmemberships | Edit multiple Usergroupmemberships
 *ObjectUsergroupApi* | [**usergroupGetAutocompleteV2**](docs/ObjectUsergroupApi.md#usergroupGetAutocompleteV2) | **GET** /2/object/usergroup/getAutocomplete/{sSelector} | Retrieve Usergroups and IDs
 *ObjectUsergroupApi* | [**usergroupGetListV1**](docs/ObjectUsergroupApi.md#usergroupGetListV1) | **GET** /1/object/usergroup/getList | Retrieve Usergroup list
 *ObjectUsergroupApi* | [**usergroupGetObjectV2**](docs/ObjectUsergroupApi.md#usergroupGetObjectV2) | **GET** /2/object/usergroup/{pkiUsergroupID} | Retrieve an existing Usergroup
+*ObjectUsergroupApi* | [**usergroupGetPermissionsV1**](docs/ObjectUsergroupApi.md#usergroupGetPermissionsV1) | **GET** /1/object/usergroup/{pkiUsergroupID}/getPermissions | Retrieve an existing Usergroup&#39;s Permissions
+*ObjectUsergroupApi* | [**usergroupGetUsergroupmembershipsV1**](docs/ObjectUsergroupApi.md#usergroupGetUsergroupmembershipsV1) | **GET** /1/object/usergroup/{pkiUsergroupID}/getUsergroupmemberships | Retrieve an existing Usergroup&#39;s Usergroupmemberships
+*ObjectUsergroupmembershipApi* | [**usergroupmembershipCreateObjectV1**](docs/ObjectUsergroupmembershipApi.md#usergroupmembershipCreateObjectV1) | **POST** /1/object/usergroupmembership | Create a new Usergroupmembership
+*ObjectUsergroupmembershipApi* | [**usergroupmembershipDeleteObjectV1**](docs/ObjectUsergroupmembershipApi.md#usergroupmembershipDeleteObjectV1) | **DELETE** /1/object/usergroupmembership/{pkiUsergroupmembershipID} | Delete an existing Usergroupmembership
+*ObjectUsergroupmembershipApi* | [**usergroupmembershipEditObjectV1**](docs/ObjectUsergroupmembershipApi.md#usergroupmembershipEditObjectV1) | **PUT** /1/object/usergroupmembership/{pkiUsergroupmembershipID} | Edit an existing Usergroupmembership
+*ObjectUsergroupmembershipApi* | [**usergroupmembershipGetObjectV2**](docs/ObjectUsergroupmembershipApi.md#usergroupmembershipGetObjectV2) | **GET** /2/object/usergroupmembership/{pkiUsergroupmembershipID} | Retrieve an existing Usergroupmembership
+*ObjectUserstagedApi* | [**userstagedCreateUserV1**](docs/ObjectUserstagedApi.md#userstagedCreateUserV1) | **POST** /1/object/userstaged/{pkiUserstagedID}/createUser | Create a User from a Userstaged and then map it
 *ObjectUserstagedApi* | [**userstagedDeleteObjectV1**](docs/ObjectUserstagedApi.md#userstagedDeleteObjectV1) | **DELETE** /1/object/userstaged/{pkiUserstagedID} | Delete an existing Userstaged
 *ObjectUserstagedApi* | [**userstagedGetListV1**](docs/ObjectUserstagedApi.md#userstagedGetListV1) | **GET** /1/object/userstaged/getList | Retrieve Userstaged list
 *ObjectUserstagedApi* | [**userstagedGetObjectV2**](docs/ObjectUserstagedApi.md#userstagedGetObjectV2) | **GET** /2/object/userstaged/{pkiUserstagedID} | Retrieve an existing Userstaged
@@ -299,6 +342,17 @@ Class | Method | HTTP request | Description
 *ObjectWebhookApi* | [**webhookGetListV1**](docs/ObjectWebhookApi.md#webhookGetListV1) | **GET** /1/object/webhook/getList | Retrieve Webhook list
 *ObjectWebhookApi* | [**webhookGetObjectV2**](docs/ObjectWebhookApi.md#webhookGetObjectV2) | **GET** /2/object/webhook/{pkiWebhookID} | Retrieve an existing Webhook
 *ObjectWebhookApi* | [**webhookTestV1**](docs/ObjectWebhookApi.md#webhookTestV1) | **POST** /1/object/webhook/{pkiWebhookID}/test | Test the Webhook by calling the Url
+*ScimGroupsApi* | [**groupsCreateObjectScimV2**](docs/ScimGroupsApi.md#groupsCreateObjectScimV2) | **POST** /2/scim/Groups | Create a new Usergroup
+*ScimGroupsApi* | [**groupsDeleteObjectScimV2**](docs/ScimGroupsApi.md#groupsDeleteObjectScimV2) | **DELETE** /2/scim/Groups/{groupId} | Delete an existing Usergroup
+*ScimGroupsApi* | [**groupsEditObjectScimV2**](docs/ScimGroupsApi.md#groupsEditObjectScimV2) | **PUT** /2/scim/Groups/{groupId} | Edit an existing Usergroup
+*ScimGroupsApi* | [**groupsGetListScimV2**](docs/ScimGroupsApi.md#groupsGetListScimV2) | **GET** /2/scim/Groups | Retrieve Usergroup list
+*ScimGroupsApi* | [**groupsGetObjectScimV2**](docs/ScimGroupsApi.md#groupsGetObjectScimV2) | **GET** /2/scim/Groups/{groupId} | Retrieve an existing Usergroup
+*ScimServiceProviderConfigApi* | [**serviceProviderConfigGetObjectScimV2**](docs/ScimServiceProviderConfigApi.md#serviceProviderConfigGetObjectScimV2) | **GET** /2/scim/ServiceProviderConfig | Get Service Provider Configuration
+*ScimUsersApi* | [**usersCreateObjectScimV2**](docs/ScimUsersApi.md#usersCreateObjectScimV2) | **POST** /2/scim/Users | Create a new User
+*ScimUsersApi* | [**usersDeleteObjectScimV2**](docs/ScimUsersApi.md#usersDeleteObjectScimV2) | **DELETE** /2/scim/Users/{userId} | Delete an existing User
+*ScimUsersApi* | [**usersEditObjectScimV2**](docs/ScimUsersApi.md#usersEditObjectScimV2) | **PUT** /2/scim/Users/{userId} | Edit an existing User
+*ScimUsersApi* | [**usersGetListScimV2**](docs/ScimUsersApi.md#usersGetListScimV2) | **GET** /2/scim/Users | Retrieve User list
+*ScimUsersApi* | [**usersGetObjectScimV2**](docs/ScimUsersApi.md#usersGetObjectScimV2) | **GET** /2/scim/Users/{userId} | Retrieve an existing User
 
 
 ## Documentation for Models
@@ -322,6 +376,21 @@ Class | Method | HTTP request | Description
  - [ApikeyCreateObjectV2Response](docs/ApikeyCreateObjectV2Response.md)
  - [ApikeyCreateObjectV2ResponseAllOf](docs/ApikeyCreateObjectV2ResponseAllOf.md)
  - [ApikeyCreateObjectV2ResponseMPayload](docs/ApikeyCreateObjectV2ResponseMPayload.md)
+ - [ApikeyEditObjectV1Request](docs/ApikeyEditObjectV1Request.md)
+ - [ApikeyEditObjectV1Response](docs/ApikeyEditObjectV1Response.md)
+ - [ApikeyEditPermissionsV1Request](docs/ApikeyEditPermissionsV1Request.md)
+ - [ApikeyEditPermissionsV1Response](docs/ApikeyEditPermissionsV1Response.md)
+ - [ApikeyEditPermissionsV1ResponseAllOf](docs/ApikeyEditPermissionsV1ResponseAllOf.md)
+ - [ApikeyEditPermissionsV1ResponseMPayload](docs/ApikeyEditPermissionsV1ResponseMPayload.md)
+ - [ApikeyGetObjectV2Response](docs/ApikeyGetObjectV2Response.md)
+ - [ApikeyGetObjectV2ResponseAllOf](docs/ApikeyGetObjectV2ResponseAllOf.md)
+ - [ApikeyGetObjectV2ResponseMPayload](docs/ApikeyGetObjectV2ResponseMPayload.md)
+ - [ApikeyGetPermissionsV1Response](docs/ApikeyGetPermissionsV1Response.md)
+ - [ApikeyGetPermissionsV1ResponseAllOf](docs/ApikeyGetPermissionsV1ResponseAllOf.md)
+ - [ApikeyGetPermissionsV1ResponseMPayload](docs/ApikeyGetPermissionsV1ResponseMPayload.md)
+ - [ApikeyGetSubnetsV1Response](docs/ApikeyGetSubnetsV1Response.md)
+ - [ApikeyGetSubnetsV1ResponseAllOf](docs/ApikeyGetSubnetsV1ResponseAllOf.md)
+ - [ApikeyGetSubnetsV1ResponseMPayload](docs/ApikeyGetSubnetsV1ResponseMPayload.md)
  - [ApikeyRequest](docs/ApikeyRequest.md)
  - [ApikeyRequestCompound](docs/ApikeyRequestCompound.md)
  - [ApikeyResponse](docs/ApikeyResponse.md)
@@ -352,8 +421,14 @@ Class | Method | HTTP request | Description
  - [BillingentityinternalListElement](docs/BillingentityinternalListElement.md)
  - [BillingentityinternalRequest](docs/BillingentityinternalRequest.md)
  - [BillingentityinternalRequestCompound](docs/BillingentityinternalRequestCompound.md)
+ - [BillingentityinternalRequestCompoundAllOf](docs/BillingentityinternalRequestCompoundAllOf.md)
  - [BillingentityinternalResponse](docs/BillingentityinternalResponse.md)
  - [BillingentityinternalResponseCompound](docs/BillingentityinternalResponseCompound.md)
+ - [BillingentityinternalResponseCompoundAllOf](docs/BillingentityinternalResponseCompoundAllOf.md)
+ - [BillingentityinternalproductRequest](docs/BillingentityinternalproductRequest.md)
+ - [BillingentityinternalproductRequestCompound](docs/BillingentityinternalproductRequestCompound.md)
+ - [BillingentityinternalproductResponse](docs/BillingentityinternalproductResponse.md)
+ - [BillingentityinternalproductResponseCompound](docs/BillingentityinternalproductResponseCompound.md)
  - [BrandingAutocompleteElementResponse](docs/BrandingAutocompleteElementResponse.md)
  - [BrandingCreateObjectV1Request](docs/BrandingCreateObjectV1Request.md)
  - [BrandingCreateObjectV1Response](docs/BrandingCreateObjectV1Response.md)
@@ -384,11 +459,25 @@ Class | Method | HTTP request | Description
  - [ClonehistoryListElement](docs/ClonehistoryListElement.md)
  - [CommonAudit](docs/CommonAudit.md)
  - [CommonAuditdetail](docs/CommonAuditdetail.md)
+ - [CommonFile](docs/CommonFile.md)
  - [CommonGetAutocompleteV1Response](docs/CommonGetAutocompleteV1Response.md)
  - [CommonGetAutocompleteV1ResponseAllOf](docs/CommonGetAutocompleteV1ResponseAllOf.md)
  - [CommonGetListV1ResponseMPayload](docs/CommonGetListV1ResponseMPayload.md)
+ - [CommonGetReportV1Response](docs/CommonGetReportV1Response.md)
+ - [CommonGetReportV1ResponseAllOf](docs/CommonGetReportV1ResponseAllOf.md)
+ - [CommonGetReportV1ResponseMPayload](docs/CommonGetReportV1ResponseMPayload.md)
+ - [CommonReport](docs/CommonReport.md)
+ - [CommonReportcell](docs/CommonReportcell.md)
+ - [CommonReportcellstyle](docs/CommonReportcellstyle.md)
+ - [CommonReportcolumn](docs/CommonReportcolumn.md)
+ - [CommonReportgroup](docs/CommonReportgroup.md)
+ - [CommonReportrow](docs/CommonReportrow.md)
+ - [CommonReportsection](docs/CommonReportsection.md)
+ - [CommonReportsubsection](docs/CommonReportsubsection.md)
+ - [CommonReportsubsectionpart](docs/CommonReportsubsectionpart.md)
  - [CommonResponse](docs/CommonResponse.md)
  - [CommonResponseError](docs/CommonResponseError.md)
+ - [CommonResponseErrorEzsignformValidation](docs/CommonResponseErrorEzsignformValidation.md)
  - [CommonResponseErrorSTemporaryFileUrl](docs/CommonResponseErrorSTemporaryFileUrl.md)
  - [CommonResponseErrorSTemporaryFileUrlAllOf](docs/CommonResponseErrorSTemporaryFileUrlAllOf.md)
  - [CommonResponseErrorTooManyRequests](docs/CommonResponseErrorTooManyRequests.md)
@@ -414,6 +503,10 @@ Class | Method | HTTP request | Description
  - [CommunicationexternalrecipientResponseCompound](docs/CommunicationexternalrecipientResponseCompound.md)
  - [CommunicationrecipientResponse](docs/CommunicationrecipientResponse.md)
  - [CommunicationrecipientResponseCompound](docs/CommunicationrecipientResponseCompound.md)
+ - [CompanyAutocompleteElementResponse](docs/CompanyAutocompleteElementResponse.md)
+ - [CompanyGetAutocompleteV2Response](docs/CompanyGetAutocompleteV2Response.md)
+ - [CompanyGetAutocompleteV2ResponseAllOf](docs/CompanyGetAutocompleteV2ResponseAllOf.md)
+ - [CompanyGetAutocompleteV2ResponseMPayload](docs/CompanyGetAutocompleteV2ResponseMPayload.md)
  - [ComputedECommunicationDirection](docs/ComputedECommunicationDirection.md)
  - [ContactRequest](docs/ContactRequest.md)
  - [ContactRequestCompound](docs/ContactRequestCompound.md)
@@ -442,6 +535,14 @@ Class | Method | HTTP request | Description
  - [CustomEzsignfoldersignerassociationstatusResponse](docs/CustomEzsignfoldersignerassociationstatusResponse.md)
  - [CustomEzsignfoldertransmissionResponse](docs/CustomEzsignfoldertransmissionResponse.md)
  - [CustomEzsignfoldertransmissionSignerResponse](docs/CustomEzsignfoldertransmissionSignerResponse.md)
+ - [CustomEzsignformfieldRequest](docs/CustomEzsignformfieldRequest.md)
+ - [CustomEzsignformfieldRequestAllOf](docs/CustomEzsignformfieldRequestAllOf.md)
+ - [CustomEzsignformfielderrorResponse](docs/CustomEzsignformfielderrorResponse.md)
+ - [CustomEzsignformfielderrorResponseAllOf](docs/CustomEzsignformfielderrorResponseAllOf.md)
+ - [CustomEzsignformfielderrortestResponse](docs/CustomEzsignformfielderrortestResponse.md)
+ - [CustomEzsignformfielderrortestResponseAllOf](docs/CustomEzsignformfielderrortestResponseAllOf.md)
+ - [CustomEzsignformfieldgroupRequest](docs/CustomEzsignformfieldgroupRequest.md)
+ - [CustomEzsignformfieldgroupRequestAllOf](docs/CustomEzsignformfieldgroupRequestAllOf.md)
  - [CustomEzsignsignatureEzsignsignaturesAutomaticResponse](docs/CustomEzsignsignatureEzsignsignaturesAutomaticResponse.md)
  - [CustomEzsignsignaturestatusResponse](docs/CustomEzsignsignaturestatusResponse.md)
  - [CustomFormDataDocumentResponse](docs/CustomFormDataDocumentResponse.md)
@@ -469,9 +570,14 @@ Class | Method | HTTP request | Description
  - [DescriptionstaticResponseCompound](docs/DescriptionstaticResponseCompound.md)
  - [EmailRequest](docs/EmailRequest.md)
  - [EmailRequestCompound](docs/EmailRequestCompound.md)
+ - [EmailResponse](docs/EmailResponse.md)
+ - [EmailResponseCompound](docs/EmailResponseCompound.md)
  - [EmailstaticResponse](docs/EmailstaticResponse.md)
  - [EmailstaticResponseCompound](docs/EmailstaticResponseCompound.md)
+ - [EnumFontunderline](docs/EnumFontunderline.md)
+ - [EnumFontweight](docs/EnumFontweight.md)
  - [EnumHorizontalalignment](docs/EnumHorizontalalignment.md)
+ - [EnumTextvalidation](docs/EnumTextvalidation.md)
  - [EnumVerticalalignment](docs/EnumVerticalalignment.md)
  - [EzmaxinvoicingAutocompleteElementResponse](docs/EzmaxinvoicingAutocompleteElementResponse.md)
  - [EzmaxinvoicingGetAutocompleteV2Response](docs/EzmaxinvoicingGetAutocompleteV2Response.md)
@@ -606,6 +712,8 @@ Class | Method | HTTP request | Description
  - [EzsigndocumentCreateObjectV2Response](docs/EzsigndocumentCreateObjectV2Response.md)
  - [EzsigndocumentCreateObjectV2ResponseAllOf](docs/EzsigndocumentCreateObjectV2ResponseAllOf.md)
  - [EzsigndocumentCreateObjectV2ResponseMPayload](docs/EzsigndocumentCreateObjectV2ResponseMPayload.md)
+ - [EzsigndocumentDeclineToSignV1Request](docs/EzsigndocumentDeclineToSignV1Request.md)
+ - [EzsigndocumentDeclineToSignV1Response](docs/EzsigndocumentDeclineToSignV1Response.md)
  - [EzsigndocumentDeleteObjectV1Response](docs/EzsigndocumentDeleteObjectV1Response.md)
  - [EzsigndocumentEditEzsignformfieldgroupsV1Request](docs/EzsigndocumentEditEzsignformfieldgroupsV1Request.md)
  - [EzsigndocumentEditEzsignformfieldgroupsV1Response](docs/EzsigndocumentEditEzsignformfieldgroupsV1Response.md)
@@ -664,6 +772,8 @@ Class | Method | HTTP request | Description
  - [EzsigndocumentResponse](docs/EzsigndocumentResponse.md)
  - [EzsigndocumentResponseCompound](docs/EzsigndocumentResponseCompound.md)
  - [EzsigndocumentResponseCompoundAllOf](docs/EzsigndocumentResponseCompoundAllOf.md)
+ - [EzsigndocumentSubmitEzsignformV1Request](docs/EzsigndocumentSubmitEzsignformV1Request.md)
+ - [EzsigndocumentSubmitEzsignformV1Response](docs/EzsigndocumentSubmitEzsignformV1Response.md)
  - [EzsigndocumentUnsendV1Response](docs/EzsigndocumentUnsendV1Response.md)
  - [EzsigndocumentlogResponse](docs/EzsigndocumentlogResponse.md)
  - [EzsigndocumentlogResponseCompound](docs/EzsigndocumentlogResponseCompound.md)
@@ -815,6 +925,7 @@ Class | Method | HTTP request | Description
  - [EzsignformfieldgroupsignerRequestCompound](docs/EzsignformfieldgroupsignerRequestCompound.md)
  - [EzsignformfieldgroupsignerResponse](docs/EzsignformfieldgroupsignerResponse.md)
  - [EzsignformfieldgroupsignerResponseCompound](docs/EzsignformfieldgroupsignerResponseCompound.md)
+ - [EzsignpageConsultV1Response](docs/EzsignpageConsultV1Response.md)
  - [EzsignpageResponse](docs/EzsignpageResponse.md)
  - [EzsignpageResponseCompound](docs/EzsignpageResponseCompound.md)
  - [EzsignsignatureCreateObjectV1Request](docs/EzsignsignatureCreateObjectV1Request.md)
@@ -828,6 +939,9 @@ Class | Method | HTTP request | Description
  - [EzsignsignatureDeleteObjectV1Response](docs/EzsignsignatureDeleteObjectV1Response.md)
  - [EzsignsignatureEditObjectV1Request](docs/EzsignsignatureEditObjectV1Request.md)
  - [EzsignsignatureEditObjectV1Response](docs/EzsignsignatureEditObjectV1Response.md)
+ - [EzsignsignatureGetEzsignsignatureattachmentV1Response](docs/EzsignsignatureGetEzsignsignatureattachmentV1Response.md)
+ - [EzsignsignatureGetEzsignsignatureattachmentV1ResponseAllOf](docs/EzsignsignatureGetEzsignsignatureattachmentV1ResponseAllOf.md)
+ - [EzsignsignatureGetEzsignsignatureattachmentV1ResponseMPayload](docs/EzsignsignatureGetEzsignsignatureattachmentV1ResponseMPayload.md)
  - [EzsignsignatureGetEzsignsignaturesAutomaticV1Response](docs/EzsignsignatureGetEzsignsignaturesAutomaticV1Response.md)
  - [EzsignsignatureGetEzsignsignaturesAutomaticV1ResponseAllOf](docs/EzsignsignatureGetEzsignsignaturesAutomaticV1ResponseAllOf.md)
  - [EzsignsignatureGetEzsignsignaturesAutomaticV1ResponseMPayload](docs/EzsignsignatureGetEzsignsignaturesAutomaticV1ResponseMPayload.md)
@@ -842,6 +956,7 @@ Class | Method | HTTP request | Description
  - [EzsignsignatureResponseCompoundAllOf](docs/EzsignsignatureResponseCompoundAllOf.md)
  - [EzsignsignatureSignV1Request](docs/EzsignsignatureSignV1Request.md)
  - [EzsignsignatureSignV1Response](docs/EzsignsignatureSignV1Response.md)
+ - [EzsignsignatureattachmentResponse](docs/EzsignsignatureattachmentResponse.md)
  - [EzsignsignaturecustomdateRequest](docs/EzsignsignaturecustomdateRequest.md)
  - [EzsignsignaturecustomdateRequestCompound](docs/EzsignsignaturecustomdateRequestCompound.md)
  - [EzsignsignaturecustomdateResponse](docs/EzsignsignaturecustomdateResponse.md)
@@ -854,6 +969,8 @@ Class | Method | HTTP request | Description
  - [EzsignsignerResponseCompound](docs/EzsignsignerResponseCompound.md)
  - [EzsignsignerResponseCompoundAllOf](docs/EzsignsignerResponseCompoundAllOf.md)
  - [EzsignsignerResponseCompoundContact](docs/EzsignsignerResponseCompoundContact.md)
+ - [EzsignsignergroupResponse](docs/EzsignsignergroupResponse.md)
+ - [EzsignsignergroupResponseCompound](docs/EzsignsignergroupResponseCompound.md)
  - [EzsigntemplateAutocompleteElementResponse](docs/EzsigntemplateAutocompleteElementResponse.md)
  - [EzsigntemplateCopyV1Request](docs/EzsigntemplateCopyV1Request.md)
  - [EzsigntemplateCopyV1Response](docs/EzsigntemplateCopyV1Response.md)
@@ -1067,6 +1184,8 @@ Class | Method | HTTP request | Description
  - [FieldECommunicationexternalrecipientType](docs/FieldECommunicationexternalrecipientType.md)
  - [FieldECommunicationrecipientObjecttype](docs/FieldECommunicationrecipientObjecttype.md)
  - [FieldECommunicationrecipientType](docs/FieldECommunicationrecipientType.md)
+ - [FieldECreditcardtypeCodename](docs/FieldECreditcardtypeCodename.md)
+ - [FieldEErrorCode](docs/FieldEErrorCode.md)
  - [FieldEEzmaxinvoicingPaymenttype](docs/FieldEEzmaxinvoicingPaymenttype.md)
  - [FieldEEzmaxinvoicingagentVariationezmax](docs/FieldEEzmaxinvoicingagentVariationezmax.md)
  - [FieldEEzmaxinvoicingagentVariationezsign](docs/FieldEEzmaxinvoicingagentVariationezsign.md)
@@ -1098,7 +1217,14 @@ Class | Method | HTTP request | Description
  - [FieldEPaymenttermType](docs/FieldEPaymenttermType.md)
  - [FieldEPhoneType](docs/FieldEPhoneType.md)
  - [FieldESessionhistoryEndby](docs/FieldESessionhistoryEndby.md)
+ - [FieldESystemconfigurationEzsign](docs/FieldESystemconfigurationEzsign.md)
+ - [FieldESystemconfigurationLanguage1](docs/FieldESystemconfigurationLanguage1.md)
+ - [FieldESystemconfigurationLanguage2](docs/FieldESystemconfigurationLanguage2.md)
+ - [FieldESystemconfigurationNewexternaluseraction](docs/FieldESystemconfigurationNewexternaluseraction.md)
+ - [FieldEUserEzsignaccess](docs/FieldEUserEzsignaccess.md)
  - [FieldEUserEzsignsendreminderfrequency](docs/FieldEUserEzsignsendreminderfrequency.md)
+ - [FieldEUserLogintype](docs/FieldEUserLogintype.md)
+ - [FieldEUserOrigin](docs/FieldEUserOrigin.md)
  - [FieldEUserType](docs/FieldEUserType.md)
  - [FieldEVariableexpenseTaxable](docs/FieldEVariableexpenseTaxable.md)
  - [FieldEVersionhistoryType](docs/FieldEVersionhistoryType.md)
@@ -1134,6 +1260,18 @@ Class | Method | HTTP request | Description
  - [GlobalEzmaxclientVersionV1Response](docs/GlobalEzmaxclientVersionV1Response.md)
  - [GlobalEzmaxcustomerGetConfigurationV1Response](docs/GlobalEzmaxcustomerGetConfigurationV1Response.md)
  - [HeaderAcceptLanguage](docs/HeaderAcceptLanguage.md)
+ - [ModuleResponse](docs/ModuleResponse.md)
+ - [ModuleResponseCompound](docs/ModuleResponseCompound.md)
+ - [ModuleResponseCompoundAllOf](docs/ModuleResponseCompoundAllOf.md)
+ - [ModulegroupGetAllV1Response](docs/ModulegroupGetAllV1Response.md)
+ - [ModulegroupGetAllV1ResponseAllOf](docs/ModulegroupGetAllV1ResponseAllOf.md)
+ - [ModulegroupGetAllV1ResponseMPayload](docs/ModulegroupGetAllV1ResponseMPayload.md)
+ - [ModulegroupResponse](docs/ModulegroupResponse.md)
+ - [ModulegroupResponseCompound](docs/ModulegroupResponseCompound.md)
+ - [ModulegroupResponseCompoundAllOf](docs/ModulegroupResponseCompoundAllOf.md)
+ - [ModulesectionResponse](docs/ModulesectionResponse.md)
+ - [ModulesectionResponseCompound](docs/ModulesectionResponseCompound.md)
+ - [ModulesectionResponseCompoundAllOf](docs/ModulesectionResponseCompoundAllOf.md)
  - [MultilingualApikeyDescription](docs/MultilingualApikeyDescription.md)
  - [MultilingualBillingentityinternalDescription](docs/MultilingualBillingentityinternalDescription.md)
  - [MultilingualBrandingDescription](docs/MultilingualBrandingDescription.md)
@@ -1142,6 +1280,7 @@ Class | Method | HTTP request | Description
  - [MultilingualNotificationsubsectionName](docs/MultilingualNotificationsubsectionName.md)
  - [MultilingualNotificationtestName](docs/MultilingualNotificationtestName.md)
  - [MultilingualPaymenttermDescription](docs/MultilingualPaymenttermDescription.md)
+ - [MultilingualSubnetDescription](docs/MultilingualSubnetDescription.md)
  - [MultilingualUsergroupName](docs/MultilingualUsergroupName.md)
  - [MultilingualVariableexpenseDescription](docs/MultilingualVariableexpenseDescription.md)
  - [MultilingualVersionhistoryDetail](docs/MultilingualVersionhistoryDetail.md)
@@ -1179,10 +1318,39 @@ Class | Method | HTTP request | Description
  - [PeriodGetAutocompleteV2Response](docs/PeriodGetAutocompleteV2Response.md)
  - [PeriodGetAutocompleteV2ResponseAllOf](docs/PeriodGetAutocompleteV2ResponseAllOf.md)
  - [PeriodGetAutocompleteV2ResponseMPayload](docs/PeriodGetAutocompleteV2ResponseMPayload.md)
+ - [PermissionCreateObjectV1Request](docs/PermissionCreateObjectV1Request.md)
+ - [PermissionCreateObjectV1Response](docs/PermissionCreateObjectV1Response.md)
+ - [PermissionCreateObjectV1ResponseAllOf](docs/PermissionCreateObjectV1ResponseAllOf.md)
+ - [PermissionCreateObjectV1ResponseMPayload](docs/PermissionCreateObjectV1ResponseMPayload.md)
+ - [PermissionDeleteObjectV1Response](docs/PermissionDeleteObjectV1Response.md)
+ - [PermissionEditObjectV1Request](docs/PermissionEditObjectV1Request.md)
+ - [PermissionEditObjectV1Response](docs/PermissionEditObjectV1Response.md)
+ - [PermissionGetObjectV2Response](docs/PermissionGetObjectV2Response.md)
+ - [PermissionGetObjectV2ResponseAllOf](docs/PermissionGetObjectV2ResponseAllOf.md)
+ - [PermissionGetObjectV2ResponseMPayload](docs/PermissionGetObjectV2ResponseMPayload.md)
+ - [PermissionRequest](docs/PermissionRequest.md)
+ - [PermissionRequestCompound](docs/PermissionRequestCompound.md)
+ - [PermissionResponse](docs/PermissionResponse.md)
+ - [PermissionResponseCompound](docs/PermissionResponseCompound.md)
  - [PhoneRequest](docs/PhoneRequest.md)
  - [PhoneRequestCompound](docs/PhoneRequestCompound.md)
+ - [PhoneResponse](docs/PhoneResponse.md)
+ - [PhoneResponseCompound](docs/PhoneResponseCompound.md)
  - [PhonestaticResponse](docs/PhonestaticResponse.md)
  - [PhonestaticResponseCompound](docs/PhonestaticResponseCompound.md)
+ - [ScimAuthenticationScheme](docs/ScimAuthenticationScheme.md)
+ - [ScimEmail](docs/ScimEmail.md)
+ - [ScimGroup](docs/ScimGroup.md)
+ - [ScimGroupMember](docs/ScimGroupMember.md)
+ - [ScimServiceProviderConfig](docs/ScimServiceProviderConfig.md)
+ - [ScimServiceProviderConfigBulk](docs/ScimServiceProviderConfigBulk.md)
+ - [ScimServiceProviderConfigChangePassword](docs/ScimServiceProviderConfigChangePassword.md)
+ - [ScimServiceProviderConfigEtag](docs/ScimServiceProviderConfigEtag.md)
+ - [ScimServiceProviderConfigFilter](docs/ScimServiceProviderConfigFilter.md)
+ - [ScimServiceProviderConfigPatch](docs/ScimServiceProviderConfigPatch.md)
+ - [ScimServiceProviderConfigSort](docs/ScimServiceProviderConfigSort.md)
+ - [ScimUser](docs/ScimUser.md)
+ - [ScimUserList](docs/ScimUserList.md)
  - [SecretquestionAutocompleteElementResponse](docs/SecretquestionAutocompleteElementResponse.md)
  - [SecretquestionGetAutocompleteV2Response](docs/SecretquestionGetAutocompleteV2Response.md)
  - [SecretquestionGetAutocompleteV2ResponseAllOf](docs/SecretquestionGetAutocompleteV2ResponseAllOf.md)
@@ -1192,6 +1360,43 @@ Class | Method | HTTP request | Description
  - [SessionhistoryGetListV1ResponseMPayload](docs/SessionhistoryGetListV1ResponseMPayload.md)
  - [SessionhistoryGetListV1ResponseMPayloadAllOf](docs/SessionhistoryGetListV1ResponseMPayloadAllOf.md)
  - [SessionhistoryListElement](docs/SessionhistoryListElement.md)
+ - [SignatureCreateObjectV1Request](docs/SignatureCreateObjectV1Request.md)
+ - [SignatureCreateObjectV1Response](docs/SignatureCreateObjectV1Response.md)
+ - [SignatureCreateObjectV1ResponseAllOf](docs/SignatureCreateObjectV1ResponseAllOf.md)
+ - [SignatureCreateObjectV1ResponseMPayload](docs/SignatureCreateObjectV1ResponseMPayload.md)
+ - [SignatureDeleteObjectV1Response](docs/SignatureDeleteObjectV1Response.md)
+ - [SignatureEditObjectV1Request](docs/SignatureEditObjectV1Request.md)
+ - [SignatureEditObjectV1Response](docs/SignatureEditObjectV1Response.md)
+ - [SignatureGetObjectV2Response](docs/SignatureGetObjectV2Response.md)
+ - [SignatureGetObjectV2ResponseAllOf](docs/SignatureGetObjectV2ResponseAllOf.md)
+ - [SignatureGetObjectV2ResponseMPayload](docs/SignatureGetObjectV2ResponseMPayload.md)
+ - [SignatureRequest](docs/SignatureRequest.md)
+ - [SignatureRequestCompound](docs/SignatureRequestCompound.md)
+ - [SignatureResponse](docs/SignatureResponse.md)
+ - [SignatureResponseCompound](docs/SignatureResponseCompound.md)
+ - [SubnetCreateObjectV1Request](docs/SubnetCreateObjectV1Request.md)
+ - [SubnetCreateObjectV1Response](docs/SubnetCreateObjectV1Response.md)
+ - [SubnetCreateObjectV1ResponseAllOf](docs/SubnetCreateObjectV1ResponseAllOf.md)
+ - [SubnetCreateObjectV1ResponseMPayload](docs/SubnetCreateObjectV1ResponseMPayload.md)
+ - [SubnetDeleteObjectV1Response](docs/SubnetDeleteObjectV1Response.md)
+ - [SubnetEditObjectV1Request](docs/SubnetEditObjectV1Request.md)
+ - [SubnetEditObjectV1Response](docs/SubnetEditObjectV1Response.md)
+ - [SubnetGetObjectV2Response](docs/SubnetGetObjectV2Response.md)
+ - [SubnetGetObjectV2ResponseAllOf](docs/SubnetGetObjectV2ResponseAllOf.md)
+ - [SubnetGetObjectV2ResponseMPayload](docs/SubnetGetObjectV2ResponseMPayload.md)
+ - [SubnetRequest](docs/SubnetRequest.md)
+ - [SubnetRequestCompound](docs/SubnetRequestCompound.md)
+ - [SubnetResponse](docs/SubnetResponse.md)
+ - [SubnetResponseCompound](docs/SubnetResponseCompound.md)
+ - [SystemconfigurationEditObjectV1Request](docs/SystemconfigurationEditObjectV1Request.md)
+ - [SystemconfigurationEditObjectV1Response](docs/SystemconfigurationEditObjectV1Response.md)
+ - [SystemconfigurationGetObjectV2Response](docs/SystemconfigurationGetObjectV2Response.md)
+ - [SystemconfigurationGetObjectV2ResponseAllOf](docs/SystemconfigurationGetObjectV2ResponseAllOf.md)
+ - [SystemconfigurationGetObjectV2ResponseMPayload](docs/SystemconfigurationGetObjectV2ResponseMPayload.md)
+ - [SystemconfigurationRequest](docs/SystemconfigurationRequest.md)
+ - [SystemconfigurationRequestCompound](docs/SystemconfigurationRequestCompound.md)
+ - [SystemconfigurationResponse](docs/SystemconfigurationResponse.md)
+ - [SystemconfigurationResponseCompound](docs/SystemconfigurationResponseCompound.md)
  - [TaxassignmentAutocompleteElementResponse](docs/TaxassignmentAutocompleteElementResponse.md)
  - [TaxassignmentGetAutocompleteV2Response](docs/TaxassignmentGetAutocompleteV2Response.md)
  - [TaxassignmentGetAutocompleteV2ResponseAllOf](docs/TaxassignmentGetAutocompleteV2ResponseAllOf.md)
@@ -1207,9 +1412,38 @@ Class | Method | HTTP request | Description
  - [UserCreateEzsignuserV1Response](docs/UserCreateEzsignuserV1Response.md)
  - [UserCreateEzsignuserV1ResponseAllOf](docs/UserCreateEzsignuserV1ResponseAllOf.md)
  - [UserCreateEzsignuserV1ResponseMPayload](docs/UserCreateEzsignuserV1ResponseMPayload.md)
+ - [UserCreateObjectV1Request](docs/UserCreateObjectV1Request.md)
+ - [UserCreateObjectV1Response](docs/UserCreateObjectV1Response.md)
+ - [UserCreateObjectV1ResponseAllOf](docs/UserCreateObjectV1ResponseAllOf.md)
+ - [UserCreateObjectV1ResponseMPayload](docs/UserCreateObjectV1ResponseMPayload.md)
+ - [UserEditObjectV1Request](docs/UserEditObjectV1Request.md)
+ - [UserEditObjectV1Response](docs/UserEditObjectV1Response.md)
+ - [UserEditPermissionsV1Request](docs/UserEditPermissionsV1Request.md)
+ - [UserEditPermissionsV1Response](docs/UserEditPermissionsV1Response.md)
+ - [UserEditPermissionsV1ResponseAllOf](docs/UserEditPermissionsV1ResponseAllOf.md)
+ - [UserEditPermissionsV1ResponseMPayload](docs/UserEditPermissionsV1ResponseMPayload.md)
  - [UserGetAutocompleteV2Response](docs/UserGetAutocompleteV2Response.md)
  - [UserGetAutocompleteV2ResponseAllOf](docs/UserGetAutocompleteV2ResponseAllOf.md)
  - [UserGetAutocompleteV2ResponseMPayload](docs/UserGetAutocompleteV2ResponseMPayload.md)
+ - [UserGetEffectivePermissionsV1Response](docs/UserGetEffectivePermissionsV1Response.md)
+ - [UserGetEffectivePermissionsV1ResponseAllOf](docs/UserGetEffectivePermissionsV1ResponseAllOf.md)
+ - [UserGetEffectivePermissionsV1ResponseMPayload](docs/UserGetEffectivePermissionsV1ResponseMPayload.md)
+ - [UserGetListV1Response](docs/UserGetListV1Response.md)
+ - [UserGetListV1ResponseAllOf](docs/UserGetListV1ResponseAllOf.md)
+ - [UserGetListV1ResponseMPayload](docs/UserGetListV1ResponseMPayload.md)
+ - [UserGetListV1ResponseMPayloadAllOf](docs/UserGetListV1ResponseMPayloadAllOf.md)
+ - [UserGetObjectV2Response](docs/UserGetObjectV2Response.md)
+ - [UserGetObjectV2ResponseAllOf](docs/UserGetObjectV2ResponseAllOf.md)
+ - [UserGetObjectV2ResponseMPayload](docs/UserGetObjectV2ResponseMPayload.md)
+ - [UserGetPermissionsV1Response](docs/UserGetPermissionsV1Response.md)
+ - [UserGetPermissionsV1ResponseAllOf](docs/UserGetPermissionsV1ResponseAllOf.md)
+ - [UserGetPermissionsV1ResponseMPayload](docs/UserGetPermissionsV1ResponseMPayload.md)
+ - [UserGetSubnetsV1Response](docs/UserGetSubnetsV1Response.md)
+ - [UserGetSubnetsV1ResponseAllOf](docs/UserGetSubnetsV1ResponseAllOf.md)
+ - [UserGetSubnetsV1ResponseMPayload](docs/UserGetSubnetsV1ResponseMPayload.md)
+ - [UserListElement](docs/UserListElement.md)
+ - [UserRequest](docs/UserRequest.md)
+ - [UserRequestCompound](docs/UserRequestCompound.md)
  - [UserResponse](docs/UserResponse.md)
  - [UserResponseCompound](docs/UserResponseCompound.md)
  - [UsergroupAutocompleteElementResponse](docs/UsergroupAutocompleteElementResponse.md)
@@ -1219,6 +1453,14 @@ Class | Method | HTTP request | Description
  - [UsergroupCreateObjectV1ResponseMPayload](docs/UsergroupCreateObjectV1ResponseMPayload.md)
  - [UsergroupEditObjectV1Request](docs/UsergroupEditObjectV1Request.md)
  - [UsergroupEditObjectV1Response](docs/UsergroupEditObjectV1Response.md)
+ - [UsergroupEditPermissionsV1Request](docs/UsergroupEditPermissionsV1Request.md)
+ - [UsergroupEditPermissionsV1Response](docs/UsergroupEditPermissionsV1Response.md)
+ - [UsergroupEditPermissionsV1ResponseAllOf](docs/UsergroupEditPermissionsV1ResponseAllOf.md)
+ - [UsergroupEditPermissionsV1ResponseMPayload](docs/UsergroupEditPermissionsV1ResponseMPayload.md)
+ - [UsergroupEditUsergroupmembershipsV1Request](docs/UsergroupEditUsergroupmembershipsV1Request.md)
+ - [UsergroupEditUsergroupmembershipsV1Response](docs/UsergroupEditUsergroupmembershipsV1Response.md)
+ - [UsergroupEditUsergroupmembershipsV1ResponseAllOf](docs/UsergroupEditUsergroupmembershipsV1ResponseAllOf.md)
+ - [UsergroupEditUsergroupmembershipsV1ResponseMPayload](docs/UsergroupEditUsergroupmembershipsV1ResponseMPayload.md)
  - [UsergroupGetAutocompleteV2Response](docs/UsergroupGetAutocompleteV2Response.md)
  - [UsergroupGetAutocompleteV2ResponseAllOf](docs/UsergroupGetAutocompleteV2ResponseAllOf.md)
  - [UsergroupGetAutocompleteV2ResponseMPayload](docs/UsergroupGetAutocompleteV2ResponseMPayload.md)
@@ -1229,11 +1471,34 @@ Class | Method | HTTP request | Description
  - [UsergroupGetObjectV2Response](docs/UsergroupGetObjectV2Response.md)
  - [UsergroupGetObjectV2ResponseAllOf](docs/UsergroupGetObjectV2ResponseAllOf.md)
  - [UsergroupGetObjectV2ResponseMPayload](docs/UsergroupGetObjectV2ResponseMPayload.md)
+ - [UsergroupGetPermissionsV1Response](docs/UsergroupGetPermissionsV1Response.md)
+ - [UsergroupGetPermissionsV1ResponseAllOf](docs/UsergroupGetPermissionsV1ResponseAllOf.md)
+ - [UsergroupGetPermissionsV1ResponseMPayload](docs/UsergroupGetPermissionsV1ResponseMPayload.md)
+ - [UsergroupGetUsergroupmembershipsV1Response](docs/UsergroupGetUsergroupmembershipsV1Response.md)
+ - [UsergroupGetUsergroupmembershipsV1ResponseAllOf](docs/UsergroupGetUsergroupmembershipsV1ResponseAllOf.md)
+ - [UsergroupGetUsergroupmembershipsV1ResponseMPayload](docs/UsergroupGetUsergroupmembershipsV1ResponseMPayload.md)
  - [UsergroupListElement](docs/UsergroupListElement.md)
  - [UsergroupRequest](docs/UsergroupRequest.md)
  - [UsergroupRequestCompound](docs/UsergroupRequestCompound.md)
  - [UsergroupResponse](docs/UsergroupResponse.md)
  - [UsergroupResponseCompound](docs/UsergroupResponseCompound.md)
+ - [UsergroupmembershipCreateObjectV1Request](docs/UsergroupmembershipCreateObjectV1Request.md)
+ - [UsergroupmembershipCreateObjectV1Response](docs/UsergroupmembershipCreateObjectV1Response.md)
+ - [UsergroupmembershipCreateObjectV1ResponseAllOf](docs/UsergroupmembershipCreateObjectV1ResponseAllOf.md)
+ - [UsergroupmembershipCreateObjectV1ResponseMPayload](docs/UsergroupmembershipCreateObjectV1ResponseMPayload.md)
+ - [UsergroupmembershipDeleteObjectV1Response](docs/UsergroupmembershipDeleteObjectV1Response.md)
+ - [UsergroupmembershipEditObjectV1Request](docs/UsergroupmembershipEditObjectV1Request.md)
+ - [UsergroupmembershipEditObjectV1Response](docs/UsergroupmembershipEditObjectV1Response.md)
+ - [UsergroupmembershipGetObjectV2Response](docs/UsergroupmembershipGetObjectV2Response.md)
+ - [UsergroupmembershipGetObjectV2ResponseAllOf](docs/UsergroupmembershipGetObjectV2ResponseAllOf.md)
+ - [UsergroupmembershipGetObjectV2ResponseMPayload](docs/UsergroupmembershipGetObjectV2ResponseMPayload.md)
+ - [UsergroupmembershipRequest](docs/UsergroupmembershipRequest.md)
+ - [UsergroupmembershipRequestCompound](docs/UsergroupmembershipRequestCompound.md)
+ - [UsergroupmembershipResponse](docs/UsergroupmembershipResponse.md)
+ - [UsergroupmembershipResponseCompound](docs/UsergroupmembershipResponseCompound.md)
+ - [UserstagedCreateUserV1Response](docs/UserstagedCreateUserV1Response.md)
+ - [UserstagedCreateUserV1ResponseAllOf](docs/UserstagedCreateUserV1ResponseAllOf.md)
+ - [UserstagedCreateUserV1ResponseMPayload](docs/UserstagedCreateUserV1ResponseMPayload.md)
  - [UserstagedDeleteObjectV1Response](docs/UserstagedDeleteObjectV1Response.md)
  - [UserstagedGetListV1Response](docs/UserstagedGetListV1Response.md)
  - [UserstagedGetListV1ResponseAllOf](docs/UserstagedGetListV1ResponseAllOf.md)
@@ -1308,8 +1573,17 @@ Class | Method | HTTP request | Description
  - [WebhookTestV1Response](docs/WebhookTestV1Response.md)
  - [WebhookUserUserCreated](docs/WebhookUserUserCreated.md)
  - [WebhookUserUserCreatedAllOf](docs/WebhookUserUserCreatedAllOf.md)
+ - [WebhookUserstagedUserstagedCreated](docs/WebhookUserstagedUserstagedCreated.md)
+ - [WebhookUserstagedUserstagedCreatedAllOf](docs/WebhookUserstagedUserstagedCreatedAllOf.md)
  - [WebsiteRequest](docs/WebsiteRequest.md)
  - [WebsiteRequestCompound](docs/WebsiteRequestCompound.md)
+ - [WebsocketRequestServerGetWebsocketIDV1](docs/WebsocketRequestServerGetWebsocketIDV1.md)
+ - [WebsocketResponseErrorV1](docs/WebsocketResponseErrorV1.md)
+ - [WebsocketResponseErrorV1MPayload](docs/WebsocketResponseErrorV1MPayload.md)
+ - [WebsocketResponseGetWebsocketIDV1](docs/WebsocketResponseGetWebsocketIDV1.md)
+ - [WebsocketResponseGetWebsocketIDV1MPayload](docs/WebsocketResponseGetWebsocketIDV1MPayload.md)
+ - [WebsocketResponseInformationV1](docs/WebsocketResponseInformationV1.md)
+ - [WebsocketResponseInformationV1MPayload](docs/WebsocketResponseInformationV1MPayload.md)
 
 
 ## Documentation for Authorization
@@ -1321,6 +1595,17 @@ Authentication schemes defined for the API:
 
 - **API key parameter name**: Authorization
 - **Location**: HTTP header
+
+### Bearer
+
+- **Type**: HTTP basic authentication
+
+### Presigned
+
+- **Type**: API key
+
+- **API key parameter name**: sAuthorization
+- **Location**: URL query string
 
 
 ## Recommendation

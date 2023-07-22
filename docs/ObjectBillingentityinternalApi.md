@@ -73,7 +73,7 @@ Edit an existing Billingentityinternal
 //import org.openapitools.client.api.ObjectBillingentityinternalApi;
 
 ObjectBillingentityinternalApi apiInstance = new ObjectBillingentityinternalApi();
-Integer pkiBillingentityinternalID = null; // Integer | The unique ID of the Billingentityinternal
+Integer pkiBillingentityinternalID = null; // Integer | 
 BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request = new BillingentityinternalEditObjectV1Request(); // BillingentityinternalEditObjectV1Request | 
 try {
     BillingentityinternalEditObjectV1Response result = apiInstance.billingentityinternalEditObjectV1(pkiBillingentityinternalID, billingentityinternalEditObjectV1Request);
@@ -89,7 +89,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiBillingentityinternalID** | **Integer**| The unique ID of the Billingentityinternal | [default to null]
+ **pkiBillingentityinternalID** | **Integer**|  | [default to null]
  **billingentityinternalEditObjectV1Request** | [**BillingentityinternalEditObjectV1Request**](BillingentityinternalEditObjectV1Request.md)|  |
 
 ### Return type
@@ -227,7 +227,7 @@ Retrieve an existing Billingentityinternal
 //import org.openapitools.client.api.ObjectBillingentityinternalApi;
 
 ObjectBillingentityinternalApi apiInstance = new ObjectBillingentityinternalApi();
-Integer pkiBillingentityinternalID = null; // Integer | The unique ID of the Billingentityinternal
+Integer pkiBillingentityinternalID = null; // Integer | 
 try {
     BillingentityinternalGetObjectV2Response result = apiInstance.billingentityinternalGetObjectV2(pkiBillingentityinternalID);
     System.out.println(result);
@@ -242,7 +242,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiBillingentityinternalID** | **Integer**| The unique ID of the Billingentityinternal | [default to null]
+ **pkiBillingentityinternalID** | **Integer**|  | [default to null]
 
 ### Return type
 

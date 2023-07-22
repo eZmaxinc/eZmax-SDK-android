@@ -73,7 +73,7 @@ Edit an existing Variableexpense
 //import org.openapitools.client.api.ObjectVariableexpenseApi;
 
 ObjectVariableexpenseApi apiInstance = new ObjectVariableexpenseApi();
-Integer pkiVariableexpenseID = null; // Integer | The unique ID of the Variableexpense
+Integer pkiVariableexpenseID = null; // Integer | 
 VariableexpenseEditObjectV1Request variableexpenseEditObjectV1Request = new VariableexpenseEditObjectV1Request(); // VariableexpenseEditObjectV1Request | 
 try {
     VariableexpenseEditObjectV1Response result = apiInstance.variableexpenseEditObjectV1(pkiVariableexpenseID, variableexpenseEditObjectV1Request);
@@ -89,7 +89,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiVariableexpenseID** | **Integer**| The unique ID of the Variableexpense | [default to null]
+ **pkiVariableexpenseID** | **Integer**|  | [default to null]
  **variableexpenseEditObjectV1Request** | [**VariableexpenseEditObjectV1Request**](VariableexpenseEditObjectV1Request.md)|  |
 
 ### Return type
@@ -227,7 +227,7 @@ Retrieve an existing Variableexpense
 //import org.openapitools.client.api.ObjectVariableexpenseApi;
 
 ObjectVariableexpenseApi apiInstance = new ObjectVariableexpenseApi();
-Integer pkiVariableexpenseID = null; // Integer | The unique ID of the Variableexpense
+Integer pkiVariableexpenseID = null; // Integer | 
 try {
     VariableexpenseGetObjectV2Response result = apiInstance.variableexpenseGetObjectV2(pkiVariableexpenseID);
     System.out.println(result);
@@ -242,7 +242,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiVariableexpenseID** | **Integer**| The unique ID of the Variableexpense | [default to null]
+ **pkiVariableexpenseID** | **Integer**|  | [default to null]
 
 ### Return type
 

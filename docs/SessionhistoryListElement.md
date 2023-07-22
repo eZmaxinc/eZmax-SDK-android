@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **sComputerDescription** | **String** | The description of the Computer |  [optional]
 **sSessionhistoryDuration** | **String** | The duration of the session | 
 **sSessionhistoryIP** | **String** | Represent an IP address. | 
-**sUserLoginname** | **String** | The Login name of the User. |  [optional]
+**sUserLoginname** | **String** | The login name of the User. |  [optional]
 
 
 
