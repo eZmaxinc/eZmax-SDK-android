@@ -31,9 +31,9 @@ public class SubnetResponse {
   @SerializedName("objSubnetDescription")
   private MultilingualSubnetDescription objSubnetDescription = null;
   @SerializedName("iSubnetNetwork")
-  private Integer iSubnetNetwork = null;
+  private Long iSubnetNetwork = null;
   @SerializedName("iSubnetMask")
-  private Integer iSubnetMask = null;
+  private Long iSubnetMask = null;
 
   /**
    * The unique ID of the Subnet
@@ -88,10 +88,10 @@ public class SubnetResponse {
    * maximum: 4294967295
    **/
   @ApiModelProperty(required = true, value = "The network of the Subnet in integer form. For example 8.8.8.0 would be 134744064")
-  public Integer getISubnetNetwork() {
+  public Long getISubnetNetwork() {
     return iSubnetNetwork;
   }
-  public void setISubnetNetwork(Integer iSubnetNetwork) {
+  public void setISubnetNetwork(Long iSubnetNetwork) {
     this.iSubnetNetwork = iSubnetNetwork;
   }
 
@@ -101,10 +101,10 @@ public class SubnetResponse {
    * maximum: 4294967295
    **/
   @ApiModelProperty(required = true, value = "The mask of the Subnet  in integer form. For example 255.255.255.0 would be 4294967040")
-  public Integer getISubnetMask() {
+  public Long getISubnetMask() {
     return iSubnetMask;
   }
-  public void setISubnetMask(Integer iSubnetMask) {
+  public void setISubnetMask(Long iSubnetMask) {
     this.iSubnetMask = iSubnetMask;
   }
 
