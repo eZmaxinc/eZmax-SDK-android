@@ -12,6 +12,7 @@
 
 package org.openapitools.client.model;
 
+import org.openapitools.client.model.MultilingualEzsignsignergroupDescription;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -23,6 +24,10 @@ public class EzsignsignergroupResponseCompound {
   
   @SerializedName("pkiEzsignsignergroupID")
   private Integer pkiEzsignsignergroupID = null;
+  @SerializedName("objEzsignsignergroupDescription")
+  private MultilingualEzsignsignergroupDescription objEzsignsignergroupDescription = null;
+  @SerializedName("sEzsignsignergroupDescriptionX")
+  private String sEzsignsignergroupDescriptionX = null;
 
   /**
    * The unique ID of the Ezsignsignergroup
@@ -37,6 +42,27 @@ public class EzsignsignergroupResponseCompound {
     this.pkiEzsignsignergroupID = pkiEzsignsignergroupID;
   }
 
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public MultilingualEzsignsignergroupDescription getObjEzsignsignergroupDescription() {
+    return objEzsignsignergroupDescription;
+  }
+  public void setObjEzsignsignergroupDescription(MultilingualEzsignsignergroupDescription objEzsignsignergroupDescription) {
+    this.objEzsignsignergroupDescription = objEzsignsignergroupDescription;
+  }
+
+  /**
+   * The Description of the Ezsignsignergroup in the language of the requester
+   **/
+  @ApiModelProperty(value = "The Description of the Ezsignsignergroup in the language of the requester")
+  public String getSEzsignsignergroupDescriptionX() {
+    return sEzsignsignergroupDescriptionX;
+  }
+  public void setSEzsignsignergroupDescriptionX(String sEzsignsignergroupDescriptionX) {
+    this.sEzsignsignergroupDescriptionX = sEzsignsignergroupDescriptionX;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -47,13 +73,17 @@ public class EzsignsignergroupResponseCompound {
       return false;
     }
     EzsignsignergroupResponseCompound ezsignsignergroupResponseCompound = (EzsignsignergroupResponseCompound) o;
-    return (this.pkiEzsignsignergroupID == null ? ezsignsignergroupResponseCompound.pkiEzsignsignergroupID == null : this.pkiEzsignsignergroupID.equals(ezsignsignergroupResponseCompound.pkiEzsignsignergroupID));
+    return (this.pkiEzsignsignergroupID == null ? ezsignsignergroupResponseCompound.pkiEzsignsignergroupID == null : this.pkiEzsignsignergroupID.equals(ezsignsignergroupResponseCompound.pkiEzsignsignergroupID)) &&
+        (this.objEzsignsignergroupDescription == null ? ezsignsignergroupResponseCompound.objEzsignsignergroupDescription == null : this.objEzsignsignergroupDescription.equals(ezsignsignergroupResponseCompound.objEzsignsignergroupDescription)) &&
+        (this.sEzsignsignergroupDescriptionX == null ? ezsignsignergroupResponseCompound.sEzsignsignergroupDescriptionX == null : this.sEzsignsignergroupDescriptionX.equals(ezsignsignergroupResponseCompound.sEzsignsignergroupDescriptionX));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
     result = 31 * result + (this.pkiEzsignsignergroupID == null ? 0: this.pkiEzsignsignergroupID.hashCode());
+    result = 31 * result + (this.objEzsignsignergroupDescription == null ? 0: this.objEzsignsignergroupDescription.hashCode());
+    result = 31 * result + (this.sEzsignsignergroupDescriptionX == null ? 0: this.sEzsignsignergroupDescriptionX.hashCode());
     return result;
   }
 
@@ -63,6 +93,8 @@ public class EzsignsignergroupResponseCompound {
     sb.append("class EzsignsignergroupResponseCompound {\n");
     
     sb.append("  pkiEzsignsignergroupID: ").append(pkiEzsignsignergroupID).append("\n");
+    sb.append("  objEzsignsignergroupDescription: ").append(objEzsignsignergroupDescription).append("\n");
+    sb.append("  sEzsignsignergroupDescriptionX: ").append(sEzsignsignergroupDescriptionX).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

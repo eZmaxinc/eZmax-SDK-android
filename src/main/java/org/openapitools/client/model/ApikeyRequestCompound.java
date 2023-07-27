@@ -30,6 +30,8 @@ public class ApikeyRequestCompound {
   private MultilingualApikeyDescription objApikeyDescription = null;
   @SerializedName("bApikeyIsactive")
   private Boolean bApikeyIsactive = null;
+  @SerializedName("bApikeyIssigned")
+  private Boolean bApikeyIssigned = null;
 
   /**
    * The unique ID of the Apikey
@@ -76,6 +78,17 @@ public class ApikeyRequestCompound {
     this.bApikeyIsactive = bApikeyIsactive;
   }
 
+  /**
+   * Whether the apikey is signed or not
+   **/
+  @ApiModelProperty(value = "Whether the apikey is signed or not")
+  public Boolean getBApikeyIssigned() {
+    return bApikeyIssigned;
+  }
+  public void setBApikeyIssigned(Boolean bApikeyIssigned) {
+    this.bApikeyIssigned = bApikeyIssigned;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -89,7 +102,8 @@ public class ApikeyRequestCompound {
     return (this.pkiApikeyID == null ? apikeyRequestCompound.pkiApikeyID == null : this.pkiApikeyID.equals(apikeyRequestCompound.pkiApikeyID)) &&
         (this.fkiUserID == null ? apikeyRequestCompound.fkiUserID == null : this.fkiUserID.equals(apikeyRequestCompound.fkiUserID)) &&
         (this.objApikeyDescription == null ? apikeyRequestCompound.objApikeyDescription == null : this.objApikeyDescription.equals(apikeyRequestCompound.objApikeyDescription)) &&
-        (this.bApikeyIsactive == null ? apikeyRequestCompound.bApikeyIsactive == null : this.bApikeyIsactive.equals(apikeyRequestCompound.bApikeyIsactive));
+        (this.bApikeyIsactive == null ? apikeyRequestCompound.bApikeyIsactive == null : this.bApikeyIsactive.equals(apikeyRequestCompound.bApikeyIsactive)) &&
+        (this.bApikeyIssigned == null ? apikeyRequestCompound.bApikeyIssigned == null : this.bApikeyIssigned.equals(apikeyRequestCompound.bApikeyIssigned));
   }
 
   @Override
@@ -99,6 +113,7 @@ public class ApikeyRequestCompound {
     result = 31 * result + (this.fkiUserID == null ? 0: this.fkiUserID.hashCode());
     result = 31 * result + (this.objApikeyDescription == null ? 0: this.objApikeyDescription.hashCode());
     result = 31 * result + (this.bApikeyIsactive == null ? 0: this.bApikeyIsactive.hashCode());
+    result = 31 * result + (this.bApikeyIssigned == null ? 0: this.bApikeyIssigned.hashCode());
     return result;
   }
 
@@ -111,6 +126,7 @@ public class ApikeyRequestCompound {
     sb.append("  fkiUserID: ").append(fkiUserID).append("\n");
     sb.append("  objApikeyDescription: ").append(objApikeyDescription).append("\n");
     sb.append("  bApikeyIsactive: ").append(bApikeyIsactive).append("\n");
+    sb.append("  bApikeyIssigned: ").append(bApikeyIssigned).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

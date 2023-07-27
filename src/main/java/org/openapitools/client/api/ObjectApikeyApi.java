@@ -29,10 +29,16 @@ import org.openapitools.client.model.ApikeyEditObjectV1Request;
 import org.openapitools.client.model.ApikeyEditObjectV1Response;
 import org.openapitools.client.model.ApikeyEditPermissionsV1Request;
 import org.openapitools.client.model.ApikeyEditPermissionsV1Response;
+import org.openapitools.client.model.ApikeyGetCorsV1Response;
+import org.openapitools.client.model.ApikeyGetListV1Response;
 import org.openapitools.client.model.ApikeyGetObjectV2Response;
 import org.openapitools.client.model.ApikeyGetPermissionsV1Response;
 import org.openapitools.client.model.ApikeyGetSubnetsV1Response;
+import org.openapitools.client.model.ApikeyRegenerateV1Request;
+import org.openapitools.client.model.ApikeyRegenerateV1Response;
 import org.openapitools.client.model.CommonResponseError;
+import java.io.File;
+import org.openapitools.client.model.HeaderAcceptLanguage;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
@@ -471,6 +477,264 @@ public class ObjectApikeyApi {
     }
   }
   /**
+  * Retrieve an existing Apikey&#39;s cors
+  * 
+   * @param pkiApikeyID 
+   * @return ApikeyGetCorsV1Response
+  */
+  public ApikeyGetCorsV1Response apikeyGetCorsV1 (Integer pkiApikeyID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiApikeyID' is set
+    if (pkiApikeyID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiApikeyID' when calling apikeyGetCorsV1",
+        new ApiException(400, "Missing the required parameter 'pkiApikeyID' when calling apikeyGetCorsV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/apikey/{pkiApikeyID}/getCors".replaceAll("\\{" + "pkiApikeyID" + "\\}", apiInvoker.escapeString(pkiApikeyID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (ApikeyGetCorsV1Response) ApiInvoker.deserialize(localVarResponse, "", ApikeyGetCorsV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve an existing Apikey&#39;s cors
+   * 
+   * @param pkiApikeyID 
+  */
+  public void apikeyGetCorsV1 (Integer pkiApikeyID, final Response.Listener<ApikeyGetCorsV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiApikeyID' is set
+    if (pkiApikeyID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiApikeyID' when calling apikeyGetCorsV1",
+        new ApiException(400, "Missing the required parameter 'pkiApikeyID' when calling apikeyGetCorsV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/apikey/{pkiApikeyID}/getCors".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiApikeyID" + "\\}", apiInvoker.escapeString(pkiApikeyID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((ApikeyGetCorsV1Response) ApiInvoker.deserialize(localVarResponse,  "", ApikeyGetCorsV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Retrieve Apikey list
+  * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---|
+   * @param eOrderBy Specify how you want the results to be sorted
+   * @param iRowMax 
+   * @param iRowOffset 
+   * @param acceptLanguage 
+   * @param sFilter 
+   * @return ApikeyGetListV1Response
+  */
+  public ApikeyGetListV1Response apikeyGetListV1 (String eOrderBy, Integer iRowMax, Integer iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/1/object/apikey/getList";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "eOrderBy", eOrderBy));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "iRowMax", iRowMax));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "iRowOffset", iRowOffset));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "sFilter", sFilter));
+    headerParams.put("Accept-Language", ApiInvoker.parameterToString(acceptLanguage));
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (ApikeyGetListV1Response) ApiInvoker.deserialize(localVarResponse, "", ApikeyGetListV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve Apikey list
+   * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---|
+   * @param eOrderBy Specify how you want the results to be sorted   * @param iRowMax    * @param iRowOffset    * @param acceptLanguage    * @param sFilter 
+  */
+  public void apikeyGetListV1 (String eOrderBy, Integer iRowMax, Integer iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter, final Response.Listener<ApikeyGetListV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/1/object/apikey/getList".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "eOrderBy", eOrderBy));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "iRowMax", iRowMax));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "iRowOffset", iRowOffset));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "sFilter", sFilter));
+
+    headerParams.put("Accept-Language", ApiInvoker.parameterToString(acceptLanguage));
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((ApikeyGetListV1Response) ApiInvoker.deserialize(localVarResponse,  "", ApikeyGetListV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
   * Retrieve an existing Apikey
   * 
    * @param pkiApikeyID The unique ID of the Apikey
@@ -837,6 +1101,145 @@ public class ObjectApikeyApi {
           public void onResponse(String localVarResponse) {
             try {
               responseListener.onResponse((ApikeyGetSubnetsV1Response) ApiInvoker.deserialize(localVarResponse,  "", ApikeyGetSubnetsV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Regenerate the Apikey
+  * 
+   * @param pkiApikeyID 
+   * @param apikeyRegenerateV1Request 
+   * @return ApikeyRegenerateV1Response
+  */
+  public ApikeyRegenerateV1Response apikeyRegenerateV1 (Integer pkiApikeyID, ApikeyRegenerateV1Request apikeyRegenerateV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = apikeyRegenerateV1Request;
+    // verify the required parameter 'pkiApikeyID' is set
+    if (pkiApikeyID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiApikeyID' when calling apikeyRegenerateV1",
+        new ApiException(400, "Missing the required parameter 'pkiApikeyID' when calling apikeyRegenerateV1"));
+    }
+    // verify the required parameter 'apikeyRegenerateV1Request' is set
+    if (apikeyRegenerateV1Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'apikeyRegenerateV1Request' when calling apikeyRegenerateV1",
+        new ApiException(400, "Missing the required parameter 'apikeyRegenerateV1Request' when calling apikeyRegenerateV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/apikey/{pkiApikeyID}/regenerate".replaceAll("\\{" + "pkiApikeyID" + "\\}", apiInvoker.escapeString(pkiApikeyID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (ApikeyRegenerateV1Response) ApiInvoker.deserialize(localVarResponse, "", ApikeyRegenerateV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Regenerate the Apikey
+   * 
+   * @param pkiApikeyID    * @param apikeyRegenerateV1Request 
+  */
+  public void apikeyRegenerateV1 (Integer pkiApikeyID, ApikeyRegenerateV1Request apikeyRegenerateV1Request, final Response.Listener<ApikeyRegenerateV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = apikeyRegenerateV1Request;
+
+    // verify the required parameter 'pkiApikeyID' is set
+    if (pkiApikeyID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiApikeyID' when calling apikeyRegenerateV1",
+        new ApiException(400, "Missing the required parameter 'pkiApikeyID' when calling apikeyRegenerateV1"));
+    }
+    // verify the required parameter 'apikeyRegenerateV1Request' is set
+    if (apikeyRegenerateV1Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'apikeyRegenerateV1Request' when calling apikeyRegenerateV1",
+        new ApiException(400, "Missing the required parameter 'apikeyRegenerateV1Request' when calling apikeyRegenerateV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/apikey/{pkiApikeyID}/regenerate".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiApikeyID" + "\\}", apiInvoker.escapeString(pkiApikeyID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((ApikeyRegenerateV1Response) ApiInvoker.deserialize(localVarResponse,  "", ApikeyRegenerateV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

@@ -7,9 +7,12 @@ Method | HTTP request | Description
 [**apikeyCreateObjectV2**](ObjectApikeyApi.md#apikeyCreateObjectV2) | **POST** /2/object/apikey | Create a new Apikey
 [**apikeyEditObjectV1**](ObjectApikeyApi.md#apikeyEditObjectV1) | **PUT** /1/object/apikey/{pkiApikeyID} | Edit an existing Apikey
 [**apikeyEditPermissionsV1**](ObjectApikeyApi.md#apikeyEditPermissionsV1) | **PUT** /1/object/apikey/{pkiApikeyID}/editPermissions | Edit multiple Permissions
+[**apikeyGetCorsV1**](ObjectApikeyApi.md#apikeyGetCorsV1) | **GET** /1/object/apikey/{pkiApikeyID}/getCors | Retrieve an existing Apikey&#39;s cors
+[**apikeyGetListV1**](ObjectApikeyApi.md#apikeyGetListV1) | **GET** /1/object/apikey/getList | Retrieve Apikey list
 [**apikeyGetObjectV2**](ObjectApikeyApi.md#apikeyGetObjectV2) | **GET** /2/object/apikey/{pkiApikeyID} | Retrieve an existing Apikey
 [**apikeyGetPermissionsV1**](ObjectApikeyApi.md#apikeyGetPermissionsV1) | **GET** /1/object/apikey/{pkiApikeyID}/getPermissions | Retrieve an existing Apikey&#39;s Permissions
 [**apikeyGetSubnetsV1**](ObjectApikeyApi.md#apikeyGetSubnetsV1) | **GET** /1/object/apikey/{pkiApikeyID}/getSubnets | Retrieve an existing Apikey&#39;s subnets
+[**apikeyRegenerateV1**](ObjectApikeyApi.md#apikeyRegenerateV1) | **POST** /1/object/apikey/{pkiApikeyID}/regenerate | Regenerate the Apikey
 
 
 
@@ -155,6 +158,104 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
+## apikeyGetCorsV1
+
+> ApikeyGetCorsV1Response apikeyGetCorsV1(pkiApikeyID)
+
+Retrieve an existing Apikey&#39;s cors
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectApikeyApi;
+
+ObjectApikeyApi apiInstance = new ObjectApikeyApi();
+Integer pkiApikeyID = null; // Integer | 
+try {
+    ApikeyGetCorsV1Response result = apiInstance.apikeyGetCorsV1(pkiApikeyID);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectApikeyApi#apikeyGetCorsV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiApikeyID** | **Integer**|  | [default to null]
+
+### Return type
+
+[**ApikeyGetCorsV1Response**](ApikeyGetCorsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## apikeyGetListV1
+
+> ApikeyGetListV1Response apikeyGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
+
+Retrieve Apikey list
+
+Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---|
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectApikeyApi;
+
+ObjectApikeyApi apiInstance = new ObjectApikeyApi();
+String eOrderBy = null; // String | Specify how you want the results to be sorted
+Integer iRowMax = 10000; // Integer | 
+Integer iRowOffset = 0; // Integer | 
+HeaderAcceptLanguage acceptLanguage = null; // HeaderAcceptLanguage | 
+String sFilter = null; // String | 
+try {
+    ApikeyGetListV1Response result = apiInstance.apikeyGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectApikeyApi#apikeyGetListV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **eOrderBy** | **String**| Specify how you want the results to be sorted | [optional] [default to null] [enum: pkiApikeyID_ASC, pkiApikeyID_DESC, sApikeyDescriptionX_ASC, sApikeyDescriptionX_DESC, bApikeyIssigned_ASC, bApikeyIssigned_DESC, bApikeyIsactive_ASC, bApikeyIsactive_DESC, sUserFirstname_ASC, sUserFirstname_DESC, sUserLastname_ASC, sUserLastname_DESC]
+ **iRowMax** | **Integer**|  | [optional] [default to 10000]
+ **iRowOffset** | **Integer**|  | [optional] [default to 0]
+ **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [default to null] [enum: *, en, fr]
+ **sFilter** | **String**|  | [optional] [default to null]
+
+### Return type
+
+[**ApikeyGetListV1Response**](ApikeyGetListV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+
+
 ## apikeyGetObjectV2
 
 > ApikeyGetObjectV2Response apikeyGetObjectV2(pkiApikeyID)
@@ -286,5 +387,53 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## apikeyRegenerateV1
+
+> ApikeyRegenerateV1Response apikeyRegenerateV1(pkiApikeyID, apikeyRegenerateV1Request)
+
+Regenerate the Apikey
+
+
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectApikeyApi;
+
+ObjectApikeyApi apiInstance = new ObjectApikeyApi();
+Integer pkiApikeyID = null; // Integer | 
+ApikeyRegenerateV1Request apikeyRegenerateV1Request = new ApikeyRegenerateV1Request(); // ApikeyRegenerateV1Request | 
+try {
+    ApikeyRegenerateV1Response result = apiInstance.apikeyRegenerateV1(pkiApikeyID, apikeyRegenerateV1Request);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectApikeyApi#apikeyRegenerateV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiApikeyID** | **Integer**|  | [default to null]
+ **apikeyRegenerateV1Request** | [**ApikeyRegenerateV1Request**](ApikeyRegenerateV1Request.md)|  |
+
+### Return type
+
+[**ApikeyRegenerateV1Response**](ApikeyRegenerateV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
 - **Accept**: application/json
 

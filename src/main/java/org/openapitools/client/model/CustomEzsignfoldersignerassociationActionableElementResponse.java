@@ -15,7 +15,6 @@ package org.openapitools.client.model;
 import org.openapitools.client.model.EzsignfoldersignerassociationResponseCompoundUser;
 import org.openapitools.client.model.EzsignsignerResponseCompound;
 import org.openapitools.client.model.EzsignsignergroupResponseCompound;
-import org.openapitools.client.model.UsergroupResponseCompound;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -39,8 +38,6 @@ public class CustomEzsignfoldersignerassociationActionableElementResponse {
   private EzsignsignergroupResponseCompound objEzsignsignergroup = null;
   @SerializedName("objUser")
   private EzsignfoldersignerassociationResponseCompoundUser objUser = null;
-  @SerializedName("objUsergroup")
-  private UsergroupResponseCompound objUsergroup = null;
   @SerializedName("objEzsignsigner")
   private EzsignsignerResponseCompound objEzsignsigner = null;
   @SerializedName("bEzsignfoldersignerassociationHasactionableelementsCurrent")
@@ -128,16 +125,6 @@ public class CustomEzsignfoldersignerassociationActionableElementResponse {
   /**
    **/
   @ApiModelProperty(value = "")
-  public UsergroupResponseCompound getObjUsergroup() {
-    return objUsergroup;
-  }
-  public void setObjUsergroup(UsergroupResponseCompound objUsergroup) {
-    this.objUsergroup = objUsergroup;
-  }
-
-  /**
-   **/
-  @ApiModelProperty(value = "")
   public EzsignsignerResponseCompound getObjEzsignsigner() {
     return objEzsignsigner;
   }
@@ -184,7 +171,6 @@ public class CustomEzsignfoldersignerassociationActionableElementResponse {
         (this.tEzsignfoldersignerassociationMessage == null ? customEzsignfoldersignerassociationActionableElementResponse.tEzsignfoldersignerassociationMessage == null : this.tEzsignfoldersignerassociationMessage.equals(customEzsignfoldersignerassociationActionableElementResponse.tEzsignfoldersignerassociationMessage)) &&
         (this.objEzsignsignergroup == null ? customEzsignfoldersignerassociationActionableElementResponse.objEzsignsignergroup == null : this.objEzsignsignergroup.equals(customEzsignfoldersignerassociationActionableElementResponse.objEzsignsignergroup)) &&
         (this.objUser == null ? customEzsignfoldersignerassociationActionableElementResponse.objUser == null : this.objUser.equals(customEzsignfoldersignerassociationActionableElementResponse.objUser)) &&
-        (this.objUsergroup == null ? customEzsignfoldersignerassociationActionableElementResponse.objUsergroup == null : this.objUsergroup.equals(customEzsignfoldersignerassociationActionableElementResponse.objUsergroup)) &&
         (this.objEzsignsigner == null ? customEzsignfoldersignerassociationActionableElementResponse.objEzsignsigner == null : this.objEzsignsigner.equals(customEzsignfoldersignerassociationActionableElementResponse.objEzsignsigner)) &&
         (this.bEzsignfoldersignerassociationHasactionableelementsCurrent == null ? customEzsignfoldersignerassociationActionableElementResponse.bEzsignfoldersignerassociationHasactionableelementsCurrent == null : this.bEzsignfoldersignerassociationHasactionableelementsCurrent.equals(customEzsignfoldersignerassociationActionableElementResponse.bEzsignfoldersignerassociationHasactionableelementsCurrent)) &&
         (this.bEzsignfoldersignerassociationHasactionableelementsFuture == null ? customEzsignfoldersignerassociationActionableElementResponse.bEzsignfoldersignerassociationHasactionableelementsFuture == null : this.bEzsignfoldersignerassociationHasactionableelementsFuture.equals(customEzsignfoldersignerassociationActionableElementResponse.bEzsignfoldersignerassociationHasactionableelementsFuture));
@@ -200,7 +186,6 @@ public class CustomEzsignfoldersignerassociationActionableElementResponse {
     result = 31 * result + (this.tEzsignfoldersignerassociationMessage == null ? 0: this.tEzsignfoldersignerassociationMessage.hashCode());
     result = 31 * result + (this.objEzsignsignergroup == null ? 0: this.objEzsignsignergroup.hashCode());
     result = 31 * result + (this.objUser == null ? 0: this.objUser.hashCode());
-    result = 31 * result + (this.objUsergroup == null ? 0: this.objUsergroup.hashCode());
     result = 31 * result + (this.objEzsignsigner == null ? 0: this.objEzsignsigner.hashCode());
     result = 31 * result + (this.bEzsignfoldersignerassociationHasactionableelementsCurrent == null ? 0: this.bEzsignfoldersignerassociationHasactionableelementsCurrent.hashCode());
     result = 31 * result + (this.bEzsignfoldersignerassociationHasactionableelementsFuture == null ? 0: this.bEzsignfoldersignerassociationHasactionableelementsFuture.hashCode());
@@ -219,7 +204,6 @@ public class CustomEzsignfoldersignerassociationActionableElementResponse {
     sb.append("  tEzsignfoldersignerassociationMessage: ").append(tEzsignfoldersignerassociationMessage).append("\n");
     sb.append("  objEzsignsignergroup: ").append(objEzsignsignergroup).append("\n");
     sb.append("  objUser: ").append(objUser).append("\n");
-    sb.append("  objUsergroup: ").append(objUsergroup).append("\n");
     sb.append("  objEzsignsigner: ").append(objEzsignsigner).append("\n");
     sb.append("  bEzsignfoldersignerassociationHasactionableelementsCurrent: ").append(bEzsignfoldersignerassociationHasactionableelementsCurrent).append("\n");
     sb.append("  bEzsignfoldersignerassociationHasactionableelementsFuture: ").append(bEzsignfoldersignerassociationHasactionableelementsFuture).append("\n");

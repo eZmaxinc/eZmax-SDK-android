@@ -29,6 +29,8 @@ public class CustomEzsignfoldersignerassociationstatusResponse {
   private String sEzsignfoldersignerassociationstatusLastname = null;
   @SerializedName("sEzsignfoldersignerassociationstatusFirstname")
   private String sEzsignfoldersignerassociationstatusFirstname = null;
+  @SerializedName("sEzsignfoldersignerassociationstatusDescriptionX")
+  private String sEzsignfoldersignerassociationstatusDescriptionX = null;
   @SerializedName("a_objEzsignsignaturestatus")
   private List<CustomEzsignsignaturestatusResponse> aObjEzsignsignaturestatus = null;
 
@@ -67,6 +69,17 @@ public class CustomEzsignfoldersignerassociationstatusResponse {
   }
 
   /**
+   * The description of the Ezsignsigner
+   **/
+  @ApiModelProperty(value = "The description of the Ezsignsigner")
+  public String getSEzsignfoldersignerassociationstatusDescriptionX() {
+    return sEzsignfoldersignerassociationstatusDescriptionX;
+  }
+  public void setSEzsignfoldersignerassociationstatusDescriptionX(String sEzsignfoldersignerassociationstatusDescriptionX) {
+    this.sEzsignfoldersignerassociationstatusDescriptionX = sEzsignfoldersignerassociationstatusDescriptionX;
+  }
+
+  /**
    **/
   @ApiModelProperty(required = true, value = "")
   public List<CustomEzsignsignaturestatusResponse> getAObjEzsignsignaturestatus() {
@@ -89,6 +102,7 @@ public class CustomEzsignfoldersignerassociationstatusResponse {
     return (this.fkiEzsignfoldersignerassociationID == null ? customEzsignfoldersignerassociationstatusResponse.fkiEzsignfoldersignerassociationID == null : this.fkiEzsignfoldersignerassociationID.equals(customEzsignfoldersignerassociationstatusResponse.fkiEzsignfoldersignerassociationID)) &&
         (this.sEzsignfoldersignerassociationstatusLastname == null ? customEzsignfoldersignerassociationstatusResponse.sEzsignfoldersignerassociationstatusLastname == null : this.sEzsignfoldersignerassociationstatusLastname.equals(customEzsignfoldersignerassociationstatusResponse.sEzsignfoldersignerassociationstatusLastname)) &&
         (this.sEzsignfoldersignerassociationstatusFirstname == null ? customEzsignfoldersignerassociationstatusResponse.sEzsignfoldersignerassociationstatusFirstname == null : this.sEzsignfoldersignerassociationstatusFirstname.equals(customEzsignfoldersignerassociationstatusResponse.sEzsignfoldersignerassociationstatusFirstname)) &&
+        (this.sEzsignfoldersignerassociationstatusDescriptionX == null ? customEzsignfoldersignerassociationstatusResponse.sEzsignfoldersignerassociationstatusDescriptionX == null : this.sEzsignfoldersignerassociationstatusDescriptionX.equals(customEzsignfoldersignerassociationstatusResponse.sEzsignfoldersignerassociationstatusDescriptionX)) &&
         (this.aObjEzsignsignaturestatus == null ? customEzsignfoldersignerassociationstatusResponse.aObjEzsignsignaturestatus == null : this.aObjEzsignsignaturestatus.equals(customEzsignfoldersignerassociationstatusResponse.aObjEzsignsignaturestatus));
   }
 
@@ -98,6 +112,7 @@ public class CustomEzsignfoldersignerassociationstatusResponse {
     result = 31 * result + (this.fkiEzsignfoldersignerassociationID == null ? 0: this.fkiEzsignfoldersignerassociationID.hashCode());
     result = 31 * result + (this.sEzsignfoldersignerassociationstatusLastname == null ? 0: this.sEzsignfoldersignerassociationstatusLastname.hashCode());
     result = 31 * result + (this.sEzsignfoldersignerassociationstatusFirstname == null ? 0: this.sEzsignfoldersignerassociationstatusFirstname.hashCode());
+    result = 31 * result + (this.sEzsignfoldersignerassociationstatusDescriptionX == null ? 0: this.sEzsignfoldersignerassociationstatusDescriptionX.hashCode());
     result = 31 * result + (this.aObjEzsignsignaturestatus == null ? 0: this.aObjEzsignsignaturestatus.hashCode());
     return result;
   }
@@ -110,6 +125,7 @@ public class CustomEzsignfoldersignerassociationstatusResponse {
     sb.append("  fkiEzsignfoldersignerassociationID: ").append(fkiEzsignfoldersignerassociationID).append("\n");
     sb.append("  sEzsignfoldersignerassociationstatusLastname: ").append(sEzsignfoldersignerassociationstatusLastname).append("\n");
     sb.append("  sEzsignfoldersignerassociationstatusFirstname: ").append(sEzsignfoldersignerassociationstatusFirstname).append("\n");
+    sb.append("  sEzsignfoldersignerassociationstatusDescriptionX: ").append(sEzsignfoldersignerassociationstatusDescriptionX).append("\n");
     sb.append("  aObjEzsignsignaturestatus: ").append(aObjEzsignsignaturestatus).append("\n");
     sb.append("}\n");
     return sb.toString();

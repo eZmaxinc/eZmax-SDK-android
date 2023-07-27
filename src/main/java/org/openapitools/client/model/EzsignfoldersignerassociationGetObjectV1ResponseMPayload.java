@@ -15,7 +15,6 @@ package org.openapitools.client.model;
 import org.openapitools.client.model.EzsignfoldersignerassociationResponseCompoundUser;
 import org.openapitools.client.model.EzsignsignerResponseCompound;
 import org.openapitools.client.model.EzsignsignergroupResponseCompound;
-import org.openapitools.client.model.UsergroupResponseCompound;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -39,8 +38,6 @@ public class EzsignfoldersignerassociationGetObjectV1ResponseMPayload {
   private EzsignsignergroupResponseCompound objEzsignsignergroup = null;
   @SerializedName("objUser")
   private EzsignfoldersignerassociationResponseCompoundUser objUser = null;
-  @SerializedName("objUsergroup")
-  private UsergroupResponseCompound objUsergroup = null;
   @SerializedName("objEzsignsigner")
   private EzsignsignerResponseCompound objEzsignsigner = null;
 
@@ -124,16 +121,6 @@ public class EzsignfoldersignerassociationGetObjectV1ResponseMPayload {
   /**
    **/
   @ApiModelProperty(value = "")
-  public UsergroupResponseCompound getObjUsergroup() {
-    return objUsergroup;
-  }
-  public void setObjUsergroup(UsergroupResponseCompound objUsergroup) {
-    this.objUsergroup = objUsergroup;
-  }
-
-  /**
-   **/
-  @ApiModelProperty(value = "")
   public EzsignsignerResponseCompound getObjEzsignsigner() {
     return objEzsignsigner;
   }
@@ -158,7 +145,6 @@ public class EzsignfoldersignerassociationGetObjectV1ResponseMPayload {
         (this.tEzsignfoldersignerassociationMessage == null ? ezsignfoldersignerassociationGetObjectV1ResponseMPayload.tEzsignfoldersignerassociationMessage == null : this.tEzsignfoldersignerassociationMessage.equals(ezsignfoldersignerassociationGetObjectV1ResponseMPayload.tEzsignfoldersignerassociationMessage)) &&
         (this.objEzsignsignergroup == null ? ezsignfoldersignerassociationGetObjectV1ResponseMPayload.objEzsignsignergroup == null : this.objEzsignsignergroup.equals(ezsignfoldersignerassociationGetObjectV1ResponseMPayload.objEzsignsignergroup)) &&
         (this.objUser == null ? ezsignfoldersignerassociationGetObjectV1ResponseMPayload.objUser == null : this.objUser.equals(ezsignfoldersignerassociationGetObjectV1ResponseMPayload.objUser)) &&
-        (this.objUsergroup == null ? ezsignfoldersignerassociationGetObjectV1ResponseMPayload.objUsergroup == null : this.objUsergroup.equals(ezsignfoldersignerassociationGetObjectV1ResponseMPayload.objUsergroup)) &&
         (this.objEzsignsigner == null ? ezsignfoldersignerassociationGetObjectV1ResponseMPayload.objEzsignsigner == null : this.objEzsignsigner.equals(ezsignfoldersignerassociationGetObjectV1ResponseMPayload.objEzsignsigner));
   }
 
@@ -172,7 +158,6 @@ public class EzsignfoldersignerassociationGetObjectV1ResponseMPayload {
     result = 31 * result + (this.tEzsignfoldersignerassociationMessage == null ? 0: this.tEzsignfoldersignerassociationMessage.hashCode());
     result = 31 * result + (this.objEzsignsignergroup == null ? 0: this.objEzsignsignergroup.hashCode());
     result = 31 * result + (this.objUser == null ? 0: this.objUser.hashCode());
-    result = 31 * result + (this.objUsergroup == null ? 0: this.objUsergroup.hashCode());
     result = 31 * result + (this.objEzsignsigner == null ? 0: this.objEzsignsigner.hashCode());
     return result;
   }
@@ -189,7 +174,6 @@ public class EzsignfoldersignerassociationGetObjectV1ResponseMPayload {
     sb.append("  tEzsignfoldersignerassociationMessage: ").append(tEzsignfoldersignerassociationMessage).append("\n");
     sb.append("  objEzsignsignergroup: ").append(objEzsignsignergroup).append("\n");
     sb.append("  objUser: ").append(objUser).append("\n");
-    sb.append("  objUsergroup: ").append(objUsergroup).append("\n");
     sb.append("  objEzsignsigner: ").append(objEzsignsigner).append("\n");
     sb.append("}\n");
     return sb.toString();

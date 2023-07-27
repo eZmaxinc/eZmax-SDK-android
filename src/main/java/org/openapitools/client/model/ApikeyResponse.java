@@ -13,6 +13,7 @@
 package org.openapitools.client.model;
 
 import org.openapitools.client.model.CommonAudit;
+import org.openapitools.client.model.CustomContactNameResponse;
 import org.openapitools.client.model.MultilingualApikeyDescription;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
@@ -29,10 +30,16 @@ public class ApikeyResponse {
   private Integer fkiUserID = null;
   @SerializedName("objApikeyDescription")
   private MultilingualApikeyDescription objApikeyDescription = null;
-  @SerializedName("sComputedToken")
-  private String sComputedToken = null;
+  @SerializedName("objContactName")
+  private CustomContactNameResponse objContactName = null;
+  @SerializedName("sApikeyApikey")
+  private String sApikeyApikey = null;
+  @SerializedName("sApikeySecret")
+  private String sApikeySecret = null;
   @SerializedName("bApikeyIsactive")
   private Boolean bApikeyIsactive = null;
+  @SerializedName("bApikeyIssigned")
+  private Boolean bApikeyIssigned = null;
   @SerializedName("objAudit")
   private CommonAudit objAudit = null;
 
@@ -71,14 +78,35 @@ public class ApikeyResponse {
   }
 
   /**
-   * The secret token for the API key.  This will be returned only on creation.
    **/
-  @ApiModelProperty(value = "The secret token for the API key.  This will be returned only on creation.")
-  public String getSComputedToken() {
-    return sComputedToken;
+  @ApiModelProperty(required = true, value = "")
+  public CustomContactNameResponse getObjContactName() {
+    return objContactName;
   }
-  public void setSComputedToken(String sComputedToken) {
-    this.sComputedToken = sComputedToken;
+  public void setObjContactName(CustomContactNameResponse objContactName) {
+    this.objContactName = objContactName;
+  }
+
+  /**
+   * The Apikey for the API key.  This will be hidden if we are not creating or regenerating the Apikey.
+   **/
+  @ApiModelProperty(value = "The Apikey for the API key.  This will be hidden if we are not creating or regenerating the Apikey.")
+  public String getSApikeyApikey() {
+    return sApikeyApikey;
+  }
+  public void setSApikeyApikey(String sApikeyApikey) {
+    this.sApikeyApikey = sApikeyApikey;
+  }
+
+  /**
+   * The Secret for the API key.  This will be hidden if we are not creating or regenerating the Apikey.
+   **/
+  @ApiModelProperty(value = "The Secret for the API key.  This will be hidden if we are not creating or regenerating the Apikey.")
+  public String getSApikeySecret() {
+    return sApikeySecret;
+  }
+  public void setSApikeySecret(String sApikeySecret) {
+    this.sApikeySecret = sApikeySecret;
   }
 
   /**
@@ -90,6 +118,17 @@ public class ApikeyResponse {
   }
   public void setBApikeyIsactive(Boolean bApikeyIsactive) {
     this.bApikeyIsactive = bApikeyIsactive;
+  }
+
+  /**
+   * Whether the apikey is signed or not
+   **/
+  @ApiModelProperty(value = "Whether the apikey is signed or not")
+  public Boolean getBApikeyIssigned() {
+    return bApikeyIssigned;
+  }
+  public void setBApikeyIssigned(Boolean bApikeyIssigned) {
+    this.bApikeyIssigned = bApikeyIssigned;
   }
 
   /**
@@ -115,8 +154,11 @@ public class ApikeyResponse {
     return (this.pkiApikeyID == null ? apikeyResponse.pkiApikeyID == null : this.pkiApikeyID.equals(apikeyResponse.pkiApikeyID)) &&
         (this.fkiUserID == null ? apikeyResponse.fkiUserID == null : this.fkiUserID.equals(apikeyResponse.fkiUserID)) &&
         (this.objApikeyDescription == null ? apikeyResponse.objApikeyDescription == null : this.objApikeyDescription.equals(apikeyResponse.objApikeyDescription)) &&
-        (this.sComputedToken == null ? apikeyResponse.sComputedToken == null : this.sComputedToken.equals(apikeyResponse.sComputedToken)) &&
+        (this.objContactName == null ? apikeyResponse.objContactName == null : this.objContactName.equals(apikeyResponse.objContactName)) &&
+        (this.sApikeyApikey == null ? apikeyResponse.sApikeyApikey == null : this.sApikeyApikey.equals(apikeyResponse.sApikeyApikey)) &&
+        (this.sApikeySecret == null ? apikeyResponse.sApikeySecret == null : this.sApikeySecret.equals(apikeyResponse.sApikeySecret)) &&
         (this.bApikeyIsactive == null ? apikeyResponse.bApikeyIsactive == null : this.bApikeyIsactive.equals(apikeyResponse.bApikeyIsactive)) &&
+        (this.bApikeyIssigned == null ? apikeyResponse.bApikeyIssigned == null : this.bApikeyIssigned.equals(apikeyResponse.bApikeyIssigned)) &&
         (this.objAudit == null ? apikeyResponse.objAudit == null : this.objAudit.equals(apikeyResponse.objAudit));
   }
 
@@ -126,8 +168,11 @@ public class ApikeyResponse {
     result = 31 * result + (this.pkiApikeyID == null ? 0: this.pkiApikeyID.hashCode());
     result = 31 * result + (this.fkiUserID == null ? 0: this.fkiUserID.hashCode());
     result = 31 * result + (this.objApikeyDescription == null ? 0: this.objApikeyDescription.hashCode());
-    result = 31 * result + (this.sComputedToken == null ? 0: this.sComputedToken.hashCode());
+    result = 31 * result + (this.objContactName == null ? 0: this.objContactName.hashCode());
+    result = 31 * result + (this.sApikeyApikey == null ? 0: this.sApikeyApikey.hashCode());
+    result = 31 * result + (this.sApikeySecret == null ? 0: this.sApikeySecret.hashCode());
     result = 31 * result + (this.bApikeyIsactive == null ? 0: this.bApikeyIsactive.hashCode());
+    result = 31 * result + (this.bApikeyIssigned == null ? 0: this.bApikeyIssigned.hashCode());
     result = 31 * result + (this.objAudit == null ? 0: this.objAudit.hashCode());
     return result;
   }
@@ -140,8 +185,11 @@ public class ApikeyResponse {
     sb.append("  pkiApikeyID: ").append(pkiApikeyID).append("\n");
     sb.append("  fkiUserID: ").append(fkiUserID).append("\n");
     sb.append("  objApikeyDescription: ").append(objApikeyDescription).append("\n");
-    sb.append("  sComputedToken: ").append(sComputedToken).append("\n");
+    sb.append("  objContactName: ").append(objContactName).append("\n");
+    sb.append("  sApikeyApikey: ").append(sApikeyApikey).append("\n");
+    sb.append("  sApikeySecret: ").append(sApikeySecret).append("\n");
     sb.append("  bApikeyIsactive: ").append(bApikeyIsactive).append("\n");
+    sb.append("  bApikeyIssigned: ").append(bApikeyIssigned).append("\n");
     sb.append("  objAudit: ").append(objAudit).append("\n");
     sb.append("}\n");
     return sb.toString();
