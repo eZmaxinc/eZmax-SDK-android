@@ -24,26 +24,16 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Response for GET /2/object/cors/{pkiCorsID}")
 public class CorsGetObjectV2Response {
   
-  @SerializedName("mPayload")
-  private CorsGetObjectV2ResponseMPayload mPayload = null;
   @SerializedName("objDebugPayload")
   private CommonResponseObjDebugPayload objDebugPayload = null;
   @SerializedName("objDebug")
   private CommonResponseObjDebug objDebug = null;
+  @SerializedName("mPayload")
+  private CorsGetObjectV2ResponseMPayload mPayload = null;
 
   /**
    **/
   @ApiModelProperty(required = true, value = "")
-  public CorsGetObjectV2ResponseMPayload getMPayload() {
-    return mPayload;
-  }
-  public void setMPayload(CorsGetObjectV2ResponseMPayload mPayload) {
-    this.mPayload = mPayload;
-  }
-
-  /**
-   **/
-  @ApiModelProperty(value = "")
   public CommonResponseObjDebugPayload getObjDebugPayload() {
     return objDebugPayload;
   }
@@ -61,6 +51,16 @@ public class CorsGetObjectV2Response {
     this.objDebug = objDebug;
   }
 
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public CorsGetObjectV2ResponseMPayload getMPayload() {
+    return mPayload;
+  }
+  public void setMPayload(CorsGetObjectV2ResponseMPayload mPayload) {
+    this.mPayload = mPayload;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -71,17 +71,17 @@ public class CorsGetObjectV2Response {
       return false;
     }
     CorsGetObjectV2Response corsGetObjectV2Response = (CorsGetObjectV2Response) o;
-    return (this.mPayload == null ? corsGetObjectV2Response.mPayload == null : this.mPayload.equals(corsGetObjectV2Response.mPayload)) &&
-        (this.objDebugPayload == null ? corsGetObjectV2Response.objDebugPayload == null : this.objDebugPayload.equals(corsGetObjectV2Response.objDebugPayload)) &&
-        (this.objDebug == null ? corsGetObjectV2Response.objDebug == null : this.objDebug.equals(corsGetObjectV2Response.objDebug));
+    return (this.objDebugPayload == null ? corsGetObjectV2Response.objDebugPayload == null : this.objDebugPayload.equals(corsGetObjectV2Response.objDebugPayload)) &&
+        (this.objDebug == null ? corsGetObjectV2Response.objDebug == null : this.objDebug.equals(corsGetObjectV2Response.objDebug)) &&
+        (this.mPayload == null ? corsGetObjectV2Response.mPayload == null : this.mPayload.equals(corsGetObjectV2Response.mPayload));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.mPayload == null ? 0: this.mPayload.hashCode());
     result = 31 * result + (this.objDebugPayload == null ? 0: this.objDebugPayload.hashCode());
     result = 31 * result + (this.objDebug == null ? 0: this.objDebug.hashCode());
+    result = 31 * result + (this.mPayload == null ? 0: this.mPayload.hashCode());
     return result;
   }
 
@@ -90,9 +90,9 @@ public class CorsGetObjectV2Response {
     StringBuilder sb = new StringBuilder();
     sb.append("class CorsGetObjectV2Response {\n");
     
-    sb.append("  mPayload: ").append(mPayload).append("\n");
     sb.append("  objDebugPayload: ").append(objDebugPayload).append("\n");
     sb.append("  objDebug: ").append(objDebug).append("\n");
+    sb.append("  mPayload: ").append(mPayload).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

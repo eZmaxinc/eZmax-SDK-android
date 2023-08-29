@@ -26,34 +26,14 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "This is the base Webhook object")
 public class WebhookEzsignEzsignsignerConnect {
   
-  @SerializedName("objEzsignfolder")
-  private EzsignfolderResponse objEzsignfolder = null;
-  @SerializedName("objEzsignfoldersignerassociation")
-  private EzsignfoldersignerassociationResponseCompound objEzsignfoldersignerassociation = null;
   @SerializedName("objWebhook")
   private CustomWebhookResponse objWebhook = null;
   @SerializedName("a_objAttempt")
   private List<AttemptResponseCompound> aObjAttempt = null;
-
-  /**
-   **/
-  @ApiModelProperty(value = "")
-  public EzsignfolderResponse getObjEzsignfolder() {
-    return objEzsignfolder;
-  }
-  public void setObjEzsignfolder(EzsignfolderResponse objEzsignfolder) {
-    this.objEzsignfolder = objEzsignfolder;
-  }
-
-  /**
-   **/
-  @ApiModelProperty(required = true, value = "")
-  public EzsignfoldersignerassociationResponseCompound getObjEzsignfoldersignerassociation() {
-    return objEzsignfoldersignerassociation;
-  }
-  public void setObjEzsignfoldersignerassociation(EzsignfoldersignerassociationResponseCompound objEzsignfoldersignerassociation) {
-    this.objEzsignfoldersignerassociation = objEzsignfoldersignerassociation;
-  }
+  @SerializedName("objEzsignfolder")
+  private EzsignfolderResponse objEzsignfolder = null;
+  @SerializedName("objEzsignfoldersignerassociation")
+  private EzsignfoldersignerassociationResponseCompound objEzsignfoldersignerassociation = null;
 
   /**
    **/
@@ -76,6 +56,26 @@ public class WebhookEzsignEzsignsignerConnect {
     this.aObjAttempt = aObjAttempt;
   }
 
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public EzsignfolderResponse getObjEzsignfolder() {
+    return objEzsignfolder;
+  }
+  public void setObjEzsignfolder(EzsignfolderResponse objEzsignfolder) {
+    this.objEzsignfolder = objEzsignfolder;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public EzsignfoldersignerassociationResponseCompound getObjEzsignfoldersignerassociation() {
+    return objEzsignfoldersignerassociation;
+  }
+  public void setObjEzsignfoldersignerassociation(EzsignfoldersignerassociationResponseCompound objEzsignfoldersignerassociation) {
+    this.objEzsignfoldersignerassociation = objEzsignfoldersignerassociation;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -86,19 +86,19 @@ public class WebhookEzsignEzsignsignerConnect {
       return false;
     }
     WebhookEzsignEzsignsignerConnect webhookEzsignEzsignsignerConnect = (WebhookEzsignEzsignsignerConnect) o;
-    return (this.objEzsignfolder == null ? webhookEzsignEzsignsignerConnect.objEzsignfolder == null : this.objEzsignfolder.equals(webhookEzsignEzsignsignerConnect.objEzsignfolder)) &&
-        (this.objEzsignfoldersignerassociation == null ? webhookEzsignEzsignsignerConnect.objEzsignfoldersignerassociation == null : this.objEzsignfoldersignerassociation.equals(webhookEzsignEzsignsignerConnect.objEzsignfoldersignerassociation)) &&
-        (this.objWebhook == null ? webhookEzsignEzsignsignerConnect.objWebhook == null : this.objWebhook.equals(webhookEzsignEzsignsignerConnect.objWebhook)) &&
-        (this.aObjAttempt == null ? webhookEzsignEzsignsignerConnect.aObjAttempt == null : this.aObjAttempt.equals(webhookEzsignEzsignsignerConnect.aObjAttempt));
+    return (this.objWebhook == null ? webhookEzsignEzsignsignerConnect.objWebhook == null : this.objWebhook.equals(webhookEzsignEzsignsignerConnect.objWebhook)) &&
+        (this.aObjAttempt == null ? webhookEzsignEzsignsignerConnect.aObjAttempt == null : this.aObjAttempt.equals(webhookEzsignEzsignsignerConnect.aObjAttempt)) &&
+        (this.objEzsignfolder == null ? webhookEzsignEzsignsignerConnect.objEzsignfolder == null : this.objEzsignfolder.equals(webhookEzsignEzsignsignerConnect.objEzsignfolder)) &&
+        (this.objEzsignfoldersignerassociation == null ? webhookEzsignEzsignsignerConnect.objEzsignfoldersignerassociation == null : this.objEzsignfoldersignerassociation.equals(webhookEzsignEzsignsignerConnect.objEzsignfoldersignerassociation));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.objEzsignfolder == null ? 0: this.objEzsignfolder.hashCode());
-    result = 31 * result + (this.objEzsignfoldersignerassociation == null ? 0: this.objEzsignfoldersignerassociation.hashCode());
     result = 31 * result + (this.objWebhook == null ? 0: this.objWebhook.hashCode());
     result = 31 * result + (this.aObjAttempt == null ? 0: this.aObjAttempt.hashCode());
+    result = 31 * result + (this.objEzsignfolder == null ? 0: this.objEzsignfolder.hashCode());
+    result = 31 * result + (this.objEzsignfoldersignerassociation == null ? 0: this.objEzsignfoldersignerassociation.hashCode());
     return result;
   }
 
@@ -107,10 +107,10 @@ public class WebhookEzsignEzsignsignerConnect {
     StringBuilder sb = new StringBuilder();
     sb.append("class WebhookEzsignEzsignsignerConnect {\n");
     
-    sb.append("  objEzsignfolder: ").append(objEzsignfolder).append("\n");
-    sb.append("  objEzsignfoldersignerassociation: ").append(objEzsignfoldersignerassociation).append("\n");
     sb.append("  objWebhook: ").append(objWebhook).append("\n");
     sb.append("  aObjAttempt: ").append(aObjAttempt).append("\n");
+    sb.append("  objEzsignfolder: ").append(objEzsignfolder).append("\n");
+    sb.append("  objEzsignfoldersignerassociation: ").append(objEzsignfoldersignerassociation).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

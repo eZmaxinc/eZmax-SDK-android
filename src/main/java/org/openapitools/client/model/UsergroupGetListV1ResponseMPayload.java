@@ -23,22 +23,12 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Payload for GET /1/object/usergroup/getList")
 public class UsergroupGetListV1ResponseMPayload {
   
-  @SerializedName("a_objUsergroup")
-  private List<UsergroupListElement> aObjUsergroup = null;
   @SerializedName("iRowReturned")
   private Integer iRowReturned = null;
   @SerializedName("iRowFiltered")
   private Integer iRowFiltered = null;
-
-  /**
-   **/
-  @ApiModelProperty(required = true, value = "")
-  public List<UsergroupListElement> getAObjUsergroup() {
-    return aObjUsergroup;
-  }
-  public void setAObjUsergroup(List<UsergroupListElement> aObjUsergroup) {
-    this.aObjUsergroup = aObjUsergroup;
-  }
+  @SerializedName("a_objUsergroup")
+  private List<UsergroupListElement> aObjUsergroup = null;
 
   /**
    * The number of rows returned
@@ -62,6 +52,16 @@ public class UsergroupGetListV1ResponseMPayload {
     this.iRowFiltered = iRowFiltered;
   }
 
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public List<UsergroupListElement> getAObjUsergroup() {
+    return aObjUsergroup;
+  }
+  public void setAObjUsergroup(List<UsergroupListElement> aObjUsergroup) {
+    this.aObjUsergroup = aObjUsergroup;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -72,17 +72,17 @@ public class UsergroupGetListV1ResponseMPayload {
       return false;
     }
     UsergroupGetListV1ResponseMPayload usergroupGetListV1ResponseMPayload = (UsergroupGetListV1ResponseMPayload) o;
-    return (this.aObjUsergroup == null ? usergroupGetListV1ResponseMPayload.aObjUsergroup == null : this.aObjUsergroup.equals(usergroupGetListV1ResponseMPayload.aObjUsergroup)) &&
-        (this.iRowReturned == null ? usergroupGetListV1ResponseMPayload.iRowReturned == null : this.iRowReturned.equals(usergroupGetListV1ResponseMPayload.iRowReturned)) &&
-        (this.iRowFiltered == null ? usergroupGetListV1ResponseMPayload.iRowFiltered == null : this.iRowFiltered.equals(usergroupGetListV1ResponseMPayload.iRowFiltered));
+    return (this.iRowReturned == null ? usergroupGetListV1ResponseMPayload.iRowReturned == null : this.iRowReturned.equals(usergroupGetListV1ResponseMPayload.iRowReturned)) &&
+        (this.iRowFiltered == null ? usergroupGetListV1ResponseMPayload.iRowFiltered == null : this.iRowFiltered.equals(usergroupGetListV1ResponseMPayload.iRowFiltered)) &&
+        (this.aObjUsergroup == null ? usergroupGetListV1ResponseMPayload.aObjUsergroup == null : this.aObjUsergroup.equals(usergroupGetListV1ResponseMPayload.aObjUsergroup));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.aObjUsergroup == null ? 0: this.aObjUsergroup.hashCode());
     result = 31 * result + (this.iRowReturned == null ? 0: this.iRowReturned.hashCode());
     result = 31 * result + (this.iRowFiltered == null ? 0: this.iRowFiltered.hashCode());
+    result = 31 * result + (this.aObjUsergroup == null ? 0: this.aObjUsergroup.hashCode());
     return result;
   }
 
@@ -91,9 +91,9 @@ public class UsergroupGetListV1ResponseMPayload {
     StringBuilder sb = new StringBuilder();
     sb.append("class UsergroupGetListV1ResponseMPayload {\n");
     
-    sb.append("  aObjUsergroup: ").append(aObjUsergroup).append("\n");
     sb.append("  iRowReturned: ").append(iRowReturned).append("\n");
     sb.append("  iRowFiltered: ").append(iRowFiltered).append("\n");
+    sb.append("  aObjUsergroup: ").append(aObjUsergroup).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

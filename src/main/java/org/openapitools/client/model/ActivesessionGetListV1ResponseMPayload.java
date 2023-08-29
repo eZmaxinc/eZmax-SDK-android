@@ -23,22 +23,12 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Payload for GET /1/object/activesession/getList")
 public class ActivesessionGetListV1ResponseMPayload {
   
-  @SerializedName("a_objActivesession")
-  private List<ActivesessionListElement> aObjActivesession = null;
   @SerializedName("iRowReturned")
   private Integer iRowReturned = null;
   @SerializedName("iRowFiltered")
   private Integer iRowFiltered = null;
-
-  /**
-   **/
-  @ApiModelProperty(required = true, value = "")
-  public List<ActivesessionListElement> getAObjActivesession() {
-    return aObjActivesession;
-  }
-  public void setAObjActivesession(List<ActivesessionListElement> aObjActivesession) {
-    this.aObjActivesession = aObjActivesession;
-  }
+  @SerializedName("a_objActivesession")
+  private List<ActivesessionListElement> aObjActivesession = null;
 
   /**
    * The number of rows returned
@@ -62,6 +52,16 @@ public class ActivesessionGetListV1ResponseMPayload {
     this.iRowFiltered = iRowFiltered;
   }
 
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public List<ActivesessionListElement> getAObjActivesession() {
+    return aObjActivesession;
+  }
+  public void setAObjActivesession(List<ActivesessionListElement> aObjActivesession) {
+    this.aObjActivesession = aObjActivesession;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -72,17 +72,17 @@ public class ActivesessionGetListV1ResponseMPayload {
       return false;
     }
     ActivesessionGetListV1ResponseMPayload activesessionGetListV1ResponseMPayload = (ActivesessionGetListV1ResponseMPayload) o;
-    return (this.aObjActivesession == null ? activesessionGetListV1ResponseMPayload.aObjActivesession == null : this.aObjActivesession.equals(activesessionGetListV1ResponseMPayload.aObjActivesession)) &&
-        (this.iRowReturned == null ? activesessionGetListV1ResponseMPayload.iRowReturned == null : this.iRowReturned.equals(activesessionGetListV1ResponseMPayload.iRowReturned)) &&
-        (this.iRowFiltered == null ? activesessionGetListV1ResponseMPayload.iRowFiltered == null : this.iRowFiltered.equals(activesessionGetListV1ResponseMPayload.iRowFiltered));
+    return (this.iRowReturned == null ? activesessionGetListV1ResponseMPayload.iRowReturned == null : this.iRowReturned.equals(activesessionGetListV1ResponseMPayload.iRowReturned)) &&
+        (this.iRowFiltered == null ? activesessionGetListV1ResponseMPayload.iRowFiltered == null : this.iRowFiltered.equals(activesessionGetListV1ResponseMPayload.iRowFiltered)) &&
+        (this.aObjActivesession == null ? activesessionGetListV1ResponseMPayload.aObjActivesession == null : this.aObjActivesession.equals(activesessionGetListV1ResponseMPayload.aObjActivesession));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.aObjActivesession == null ? 0: this.aObjActivesession.hashCode());
     result = 31 * result + (this.iRowReturned == null ? 0: this.iRowReturned.hashCode());
     result = 31 * result + (this.iRowFiltered == null ? 0: this.iRowFiltered.hashCode());
+    result = 31 * result + (this.aObjActivesession == null ? 0: this.aObjActivesession.hashCode());
     return result;
   }
 
@@ -91,9 +91,9 @@ public class ActivesessionGetListV1ResponseMPayload {
     StringBuilder sb = new StringBuilder();
     sb.append("class ActivesessionGetListV1ResponseMPayload {\n");
     
-    sb.append("  aObjActivesession: ").append(aObjActivesession).append("\n");
     sb.append("  iRowReturned: ").append(iRowReturned).append("\n");
     sb.append("  iRowFiltered: ").append(iRowFiltered).append("\n");
+    sb.append("  aObjActivesession: ").append(aObjActivesession).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

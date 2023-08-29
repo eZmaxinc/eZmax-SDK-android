@@ -6,9 +6,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**EzsignfolderGetEzsigndocumentsV1ResponseMPayload**](EzsignfolderGetEzsigndocumentsV1ResponseMPayload.md) |  | 
-**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  [optional]
+**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | 
 **objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
+**mPayload** | [**EzsignfolderGetEzsigndocumentsV1ResponseMPayload**](EzsignfolderGetEzsigndocumentsV1ResponseMPayload.md) |  | 
 
 
 

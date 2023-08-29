@@ -30,6 +30,8 @@ public class CommonResponseObjDebugPayloadGetList {
   private Integer iVersionMax = null;
   @SerializedName("a_RequiredPermission")
   private List<Integer> aRequiredPermission = null;
+  @SerializedName("bVersionDeprecated")
+  private Boolean bVersionDeprecated = null;
   @SerializedName("a_Filter")
   private CommonResponseFilter aFilter = null;
   @SerializedName("a_OrderBy")
@@ -69,6 +71,17 @@ public class CommonResponseObjDebugPayloadGetList {
   }
 
   /**
+   * Wheter the current route is deprecated or not
+   **/
+  @ApiModelProperty(required = true, value = "Wheter the current route is deprecated or not")
+  public Boolean getBVersionDeprecated() {
+    return bVersionDeprecated;
+  }
+  public void setBVersionDeprecated(Boolean bVersionDeprecated) {
+    this.bVersionDeprecated = bVersionDeprecated;
+  }
+
+  /**
    **/
   @ApiModelProperty(required = true, value = "")
   public CommonResponseFilter getAFilter() {
@@ -102,6 +115,7 @@ public class CommonResponseObjDebugPayloadGetList {
     return (this.iVersionMin == null ? commonResponseObjDebugPayloadGetList.iVersionMin == null : this.iVersionMin.equals(commonResponseObjDebugPayloadGetList.iVersionMin)) &&
         (this.iVersionMax == null ? commonResponseObjDebugPayloadGetList.iVersionMax == null : this.iVersionMax.equals(commonResponseObjDebugPayloadGetList.iVersionMax)) &&
         (this.aRequiredPermission == null ? commonResponseObjDebugPayloadGetList.aRequiredPermission == null : this.aRequiredPermission.equals(commonResponseObjDebugPayloadGetList.aRequiredPermission)) &&
+        (this.bVersionDeprecated == null ? commonResponseObjDebugPayloadGetList.bVersionDeprecated == null : this.bVersionDeprecated.equals(commonResponseObjDebugPayloadGetList.bVersionDeprecated)) &&
         (this.aFilter == null ? commonResponseObjDebugPayloadGetList.aFilter == null : this.aFilter.equals(commonResponseObjDebugPayloadGetList.aFilter)) &&
         (this.aOrderBy == null ? commonResponseObjDebugPayloadGetList.aOrderBy == null : this.aOrderBy.equals(commonResponseObjDebugPayloadGetList.aOrderBy));
   }
@@ -112,6 +126,7 @@ public class CommonResponseObjDebugPayloadGetList {
     result = 31 * result + (this.iVersionMin == null ? 0: this.iVersionMin.hashCode());
     result = 31 * result + (this.iVersionMax == null ? 0: this.iVersionMax.hashCode());
     result = 31 * result + (this.aRequiredPermission == null ? 0: this.aRequiredPermission.hashCode());
+    result = 31 * result + (this.bVersionDeprecated == null ? 0: this.bVersionDeprecated.hashCode());
     result = 31 * result + (this.aFilter == null ? 0: this.aFilter.hashCode());
     result = 31 * result + (this.aOrderBy == null ? 0: this.aOrderBy.hashCode());
     return result;
@@ -125,6 +140,7 @@ public class CommonResponseObjDebugPayloadGetList {
     sb.append("  iVersionMin: ").append(iVersionMin).append("\n");
     sb.append("  iVersionMax: ").append(iVersionMax).append("\n");
     sb.append("  aRequiredPermission: ").append(aRequiredPermission).append("\n");
+    sb.append("  bVersionDeprecated: ").append(bVersionDeprecated).append("\n");
     sb.append("  aFilter: ").append(aFilter).append("\n");
     sb.append("  aOrderBy: ").append(aOrderBy).append("\n");
     sb.append("}\n");

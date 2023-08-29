@@ -23,22 +23,12 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Payload for GET /1/object/variableexpense/getList")
 public class VariableexpenseGetListV1ResponseMPayload {
   
-  @SerializedName("a_objVariableexpense")
-  private List<VariableexpenseListElement> aObjVariableexpense = null;
   @SerializedName("iRowReturned")
   private Integer iRowReturned = null;
   @SerializedName("iRowFiltered")
   private Integer iRowFiltered = null;
-
-  /**
-   **/
-  @ApiModelProperty(required = true, value = "")
-  public List<VariableexpenseListElement> getAObjVariableexpense() {
-    return aObjVariableexpense;
-  }
-  public void setAObjVariableexpense(List<VariableexpenseListElement> aObjVariableexpense) {
-    this.aObjVariableexpense = aObjVariableexpense;
-  }
+  @SerializedName("a_objVariableexpense")
+  private List<VariableexpenseListElement> aObjVariableexpense = null;
 
   /**
    * The number of rows returned
@@ -62,6 +52,16 @@ public class VariableexpenseGetListV1ResponseMPayload {
     this.iRowFiltered = iRowFiltered;
   }
 
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public List<VariableexpenseListElement> getAObjVariableexpense() {
+    return aObjVariableexpense;
+  }
+  public void setAObjVariableexpense(List<VariableexpenseListElement> aObjVariableexpense) {
+    this.aObjVariableexpense = aObjVariableexpense;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -72,17 +72,17 @@ public class VariableexpenseGetListV1ResponseMPayload {
       return false;
     }
     VariableexpenseGetListV1ResponseMPayload variableexpenseGetListV1ResponseMPayload = (VariableexpenseGetListV1ResponseMPayload) o;
-    return (this.aObjVariableexpense == null ? variableexpenseGetListV1ResponseMPayload.aObjVariableexpense == null : this.aObjVariableexpense.equals(variableexpenseGetListV1ResponseMPayload.aObjVariableexpense)) &&
-        (this.iRowReturned == null ? variableexpenseGetListV1ResponseMPayload.iRowReturned == null : this.iRowReturned.equals(variableexpenseGetListV1ResponseMPayload.iRowReturned)) &&
-        (this.iRowFiltered == null ? variableexpenseGetListV1ResponseMPayload.iRowFiltered == null : this.iRowFiltered.equals(variableexpenseGetListV1ResponseMPayload.iRowFiltered));
+    return (this.iRowReturned == null ? variableexpenseGetListV1ResponseMPayload.iRowReturned == null : this.iRowReturned.equals(variableexpenseGetListV1ResponseMPayload.iRowReturned)) &&
+        (this.iRowFiltered == null ? variableexpenseGetListV1ResponseMPayload.iRowFiltered == null : this.iRowFiltered.equals(variableexpenseGetListV1ResponseMPayload.iRowFiltered)) &&
+        (this.aObjVariableexpense == null ? variableexpenseGetListV1ResponseMPayload.aObjVariableexpense == null : this.aObjVariableexpense.equals(variableexpenseGetListV1ResponseMPayload.aObjVariableexpense));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.aObjVariableexpense == null ? 0: this.aObjVariableexpense.hashCode());
     result = 31 * result + (this.iRowReturned == null ? 0: this.iRowReturned.hashCode());
     result = 31 * result + (this.iRowFiltered == null ? 0: this.iRowFiltered.hashCode());
+    result = 31 * result + (this.aObjVariableexpense == null ? 0: this.aObjVariableexpense.hashCode());
     return result;
   }
 
@@ -91,9 +91,9 @@ public class VariableexpenseGetListV1ResponseMPayload {
     StringBuilder sb = new StringBuilder();
     sb.append("class VariableexpenseGetListV1ResponseMPayload {\n");
     
-    sb.append("  aObjVariableexpense: ").append(aObjVariableexpense).append("\n");
     sb.append("  iRowReturned: ").append(iRowReturned).append("\n");
     sb.append("  iRowFiltered: ").append(iRowFiltered).append("\n");
+    sb.append("  aObjVariableexpense: ").append(aObjVariableexpense).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

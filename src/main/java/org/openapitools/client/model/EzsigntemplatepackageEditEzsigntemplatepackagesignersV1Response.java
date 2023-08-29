@@ -24,26 +24,16 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Response for PUT /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}/editEzsigntemplatepackagesigners")
 public class EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response {
   
-  @SerializedName("mPayload")
-  private EzsigntemplatepackageEditEzsigntemplatepackagesignersV1ResponseMPayload mPayload = null;
   @SerializedName("objDebugPayload")
   private CommonResponseObjDebugPayload objDebugPayload = null;
   @SerializedName("objDebug")
   private CommonResponseObjDebug objDebug = null;
+  @SerializedName("mPayload")
+  private EzsigntemplatepackageEditEzsigntemplatepackagesignersV1ResponseMPayload mPayload = null;
 
   /**
    **/
   @ApiModelProperty(required = true, value = "")
-  public EzsigntemplatepackageEditEzsigntemplatepackagesignersV1ResponseMPayload getMPayload() {
-    return mPayload;
-  }
-  public void setMPayload(EzsigntemplatepackageEditEzsigntemplatepackagesignersV1ResponseMPayload mPayload) {
-    this.mPayload = mPayload;
-  }
-
-  /**
-   **/
-  @ApiModelProperty(value = "")
   public CommonResponseObjDebugPayload getObjDebugPayload() {
     return objDebugPayload;
   }
@@ -61,6 +51,16 @@ public class EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response {
     this.objDebug = objDebug;
   }
 
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public EzsigntemplatepackageEditEzsigntemplatepackagesignersV1ResponseMPayload getMPayload() {
+    return mPayload;
+  }
+  public void setMPayload(EzsigntemplatepackageEditEzsigntemplatepackagesignersV1ResponseMPayload mPayload) {
+    this.mPayload = mPayload;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -71,17 +71,17 @@ public class EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response {
       return false;
     }
     EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Response = (EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response) o;
-    return (this.mPayload == null ? ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Response.mPayload == null : this.mPayload.equals(ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Response.mPayload)) &&
-        (this.objDebugPayload == null ? ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Response.objDebugPayload == null : this.objDebugPayload.equals(ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Response.objDebugPayload)) &&
-        (this.objDebug == null ? ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Response.objDebug == null : this.objDebug.equals(ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Response.objDebug));
+    return (this.objDebugPayload == null ? ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Response.objDebugPayload == null : this.objDebugPayload.equals(ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Response.objDebugPayload)) &&
+        (this.objDebug == null ? ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Response.objDebug == null : this.objDebug.equals(ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Response.objDebug)) &&
+        (this.mPayload == null ? ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Response.mPayload == null : this.mPayload.equals(ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Response.mPayload));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.mPayload == null ? 0: this.mPayload.hashCode());
     result = 31 * result + (this.objDebugPayload == null ? 0: this.objDebugPayload.hashCode());
     result = 31 * result + (this.objDebug == null ? 0: this.objDebug.hashCode());
+    result = 31 * result + (this.mPayload == null ? 0: this.mPayload.hashCode());
     return result;
   }
 
@@ -90,9 +90,9 @@ public class EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response {\n");
     
-    sb.append("  mPayload: ").append(mPayload).append("\n");
     sb.append("  objDebugPayload: ").append(objDebugPayload).append("\n");
     sb.append("  objDebug: ").append(objDebug).append("\n");
+    sb.append("  mPayload: ").append(mPayload).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

@@ -6,9 +6,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjSessionhistory** | [**List&lt;SessionhistoryListElement&gt;**](SessionhistoryListElement.md) |  | 
 **iRowReturned** | **Integer** | The number of rows returned | 
 **iRowFiltered** | **Integer** | The number of rows matching your filters (if any) or the total number of rows | 
+**aObjSessionhistory** | [**List&lt;SessionhistoryListElement&gt;**](SessionhistoryListElement.md) |  | 
 
 
 

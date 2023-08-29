@@ -32,12 +32,14 @@ import org.openapitools.client.model.UserEditObjectV1Request;
 import org.openapitools.client.model.UserEditObjectV1Response;
 import org.openapitools.client.model.UserEditPermissionsV1Request;
 import org.openapitools.client.model.UserEditPermissionsV1Response;
+import org.openapitools.client.model.UserGetApikeysV1Response;
 import org.openapitools.client.model.UserGetAutocompleteV2Response;
 import org.openapitools.client.model.UserGetEffectivePermissionsV1Response;
 import org.openapitools.client.model.UserGetListV1Response;
 import org.openapitools.client.model.UserGetObjectV2Response;
 import org.openapitools.client.model.UserGetPermissionsV1Response;
 import org.openapitools.client.model.UserGetSubnetsV1Response;
+import org.openapitools.client.model.UserSendPasswordResetV1Response;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
@@ -461,6 +463,133 @@ public class ObjectUserApi {
           public void onResponse(String localVarResponse) {
             try {
               responseListener.onResponse((UserEditPermissionsV1Response) ApiInvoker.deserialize(localVarResponse,  "", UserEditPermissionsV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Retrieve an existing User&#39;s Apikeys
+  * 
+   * @param pkiUserID 
+   * @return UserGetApikeysV1Response
+  */
+  public UserGetApikeysV1Response userGetApikeysV1 (Integer pkiUserID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiUserID' is set
+    if (pkiUserID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiUserID' when calling userGetApikeysV1",
+        new ApiException(400, "Missing the required parameter 'pkiUserID' when calling userGetApikeysV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/user/{pkiUserID}/getApikeys".replaceAll("\\{" + "pkiUserID" + "\\}", apiInvoker.escapeString(pkiUserID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (UserGetApikeysV1Response) ApiInvoker.deserialize(localVarResponse, "", UserGetApikeysV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve an existing User&#39;s Apikeys
+   * 
+   * @param pkiUserID 
+  */
+  public void userGetApikeysV1 (Integer pkiUserID, final Response.Listener<UserGetApikeysV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiUserID' is set
+    if (pkiUserID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiUserID' when calling userGetApikeysV1",
+        new ApiException(400, "Missing the required parameter 'pkiUserID' when calling userGetApikeysV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/user/{pkiUserID}/getApikeys".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiUserID" + "\\}", apiInvoker.escapeString(pkiUserID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((UserGetApikeysV1Response) ApiInvoker.deserialize(localVarResponse,  "", UserGetApikeysV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -1236,6 +1365,145 @@ public class ObjectUserApi {
           public void onResponse(String localVarResponse) {
             try {
               responseListener.onResponse((UserGetSubnetsV1Response) ApiInvoker.deserialize(localVarResponse,  "", UserGetSubnetsV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Send password reset
+  * Send the password reset email
+   * @param pkiUserID 
+   * @param body 
+   * @return UserSendPasswordResetV1Response
+  */
+  public UserSendPasswordResetV1Response userSendPasswordResetV1 (Integer pkiUserID, Object body) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = body;
+    // verify the required parameter 'pkiUserID' is set
+    if (pkiUserID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiUserID' when calling userSendPasswordResetV1",
+        new ApiException(400, "Missing the required parameter 'pkiUserID' when calling userSendPasswordResetV1"));
+    }
+    // verify the required parameter 'body' is set
+    if (body == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'body' when calling userSendPasswordResetV1",
+        new ApiException(400, "Missing the required parameter 'body' when calling userSendPasswordResetV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/user/{pkiUserID}/sendPasswordReset".replaceAll("\\{" + "pkiUserID" + "\\}", apiInvoker.escapeString(pkiUserID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (UserSendPasswordResetV1Response) ApiInvoker.deserialize(localVarResponse, "", UserSendPasswordResetV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Send password reset
+   * Send the password reset email
+   * @param pkiUserID    * @param body 
+  */
+  public void userSendPasswordResetV1 (Integer pkiUserID, Object body, final Response.Listener<UserSendPasswordResetV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = body;
+
+    // verify the required parameter 'pkiUserID' is set
+    if (pkiUserID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiUserID' when calling userSendPasswordResetV1",
+        new ApiException(400, "Missing the required parameter 'pkiUserID' when calling userSendPasswordResetV1"));
+    }
+    // verify the required parameter 'body' is set
+    if (body == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'body' when calling userSendPasswordResetV1",
+        new ApiException(400, "Missing the required parameter 'body' when calling userSendPasswordResetV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/user/{pkiUserID}/sendPasswordReset".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiUserID" + "\\}", apiInvoker.escapeString(pkiUserID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((UserSendPasswordResetV1Response) ApiInvoker.deserialize(localVarResponse,  "", UserSendPasswordResetV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

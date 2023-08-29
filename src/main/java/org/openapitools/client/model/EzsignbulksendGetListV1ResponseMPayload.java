@@ -23,22 +23,12 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Payload for GET /1/object/ezsignbulksend/getList")
 public class EzsignbulksendGetListV1ResponseMPayload {
   
-  @SerializedName("a_objEzsignbulksend")
-  private List<EzsignbulksendListElement> aObjEzsignbulksend = null;
   @SerializedName("iRowReturned")
   private Integer iRowReturned = null;
   @SerializedName("iRowFiltered")
   private Integer iRowFiltered = null;
-
-  /**
-   **/
-  @ApiModelProperty(required = true, value = "")
-  public List<EzsignbulksendListElement> getAObjEzsignbulksend() {
-    return aObjEzsignbulksend;
-  }
-  public void setAObjEzsignbulksend(List<EzsignbulksendListElement> aObjEzsignbulksend) {
-    this.aObjEzsignbulksend = aObjEzsignbulksend;
-  }
+  @SerializedName("a_objEzsignbulksend")
+  private List<EzsignbulksendListElement> aObjEzsignbulksend = null;
 
   /**
    * The number of rows returned
@@ -62,6 +52,16 @@ public class EzsignbulksendGetListV1ResponseMPayload {
     this.iRowFiltered = iRowFiltered;
   }
 
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public List<EzsignbulksendListElement> getAObjEzsignbulksend() {
+    return aObjEzsignbulksend;
+  }
+  public void setAObjEzsignbulksend(List<EzsignbulksendListElement> aObjEzsignbulksend) {
+    this.aObjEzsignbulksend = aObjEzsignbulksend;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -72,17 +72,17 @@ public class EzsignbulksendGetListV1ResponseMPayload {
       return false;
     }
     EzsignbulksendGetListV1ResponseMPayload ezsignbulksendGetListV1ResponseMPayload = (EzsignbulksendGetListV1ResponseMPayload) o;
-    return (this.aObjEzsignbulksend == null ? ezsignbulksendGetListV1ResponseMPayload.aObjEzsignbulksend == null : this.aObjEzsignbulksend.equals(ezsignbulksendGetListV1ResponseMPayload.aObjEzsignbulksend)) &&
-        (this.iRowReturned == null ? ezsignbulksendGetListV1ResponseMPayload.iRowReturned == null : this.iRowReturned.equals(ezsignbulksendGetListV1ResponseMPayload.iRowReturned)) &&
-        (this.iRowFiltered == null ? ezsignbulksendGetListV1ResponseMPayload.iRowFiltered == null : this.iRowFiltered.equals(ezsignbulksendGetListV1ResponseMPayload.iRowFiltered));
+    return (this.iRowReturned == null ? ezsignbulksendGetListV1ResponseMPayload.iRowReturned == null : this.iRowReturned.equals(ezsignbulksendGetListV1ResponseMPayload.iRowReturned)) &&
+        (this.iRowFiltered == null ? ezsignbulksendGetListV1ResponseMPayload.iRowFiltered == null : this.iRowFiltered.equals(ezsignbulksendGetListV1ResponseMPayload.iRowFiltered)) &&
+        (this.aObjEzsignbulksend == null ? ezsignbulksendGetListV1ResponseMPayload.aObjEzsignbulksend == null : this.aObjEzsignbulksend.equals(ezsignbulksendGetListV1ResponseMPayload.aObjEzsignbulksend));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.aObjEzsignbulksend == null ? 0: this.aObjEzsignbulksend.hashCode());
     result = 31 * result + (this.iRowReturned == null ? 0: this.iRowReturned.hashCode());
     result = 31 * result + (this.iRowFiltered == null ? 0: this.iRowFiltered.hashCode());
+    result = 31 * result + (this.aObjEzsignbulksend == null ? 0: this.aObjEzsignbulksend.hashCode());
     return result;
   }
 
@@ -91,9 +91,9 @@ public class EzsignbulksendGetListV1ResponseMPayload {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignbulksendGetListV1ResponseMPayload {\n");
     
-    sb.append("  aObjEzsignbulksend: ").append(aObjEzsignbulksend).append("\n");
     sb.append("  iRowReturned: ").append(iRowReturned).append("\n");
     sb.append("  iRowFiltered: ").append(iRowFiltered).append("\n");
+    sb.append("  aObjEzsignbulksend: ").append(aObjEzsignbulksend).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

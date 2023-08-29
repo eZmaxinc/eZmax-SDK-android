@@ -73,6 +73,8 @@ public class EzsignsignatureResponseCompound {
   private Integer iEzsignsignatureattachmentCount = null;
   @SerializedName("sEzsignsignatureDescription")
   private String sEzsignsignatureDescription = null;
+  @SerializedName("iEzsignsignatureMaxlength")
+  private Integer iEzsignsignatureMaxlength = null;
   @SerializedName("eEzsignsignatureTextvalidation")
   private EnumTextvalidation eEzsignsignatureTextvalidation = null;
   @SerializedName("sEzsignsignatureRegexp")
@@ -325,6 +327,19 @@ public class EzsignsignatureResponseCompound {
   }
 
   /**
+   * The maximum length for the value in the Ezsignsignature  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea**
+   * minimum: 0
+   * maximum: 65535
+   **/
+  @ApiModelProperty(value = "The maximum length for the value in the Ezsignsignature  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea**")
+  public Integer getIEzsignsignatureMaxlength() {
+    return iEzsignsignatureMaxlength;
+  }
+  public void setIEzsignsignatureMaxlength(Integer iEzsignsignatureMaxlength) {
+    this.iEzsignsignatureMaxlength = iEzsignsignatureMaxlength;
+  }
+
+  /**
    **/
   @ApiModelProperty(value = "")
   public EnumTextvalidation getEEzsignsignatureTextvalidation() {
@@ -428,6 +443,7 @@ public class EzsignsignatureResponseCompound {
         (this.dtEzsignsignatureDate == null ? ezsignsignatureResponseCompound.dtEzsignsignatureDate == null : this.dtEzsignsignatureDate.equals(ezsignsignatureResponseCompound.dtEzsignsignatureDate)) &&
         (this.iEzsignsignatureattachmentCount == null ? ezsignsignatureResponseCompound.iEzsignsignatureattachmentCount == null : this.iEzsignsignatureattachmentCount.equals(ezsignsignatureResponseCompound.iEzsignsignatureattachmentCount)) &&
         (this.sEzsignsignatureDescription == null ? ezsignsignatureResponseCompound.sEzsignsignatureDescription == null : this.sEzsignsignatureDescription.equals(ezsignsignatureResponseCompound.sEzsignsignatureDescription)) &&
+        (this.iEzsignsignatureMaxlength == null ? ezsignsignatureResponseCompound.iEzsignsignatureMaxlength == null : this.iEzsignsignatureMaxlength.equals(ezsignsignatureResponseCompound.iEzsignsignatureMaxlength)) &&
         (this.eEzsignsignatureTextvalidation == null ? ezsignsignatureResponseCompound.eEzsignsignatureTextvalidation == null : this.eEzsignsignatureTextvalidation.equals(ezsignsignatureResponseCompound.eEzsignsignatureTextvalidation)) &&
         (this.sEzsignsignatureRegexp == null ? ezsignsignatureResponseCompound.sEzsignsignatureRegexp == null : this.sEzsignsignatureRegexp.equals(ezsignsignatureResponseCompound.sEzsignsignatureRegexp)) &&
         (this.objContactName == null ? ezsignsignatureResponseCompound.objContactName == null : this.objContactName.equals(ezsignsignatureResponseCompound.objContactName)) &&
@@ -461,6 +477,7 @@ public class EzsignsignatureResponseCompound {
     result = 31 * result + (this.dtEzsignsignatureDate == null ? 0: this.dtEzsignsignatureDate.hashCode());
     result = 31 * result + (this.iEzsignsignatureattachmentCount == null ? 0: this.iEzsignsignatureattachmentCount.hashCode());
     result = 31 * result + (this.sEzsignsignatureDescription == null ? 0: this.sEzsignsignatureDescription.hashCode());
+    result = 31 * result + (this.iEzsignsignatureMaxlength == null ? 0: this.iEzsignsignatureMaxlength.hashCode());
     result = 31 * result + (this.eEzsignsignatureTextvalidation == null ? 0: this.eEzsignsignatureTextvalidation.hashCode());
     result = 31 * result + (this.sEzsignsignatureRegexp == null ? 0: this.sEzsignsignatureRegexp.hashCode());
     result = 31 * result + (this.objContactName == null ? 0: this.objContactName.hashCode());
@@ -497,6 +514,7 @@ public class EzsignsignatureResponseCompound {
     sb.append("  dtEzsignsignatureDate: ").append(dtEzsignsignatureDate).append("\n");
     sb.append("  iEzsignsignatureattachmentCount: ").append(iEzsignsignatureattachmentCount).append("\n");
     sb.append("  sEzsignsignatureDescription: ").append(sEzsignsignatureDescription).append("\n");
+    sb.append("  iEzsignsignatureMaxlength: ").append(iEzsignsignatureMaxlength).append("\n");
     sb.append("  eEzsignsignatureTextvalidation: ").append(eEzsignsignatureTextvalidation).append("\n");
     sb.append("  sEzsignsignatureRegexp: ").append(sEzsignsignatureRegexp).append("\n");
     sb.append("  objContactName: ").append(objContactName).append("\n");

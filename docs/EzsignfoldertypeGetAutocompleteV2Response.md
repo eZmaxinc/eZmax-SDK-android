@@ -6,9 +6,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**EzsignfoldertypeGetAutocompleteV2ResponseMPayload**](EzsignfoldertypeGetAutocompleteV2ResponseMPayload.md) |  | 
-**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  [optional]
+**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | 
 **objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
+**mPayload** | [**EzsignfoldertypeGetAutocompleteV2ResponseMPayload**](EzsignfoldertypeGetAutocompleteV2ResponseMPayload.md) |  | 
 
 
 

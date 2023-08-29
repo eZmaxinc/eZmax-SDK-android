@@ -12,6 +12,7 @@
 
 package org.openapitools.client.model;
 
+import org.openapitools.client.model.EnumTextvalidation;
 import org.openapitools.client.model.FieldEEzsigntemplatesignatureAttachmentnamesource;
 import org.openapitools.client.model.FieldEEzsigntemplatesignatureFont;
 import org.openapitools.client.model.FieldEEzsigntemplatesignatureTooltipposition;
@@ -39,6 +40,10 @@ public class EzsigntemplatesignatureResponse {
   private Integer iEzsigntemplatesignatureX = null;
   @SerializedName("iEzsigntemplatesignatureY")
   private Integer iEzsigntemplatesignatureY = null;
+  @SerializedName("iEzsigntemplatesignatureWidth")
+  private Integer iEzsigntemplatesignatureWidth = null;
+  @SerializedName("iEzsigntemplatesignatureHeight")
+  private Integer iEzsigntemplatesignatureHeight = null;
   @SerializedName("iEzsigntemplatesignatureStep")
   private Integer iEzsigntemplatesignatureStep = null;
   @SerializedName("eEzsigntemplatesignatureType")
@@ -57,6 +62,12 @@ public class EzsigntemplatesignatureResponse {
   private FieldEEzsigntemplatesignatureAttachmentnamesource eEzsigntemplatesignatureAttachmentnamesource = null;
   @SerializedName("bEzsigntemplatesignatureRequired")
   private Boolean bEzsigntemplatesignatureRequired = null;
+  @SerializedName("iEzsigntemplatesignatureMaxlength")
+  private Integer iEzsigntemplatesignatureMaxlength = null;
+  @SerializedName("sEzsigntemplatesignatureRegexp")
+  private String sEzsigntemplatesignatureRegexp = null;
+  @SerializedName("eEzsigntemplatesignatureTextvalidation")
+  private EnumTextvalidation eEzsigntemplatesignatureTextvalidation = null;
 
   /**
    * The unique ID of the Ezsigntemplatesignature
@@ -140,6 +151,30 @@ public class EzsigntemplatesignatureResponse {
   }
   public void setIEzsigntemplatesignatureY(Integer iEzsigntemplatesignatureY) {
     this.iEzsigntemplatesignatureY = iEzsigntemplatesignatureY;
+  }
+
+  /**
+   * The width of the Ezsigntemplatesignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsigntemplatesignature to have a width of 2 inches, you would use \"200\" for the iEzsigntemplatesignatureWidth.
+   * minimum: 0
+   **/
+  @ApiModelProperty(value = "The width of the Ezsigntemplatesignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsigntemplatesignature to have a width of 2 inches, you would use \"200\" for the iEzsigntemplatesignatureWidth.")
+  public Integer getIEzsigntemplatesignatureWidth() {
+    return iEzsigntemplatesignatureWidth;
+  }
+  public void setIEzsigntemplatesignatureWidth(Integer iEzsigntemplatesignatureWidth) {
+    this.iEzsigntemplatesignatureWidth = iEzsigntemplatesignatureWidth;
+  }
+
+  /**
+   * The height of the Ezsigntemplatesignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsigntemplatesignature to have an height of 2 inches, you would use \"200\" for the iEzsigntemplatesignatureHeight.
+   * minimum: 0
+   **/
+  @ApiModelProperty(value = "The height of the Ezsigntemplatesignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsigntemplatesignature to have an height of 2 inches, you would use \"200\" for the iEzsigntemplatesignatureHeight.")
+  public Integer getIEzsigntemplatesignatureHeight() {
+    return iEzsigntemplatesignatureHeight;
+  }
+  public void setIEzsigntemplatesignatureHeight(Integer iEzsigntemplatesignatureHeight) {
+    this.iEzsigntemplatesignatureHeight = iEzsigntemplatesignatureHeight;
   }
 
   /**
@@ -238,6 +273,40 @@ public class EzsigntemplatesignatureResponse {
     this.bEzsigntemplatesignatureRequired = bEzsigntemplatesignatureRequired;
   }
 
+  /**
+   * The maximum length for the value in the Ezsigntemplatesignature  This can only be set if eEzsigntemplatesignatureType is **FieldText** or **FieldTextarea**
+   * minimum: 0
+   * maximum: 65535
+   **/
+  @ApiModelProperty(value = "The maximum length for the value in the Ezsigntemplatesignature  This can only be set if eEzsigntemplatesignatureType is **FieldText** or **FieldTextarea**")
+  public Integer getIEzsigntemplatesignatureMaxlength() {
+    return iEzsigntemplatesignatureMaxlength;
+  }
+  public void setIEzsigntemplatesignatureMaxlength(Integer iEzsigntemplatesignatureMaxlength) {
+    this.iEzsigntemplatesignatureMaxlength = iEzsigntemplatesignatureMaxlength;
+  }
+
+  /**
+   * A regular expression to indicate what values are acceptable for the Ezsigntemplatesignature.  This can only be set if eEzsigntemplatesignatureType is **Text** or **Textarea**
+   **/
+  @ApiModelProperty(value = "A regular expression to indicate what values are acceptable for the Ezsigntemplatesignature.  This can only be set if eEzsigntemplatesignatureType is **Text** or **Textarea**")
+  public String getSEzsigntemplatesignatureRegexp() {
+    return sEzsigntemplatesignatureRegexp;
+  }
+  public void setSEzsigntemplatesignatureRegexp(String sEzsigntemplatesignatureRegexp) {
+    this.sEzsigntemplatesignatureRegexp = sEzsigntemplatesignatureRegexp;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public EnumTextvalidation getEEzsigntemplatesignatureTextvalidation() {
+    return eEzsigntemplatesignatureTextvalidation;
+  }
+  public void setEEzsigntemplatesignatureTextvalidation(EnumTextvalidation eEzsigntemplatesignatureTextvalidation) {
+    this.eEzsigntemplatesignatureTextvalidation = eEzsigntemplatesignatureTextvalidation;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -255,6 +324,8 @@ public class EzsigntemplatesignatureResponse {
         (this.iEzsigntemplatedocumentpagePagenumber == null ? ezsigntemplatesignatureResponse.iEzsigntemplatedocumentpagePagenumber == null : this.iEzsigntemplatedocumentpagePagenumber.equals(ezsigntemplatesignatureResponse.iEzsigntemplatedocumentpagePagenumber)) &&
         (this.iEzsigntemplatesignatureX == null ? ezsigntemplatesignatureResponse.iEzsigntemplatesignatureX == null : this.iEzsigntemplatesignatureX.equals(ezsigntemplatesignatureResponse.iEzsigntemplatesignatureX)) &&
         (this.iEzsigntemplatesignatureY == null ? ezsigntemplatesignatureResponse.iEzsigntemplatesignatureY == null : this.iEzsigntemplatesignatureY.equals(ezsigntemplatesignatureResponse.iEzsigntemplatesignatureY)) &&
+        (this.iEzsigntemplatesignatureWidth == null ? ezsigntemplatesignatureResponse.iEzsigntemplatesignatureWidth == null : this.iEzsigntemplatesignatureWidth.equals(ezsigntemplatesignatureResponse.iEzsigntemplatesignatureWidth)) &&
+        (this.iEzsigntemplatesignatureHeight == null ? ezsigntemplatesignatureResponse.iEzsigntemplatesignatureHeight == null : this.iEzsigntemplatesignatureHeight.equals(ezsigntemplatesignatureResponse.iEzsigntemplatesignatureHeight)) &&
         (this.iEzsigntemplatesignatureStep == null ? ezsigntemplatesignatureResponse.iEzsigntemplatesignatureStep == null : this.iEzsigntemplatesignatureStep.equals(ezsigntemplatesignatureResponse.iEzsigntemplatesignatureStep)) &&
         (this.eEzsigntemplatesignatureType == null ? ezsigntemplatesignatureResponse.eEzsigntemplatesignatureType == null : this.eEzsigntemplatesignatureType.equals(ezsigntemplatesignatureResponse.eEzsigntemplatesignatureType)) &&
         (this.tEzsigntemplatesignatureTooltip == null ? ezsigntemplatesignatureResponse.tEzsigntemplatesignatureTooltip == null : this.tEzsigntemplatesignatureTooltip.equals(ezsigntemplatesignatureResponse.tEzsigntemplatesignatureTooltip)) &&
@@ -263,7 +334,10 @@ public class EzsigntemplatesignatureResponse {
         (this.iEzsigntemplatesignatureValidationstep == null ? ezsigntemplatesignatureResponse.iEzsigntemplatesignatureValidationstep == null : this.iEzsigntemplatesignatureValidationstep.equals(ezsigntemplatesignatureResponse.iEzsigntemplatesignatureValidationstep)) &&
         (this.sEzsigntemplatesignatureAttachmentdescription == null ? ezsigntemplatesignatureResponse.sEzsigntemplatesignatureAttachmentdescription == null : this.sEzsigntemplatesignatureAttachmentdescription.equals(ezsigntemplatesignatureResponse.sEzsigntemplatesignatureAttachmentdescription)) &&
         (this.eEzsigntemplatesignatureAttachmentnamesource == null ? ezsigntemplatesignatureResponse.eEzsigntemplatesignatureAttachmentnamesource == null : this.eEzsigntemplatesignatureAttachmentnamesource.equals(ezsigntemplatesignatureResponse.eEzsigntemplatesignatureAttachmentnamesource)) &&
-        (this.bEzsigntemplatesignatureRequired == null ? ezsigntemplatesignatureResponse.bEzsigntemplatesignatureRequired == null : this.bEzsigntemplatesignatureRequired.equals(ezsigntemplatesignatureResponse.bEzsigntemplatesignatureRequired));
+        (this.bEzsigntemplatesignatureRequired == null ? ezsigntemplatesignatureResponse.bEzsigntemplatesignatureRequired == null : this.bEzsigntemplatesignatureRequired.equals(ezsigntemplatesignatureResponse.bEzsigntemplatesignatureRequired)) &&
+        (this.iEzsigntemplatesignatureMaxlength == null ? ezsigntemplatesignatureResponse.iEzsigntemplatesignatureMaxlength == null : this.iEzsigntemplatesignatureMaxlength.equals(ezsigntemplatesignatureResponse.iEzsigntemplatesignatureMaxlength)) &&
+        (this.sEzsigntemplatesignatureRegexp == null ? ezsigntemplatesignatureResponse.sEzsigntemplatesignatureRegexp == null : this.sEzsigntemplatesignatureRegexp.equals(ezsigntemplatesignatureResponse.sEzsigntemplatesignatureRegexp)) &&
+        (this.eEzsigntemplatesignatureTextvalidation == null ? ezsigntemplatesignatureResponse.eEzsigntemplatesignatureTextvalidation == null : this.eEzsigntemplatesignatureTextvalidation.equals(ezsigntemplatesignatureResponse.eEzsigntemplatesignatureTextvalidation));
   }
 
   @Override
@@ -276,6 +350,8 @@ public class EzsigntemplatesignatureResponse {
     result = 31 * result + (this.iEzsigntemplatedocumentpagePagenumber == null ? 0: this.iEzsigntemplatedocumentpagePagenumber.hashCode());
     result = 31 * result + (this.iEzsigntemplatesignatureX == null ? 0: this.iEzsigntemplatesignatureX.hashCode());
     result = 31 * result + (this.iEzsigntemplatesignatureY == null ? 0: this.iEzsigntemplatesignatureY.hashCode());
+    result = 31 * result + (this.iEzsigntemplatesignatureWidth == null ? 0: this.iEzsigntemplatesignatureWidth.hashCode());
+    result = 31 * result + (this.iEzsigntemplatesignatureHeight == null ? 0: this.iEzsigntemplatesignatureHeight.hashCode());
     result = 31 * result + (this.iEzsigntemplatesignatureStep == null ? 0: this.iEzsigntemplatesignatureStep.hashCode());
     result = 31 * result + (this.eEzsigntemplatesignatureType == null ? 0: this.eEzsigntemplatesignatureType.hashCode());
     result = 31 * result + (this.tEzsigntemplatesignatureTooltip == null ? 0: this.tEzsigntemplatesignatureTooltip.hashCode());
@@ -285,6 +361,9 @@ public class EzsigntemplatesignatureResponse {
     result = 31 * result + (this.sEzsigntemplatesignatureAttachmentdescription == null ? 0: this.sEzsigntemplatesignatureAttachmentdescription.hashCode());
     result = 31 * result + (this.eEzsigntemplatesignatureAttachmentnamesource == null ? 0: this.eEzsigntemplatesignatureAttachmentnamesource.hashCode());
     result = 31 * result + (this.bEzsigntemplatesignatureRequired == null ? 0: this.bEzsigntemplatesignatureRequired.hashCode());
+    result = 31 * result + (this.iEzsigntemplatesignatureMaxlength == null ? 0: this.iEzsigntemplatesignatureMaxlength.hashCode());
+    result = 31 * result + (this.sEzsigntemplatesignatureRegexp == null ? 0: this.sEzsigntemplatesignatureRegexp.hashCode());
+    result = 31 * result + (this.eEzsigntemplatesignatureTextvalidation == null ? 0: this.eEzsigntemplatesignatureTextvalidation.hashCode());
     return result;
   }
 
@@ -300,6 +379,8 @@ public class EzsigntemplatesignatureResponse {
     sb.append("  iEzsigntemplatedocumentpagePagenumber: ").append(iEzsigntemplatedocumentpagePagenumber).append("\n");
     sb.append("  iEzsigntemplatesignatureX: ").append(iEzsigntemplatesignatureX).append("\n");
     sb.append("  iEzsigntemplatesignatureY: ").append(iEzsigntemplatesignatureY).append("\n");
+    sb.append("  iEzsigntemplatesignatureWidth: ").append(iEzsigntemplatesignatureWidth).append("\n");
+    sb.append("  iEzsigntemplatesignatureHeight: ").append(iEzsigntemplatesignatureHeight).append("\n");
     sb.append("  iEzsigntemplatesignatureStep: ").append(iEzsigntemplatesignatureStep).append("\n");
     sb.append("  eEzsigntemplatesignatureType: ").append(eEzsigntemplatesignatureType).append("\n");
     sb.append("  tEzsigntemplatesignatureTooltip: ").append(tEzsigntemplatesignatureTooltip).append("\n");
@@ -309,6 +390,9 @@ public class EzsigntemplatesignatureResponse {
     sb.append("  sEzsigntemplatesignatureAttachmentdescription: ").append(sEzsigntemplatesignatureAttachmentdescription).append("\n");
     sb.append("  eEzsigntemplatesignatureAttachmentnamesource: ").append(eEzsigntemplatesignatureAttachmentnamesource).append("\n");
     sb.append("  bEzsigntemplatesignatureRequired: ").append(bEzsigntemplatesignatureRequired).append("\n");
+    sb.append("  iEzsigntemplatesignatureMaxlength: ").append(iEzsigntemplatesignatureMaxlength).append("\n");
+    sb.append("  sEzsigntemplatesignatureRegexp: ").append(sEzsigntemplatesignatureRegexp).append("\n");
+    sb.append("  eEzsigntemplatesignatureTextvalidation: ").append(eEzsigntemplatesignatureTextvalidation).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

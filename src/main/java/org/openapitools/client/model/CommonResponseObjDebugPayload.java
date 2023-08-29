@@ -28,6 +28,8 @@ public class CommonResponseObjDebugPayload {
   private Integer iVersionMax = null;
   @SerializedName("a_RequiredPermission")
   private List<Integer> aRequiredPermission = null;
+  @SerializedName("bVersionDeprecated")
+  private Boolean bVersionDeprecated = null;
 
   /**
    * The minimum version of the function that can be called
@@ -62,6 +64,17 @@ public class CommonResponseObjDebugPayload {
     this.aRequiredPermission = aRequiredPermission;
   }
 
+  /**
+   * Wheter the current route is deprecated or not
+   **/
+  @ApiModelProperty(required = true, value = "Wheter the current route is deprecated or not")
+  public Boolean getBVersionDeprecated() {
+    return bVersionDeprecated;
+  }
+  public void setBVersionDeprecated(Boolean bVersionDeprecated) {
+    this.bVersionDeprecated = bVersionDeprecated;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -74,7 +87,8 @@ public class CommonResponseObjDebugPayload {
     CommonResponseObjDebugPayload commonResponseObjDebugPayload = (CommonResponseObjDebugPayload) o;
     return (this.iVersionMin == null ? commonResponseObjDebugPayload.iVersionMin == null : this.iVersionMin.equals(commonResponseObjDebugPayload.iVersionMin)) &&
         (this.iVersionMax == null ? commonResponseObjDebugPayload.iVersionMax == null : this.iVersionMax.equals(commonResponseObjDebugPayload.iVersionMax)) &&
-        (this.aRequiredPermission == null ? commonResponseObjDebugPayload.aRequiredPermission == null : this.aRequiredPermission.equals(commonResponseObjDebugPayload.aRequiredPermission));
+        (this.aRequiredPermission == null ? commonResponseObjDebugPayload.aRequiredPermission == null : this.aRequiredPermission.equals(commonResponseObjDebugPayload.aRequiredPermission)) &&
+        (this.bVersionDeprecated == null ? commonResponseObjDebugPayload.bVersionDeprecated == null : this.bVersionDeprecated.equals(commonResponseObjDebugPayload.bVersionDeprecated));
   }
 
   @Override
@@ -83,6 +97,7 @@ public class CommonResponseObjDebugPayload {
     result = 31 * result + (this.iVersionMin == null ? 0: this.iVersionMin.hashCode());
     result = 31 * result + (this.iVersionMax == null ? 0: this.iVersionMax.hashCode());
     result = 31 * result + (this.aRequiredPermission == null ? 0: this.aRequiredPermission.hashCode());
+    result = 31 * result + (this.bVersionDeprecated == null ? 0: this.bVersionDeprecated.hashCode());
     return result;
   }
 
@@ -94,6 +109,7 @@ public class CommonResponseObjDebugPayload {
     sb.append("  iVersionMin: ").append(iVersionMin).append("\n");
     sb.append("  iVersionMax: ").append(iVersionMax).append("\n");
     sb.append("  aRequiredPermission: ").append(aRequiredPermission).append("\n");
+    sb.append("  bVersionDeprecated: ").append(bVersionDeprecated).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

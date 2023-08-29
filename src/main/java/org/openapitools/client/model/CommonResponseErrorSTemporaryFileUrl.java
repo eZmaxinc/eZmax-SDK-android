@@ -22,23 +22,12 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Generic Error Message")
 public class CommonResponseErrorSTemporaryFileUrl {
   
-  @SerializedName("sTemporaryFileUrl")
-  private String sTemporaryFileUrl = null;
   @SerializedName("sErrorMessage")
   private String sErrorMessage = null;
   @SerializedName("eErrorCode")
   private FieldEErrorCode eErrorCode = null;
-
-  /**
-   * The Temporary File Url of the document that was uploaded. That url can be reused instead of uploading the file again.
-   **/
-  @ApiModelProperty(value = "The Temporary File Url of the document that was uploaded. That url can be reused instead of uploading the file again.")
-  public String getSTemporaryFileUrl() {
-    return sTemporaryFileUrl;
-  }
-  public void setSTemporaryFileUrl(String sTemporaryFileUrl) {
-    this.sTemporaryFileUrl = sTemporaryFileUrl;
-  }
+  @SerializedName("sTemporaryFileUrl")
+  private String sTemporaryFileUrl = null;
 
   /**
    * The message giving details about the error
@@ -61,6 +50,17 @@ public class CommonResponseErrorSTemporaryFileUrl {
     this.eErrorCode = eErrorCode;
   }
 
+  /**
+   * The Temporary File Url of the document that was uploaded. That url can be reused instead of uploading the file again.
+   **/
+  @ApiModelProperty(value = "The Temporary File Url of the document that was uploaded. That url can be reused instead of uploading the file again.")
+  public String getSTemporaryFileUrl() {
+    return sTemporaryFileUrl;
+  }
+  public void setSTemporaryFileUrl(String sTemporaryFileUrl) {
+    this.sTemporaryFileUrl = sTemporaryFileUrl;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -71,17 +71,17 @@ public class CommonResponseErrorSTemporaryFileUrl {
       return false;
     }
     CommonResponseErrorSTemporaryFileUrl commonResponseErrorSTemporaryFileUrl = (CommonResponseErrorSTemporaryFileUrl) o;
-    return (this.sTemporaryFileUrl == null ? commonResponseErrorSTemporaryFileUrl.sTemporaryFileUrl == null : this.sTemporaryFileUrl.equals(commonResponseErrorSTemporaryFileUrl.sTemporaryFileUrl)) &&
-        (this.sErrorMessage == null ? commonResponseErrorSTemporaryFileUrl.sErrorMessage == null : this.sErrorMessage.equals(commonResponseErrorSTemporaryFileUrl.sErrorMessage)) &&
-        (this.eErrorCode == null ? commonResponseErrorSTemporaryFileUrl.eErrorCode == null : this.eErrorCode.equals(commonResponseErrorSTemporaryFileUrl.eErrorCode));
+    return (this.sErrorMessage == null ? commonResponseErrorSTemporaryFileUrl.sErrorMessage == null : this.sErrorMessage.equals(commonResponseErrorSTemporaryFileUrl.sErrorMessage)) &&
+        (this.eErrorCode == null ? commonResponseErrorSTemporaryFileUrl.eErrorCode == null : this.eErrorCode.equals(commonResponseErrorSTemporaryFileUrl.eErrorCode)) &&
+        (this.sTemporaryFileUrl == null ? commonResponseErrorSTemporaryFileUrl.sTemporaryFileUrl == null : this.sTemporaryFileUrl.equals(commonResponseErrorSTemporaryFileUrl.sTemporaryFileUrl));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.sTemporaryFileUrl == null ? 0: this.sTemporaryFileUrl.hashCode());
     result = 31 * result + (this.sErrorMessage == null ? 0: this.sErrorMessage.hashCode());
     result = 31 * result + (this.eErrorCode == null ? 0: this.eErrorCode.hashCode());
+    result = 31 * result + (this.sTemporaryFileUrl == null ? 0: this.sTemporaryFileUrl.hashCode());
     return result;
   }
 
@@ -90,9 +90,9 @@ public class CommonResponseErrorSTemporaryFileUrl {
     StringBuilder sb = new StringBuilder();
     sb.append("class CommonResponseErrorSTemporaryFileUrl {\n");
     
-    sb.append("  sTemporaryFileUrl: ").append(sTemporaryFileUrl).append("\n");
     sb.append("  sErrorMessage: ").append(sErrorMessage).append("\n");
     sb.append("  eErrorCode: ").append(eErrorCode).append("\n");
+    sb.append("  sTemporaryFileUrl: ").append(sTemporaryFileUrl).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

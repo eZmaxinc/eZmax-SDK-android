@@ -22,17 +22,17 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Request for PUT /1/object/ezsignsignergroup/{pkiEzsignsignergroupID}")
 public class EzsignsignergroupEditObjectV1Request {
   
-  @SerializedName("objBranding")
-  private EzsignsignergroupRequestCompound objBranding = null;
+  @SerializedName("objEzsignsignergroup")
+  private EzsignsignergroupRequestCompound objEzsignsignergroup = null;
 
   /**
    **/
-  @ApiModelProperty(value = "")
-  public EzsignsignergroupRequestCompound getObjBranding() {
-    return objBranding;
+  @ApiModelProperty(required = true, value = "")
+  public EzsignsignergroupRequestCompound getObjEzsignsignergroup() {
+    return objEzsignsignergroup;
   }
-  public void setObjBranding(EzsignsignergroupRequestCompound objBranding) {
-    this.objBranding = objBranding;
+  public void setObjEzsignsignergroup(EzsignsignergroupRequestCompound objEzsignsignergroup) {
+    this.objEzsignsignergroup = objEzsignsignergroup;
   }
 
 
@@ -45,13 +45,13 @@ public class EzsignsignergroupEditObjectV1Request {
       return false;
     }
     EzsignsignergroupEditObjectV1Request ezsignsignergroupEditObjectV1Request = (EzsignsignergroupEditObjectV1Request) o;
-    return (this.objBranding == null ? ezsignsignergroupEditObjectV1Request.objBranding == null : this.objBranding.equals(ezsignsignergroupEditObjectV1Request.objBranding));
+    return (this.objEzsignsignergroup == null ? ezsignsignergroupEditObjectV1Request.objEzsignsignergroup == null : this.objEzsignsignergroup.equals(ezsignsignergroupEditObjectV1Request.objEzsignsignergroup));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.objBranding == null ? 0: this.objBranding.hashCode());
+    result = 31 * result + (this.objEzsignsignergroup == null ? 0: this.objEzsignsignergroup.hashCode());
     return result;
   }
 
@@ -60,7 +60,7 @@ public class EzsignsignergroupEditObjectV1Request {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignsignergroupEditObjectV1Request {\n");
     
-    sb.append("  objBranding: ").append(objBranding).append("\n");
+    sb.append("  objEzsignsignergroup: ").append(objEzsignsignergroup).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

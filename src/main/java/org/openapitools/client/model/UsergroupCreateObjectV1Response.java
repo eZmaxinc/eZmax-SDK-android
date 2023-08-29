@@ -24,26 +24,16 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Response for POST /1/object/usergroup")
 public class UsergroupCreateObjectV1Response {
   
-  @SerializedName("mPayload")
-  private UsergroupCreateObjectV1ResponseMPayload mPayload = null;
   @SerializedName("objDebugPayload")
   private CommonResponseObjDebugPayload objDebugPayload = null;
   @SerializedName("objDebug")
   private CommonResponseObjDebug objDebug = null;
+  @SerializedName("mPayload")
+  private UsergroupCreateObjectV1ResponseMPayload mPayload = null;
 
   /**
    **/
   @ApiModelProperty(required = true, value = "")
-  public UsergroupCreateObjectV1ResponseMPayload getMPayload() {
-    return mPayload;
-  }
-  public void setMPayload(UsergroupCreateObjectV1ResponseMPayload mPayload) {
-    this.mPayload = mPayload;
-  }
-
-  /**
-   **/
-  @ApiModelProperty(value = "")
   public CommonResponseObjDebugPayload getObjDebugPayload() {
     return objDebugPayload;
   }
@@ -61,6 +51,16 @@ public class UsergroupCreateObjectV1Response {
     this.objDebug = objDebug;
   }
 
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public UsergroupCreateObjectV1ResponseMPayload getMPayload() {
+    return mPayload;
+  }
+  public void setMPayload(UsergroupCreateObjectV1ResponseMPayload mPayload) {
+    this.mPayload = mPayload;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -71,17 +71,17 @@ public class UsergroupCreateObjectV1Response {
       return false;
     }
     UsergroupCreateObjectV1Response usergroupCreateObjectV1Response = (UsergroupCreateObjectV1Response) o;
-    return (this.mPayload == null ? usergroupCreateObjectV1Response.mPayload == null : this.mPayload.equals(usergroupCreateObjectV1Response.mPayload)) &&
-        (this.objDebugPayload == null ? usergroupCreateObjectV1Response.objDebugPayload == null : this.objDebugPayload.equals(usergroupCreateObjectV1Response.objDebugPayload)) &&
-        (this.objDebug == null ? usergroupCreateObjectV1Response.objDebug == null : this.objDebug.equals(usergroupCreateObjectV1Response.objDebug));
+    return (this.objDebugPayload == null ? usergroupCreateObjectV1Response.objDebugPayload == null : this.objDebugPayload.equals(usergroupCreateObjectV1Response.objDebugPayload)) &&
+        (this.objDebug == null ? usergroupCreateObjectV1Response.objDebug == null : this.objDebug.equals(usergroupCreateObjectV1Response.objDebug)) &&
+        (this.mPayload == null ? usergroupCreateObjectV1Response.mPayload == null : this.mPayload.equals(usergroupCreateObjectV1Response.mPayload));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.mPayload == null ? 0: this.mPayload.hashCode());
     result = 31 * result + (this.objDebugPayload == null ? 0: this.objDebugPayload.hashCode());
     result = 31 * result + (this.objDebug == null ? 0: this.objDebug.hashCode());
+    result = 31 * result + (this.mPayload == null ? 0: this.mPayload.hashCode());
     return result;
   }
 
@@ -90,9 +90,9 @@ public class UsergroupCreateObjectV1Response {
     StringBuilder sb = new StringBuilder();
     sb.append("class UsergroupCreateObjectV1Response {\n");
     
-    sb.append("  mPayload: ").append(mPayload).append("\n");
     sb.append("  objDebugPayload: ").append(objDebugPayload).append("\n");
     sb.append("  objDebug: ").append(objDebug).append("\n");
+    sb.append("  mPayload: ").append(mPayload).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

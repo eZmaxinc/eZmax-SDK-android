@@ -6,7 +6,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objBranding** | [**EzsignsignergroupRequestCompound**](EzsignsignergroupRequestCompound.md) |  |  [optional]
+**objEzsignsignergroup** | [**EzsignsignergroupRequestCompound**](EzsignsignergroupRequestCompound.md) |  | 
 
 
 

@@ -24,26 +24,16 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Response for GET /1/object/user/{pkiUserID}/getSubnets")
 public class UserGetSubnetsV1Response {
   
-  @SerializedName("mPayload")
-  private UserGetSubnetsV1ResponseMPayload mPayload = null;
   @SerializedName("objDebugPayload")
   private CommonResponseObjDebugPayload objDebugPayload = null;
   @SerializedName("objDebug")
   private CommonResponseObjDebug objDebug = null;
+  @SerializedName("mPayload")
+  private UserGetSubnetsV1ResponseMPayload mPayload = null;
 
   /**
    **/
   @ApiModelProperty(required = true, value = "")
-  public UserGetSubnetsV1ResponseMPayload getMPayload() {
-    return mPayload;
-  }
-  public void setMPayload(UserGetSubnetsV1ResponseMPayload mPayload) {
-    this.mPayload = mPayload;
-  }
-
-  /**
-   **/
-  @ApiModelProperty(value = "")
   public CommonResponseObjDebugPayload getObjDebugPayload() {
     return objDebugPayload;
   }
@@ -61,6 +51,16 @@ public class UserGetSubnetsV1Response {
     this.objDebug = objDebug;
   }
 
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public UserGetSubnetsV1ResponseMPayload getMPayload() {
+    return mPayload;
+  }
+  public void setMPayload(UserGetSubnetsV1ResponseMPayload mPayload) {
+    this.mPayload = mPayload;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -71,17 +71,17 @@ public class UserGetSubnetsV1Response {
       return false;
     }
     UserGetSubnetsV1Response userGetSubnetsV1Response = (UserGetSubnetsV1Response) o;
-    return (this.mPayload == null ? userGetSubnetsV1Response.mPayload == null : this.mPayload.equals(userGetSubnetsV1Response.mPayload)) &&
-        (this.objDebugPayload == null ? userGetSubnetsV1Response.objDebugPayload == null : this.objDebugPayload.equals(userGetSubnetsV1Response.objDebugPayload)) &&
-        (this.objDebug == null ? userGetSubnetsV1Response.objDebug == null : this.objDebug.equals(userGetSubnetsV1Response.objDebug));
+    return (this.objDebugPayload == null ? userGetSubnetsV1Response.objDebugPayload == null : this.objDebugPayload.equals(userGetSubnetsV1Response.objDebugPayload)) &&
+        (this.objDebug == null ? userGetSubnetsV1Response.objDebug == null : this.objDebug.equals(userGetSubnetsV1Response.objDebug)) &&
+        (this.mPayload == null ? userGetSubnetsV1Response.mPayload == null : this.mPayload.equals(userGetSubnetsV1Response.mPayload));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.mPayload == null ? 0: this.mPayload.hashCode());
     result = 31 * result + (this.objDebugPayload == null ? 0: this.objDebugPayload.hashCode());
     result = 31 * result + (this.objDebug == null ? 0: this.objDebug.hashCode());
+    result = 31 * result + (this.mPayload == null ? 0: this.mPayload.hashCode());
     return result;
   }
 
@@ -90,9 +90,9 @@ public class UserGetSubnetsV1Response {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserGetSubnetsV1Response {\n");
     
-    sb.append("  mPayload: ").append(mPayload).append("\n");
     sb.append("  objDebugPayload: ").append(objDebugPayload).append("\n");
     sb.append("  objDebug: ").append(objDebug).append("\n");
+    sb.append("  mPayload: ").append(mPayload).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

@@ -23,22 +23,12 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Payload for GET /1/object/user/getList")
 public class UserGetListV1ResponseMPayload {
   
-  @SerializedName("a_objUser")
-  private List<UserListElement> aObjUser = null;
   @SerializedName("iRowReturned")
   private Integer iRowReturned = null;
   @SerializedName("iRowFiltered")
   private Integer iRowFiltered = null;
-
-  /**
-   **/
-  @ApiModelProperty(required = true, value = "")
-  public List<UserListElement> getAObjUser() {
-    return aObjUser;
-  }
-  public void setAObjUser(List<UserListElement> aObjUser) {
-    this.aObjUser = aObjUser;
-  }
+  @SerializedName("a_objUser")
+  private List<UserListElement> aObjUser = null;
 
   /**
    * The number of rows returned
@@ -62,6 +52,16 @@ public class UserGetListV1ResponseMPayload {
     this.iRowFiltered = iRowFiltered;
   }
 
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public List<UserListElement> getAObjUser() {
+    return aObjUser;
+  }
+  public void setAObjUser(List<UserListElement> aObjUser) {
+    this.aObjUser = aObjUser;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -72,17 +72,17 @@ public class UserGetListV1ResponseMPayload {
       return false;
     }
     UserGetListV1ResponseMPayload userGetListV1ResponseMPayload = (UserGetListV1ResponseMPayload) o;
-    return (this.aObjUser == null ? userGetListV1ResponseMPayload.aObjUser == null : this.aObjUser.equals(userGetListV1ResponseMPayload.aObjUser)) &&
-        (this.iRowReturned == null ? userGetListV1ResponseMPayload.iRowReturned == null : this.iRowReturned.equals(userGetListV1ResponseMPayload.iRowReturned)) &&
-        (this.iRowFiltered == null ? userGetListV1ResponseMPayload.iRowFiltered == null : this.iRowFiltered.equals(userGetListV1ResponseMPayload.iRowFiltered));
+    return (this.iRowReturned == null ? userGetListV1ResponseMPayload.iRowReturned == null : this.iRowReturned.equals(userGetListV1ResponseMPayload.iRowReturned)) &&
+        (this.iRowFiltered == null ? userGetListV1ResponseMPayload.iRowFiltered == null : this.iRowFiltered.equals(userGetListV1ResponseMPayload.iRowFiltered)) &&
+        (this.aObjUser == null ? userGetListV1ResponseMPayload.aObjUser == null : this.aObjUser.equals(userGetListV1ResponseMPayload.aObjUser));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.aObjUser == null ? 0: this.aObjUser.hashCode());
     result = 31 * result + (this.iRowReturned == null ? 0: this.iRowReturned.hashCode());
     result = 31 * result + (this.iRowFiltered == null ? 0: this.iRowFiltered.hashCode());
+    result = 31 * result + (this.aObjUser == null ? 0: this.aObjUser.hashCode());
     return result;
   }
 
@@ -91,9 +91,9 @@ public class UserGetListV1ResponseMPayload {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserGetListV1ResponseMPayload {\n");
     
-    sb.append("  aObjUser: ").append(aObjUser).append("\n");
     sb.append("  iRowReturned: ").append(iRowReturned).append("\n");
     sb.append("  iRowFiltered: ").append(iRowFiltered).append("\n");
+    sb.append("  aObjUser: ").append(aObjUser).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

@@ -24,26 +24,16 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Response for GET /2/object/taxassignment/getAutocomplete")
 public class TaxassignmentGetAutocompleteV2Response {
   
-  @SerializedName("mPayload")
-  private TaxassignmentGetAutocompleteV2ResponseMPayload mPayload = null;
   @SerializedName("objDebugPayload")
   private CommonResponseObjDebugPayload objDebugPayload = null;
   @SerializedName("objDebug")
   private CommonResponseObjDebug objDebug = null;
+  @SerializedName("mPayload")
+  private TaxassignmentGetAutocompleteV2ResponseMPayload mPayload = null;
 
   /**
    **/
   @ApiModelProperty(required = true, value = "")
-  public TaxassignmentGetAutocompleteV2ResponseMPayload getMPayload() {
-    return mPayload;
-  }
-  public void setMPayload(TaxassignmentGetAutocompleteV2ResponseMPayload mPayload) {
-    this.mPayload = mPayload;
-  }
-
-  /**
-   **/
-  @ApiModelProperty(value = "")
   public CommonResponseObjDebugPayload getObjDebugPayload() {
     return objDebugPayload;
   }
@@ -61,6 +51,16 @@ public class TaxassignmentGetAutocompleteV2Response {
     this.objDebug = objDebug;
   }
 
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public TaxassignmentGetAutocompleteV2ResponseMPayload getMPayload() {
+    return mPayload;
+  }
+  public void setMPayload(TaxassignmentGetAutocompleteV2ResponseMPayload mPayload) {
+    this.mPayload = mPayload;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -71,17 +71,17 @@ public class TaxassignmentGetAutocompleteV2Response {
       return false;
     }
     TaxassignmentGetAutocompleteV2Response taxassignmentGetAutocompleteV2Response = (TaxassignmentGetAutocompleteV2Response) o;
-    return (this.mPayload == null ? taxassignmentGetAutocompleteV2Response.mPayload == null : this.mPayload.equals(taxassignmentGetAutocompleteV2Response.mPayload)) &&
-        (this.objDebugPayload == null ? taxassignmentGetAutocompleteV2Response.objDebugPayload == null : this.objDebugPayload.equals(taxassignmentGetAutocompleteV2Response.objDebugPayload)) &&
-        (this.objDebug == null ? taxassignmentGetAutocompleteV2Response.objDebug == null : this.objDebug.equals(taxassignmentGetAutocompleteV2Response.objDebug));
+    return (this.objDebugPayload == null ? taxassignmentGetAutocompleteV2Response.objDebugPayload == null : this.objDebugPayload.equals(taxassignmentGetAutocompleteV2Response.objDebugPayload)) &&
+        (this.objDebug == null ? taxassignmentGetAutocompleteV2Response.objDebug == null : this.objDebug.equals(taxassignmentGetAutocompleteV2Response.objDebug)) &&
+        (this.mPayload == null ? taxassignmentGetAutocompleteV2Response.mPayload == null : this.mPayload.equals(taxassignmentGetAutocompleteV2Response.mPayload));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.mPayload == null ? 0: this.mPayload.hashCode());
     result = 31 * result + (this.objDebugPayload == null ? 0: this.objDebugPayload.hashCode());
     result = 31 * result + (this.objDebug == null ? 0: this.objDebug.hashCode());
+    result = 31 * result + (this.mPayload == null ? 0: this.mPayload.hashCode());
     return result;
   }
 
@@ -90,9 +90,9 @@ public class TaxassignmentGetAutocompleteV2Response {
     StringBuilder sb = new StringBuilder();
     sb.append("class TaxassignmentGetAutocompleteV2Response {\n");
     
-    sb.append("  mPayload: ").append(mPayload).append("\n");
     sb.append("  objDebugPayload: ").append(objDebugPayload).append("\n");
     sb.append("  objDebug: ").append(objDebug).append("\n");
+    sb.append("  mPayload: ").append(mPayload).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

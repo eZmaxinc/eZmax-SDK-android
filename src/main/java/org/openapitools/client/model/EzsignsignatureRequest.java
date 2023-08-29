@@ -62,6 +62,8 @@ public class EzsignsignatureRequest {
   private String sEzsignsignatureAttachmentdescription = null;
   @SerializedName("iEzsignsignatureValidationstep")
   private Integer iEzsignsignatureValidationstep = null;
+  @SerializedName("iEzsignsignatureMaxlength")
+  private Integer iEzsignsignatureMaxlength = null;
   @SerializedName("eEzsignsignatureTextvalidation")
   private EnumTextvalidation eEzsignsignatureTextvalidation = null;
   @SerializedName("sEzsignsignatureRegexp")
@@ -271,6 +273,19 @@ public class EzsignsignatureRequest {
   }
 
   /**
+   * The maximum length for the value in the Ezsignsignature  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea**
+   * minimum: 0
+   * maximum: 65535
+   **/
+  @ApiModelProperty(value = "The maximum length for the value in the Ezsignsignature  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea**")
+  public Integer getIEzsignsignatureMaxlength() {
+    return iEzsignsignatureMaxlength;
+  }
+  public void setIEzsignsignatureMaxlength(Integer iEzsignsignatureMaxlength) {
+    this.iEzsignsignatureMaxlength = iEzsignsignatureMaxlength;
+  }
+
+  /**
    **/
   @ApiModelProperty(value = "")
   public EnumTextvalidation getEEzsignsignatureTextvalidation() {
@@ -319,6 +334,7 @@ public class EzsignsignatureRequest {
         (this.eEzsignsignatureAttachmentnamesource == null ? ezsignsignatureRequest.eEzsignsignatureAttachmentnamesource == null : this.eEzsignsignatureAttachmentnamesource.equals(ezsignsignatureRequest.eEzsignsignatureAttachmentnamesource)) &&
         (this.sEzsignsignatureAttachmentdescription == null ? ezsignsignatureRequest.sEzsignsignatureAttachmentdescription == null : this.sEzsignsignatureAttachmentdescription.equals(ezsignsignatureRequest.sEzsignsignatureAttachmentdescription)) &&
         (this.iEzsignsignatureValidationstep == null ? ezsignsignatureRequest.iEzsignsignatureValidationstep == null : this.iEzsignsignatureValidationstep.equals(ezsignsignatureRequest.iEzsignsignatureValidationstep)) &&
+        (this.iEzsignsignatureMaxlength == null ? ezsignsignatureRequest.iEzsignsignatureMaxlength == null : this.iEzsignsignatureMaxlength.equals(ezsignsignatureRequest.iEzsignsignatureMaxlength)) &&
         (this.eEzsignsignatureTextvalidation == null ? ezsignsignatureRequest.eEzsignsignatureTextvalidation == null : this.eEzsignsignatureTextvalidation.equals(ezsignsignatureRequest.eEzsignsignatureTextvalidation)) &&
         (this.sEzsignsignatureRegexp == null ? ezsignsignatureRequest.sEzsignsignatureRegexp == null : this.sEzsignsignatureRegexp.equals(ezsignsignatureRequest.sEzsignsignatureRegexp));
   }
@@ -344,6 +360,7 @@ public class EzsignsignatureRequest {
     result = 31 * result + (this.eEzsignsignatureAttachmentnamesource == null ? 0: this.eEzsignsignatureAttachmentnamesource.hashCode());
     result = 31 * result + (this.sEzsignsignatureAttachmentdescription == null ? 0: this.sEzsignsignatureAttachmentdescription.hashCode());
     result = 31 * result + (this.iEzsignsignatureValidationstep == null ? 0: this.iEzsignsignatureValidationstep.hashCode());
+    result = 31 * result + (this.iEzsignsignatureMaxlength == null ? 0: this.iEzsignsignatureMaxlength.hashCode());
     result = 31 * result + (this.eEzsignsignatureTextvalidation == null ? 0: this.eEzsignsignatureTextvalidation.hashCode());
     result = 31 * result + (this.sEzsignsignatureRegexp == null ? 0: this.sEzsignsignatureRegexp.hashCode());
     return result;
@@ -372,6 +389,7 @@ public class EzsignsignatureRequest {
     sb.append("  eEzsignsignatureAttachmentnamesource: ").append(eEzsignsignatureAttachmentnamesource).append("\n");
     sb.append("  sEzsignsignatureAttachmentdescription: ").append(sEzsignsignatureAttachmentdescription).append("\n");
     sb.append("  iEzsignsignatureValidationstep: ").append(iEzsignsignatureValidationstep).append("\n");
+    sb.append("  iEzsignsignatureMaxlength: ").append(iEzsignsignatureMaxlength).append("\n");
     sb.append("  eEzsignsignatureTextvalidation: ").append(eEzsignsignatureTextvalidation).append("\n");
     sb.append("  sEzsignsignatureRegexp: ").append(sEzsignsignatureRegexp).append("\n");
     sb.append("}\n");

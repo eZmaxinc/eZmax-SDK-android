@@ -24,26 +24,16 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Response for GET /1/object/activesession/getCurrent")
 public class ActivesessionGetCurrentV1Response {
   
-  @SerializedName("mPayload")
-  private ActivesessionGetCurrentV1ResponseMPayload mPayload = null;
   @SerializedName("objDebugPayload")
   private CommonResponseObjDebugPayload objDebugPayload = null;
   @SerializedName("objDebug")
   private CommonResponseObjDebug objDebug = null;
+  @SerializedName("mPayload")
+  private ActivesessionGetCurrentV1ResponseMPayload mPayload = null;
 
   /**
    **/
   @ApiModelProperty(required = true, value = "")
-  public ActivesessionGetCurrentV1ResponseMPayload getMPayload() {
-    return mPayload;
-  }
-  public void setMPayload(ActivesessionGetCurrentV1ResponseMPayload mPayload) {
-    this.mPayload = mPayload;
-  }
-
-  /**
-   **/
-  @ApiModelProperty(value = "")
   public CommonResponseObjDebugPayload getObjDebugPayload() {
     return objDebugPayload;
   }
@@ -61,6 +51,16 @@ public class ActivesessionGetCurrentV1Response {
     this.objDebug = objDebug;
   }
 
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public ActivesessionGetCurrentV1ResponseMPayload getMPayload() {
+    return mPayload;
+  }
+  public void setMPayload(ActivesessionGetCurrentV1ResponseMPayload mPayload) {
+    this.mPayload = mPayload;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -71,17 +71,17 @@ public class ActivesessionGetCurrentV1Response {
       return false;
     }
     ActivesessionGetCurrentV1Response activesessionGetCurrentV1Response = (ActivesessionGetCurrentV1Response) o;
-    return (this.mPayload == null ? activesessionGetCurrentV1Response.mPayload == null : this.mPayload.equals(activesessionGetCurrentV1Response.mPayload)) &&
-        (this.objDebugPayload == null ? activesessionGetCurrentV1Response.objDebugPayload == null : this.objDebugPayload.equals(activesessionGetCurrentV1Response.objDebugPayload)) &&
-        (this.objDebug == null ? activesessionGetCurrentV1Response.objDebug == null : this.objDebug.equals(activesessionGetCurrentV1Response.objDebug));
+    return (this.objDebugPayload == null ? activesessionGetCurrentV1Response.objDebugPayload == null : this.objDebugPayload.equals(activesessionGetCurrentV1Response.objDebugPayload)) &&
+        (this.objDebug == null ? activesessionGetCurrentV1Response.objDebug == null : this.objDebug.equals(activesessionGetCurrentV1Response.objDebug)) &&
+        (this.mPayload == null ? activesessionGetCurrentV1Response.mPayload == null : this.mPayload.equals(activesessionGetCurrentV1Response.mPayload));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.mPayload == null ? 0: this.mPayload.hashCode());
     result = 31 * result + (this.objDebugPayload == null ? 0: this.objDebugPayload.hashCode());
     result = 31 * result + (this.objDebug == null ? 0: this.objDebug.hashCode());
+    result = 31 * result + (this.mPayload == null ? 0: this.mPayload.hashCode());
     return result;
   }
 
@@ -90,9 +90,9 @@ public class ActivesessionGetCurrentV1Response {
     StringBuilder sb = new StringBuilder();
     sb.append("class ActivesessionGetCurrentV1Response {\n");
     
-    sb.append("  mPayload: ").append(mPayload).append("\n");
     sb.append("  objDebugPayload: ").append(objDebugPayload).append("\n");
     sb.append("  objDebug: ").append(objDebug).append("\n");
+    sb.append("  mPayload: ").append(mPayload).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

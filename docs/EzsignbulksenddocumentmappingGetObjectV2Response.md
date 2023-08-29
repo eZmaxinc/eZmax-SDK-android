@@ -6,9 +6,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**EzsignbulksenddocumentmappingGetObjectV2ResponseMPayload**](EzsignbulksenddocumentmappingGetObjectV2ResponseMPayload.md) |  | 
-**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  [optional]
+**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | 
 **objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
+**mPayload** | [**EzsignbulksenddocumentmappingGetObjectV2ResponseMPayload**](EzsignbulksenddocumentmappingGetObjectV2ResponseMPayload.md) |  | 
 
 
 

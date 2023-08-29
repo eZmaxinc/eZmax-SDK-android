@@ -24,26 +24,16 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Response for POST /1/object/ezsigntemplatepackagemembership")
 public class EzsigntemplatepackagemembershipCreateObjectV1Response {
   
-  @SerializedName("mPayload")
-  private EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload mPayload = null;
   @SerializedName("objDebugPayload")
   private CommonResponseObjDebugPayload objDebugPayload = null;
   @SerializedName("objDebug")
   private CommonResponseObjDebug objDebug = null;
+  @SerializedName("mPayload")
+  private EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload mPayload = null;
 
   /**
    **/
   @ApiModelProperty(required = true, value = "")
-  public EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload getMPayload() {
-    return mPayload;
-  }
-  public void setMPayload(EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload mPayload) {
-    this.mPayload = mPayload;
-  }
-
-  /**
-   **/
-  @ApiModelProperty(value = "")
   public CommonResponseObjDebugPayload getObjDebugPayload() {
     return objDebugPayload;
   }
@@ -61,6 +51,16 @@ public class EzsigntemplatepackagemembershipCreateObjectV1Response {
     this.objDebug = objDebug;
   }
 
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload getMPayload() {
+    return mPayload;
+  }
+  public void setMPayload(EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload mPayload) {
+    this.mPayload = mPayload;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -71,17 +71,17 @@ public class EzsigntemplatepackagemembershipCreateObjectV1Response {
       return false;
     }
     EzsigntemplatepackagemembershipCreateObjectV1Response ezsigntemplatepackagemembershipCreateObjectV1Response = (EzsigntemplatepackagemembershipCreateObjectV1Response) o;
-    return (this.mPayload == null ? ezsigntemplatepackagemembershipCreateObjectV1Response.mPayload == null : this.mPayload.equals(ezsigntemplatepackagemembershipCreateObjectV1Response.mPayload)) &&
-        (this.objDebugPayload == null ? ezsigntemplatepackagemembershipCreateObjectV1Response.objDebugPayload == null : this.objDebugPayload.equals(ezsigntemplatepackagemembershipCreateObjectV1Response.objDebugPayload)) &&
-        (this.objDebug == null ? ezsigntemplatepackagemembershipCreateObjectV1Response.objDebug == null : this.objDebug.equals(ezsigntemplatepackagemembershipCreateObjectV1Response.objDebug));
+    return (this.objDebugPayload == null ? ezsigntemplatepackagemembershipCreateObjectV1Response.objDebugPayload == null : this.objDebugPayload.equals(ezsigntemplatepackagemembershipCreateObjectV1Response.objDebugPayload)) &&
+        (this.objDebug == null ? ezsigntemplatepackagemembershipCreateObjectV1Response.objDebug == null : this.objDebug.equals(ezsigntemplatepackagemembershipCreateObjectV1Response.objDebug)) &&
+        (this.mPayload == null ? ezsigntemplatepackagemembershipCreateObjectV1Response.mPayload == null : this.mPayload.equals(ezsigntemplatepackagemembershipCreateObjectV1Response.mPayload));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.mPayload == null ? 0: this.mPayload.hashCode());
     result = 31 * result + (this.objDebugPayload == null ? 0: this.objDebugPayload.hashCode());
     result = 31 * result + (this.objDebug == null ? 0: this.objDebug.hashCode());
+    result = 31 * result + (this.mPayload == null ? 0: this.mPayload.hashCode());
     return result;
   }
 
@@ -90,9 +90,9 @@ public class EzsigntemplatepackagemembershipCreateObjectV1Response {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsigntemplatepackagemembershipCreateObjectV1Response {\n");
     
-    sb.append("  mPayload: ").append(mPayload).append("\n");
     sb.append("  objDebugPayload: ").append(objDebugPayload).append("\n");
     sb.append("  objDebug: ").append(objDebug).append("\n");
+    sb.append("  mPayload: ").append(mPayload).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

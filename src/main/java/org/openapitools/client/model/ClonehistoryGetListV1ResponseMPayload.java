@@ -23,22 +23,12 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Payload for GET /1/object/clonehistory/getList")
 public class ClonehistoryGetListV1ResponseMPayload {
   
-  @SerializedName("a_objClonehistory")
-  private List<ClonehistoryListElement> aObjClonehistory = null;
   @SerializedName("iRowReturned")
   private Integer iRowReturned = null;
   @SerializedName("iRowFiltered")
   private Integer iRowFiltered = null;
-
-  /**
-   **/
-  @ApiModelProperty(required = true, value = "")
-  public List<ClonehistoryListElement> getAObjClonehistory() {
-    return aObjClonehistory;
-  }
-  public void setAObjClonehistory(List<ClonehistoryListElement> aObjClonehistory) {
-    this.aObjClonehistory = aObjClonehistory;
-  }
+  @SerializedName("a_objClonehistory")
+  private List<ClonehistoryListElement> aObjClonehistory = null;
 
   /**
    * The number of rows returned
@@ -62,6 +52,16 @@ public class ClonehistoryGetListV1ResponseMPayload {
     this.iRowFiltered = iRowFiltered;
   }
 
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public List<ClonehistoryListElement> getAObjClonehistory() {
+    return aObjClonehistory;
+  }
+  public void setAObjClonehistory(List<ClonehistoryListElement> aObjClonehistory) {
+    this.aObjClonehistory = aObjClonehistory;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -72,17 +72,17 @@ public class ClonehistoryGetListV1ResponseMPayload {
       return false;
     }
     ClonehistoryGetListV1ResponseMPayload clonehistoryGetListV1ResponseMPayload = (ClonehistoryGetListV1ResponseMPayload) o;
-    return (this.aObjClonehistory == null ? clonehistoryGetListV1ResponseMPayload.aObjClonehistory == null : this.aObjClonehistory.equals(clonehistoryGetListV1ResponseMPayload.aObjClonehistory)) &&
-        (this.iRowReturned == null ? clonehistoryGetListV1ResponseMPayload.iRowReturned == null : this.iRowReturned.equals(clonehistoryGetListV1ResponseMPayload.iRowReturned)) &&
-        (this.iRowFiltered == null ? clonehistoryGetListV1ResponseMPayload.iRowFiltered == null : this.iRowFiltered.equals(clonehistoryGetListV1ResponseMPayload.iRowFiltered));
+    return (this.iRowReturned == null ? clonehistoryGetListV1ResponseMPayload.iRowReturned == null : this.iRowReturned.equals(clonehistoryGetListV1ResponseMPayload.iRowReturned)) &&
+        (this.iRowFiltered == null ? clonehistoryGetListV1ResponseMPayload.iRowFiltered == null : this.iRowFiltered.equals(clonehistoryGetListV1ResponseMPayload.iRowFiltered)) &&
+        (this.aObjClonehistory == null ? clonehistoryGetListV1ResponseMPayload.aObjClonehistory == null : this.aObjClonehistory.equals(clonehistoryGetListV1ResponseMPayload.aObjClonehistory));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.aObjClonehistory == null ? 0: this.aObjClonehistory.hashCode());
     result = 31 * result + (this.iRowReturned == null ? 0: this.iRowReturned.hashCode());
     result = 31 * result + (this.iRowFiltered == null ? 0: this.iRowFiltered.hashCode());
+    result = 31 * result + (this.aObjClonehistory == null ? 0: this.aObjClonehistory.hashCode());
     return result;
   }
 
@@ -91,9 +91,9 @@ public class ClonehistoryGetListV1ResponseMPayload {
     StringBuilder sb = new StringBuilder();
     sb.append("class ClonehistoryGetListV1ResponseMPayload {\n");
     
-    sb.append("  aObjClonehistory: ").append(aObjClonehistory).append("\n");
     sb.append("  iRowReturned: ").append(iRowReturned).append("\n");
     sb.append("  iRowFiltered: ").append(iRowFiltered).append("\n");
+    sb.append("  aObjClonehistory: ").append(aObjClonehistory).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

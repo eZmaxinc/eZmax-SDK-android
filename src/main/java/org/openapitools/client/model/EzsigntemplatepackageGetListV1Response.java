@@ -24,26 +24,16 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Response for GET /1/object/ezsigntemplatepackage/getList")
 public class EzsigntemplatepackageGetListV1Response {
   
-  @SerializedName("mPayload")
-  private EzsigntemplatepackageGetListV1ResponseMPayload mPayload = null;
   @SerializedName("objDebugPayload")
   private CommonResponseObjDebugPayloadGetList objDebugPayload = null;
   @SerializedName("objDebug")
   private CommonResponseObjDebug objDebug = null;
+  @SerializedName("mPayload")
+  private EzsigntemplatepackageGetListV1ResponseMPayload mPayload = null;
 
   /**
    **/
   @ApiModelProperty(required = true, value = "")
-  public EzsigntemplatepackageGetListV1ResponseMPayload getMPayload() {
-    return mPayload;
-  }
-  public void setMPayload(EzsigntemplatepackageGetListV1ResponseMPayload mPayload) {
-    this.mPayload = mPayload;
-  }
-
-  /**
-   **/
-  @ApiModelProperty(value = "")
   public CommonResponseObjDebugPayloadGetList getObjDebugPayload() {
     return objDebugPayload;
   }
@@ -61,6 +51,16 @@ public class EzsigntemplatepackageGetListV1Response {
     this.objDebug = objDebug;
   }
 
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public EzsigntemplatepackageGetListV1ResponseMPayload getMPayload() {
+    return mPayload;
+  }
+  public void setMPayload(EzsigntemplatepackageGetListV1ResponseMPayload mPayload) {
+    this.mPayload = mPayload;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -71,17 +71,17 @@ public class EzsigntemplatepackageGetListV1Response {
       return false;
     }
     EzsigntemplatepackageGetListV1Response ezsigntemplatepackageGetListV1Response = (EzsigntemplatepackageGetListV1Response) o;
-    return (this.mPayload == null ? ezsigntemplatepackageGetListV1Response.mPayload == null : this.mPayload.equals(ezsigntemplatepackageGetListV1Response.mPayload)) &&
-        (this.objDebugPayload == null ? ezsigntemplatepackageGetListV1Response.objDebugPayload == null : this.objDebugPayload.equals(ezsigntemplatepackageGetListV1Response.objDebugPayload)) &&
-        (this.objDebug == null ? ezsigntemplatepackageGetListV1Response.objDebug == null : this.objDebug.equals(ezsigntemplatepackageGetListV1Response.objDebug));
+    return (this.objDebugPayload == null ? ezsigntemplatepackageGetListV1Response.objDebugPayload == null : this.objDebugPayload.equals(ezsigntemplatepackageGetListV1Response.objDebugPayload)) &&
+        (this.objDebug == null ? ezsigntemplatepackageGetListV1Response.objDebug == null : this.objDebug.equals(ezsigntemplatepackageGetListV1Response.objDebug)) &&
+        (this.mPayload == null ? ezsigntemplatepackageGetListV1Response.mPayload == null : this.mPayload.equals(ezsigntemplatepackageGetListV1Response.mPayload));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.mPayload == null ? 0: this.mPayload.hashCode());
     result = 31 * result + (this.objDebugPayload == null ? 0: this.objDebugPayload.hashCode());
     result = 31 * result + (this.objDebug == null ? 0: this.objDebug.hashCode());
+    result = 31 * result + (this.mPayload == null ? 0: this.mPayload.hashCode());
     return result;
   }
 
@@ -90,9 +90,9 @@ public class EzsigntemplatepackageGetListV1Response {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsigntemplatepackageGetListV1Response {\n");
     
-    sb.append("  mPayload: ").append(mPayload).append("\n");
     sb.append("  objDebugPayload: ").append(objDebugPayload).append("\n");
     sb.append("  objDebug: ").append(objDebug).append("\n");
+    sb.append("  mPayload: ").append(mPayload).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

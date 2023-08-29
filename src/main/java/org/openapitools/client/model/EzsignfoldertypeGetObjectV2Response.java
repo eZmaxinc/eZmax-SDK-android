@@ -24,26 +24,16 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Response for GET /2/object/ezsignfoldertype/{pkiEzsignfoldertypeID}")
 public class EzsignfoldertypeGetObjectV2Response {
   
-  @SerializedName("mPayload")
-  private EzsignfoldertypeGetObjectV2ResponseMPayload mPayload = null;
   @SerializedName("objDebugPayload")
   private CommonResponseObjDebugPayload objDebugPayload = null;
   @SerializedName("objDebug")
   private CommonResponseObjDebug objDebug = null;
+  @SerializedName("mPayload")
+  private EzsignfoldertypeGetObjectV2ResponseMPayload mPayload = null;
 
   /**
    **/
   @ApiModelProperty(required = true, value = "")
-  public EzsignfoldertypeGetObjectV2ResponseMPayload getMPayload() {
-    return mPayload;
-  }
-  public void setMPayload(EzsignfoldertypeGetObjectV2ResponseMPayload mPayload) {
-    this.mPayload = mPayload;
-  }
-
-  /**
-   **/
-  @ApiModelProperty(value = "")
   public CommonResponseObjDebugPayload getObjDebugPayload() {
     return objDebugPayload;
   }
@@ -61,6 +51,16 @@ public class EzsignfoldertypeGetObjectV2Response {
     this.objDebug = objDebug;
   }
 
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public EzsignfoldertypeGetObjectV2ResponseMPayload getMPayload() {
+    return mPayload;
+  }
+  public void setMPayload(EzsignfoldertypeGetObjectV2ResponseMPayload mPayload) {
+    this.mPayload = mPayload;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -71,17 +71,17 @@ public class EzsignfoldertypeGetObjectV2Response {
       return false;
     }
     EzsignfoldertypeGetObjectV2Response ezsignfoldertypeGetObjectV2Response = (EzsignfoldertypeGetObjectV2Response) o;
-    return (this.mPayload == null ? ezsignfoldertypeGetObjectV2Response.mPayload == null : this.mPayload.equals(ezsignfoldertypeGetObjectV2Response.mPayload)) &&
-        (this.objDebugPayload == null ? ezsignfoldertypeGetObjectV2Response.objDebugPayload == null : this.objDebugPayload.equals(ezsignfoldertypeGetObjectV2Response.objDebugPayload)) &&
-        (this.objDebug == null ? ezsignfoldertypeGetObjectV2Response.objDebug == null : this.objDebug.equals(ezsignfoldertypeGetObjectV2Response.objDebug));
+    return (this.objDebugPayload == null ? ezsignfoldertypeGetObjectV2Response.objDebugPayload == null : this.objDebugPayload.equals(ezsignfoldertypeGetObjectV2Response.objDebugPayload)) &&
+        (this.objDebug == null ? ezsignfoldertypeGetObjectV2Response.objDebug == null : this.objDebug.equals(ezsignfoldertypeGetObjectV2Response.objDebug)) &&
+        (this.mPayload == null ? ezsignfoldertypeGetObjectV2Response.mPayload == null : this.mPayload.equals(ezsignfoldertypeGetObjectV2Response.mPayload));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.mPayload == null ? 0: this.mPayload.hashCode());
     result = 31 * result + (this.objDebugPayload == null ? 0: this.objDebugPayload.hashCode());
     result = 31 * result + (this.objDebug == null ? 0: this.objDebug.hashCode());
+    result = 31 * result + (this.mPayload == null ? 0: this.mPayload.hashCode());
     return result;
   }
 
@@ -90,9 +90,9 @@ public class EzsignfoldertypeGetObjectV2Response {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignfoldertypeGetObjectV2Response {\n");
     
-    sb.append("  mPayload: ").append(mPayload).append("\n");
     sb.append("  objDebugPayload: ").append(objDebugPayload).append("\n");
     sb.append("  objDebug: ").append(objDebug).append("\n");
+    sb.append("  mPayload: ").append(mPayload).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

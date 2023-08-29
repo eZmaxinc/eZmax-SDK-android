@@ -24,26 +24,16 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Response for GET /1/object/notificationtest/{pkiNotificationtestID}/getElements")
 public class NotificationtestGetElementsV1Response {
   
-  @SerializedName("mPayload")
-  private NotificationtestGetElementsV1ResponseMPayload mPayload = null;
   @SerializedName("objDebugPayload")
   private CommonResponseObjDebugPayload objDebugPayload = null;
   @SerializedName("objDebug")
   private CommonResponseObjDebug objDebug = null;
+  @SerializedName("mPayload")
+  private NotificationtestGetElementsV1ResponseMPayload mPayload = null;
 
   /**
    **/
   @ApiModelProperty(required = true, value = "")
-  public NotificationtestGetElementsV1ResponseMPayload getMPayload() {
-    return mPayload;
-  }
-  public void setMPayload(NotificationtestGetElementsV1ResponseMPayload mPayload) {
-    this.mPayload = mPayload;
-  }
-
-  /**
-   **/
-  @ApiModelProperty(value = "")
   public CommonResponseObjDebugPayload getObjDebugPayload() {
     return objDebugPayload;
   }
@@ -61,6 +51,16 @@ public class NotificationtestGetElementsV1Response {
     this.objDebug = objDebug;
   }
 
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public NotificationtestGetElementsV1ResponseMPayload getMPayload() {
+    return mPayload;
+  }
+  public void setMPayload(NotificationtestGetElementsV1ResponseMPayload mPayload) {
+    this.mPayload = mPayload;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -71,17 +71,17 @@ public class NotificationtestGetElementsV1Response {
       return false;
     }
     NotificationtestGetElementsV1Response notificationtestGetElementsV1Response = (NotificationtestGetElementsV1Response) o;
-    return (this.mPayload == null ? notificationtestGetElementsV1Response.mPayload == null : this.mPayload.equals(notificationtestGetElementsV1Response.mPayload)) &&
-        (this.objDebugPayload == null ? notificationtestGetElementsV1Response.objDebugPayload == null : this.objDebugPayload.equals(notificationtestGetElementsV1Response.objDebugPayload)) &&
-        (this.objDebug == null ? notificationtestGetElementsV1Response.objDebug == null : this.objDebug.equals(notificationtestGetElementsV1Response.objDebug));
+    return (this.objDebugPayload == null ? notificationtestGetElementsV1Response.objDebugPayload == null : this.objDebugPayload.equals(notificationtestGetElementsV1Response.objDebugPayload)) &&
+        (this.objDebug == null ? notificationtestGetElementsV1Response.objDebug == null : this.objDebug.equals(notificationtestGetElementsV1Response.objDebug)) &&
+        (this.mPayload == null ? notificationtestGetElementsV1Response.mPayload == null : this.mPayload.equals(notificationtestGetElementsV1Response.mPayload));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.mPayload == null ? 0: this.mPayload.hashCode());
     result = 31 * result + (this.objDebugPayload == null ? 0: this.objDebugPayload.hashCode());
     result = 31 * result + (this.objDebug == null ? 0: this.objDebug.hashCode());
+    result = 31 * result + (this.mPayload == null ? 0: this.mPayload.hashCode());
     return result;
   }
 
@@ -90,9 +90,9 @@ public class NotificationtestGetElementsV1Response {
     StringBuilder sb = new StringBuilder();
     sb.append("class NotificationtestGetElementsV1Response {\n");
     
-    sb.append("  mPayload: ").append(mPayload).append("\n");
     sb.append("  objDebugPayload: ").append(objDebugPayload).append("\n");
     sb.append("  objDebug: ").append(objDebug).append("\n");
+    sb.append("  mPayload: ").append(mPayload).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

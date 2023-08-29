@@ -64,6 +64,8 @@ public class EzsignsignatureRequestCompound {
   private String sEzsignsignatureAttachmentdescription = null;
   @SerializedName("iEzsignsignatureValidationstep")
   private Integer iEzsignsignatureValidationstep = null;
+  @SerializedName("iEzsignsignatureMaxlength")
+  private Integer iEzsignsignatureMaxlength = null;
   @SerializedName("eEzsignsignatureTextvalidation")
   private EnumTextvalidation eEzsignsignatureTextvalidation = null;
   @SerializedName("sEzsignsignatureRegexp")
@@ -277,6 +279,19 @@ public class EzsignsignatureRequestCompound {
   }
 
   /**
+   * The maximum length for the value in the Ezsignsignature  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea**
+   * minimum: 0
+   * maximum: 65535
+   **/
+  @ApiModelProperty(value = "The maximum length for the value in the Ezsignsignature  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea**")
+  public Integer getIEzsignsignatureMaxlength() {
+    return iEzsignsignatureMaxlength;
+  }
+  public void setIEzsignsignatureMaxlength(Integer iEzsignsignatureMaxlength) {
+    this.iEzsignsignatureMaxlength = iEzsignsignatureMaxlength;
+  }
+
+  /**
    **/
   @ApiModelProperty(value = "")
   public EnumTextvalidation getEEzsignsignatureTextvalidation() {
@@ -347,6 +362,7 @@ public class EzsignsignatureRequestCompound {
         (this.eEzsignsignatureAttachmentnamesource == null ? ezsignsignatureRequestCompound.eEzsignsignatureAttachmentnamesource == null : this.eEzsignsignatureAttachmentnamesource.equals(ezsignsignatureRequestCompound.eEzsignsignatureAttachmentnamesource)) &&
         (this.sEzsignsignatureAttachmentdescription == null ? ezsignsignatureRequestCompound.sEzsignsignatureAttachmentdescription == null : this.sEzsignsignatureAttachmentdescription.equals(ezsignsignatureRequestCompound.sEzsignsignatureAttachmentdescription)) &&
         (this.iEzsignsignatureValidationstep == null ? ezsignsignatureRequestCompound.iEzsignsignatureValidationstep == null : this.iEzsignsignatureValidationstep.equals(ezsignsignatureRequestCompound.iEzsignsignatureValidationstep)) &&
+        (this.iEzsignsignatureMaxlength == null ? ezsignsignatureRequestCompound.iEzsignsignatureMaxlength == null : this.iEzsignsignatureMaxlength.equals(ezsignsignatureRequestCompound.iEzsignsignatureMaxlength)) &&
         (this.eEzsignsignatureTextvalidation == null ? ezsignsignatureRequestCompound.eEzsignsignatureTextvalidation == null : this.eEzsignsignatureTextvalidation.equals(ezsignsignatureRequestCompound.eEzsignsignatureTextvalidation)) &&
         (this.sEzsignsignatureRegexp == null ? ezsignsignatureRequestCompound.sEzsignsignatureRegexp == null : this.sEzsignsignatureRegexp.equals(ezsignsignatureRequestCompound.sEzsignsignatureRegexp)) &&
         (this.bEzsignsignatureCustomdate == null ? ezsignsignatureRequestCompound.bEzsignsignatureCustomdate == null : this.bEzsignsignatureCustomdate.equals(ezsignsignatureRequestCompound.bEzsignsignatureCustomdate)) &&
@@ -374,6 +390,7 @@ public class EzsignsignatureRequestCompound {
     result = 31 * result + (this.eEzsignsignatureAttachmentnamesource == null ? 0: this.eEzsignsignatureAttachmentnamesource.hashCode());
     result = 31 * result + (this.sEzsignsignatureAttachmentdescription == null ? 0: this.sEzsignsignatureAttachmentdescription.hashCode());
     result = 31 * result + (this.iEzsignsignatureValidationstep == null ? 0: this.iEzsignsignatureValidationstep.hashCode());
+    result = 31 * result + (this.iEzsignsignatureMaxlength == null ? 0: this.iEzsignsignatureMaxlength.hashCode());
     result = 31 * result + (this.eEzsignsignatureTextvalidation == null ? 0: this.eEzsignsignatureTextvalidation.hashCode());
     result = 31 * result + (this.sEzsignsignatureRegexp == null ? 0: this.sEzsignsignatureRegexp.hashCode());
     result = 31 * result + (this.bEzsignsignatureCustomdate == null ? 0: this.bEzsignsignatureCustomdate.hashCode());
@@ -404,6 +421,7 @@ public class EzsignsignatureRequestCompound {
     sb.append("  eEzsignsignatureAttachmentnamesource: ").append(eEzsignsignatureAttachmentnamesource).append("\n");
     sb.append("  sEzsignsignatureAttachmentdescription: ").append(sEzsignsignatureAttachmentdescription).append("\n");
     sb.append("  iEzsignsignatureValidationstep: ").append(iEzsignsignatureValidationstep).append("\n");
+    sb.append("  iEzsignsignatureMaxlength: ").append(iEzsignsignatureMaxlength).append("\n");
     sb.append("  eEzsignsignatureTextvalidation: ").append(eEzsignsignatureTextvalidation).append("\n");
     sb.append("  sEzsignsignatureRegexp: ").append(sEzsignsignatureRegexp).append("\n");
     sb.append("  bEzsignsignatureCustomdate: ").append(bEzsignsignatureCustomdate).append("\n");

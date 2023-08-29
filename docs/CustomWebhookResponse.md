@@ -6,8 +6,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**pksCustomerCode** | **String** | The customer code assigned to your account | 
-**bWebhookTest** | **Boolean** | Wheter the webhook received is a manual test or a real event | 
 **pkiWebhookID** | **Integer** | The unique ID of the Webhook | 
 **sWebhookDescription** | **String** | The description of the Webhook | 
 **fkiEzsignfoldertypeID** | **Integer** | The unique ID of the Ezsignfoldertype. |  [optional]
@@ -19,6 +17,8 @@ Name | Type | Description | Notes
 **sWebhookEmailfailed** | **String** | The email that will receive the Webhook in case all attempts fail | 
 **bWebhookIsactive** | **Boolean** | Whether the Webhook is active or not |  [optional]
 **bWebhookSkipsslvalidation** | **Boolean** | Wheter the server&#39;s SSL certificate should be validated or not. Not recommended to skip for production use | 
+**pksCustomerCode** | **String** | The customer code assigned to your account | 
+**bWebhookTest** | **Boolean** | Wheter the webhook received is a manual test or a real event | 
 
 
 

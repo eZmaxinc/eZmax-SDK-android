@@ -23,22 +23,12 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Payload for GET /1/object/paymentterm/getList")
 public class PaymenttermGetListV1ResponseMPayload {
   
-  @SerializedName("a_objPaymentterm")
-  private List<PaymenttermListElement> aObjPaymentterm = null;
   @SerializedName("iRowReturned")
   private Integer iRowReturned = null;
   @SerializedName("iRowFiltered")
   private Integer iRowFiltered = null;
-
-  /**
-   **/
-  @ApiModelProperty(required = true, value = "")
-  public List<PaymenttermListElement> getAObjPaymentterm() {
-    return aObjPaymentterm;
-  }
-  public void setAObjPaymentterm(List<PaymenttermListElement> aObjPaymentterm) {
-    this.aObjPaymentterm = aObjPaymentterm;
-  }
+  @SerializedName("a_objPaymentterm")
+  private List<PaymenttermListElement> aObjPaymentterm = null;
 
   /**
    * The number of rows returned
@@ -62,6 +52,16 @@ public class PaymenttermGetListV1ResponseMPayload {
     this.iRowFiltered = iRowFiltered;
   }
 
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public List<PaymenttermListElement> getAObjPaymentterm() {
+    return aObjPaymentterm;
+  }
+  public void setAObjPaymentterm(List<PaymenttermListElement> aObjPaymentterm) {
+    this.aObjPaymentterm = aObjPaymentterm;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -72,17 +72,17 @@ public class PaymenttermGetListV1ResponseMPayload {
       return false;
     }
     PaymenttermGetListV1ResponseMPayload paymenttermGetListV1ResponseMPayload = (PaymenttermGetListV1ResponseMPayload) o;
-    return (this.aObjPaymentterm == null ? paymenttermGetListV1ResponseMPayload.aObjPaymentterm == null : this.aObjPaymentterm.equals(paymenttermGetListV1ResponseMPayload.aObjPaymentterm)) &&
-        (this.iRowReturned == null ? paymenttermGetListV1ResponseMPayload.iRowReturned == null : this.iRowReturned.equals(paymenttermGetListV1ResponseMPayload.iRowReturned)) &&
-        (this.iRowFiltered == null ? paymenttermGetListV1ResponseMPayload.iRowFiltered == null : this.iRowFiltered.equals(paymenttermGetListV1ResponseMPayload.iRowFiltered));
+    return (this.iRowReturned == null ? paymenttermGetListV1ResponseMPayload.iRowReturned == null : this.iRowReturned.equals(paymenttermGetListV1ResponseMPayload.iRowReturned)) &&
+        (this.iRowFiltered == null ? paymenttermGetListV1ResponseMPayload.iRowFiltered == null : this.iRowFiltered.equals(paymenttermGetListV1ResponseMPayload.iRowFiltered)) &&
+        (this.aObjPaymentterm == null ? paymenttermGetListV1ResponseMPayload.aObjPaymentterm == null : this.aObjPaymentterm.equals(paymenttermGetListV1ResponseMPayload.aObjPaymentterm));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.aObjPaymentterm == null ? 0: this.aObjPaymentterm.hashCode());
     result = 31 * result + (this.iRowReturned == null ? 0: this.iRowReturned.hashCode());
     result = 31 * result + (this.iRowFiltered == null ? 0: this.iRowFiltered.hashCode());
+    result = 31 * result + (this.aObjPaymentterm == null ? 0: this.aObjPaymentterm.hashCode());
     return result;
   }
 
@@ -91,9 +91,9 @@ public class PaymenttermGetListV1ResponseMPayload {
     StringBuilder sb = new StringBuilder();
     sb.append("class PaymenttermGetListV1ResponseMPayload {\n");
     
-    sb.append("  aObjPaymentterm: ").append(aObjPaymentterm).append("\n");
     sb.append("  iRowReturned: ").append(iRowReturned).append("\n");
     sb.append("  iRowFiltered: ").append(iRowFiltered).append("\n");
+    sb.append("  aObjPaymentterm: ").append(aObjPaymentterm).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

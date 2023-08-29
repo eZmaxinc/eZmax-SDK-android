@@ -23,22 +23,12 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Payload for GET /1/object/webhook/getList")
 public class WebhookGetListV1ResponseMPayload {
   
-  @SerializedName("a_objWebhook")
-  private List<WebhookListElement> aObjWebhook = null;
   @SerializedName("iRowReturned")
   private Integer iRowReturned = null;
   @SerializedName("iRowFiltered")
   private Integer iRowFiltered = null;
-
-  /**
-   **/
-  @ApiModelProperty(required = true, value = "")
-  public List<WebhookListElement> getAObjWebhook() {
-    return aObjWebhook;
-  }
-  public void setAObjWebhook(List<WebhookListElement> aObjWebhook) {
-    this.aObjWebhook = aObjWebhook;
-  }
+  @SerializedName("a_objWebhook")
+  private List<WebhookListElement> aObjWebhook = null;
 
   /**
    * The number of rows returned
@@ -62,6 +52,16 @@ public class WebhookGetListV1ResponseMPayload {
     this.iRowFiltered = iRowFiltered;
   }
 
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public List<WebhookListElement> getAObjWebhook() {
+    return aObjWebhook;
+  }
+  public void setAObjWebhook(List<WebhookListElement> aObjWebhook) {
+    this.aObjWebhook = aObjWebhook;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -72,17 +72,17 @@ public class WebhookGetListV1ResponseMPayload {
       return false;
     }
     WebhookGetListV1ResponseMPayload webhookGetListV1ResponseMPayload = (WebhookGetListV1ResponseMPayload) o;
-    return (this.aObjWebhook == null ? webhookGetListV1ResponseMPayload.aObjWebhook == null : this.aObjWebhook.equals(webhookGetListV1ResponseMPayload.aObjWebhook)) &&
-        (this.iRowReturned == null ? webhookGetListV1ResponseMPayload.iRowReturned == null : this.iRowReturned.equals(webhookGetListV1ResponseMPayload.iRowReturned)) &&
-        (this.iRowFiltered == null ? webhookGetListV1ResponseMPayload.iRowFiltered == null : this.iRowFiltered.equals(webhookGetListV1ResponseMPayload.iRowFiltered));
+    return (this.iRowReturned == null ? webhookGetListV1ResponseMPayload.iRowReturned == null : this.iRowReturned.equals(webhookGetListV1ResponseMPayload.iRowReturned)) &&
+        (this.iRowFiltered == null ? webhookGetListV1ResponseMPayload.iRowFiltered == null : this.iRowFiltered.equals(webhookGetListV1ResponseMPayload.iRowFiltered)) &&
+        (this.aObjWebhook == null ? webhookGetListV1ResponseMPayload.aObjWebhook == null : this.aObjWebhook.equals(webhookGetListV1ResponseMPayload.aObjWebhook));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.aObjWebhook == null ? 0: this.aObjWebhook.hashCode());
     result = 31 * result + (this.iRowReturned == null ? 0: this.iRowReturned.hashCode());
     result = 31 * result + (this.iRowFiltered == null ? 0: this.iRowFiltered.hashCode());
+    result = 31 * result + (this.aObjWebhook == null ? 0: this.aObjWebhook.hashCode());
     return result;
   }
 
@@ -91,9 +91,9 @@ public class WebhookGetListV1ResponseMPayload {
     StringBuilder sb = new StringBuilder();
     sb.append("class WebhookGetListV1ResponseMPayload {\n");
     
-    sb.append("  aObjWebhook: ").append(aObjWebhook).append("\n");
     sb.append("  iRowReturned: ").append(iRowReturned).append("\n");
     sb.append("  iRowFiltered: ").append(iRowFiltered).append("\n");
+    sb.append("  aObjWebhook: ").append(aObjWebhook).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

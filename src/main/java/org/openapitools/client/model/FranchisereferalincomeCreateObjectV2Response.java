@@ -24,26 +24,16 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Response for POST /2/object/franchisereferalincome")
 public class FranchisereferalincomeCreateObjectV2Response {
   
-  @SerializedName("mPayload")
-  private FranchisereferalincomeCreateObjectV2ResponseMPayload mPayload = null;
   @SerializedName("objDebugPayload")
   private CommonResponseObjDebugPayload objDebugPayload = null;
   @SerializedName("objDebug")
   private CommonResponseObjDebug objDebug = null;
+  @SerializedName("mPayload")
+  private FranchisereferalincomeCreateObjectV2ResponseMPayload mPayload = null;
 
   /**
    **/
   @ApiModelProperty(required = true, value = "")
-  public FranchisereferalincomeCreateObjectV2ResponseMPayload getMPayload() {
-    return mPayload;
-  }
-  public void setMPayload(FranchisereferalincomeCreateObjectV2ResponseMPayload mPayload) {
-    this.mPayload = mPayload;
-  }
-
-  /**
-   **/
-  @ApiModelProperty(value = "")
   public CommonResponseObjDebugPayload getObjDebugPayload() {
     return objDebugPayload;
   }
@@ -61,6 +51,16 @@ public class FranchisereferalincomeCreateObjectV2Response {
     this.objDebug = objDebug;
   }
 
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public FranchisereferalincomeCreateObjectV2ResponseMPayload getMPayload() {
+    return mPayload;
+  }
+  public void setMPayload(FranchisereferalincomeCreateObjectV2ResponseMPayload mPayload) {
+    this.mPayload = mPayload;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -71,17 +71,17 @@ public class FranchisereferalincomeCreateObjectV2Response {
       return false;
     }
     FranchisereferalincomeCreateObjectV2Response franchisereferalincomeCreateObjectV2Response = (FranchisereferalincomeCreateObjectV2Response) o;
-    return (this.mPayload == null ? franchisereferalincomeCreateObjectV2Response.mPayload == null : this.mPayload.equals(franchisereferalincomeCreateObjectV2Response.mPayload)) &&
-        (this.objDebugPayload == null ? franchisereferalincomeCreateObjectV2Response.objDebugPayload == null : this.objDebugPayload.equals(franchisereferalincomeCreateObjectV2Response.objDebugPayload)) &&
-        (this.objDebug == null ? franchisereferalincomeCreateObjectV2Response.objDebug == null : this.objDebug.equals(franchisereferalincomeCreateObjectV2Response.objDebug));
+    return (this.objDebugPayload == null ? franchisereferalincomeCreateObjectV2Response.objDebugPayload == null : this.objDebugPayload.equals(franchisereferalincomeCreateObjectV2Response.objDebugPayload)) &&
+        (this.objDebug == null ? franchisereferalincomeCreateObjectV2Response.objDebug == null : this.objDebug.equals(franchisereferalincomeCreateObjectV2Response.objDebug)) &&
+        (this.mPayload == null ? franchisereferalincomeCreateObjectV2Response.mPayload == null : this.mPayload.equals(franchisereferalincomeCreateObjectV2Response.mPayload));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.mPayload == null ? 0: this.mPayload.hashCode());
     result = 31 * result + (this.objDebugPayload == null ? 0: this.objDebugPayload.hashCode());
     result = 31 * result + (this.objDebug == null ? 0: this.objDebug.hashCode());
+    result = 31 * result + (this.mPayload == null ? 0: this.mPayload.hashCode());
     return result;
   }
 
@@ -90,9 +90,9 @@ public class FranchisereferalincomeCreateObjectV2Response {
     StringBuilder sb = new StringBuilder();
     sb.append("class FranchisereferalincomeCreateObjectV2Response {\n");
     
-    sb.append("  mPayload: ").append(mPayload).append("\n");
     sb.append("  objDebugPayload: ").append(objDebugPayload).append("\n");
     sb.append("  objDebug: ").append(objDebug).append("\n");
+    sb.append("  mPayload: ").append(mPayload).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

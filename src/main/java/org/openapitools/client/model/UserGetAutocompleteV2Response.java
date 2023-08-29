@@ -24,26 +24,16 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Response for GET /2/object/user/getAutocomplete")
 public class UserGetAutocompleteV2Response {
   
-  @SerializedName("mPayload")
-  private UserGetAutocompleteV2ResponseMPayload mPayload = null;
   @SerializedName("objDebugPayload")
   private CommonResponseObjDebugPayload objDebugPayload = null;
   @SerializedName("objDebug")
   private CommonResponseObjDebug objDebug = null;
+  @SerializedName("mPayload")
+  private UserGetAutocompleteV2ResponseMPayload mPayload = null;
 
   /**
    **/
   @ApiModelProperty(required = true, value = "")
-  public UserGetAutocompleteV2ResponseMPayload getMPayload() {
-    return mPayload;
-  }
-  public void setMPayload(UserGetAutocompleteV2ResponseMPayload mPayload) {
-    this.mPayload = mPayload;
-  }
-
-  /**
-   **/
-  @ApiModelProperty(value = "")
   public CommonResponseObjDebugPayload getObjDebugPayload() {
     return objDebugPayload;
   }
@@ -61,6 +51,16 @@ public class UserGetAutocompleteV2Response {
     this.objDebug = objDebug;
   }
 
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public UserGetAutocompleteV2ResponseMPayload getMPayload() {
+    return mPayload;
+  }
+  public void setMPayload(UserGetAutocompleteV2ResponseMPayload mPayload) {
+    this.mPayload = mPayload;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -71,17 +71,17 @@ public class UserGetAutocompleteV2Response {
       return false;
     }
     UserGetAutocompleteV2Response userGetAutocompleteV2Response = (UserGetAutocompleteV2Response) o;
-    return (this.mPayload == null ? userGetAutocompleteV2Response.mPayload == null : this.mPayload.equals(userGetAutocompleteV2Response.mPayload)) &&
-        (this.objDebugPayload == null ? userGetAutocompleteV2Response.objDebugPayload == null : this.objDebugPayload.equals(userGetAutocompleteV2Response.objDebugPayload)) &&
-        (this.objDebug == null ? userGetAutocompleteV2Response.objDebug == null : this.objDebug.equals(userGetAutocompleteV2Response.objDebug));
+    return (this.objDebugPayload == null ? userGetAutocompleteV2Response.objDebugPayload == null : this.objDebugPayload.equals(userGetAutocompleteV2Response.objDebugPayload)) &&
+        (this.objDebug == null ? userGetAutocompleteV2Response.objDebug == null : this.objDebug.equals(userGetAutocompleteV2Response.objDebug)) &&
+        (this.mPayload == null ? userGetAutocompleteV2Response.mPayload == null : this.mPayload.equals(userGetAutocompleteV2Response.mPayload));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.mPayload == null ? 0: this.mPayload.hashCode());
     result = 31 * result + (this.objDebugPayload == null ? 0: this.objDebugPayload.hashCode());
     result = 31 * result + (this.objDebug == null ? 0: this.objDebug.hashCode());
+    result = 31 * result + (this.mPayload == null ? 0: this.mPayload.hashCode());
     return result;
   }
 
@@ -90,9 +90,9 @@ public class UserGetAutocompleteV2Response {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserGetAutocompleteV2Response {\n");
     
-    sb.append("  mPayload: ").append(mPayload).append("\n");
     sb.append("  objDebugPayload: ").append(objDebugPayload).append("\n");
     sb.append("  objDebug: ").append(objDebug).append("\n");
+    sb.append("  mPayload: ").append(mPayload).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

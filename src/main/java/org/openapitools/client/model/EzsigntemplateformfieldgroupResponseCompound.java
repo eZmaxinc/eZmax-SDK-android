@@ -14,6 +14,7 @@ package org.openapitools.client.model;
 
 import java.util.*;
 import org.openapitools.client.model.CustomDropdownElementResponseCompound;
+import org.openapitools.client.model.EnumTextvalidation;
 import org.openapitools.client.model.EzsigntemplateformfieldResponseCompound;
 import org.openapitools.client.model.EzsigntemplateformfieldgroupsignerResponseCompound;
 import org.openapitools.client.model.FieldEEzsigntemplateformfieldgroupSignerrequirement;
@@ -54,6 +55,8 @@ public class EzsigntemplateformfieldgroupResponseCompound {
   private Boolean bEzsigntemplateformfieldgroupEncrypted = null;
   @SerializedName("sEzsigntemplateformfieldgroupRegexp")
   private String sEzsigntemplateformfieldgroupRegexp = null;
+  @SerializedName("eEzsigntemplateformfieldgroupTextvalidation")
+  private EnumTextvalidation eEzsigntemplateformfieldgroupTextvalidation = null;
   @SerializedName("tEzsigntemplateformfieldgroupTooltip")
   private String tEzsigntemplateformfieldgroupTooltip = null;
   @SerializedName("eEzsigntemplateformfieldgroupTooltipposition")
@@ -181,6 +184,7 @@ public class EzsigntemplateformfieldgroupResponseCompound {
   /**
    * The maximum length for the value in the Ezsigntemplateformfieldgroup  This can only be set if eEzsigntemplateformfieldgroupType is **Text** or **Textarea**
    * minimum: 0
+   * maximum: 65535
    **/
   @ApiModelProperty(value = "The maximum length for the value in the Ezsigntemplateformfieldgroup  This can only be set if eEzsigntemplateformfieldgroupType is **Text** or **Textarea**")
   public Integer getIEzsigntemplateformfieldgroupMaxlength() {
@@ -210,6 +214,16 @@ public class EzsigntemplateformfieldgroupResponseCompound {
   }
   public void setSEzsigntemplateformfieldgroupRegexp(String sEzsigntemplateformfieldgroupRegexp) {
     this.sEzsigntemplateformfieldgroupRegexp = sEzsigntemplateformfieldgroupRegexp;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public EnumTextvalidation getEEzsigntemplateformfieldgroupTextvalidation() {
+    return eEzsigntemplateformfieldgroupTextvalidation;
+  }
+  public void setEEzsigntemplateformfieldgroupTextvalidation(EnumTextvalidation eEzsigntemplateformfieldgroupTextvalidation) {
+    this.eEzsigntemplateformfieldgroupTextvalidation = eEzsigntemplateformfieldgroupTextvalidation;
   }
 
   /**
@@ -286,6 +300,7 @@ public class EzsigntemplateformfieldgroupResponseCompound {
         (this.iEzsigntemplateformfieldgroupMaxlength == null ? ezsigntemplateformfieldgroupResponseCompound.iEzsigntemplateformfieldgroupMaxlength == null : this.iEzsigntemplateformfieldgroupMaxlength.equals(ezsigntemplateformfieldgroupResponseCompound.iEzsigntemplateformfieldgroupMaxlength)) &&
         (this.bEzsigntemplateformfieldgroupEncrypted == null ? ezsigntemplateformfieldgroupResponseCompound.bEzsigntemplateformfieldgroupEncrypted == null : this.bEzsigntemplateformfieldgroupEncrypted.equals(ezsigntemplateformfieldgroupResponseCompound.bEzsigntemplateformfieldgroupEncrypted)) &&
         (this.sEzsigntemplateformfieldgroupRegexp == null ? ezsigntemplateformfieldgroupResponseCompound.sEzsigntemplateformfieldgroupRegexp == null : this.sEzsigntemplateformfieldgroupRegexp.equals(ezsigntemplateformfieldgroupResponseCompound.sEzsigntemplateformfieldgroupRegexp)) &&
+        (this.eEzsigntemplateformfieldgroupTextvalidation == null ? ezsigntemplateformfieldgroupResponseCompound.eEzsigntemplateformfieldgroupTextvalidation == null : this.eEzsigntemplateformfieldgroupTextvalidation.equals(ezsigntemplateformfieldgroupResponseCompound.eEzsigntemplateformfieldgroupTextvalidation)) &&
         (this.tEzsigntemplateformfieldgroupTooltip == null ? ezsigntemplateformfieldgroupResponseCompound.tEzsigntemplateformfieldgroupTooltip == null : this.tEzsigntemplateformfieldgroupTooltip.equals(ezsigntemplateformfieldgroupResponseCompound.tEzsigntemplateformfieldgroupTooltip)) &&
         (this.eEzsigntemplateformfieldgroupTooltipposition == null ? ezsigntemplateformfieldgroupResponseCompound.eEzsigntemplateformfieldgroupTooltipposition == null : this.eEzsigntemplateformfieldgroupTooltipposition.equals(ezsigntemplateformfieldgroupResponseCompound.eEzsigntemplateformfieldgroupTooltipposition)) &&
         (this.aObjEzsigntemplateformfieldgroupsigner == null ? ezsigntemplateformfieldgroupResponseCompound.aObjEzsigntemplateformfieldgroupsigner == null : this.aObjEzsigntemplateformfieldgroupsigner.equals(ezsigntemplateformfieldgroupResponseCompound.aObjEzsigntemplateformfieldgroupsigner)) &&
@@ -309,6 +324,7 @@ public class EzsigntemplateformfieldgroupResponseCompound {
     result = 31 * result + (this.iEzsigntemplateformfieldgroupMaxlength == null ? 0: this.iEzsigntemplateformfieldgroupMaxlength.hashCode());
     result = 31 * result + (this.bEzsigntemplateformfieldgroupEncrypted == null ? 0: this.bEzsigntemplateformfieldgroupEncrypted.hashCode());
     result = 31 * result + (this.sEzsigntemplateformfieldgroupRegexp == null ? 0: this.sEzsigntemplateformfieldgroupRegexp.hashCode());
+    result = 31 * result + (this.eEzsigntemplateformfieldgroupTextvalidation == null ? 0: this.eEzsigntemplateformfieldgroupTextvalidation.hashCode());
     result = 31 * result + (this.tEzsigntemplateformfieldgroupTooltip == null ? 0: this.tEzsigntemplateformfieldgroupTooltip.hashCode());
     result = 31 * result + (this.eEzsigntemplateformfieldgroupTooltipposition == null ? 0: this.eEzsigntemplateformfieldgroupTooltipposition.hashCode());
     result = 31 * result + (this.aObjEzsigntemplateformfieldgroupsigner == null ? 0: this.aObjEzsigntemplateformfieldgroupsigner.hashCode());
@@ -335,6 +351,7 @@ public class EzsigntemplateformfieldgroupResponseCompound {
     sb.append("  iEzsigntemplateformfieldgroupMaxlength: ").append(iEzsigntemplateformfieldgroupMaxlength).append("\n");
     sb.append("  bEzsigntemplateformfieldgroupEncrypted: ").append(bEzsigntemplateformfieldgroupEncrypted).append("\n");
     sb.append("  sEzsigntemplateformfieldgroupRegexp: ").append(sEzsigntemplateformfieldgroupRegexp).append("\n");
+    sb.append("  eEzsigntemplateformfieldgroupTextvalidation: ").append(eEzsigntemplateformfieldgroupTextvalidation).append("\n");
     sb.append("  tEzsigntemplateformfieldgroupTooltip: ").append(tEzsigntemplateformfieldgroupTooltip).append("\n");
     sb.append("  eEzsigntemplateformfieldgroupTooltipposition: ").append(eEzsigntemplateformfieldgroupTooltipposition).append("\n");
     sb.append("  aObjEzsigntemplateformfieldgroupsigner: ").append(aObjEzsigntemplateformfieldgroupsigner).append("\n");

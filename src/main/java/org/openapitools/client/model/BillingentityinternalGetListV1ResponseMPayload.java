@@ -23,22 +23,12 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Payload for GET /1/object/billingentityinternal/getList")
 public class BillingentityinternalGetListV1ResponseMPayload {
   
-  @SerializedName("a_objBillingentityinternal")
-  private List<BillingentityinternalListElement> aObjBillingentityinternal = null;
   @SerializedName("iRowReturned")
   private Integer iRowReturned = null;
   @SerializedName("iRowFiltered")
   private Integer iRowFiltered = null;
-
-  /**
-   **/
-  @ApiModelProperty(required = true, value = "")
-  public List<BillingentityinternalListElement> getAObjBillingentityinternal() {
-    return aObjBillingentityinternal;
-  }
-  public void setAObjBillingentityinternal(List<BillingentityinternalListElement> aObjBillingentityinternal) {
-    this.aObjBillingentityinternal = aObjBillingentityinternal;
-  }
+  @SerializedName("a_objBillingentityinternal")
+  private List<BillingentityinternalListElement> aObjBillingentityinternal = null;
 
   /**
    * The number of rows returned
@@ -62,6 +52,16 @@ public class BillingentityinternalGetListV1ResponseMPayload {
     this.iRowFiltered = iRowFiltered;
   }
 
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public List<BillingentityinternalListElement> getAObjBillingentityinternal() {
+    return aObjBillingentityinternal;
+  }
+  public void setAObjBillingentityinternal(List<BillingentityinternalListElement> aObjBillingentityinternal) {
+    this.aObjBillingentityinternal = aObjBillingentityinternal;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -72,17 +72,17 @@ public class BillingentityinternalGetListV1ResponseMPayload {
       return false;
     }
     BillingentityinternalGetListV1ResponseMPayload billingentityinternalGetListV1ResponseMPayload = (BillingentityinternalGetListV1ResponseMPayload) o;
-    return (this.aObjBillingentityinternal == null ? billingentityinternalGetListV1ResponseMPayload.aObjBillingentityinternal == null : this.aObjBillingentityinternal.equals(billingentityinternalGetListV1ResponseMPayload.aObjBillingentityinternal)) &&
-        (this.iRowReturned == null ? billingentityinternalGetListV1ResponseMPayload.iRowReturned == null : this.iRowReturned.equals(billingentityinternalGetListV1ResponseMPayload.iRowReturned)) &&
-        (this.iRowFiltered == null ? billingentityinternalGetListV1ResponseMPayload.iRowFiltered == null : this.iRowFiltered.equals(billingentityinternalGetListV1ResponseMPayload.iRowFiltered));
+    return (this.iRowReturned == null ? billingentityinternalGetListV1ResponseMPayload.iRowReturned == null : this.iRowReturned.equals(billingentityinternalGetListV1ResponseMPayload.iRowReturned)) &&
+        (this.iRowFiltered == null ? billingentityinternalGetListV1ResponseMPayload.iRowFiltered == null : this.iRowFiltered.equals(billingentityinternalGetListV1ResponseMPayload.iRowFiltered)) &&
+        (this.aObjBillingentityinternal == null ? billingentityinternalGetListV1ResponseMPayload.aObjBillingentityinternal == null : this.aObjBillingentityinternal.equals(billingentityinternalGetListV1ResponseMPayload.aObjBillingentityinternal));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.aObjBillingentityinternal == null ? 0: this.aObjBillingentityinternal.hashCode());
     result = 31 * result + (this.iRowReturned == null ? 0: this.iRowReturned.hashCode());
     result = 31 * result + (this.iRowFiltered == null ? 0: this.iRowFiltered.hashCode());
+    result = 31 * result + (this.aObjBillingentityinternal == null ? 0: this.aObjBillingentityinternal.hashCode());
     return result;
   }
 
@@ -91,9 +91,9 @@ public class BillingentityinternalGetListV1ResponseMPayload {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingentityinternalGetListV1ResponseMPayload {\n");
     
-    sb.append("  aObjBillingentityinternal: ").append(aObjBillingentityinternal).append("\n");
     sb.append("  iRowReturned: ").append(iRowReturned).append("\n");
     sb.append("  iRowFiltered: ").append(iRowFiltered).append("\n");
+    sb.append("  aObjBillingentityinternal: ").append(aObjBillingentityinternal).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

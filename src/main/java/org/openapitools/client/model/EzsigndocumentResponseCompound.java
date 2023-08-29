@@ -14,6 +14,7 @@ package org.openapitools.client.model;
 
 import java.util.*;
 import org.openapitools.client.model.CommonAudit;
+import org.openapitools.client.model.ComputedEEzsigndocumentSteptype;
 import org.openapitools.client.model.CustomEzsignfoldersignerassociationstatusResponse;
 import org.openapitools.client.model.FieldEEzsigndocumentStep;
 import io.swagger.annotations.*;
@@ -67,6 +68,8 @@ public class EzsigndocumentResponseCompound {
   private CommonAudit objAudit = null;
   @SerializedName("sEzsigndocumentExternalid")
   private String sEzsigndocumentExternalid = null;
+  @SerializedName("eEzsigndocumentSteptype")
+  private ComputedEEzsigndocumentSteptype eEzsigndocumentSteptype = null;
   @SerializedName("iEzsigndocumentStepformtotal")
   private Integer iEzsigndocumentStepformtotal = null;
   @SerializedName("iEzsigndocumentStepformcurrent")
@@ -317,6 +320,16 @@ public class EzsigndocumentResponseCompound {
   }
 
   /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public ComputedEEzsigndocumentSteptype getEEzsigndocumentSteptype() {
+    return eEzsigndocumentSteptype;
+  }
+  public void setEEzsigndocumentSteptype(ComputedEEzsigndocumentSteptype eEzsigndocumentSteptype) {
+    this.eEzsigndocumentSteptype = eEzsigndocumentSteptype;
+  }
+
+  /**
    * The total number of steps in the form filling phase
    **/
   @ApiModelProperty(required = true, value = "The total number of steps in the form filling phase")
@@ -401,6 +414,7 @@ public class EzsigndocumentResponseCompound {
         (this.bEzsigndocumentHassignedsignatures == null ? ezsigndocumentResponseCompound.bEzsigndocumentHassignedsignatures == null : this.bEzsigndocumentHassignedsignatures.equals(ezsigndocumentResponseCompound.bEzsigndocumentHassignedsignatures)) &&
         (this.objAudit == null ? ezsigndocumentResponseCompound.objAudit == null : this.objAudit.equals(ezsigndocumentResponseCompound.objAudit)) &&
         (this.sEzsigndocumentExternalid == null ? ezsigndocumentResponseCompound.sEzsigndocumentExternalid == null : this.sEzsigndocumentExternalid.equals(ezsigndocumentResponseCompound.sEzsigndocumentExternalid)) &&
+        (this.eEzsigndocumentSteptype == null ? ezsigndocumentResponseCompound.eEzsigndocumentSteptype == null : this.eEzsigndocumentSteptype.equals(ezsigndocumentResponseCompound.eEzsigndocumentSteptype)) &&
         (this.iEzsigndocumentStepformtotal == null ? ezsigndocumentResponseCompound.iEzsigndocumentStepformtotal == null : this.iEzsigndocumentStepformtotal.equals(ezsigndocumentResponseCompound.iEzsigndocumentStepformtotal)) &&
         (this.iEzsigndocumentStepformcurrent == null ? ezsigndocumentResponseCompound.iEzsigndocumentStepformcurrent == null : this.iEzsigndocumentStepformcurrent.equals(ezsigndocumentResponseCompound.iEzsigndocumentStepformcurrent)) &&
         (this.iEzsigndocumentStepsignaturetotal == null ? ezsigndocumentResponseCompound.iEzsigndocumentStepsignaturetotal == null : this.iEzsigndocumentStepsignaturetotal.equals(ezsigndocumentResponseCompound.iEzsigndocumentStepsignaturetotal)) &&
@@ -432,6 +446,7 @@ public class EzsigndocumentResponseCompound {
     result = 31 * result + (this.bEzsigndocumentHassignedsignatures == null ? 0: this.bEzsigndocumentHassignedsignatures.hashCode());
     result = 31 * result + (this.objAudit == null ? 0: this.objAudit.hashCode());
     result = 31 * result + (this.sEzsigndocumentExternalid == null ? 0: this.sEzsigndocumentExternalid.hashCode());
+    result = 31 * result + (this.eEzsigndocumentSteptype == null ? 0: this.eEzsigndocumentSteptype.hashCode());
     result = 31 * result + (this.iEzsigndocumentStepformtotal == null ? 0: this.iEzsigndocumentStepformtotal.hashCode());
     result = 31 * result + (this.iEzsigndocumentStepformcurrent == null ? 0: this.iEzsigndocumentStepformcurrent.hashCode());
     result = 31 * result + (this.iEzsigndocumentStepsignaturetotal == null ? 0: this.iEzsigndocumentStepsignaturetotal.hashCode());
@@ -466,6 +481,7 @@ public class EzsigndocumentResponseCompound {
     sb.append("  bEzsigndocumentHassignedsignatures: ").append(bEzsigndocumentHassignedsignatures).append("\n");
     sb.append("  objAudit: ").append(objAudit).append("\n");
     sb.append("  sEzsigndocumentExternalid: ").append(sEzsigndocumentExternalid).append("\n");
+    sb.append("  eEzsigndocumentSteptype: ").append(eEzsigndocumentSteptype).append("\n");
     sb.append("  iEzsigndocumentStepformtotal: ").append(iEzsigndocumentStepformtotal).append("\n");
     sb.append("  iEzsigndocumentStepformcurrent: ").append(iEzsigndocumentStepformcurrent).append("\n");
     sb.append("  iEzsigndocumentStepsignaturetotal: ").append(iEzsigndocumentStepsignaturetotal).append("\n");

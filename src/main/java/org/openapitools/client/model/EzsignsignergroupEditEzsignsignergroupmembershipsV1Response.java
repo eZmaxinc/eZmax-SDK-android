@@ -24,26 +24,16 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Response for PUT /1/object/ezsignsignergroup/{pkiEzsignsignergroupID}/editEzsignsignergroupmemberships")
 public class EzsignsignergroupEditEzsignsignergroupmembershipsV1Response {
   
-  @SerializedName("mPayload")
-  private EzsignsignergroupEditEzsignsignergroupmembershipsV1ResponseMPayload mPayload = null;
   @SerializedName("objDebugPayload")
   private CommonResponseObjDebugPayload objDebugPayload = null;
   @SerializedName("objDebug")
   private CommonResponseObjDebug objDebug = null;
+  @SerializedName("mPayload")
+  private EzsignsignergroupEditEzsignsignergroupmembershipsV1ResponseMPayload mPayload = null;
 
   /**
    **/
   @ApiModelProperty(required = true, value = "")
-  public EzsignsignergroupEditEzsignsignergroupmembershipsV1ResponseMPayload getMPayload() {
-    return mPayload;
-  }
-  public void setMPayload(EzsignsignergroupEditEzsignsignergroupmembershipsV1ResponseMPayload mPayload) {
-    this.mPayload = mPayload;
-  }
-
-  /**
-   **/
-  @ApiModelProperty(value = "")
   public CommonResponseObjDebugPayload getObjDebugPayload() {
     return objDebugPayload;
   }
@@ -61,6 +51,16 @@ public class EzsignsignergroupEditEzsignsignergroupmembershipsV1Response {
     this.objDebug = objDebug;
   }
 
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public EzsignsignergroupEditEzsignsignergroupmembershipsV1ResponseMPayload getMPayload() {
+    return mPayload;
+  }
+  public void setMPayload(EzsignsignergroupEditEzsignsignergroupmembershipsV1ResponseMPayload mPayload) {
+    this.mPayload = mPayload;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -71,17 +71,17 @@ public class EzsignsignergroupEditEzsignsignergroupmembershipsV1Response {
       return false;
     }
     EzsignsignergroupEditEzsignsignergroupmembershipsV1Response ezsignsignergroupEditEzsignsignergroupmembershipsV1Response = (EzsignsignergroupEditEzsignsignergroupmembershipsV1Response) o;
-    return (this.mPayload == null ? ezsignsignergroupEditEzsignsignergroupmembershipsV1Response.mPayload == null : this.mPayload.equals(ezsignsignergroupEditEzsignsignergroupmembershipsV1Response.mPayload)) &&
-        (this.objDebugPayload == null ? ezsignsignergroupEditEzsignsignergroupmembershipsV1Response.objDebugPayload == null : this.objDebugPayload.equals(ezsignsignergroupEditEzsignsignergroupmembershipsV1Response.objDebugPayload)) &&
-        (this.objDebug == null ? ezsignsignergroupEditEzsignsignergroupmembershipsV1Response.objDebug == null : this.objDebug.equals(ezsignsignergroupEditEzsignsignergroupmembershipsV1Response.objDebug));
+    return (this.objDebugPayload == null ? ezsignsignergroupEditEzsignsignergroupmembershipsV1Response.objDebugPayload == null : this.objDebugPayload.equals(ezsignsignergroupEditEzsignsignergroupmembershipsV1Response.objDebugPayload)) &&
+        (this.objDebug == null ? ezsignsignergroupEditEzsignsignergroupmembershipsV1Response.objDebug == null : this.objDebug.equals(ezsignsignergroupEditEzsignsignergroupmembershipsV1Response.objDebug)) &&
+        (this.mPayload == null ? ezsignsignergroupEditEzsignsignergroupmembershipsV1Response.mPayload == null : this.mPayload.equals(ezsignsignergroupEditEzsignsignergroupmembershipsV1Response.mPayload));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.mPayload == null ? 0: this.mPayload.hashCode());
     result = 31 * result + (this.objDebugPayload == null ? 0: this.objDebugPayload.hashCode());
     result = 31 * result + (this.objDebug == null ? 0: this.objDebug.hashCode());
+    result = 31 * result + (this.mPayload == null ? 0: this.mPayload.hashCode());
     return result;
   }
 
@@ -90,9 +90,9 @@ public class EzsignsignergroupEditEzsignsignergroupmembershipsV1Response {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignsignergroupEditEzsignsignergroupmembershipsV1Response {\n");
     
-    sb.append("  mPayload: ").append(mPayload).append("\n");
     sb.append("  objDebugPayload: ").append(objDebugPayload).append("\n");
     sb.append("  objDebug: ").append(objDebug).append("\n");
+    sb.append("  mPayload: ").append(mPayload).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

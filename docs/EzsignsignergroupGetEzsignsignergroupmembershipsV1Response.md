@@ -6,9 +6,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**EzsignsignergroupGetEzsignsignergroupmembershipsV1ResponseMPayload**](EzsignsignergroupGetEzsignsignergroupmembershipsV1ResponseMPayload.md) |  | 
-**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  [optional]
+**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | 
 **objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
+**mPayload** | [**EzsignsignergroupGetEzsignsignergroupmembershipsV1ResponseMPayload**](EzsignsignergroupGetEzsignsignergroupmembershipsV1ResponseMPayload.md) |  | 
 
 
 

@@ -23,22 +23,12 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Payload for GET /1/object/ezsigntemplate/getList")
 public class EzsigntemplateGetListV1ResponseMPayload {
   
-  @SerializedName("a_objEzsigntemplate")
-  private List<EzsigntemplateListElement> aObjEzsigntemplate = null;
   @SerializedName("iRowReturned")
   private Integer iRowReturned = null;
   @SerializedName("iRowFiltered")
   private Integer iRowFiltered = null;
-
-  /**
-   **/
-  @ApiModelProperty(required = true, value = "")
-  public List<EzsigntemplateListElement> getAObjEzsigntemplate() {
-    return aObjEzsigntemplate;
-  }
-  public void setAObjEzsigntemplate(List<EzsigntemplateListElement> aObjEzsigntemplate) {
-    this.aObjEzsigntemplate = aObjEzsigntemplate;
-  }
+  @SerializedName("a_objEzsigntemplate")
+  private List<EzsigntemplateListElement> aObjEzsigntemplate = null;
 
   /**
    * The number of rows returned
@@ -62,6 +52,16 @@ public class EzsigntemplateGetListV1ResponseMPayload {
     this.iRowFiltered = iRowFiltered;
   }
 
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public List<EzsigntemplateListElement> getAObjEzsigntemplate() {
+    return aObjEzsigntemplate;
+  }
+  public void setAObjEzsigntemplate(List<EzsigntemplateListElement> aObjEzsigntemplate) {
+    this.aObjEzsigntemplate = aObjEzsigntemplate;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -72,17 +72,17 @@ public class EzsigntemplateGetListV1ResponseMPayload {
       return false;
     }
     EzsigntemplateGetListV1ResponseMPayload ezsigntemplateGetListV1ResponseMPayload = (EzsigntemplateGetListV1ResponseMPayload) o;
-    return (this.aObjEzsigntemplate == null ? ezsigntemplateGetListV1ResponseMPayload.aObjEzsigntemplate == null : this.aObjEzsigntemplate.equals(ezsigntemplateGetListV1ResponseMPayload.aObjEzsigntemplate)) &&
-        (this.iRowReturned == null ? ezsigntemplateGetListV1ResponseMPayload.iRowReturned == null : this.iRowReturned.equals(ezsigntemplateGetListV1ResponseMPayload.iRowReturned)) &&
-        (this.iRowFiltered == null ? ezsigntemplateGetListV1ResponseMPayload.iRowFiltered == null : this.iRowFiltered.equals(ezsigntemplateGetListV1ResponseMPayload.iRowFiltered));
+    return (this.iRowReturned == null ? ezsigntemplateGetListV1ResponseMPayload.iRowReturned == null : this.iRowReturned.equals(ezsigntemplateGetListV1ResponseMPayload.iRowReturned)) &&
+        (this.iRowFiltered == null ? ezsigntemplateGetListV1ResponseMPayload.iRowFiltered == null : this.iRowFiltered.equals(ezsigntemplateGetListV1ResponseMPayload.iRowFiltered)) &&
+        (this.aObjEzsigntemplate == null ? ezsigntemplateGetListV1ResponseMPayload.aObjEzsigntemplate == null : this.aObjEzsigntemplate.equals(ezsigntemplateGetListV1ResponseMPayload.aObjEzsigntemplate));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.aObjEzsigntemplate == null ? 0: this.aObjEzsigntemplate.hashCode());
     result = 31 * result + (this.iRowReturned == null ? 0: this.iRowReturned.hashCode());
     result = 31 * result + (this.iRowFiltered == null ? 0: this.iRowFiltered.hashCode());
+    result = 31 * result + (this.aObjEzsigntemplate == null ? 0: this.aObjEzsigntemplate.hashCode());
     return result;
   }
 
@@ -91,9 +91,9 @@ public class EzsigntemplateGetListV1ResponseMPayload {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsigntemplateGetListV1ResponseMPayload {\n");
     
-    sb.append("  aObjEzsigntemplate: ").append(aObjEzsigntemplate).append("\n");
     sb.append("  iRowReturned: ").append(iRowReturned).append("\n");
     sb.append("  iRowFiltered: ").append(iRowFiltered).append("\n");
+    sb.append("  aObjEzsigntemplate: ").append(aObjEzsigntemplate).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

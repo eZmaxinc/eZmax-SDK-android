@@ -23,22 +23,12 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Payload for GET /1/object/userstaged/getList")
 public class UserstagedGetListV1ResponseMPayload {
   
-  @SerializedName("a_objUserstaged")
-  private List<UserstagedListElement> aObjUserstaged = null;
   @SerializedName("iRowReturned")
   private Integer iRowReturned = null;
   @SerializedName("iRowFiltered")
   private Integer iRowFiltered = null;
-
-  /**
-   **/
-  @ApiModelProperty(required = true, value = "")
-  public List<UserstagedListElement> getAObjUserstaged() {
-    return aObjUserstaged;
-  }
-  public void setAObjUserstaged(List<UserstagedListElement> aObjUserstaged) {
-    this.aObjUserstaged = aObjUserstaged;
-  }
+  @SerializedName("a_objUserstaged")
+  private List<UserstagedListElement> aObjUserstaged = null;
 
   /**
    * The number of rows returned
@@ -62,6 +52,16 @@ public class UserstagedGetListV1ResponseMPayload {
     this.iRowFiltered = iRowFiltered;
   }
 
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public List<UserstagedListElement> getAObjUserstaged() {
+    return aObjUserstaged;
+  }
+  public void setAObjUserstaged(List<UserstagedListElement> aObjUserstaged) {
+    this.aObjUserstaged = aObjUserstaged;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -72,17 +72,17 @@ public class UserstagedGetListV1ResponseMPayload {
       return false;
     }
     UserstagedGetListV1ResponseMPayload userstagedGetListV1ResponseMPayload = (UserstagedGetListV1ResponseMPayload) o;
-    return (this.aObjUserstaged == null ? userstagedGetListV1ResponseMPayload.aObjUserstaged == null : this.aObjUserstaged.equals(userstagedGetListV1ResponseMPayload.aObjUserstaged)) &&
-        (this.iRowReturned == null ? userstagedGetListV1ResponseMPayload.iRowReturned == null : this.iRowReturned.equals(userstagedGetListV1ResponseMPayload.iRowReturned)) &&
-        (this.iRowFiltered == null ? userstagedGetListV1ResponseMPayload.iRowFiltered == null : this.iRowFiltered.equals(userstagedGetListV1ResponseMPayload.iRowFiltered));
+    return (this.iRowReturned == null ? userstagedGetListV1ResponseMPayload.iRowReturned == null : this.iRowReturned.equals(userstagedGetListV1ResponseMPayload.iRowReturned)) &&
+        (this.iRowFiltered == null ? userstagedGetListV1ResponseMPayload.iRowFiltered == null : this.iRowFiltered.equals(userstagedGetListV1ResponseMPayload.iRowFiltered)) &&
+        (this.aObjUserstaged == null ? userstagedGetListV1ResponseMPayload.aObjUserstaged == null : this.aObjUserstaged.equals(userstagedGetListV1ResponseMPayload.aObjUserstaged));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.aObjUserstaged == null ? 0: this.aObjUserstaged.hashCode());
     result = 31 * result + (this.iRowReturned == null ? 0: this.iRowReturned.hashCode());
     result = 31 * result + (this.iRowFiltered == null ? 0: this.iRowFiltered.hashCode());
+    result = 31 * result + (this.aObjUserstaged == null ? 0: this.aObjUserstaged.hashCode());
     return result;
   }
 
@@ -91,9 +91,9 @@ public class UserstagedGetListV1ResponseMPayload {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserstagedGetListV1ResponseMPayload {\n");
     
-    sb.append("  aObjUserstaged: ").append(aObjUserstaged).append("\n");
     sb.append("  iRowReturned: ").append(iRowReturned).append("\n");
     sb.append("  iRowFiltered: ").append(iRowFiltered).append("\n");
+    sb.append("  aObjUserstaged: ").append(aObjUserstaged).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

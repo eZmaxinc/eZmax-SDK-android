@@ -24,26 +24,16 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Response for GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements")
 public class EzsignfolderGetActionableElementsV1Response {
   
-  @SerializedName("mPayload")
-  private EzsignfolderGetActionableElementsV1ResponseMPayload mPayload = null;
   @SerializedName("objDebugPayload")
   private CommonResponseObjDebugPayload objDebugPayload = null;
   @SerializedName("objDebug")
   private CommonResponseObjDebug objDebug = null;
+  @SerializedName("mPayload")
+  private EzsignfolderGetActionableElementsV1ResponseMPayload mPayload = null;
 
   /**
    **/
   @ApiModelProperty(required = true, value = "")
-  public EzsignfolderGetActionableElementsV1ResponseMPayload getMPayload() {
-    return mPayload;
-  }
-  public void setMPayload(EzsignfolderGetActionableElementsV1ResponseMPayload mPayload) {
-    this.mPayload = mPayload;
-  }
-
-  /**
-   **/
-  @ApiModelProperty(value = "")
   public CommonResponseObjDebugPayload getObjDebugPayload() {
     return objDebugPayload;
   }
@@ -61,6 +51,16 @@ public class EzsignfolderGetActionableElementsV1Response {
     this.objDebug = objDebug;
   }
 
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public EzsignfolderGetActionableElementsV1ResponseMPayload getMPayload() {
+    return mPayload;
+  }
+  public void setMPayload(EzsignfolderGetActionableElementsV1ResponseMPayload mPayload) {
+    this.mPayload = mPayload;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -71,17 +71,17 @@ public class EzsignfolderGetActionableElementsV1Response {
       return false;
     }
     EzsignfolderGetActionableElementsV1Response ezsignfolderGetActionableElementsV1Response = (EzsignfolderGetActionableElementsV1Response) o;
-    return (this.mPayload == null ? ezsignfolderGetActionableElementsV1Response.mPayload == null : this.mPayload.equals(ezsignfolderGetActionableElementsV1Response.mPayload)) &&
-        (this.objDebugPayload == null ? ezsignfolderGetActionableElementsV1Response.objDebugPayload == null : this.objDebugPayload.equals(ezsignfolderGetActionableElementsV1Response.objDebugPayload)) &&
-        (this.objDebug == null ? ezsignfolderGetActionableElementsV1Response.objDebug == null : this.objDebug.equals(ezsignfolderGetActionableElementsV1Response.objDebug));
+    return (this.objDebugPayload == null ? ezsignfolderGetActionableElementsV1Response.objDebugPayload == null : this.objDebugPayload.equals(ezsignfolderGetActionableElementsV1Response.objDebugPayload)) &&
+        (this.objDebug == null ? ezsignfolderGetActionableElementsV1Response.objDebug == null : this.objDebug.equals(ezsignfolderGetActionableElementsV1Response.objDebug)) &&
+        (this.mPayload == null ? ezsignfolderGetActionableElementsV1Response.mPayload == null : this.mPayload.equals(ezsignfolderGetActionableElementsV1Response.mPayload));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.mPayload == null ? 0: this.mPayload.hashCode());
     result = 31 * result + (this.objDebugPayload == null ? 0: this.objDebugPayload.hashCode());
     result = 31 * result + (this.objDebug == null ? 0: this.objDebug.hashCode());
+    result = 31 * result + (this.mPayload == null ? 0: this.mPayload.hashCode());
     return result;
   }
 
@@ -90,9 +90,9 @@ public class EzsignfolderGetActionableElementsV1Response {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignfolderGetActionableElementsV1Response {\n");
     
-    sb.append("  mPayload: ").append(mPayload).append("\n");
     sb.append("  objDebugPayload: ").append(objDebugPayload).append("\n");
     sb.append("  objDebug: ").append(objDebug).append("\n");
+    sb.append("  mPayload: ").append(mPayload).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

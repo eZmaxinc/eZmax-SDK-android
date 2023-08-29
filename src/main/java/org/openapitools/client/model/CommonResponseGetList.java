@@ -30,7 +30,7 @@ public class CommonResponseGetList {
 
   /**
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "")
   public CommonResponseObjDebugPayloadGetList getObjDebugPayload() {
     return objDebugPayload;
   }

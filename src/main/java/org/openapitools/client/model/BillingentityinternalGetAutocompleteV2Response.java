@@ -24,26 +24,16 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Response for GET /2/object/billingentityinternal/getAutocomplete")
 public class BillingentityinternalGetAutocompleteV2Response {
   
-  @SerializedName("mPayload")
-  private BillingentityinternalGetAutocompleteV2ResponseMPayload mPayload = null;
   @SerializedName("objDebugPayload")
   private CommonResponseObjDebugPayload objDebugPayload = null;
   @SerializedName("objDebug")
   private CommonResponseObjDebug objDebug = null;
+  @SerializedName("mPayload")
+  private BillingentityinternalGetAutocompleteV2ResponseMPayload mPayload = null;
 
   /**
    **/
   @ApiModelProperty(required = true, value = "")
-  public BillingentityinternalGetAutocompleteV2ResponseMPayload getMPayload() {
-    return mPayload;
-  }
-  public void setMPayload(BillingentityinternalGetAutocompleteV2ResponseMPayload mPayload) {
-    this.mPayload = mPayload;
-  }
-
-  /**
-   **/
-  @ApiModelProperty(value = "")
   public CommonResponseObjDebugPayload getObjDebugPayload() {
     return objDebugPayload;
   }
@@ -61,6 +51,16 @@ public class BillingentityinternalGetAutocompleteV2Response {
     this.objDebug = objDebug;
   }
 
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public BillingentityinternalGetAutocompleteV2ResponseMPayload getMPayload() {
+    return mPayload;
+  }
+  public void setMPayload(BillingentityinternalGetAutocompleteV2ResponseMPayload mPayload) {
+    this.mPayload = mPayload;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -71,17 +71,17 @@ public class BillingentityinternalGetAutocompleteV2Response {
       return false;
     }
     BillingentityinternalGetAutocompleteV2Response billingentityinternalGetAutocompleteV2Response = (BillingentityinternalGetAutocompleteV2Response) o;
-    return (this.mPayload == null ? billingentityinternalGetAutocompleteV2Response.mPayload == null : this.mPayload.equals(billingentityinternalGetAutocompleteV2Response.mPayload)) &&
-        (this.objDebugPayload == null ? billingentityinternalGetAutocompleteV2Response.objDebugPayload == null : this.objDebugPayload.equals(billingentityinternalGetAutocompleteV2Response.objDebugPayload)) &&
-        (this.objDebug == null ? billingentityinternalGetAutocompleteV2Response.objDebug == null : this.objDebug.equals(billingentityinternalGetAutocompleteV2Response.objDebug));
+    return (this.objDebugPayload == null ? billingentityinternalGetAutocompleteV2Response.objDebugPayload == null : this.objDebugPayload.equals(billingentityinternalGetAutocompleteV2Response.objDebugPayload)) &&
+        (this.objDebug == null ? billingentityinternalGetAutocompleteV2Response.objDebug == null : this.objDebug.equals(billingentityinternalGetAutocompleteV2Response.objDebug)) &&
+        (this.mPayload == null ? billingentityinternalGetAutocompleteV2Response.mPayload == null : this.mPayload.equals(billingentityinternalGetAutocompleteV2Response.mPayload));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.mPayload == null ? 0: this.mPayload.hashCode());
     result = 31 * result + (this.objDebugPayload == null ? 0: this.objDebugPayload.hashCode());
     result = 31 * result + (this.objDebug == null ? 0: this.objDebug.hashCode());
+    result = 31 * result + (this.mPayload == null ? 0: this.mPayload.hashCode());
     return result;
   }
 
@@ -90,9 +90,9 @@ public class BillingentityinternalGetAutocompleteV2Response {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingentityinternalGetAutocompleteV2Response {\n");
     
-    sb.append("  mPayload: ").append(mPayload).append("\n");
     sb.append("  objDebugPayload: ").append(objDebugPayload).append("\n");
     sb.append("  objDebug: ").append(objDebug).append("\n");
+    sb.append("  mPayload: ").append(mPayload).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

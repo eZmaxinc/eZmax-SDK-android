@@ -6,9 +6,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**EzmaxinvoicingGetAutocompleteV2ResponseMPayload**](EzmaxinvoicingGetAutocompleteV2ResponseMPayload.md) |  | 
-**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  [optional]
+**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | 
 **objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
+**mPayload** | [**EzmaxinvoicingGetAutocompleteV2ResponseMPayload**](EzmaxinvoicingGetAutocompleteV2ResponseMPayload.md) |  | 
 
 
 

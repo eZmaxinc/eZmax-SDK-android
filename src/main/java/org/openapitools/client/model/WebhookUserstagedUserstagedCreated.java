@@ -25,22 +25,12 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "This is the base Webhook object")
 public class WebhookUserstagedUserstagedCreated {
   
-  @SerializedName("objUserstaged")
-  private UserstagedResponseCompound objUserstaged = null;
   @SerializedName("objWebhook")
   private CustomWebhookResponse objWebhook = null;
   @SerializedName("a_objAttempt")
   private List<AttemptResponseCompound> aObjAttempt = null;
-
-  /**
-   **/
-  @ApiModelProperty(required = true, value = "")
-  public UserstagedResponseCompound getObjUserstaged() {
-    return objUserstaged;
-  }
-  public void setObjUserstaged(UserstagedResponseCompound objUserstaged) {
-    this.objUserstaged = objUserstaged;
-  }
+  @SerializedName("objUserstaged")
+  private UserstagedResponseCompound objUserstaged = null;
 
   /**
    **/
@@ -63,6 +53,16 @@ public class WebhookUserstagedUserstagedCreated {
     this.aObjAttempt = aObjAttempt;
   }
 
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public UserstagedResponseCompound getObjUserstaged() {
+    return objUserstaged;
+  }
+  public void setObjUserstaged(UserstagedResponseCompound objUserstaged) {
+    this.objUserstaged = objUserstaged;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -73,17 +73,17 @@ public class WebhookUserstagedUserstagedCreated {
       return false;
     }
     WebhookUserstagedUserstagedCreated webhookUserstagedUserstagedCreated = (WebhookUserstagedUserstagedCreated) o;
-    return (this.objUserstaged == null ? webhookUserstagedUserstagedCreated.objUserstaged == null : this.objUserstaged.equals(webhookUserstagedUserstagedCreated.objUserstaged)) &&
-        (this.objWebhook == null ? webhookUserstagedUserstagedCreated.objWebhook == null : this.objWebhook.equals(webhookUserstagedUserstagedCreated.objWebhook)) &&
-        (this.aObjAttempt == null ? webhookUserstagedUserstagedCreated.aObjAttempt == null : this.aObjAttempt.equals(webhookUserstagedUserstagedCreated.aObjAttempt));
+    return (this.objWebhook == null ? webhookUserstagedUserstagedCreated.objWebhook == null : this.objWebhook.equals(webhookUserstagedUserstagedCreated.objWebhook)) &&
+        (this.aObjAttempt == null ? webhookUserstagedUserstagedCreated.aObjAttempt == null : this.aObjAttempt.equals(webhookUserstagedUserstagedCreated.aObjAttempt)) &&
+        (this.objUserstaged == null ? webhookUserstagedUserstagedCreated.objUserstaged == null : this.objUserstaged.equals(webhookUserstagedUserstagedCreated.objUserstaged));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.objUserstaged == null ? 0: this.objUserstaged.hashCode());
     result = 31 * result + (this.objWebhook == null ? 0: this.objWebhook.hashCode());
     result = 31 * result + (this.aObjAttempt == null ? 0: this.aObjAttempt.hashCode());
+    result = 31 * result + (this.objUserstaged == null ? 0: this.objUserstaged.hashCode());
     return result;
   }
 
@@ -92,9 +92,9 @@ public class WebhookUserstagedUserstagedCreated {
     StringBuilder sb = new StringBuilder();
     sb.append("class WebhookUserstagedUserstagedCreated {\n");
     
-    sb.append("  objUserstaged: ").append(objUserstaged).append("\n");
     sb.append("  objWebhook: ").append(objWebhook).append("\n");
     sb.append("  aObjAttempt: ").append(aObjAttempt).append("\n");
+    sb.append("  objUserstaged: ").append(objUserstaged).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

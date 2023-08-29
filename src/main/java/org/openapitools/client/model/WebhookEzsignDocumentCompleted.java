@@ -25,22 +25,12 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "This is the base Webhook object")
 public class WebhookEzsignDocumentCompleted {
   
-  @SerializedName("objEzsigndocument")
-  private EzsigndocumentResponse objEzsigndocument = null;
   @SerializedName("objWebhook")
   private CustomWebhookResponse objWebhook = null;
   @SerializedName("a_objAttempt")
   private List<AttemptResponseCompound> aObjAttempt = null;
-
-  /**
-   **/
-  @ApiModelProperty(required = true, value = "")
-  public EzsigndocumentResponse getObjEzsigndocument() {
-    return objEzsigndocument;
-  }
-  public void setObjEzsigndocument(EzsigndocumentResponse objEzsigndocument) {
-    this.objEzsigndocument = objEzsigndocument;
-  }
+  @SerializedName("objEzsigndocument")
+  private EzsigndocumentResponse objEzsigndocument = null;
 
   /**
    **/
@@ -63,6 +53,16 @@ public class WebhookEzsignDocumentCompleted {
     this.aObjAttempt = aObjAttempt;
   }
 
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public EzsigndocumentResponse getObjEzsigndocument() {
+    return objEzsigndocument;
+  }
+  public void setObjEzsigndocument(EzsigndocumentResponse objEzsigndocument) {
+    this.objEzsigndocument = objEzsigndocument;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -73,17 +73,17 @@ public class WebhookEzsignDocumentCompleted {
       return false;
     }
     WebhookEzsignDocumentCompleted webhookEzsignDocumentCompleted = (WebhookEzsignDocumentCompleted) o;
-    return (this.objEzsigndocument == null ? webhookEzsignDocumentCompleted.objEzsigndocument == null : this.objEzsigndocument.equals(webhookEzsignDocumentCompleted.objEzsigndocument)) &&
-        (this.objWebhook == null ? webhookEzsignDocumentCompleted.objWebhook == null : this.objWebhook.equals(webhookEzsignDocumentCompleted.objWebhook)) &&
-        (this.aObjAttempt == null ? webhookEzsignDocumentCompleted.aObjAttempt == null : this.aObjAttempt.equals(webhookEzsignDocumentCompleted.aObjAttempt));
+    return (this.objWebhook == null ? webhookEzsignDocumentCompleted.objWebhook == null : this.objWebhook.equals(webhookEzsignDocumentCompleted.objWebhook)) &&
+        (this.aObjAttempt == null ? webhookEzsignDocumentCompleted.aObjAttempt == null : this.aObjAttempt.equals(webhookEzsignDocumentCompleted.aObjAttempt)) &&
+        (this.objEzsigndocument == null ? webhookEzsignDocumentCompleted.objEzsigndocument == null : this.objEzsigndocument.equals(webhookEzsignDocumentCompleted.objEzsigndocument));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.objEzsigndocument == null ? 0: this.objEzsigndocument.hashCode());
     result = 31 * result + (this.objWebhook == null ? 0: this.objWebhook.hashCode());
     result = 31 * result + (this.aObjAttempt == null ? 0: this.aObjAttempt.hashCode());
+    result = 31 * result + (this.objEzsigndocument == null ? 0: this.objEzsigndocument.hashCode());
     return result;
   }
 
@@ -92,9 +92,9 @@ public class WebhookEzsignDocumentCompleted {
     StringBuilder sb = new StringBuilder();
     sb.append("class WebhookEzsignDocumentCompleted {\n");
     
-    sb.append("  objEzsigndocument: ").append(objEzsigndocument).append("\n");
     sb.append("  objWebhook: ").append(objWebhook).append("\n");
     sb.append("  aObjAttempt: ").append(aObjAttempt).append("\n");
+    sb.append("  objEzsigndocument: ").append(objEzsigndocument).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

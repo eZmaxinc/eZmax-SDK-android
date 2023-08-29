@@ -23,22 +23,12 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Payload for GET /1/object/sessionhistory/getList")
 public class SessionhistoryGetListV1ResponseMPayload {
   
-  @SerializedName("a_objSessionhistory")
-  private List<SessionhistoryListElement> aObjSessionhistory = null;
   @SerializedName("iRowReturned")
   private Integer iRowReturned = null;
   @SerializedName("iRowFiltered")
   private Integer iRowFiltered = null;
-
-  /**
-   **/
-  @ApiModelProperty(required = true, value = "")
-  public List<SessionhistoryListElement> getAObjSessionhistory() {
-    return aObjSessionhistory;
-  }
-  public void setAObjSessionhistory(List<SessionhistoryListElement> aObjSessionhistory) {
-    this.aObjSessionhistory = aObjSessionhistory;
-  }
+  @SerializedName("a_objSessionhistory")
+  private List<SessionhistoryListElement> aObjSessionhistory = null;
 
   /**
    * The number of rows returned
@@ -62,6 +52,16 @@ public class SessionhistoryGetListV1ResponseMPayload {
     this.iRowFiltered = iRowFiltered;
   }
 
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public List<SessionhistoryListElement> getAObjSessionhistory() {
+    return aObjSessionhistory;
+  }
+  public void setAObjSessionhistory(List<SessionhistoryListElement> aObjSessionhistory) {
+    this.aObjSessionhistory = aObjSessionhistory;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -72,17 +72,17 @@ public class SessionhistoryGetListV1ResponseMPayload {
       return false;
     }
     SessionhistoryGetListV1ResponseMPayload sessionhistoryGetListV1ResponseMPayload = (SessionhistoryGetListV1ResponseMPayload) o;
-    return (this.aObjSessionhistory == null ? sessionhistoryGetListV1ResponseMPayload.aObjSessionhistory == null : this.aObjSessionhistory.equals(sessionhistoryGetListV1ResponseMPayload.aObjSessionhistory)) &&
-        (this.iRowReturned == null ? sessionhistoryGetListV1ResponseMPayload.iRowReturned == null : this.iRowReturned.equals(sessionhistoryGetListV1ResponseMPayload.iRowReturned)) &&
-        (this.iRowFiltered == null ? sessionhistoryGetListV1ResponseMPayload.iRowFiltered == null : this.iRowFiltered.equals(sessionhistoryGetListV1ResponseMPayload.iRowFiltered));
+    return (this.iRowReturned == null ? sessionhistoryGetListV1ResponseMPayload.iRowReturned == null : this.iRowReturned.equals(sessionhistoryGetListV1ResponseMPayload.iRowReturned)) &&
+        (this.iRowFiltered == null ? sessionhistoryGetListV1ResponseMPayload.iRowFiltered == null : this.iRowFiltered.equals(sessionhistoryGetListV1ResponseMPayload.iRowFiltered)) &&
+        (this.aObjSessionhistory == null ? sessionhistoryGetListV1ResponseMPayload.aObjSessionhistory == null : this.aObjSessionhistory.equals(sessionhistoryGetListV1ResponseMPayload.aObjSessionhistory));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.aObjSessionhistory == null ? 0: this.aObjSessionhistory.hashCode());
     result = 31 * result + (this.iRowReturned == null ? 0: this.iRowReturned.hashCode());
     result = 31 * result + (this.iRowFiltered == null ? 0: this.iRowFiltered.hashCode());
+    result = 31 * result + (this.aObjSessionhistory == null ? 0: this.aObjSessionhistory.hashCode());
     return result;
   }
 
@@ -91,9 +91,9 @@ public class SessionhistoryGetListV1ResponseMPayload {
     StringBuilder sb = new StringBuilder();
     sb.append("class SessionhistoryGetListV1ResponseMPayload {\n");
     
-    sb.append("  aObjSessionhistory: ").append(aObjSessionhistory).append("\n");
     sb.append("  iRowReturned: ").append(iRowReturned).append("\n");
     sb.append("  iRowFiltered: ").append(iRowFiltered).append("\n");
+    sb.append("  aObjSessionhistory: ").append(aObjSessionhistory).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

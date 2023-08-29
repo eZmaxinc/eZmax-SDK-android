@@ -24,26 +24,16 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Response for GET /2/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}")
 public class EzsignbulksendtransmissionGetObjectV2Response {
   
-  @SerializedName("mPayload")
-  private EzsignbulksendtransmissionGetObjectV2ResponseMPayload mPayload = null;
   @SerializedName("objDebugPayload")
   private CommonResponseObjDebugPayload objDebugPayload = null;
   @SerializedName("objDebug")
   private CommonResponseObjDebug objDebug = null;
+  @SerializedName("mPayload")
+  private EzsignbulksendtransmissionGetObjectV2ResponseMPayload mPayload = null;
 
   /**
    **/
   @ApiModelProperty(required = true, value = "")
-  public EzsignbulksendtransmissionGetObjectV2ResponseMPayload getMPayload() {
-    return mPayload;
-  }
-  public void setMPayload(EzsignbulksendtransmissionGetObjectV2ResponseMPayload mPayload) {
-    this.mPayload = mPayload;
-  }
-
-  /**
-   **/
-  @ApiModelProperty(value = "")
   public CommonResponseObjDebugPayload getObjDebugPayload() {
     return objDebugPayload;
   }
@@ -61,6 +51,16 @@ public class EzsignbulksendtransmissionGetObjectV2Response {
     this.objDebug = objDebug;
   }
 
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public EzsignbulksendtransmissionGetObjectV2ResponseMPayload getMPayload() {
+    return mPayload;
+  }
+  public void setMPayload(EzsignbulksendtransmissionGetObjectV2ResponseMPayload mPayload) {
+    this.mPayload = mPayload;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -71,17 +71,17 @@ public class EzsignbulksendtransmissionGetObjectV2Response {
       return false;
     }
     EzsignbulksendtransmissionGetObjectV2Response ezsignbulksendtransmissionGetObjectV2Response = (EzsignbulksendtransmissionGetObjectV2Response) o;
-    return (this.mPayload == null ? ezsignbulksendtransmissionGetObjectV2Response.mPayload == null : this.mPayload.equals(ezsignbulksendtransmissionGetObjectV2Response.mPayload)) &&
-        (this.objDebugPayload == null ? ezsignbulksendtransmissionGetObjectV2Response.objDebugPayload == null : this.objDebugPayload.equals(ezsignbulksendtransmissionGetObjectV2Response.objDebugPayload)) &&
-        (this.objDebug == null ? ezsignbulksendtransmissionGetObjectV2Response.objDebug == null : this.objDebug.equals(ezsignbulksendtransmissionGetObjectV2Response.objDebug));
+    return (this.objDebugPayload == null ? ezsignbulksendtransmissionGetObjectV2Response.objDebugPayload == null : this.objDebugPayload.equals(ezsignbulksendtransmissionGetObjectV2Response.objDebugPayload)) &&
+        (this.objDebug == null ? ezsignbulksendtransmissionGetObjectV2Response.objDebug == null : this.objDebug.equals(ezsignbulksendtransmissionGetObjectV2Response.objDebug)) &&
+        (this.mPayload == null ? ezsignbulksendtransmissionGetObjectV2Response.mPayload == null : this.mPayload.equals(ezsignbulksendtransmissionGetObjectV2Response.mPayload));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.mPayload == null ? 0: this.mPayload.hashCode());
     result = 31 * result + (this.objDebugPayload == null ? 0: this.objDebugPayload.hashCode());
     result = 31 * result + (this.objDebug == null ? 0: this.objDebug.hashCode());
+    result = 31 * result + (this.mPayload == null ? 0: this.mPayload.hashCode());
     return result;
   }
 
@@ -90,9 +90,9 @@ public class EzsignbulksendtransmissionGetObjectV2Response {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignbulksendtransmissionGetObjectV2Response {\n");
     
-    sb.append("  mPayload: ").append(mPayload).append("\n");
     sb.append("  objDebugPayload: ").append(objDebugPayload).append("\n");
     sb.append("  objDebug: ").append(objDebug).append("\n");
+    sb.append("  mPayload: ").append(mPayload).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

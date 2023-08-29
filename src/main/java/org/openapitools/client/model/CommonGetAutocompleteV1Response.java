@@ -25,27 +25,16 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Response for GET /1/object/xxx/getAutocomplete")
 public class CommonGetAutocompleteV1Response {
   
-  @SerializedName("mPayload")
-  private List<CustomAutocompleteElementResponse> mPayload = null;
   @SerializedName("objDebugPayload")
   private CommonResponseObjDebugPayload objDebugPayload = null;
   @SerializedName("objDebug")
   private CommonResponseObjDebug objDebug = null;
-
-  /**
-   * Generic Autocomplete Response
-   **/
-  @ApiModelProperty(required = true, value = "Generic Autocomplete Response")
-  public List<CustomAutocompleteElementResponse> getMPayload() {
-    return mPayload;
-  }
-  public void setMPayload(List<CustomAutocompleteElementResponse> mPayload) {
-    this.mPayload = mPayload;
-  }
+  @SerializedName("mPayload")
+  private List<CustomAutocompleteElementResponse> mPayload = null;
 
   /**
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "")
   public CommonResponseObjDebugPayload getObjDebugPayload() {
     return objDebugPayload;
   }
@@ -63,6 +52,17 @@ public class CommonGetAutocompleteV1Response {
     this.objDebug = objDebug;
   }
 
+  /**
+   * Generic Autocomplete Response
+   **/
+  @ApiModelProperty(required = true, value = "Generic Autocomplete Response")
+  public List<CustomAutocompleteElementResponse> getMPayload() {
+    return mPayload;
+  }
+  public void setMPayload(List<CustomAutocompleteElementResponse> mPayload) {
+    this.mPayload = mPayload;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -73,17 +73,17 @@ public class CommonGetAutocompleteV1Response {
       return false;
     }
     CommonGetAutocompleteV1Response commonGetAutocompleteV1Response = (CommonGetAutocompleteV1Response) o;
-    return (this.mPayload == null ? commonGetAutocompleteV1Response.mPayload == null : this.mPayload.equals(commonGetAutocompleteV1Response.mPayload)) &&
-        (this.objDebugPayload == null ? commonGetAutocompleteV1Response.objDebugPayload == null : this.objDebugPayload.equals(commonGetAutocompleteV1Response.objDebugPayload)) &&
-        (this.objDebug == null ? commonGetAutocompleteV1Response.objDebug == null : this.objDebug.equals(commonGetAutocompleteV1Response.objDebug));
+    return (this.objDebugPayload == null ? commonGetAutocompleteV1Response.objDebugPayload == null : this.objDebugPayload.equals(commonGetAutocompleteV1Response.objDebugPayload)) &&
+        (this.objDebug == null ? commonGetAutocompleteV1Response.objDebug == null : this.objDebug.equals(commonGetAutocompleteV1Response.objDebug)) &&
+        (this.mPayload == null ? commonGetAutocompleteV1Response.mPayload == null : this.mPayload.equals(commonGetAutocompleteV1Response.mPayload));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.mPayload == null ? 0: this.mPayload.hashCode());
     result = 31 * result + (this.objDebugPayload == null ? 0: this.objDebugPayload.hashCode());
     result = 31 * result + (this.objDebug == null ? 0: this.objDebug.hashCode());
+    result = 31 * result + (this.mPayload == null ? 0: this.mPayload.hashCode());
     return result;
   }
 
@@ -92,9 +92,9 @@ public class CommonGetAutocompleteV1Response {
     StringBuilder sb = new StringBuilder();
     sb.append("class CommonGetAutocompleteV1Response {\n");
     
-    sb.append("  mPayload: ").append(mPayload).append("\n");
     sb.append("  objDebugPayload: ").append(objDebugPayload).append("\n");
     sb.append("  objDebug: ").append(objDebug).append("\n");
+    sb.append("  mPayload: ").append(mPayload).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

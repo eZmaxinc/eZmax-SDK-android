@@ -23,22 +23,12 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Payload for GET /1/object/branding/getList")
 public class BrandingGetListV1ResponseMPayload {
   
-  @SerializedName("a_objBranding")
-  private List<BrandingListElement> aObjBranding = null;
   @SerializedName("iRowReturned")
   private Integer iRowReturned = null;
   @SerializedName("iRowFiltered")
   private Integer iRowFiltered = null;
-
-  /**
-   **/
-  @ApiModelProperty(required = true, value = "")
-  public List<BrandingListElement> getAObjBranding() {
-    return aObjBranding;
-  }
-  public void setAObjBranding(List<BrandingListElement> aObjBranding) {
-    this.aObjBranding = aObjBranding;
-  }
+  @SerializedName("a_objBranding")
+  private List<BrandingListElement> aObjBranding = null;
 
   /**
    * The number of rows returned
@@ -62,6 +52,16 @@ public class BrandingGetListV1ResponseMPayload {
     this.iRowFiltered = iRowFiltered;
   }
 
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public List<BrandingListElement> getAObjBranding() {
+    return aObjBranding;
+  }
+  public void setAObjBranding(List<BrandingListElement> aObjBranding) {
+    this.aObjBranding = aObjBranding;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -72,17 +72,17 @@ public class BrandingGetListV1ResponseMPayload {
       return false;
     }
     BrandingGetListV1ResponseMPayload brandingGetListV1ResponseMPayload = (BrandingGetListV1ResponseMPayload) o;
-    return (this.aObjBranding == null ? brandingGetListV1ResponseMPayload.aObjBranding == null : this.aObjBranding.equals(brandingGetListV1ResponseMPayload.aObjBranding)) &&
-        (this.iRowReturned == null ? brandingGetListV1ResponseMPayload.iRowReturned == null : this.iRowReturned.equals(brandingGetListV1ResponseMPayload.iRowReturned)) &&
-        (this.iRowFiltered == null ? brandingGetListV1ResponseMPayload.iRowFiltered == null : this.iRowFiltered.equals(brandingGetListV1ResponseMPayload.iRowFiltered));
+    return (this.iRowReturned == null ? brandingGetListV1ResponseMPayload.iRowReturned == null : this.iRowReturned.equals(brandingGetListV1ResponseMPayload.iRowReturned)) &&
+        (this.iRowFiltered == null ? brandingGetListV1ResponseMPayload.iRowFiltered == null : this.iRowFiltered.equals(brandingGetListV1ResponseMPayload.iRowFiltered)) &&
+        (this.aObjBranding == null ? brandingGetListV1ResponseMPayload.aObjBranding == null : this.aObjBranding.equals(brandingGetListV1ResponseMPayload.aObjBranding));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.aObjBranding == null ? 0: this.aObjBranding.hashCode());
     result = 31 * result + (this.iRowReturned == null ? 0: this.iRowReturned.hashCode());
     result = 31 * result + (this.iRowFiltered == null ? 0: this.iRowFiltered.hashCode());
+    result = 31 * result + (this.aObjBranding == null ? 0: this.aObjBranding.hashCode());
     return result;
   }
 
@@ -91,9 +91,9 @@ public class BrandingGetListV1ResponseMPayload {
     StringBuilder sb = new StringBuilder();
     sb.append("class BrandingGetListV1ResponseMPayload {\n");
     
-    sb.append("  aObjBranding: ").append(aObjBranding).append("\n");
     sb.append("  iRowReturned: ").append(iRowReturned).append("\n");
     sb.append("  iRowFiltered: ").append(iRowFiltered).append("\n");
+    sb.append("  aObjBranding: ").append(aObjBranding).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

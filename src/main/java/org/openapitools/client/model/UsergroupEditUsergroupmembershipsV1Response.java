@@ -24,26 +24,16 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Response for PUT /1/object/usergroup/{pkiUsergroupID}/editUsergroupmemberships")
 public class UsergroupEditUsergroupmembershipsV1Response {
   
-  @SerializedName("mPayload")
-  private UsergroupEditUsergroupmembershipsV1ResponseMPayload mPayload = null;
   @SerializedName("objDebugPayload")
   private CommonResponseObjDebugPayload objDebugPayload = null;
   @SerializedName("objDebug")
   private CommonResponseObjDebug objDebug = null;
+  @SerializedName("mPayload")
+  private UsergroupEditUsergroupmembershipsV1ResponseMPayload mPayload = null;
 
   /**
    **/
   @ApiModelProperty(required = true, value = "")
-  public UsergroupEditUsergroupmembershipsV1ResponseMPayload getMPayload() {
-    return mPayload;
-  }
-  public void setMPayload(UsergroupEditUsergroupmembershipsV1ResponseMPayload mPayload) {
-    this.mPayload = mPayload;
-  }
-
-  /**
-   **/
-  @ApiModelProperty(value = "")
   public CommonResponseObjDebugPayload getObjDebugPayload() {
     return objDebugPayload;
   }
@@ -61,6 +51,16 @@ public class UsergroupEditUsergroupmembershipsV1Response {
     this.objDebug = objDebug;
   }
 
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public UsergroupEditUsergroupmembershipsV1ResponseMPayload getMPayload() {
+    return mPayload;
+  }
+  public void setMPayload(UsergroupEditUsergroupmembershipsV1ResponseMPayload mPayload) {
+    this.mPayload = mPayload;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -71,17 +71,17 @@ public class UsergroupEditUsergroupmembershipsV1Response {
       return false;
     }
     UsergroupEditUsergroupmembershipsV1Response usergroupEditUsergroupmembershipsV1Response = (UsergroupEditUsergroupmembershipsV1Response) o;
-    return (this.mPayload == null ? usergroupEditUsergroupmembershipsV1Response.mPayload == null : this.mPayload.equals(usergroupEditUsergroupmembershipsV1Response.mPayload)) &&
-        (this.objDebugPayload == null ? usergroupEditUsergroupmembershipsV1Response.objDebugPayload == null : this.objDebugPayload.equals(usergroupEditUsergroupmembershipsV1Response.objDebugPayload)) &&
-        (this.objDebug == null ? usergroupEditUsergroupmembershipsV1Response.objDebug == null : this.objDebug.equals(usergroupEditUsergroupmembershipsV1Response.objDebug));
+    return (this.objDebugPayload == null ? usergroupEditUsergroupmembershipsV1Response.objDebugPayload == null : this.objDebugPayload.equals(usergroupEditUsergroupmembershipsV1Response.objDebugPayload)) &&
+        (this.objDebug == null ? usergroupEditUsergroupmembershipsV1Response.objDebug == null : this.objDebug.equals(usergroupEditUsergroupmembershipsV1Response.objDebug)) &&
+        (this.mPayload == null ? usergroupEditUsergroupmembershipsV1Response.mPayload == null : this.mPayload.equals(usergroupEditUsergroupmembershipsV1Response.mPayload));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.mPayload == null ? 0: this.mPayload.hashCode());
     result = 31 * result + (this.objDebugPayload == null ? 0: this.objDebugPayload.hashCode());
     result = 31 * result + (this.objDebug == null ? 0: this.objDebug.hashCode());
+    result = 31 * result + (this.mPayload == null ? 0: this.mPayload.hashCode());
     return result;
   }
 
@@ -90,9 +90,9 @@ public class UsergroupEditUsergroupmembershipsV1Response {
     StringBuilder sb = new StringBuilder();
     sb.append("class UsergroupEditUsergroupmembershipsV1Response {\n");
     
-    sb.append("  mPayload: ").append(mPayload).append("\n");
     sb.append("  objDebugPayload: ").append(objDebugPayload).append("\n");
     sb.append("  objDebug: ").append(objDebug).append("\n");
+    sb.append("  mPayload: ").append(mPayload).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

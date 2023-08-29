@@ -25,27 +25,16 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Response for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions")
 public class EzsigndocumentGetWordsPositionsV1Response {
   
-  @SerializedName("mPayload")
-  private List<CustomWordPositionWordResponse> mPayload = null;
   @SerializedName("objDebugPayload")
   private CommonResponseObjDebugPayload objDebugPayload = null;
   @SerializedName("objDebug")
   private CommonResponseObjDebug objDebug = null;
-
-  /**
-   * Payload for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions
-   **/
-  @ApiModelProperty(required = true, value = "Payload for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions")
-  public List<CustomWordPositionWordResponse> getMPayload() {
-    return mPayload;
-  }
-  public void setMPayload(List<CustomWordPositionWordResponse> mPayload) {
-    this.mPayload = mPayload;
-  }
+  @SerializedName("mPayload")
+  private List<CustomWordPositionWordResponse> mPayload = null;
 
   /**
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "")
   public CommonResponseObjDebugPayload getObjDebugPayload() {
     return objDebugPayload;
   }
@@ -63,6 +52,17 @@ public class EzsigndocumentGetWordsPositionsV1Response {
     this.objDebug = objDebug;
   }
 
+  /**
+   * Payload for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions
+   **/
+  @ApiModelProperty(required = true, value = "Payload for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions")
+  public List<CustomWordPositionWordResponse> getMPayload() {
+    return mPayload;
+  }
+  public void setMPayload(List<CustomWordPositionWordResponse> mPayload) {
+    this.mPayload = mPayload;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -73,17 +73,17 @@ public class EzsigndocumentGetWordsPositionsV1Response {
       return false;
     }
     EzsigndocumentGetWordsPositionsV1Response ezsigndocumentGetWordsPositionsV1Response = (EzsigndocumentGetWordsPositionsV1Response) o;
-    return (this.mPayload == null ? ezsigndocumentGetWordsPositionsV1Response.mPayload == null : this.mPayload.equals(ezsigndocumentGetWordsPositionsV1Response.mPayload)) &&
-        (this.objDebugPayload == null ? ezsigndocumentGetWordsPositionsV1Response.objDebugPayload == null : this.objDebugPayload.equals(ezsigndocumentGetWordsPositionsV1Response.objDebugPayload)) &&
-        (this.objDebug == null ? ezsigndocumentGetWordsPositionsV1Response.objDebug == null : this.objDebug.equals(ezsigndocumentGetWordsPositionsV1Response.objDebug));
+    return (this.objDebugPayload == null ? ezsigndocumentGetWordsPositionsV1Response.objDebugPayload == null : this.objDebugPayload.equals(ezsigndocumentGetWordsPositionsV1Response.objDebugPayload)) &&
+        (this.objDebug == null ? ezsigndocumentGetWordsPositionsV1Response.objDebug == null : this.objDebug.equals(ezsigndocumentGetWordsPositionsV1Response.objDebug)) &&
+        (this.mPayload == null ? ezsigndocumentGetWordsPositionsV1Response.mPayload == null : this.mPayload.equals(ezsigndocumentGetWordsPositionsV1Response.mPayload));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.mPayload == null ? 0: this.mPayload.hashCode());
     result = 31 * result + (this.objDebugPayload == null ? 0: this.objDebugPayload.hashCode());
     result = 31 * result + (this.objDebug == null ? 0: this.objDebug.hashCode());
+    result = 31 * result + (this.mPayload == null ? 0: this.mPayload.hashCode());
     return result;
   }
 
@@ -92,9 +92,9 @@ public class EzsigndocumentGetWordsPositionsV1Response {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsigndocumentGetWordsPositionsV1Response {\n");
     
-    sb.append("  mPayload: ").append(mPayload).append("\n");
     sb.append("  objDebugPayload: ").append(objDebugPayload).append("\n");
     sb.append("  objDebug: ").append(objDebug).append("\n");
+    sb.append("  mPayload: ").append(mPayload).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

@@ -24,10 +24,6 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "A custom Webhook object")
 public class CustomWebhookResponse {
   
-  @SerializedName("pksCustomerCode")
-  private String pksCustomerCode = null;
-  @SerializedName("bWebhookTest")
-  private Boolean bWebhookTest = null;
   @SerializedName("pkiWebhookID")
   private Integer pkiWebhookID = null;
   @SerializedName("sWebhookDescription")
@@ -50,28 +46,10 @@ public class CustomWebhookResponse {
   private Boolean bWebhookIsactive = null;
   @SerializedName("bWebhookSkipsslvalidation")
   private Boolean bWebhookSkipsslvalidation = null;
-
-  /**
-   * The customer code assigned to your account
-   **/
-  @ApiModelProperty(required = true, value = "The customer code assigned to your account")
-  public String getPksCustomerCode() {
-    return pksCustomerCode;
-  }
-  public void setPksCustomerCode(String pksCustomerCode) {
-    this.pksCustomerCode = pksCustomerCode;
-  }
-
-  /**
-   * Wheter the webhook received is a manual test or a real event
-   **/
-  @ApiModelProperty(required = true, value = "Wheter the webhook received is a manual test or a real event")
-  public Boolean getBWebhookTest() {
-    return bWebhookTest;
-  }
-  public void setBWebhookTest(Boolean bWebhookTest) {
-    this.bWebhookTest = bWebhookTest;
-  }
+  @SerializedName("pksCustomerCode")
+  private String pksCustomerCode = null;
+  @SerializedName("bWebhookTest")
+  private Boolean bWebhookTest = null;
 
   /**
    * The unique ID of the Webhook
@@ -192,6 +170,28 @@ public class CustomWebhookResponse {
     this.bWebhookSkipsslvalidation = bWebhookSkipsslvalidation;
   }
 
+  /**
+   * The customer code assigned to your account
+   **/
+  @ApiModelProperty(required = true, value = "The customer code assigned to your account")
+  public String getPksCustomerCode() {
+    return pksCustomerCode;
+  }
+  public void setPksCustomerCode(String pksCustomerCode) {
+    this.pksCustomerCode = pksCustomerCode;
+  }
+
+  /**
+   * Wheter the webhook received is a manual test or a real event
+   **/
+  @ApiModelProperty(required = true, value = "Wheter the webhook received is a manual test or a real event")
+  public Boolean getBWebhookTest() {
+    return bWebhookTest;
+  }
+  public void setBWebhookTest(Boolean bWebhookTest) {
+    this.bWebhookTest = bWebhookTest;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -202,9 +202,7 @@ public class CustomWebhookResponse {
       return false;
     }
     CustomWebhookResponse customWebhookResponse = (CustomWebhookResponse) o;
-    return (this.pksCustomerCode == null ? customWebhookResponse.pksCustomerCode == null : this.pksCustomerCode.equals(customWebhookResponse.pksCustomerCode)) &&
-        (this.bWebhookTest == null ? customWebhookResponse.bWebhookTest == null : this.bWebhookTest.equals(customWebhookResponse.bWebhookTest)) &&
-        (this.pkiWebhookID == null ? customWebhookResponse.pkiWebhookID == null : this.pkiWebhookID.equals(customWebhookResponse.pkiWebhookID)) &&
+    return (this.pkiWebhookID == null ? customWebhookResponse.pkiWebhookID == null : this.pkiWebhookID.equals(customWebhookResponse.pkiWebhookID)) &&
         (this.sWebhookDescription == null ? customWebhookResponse.sWebhookDescription == null : this.sWebhookDescription.equals(customWebhookResponse.sWebhookDescription)) &&
         (this.fkiEzsignfoldertypeID == null ? customWebhookResponse.fkiEzsignfoldertypeID == null : this.fkiEzsignfoldertypeID.equals(customWebhookResponse.fkiEzsignfoldertypeID)) &&
         (this.sEzsignfoldertypeNameX == null ? customWebhookResponse.sEzsignfoldertypeNameX == null : this.sEzsignfoldertypeNameX.equals(customWebhookResponse.sEzsignfoldertypeNameX)) &&
@@ -214,14 +212,14 @@ public class CustomWebhookResponse {
         (this.sWebhookUrl == null ? customWebhookResponse.sWebhookUrl == null : this.sWebhookUrl.equals(customWebhookResponse.sWebhookUrl)) &&
         (this.sWebhookEmailfailed == null ? customWebhookResponse.sWebhookEmailfailed == null : this.sWebhookEmailfailed.equals(customWebhookResponse.sWebhookEmailfailed)) &&
         (this.bWebhookIsactive == null ? customWebhookResponse.bWebhookIsactive == null : this.bWebhookIsactive.equals(customWebhookResponse.bWebhookIsactive)) &&
-        (this.bWebhookSkipsslvalidation == null ? customWebhookResponse.bWebhookSkipsslvalidation == null : this.bWebhookSkipsslvalidation.equals(customWebhookResponse.bWebhookSkipsslvalidation));
+        (this.bWebhookSkipsslvalidation == null ? customWebhookResponse.bWebhookSkipsslvalidation == null : this.bWebhookSkipsslvalidation.equals(customWebhookResponse.bWebhookSkipsslvalidation)) &&
+        (this.pksCustomerCode == null ? customWebhookResponse.pksCustomerCode == null : this.pksCustomerCode.equals(customWebhookResponse.pksCustomerCode)) &&
+        (this.bWebhookTest == null ? customWebhookResponse.bWebhookTest == null : this.bWebhookTest.equals(customWebhookResponse.bWebhookTest));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.pksCustomerCode == null ? 0: this.pksCustomerCode.hashCode());
-    result = 31 * result + (this.bWebhookTest == null ? 0: this.bWebhookTest.hashCode());
     result = 31 * result + (this.pkiWebhookID == null ? 0: this.pkiWebhookID.hashCode());
     result = 31 * result + (this.sWebhookDescription == null ? 0: this.sWebhookDescription.hashCode());
     result = 31 * result + (this.fkiEzsignfoldertypeID == null ? 0: this.fkiEzsignfoldertypeID.hashCode());
@@ -233,6 +231,8 @@ public class CustomWebhookResponse {
     result = 31 * result + (this.sWebhookEmailfailed == null ? 0: this.sWebhookEmailfailed.hashCode());
     result = 31 * result + (this.bWebhookIsactive == null ? 0: this.bWebhookIsactive.hashCode());
     result = 31 * result + (this.bWebhookSkipsslvalidation == null ? 0: this.bWebhookSkipsslvalidation.hashCode());
+    result = 31 * result + (this.pksCustomerCode == null ? 0: this.pksCustomerCode.hashCode());
+    result = 31 * result + (this.bWebhookTest == null ? 0: this.bWebhookTest.hashCode());
     return result;
   }
 
@@ -241,8 +241,6 @@ public class CustomWebhookResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class CustomWebhookResponse {\n");
     
-    sb.append("  pksCustomerCode: ").append(pksCustomerCode).append("\n");
-    sb.append("  bWebhookTest: ").append(bWebhookTest).append("\n");
     sb.append("  pkiWebhookID: ").append(pkiWebhookID).append("\n");
     sb.append("  sWebhookDescription: ").append(sWebhookDescription).append("\n");
     sb.append("  fkiEzsignfoldertypeID: ").append(fkiEzsignfoldertypeID).append("\n");
@@ -254,6 +252,8 @@ public class CustomWebhookResponse {
     sb.append("  sWebhookEmailfailed: ").append(sWebhookEmailfailed).append("\n");
     sb.append("  bWebhookIsactive: ").append(bWebhookIsactive).append("\n");
     sb.append("  bWebhookSkipsslvalidation: ").append(bWebhookSkipsslvalidation).append("\n");
+    sb.append("  pksCustomerCode: ").append(pksCustomerCode).append("\n");
+    sb.append("  bWebhookTest: ").append(bWebhookTest).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

@@ -32,12 +32,15 @@ import org.openapitools.client.model.UsergroupEditObjectV1Request;
 import org.openapitools.client.model.UsergroupEditObjectV1Response;
 import org.openapitools.client.model.UsergroupEditPermissionsV1Request;
 import org.openapitools.client.model.UsergroupEditPermissionsV1Response;
+import org.openapitools.client.model.UsergroupEditUsergroupdelegationsV1Request;
+import org.openapitools.client.model.UsergroupEditUsergroupdelegationsV1Response;
 import org.openapitools.client.model.UsergroupEditUsergroupmembershipsV1Request;
 import org.openapitools.client.model.UsergroupEditUsergroupmembershipsV1Response;
 import org.openapitools.client.model.UsergroupGetAutocompleteV2Response;
 import org.openapitools.client.model.UsergroupGetListV1Response;
 import org.openapitools.client.model.UsergroupGetObjectV2Response;
 import org.openapitools.client.model.UsergroupGetPermissionsV1Response;
+import org.openapitools.client.model.UsergroupGetUsergroupdelegationsV1Response;
 import org.openapitools.client.model.UsergroupGetUsergroupmembershipsV1Response;
 
 import org.apache.http.HttpEntity;
@@ -462,6 +465,145 @@ public class ObjectUsergroupApi {
           public void onResponse(String localVarResponse) {
             try {
               responseListener.onResponse((UsergroupEditPermissionsV1Response) ApiInvoker.deserialize(localVarResponse,  "", UsergroupEditPermissionsV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Edit multiple Usergroupdelegations
+  * Edit multiple Usergroupdelegations
+   * @param pkiUsergroupID 
+   * @param usergroupEditUsergroupdelegationsV1Request 
+   * @return UsergroupEditUsergroupdelegationsV1Response
+  */
+  public UsergroupEditUsergroupdelegationsV1Response usergroupEditUsergroupdelegationsV1 (Integer pkiUsergroupID, UsergroupEditUsergroupdelegationsV1Request usergroupEditUsergroupdelegationsV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = usergroupEditUsergroupdelegationsV1Request;
+    // verify the required parameter 'pkiUsergroupID' is set
+    if (pkiUsergroupID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiUsergroupID' when calling usergroupEditUsergroupdelegationsV1",
+        new ApiException(400, "Missing the required parameter 'pkiUsergroupID' when calling usergroupEditUsergroupdelegationsV1"));
+    }
+    // verify the required parameter 'usergroupEditUsergroupdelegationsV1Request' is set
+    if (usergroupEditUsergroupdelegationsV1Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'usergroupEditUsergroupdelegationsV1Request' when calling usergroupEditUsergroupdelegationsV1",
+        new ApiException(400, "Missing the required parameter 'usergroupEditUsergroupdelegationsV1Request' when calling usergroupEditUsergroupdelegationsV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/usergroup/{pkiUsergroupID}/editUsergroupdelegations".replaceAll("\\{" + "pkiUsergroupID" + "\\}", apiInvoker.escapeString(pkiUsergroupID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (UsergroupEditUsergroupdelegationsV1Response) ApiInvoker.deserialize(localVarResponse, "", UsergroupEditUsergroupdelegationsV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Edit multiple Usergroupdelegations
+   * Edit multiple Usergroupdelegations
+   * @param pkiUsergroupID    * @param usergroupEditUsergroupdelegationsV1Request 
+  */
+  public void usergroupEditUsergroupdelegationsV1 (Integer pkiUsergroupID, UsergroupEditUsergroupdelegationsV1Request usergroupEditUsergroupdelegationsV1Request, final Response.Listener<UsergroupEditUsergroupdelegationsV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = usergroupEditUsergroupdelegationsV1Request;
+
+    // verify the required parameter 'pkiUsergroupID' is set
+    if (pkiUsergroupID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiUsergroupID' when calling usergroupEditUsergroupdelegationsV1",
+        new ApiException(400, "Missing the required parameter 'pkiUsergroupID' when calling usergroupEditUsergroupdelegationsV1"));
+    }
+    // verify the required parameter 'usergroupEditUsergroupdelegationsV1Request' is set
+    if (usergroupEditUsergroupdelegationsV1Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'usergroupEditUsergroupdelegationsV1Request' when calling usergroupEditUsergroupdelegationsV1",
+        new ApiException(400, "Missing the required parameter 'usergroupEditUsergroupdelegationsV1Request' when calling usergroupEditUsergroupdelegationsV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/usergroup/{pkiUsergroupID}/editUsergroupdelegations".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiUsergroupID" + "\\}", apiInvoker.escapeString(pkiUsergroupID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((UsergroupEditUsergroupdelegationsV1Response) ApiInvoker.deserialize(localVarResponse,  "", UsergroupEditUsergroupdelegationsV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -1122,6 +1264,133 @@ public class ObjectUsergroupApi {
           public void onResponse(String localVarResponse) {
             try {
               responseListener.onResponse((UsergroupGetPermissionsV1Response) ApiInvoker.deserialize(localVarResponse,  "", UsergroupGetPermissionsV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Retrieve an existing Usergroup&#39;s Usergroupdelegations
+  * 
+   * @param pkiUsergroupID 
+   * @return UsergroupGetUsergroupdelegationsV1Response
+  */
+  public UsergroupGetUsergroupdelegationsV1Response usergroupGetUsergroupdelegationsV1 (Integer pkiUsergroupID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiUsergroupID' is set
+    if (pkiUsergroupID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiUsergroupID' when calling usergroupGetUsergroupdelegationsV1",
+        new ApiException(400, "Missing the required parameter 'pkiUsergroupID' when calling usergroupGetUsergroupdelegationsV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/usergroup/{pkiUsergroupID}/getUsergroupdelegations".replaceAll("\\{" + "pkiUsergroupID" + "\\}", apiInvoker.escapeString(pkiUsergroupID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (UsergroupGetUsergroupdelegationsV1Response) ApiInvoker.deserialize(localVarResponse, "", UsergroupGetUsergroupdelegationsV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve an existing Usergroup&#39;s Usergroupdelegations
+   * 
+   * @param pkiUsergroupID 
+  */
+  public void usergroupGetUsergroupdelegationsV1 (Integer pkiUsergroupID, final Response.Listener<UsergroupGetUsergroupdelegationsV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiUsergroupID' is set
+    if (pkiUsergroupID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiUsergroupID' when calling usergroupGetUsergroupdelegationsV1",
+        new ApiException(400, "Missing the required parameter 'pkiUsergroupID' when calling usergroupGetUsergroupdelegationsV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/usergroup/{pkiUsergroupID}/getUsergroupdelegations".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiUsergroupID" + "\\}", apiInvoker.escapeString(pkiUsergroupID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((UsergroupGetUsergroupdelegationsV1Response) ApiInvoker.deserialize(localVarResponse,  "", UsergroupGetUsergroupdelegationsV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

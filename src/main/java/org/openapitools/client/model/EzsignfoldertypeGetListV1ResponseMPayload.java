@@ -23,23 +23,12 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Payload for GET /1/object/ezsignfoldertype/getList")
 public class EzsignfoldertypeGetListV1ResponseMPayload {
   
-  @SerializedName("a_objEzsignfoldertype")
-  private List<EzsignfoldertypeListElement> aObjEzsignfoldertype = null;
   @SerializedName("iRowReturned")
   private Integer iRowReturned = null;
   @SerializedName("iRowFiltered")
   private Integer iRowFiltered = null;
-
-  /**
-   * 
-   **/
-  @ApiModelProperty(required = true, value = "")
-  public List<EzsignfoldertypeListElement> getAObjEzsignfoldertype() {
-    return aObjEzsignfoldertype;
-  }
-  public void setAObjEzsignfoldertype(List<EzsignfoldertypeListElement> aObjEzsignfoldertype) {
-    this.aObjEzsignfoldertype = aObjEzsignfoldertype;
-  }
+  @SerializedName("a_objEzsignfoldertype")
+  private List<EzsignfoldertypeListElement> aObjEzsignfoldertype = null;
 
   /**
    * The number of rows returned
@@ -63,6 +52,17 @@ public class EzsignfoldertypeGetListV1ResponseMPayload {
     this.iRowFiltered = iRowFiltered;
   }
 
+  /**
+   * 
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public List<EzsignfoldertypeListElement> getAObjEzsignfoldertype() {
+    return aObjEzsignfoldertype;
+  }
+  public void setAObjEzsignfoldertype(List<EzsignfoldertypeListElement> aObjEzsignfoldertype) {
+    this.aObjEzsignfoldertype = aObjEzsignfoldertype;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -73,17 +73,17 @@ public class EzsignfoldertypeGetListV1ResponseMPayload {
       return false;
     }
     EzsignfoldertypeGetListV1ResponseMPayload ezsignfoldertypeGetListV1ResponseMPayload = (EzsignfoldertypeGetListV1ResponseMPayload) o;
-    return (this.aObjEzsignfoldertype == null ? ezsignfoldertypeGetListV1ResponseMPayload.aObjEzsignfoldertype == null : this.aObjEzsignfoldertype.equals(ezsignfoldertypeGetListV1ResponseMPayload.aObjEzsignfoldertype)) &&
-        (this.iRowReturned == null ? ezsignfoldertypeGetListV1ResponseMPayload.iRowReturned == null : this.iRowReturned.equals(ezsignfoldertypeGetListV1ResponseMPayload.iRowReturned)) &&
-        (this.iRowFiltered == null ? ezsignfoldertypeGetListV1ResponseMPayload.iRowFiltered == null : this.iRowFiltered.equals(ezsignfoldertypeGetListV1ResponseMPayload.iRowFiltered));
+    return (this.iRowReturned == null ? ezsignfoldertypeGetListV1ResponseMPayload.iRowReturned == null : this.iRowReturned.equals(ezsignfoldertypeGetListV1ResponseMPayload.iRowReturned)) &&
+        (this.iRowFiltered == null ? ezsignfoldertypeGetListV1ResponseMPayload.iRowFiltered == null : this.iRowFiltered.equals(ezsignfoldertypeGetListV1ResponseMPayload.iRowFiltered)) &&
+        (this.aObjEzsignfoldertype == null ? ezsignfoldertypeGetListV1ResponseMPayload.aObjEzsignfoldertype == null : this.aObjEzsignfoldertype.equals(ezsignfoldertypeGetListV1ResponseMPayload.aObjEzsignfoldertype));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.aObjEzsignfoldertype == null ? 0: this.aObjEzsignfoldertype.hashCode());
     result = 31 * result + (this.iRowReturned == null ? 0: this.iRowReturned.hashCode());
     result = 31 * result + (this.iRowFiltered == null ? 0: this.iRowFiltered.hashCode());
+    result = 31 * result + (this.aObjEzsignfoldertype == null ? 0: this.aObjEzsignfoldertype.hashCode());
     return result;
   }
 
@@ -92,9 +92,9 @@ public class EzsignfoldertypeGetListV1ResponseMPayload {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignfoldertypeGetListV1ResponseMPayload {\n");
     
-    sb.append("  aObjEzsignfoldertype: ").append(aObjEzsignfoldertype).append("\n");
     sb.append("  iRowReturned: ").append(iRowReturned).append("\n");
     sb.append("  iRowFiltered: ").append(iRowFiltered).append("\n");
+    sb.append("  aObjEzsignfoldertype: ").append(aObjEzsignfoldertype).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

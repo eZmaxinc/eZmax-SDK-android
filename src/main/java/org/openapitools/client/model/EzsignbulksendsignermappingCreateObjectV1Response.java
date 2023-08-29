@@ -24,26 +24,16 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Response for POST /1/object/ezsignbulksendsignermapping")
 public class EzsignbulksendsignermappingCreateObjectV1Response {
   
-  @SerializedName("mPayload")
-  private EzsignbulksendsignermappingCreateObjectV1ResponseMPayload mPayload = null;
   @SerializedName("objDebugPayload")
   private CommonResponseObjDebugPayload objDebugPayload = null;
   @SerializedName("objDebug")
   private CommonResponseObjDebug objDebug = null;
+  @SerializedName("mPayload")
+  private EzsignbulksendsignermappingCreateObjectV1ResponseMPayload mPayload = null;
 
   /**
    **/
   @ApiModelProperty(required = true, value = "")
-  public EzsignbulksendsignermappingCreateObjectV1ResponseMPayload getMPayload() {
-    return mPayload;
-  }
-  public void setMPayload(EzsignbulksendsignermappingCreateObjectV1ResponseMPayload mPayload) {
-    this.mPayload = mPayload;
-  }
-
-  /**
-   **/
-  @ApiModelProperty(value = "")
   public CommonResponseObjDebugPayload getObjDebugPayload() {
     return objDebugPayload;
   }
@@ -61,6 +51,16 @@ public class EzsignbulksendsignermappingCreateObjectV1Response {
     this.objDebug = objDebug;
   }
 
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public EzsignbulksendsignermappingCreateObjectV1ResponseMPayload getMPayload() {
+    return mPayload;
+  }
+  public void setMPayload(EzsignbulksendsignermappingCreateObjectV1ResponseMPayload mPayload) {
+    this.mPayload = mPayload;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -71,17 +71,17 @@ public class EzsignbulksendsignermappingCreateObjectV1Response {
       return false;
     }
     EzsignbulksendsignermappingCreateObjectV1Response ezsignbulksendsignermappingCreateObjectV1Response = (EzsignbulksendsignermappingCreateObjectV1Response) o;
-    return (this.mPayload == null ? ezsignbulksendsignermappingCreateObjectV1Response.mPayload == null : this.mPayload.equals(ezsignbulksendsignermappingCreateObjectV1Response.mPayload)) &&
-        (this.objDebugPayload == null ? ezsignbulksendsignermappingCreateObjectV1Response.objDebugPayload == null : this.objDebugPayload.equals(ezsignbulksendsignermappingCreateObjectV1Response.objDebugPayload)) &&
-        (this.objDebug == null ? ezsignbulksendsignermappingCreateObjectV1Response.objDebug == null : this.objDebug.equals(ezsignbulksendsignermappingCreateObjectV1Response.objDebug));
+    return (this.objDebugPayload == null ? ezsignbulksendsignermappingCreateObjectV1Response.objDebugPayload == null : this.objDebugPayload.equals(ezsignbulksendsignermappingCreateObjectV1Response.objDebugPayload)) &&
+        (this.objDebug == null ? ezsignbulksendsignermappingCreateObjectV1Response.objDebug == null : this.objDebug.equals(ezsignbulksendsignermappingCreateObjectV1Response.objDebug)) &&
+        (this.mPayload == null ? ezsignbulksendsignermappingCreateObjectV1Response.mPayload == null : this.mPayload.equals(ezsignbulksendsignermappingCreateObjectV1Response.mPayload));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.mPayload == null ? 0: this.mPayload.hashCode());
     result = 31 * result + (this.objDebugPayload == null ? 0: this.objDebugPayload.hashCode());
     result = 31 * result + (this.objDebug == null ? 0: this.objDebug.hashCode());
+    result = 31 * result + (this.mPayload == null ? 0: this.mPayload.hashCode());
     return result;
   }
 
@@ -90,9 +90,9 @@ public class EzsignbulksendsignermappingCreateObjectV1Response {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignbulksendsignermappingCreateObjectV1Response {\n");
     
-    sb.append("  mPayload: ").append(mPayload).append("\n");
     sb.append("  objDebugPayload: ").append(objDebugPayload).append("\n");
     sb.append("  objDebug: ").append(objDebug).append("\n");
+    sb.append("  mPayload: ").append(mPayload).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

@@ -24,26 +24,16 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Response for GET /1/object/usergroup/{pkiUsergroupID}/getPermissions")
 public class UsergroupGetPermissionsV1Response {
   
-  @SerializedName("mPayload")
-  private UsergroupGetPermissionsV1ResponseMPayload mPayload = null;
   @SerializedName("objDebugPayload")
   private CommonResponseObjDebugPayload objDebugPayload = null;
   @SerializedName("objDebug")
   private CommonResponseObjDebug objDebug = null;
+  @SerializedName("mPayload")
+  private UsergroupGetPermissionsV1ResponseMPayload mPayload = null;
 
   /**
    **/
   @ApiModelProperty(required = true, value = "")
-  public UsergroupGetPermissionsV1ResponseMPayload getMPayload() {
-    return mPayload;
-  }
-  public void setMPayload(UsergroupGetPermissionsV1ResponseMPayload mPayload) {
-    this.mPayload = mPayload;
-  }
-
-  /**
-   **/
-  @ApiModelProperty(value = "")
   public CommonResponseObjDebugPayload getObjDebugPayload() {
     return objDebugPayload;
   }
@@ -61,6 +51,16 @@ public class UsergroupGetPermissionsV1Response {
     this.objDebug = objDebug;
   }
 
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public UsergroupGetPermissionsV1ResponseMPayload getMPayload() {
+    return mPayload;
+  }
+  public void setMPayload(UsergroupGetPermissionsV1ResponseMPayload mPayload) {
+    this.mPayload = mPayload;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -71,17 +71,17 @@ public class UsergroupGetPermissionsV1Response {
       return false;
     }
     UsergroupGetPermissionsV1Response usergroupGetPermissionsV1Response = (UsergroupGetPermissionsV1Response) o;
-    return (this.mPayload == null ? usergroupGetPermissionsV1Response.mPayload == null : this.mPayload.equals(usergroupGetPermissionsV1Response.mPayload)) &&
-        (this.objDebugPayload == null ? usergroupGetPermissionsV1Response.objDebugPayload == null : this.objDebugPayload.equals(usergroupGetPermissionsV1Response.objDebugPayload)) &&
-        (this.objDebug == null ? usergroupGetPermissionsV1Response.objDebug == null : this.objDebug.equals(usergroupGetPermissionsV1Response.objDebug));
+    return (this.objDebugPayload == null ? usergroupGetPermissionsV1Response.objDebugPayload == null : this.objDebugPayload.equals(usergroupGetPermissionsV1Response.objDebugPayload)) &&
+        (this.objDebug == null ? usergroupGetPermissionsV1Response.objDebug == null : this.objDebug.equals(usergroupGetPermissionsV1Response.objDebug)) &&
+        (this.mPayload == null ? usergroupGetPermissionsV1Response.mPayload == null : this.mPayload.equals(usergroupGetPermissionsV1Response.mPayload));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.mPayload == null ? 0: this.mPayload.hashCode());
     result = 31 * result + (this.objDebugPayload == null ? 0: this.objDebugPayload.hashCode());
     result = 31 * result + (this.objDebug == null ? 0: this.objDebug.hashCode());
+    result = 31 * result + (this.mPayload == null ? 0: this.mPayload.hashCode());
     return result;
   }
 
@@ -90,9 +90,9 @@ public class UsergroupGetPermissionsV1Response {
     StringBuilder sb = new StringBuilder();
     sb.append("class UsergroupGetPermissionsV1Response {\n");
     
-    sb.append("  mPayload: ").append(mPayload).append("\n");
     sb.append("  objDebugPayload: ").append(objDebugPayload).append("\n");
     sb.append("  objDebug: ").append(objDebug).append("\n");
+    sb.append("  mPayload: ").append(mPayload).append("\n");
     sb.append("}\n");
     return sb.toString();
   }
