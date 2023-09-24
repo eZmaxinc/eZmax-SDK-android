@@ -165,6 +165,7 @@ docs/CustomEzsignfoldersignerassociationmineResponse.md
 docs/CustomEzsignfoldersignerassociationstatusResponse.md
 docs/CustomEzsignfoldertransmissionResponse.md
 docs/CustomEzsignfoldertransmissionSignerResponse.md
+docs/CustomEzsignfoldertypeResponse.md
 docs/CustomEzsignformfieldRequest.md
 docs/CustomEzsignformfielderrorResponse.md
 docs/CustomEzsignformfielderrortestResponse.md
@@ -1375,6 +1376,7 @@ src/main/java/org/openapitools/client/model/CustomEzsignfoldersignerassociationm
 src/main/java/org/openapitools/client/model/CustomEzsignfoldersignerassociationstatusResponse.java
 src/main/java/org/openapitools/client/model/CustomEzsignfoldertransmissionResponse.java
 src/main/java/org/openapitools/client/model/CustomEzsignfoldertransmissionSignerResponse.java
+src/main/java/org/openapitools/client/model/CustomEzsignfoldertypeResponse.java
 src/main/java/org/openapitools/client/model/CustomEzsignformfieldRequest.java
 src/main/java/org/openapitools/client/model/CustomEzsignformfielderrorResponse.java
 src/main/java/org/openapitools/client/model/CustomEzsignformfielderrortestResponse.java
