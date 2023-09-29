@@ -128,7 +128,7 @@ public class EzsignformfieldgroupRequest {
   /**
    * The default value for the Ezsignformfieldgroup
    **/
-  @ApiModelProperty(required = true, value = "The default value for the Ezsignformfieldgroup")
+  @ApiModelProperty(value = "The default value for the Ezsignformfieldgroup")
   public String getSEzsignformfieldgroupDefaultvalue() {
     return sEzsignformfieldgroupDefaultvalue;
   }

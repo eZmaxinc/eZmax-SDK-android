@@ -37,6 +37,8 @@ public class EzsigntemplateformfieldResponseCompound {
   private Integer iEzsigntemplateformfieldWidth = null;
   @SerializedName("iEzsigntemplateformfieldHeight")
   private Integer iEzsigntemplateformfieldHeight = null;
+  @SerializedName("bEzsigntemplateformfieldAutocomplete")
+  private Boolean bEzsigntemplateformfieldAutocomplete = null;
   @SerializedName("bEzsigntemplateformfieldSelected")
   private Boolean bEzsigntemplateformfieldSelected = null;
 
@@ -135,6 +137,17 @@ public class EzsigntemplateformfieldResponseCompound {
   }
 
   /**
+   * Whether the Ezsigntemplateformfield allows the use of the autocomplete of the browser.  This can only be set if eEzsigntemplateformfieldgroupType is **Text**
+   **/
+  @ApiModelProperty(value = "Whether the Ezsigntemplateformfield allows the use of the autocomplete of the browser.  This can only be set if eEzsigntemplateformfieldgroupType is **Text**")
+  public Boolean getBEzsigntemplateformfieldAutocomplete() {
+    return bEzsigntemplateformfieldAutocomplete;
+  }
+  public void setBEzsigntemplateformfieldAutocomplete(Boolean bEzsigntemplateformfieldAutocomplete) {
+    this.bEzsigntemplateformfieldAutocomplete = bEzsigntemplateformfieldAutocomplete;
+  }
+
+  /**
    * Whether the Ezsigntemplateformfield is selected or not by default.  This can only be set if eEzsigntemplateformfieldgroupType is **Checkbox** or **Radio**
    **/
   @ApiModelProperty(value = "Whether the Ezsigntemplateformfield is selected or not by default.  This can only be set if eEzsigntemplateformfieldgroupType is **Checkbox** or **Radio**")
@@ -163,6 +176,7 @@ public class EzsigntemplateformfieldResponseCompound {
         (this.iEzsigntemplateformfieldY == null ? ezsigntemplateformfieldResponseCompound.iEzsigntemplateformfieldY == null : this.iEzsigntemplateformfieldY.equals(ezsigntemplateformfieldResponseCompound.iEzsigntemplateformfieldY)) &&
         (this.iEzsigntemplateformfieldWidth == null ? ezsigntemplateformfieldResponseCompound.iEzsigntemplateformfieldWidth == null : this.iEzsigntemplateformfieldWidth.equals(ezsigntemplateformfieldResponseCompound.iEzsigntemplateformfieldWidth)) &&
         (this.iEzsigntemplateformfieldHeight == null ? ezsigntemplateformfieldResponseCompound.iEzsigntemplateformfieldHeight == null : this.iEzsigntemplateformfieldHeight.equals(ezsigntemplateformfieldResponseCompound.iEzsigntemplateformfieldHeight)) &&
+        (this.bEzsigntemplateformfieldAutocomplete == null ? ezsigntemplateformfieldResponseCompound.bEzsigntemplateformfieldAutocomplete == null : this.bEzsigntemplateformfieldAutocomplete.equals(ezsigntemplateformfieldResponseCompound.bEzsigntemplateformfieldAutocomplete)) &&
         (this.bEzsigntemplateformfieldSelected == null ? ezsigntemplateformfieldResponseCompound.bEzsigntemplateformfieldSelected == null : this.bEzsigntemplateformfieldSelected.equals(ezsigntemplateformfieldResponseCompound.bEzsigntemplateformfieldSelected));
   }
 
@@ -177,6 +191,7 @@ public class EzsigntemplateformfieldResponseCompound {
     result = 31 * result + (this.iEzsigntemplateformfieldY == null ? 0: this.iEzsigntemplateformfieldY.hashCode());
     result = 31 * result + (this.iEzsigntemplateformfieldWidth == null ? 0: this.iEzsigntemplateformfieldWidth.hashCode());
     result = 31 * result + (this.iEzsigntemplateformfieldHeight == null ? 0: this.iEzsigntemplateformfieldHeight.hashCode());
+    result = 31 * result + (this.bEzsigntemplateformfieldAutocomplete == null ? 0: this.bEzsigntemplateformfieldAutocomplete.hashCode());
     result = 31 * result + (this.bEzsigntemplateformfieldSelected == null ? 0: this.bEzsigntemplateformfieldSelected.hashCode());
     return result;
   }
@@ -194,6 +209,7 @@ public class EzsigntemplateformfieldResponseCompound {
     sb.append("  iEzsigntemplateformfieldY: ").append(iEzsigntemplateformfieldY).append("\n");
     sb.append("  iEzsigntemplateformfieldWidth: ").append(iEzsigntemplateformfieldWidth).append("\n");
     sb.append("  iEzsigntemplateformfieldHeight: ").append(iEzsigntemplateformfieldHeight).append("\n");
+    sb.append("  bEzsigntemplateformfieldAutocomplete: ").append(bEzsigntemplateformfieldAutocomplete).append("\n");
     sb.append("  bEzsigntemplateformfieldSelected: ").append(bEzsigntemplateformfieldSelected).append("\n");
     sb.append("}\n");
     return sb.toString();

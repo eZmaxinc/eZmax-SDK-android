@@ -1709,7 +1709,7 @@ public class ObjectEzsigndocumentApi {
   * Retrieve a URL to download documents.
   * This endpoint returns URLs to different files that can be downloaded during the signing process.  These links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
    * @param pkiEzsigndocumentID 
-   * @param eDocumentType The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **Signed** Is the final document once all signatures were applied. 3. **Proofdocument** Is the evidence report. 4. **Proof** Is the complete evidence archive including all of the above and more. 
+   * @param eDocumentType The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **SignatureReady** Is the version containing the annotations/form to show the signer. 3. **Signed** Is the final document once all signatures were applied. 4. **Proofdocument** Is the evidence report. 5. **Proof** Is the complete evidence archive including all of the above and more. 
    * @return EzsigndocumentGetDownloadUrlV1Response
   */
   public EzsigndocumentGetDownloadUrlV1Response ezsigndocumentGetDownloadUrlV1 (Integer pkiEzsigndocumentID, String eDocumentType) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
@@ -1776,7 +1776,7 @@ public class ObjectEzsigndocumentApi {
       /**
    * Retrieve a URL to download documents.
    * This endpoint returns URLs to different files that can be downloaded during the signing process.  These links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
-   * @param pkiEzsigndocumentID    * @param eDocumentType The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **Signed** Is the final document once all signatures were applied. 3. **Proofdocument** Is the evidence report. 4. **Proof** Is the complete evidence archive including all of the above and more. 
+   * @param pkiEzsigndocumentID    * @param eDocumentType The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **SignatureReady** Is the version containing the annotations/form to show the signer. 3. **Signed** Is the final document once all signatures were applied. 4. **Proofdocument** Is the evidence report. 5. **Proof** Is the complete evidence archive including all of the above and more. 
   */
   public void ezsigndocumentGetDownloadUrlV1 (Integer pkiEzsigndocumentID, String eDocumentType, final Response.Listener<EzsigndocumentGetDownloadUrlV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;

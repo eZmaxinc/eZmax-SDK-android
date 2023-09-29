@@ -49,7 +49,7 @@ public class CustomEzsignfoldertypeResponse {
   /**
    * The name of the Ezsignfoldertype in the language of the requester
    **/
-  @ApiModelProperty(required = true, value = "The name of the Ezsignfoldertype in the language of the requester")
+  @ApiModelProperty(value = "The name of the Ezsignfoldertype in the language of the requester")
   public String getSEzsignfoldertypeNameX() {
     return sEzsignfoldertypeNameX;
   }
@@ -60,7 +60,7 @@ public class CustomEzsignfoldertypeResponse {
   /**
    * Whether we include the proof with the signed Ezsigndocument for Ezsignsigners
    **/
-  @ApiModelProperty(required = true, value = "Whether we include the proof with the signed Ezsigndocument for Ezsignsigners")
+  @ApiModelProperty(value = "Whether we include the proof with the signed Ezsigndocument for Ezsignsigners")
   public Boolean getBEzsignfoldertypeIncludeproofsigner() {
     return bEzsignfoldertypeIncludeproofsigner;
   }
@@ -71,7 +71,7 @@ public class CustomEzsignfoldertypeResponse {
   /**
    * Whether we include the proof with the signed Ezsigndocument for users
    **/
-  @ApiModelProperty(required = true, value = "Whether we include the proof with the signed Ezsigndocument for users")
+  @ApiModelProperty(value = "Whether we include the proof with the signed Ezsigndocument for users")
   public Boolean getBEzsignfoldertypeIncludeproofuser() {
     return bEzsignfoldertypeIncludeproofuser;
   }

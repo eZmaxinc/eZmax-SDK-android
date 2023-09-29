@@ -37,6 +37,8 @@ public class EzsignformfieldRequest {
   private Integer iEzsignformfieldWidth = null;
   @SerializedName("iEzsignformfieldHeight")
   private Integer iEzsignformfieldHeight = null;
+  @SerializedName("bEzsignformfieldAutocomplete")
+  private Boolean bEzsignformfieldAutocomplete = null;
   @SerializedName("bEzsignformfieldSelected")
   private Boolean bEzsignformfieldSelected = null;
   @SerializedName("sEzsignformfieldEnteredvalue")
@@ -137,6 +139,17 @@ public class EzsignformfieldRequest {
   }
 
   /**
+   * Whether the Ezsignformfield allows the use of the autocomplete of the browser.  This can only be set if eEzsignformfieldgroupType is **Text**
+   **/
+  @ApiModelProperty(value = "Whether the Ezsignformfield allows the use of the autocomplete of the browser.  This can only be set if eEzsignformfieldgroupType is **Text**")
+  public Boolean getBEzsignformfieldAutocomplete() {
+    return bEzsignformfieldAutocomplete;
+  }
+  public void setBEzsignformfieldAutocomplete(Boolean bEzsignformfieldAutocomplete) {
+    this.bEzsignformfieldAutocomplete = bEzsignformfieldAutocomplete;
+  }
+
+  /**
    * Whether the Ezsignformfield is selected or not by default.  This can only be set if eEzsignformfieldgroupType is **Checkbox** or **Radio**
    **/
   @ApiModelProperty(value = "Whether the Ezsignformfield is selected or not by default.  This can only be set if eEzsignformfieldgroupType is **Checkbox** or **Radio**")
@@ -176,6 +189,7 @@ public class EzsignformfieldRequest {
         (this.iEzsignformfieldY == null ? ezsignformfieldRequest.iEzsignformfieldY == null : this.iEzsignformfieldY.equals(ezsignformfieldRequest.iEzsignformfieldY)) &&
         (this.iEzsignformfieldWidth == null ? ezsignformfieldRequest.iEzsignformfieldWidth == null : this.iEzsignformfieldWidth.equals(ezsignformfieldRequest.iEzsignformfieldWidth)) &&
         (this.iEzsignformfieldHeight == null ? ezsignformfieldRequest.iEzsignformfieldHeight == null : this.iEzsignformfieldHeight.equals(ezsignformfieldRequest.iEzsignformfieldHeight)) &&
+        (this.bEzsignformfieldAutocomplete == null ? ezsignformfieldRequest.bEzsignformfieldAutocomplete == null : this.bEzsignformfieldAutocomplete.equals(ezsignformfieldRequest.bEzsignformfieldAutocomplete)) &&
         (this.bEzsignformfieldSelected == null ? ezsignformfieldRequest.bEzsignformfieldSelected == null : this.bEzsignformfieldSelected.equals(ezsignformfieldRequest.bEzsignformfieldSelected)) &&
         (this.sEzsignformfieldEnteredvalue == null ? ezsignformfieldRequest.sEzsignformfieldEnteredvalue == null : this.sEzsignformfieldEnteredvalue.equals(ezsignformfieldRequest.sEzsignformfieldEnteredvalue));
   }
@@ -191,6 +205,7 @@ public class EzsignformfieldRequest {
     result = 31 * result + (this.iEzsignformfieldY == null ? 0: this.iEzsignformfieldY.hashCode());
     result = 31 * result + (this.iEzsignformfieldWidth == null ? 0: this.iEzsignformfieldWidth.hashCode());
     result = 31 * result + (this.iEzsignformfieldHeight == null ? 0: this.iEzsignformfieldHeight.hashCode());
+    result = 31 * result + (this.bEzsignformfieldAutocomplete == null ? 0: this.bEzsignformfieldAutocomplete.hashCode());
     result = 31 * result + (this.bEzsignformfieldSelected == null ? 0: this.bEzsignformfieldSelected.hashCode());
     result = 31 * result + (this.sEzsignformfieldEnteredvalue == null ? 0: this.sEzsignformfieldEnteredvalue.hashCode());
     return result;
@@ -209,6 +224,7 @@ public class EzsignformfieldRequest {
     sb.append("  iEzsignformfieldY: ").append(iEzsignformfieldY).append("\n");
     sb.append("  iEzsignformfieldWidth: ").append(iEzsignformfieldWidth).append("\n");
     sb.append("  iEzsignformfieldHeight: ").append(iEzsignformfieldHeight).append("\n");
+    sb.append("  bEzsignformfieldAutocomplete: ").append(bEzsignformfieldAutocomplete).append("\n");
     sb.append("  bEzsignformfieldSelected: ").append(bEzsignformfieldSelected).append("\n");
     sb.append("  sEzsignformfieldEnteredvalue: ").append(sEzsignformfieldEnteredvalue).append("\n");
     sb.append("}\n");
