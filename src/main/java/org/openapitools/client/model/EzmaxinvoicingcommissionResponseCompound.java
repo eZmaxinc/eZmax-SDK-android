@@ -135,7 +135,7 @@ public class EzmaxinvoicingcommissionResponseCompound {
 
   /**
    **/
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(value = "")
   public CustomContactNameResponse getObjContactName() {
     return objContactName;
   }

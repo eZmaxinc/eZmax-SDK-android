@@ -58,7 +58,7 @@ public class NotificationtestGetElementsV1ResponseMPayload {
 
   /**
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "")
   public List<String> getASVariableobjectProperty() {
     return aSVariableobjectProperty;
   }

@@ -149,7 +149,7 @@ public class ActivesessionResponse {
    * The unique ID of the Systemconfigurationtype
    * minimum: 1
    **/
-  @ApiModelProperty(value = "The unique ID of the Systemconfigurationtype")
+  @ApiModelProperty(required = true, value = "The unique ID of the Systemconfigurationtype")
   public Integer getFkiSystemconfigurationtypeID() {
     return fkiSystemconfigurationtypeID;
   }

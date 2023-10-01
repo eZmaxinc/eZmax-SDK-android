@@ -6,7 +6,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjFont** | [**List&lt;FontAutocompleteElementResponse&gt;**](FontAutocompleteElementResponse.md) | An array of Font autocomplete element response. |  [optional]
+**aObjFont** | [**List&lt;FontAutocompleteElementResponse&gt;**](FontAutocompleteElementResponse.md) | An array of Font autocomplete element response. | 
 
 
 

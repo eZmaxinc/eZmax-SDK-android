@@ -29,7 +29,7 @@ public class EmailtypeGetAutocompleteV2ResponseMPayload {
   /**
    * An array of Emailtype autocomplete element response.
    **/
-  @ApiModelProperty(value = "An array of Emailtype autocomplete element response.")
+  @ApiModelProperty(required = true, value = "An array of Emailtype autocomplete element response.")
   public List<EmailtypeAutocompleteElementResponse> getAObjEmailtype() {
     return aObjEmailtype;
   }

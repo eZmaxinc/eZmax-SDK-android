@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **objUser** | [**EzsignfoldersignerassociationResponseCompoundUser**](EzsignfoldersignerassociationResponseCompoundUser.md) |  |  [optional]
 **objEzsignsigner** | [**EzsignsignerResponseCompound**](EzsignsignerResponseCompound.md) |  |  [optional]
 **bEzsignfoldersignerassociationHasactionableelementsCurrent** | **Boolean** | Indicates if the Ezsignfoldersignerassociation has actionable elements in the current step | 
-**bEzsignfoldersignerassociationHasactionableelementsFuture** | **Boolean** | Indicates if the Ezsignfoldersignerassociation has actionable elements in a future step |  [optional]
+**bEzsignfoldersignerassociationHasactionableelementsFuture** | **Boolean** | Indicates if the Ezsignfoldersignerassociation has actionable elements in a future step | 
 
 
 

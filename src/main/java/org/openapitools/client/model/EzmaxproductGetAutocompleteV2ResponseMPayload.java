@@ -29,7 +29,7 @@ public class EzmaxproductGetAutocompleteV2ResponseMPayload {
   /**
    * An array of Ezmaxproduct autocomplete element response.
    **/
-  @ApiModelProperty(value = "An array of Ezmaxproduct autocomplete element response.")
+  @ApiModelProperty(required = true, value = "An array of Ezmaxproduct autocomplete element response.")
   public List<EzmaxproductAutocompleteElementResponse> getAObjEzmaxproduct() {
     return aObjEzmaxproduct;
   }

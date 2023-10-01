@@ -29,7 +29,7 @@ public class FontGetAutocompleteV2ResponseMPayload {
   /**
    * An array of Font autocomplete element response.
    **/
-  @ApiModelProperty(value = "An array of Font autocomplete element response.")
+  @ApiModelProperty(required = true, value = "An array of Font autocomplete element response.")
   public List<FontAutocompleteElementResponse> getAObjFont() {
     return aObjFont;
   }

@@ -56,7 +56,7 @@ public class ModulegroupResponseCompound {
 
   /**
    **/
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(value = "")
   public List<ModuleResponseCompound> getAObjModule() {
     return aObjModule;
   }

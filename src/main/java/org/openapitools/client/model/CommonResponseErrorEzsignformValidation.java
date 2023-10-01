@@ -18,7 +18,10 @@ import org.openapitools.client.model.FieldEErrorCode;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
-@ApiModel(description = "")
+/**
+ * Generic Error Message
+ **/
+@ApiModel(description = "Generic Error Message")
 public class CommonResponseErrorEzsignformValidation {
   
   @SerializedName("sErrorMessage")

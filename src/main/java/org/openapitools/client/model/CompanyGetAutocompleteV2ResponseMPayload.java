@@ -29,7 +29,7 @@ public class CompanyGetAutocompleteV2ResponseMPayload {
   /**
    * An array of Company autocomplete element response.
    **/
-  @ApiModelProperty(value = "An array of Company autocomplete element response.")
+  @ApiModelProperty(required = true, value = "An array of Company autocomplete element response.")
   public List<CompanyAutocompleteElementResponse> getAObjCompany() {
     return aObjCompany;
   }

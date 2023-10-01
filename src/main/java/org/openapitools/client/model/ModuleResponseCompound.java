@@ -109,7 +109,7 @@ public class ModuleResponseCompound {
 
   /**
    **/
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(value = "")
   public List<ModulesectionResponseCompound> getAObjModulesection() {
     return aObjModulesection;
   }

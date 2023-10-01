@@ -146,7 +146,7 @@ public class CustomEzsignfoldersignerassociationActionableElementResponse {
   /**
    * Indicates if the Ezsignfoldersignerassociation has actionable elements in a future step
    **/
-  @ApiModelProperty(value = "Indicates if the Ezsignfoldersignerassociation has actionable elements in a future step")
+  @ApiModelProperty(required = true, value = "Indicates if the Ezsignfoldersignerassociation has actionable elements in a future step")
   public Boolean getBEzsignfoldersignerassociationHasactionableelementsFuture() {
     return bEzsignfoldersignerassociationHasactionableelementsFuture;
   }

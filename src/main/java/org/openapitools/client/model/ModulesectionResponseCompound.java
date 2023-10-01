@@ -82,7 +82,7 @@ public class ModulesectionResponseCompound {
 
   /**
    **/
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(value = "")
   public List<PermissionResponseCompound> getAObjPermission() {
     return aObjPermission;
   }

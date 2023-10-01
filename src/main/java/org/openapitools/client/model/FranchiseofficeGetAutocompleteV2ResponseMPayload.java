@@ -29,7 +29,7 @@ public class FranchiseofficeGetAutocompleteV2ResponseMPayload {
   /**
    * An array of Franchiseoffice autocomplete element response.
    **/
-  @ApiModelProperty(value = "An array of Franchiseoffice autocomplete element response.")
+  @ApiModelProperty(required = true, value = "An array of Franchiseoffice autocomplete element response.")
   public List<FranchiseofficeAutocompleteElementResponse> getAObjFranchiseoffice() {
     return aObjFranchiseoffice;
   }

@@ -29,7 +29,7 @@ public class VariableexpenseGetAutocompleteV2ResponseMPayload {
   /**
    * An array of Variableexpense autocomplete element response.
    **/
-  @ApiModelProperty(value = "An array of Variableexpense autocomplete element response.")
+  @ApiModelProperty(required = true, value = "An array of Variableexpense autocomplete element response.")
   public List<VariableexpenseAutocompleteElementResponse> getAObjVariableexpense() {
     return aObjVariableexpense;
   }

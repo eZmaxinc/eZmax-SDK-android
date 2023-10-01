@@ -192,7 +192,7 @@ public class FranchisereferalincomeRequestCompound {
 
   /**
    **/
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(value = "")
   public AddressRequest getObjAddress() {
     return objAddress;
   }

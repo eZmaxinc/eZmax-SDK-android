@@ -29,7 +29,7 @@ public class BillingentityexternalGetAutocompleteV2ResponseMPayload {
   /**
    * An array of Billingentityexternal autocomplete element response.
    **/
-  @ApiModelProperty(value = "An array of Billingentityexternal autocomplete element response.")
+  @ApiModelProperty(required = true, value = "An array of Billingentityexternal autocomplete element response.")
   public List<BillingentityexternalAutocompleteElementResponse> getAObjBillingentityexternal() {
     return aObjBillingentityexternal;
   }

@@ -29,7 +29,7 @@ public class PaymenttermGetAutocompleteV2ResponseMPayload {
   /**
    * An array of Paymentterm autocomplete element response.
    **/
-  @ApiModelProperty(value = "An array of Paymentterm autocomplete element response.")
+  @ApiModelProperty(required = true, value = "An array of Paymentterm autocomplete element response.")
   public List<PaymenttermAutocompleteElementResponse> getAObjPaymentterm() {
     return aObjPaymentterm;
   }

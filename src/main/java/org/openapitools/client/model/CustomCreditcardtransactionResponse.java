@@ -33,7 +33,7 @@ public class CustomCreditcardtransactionResponse {
 
   /**
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "")
   public FieldECreditcardtypeCodename getECreditcardtypeCodename() {
     return eCreditcardtypeCodename;
   }

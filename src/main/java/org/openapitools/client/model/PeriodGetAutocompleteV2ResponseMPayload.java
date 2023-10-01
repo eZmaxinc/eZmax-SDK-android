@@ -29,7 +29,7 @@ public class PeriodGetAutocompleteV2ResponseMPayload {
   /**
    * An array of Period autocomplete element response.
    **/
-  @ApiModelProperty(value = "An array of Period autocomplete element response.")
+  @ApiModelProperty(required = true, value = "An array of Period autocomplete element response.")
   public List<PeriodAutocompleteElementResponse> getAObjPeriod() {
     return aObjPeriod;
   }

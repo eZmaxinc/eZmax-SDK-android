@@ -29,7 +29,7 @@ public class PhonetypeGetAutocompleteV2ResponseMPayload {
   /**
    * An array of Phonetype autocomplete element response.
    **/
-  @ApiModelProperty(value = "An array of Phonetype autocomplete element response.")
+  @ApiModelProperty(required = true, value = "An array of Phonetype autocomplete element response.")
   public List<PhonetypeAutocompleteElementResponse> getAObjPhonetype() {
     return aObjPhonetype;
   }

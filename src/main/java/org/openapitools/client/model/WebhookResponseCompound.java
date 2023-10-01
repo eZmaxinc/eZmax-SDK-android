@@ -171,7 +171,7 @@ public class WebhookResponseCompound {
   /**
    * The concatenated string to describe the Webhook event
    **/
-  @ApiModelProperty(required = true, value = "The concatenated string to describe the Webhook event")
+  @ApiModelProperty(value = "The concatenated string to describe the Webhook event")
   public String getSWebhookEvent() {
     return sWebhookEvent;
   }
