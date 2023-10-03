@@ -32,7 +32,7 @@ public class EzsignfolderSendV3Request {
   /**
    * A custom text message that will be added to the email sent.
    **/
-  @ApiModelProperty(required = true, value = "A custom text message that will be added to the email sent.")
+  @ApiModelProperty(value = "A custom text message that will be added to the email sent.")
   public String getTEzsignfolderMessage() {
     return tEzsignfolderMessage;
   }

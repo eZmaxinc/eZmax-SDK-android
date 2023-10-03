@@ -88,7 +88,7 @@ public class EzsignfolderRequestCompound {
   /**
    * Note about the Ezsignfolder
    **/
-  @ApiModelProperty(required = true, value = "Note about the Ezsignfolder")
+  @ApiModelProperty(value = "Note about the Ezsignfolder")
   public String getTEzsignfolderNote() {
     return tEzsignfolderNote;
   }
