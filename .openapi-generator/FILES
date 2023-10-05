@@ -787,6 +787,9 @@ docs/GlobalEzmaxclientVersionV1Response.md
 docs/GlobalEzmaxcustomerApi.md
 docs/GlobalEzmaxcustomerGetConfigurationV1Response.md
 docs/HeaderAcceptLanguage.md
+docs/LanguageAutocompleteElementResponse.md
+docs/LanguageGetAutocompleteV2Response.md
+docs/LanguageGetAutocompleteV2ResponseMPayload.md
 docs/ModuleEzsignApi.md
 docs/ModuleReportApi.md
 docs/ModuleResponse.md
@@ -857,6 +860,7 @@ docs/ObjectFontApi.md
 docs/ObjectFranchisebrokerApi.md
 docs/ObjectFranchiseofficeApi.md
 docs/ObjectFranchisereferalincomeApi.md
+docs/ObjectLanguageApi.md
 docs/ObjectModulegroupApi.md
 docs/ObjectNotificationsectionApi.md
 docs/ObjectNotificationtestApi.md
@@ -1201,6 +1205,7 @@ src/main/java/org/openapitools/client/api/ObjectFontApi.java
 src/main/java/org/openapitools/client/api/ObjectFranchisebrokerApi.java
 src/main/java/org/openapitools/client/api/ObjectFranchiseofficeApi.java
 src/main/java/org/openapitools/client/api/ObjectFranchisereferalincomeApi.java
+src/main/java/org/openapitools/client/api/ObjectLanguageApi.java
 src/main/java/org/openapitools/client/api/ObjectModulegroupApi.java
 src/main/java/org/openapitools/client/api/ObjectNotificationsectionApi.java
 src/main/java/org/openapitools/client/api/ObjectNotificationtestApi.java
@@ -2008,6 +2013,9 @@ src/main/java/org/openapitools/client/model/GlobalCustomerGetEndpointV1Response.
 src/main/java/org/openapitools/client/model/GlobalEzmaxclientVersionV1Response.java
 src/main/java/org/openapitools/client/model/GlobalEzmaxcustomerGetConfigurationV1Response.java
 src/main/java/org/openapitools/client/model/HeaderAcceptLanguage.java
+src/main/java/org/openapitools/client/model/LanguageAutocompleteElementResponse.java
+src/main/java/org/openapitools/client/model/LanguageGetAutocompleteV2Response.java
+src/main/java/org/openapitools/client/model/LanguageGetAutocompleteV2ResponseMPayload.java
 src/main/java/org/openapitools/client/model/ModuleResponse.java
 src/main/java/org/openapitools/client/model/ModuleResponseCompound.java
 src/main/java/org/openapitools/client/model/ModulegroupGetAllV1Response.java

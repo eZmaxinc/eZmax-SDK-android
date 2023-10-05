@@ -3185,6 +3185,18 @@ public class JsonUtil {
       return new TypeToken<List<HeaderAcceptLanguage>>(){}.getType();
     }
     
+    if ("LanguageAutocompleteElementResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<LanguageAutocompleteElementResponse>>(){}.getType();
+    }
+    
+    if ("LanguageGetAutocompleteV2Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<LanguageGetAutocompleteV2Response>>(){}.getType();
+    }
+    
+    if ("LanguageGetAutocompleteV2ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<LanguageGetAutocompleteV2ResponseMPayload>>(){}.getType();
+    }
+    
     if ("ModuleResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<ModuleResponse>>(){}.getType();
     }
@@ -7441,6 +7453,18 @@ public class JsonUtil {
     
     if ("HeaderAcceptLanguage".equalsIgnoreCase(className)) {
       return new TypeToken<HeaderAcceptLanguage>(){}.getType();
+    }
+    
+    if ("LanguageAutocompleteElementResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<LanguageAutocompleteElementResponse>(){}.getType();
+    }
+    
+    if ("LanguageGetAutocompleteV2Response".equalsIgnoreCase(className)) {
+      return new TypeToken<LanguageGetAutocompleteV2Response>(){}.getType();
+    }
+    
+    if ("LanguageGetAutocompleteV2ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<LanguageGetAutocompleteV2ResponseMPayload>(){}.getType();
     }
     
     if ("ModuleResponse".equalsIgnoreCase(className)) {
