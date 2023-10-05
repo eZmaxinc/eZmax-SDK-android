@@ -14,8 +14,10 @@ package org.openapitools.client.model;
 
 import java.util.*;
 import org.openapitools.client.model.EnumTextvalidation;
+import org.openapitools.client.model.EzsignelementdependencyRequestCompound;
 import org.openapitools.client.model.EzsignsignaturecustomdateRequestCompound;
 import org.openapitools.client.model.FieldEEzsignsignatureAttachmentnamesource;
+import org.openapitools.client.model.FieldEEzsignsignatureDependencyrequirement;
 import org.openapitools.client.model.FieldEEzsignsignatureFont;
 import org.openapitools.client.model.FieldEEzsignsignatureTooltipposition;
 import org.openapitools.client.model.FieldEEzsignsignatureType;
@@ -70,10 +72,14 @@ public class EzsignsignatureRequestCompound {
   private EnumTextvalidation eEzsignsignatureTextvalidation = null;
   @SerializedName("sEzsignsignatureRegexp")
   private String sEzsignsignatureRegexp = null;
+  @SerializedName("eEzsignsignatureDependencyrequirement")
+  private FieldEEzsignsignatureDependencyrequirement eEzsignsignatureDependencyrequirement = null;
   @SerializedName("bEzsignsignatureCustomdate")
   private Boolean bEzsignsignatureCustomdate = null;
   @SerializedName("a_objEzsignsignaturecustomdate")
   private List<EzsignsignaturecustomdateRequestCompound> aObjEzsignsignaturecustomdate = null;
+  @SerializedName("a_objEzsignelementdependency")
+  private List<EzsignelementdependencyRequestCompound> aObjEzsignelementdependency = null;
 
   /**
    * The unique ID of the Ezsignsignature
@@ -313,6 +319,16 @@ public class EzsignsignatureRequestCompound {
   }
 
   /**
+   **/
+  @ApiModelProperty(value = "")
+  public FieldEEzsignsignatureDependencyrequirement getEEzsignsignatureDependencyrequirement() {
+    return eEzsignsignatureDependencyrequirement;
+  }
+  public void setEEzsignsignatureDependencyrequirement(FieldEEzsignsignatureDependencyrequirement eEzsignsignatureDependencyrequirement) {
+    this.eEzsignsignatureDependencyrequirement = eEzsignsignatureDependencyrequirement;
+  }
+
+  /**
    * Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**)
    **/
   @ApiModelProperty(value = "Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**)")
@@ -332,6 +348,16 @@ public class EzsignsignatureRequestCompound {
   }
   public void setAObjEzsignsignaturecustomdate(List<EzsignsignaturecustomdateRequestCompound> aObjEzsignsignaturecustomdate) {
     this.aObjEzsignsignaturecustomdate = aObjEzsignsignaturecustomdate;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public List<EzsignelementdependencyRequestCompound> getAObjEzsignelementdependency() {
+    return aObjEzsignelementdependency;
+  }
+  public void setAObjEzsignelementdependency(List<EzsignelementdependencyRequestCompound> aObjEzsignelementdependency) {
+    this.aObjEzsignelementdependency = aObjEzsignelementdependency;
   }
 
 
@@ -365,8 +391,10 @@ public class EzsignsignatureRequestCompound {
         (this.iEzsignsignatureMaxlength == null ? ezsignsignatureRequestCompound.iEzsignsignatureMaxlength == null : this.iEzsignsignatureMaxlength.equals(ezsignsignatureRequestCompound.iEzsignsignatureMaxlength)) &&
         (this.eEzsignsignatureTextvalidation == null ? ezsignsignatureRequestCompound.eEzsignsignatureTextvalidation == null : this.eEzsignsignatureTextvalidation.equals(ezsignsignatureRequestCompound.eEzsignsignatureTextvalidation)) &&
         (this.sEzsignsignatureRegexp == null ? ezsignsignatureRequestCompound.sEzsignsignatureRegexp == null : this.sEzsignsignatureRegexp.equals(ezsignsignatureRequestCompound.sEzsignsignatureRegexp)) &&
+        (this.eEzsignsignatureDependencyrequirement == null ? ezsignsignatureRequestCompound.eEzsignsignatureDependencyrequirement == null : this.eEzsignsignatureDependencyrequirement.equals(ezsignsignatureRequestCompound.eEzsignsignatureDependencyrequirement)) &&
         (this.bEzsignsignatureCustomdate == null ? ezsignsignatureRequestCompound.bEzsignsignatureCustomdate == null : this.bEzsignsignatureCustomdate.equals(ezsignsignatureRequestCompound.bEzsignsignatureCustomdate)) &&
-        (this.aObjEzsignsignaturecustomdate == null ? ezsignsignatureRequestCompound.aObjEzsignsignaturecustomdate == null : this.aObjEzsignsignaturecustomdate.equals(ezsignsignatureRequestCompound.aObjEzsignsignaturecustomdate));
+        (this.aObjEzsignsignaturecustomdate == null ? ezsignsignatureRequestCompound.aObjEzsignsignaturecustomdate == null : this.aObjEzsignsignaturecustomdate.equals(ezsignsignatureRequestCompound.aObjEzsignsignaturecustomdate)) &&
+        (this.aObjEzsignelementdependency == null ? ezsignsignatureRequestCompound.aObjEzsignelementdependency == null : this.aObjEzsignelementdependency.equals(ezsignsignatureRequestCompound.aObjEzsignelementdependency));
   }
 
   @Override
@@ -393,8 +421,10 @@ public class EzsignsignatureRequestCompound {
     result = 31 * result + (this.iEzsignsignatureMaxlength == null ? 0: this.iEzsignsignatureMaxlength.hashCode());
     result = 31 * result + (this.eEzsignsignatureTextvalidation == null ? 0: this.eEzsignsignatureTextvalidation.hashCode());
     result = 31 * result + (this.sEzsignsignatureRegexp == null ? 0: this.sEzsignsignatureRegexp.hashCode());
+    result = 31 * result + (this.eEzsignsignatureDependencyrequirement == null ? 0: this.eEzsignsignatureDependencyrequirement.hashCode());
     result = 31 * result + (this.bEzsignsignatureCustomdate == null ? 0: this.bEzsignsignatureCustomdate.hashCode());
     result = 31 * result + (this.aObjEzsignsignaturecustomdate == null ? 0: this.aObjEzsignsignaturecustomdate.hashCode());
+    result = 31 * result + (this.aObjEzsignelementdependency == null ? 0: this.aObjEzsignelementdependency.hashCode());
     return result;
   }
 
@@ -424,8 +454,10 @@ public class EzsignsignatureRequestCompound {
     sb.append("  iEzsignsignatureMaxlength: ").append(iEzsignsignatureMaxlength).append("\n");
     sb.append("  eEzsignsignatureTextvalidation: ").append(eEzsignsignatureTextvalidation).append("\n");
     sb.append("  sEzsignsignatureRegexp: ").append(sEzsignsignatureRegexp).append("\n");
+    sb.append("  eEzsignsignatureDependencyrequirement: ").append(eEzsignsignatureDependencyrequirement).append("\n");
     sb.append("  bEzsignsignatureCustomdate: ").append(bEzsignsignatureCustomdate).append("\n");
     sb.append("  aObjEzsignsignaturecustomdate: ").append(aObjEzsignsignaturecustomdate).append("\n");
+    sb.append("  aObjEzsignelementdependency: ").append(aObjEzsignelementdependency).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

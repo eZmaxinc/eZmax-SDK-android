@@ -14,6 +14,7 @@ package org.openapitools.client.model;
 
 import org.openapitools.client.model.EnumTextvalidation;
 import org.openapitools.client.model.FieldEEzsigntemplatesignatureAttachmentnamesource;
+import org.openapitools.client.model.FieldEEzsigntemplatesignatureDependencyrequirement;
 import org.openapitools.client.model.FieldEEzsigntemplatesignatureFont;
 import org.openapitools.client.model.FieldEEzsigntemplatesignatureTooltipposition;
 import org.openapitools.client.model.FieldEEzsigntemplatesignatureType;
@@ -68,6 +69,8 @@ public class EzsigntemplatesignatureResponse {
   private String sEzsigntemplatesignatureRegexp = null;
   @SerializedName("eEzsigntemplatesignatureTextvalidation")
   private EnumTextvalidation eEzsigntemplatesignatureTextvalidation = null;
+  @SerializedName("eEzsigntemplatesignatureDependencyrequirement")
+  private FieldEEzsigntemplatesignatureDependencyrequirement eEzsigntemplatesignatureDependencyrequirement = null;
 
   /**
    * The unique ID of the Ezsigntemplatesignature
@@ -307,6 +310,16 @@ public class EzsigntemplatesignatureResponse {
     this.eEzsigntemplatesignatureTextvalidation = eEzsigntemplatesignatureTextvalidation;
   }
 
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public FieldEEzsigntemplatesignatureDependencyrequirement getEEzsigntemplatesignatureDependencyrequirement() {
+    return eEzsigntemplatesignatureDependencyrequirement;
+  }
+  public void setEEzsigntemplatesignatureDependencyrequirement(FieldEEzsigntemplatesignatureDependencyrequirement eEzsigntemplatesignatureDependencyrequirement) {
+    this.eEzsigntemplatesignatureDependencyrequirement = eEzsigntemplatesignatureDependencyrequirement;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -337,7 +350,8 @@ public class EzsigntemplatesignatureResponse {
         (this.bEzsigntemplatesignatureRequired == null ? ezsigntemplatesignatureResponse.bEzsigntemplatesignatureRequired == null : this.bEzsigntemplatesignatureRequired.equals(ezsigntemplatesignatureResponse.bEzsigntemplatesignatureRequired)) &&
         (this.iEzsigntemplatesignatureMaxlength == null ? ezsigntemplatesignatureResponse.iEzsigntemplatesignatureMaxlength == null : this.iEzsigntemplatesignatureMaxlength.equals(ezsigntemplatesignatureResponse.iEzsigntemplatesignatureMaxlength)) &&
         (this.sEzsigntemplatesignatureRegexp == null ? ezsigntemplatesignatureResponse.sEzsigntemplatesignatureRegexp == null : this.sEzsigntemplatesignatureRegexp.equals(ezsigntemplatesignatureResponse.sEzsigntemplatesignatureRegexp)) &&
-        (this.eEzsigntemplatesignatureTextvalidation == null ? ezsigntemplatesignatureResponse.eEzsigntemplatesignatureTextvalidation == null : this.eEzsigntemplatesignatureTextvalidation.equals(ezsigntemplatesignatureResponse.eEzsigntemplatesignatureTextvalidation));
+        (this.eEzsigntemplatesignatureTextvalidation == null ? ezsigntemplatesignatureResponse.eEzsigntemplatesignatureTextvalidation == null : this.eEzsigntemplatesignatureTextvalidation.equals(ezsigntemplatesignatureResponse.eEzsigntemplatesignatureTextvalidation)) &&
+        (this.eEzsigntemplatesignatureDependencyrequirement == null ? ezsigntemplatesignatureResponse.eEzsigntemplatesignatureDependencyrequirement == null : this.eEzsigntemplatesignatureDependencyrequirement.equals(ezsigntemplatesignatureResponse.eEzsigntemplatesignatureDependencyrequirement));
   }
 
   @Override
@@ -364,6 +378,7 @@ public class EzsigntemplatesignatureResponse {
     result = 31 * result + (this.iEzsigntemplatesignatureMaxlength == null ? 0: this.iEzsigntemplatesignatureMaxlength.hashCode());
     result = 31 * result + (this.sEzsigntemplatesignatureRegexp == null ? 0: this.sEzsigntemplatesignatureRegexp.hashCode());
     result = 31 * result + (this.eEzsigntemplatesignatureTextvalidation == null ? 0: this.eEzsigntemplatesignatureTextvalidation.hashCode());
+    result = 31 * result + (this.eEzsigntemplatesignatureDependencyrequirement == null ? 0: this.eEzsigntemplatesignatureDependencyrequirement.hashCode());
     return result;
   }
 
@@ -393,6 +408,7 @@ public class EzsigntemplatesignatureResponse {
     sb.append("  iEzsigntemplatesignatureMaxlength: ").append(iEzsigntemplatesignatureMaxlength).append("\n");
     sb.append("  sEzsigntemplatesignatureRegexp: ").append(sEzsigntemplatesignatureRegexp).append("\n");
     sb.append("  eEzsigntemplatesignatureTextvalidation: ").append(eEzsigntemplatesignatureTextvalidation).append("\n");
+    sb.append("  eEzsigntemplatesignatureDependencyrequirement: ").append(eEzsigntemplatesignatureDependencyrequirement).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

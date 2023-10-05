@@ -14,8 +14,10 @@ package org.openapitools.client.model;
 
 import java.util.*;
 import org.openapitools.client.model.EnumTextvalidation;
+import org.openapitools.client.model.EzsigntemplateelementdependencyRequestCompound;
 import org.openapitools.client.model.EzsigntemplatesignaturecustomdateRequestCompound;
 import org.openapitools.client.model.FieldEEzsigntemplatesignatureAttachmentnamesource;
+import org.openapitools.client.model.FieldEEzsigntemplatesignatureDependencyrequirement;
 import org.openapitools.client.model.FieldEEzsigntemplatesignatureFont;
 import org.openapitools.client.model.FieldEEzsigntemplatesignatureTooltipposition;
 import org.openapitools.client.model.FieldEEzsigntemplatesignatureType;
@@ -70,10 +72,14 @@ public class EzsigntemplatesignatureRequestCompound {
   private String sEzsigntemplatesignatureRegexp = null;
   @SerializedName("eEzsigntemplatesignatureTextvalidation")
   private EnumTextvalidation eEzsigntemplatesignatureTextvalidation = null;
+  @SerializedName("eEzsigntemplatesignatureDependencyrequirement")
+  private FieldEEzsigntemplatesignatureDependencyrequirement eEzsigntemplatesignatureDependencyrequirement = null;
   @SerializedName("bEzsigntemplatesignatureCustomdate")
   private Boolean bEzsigntemplatesignatureCustomdate = null;
   @SerializedName("a_objEzsigntemplatesignaturecustomdate")
   private List<EzsigntemplatesignaturecustomdateRequestCompound> aObjEzsigntemplatesignaturecustomdate = null;
+  @SerializedName("a_objEzsigntemplateelementdependency")
+  private List<EzsigntemplateelementdependencyRequestCompound> aObjEzsigntemplateelementdependency = null;
 
   /**
    * The unique ID of the Ezsigntemplatesignature
@@ -314,6 +320,16 @@ public class EzsigntemplatesignatureRequestCompound {
   }
 
   /**
+   **/
+  @ApiModelProperty(value = "")
+  public FieldEEzsigntemplatesignatureDependencyrequirement getEEzsigntemplatesignatureDependencyrequirement() {
+    return eEzsigntemplatesignatureDependencyrequirement;
+  }
+  public void setEEzsigntemplatesignatureDependencyrequirement(FieldEEzsigntemplatesignatureDependencyrequirement eEzsigntemplatesignatureDependencyrequirement) {
+    this.eEzsigntemplatesignatureDependencyrequirement = eEzsigntemplatesignatureDependencyrequirement;
+  }
+
+  /**
    * Whether the Ezsigntemplatesignature has a custom date format or not. (Only possible when eEzsigntemplatesignatureType is **Name** or **Handwritten**)
    **/
   @ApiModelProperty(value = "Whether the Ezsigntemplatesignature has a custom date format or not. (Only possible when eEzsigntemplatesignatureType is **Name** or **Handwritten**)")
@@ -333,6 +349,16 @@ public class EzsigntemplatesignatureRequestCompound {
   }
   public void setAObjEzsigntemplatesignaturecustomdate(List<EzsigntemplatesignaturecustomdateRequestCompound> aObjEzsigntemplatesignaturecustomdate) {
     this.aObjEzsigntemplatesignaturecustomdate = aObjEzsigntemplatesignaturecustomdate;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public List<EzsigntemplateelementdependencyRequestCompound> getAObjEzsigntemplateelementdependency() {
+    return aObjEzsigntemplateelementdependency;
+  }
+  public void setAObjEzsigntemplateelementdependency(List<EzsigntemplateelementdependencyRequestCompound> aObjEzsigntemplateelementdependency) {
+    this.aObjEzsigntemplateelementdependency = aObjEzsigntemplateelementdependency;
   }
 
 
@@ -366,8 +392,10 @@ public class EzsigntemplatesignatureRequestCompound {
         (this.iEzsigntemplatesignatureMaxlength == null ? ezsigntemplatesignatureRequestCompound.iEzsigntemplatesignatureMaxlength == null : this.iEzsigntemplatesignatureMaxlength.equals(ezsigntemplatesignatureRequestCompound.iEzsigntemplatesignatureMaxlength)) &&
         (this.sEzsigntemplatesignatureRegexp == null ? ezsigntemplatesignatureRequestCompound.sEzsigntemplatesignatureRegexp == null : this.sEzsigntemplatesignatureRegexp.equals(ezsigntemplatesignatureRequestCompound.sEzsigntemplatesignatureRegexp)) &&
         (this.eEzsigntemplatesignatureTextvalidation == null ? ezsigntemplatesignatureRequestCompound.eEzsigntemplatesignatureTextvalidation == null : this.eEzsigntemplatesignatureTextvalidation.equals(ezsigntemplatesignatureRequestCompound.eEzsigntemplatesignatureTextvalidation)) &&
+        (this.eEzsigntemplatesignatureDependencyrequirement == null ? ezsigntemplatesignatureRequestCompound.eEzsigntemplatesignatureDependencyrequirement == null : this.eEzsigntemplatesignatureDependencyrequirement.equals(ezsigntemplatesignatureRequestCompound.eEzsigntemplatesignatureDependencyrequirement)) &&
         (this.bEzsigntemplatesignatureCustomdate == null ? ezsigntemplatesignatureRequestCompound.bEzsigntemplatesignatureCustomdate == null : this.bEzsigntemplatesignatureCustomdate.equals(ezsigntemplatesignatureRequestCompound.bEzsigntemplatesignatureCustomdate)) &&
-        (this.aObjEzsigntemplatesignaturecustomdate == null ? ezsigntemplatesignatureRequestCompound.aObjEzsigntemplatesignaturecustomdate == null : this.aObjEzsigntemplatesignaturecustomdate.equals(ezsigntemplatesignatureRequestCompound.aObjEzsigntemplatesignaturecustomdate));
+        (this.aObjEzsigntemplatesignaturecustomdate == null ? ezsigntemplatesignatureRequestCompound.aObjEzsigntemplatesignaturecustomdate == null : this.aObjEzsigntemplatesignaturecustomdate.equals(ezsigntemplatesignatureRequestCompound.aObjEzsigntemplatesignaturecustomdate)) &&
+        (this.aObjEzsigntemplateelementdependency == null ? ezsigntemplatesignatureRequestCompound.aObjEzsigntemplateelementdependency == null : this.aObjEzsigntemplateelementdependency.equals(ezsigntemplatesignatureRequestCompound.aObjEzsigntemplateelementdependency));
   }
 
   @Override
@@ -394,8 +422,10 @@ public class EzsigntemplatesignatureRequestCompound {
     result = 31 * result + (this.iEzsigntemplatesignatureMaxlength == null ? 0: this.iEzsigntemplatesignatureMaxlength.hashCode());
     result = 31 * result + (this.sEzsigntemplatesignatureRegexp == null ? 0: this.sEzsigntemplatesignatureRegexp.hashCode());
     result = 31 * result + (this.eEzsigntemplatesignatureTextvalidation == null ? 0: this.eEzsigntemplatesignatureTextvalidation.hashCode());
+    result = 31 * result + (this.eEzsigntemplatesignatureDependencyrequirement == null ? 0: this.eEzsigntemplatesignatureDependencyrequirement.hashCode());
     result = 31 * result + (this.bEzsigntemplatesignatureCustomdate == null ? 0: this.bEzsigntemplatesignatureCustomdate.hashCode());
     result = 31 * result + (this.aObjEzsigntemplatesignaturecustomdate == null ? 0: this.aObjEzsigntemplatesignaturecustomdate.hashCode());
+    result = 31 * result + (this.aObjEzsigntemplateelementdependency == null ? 0: this.aObjEzsigntemplateelementdependency.hashCode());
     return result;
   }
 
@@ -425,8 +455,10 @@ public class EzsigntemplatesignatureRequestCompound {
     sb.append("  iEzsigntemplatesignatureMaxlength: ").append(iEzsigntemplatesignatureMaxlength).append("\n");
     sb.append("  sEzsigntemplatesignatureRegexp: ").append(sEzsigntemplatesignatureRegexp).append("\n");
     sb.append("  eEzsigntemplatesignatureTextvalidation: ").append(eEzsigntemplatesignatureTextvalidation).append("\n");
+    sb.append("  eEzsigntemplatesignatureDependencyrequirement: ").append(eEzsigntemplatesignatureDependencyrequirement).append("\n");
     sb.append("  bEzsigntemplatesignatureCustomdate: ").append(bEzsigntemplatesignatureCustomdate).append("\n");
     sb.append("  aObjEzsigntemplatesignaturecustomdate: ").append(aObjEzsigntemplatesignaturecustomdate).append("\n");
+    sb.append("  aObjEzsigntemplateelementdependency: ").append(aObjEzsigntemplateelementdependency).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

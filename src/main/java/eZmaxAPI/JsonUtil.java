@@ -1457,6 +1457,22 @@ public class JsonUtil {
       return new TypeToken<List<EzsigndocumentlogResponseCompound>>(){}.getType();
     }
     
+    if ("EzsignelementdependencyRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EzsignelementdependencyRequest>>(){}.getType();
+    }
+    
+    if ("EzsignelementdependencyRequestCompound".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EzsignelementdependencyRequestCompound>>(){}.getType();
+    }
+    
+    if ("EzsignelementdependencyResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EzsignelementdependencyResponse>>(){}.getType();
+    }
+    
+    if ("EzsignelementdependencyResponseCompound".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EzsignelementdependencyResponseCompound>>(){}.getType();
+    }
+    
     if ("EzsignfolderArchiveV1Response".equalsIgnoreCase(className)) {
       return new TypeToken<List<EzsignfolderArchiveV1Response>>(){}.getType();
     }
@@ -2381,6 +2397,22 @@ public class JsonUtil {
       return new TypeToken<List<EzsigntemplatedocumentpageResponseCompound>>(){}.getType();
     }
     
+    if ("EzsigntemplateelementdependencyRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EzsigntemplateelementdependencyRequest>>(){}.getType();
+    }
+    
+    if ("EzsigntemplateelementdependencyRequestCompound".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EzsigntemplateelementdependencyRequestCompound>>(){}.getType();
+    }
+    
+    if ("EzsigntemplateelementdependencyResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EzsigntemplateelementdependencyResponse>>(){}.getType();
+    }
+    
+    if ("EzsigntemplateelementdependencyResponseCompound".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EzsigntemplateelementdependencyResponseCompound>>(){}.getType();
+    }
+    
     if ("EzsigntemplateformfieldRequest".equalsIgnoreCase(className)) {
       return new TypeToken<List<EzsigntemplateformfieldRequest>>(){}.getType();
     }
@@ -2881,6 +2913,14 @@ public class JsonUtil {
       return new TypeToken<List<FieldEEzsigndocumentlogType>>(){}.getType();
     }
     
+    if ("FieldEEzsignelementdependencyOperator".equalsIgnoreCase(className)) {
+      return new TypeToken<List<FieldEEzsignelementdependencyOperator>>(){}.getType();
+    }
+    
+    if ("FieldEEzsignelementdependencyValidation".equalsIgnoreCase(className)) {
+      return new TypeToken<List<FieldEEzsignelementdependencyValidation>>(){}.getType();
+    }
+    
     if ("FieldEEzsignfolderSendreminderfrequency".equalsIgnoreCase(className)) {
       return new TypeToken<List<FieldEEzsignfolderSendreminderfrequency>>(){}.getType();
     }
@@ -2901,6 +2941,10 @@ public class JsonUtil {
       return new TypeToken<List<FieldEEzsignfoldertypeSendreminderfrequency>>(){}.getType();
     }
     
+    if ("FieldEEzsignformfieldDependencyrequirement".equalsIgnoreCase(className)) {
+      return new TypeToken<List<FieldEEzsignformfieldDependencyrequirement>>(){}.getType();
+    }
+    
     if ("FieldEEzsignformfieldgroupSignerrequirement".equalsIgnoreCase(className)) {
       return new TypeToken<List<FieldEEzsignformfieldgroupSignerrequirement>>(){}.getType();
     }
@@ -2917,6 +2961,10 @@ public class JsonUtil {
       return new TypeToken<List<FieldEEzsignsignatureAttachmentnamesource>>(){}.getType();
     }
     
+    if ("FieldEEzsignsignatureDependencyrequirement".equalsIgnoreCase(className)) {
+      return new TypeToken<List<FieldEEzsignsignatureDependencyrequirement>>(){}.getType();
+    }
+    
     if ("FieldEEzsignsignatureFont".equalsIgnoreCase(className)) {
       return new TypeToken<List<FieldEEzsignsignatureFont>>(){}.getType();
     }
@@ -2927,6 +2975,18 @@ public class JsonUtil {
     
     if ("FieldEEzsignsignatureType".equalsIgnoreCase(className)) {
       return new TypeToken<List<FieldEEzsignsignatureType>>(){}.getType();
+    }
+    
+    if ("FieldEEzsigntemplateelementdependencyOperator".equalsIgnoreCase(className)) {
+      return new TypeToken<List<FieldEEzsigntemplateelementdependencyOperator>>(){}.getType();
+    }
+    
+    if ("FieldEEzsigntemplateelementdependencyValidation".equalsIgnoreCase(className)) {
+      return new TypeToken<List<FieldEEzsigntemplateelementdependencyValidation>>(){}.getType();
+    }
+    
+    if ("FieldEEzsigntemplateformfieldDependencyrequirement".equalsIgnoreCase(className)) {
+      return new TypeToken<List<FieldEEzsigntemplateformfieldDependencyrequirement>>(){}.getType();
     }
     
     if ("FieldEEzsigntemplateformfieldgroupSignerrequirement".equalsIgnoreCase(className)) {
@@ -2943,6 +3003,10 @@ public class JsonUtil {
     
     if ("FieldEEzsigntemplatesignatureAttachmentnamesource".equalsIgnoreCase(className)) {
       return new TypeToken<List<FieldEEzsigntemplatesignatureAttachmentnamesource>>(){}.getType();
+    }
+    
+    if ("FieldEEzsigntemplatesignatureDependencyrequirement".equalsIgnoreCase(className)) {
+      return new TypeToken<List<FieldEEzsigntemplatesignatureDependencyrequirement>>(){}.getType();
     }
     
     if ("FieldEEzsigntemplatesignatureFont".equalsIgnoreCase(className)) {
@@ -5651,6 +5715,22 @@ public class JsonUtil {
       return new TypeToken<EzsigndocumentlogResponseCompound>(){}.getType();
     }
     
+    if ("EzsignelementdependencyRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<EzsignelementdependencyRequest>(){}.getType();
+    }
+    
+    if ("EzsignelementdependencyRequestCompound".equalsIgnoreCase(className)) {
+      return new TypeToken<EzsignelementdependencyRequestCompound>(){}.getType();
+    }
+    
+    if ("EzsignelementdependencyResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<EzsignelementdependencyResponse>(){}.getType();
+    }
+    
+    if ("EzsignelementdependencyResponseCompound".equalsIgnoreCase(className)) {
+      return new TypeToken<EzsignelementdependencyResponseCompound>(){}.getType();
+    }
+    
     if ("EzsignfolderArchiveV1Response".equalsIgnoreCase(className)) {
       return new TypeToken<EzsignfolderArchiveV1Response>(){}.getType();
     }
@@ -6575,6 +6655,22 @@ public class JsonUtil {
       return new TypeToken<EzsigntemplatedocumentpageResponseCompound>(){}.getType();
     }
     
+    if ("EzsigntemplateelementdependencyRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<EzsigntemplateelementdependencyRequest>(){}.getType();
+    }
+    
+    if ("EzsigntemplateelementdependencyRequestCompound".equalsIgnoreCase(className)) {
+      return new TypeToken<EzsigntemplateelementdependencyRequestCompound>(){}.getType();
+    }
+    
+    if ("EzsigntemplateelementdependencyResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<EzsigntemplateelementdependencyResponse>(){}.getType();
+    }
+    
+    if ("EzsigntemplateelementdependencyResponseCompound".equalsIgnoreCase(className)) {
+      return new TypeToken<EzsigntemplateelementdependencyResponseCompound>(){}.getType();
+    }
+    
     if ("EzsigntemplateformfieldRequest".equalsIgnoreCase(className)) {
       return new TypeToken<EzsigntemplateformfieldRequest>(){}.getType();
     }
@@ -7075,6 +7171,14 @@ public class JsonUtil {
       return new TypeToken<FieldEEzsigndocumentlogType>(){}.getType();
     }
     
+    if ("FieldEEzsignelementdependencyOperator".equalsIgnoreCase(className)) {
+      return new TypeToken<FieldEEzsignelementdependencyOperator>(){}.getType();
+    }
+    
+    if ("FieldEEzsignelementdependencyValidation".equalsIgnoreCase(className)) {
+      return new TypeToken<FieldEEzsignelementdependencyValidation>(){}.getType();
+    }
+    
     if ("FieldEEzsignfolderSendreminderfrequency".equalsIgnoreCase(className)) {
       return new TypeToken<FieldEEzsignfolderSendreminderfrequency>(){}.getType();
     }
@@ -7095,6 +7199,10 @@ public class JsonUtil {
       return new TypeToken<FieldEEzsignfoldertypeSendreminderfrequency>(){}.getType();
     }
     
+    if ("FieldEEzsignformfieldDependencyrequirement".equalsIgnoreCase(className)) {
+      return new TypeToken<FieldEEzsignformfieldDependencyrequirement>(){}.getType();
+    }
+    
     if ("FieldEEzsignformfieldgroupSignerrequirement".equalsIgnoreCase(className)) {
       return new TypeToken<FieldEEzsignformfieldgroupSignerrequirement>(){}.getType();
     }
@@ -7111,6 +7219,10 @@ public class JsonUtil {
       return new TypeToken<FieldEEzsignsignatureAttachmentnamesource>(){}.getType();
     }
     
+    if ("FieldEEzsignsignatureDependencyrequirement".equalsIgnoreCase(className)) {
+      return new TypeToken<FieldEEzsignsignatureDependencyrequirement>(){}.getType();
+    }
+    
     if ("FieldEEzsignsignatureFont".equalsIgnoreCase(className)) {
       return new TypeToken<FieldEEzsignsignatureFont>(){}.getType();
     }
@@ -7121,6 +7233,18 @@ public class JsonUtil {
     
     if ("FieldEEzsignsignatureType".equalsIgnoreCase(className)) {
       return new TypeToken<FieldEEzsignsignatureType>(){}.getType();
+    }
+    
+    if ("FieldEEzsigntemplateelementdependencyOperator".equalsIgnoreCase(className)) {
+      return new TypeToken<FieldEEzsigntemplateelementdependencyOperator>(){}.getType();
+    }
+    
+    if ("FieldEEzsigntemplateelementdependencyValidation".equalsIgnoreCase(className)) {
+      return new TypeToken<FieldEEzsigntemplateelementdependencyValidation>(){}.getType();
+    }
+    
+    if ("FieldEEzsigntemplateformfieldDependencyrequirement".equalsIgnoreCase(className)) {
+      return new TypeToken<FieldEEzsigntemplateformfieldDependencyrequirement>(){}.getType();
     }
     
     if ("FieldEEzsigntemplateformfieldgroupSignerrequirement".equalsIgnoreCase(className)) {
@@ -7137,6 +7261,10 @@ public class JsonUtil {
     
     if ("FieldEEzsigntemplatesignatureAttachmentnamesource".equalsIgnoreCase(className)) {
       return new TypeToken<FieldEEzsigntemplatesignatureAttachmentnamesource>(){}.getType();
+    }
+    
+    if ("FieldEEzsigntemplatesignatureDependencyrequirement".equalsIgnoreCase(className)) {
+      return new TypeToken<FieldEEzsigntemplatesignatureDependencyrequirement>(){}.getType();
     }
     
     if ("FieldEEzsigntemplatesignatureFont".equalsIgnoreCase(className)) {

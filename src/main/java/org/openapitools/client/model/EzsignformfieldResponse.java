@@ -12,6 +12,7 @@
 
 package org.openapitools.client.model;
 
+import org.openapitools.client.model.FieldEEzsignformfieldDependencyrequirement;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -43,6 +44,8 @@ public class EzsignformfieldResponse {
   private Boolean bEzsignformfieldSelected = null;
   @SerializedName("sEzsignformfieldEnteredvalue")
   private String sEzsignformfieldEnteredvalue = null;
+  @SerializedName("eEzsignformfieldDependencyrequirement")
+  private FieldEEzsignformfieldDependencyrequirement eEzsignformfieldDependencyrequirement = null;
 
   /**
    * The unique ID of the Ezsignformfield
@@ -171,6 +174,16 @@ public class EzsignformfieldResponse {
     this.sEzsignformfieldEnteredvalue = sEzsignformfieldEnteredvalue;
   }
 
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public FieldEEzsignformfieldDependencyrequirement getEEzsignformfieldDependencyrequirement() {
+    return eEzsignformfieldDependencyrequirement;
+  }
+  public void setEEzsignformfieldDependencyrequirement(FieldEEzsignformfieldDependencyrequirement eEzsignformfieldDependencyrequirement) {
+    this.eEzsignformfieldDependencyrequirement = eEzsignformfieldDependencyrequirement;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -191,7 +204,8 @@ public class EzsignformfieldResponse {
         (this.iEzsignformfieldHeight == null ? ezsignformfieldResponse.iEzsignformfieldHeight == null : this.iEzsignformfieldHeight.equals(ezsignformfieldResponse.iEzsignformfieldHeight)) &&
         (this.bEzsignformfieldAutocomplete == null ? ezsignformfieldResponse.bEzsignformfieldAutocomplete == null : this.bEzsignformfieldAutocomplete.equals(ezsignformfieldResponse.bEzsignformfieldAutocomplete)) &&
         (this.bEzsignformfieldSelected == null ? ezsignformfieldResponse.bEzsignformfieldSelected == null : this.bEzsignformfieldSelected.equals(ezsignformfieldResponse.bEzsignformfieldSelected)) &&
-        (this.sEzsignformfieldEnteredvalue == null ? ezsignformfieldResponse.sEzsignformfieldEnteredvalue == null : this.sEzsignformfieldEnteredvalue.equals(ezsignformfieldResponse.sEzsignformfieldEnteredvalue));
+        (this.sEzsignformfieldEnteredvalue == null ? ezsignformfieldResponse.sEzsignformfieldEnteredvalue == null : this.sEzsignformfieldEnteredvalue.equals(ezsignformfieldResponse.sEzsignformfieldEnteredvalue)) &&
+        (this.eEzsignformfieldDependencyrequirement == null ? ezsignformfieldResponse.eEzsignformfieldDependencyrequirement == null : this.eEzsignformfieldDependencyrequirement.equals(ezsignformfieldResponse.eEzsignformfieldDependencyrequirement));
   }
 
   @Override
@@ -208,6 +222,7 @@ public class EzsignformfieldResponse {
     result = 31 * result + (this.bEzsignformfieldAutocomplete == null ? 0: this.bEzsignformfieldAutocomplete.hashCode());
     result = 31 * result + (this.bEzsignformfieldSelected == null ? 0: this.bEzsignformfieldSelected.hashCode());
     result = 31 * result + (this.sEzsignformfieldEnteredvalue == null ? 0: this.sEzsignformfieldEnteredvalue.hashCode());
+    result = 31 * result + (this.eEzsignformfieldDependencyrequirement == null ? 0: this.eEzsignformfieldDependencyrequirement.hashCode());
     return result;
   }
 
@@ -227,6 +242,7 @@ public class EzsignformfieldResponse {
     sb.append("  bEzsignformfieldAutocomplete: ").append(bEzsignformfieldAutocomplete).append("\n");
     sb.append("  bEzsignformfieldSelected: ").append(bEzsignformfieldSelected).append("\n");
     sb.append("  sEzsignformfieldEnteredvalue: ").append(sEzsignformfieldEnteredvalue).append("\n");
+    sb.append("  eEzsignformfieldDependencyrequirement: ").append(eEzsignformfieldDependencyrequirement).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

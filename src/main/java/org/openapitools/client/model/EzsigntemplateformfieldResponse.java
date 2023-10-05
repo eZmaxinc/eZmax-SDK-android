@@ -12,6 +12,7 @@
 
 package org.openapitools.client.model;
 
+import org.openapitools.client.model.FieldEEzsigntemplateformfieldDependencyrequirement;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -41,6 +42,8 @@ public class EzsigntemplateformfieldResponse {
   private Boolean bEzsigntemplateformfieldAutocomplete = null;
   @SerializedName("bEzsigntemplateformfieldSelected")
   private Boolean bEzsigntemplateformfieldSelected = null;
+  @SerializedName("eEzsigntemplateformfieldDependencyrequirement")
+  private FieldEEzsigntemplateformfieldDependencyrequirement eEzsigntemplateformfieldDependencyrequirement = null;
 
   /**
    * The unique ID of the Ezsigntemplateformfield
@@ -158,6 +161,16 @@ public class EzsigntemplateformfieldResponse {
     this.bEzsigntemplateformfieldSelected = bEzsigntemplateformfieldSelected;
   }
 
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public FieldEEzsigntemplateformfieldDependencyrequirement getEEzsigntemplateformfieldDependencyrequirement() {
+    return eEzsigntemplateformfieldDependencyrequirement;
+  }
+  public void setEEzsigntemplateformfieldDependencyrequirement(FieldEEzsigntemplateformfieldDependencyrequirement eEzsigntemplateformfieldDependencyrequirement) {
+    this.eEzsigntemplateformfieldDependencyrequirement = eEzsigntemplateformfieldDependencyrequirement;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -177,7 +190,8 @@ public class EzsigntemplateformfieldResponse {
         (this.iEzsigntemplateformfieldWidth == null ? ezsigntemplateformfieldResponse.iEzsigntemplateformfieldWidth == null : this.iEzsigntemplateformfieldWidth.equals(ezsigntemplateformfieldResponse.iEzsigntemplateformfieldWidth)) &&
         (this.iEzsigntemplateformfieldHeight == null ? ezsigntemplateformfieldResponse.iEzsigntemplateformfieldHeight == null : this.iEzsigntemplateformfieldHeight.equals(ezsigntemplateformfieldResponse.iEzsigntemplateformfieldHeight)) &&
         (this.bEzsigntemplateformfieldAutocomplete == null ? ezsigntemplateformfieldResponse.bEzsigntemplateformfieldAutocomplete == null : this.bEzsigntemplateformfieldAutocomplete.equals(ezsigntemplateformfieldResponse.bEzsigntemplateformfieldAutocomplete)) &&
-        (this.bEzsigntemplateformfieldSelected == null ? ezsigntemplateformfieldResponse.bEzsigntemplateformfieldSelected == null : this.bEzsigntemplateformfieldSelected.equals(ezsigntemplateformfieldResponse.bEzsigntemplateformfieldSelected));
+        (this.bEzsigntemplateformfieldSelected == null ? ezsigntemplateformfieldResponse.bEzsigntemplateformfieldSelected == null : this.bEzsigntemplateformfieldSelected.equals(ezsigntemplateformfieldResponse.bEzsigntemplateformfieldSelected)) &&
+        (this.eEzsigntemplateformfieldDependencyrequirement == null ? ezsigntemplateformfieldResponse.eEzsigntemplateformfieldDependencyrequirement == null : this.eEzsigntemplateformfieldDependencyrequirement.equals(ezsigntemplateformfieldResponse.eEzsigntemplateformfieldDependencyrequirement));
   }
 
   @Override
@@ -193,6 +207,7 @@ public class EzsigntemplateformfieldResponse {
     result = 31 * result + (this.iEzsigntemplateformfieldHeight == null ? 0: this.iEzsigntemplateformfieldHeight.hashCode());
     result = 31 * result + (this.bEzsigntemplateformfieldAutocomplete == null ? 0: this.bEzsigntemplateformfieldAutocomplete.hashCode());
     result = 31 * result + (this.bEzsigntemplateformfieldSelected == null ? 0: this.bEzsigntemplateformfieldSelected.hashCode());
+    result = 31 * result + (this.eEzsigntemplateformfieldDependencyrequirement == null ? 0: this.eEzsigntemplateformfieldDependencyrequirement.hashCode());
     return result;
   }
 
@@ -211,6 +226,7 @@ public class EzsigntemplateformfieldResponse {
     sb.append("  iEzsigntemplateformfieldHeight: ").append(iEzsigntemplateformfieldHeight).append("\n");
     sb.append("  bEzsigntemplateformfieldAutocomplete: ").append(bEzsigntemplateformfieldAutocomplete).append("\n");
     sb.append("  bEzsigntemplateformfieldSelected: ").append(bEzsigntemplateformfieldSelected).append("\n");
+    sb.append("  eEzsigntemplateformfieldDependencyrequirement: ").append(eEzsigntemplateformfieldDependencyrequirement).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

@@ -14,6 +14,7 @@ package org.openapitools.client.model;
 
 import org.openapitools.client.model.EnumTextvalidation;
 import org.openapitools.client.model.FieldEEzsignsignatureAttachmentnamesource;
+import org.openapitools.client.model.FieldEEzsignsignatureDependencyrequirement;
 import org.openapitools.client.model.FieldEEzsignsignatureFont;
 import org.openapitools.client.model.FieldEEzsignsignatureTooltipposition;
 import org.openapitools.client.model.FieldEEzsignsignatureType;
@@ -68,6 +69,8 @@ public class EzsignsignatureRequest {
   private EnumTextvalidation eEzsignsignatureTextvalidation = null;
   @SerializedName("sEzsignsignatureRegexp")
   private String sEzsignsignatureRegexp = null;
+  @SerializedName("eEzsignsignatureDependencyrequirement")
+  private FieldEEzsignsignatureDependencyrequirement eEzsignsignatureDependencyrequirement = null;
 
   /**
    * The unique ID of the Ezsignsignature
@@ -306,6 +309,16 @@ public class EzsignsignatureRequest {
     this.sEzsignsignatureRegexp = sEzsignsignatureRegexp;
   }
 
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public FieldEEzsignsignatureDependencyrequirement getEEzsignsignatureDependencyrequirement() {
+    return eEzsignsignatureDependencyrequirement;
+  }
+  public void setEEzsignsignatureDependencyrequirement(FieldEEzsignsignatureDependencyrequirement eEzsignsignatureDependencyrequirement) {
+    this.eEzsignsignatureDependencyrequirement = eEzsignsignatureDependencyrequirement;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -336,7 +349,8 @@ public class EzsignsignatureRequest {
         (this.iEzsignsignatureValidationstep == null ? ezsignsignatureRequest.iEzsignsignatureValidationstep == null : this.iEzsignsignatureValidationstep.equals(ezsignsignatureRequest.iEzsignsignatureValidationstep)) &&
         (this.iEzsignsignatureMaxlength == null ? ezsignsignatureRequest.iEzsignsignatureMaxlength == null : this.iEzsignsignatureMaxlength.equals(ezsignsignatureRequest.iEzsignsignatureMaxlength)) &&
         (this.eEzsignsignatureTextvalidation == null ? ezsignsignatureRequest.eEzsignsignatureTextvalidation == null : this.eEzsignsignatureTextvalidation.equals(ezsignsignatureRequest.eEzsignsignatureTextvalidation)) &&
-        (this.sEzsignsignatureRegexp == null ? ezsignsignatureRequest.sEzsignsignatureRegexp == null : this.sEzsignsignatureRegexp.equals(ezsignsignatureRequest.sEzsignsignatureRegexp));
+        (this.sEzsignsignatureRegexp == null ? ezsignsignatureRequest.sEzsignsignatureRegexp == null : this.sEzsignsignatureRegexp.equals(ezsignsignatureRequest.sEzsignsignatureRegexp)) &&
+        (this.eEzsignsignatureDependencyrequirement == null ? ezsignsignatureRequest.eEzsignsignatureDependencyrequirement == null : this.eEzsignsignatureDependencyrequirement.equals(ezsignsignatureRequest.eEzsignsignatureDependencyrequirement));
   }
 
   @Override
@@ -363,6 +377,7 @@ public class EzsignsignatureRequest {
     result = 31 * result + (this.iEzsignsignatureMaxlength == null ? 0: this.iEzsignsignatureMaxlength.hashCode());
     result = 31 * result + (this.eEzsignsignatureTextvalidation == null ? 0: this.eEzsignsignatureTextvalidation.hashCode());
     result = 31 * result + (this.sEzsignsignatureRegexp == null ? 0: this.sEzsignsignatureRegexp.hashCode());
+    result = 31 * result + (this.eEzsignsignatureDependencyrequirement == null ? 0: this.eEzsignsignatureDependencyrequirement.hashCode());
     return result;
   }
 
@@ -392,6 +407,7 @@ public class EzsignsignatureRequest {
     sb.append("  iEzsignsignatureMaxlength: ").append(iEzsignsignatureMaxlength).append("\n");
     sb.append("  eEzsignsignatureTextvalidation: ").append(eEzsignsignatureTextvalidation).append("\n");
     sb.append("  sEzsignsignatureRegexp: ").append(sEzsignsignatureRegexp).append("\n");
+    sb.append("  eEzsignsignatureDependencyrequirement: ").append(eEzsignsignatureDependencyrequirement).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

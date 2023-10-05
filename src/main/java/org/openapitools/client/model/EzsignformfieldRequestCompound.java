@@ -12,6 +12,9 @@
 
 package org.openapitools.client.model;
 
+import java.util.*;
+import org.openapitools.client.model.EzsignelementdependencyRequestCompound;
+import org.openapitools.client.model.FieldEEzsignformfieldDependencyrequirement;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -43,6 +46,10 @@ public class EzsignformfieldRequestCompound {
   private Boolean bEzsignformfieldSelected = null;
   @SerializedName("sEzsignformfieldEnteredvalue")
   private String sEzsignformfieldEnteredvalue = null;
+  @SerializedName("eEzsignformfieldDependencyrequirement")
+  private FieldEEzsignformfieldDependencyrequirement eEzsignformfieldDependencyrequirement = null;
+  @SerializedName("a_objEzsignelementdependency")
+  private List<EzsignelementdependencyRequestCompound> aObjEzsignelementdependency = null;
 
   /**
    * The unique ID of the Ezsignformfield
@@ -171,6 +178,26 @@ public class EzsignformfieldRequestCompound {
     this.sEzsignformfieldEnteredvalue = sEzsignformfieldEnteredvalue;
   }
 
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public FieldEEzsignformfieldDependencyrequirement getEEzsignformfieldDependencyrequirement() {
+    return eEzsignformfieldDependencyrequirement;
+  }
+  public void setEEzsignformfieldDependencyrequirement(FieldEEzsignformfieldDependencyrequirement eEzsignformfieldDependencyrequirement) {
+    this.eEzsignformfieldDependencyrequirement = eEzsignformfieldDependencyrequirement;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public List<EzsignelementdependencyRequestCompound> getAObjEzsignelementdependency() {
+    return aObjEzsignelementdependency;
+  }
+  public void setAObjEzsignelementdependency(List<EzsignelementdependencyRequestCompound> aObjEzsignelementdependency) {
+    this.aObjEzsignelementdependency = aObjEzsignelementdependency;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -191,7 +218,9 @@ public class EzsignformfieldRequestCompound {
         (this.iEzsignformfieldHeight == null ? ezsignformfieldRequestCompound.iEzsignformfieldHeight == null : this.iEzsignformfieldHeight.equals(ezsignformfieldRequestCompound.iEzsignformfieldHeight)) &&
         (this.bEzsignformfieldAutocomplete == null ? ezsignformfieldRequestCompound.bEzsignformfieldAutocomplete == null : this.bEzsignformfieldAutocomplete.equals(ezsignformfieldRequestCompound.bEzsignformfieldAutocomplete)) &&
         (this.bEzsignformfieldSelected == null ? ezsignformfieldRequestCompound.bEzsignformfieldSelected == null : this.bEzsignformfieldSelected.equals(ezsignformfieldRequestCompound.bEzsignformfieldSelected)) &&
-        (this.sEzsignformfieldEnteredvalue == null ? ezsignformfieldRequestCompound.sEzsignformfieldEnteredvalue == null : this.sEzsignformfieldEnteredvalue.equals(ezsignformfieldRequestCompound.sEzsignformfieldEnteredvalue));
+        (this.sEzsignformfieldEnteredvalue == null ? ezsignformfieldRequestCompound.sEzsignformfieldEnteredvalue == null : this.sEzsignformfieldEnteredvalue.equals(ezsignformfieldRequestCompound.sEzsignformfieldEnteredvalue)) &&
+        (this.eEzsignformfieldDependencyrequirement == null ? ezsignformfieldRequestCompound.eEzsignformfieldDependencyrequirement == null : this.eEzsignformfieldDependencyrequirement.equals(ezsignformfieldRequestCompound.eEzsignformfieldDependencyrequirement)) &&
+        (this.aObjEzsignelementdependency == null ? ezsignformfieldRequestCompound.aObjEzsignelementdependency == null : this.aObjEzsignelementdependency.equals(ezsignformfieldRequestCompound.aObjEzsignelementdependency));
   }
 
   @Override
@@ -208,6 +237,8 @@ public class EzsignformfieldRequestCompound {
     result = 31 * result + (this.bEzsignformfieldAutocomplete == null ? 0: this.bEzsignformfieldAutocomplete.hashCode());
     result = 31 * result + (this.bEzsignformfieldSelected == null ? 0: this.bEzsignformfieldSelected.hashCode());
     result = 31 * result + (this.sEzsignformfieldEnteredvalue == null ? 0: this.sEzsignformfieldEnteredvalue.hashCode());
+    result = 31 * result + (this.eEzsignformfieldDependencyrequirement == null ? 0: this.eEzsignformfieldDependencyrequirement.hashCode());
+    result = 31 * result + (this.aObjEzsignelementdependency == null ? 0: this.aObjEzsignelementdependency.hashCode());
     return result;
   }
 
@@ -227,6 +258,8 @@ public class EzsignformfieldRequestCompound {
     sb.append("  bEzsignformfieldAutocomplete: ").append(bEzsignformfieldAutocomplete).append("\n");
     sb.append("  bEzsignformfieldSelected: ").append(bEzsignformfieldSelected).append("\n");
     sb.append("  sEzsignformfieldEnteredvalue: ").append(sEzsignformfieldEnteredvalue).append("\n");
+    sb.append("  eEzsignformfieldDependencyrequirement: ").append(eEzsignformfieldDependencyrequirement).append("\n");
+    sb.append("  aObjEzsignelementdependency: ").append(aObjEzsignelementdependency).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

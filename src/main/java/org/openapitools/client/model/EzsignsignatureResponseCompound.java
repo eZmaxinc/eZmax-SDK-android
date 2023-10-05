@@ -16,8 +16,10 @@ import java.util.*;
 import org.openapitools.client.model.CustomContactNameResponse;
 import org.openapitools.client.model.CustomCreditcardtransactionResponse;
 import org.openapitools.client.model.EnumTextvalidation;
+import org.openapitools.client.model.EzsignelementdependencyResponseCompound;
 import org.openapitools.client.model.EzsignsignaturecustomdateResponseCompound;
 import org.openapitools.client.model.FieldEEzsignsignatureAttachmentnamesource;
+import org.openapitools.client.model.FieldEEzsignsignatureDependencyrequirement;
 import org.openapitools.client.model.FieldEEzsignsignatureFont;
 import org.openapitools.client.model.FieldEEzsignsignatureTooltipposition;
 import org.openapitools.client.model.FieldEEzsignsignatureType;
@@ -77,6 +79,8 @@ public class EzsignsignatureResponseCompound {
   private Integer iEzsignsignatureMaxlength = null;
   @SerializedName("eEzsignsignatureTextvalidation")
   private EnumTextvalidation eEzsignsignatureTextvalidation = null;
+  @SerializedName("eEzsignsignatureDependencyrequirement")
+  private FieldEEzsignsignatureDependencyrequirement eEzsignsignatureDependencyrequirement = null;
   @SerializedName("sEzsignsignatureRegexp")
   private String sEzsignsignatureRegexp = null;
   @SerializedName("objContactName")
@@ -91,6 +95,8 @@ public class EzsignsignatureResponseCompound {
   private List<EzsignsignaturecustomdateResponseCompound> aObjEzsignsignaturecustomdate = null;
   @SerializedName("objCreditcardtransaction")
   private CustomCreditcardtransactionResponse objCreditcardtransaction = null;
+  @SerializedName("a_objEzsignelementdependency")
+  private List<EzsignelementdependencyResponseCompound> aObjEzsignelementdependency = null;
 
   /**
    * The unique ID of the Ezsignsignature
@@ -352,6 +358,16 @@ public class EzsignsignatureResponseCompound {
   }
 
   /**
+   **/
+  @ApiModelProperty(value = "")
+  public FieldEEzsignsignatureDependencyrequirement getEEzsignsignatureDependencyrequirement() {
+    return eEzsignsignatureDependencyrequirement;
+  }
+  public void setEEzsignsignatureDependencyrequirement(FieldEEzsignsignatureDependencyrequirement eEzsignsignatureDependencyrequirement) {
+    this.eEzsignsignatureDependencyrequirement = eEzsignsignatureDependencyrequirement;
+  }
+
+  /**
    * A regular expression to indicate what values are acceptable for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom**
    **/
   @ApiModelProperty(value = "A regular expression to indicate what values are acceptable for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom**")
@@ -424,6 +440,16 @@ public class EzsignsignatureResponseCompound {
     this.objCreditcardtransaction = objCreditcardtransaction;
   }
 
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public List<EzsignelementdependencyResponseCompound> getAObjEzsignelementdependency() {
+    return aObjEzsignelementdependency;
+  }
+  public void setAObjEzsignelementdependency(List<EzsignelementdependencyResponseCompound> aObjEzsignelementdependency) {
+    this.aObjEzsignelementdependency = aObjEzsignelementdependency;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -457,13 +483,15 @@ public class EzsignsignatureResponseCompound {
         (this.sEzsignsignatureDescription == null ? ezsignsignatureResponseCompound.sEzsignsignatureDescription == null : this.sEzsignsignatureDescription.equals(ezsignsignatureResponseCompound.sEzsignsignatureDescription)) &&
         (this.iEzsignsignatureMaxlength == null ? ezsignsignatureResponseCompound.iEzsignsignatureMaxlength == null : this.iEzsignsignatureMaxlength.equals(ezsignsignatureResponseCompound.iEzsignsignatureMaxlength)) &&
         (this.eEzsignsignatureTextvalidation == null ? ezsignsignatureResponseCompound.eEzsignsignatureTextvalidation == null : this.eEzsignsignatureTextvalidation.equals(ezsignsignatureResponseCompound.eEzsignsignatureTextvalidation)) &&
+        (this.eEzsignsignatureDependencyrequirement == null ? ezsignsignatureResponseCompound.eEzsignsignatureDependencyrequirement == null : this.eEzsignsignatureDependencyrequirement.equals(ezsignsignatureResponseCompound.eEzsignsignatureDependencyrequirement)) &&
         (this.sEzsignsignatureRegexp == null ? ezsignsignatureResponseCompound.sEzsignsignatureRegexp == null : this.sEzsignsignatureRegexp.equals(ezsignsignatureResponseCompound.sEzsignsignatureRegexp)) &&
         (this.objContactName == null ? ezsignsignatureResponseCompound.objContactName == null : this.objContactName.equals(ezsignsignatureResponseCompound.objContactName)) &&
         (this.objContactNameDelegation == null ? ezsignsignatureResponseCompound.objContactNameDelegation == null : this.objContactNameDelegation.equals(ezsignsignatureResponseCompound.objContactNameDelegation)) &&
         (this.objSignature == null ? ezsignsignatureResponseCompound.objSignature == null : this.objSignature.equals(ezsignsignatureResponseCompound.objSignature)) &&
         (this.bEzsignsignatureCustomdate == null ? ezsignsignatureResponseCompound.bEzsignsignatureCustomdate == null : this.bEzsignsignatureCustomdate.equals(ezsignsignatureResponseCompound.bEzsignsignatureCustomdate)) &&
         (this.aObjEzsignsignaturecustomdate == null ? ezsignsignatureResponseCompound.aObjEzsignsignaturecustomdate == null : this.aObjEzsignsignaturecustomdate.equals(ezsignsignatureResponseCompound.aObjEzsignsignaturecustomdate)) &&
-        (this.objCreditcardtransaction == null ? ezsignsignatureResponseCompound.objCreditcardtransaction == null : this.objCreditcardtransaction.equals(ezsignsignatureResponseCompound.objCreditcardtransaction));
+        (this.objCreditcardtransaction == null ? ezsignsignatureResponseCompound.objCreditcardtransaction == null : this.objCreditcardtransaction.equals(ezsignsignatureResponseCompound.objCreditcardtransaction)) &&
+        (this.aObjEzsignelementdependency == null ? ezsignsignatureResponseCompound.aObjEzsignelementdependency == null : this.aObjEzsignelementdependency.equals(ezsignsignatureResponseCompound.aObjEzsignelementdependency));
   }
 
   @Override
@@ -492,6 +520,7 @@ public class EzsignsignatureResponseCompound {
     result = 31 * result + (this.sEzsignsignatureDescription == null ? 0: this.sEzsignsignatureDescription.hashCode());
     result = 31 * result + (this.iEzsignsignatureMaxlength == null ? 0: this.iEzsignsignatureMaxlength.hashCode());
     result = 31 * result + (this.eEzsignsignatureTextvalidation == null ? 0: this.eEzsignsignatureTextvalidation.hashCode());
+    result = 31 * result + (this.eEzsignsignatureDependencyrequirement == null ? 0: this.eEzsignsignatureDependencyrequirement.hashCode());
     result = 31 * result + (this.sEzsignsignatureRegexp == null ? 0: this.sEzsignsignatureRegexp.hashCode());
     result = 31 * result + (this.objContactName == null ? 0: this.objContactName.hashCode());
     result = 31 * result + (this.objContactNameDelegation == null ? 0: this.objContactNameDelegation.hashCode());
@@ -499,6 +528,7 @@ public class EzsignsignatureResponseCompound {
     result = 31 * result + (this.bEzsignsignatureCustomdate == null ? 0: this.bEzsignsignatureCustomdate.hashCode());
     result = 31 * result + (this.aObjEzsignsignaturecustomdate == null ? 0: this.aObjEzsignsignaturecustomdate.hashCode());
     result = 31 * result + (this.objCreditcardtransaction == null ? 0: this.objCreditcardtransaction.hashCode());
+    result = 31 * result + (this.aObjEzsignelementdependency == null ? 0: this.aObjEzsignelementdependency.hashCode());
     return result;
   }
 
@@ -530,6 +560,7 @@ public class EzsignsignatureResponseCompound {
     sb.append("  sEzsignsignatureDescription: ").append(sEzsignsignatureDescription).append("\n");
     sb.append("  iEzsignsignatureMaxlength: ").append(iEzsignsignatureMaxlength).append("\n");
     sb.append("  eEzsignsignatureTextvalidation: ").append(eEzsignsignatureTextvalidation).append("\n");
+    sb.append("  eEzsignsignatureDependencyrequirement: ").append(eEzsignsignatureDependencyrequirement).append("\n");
     sb.append("  sEzsignsignatureRegexp: ").append(sEzsignsignatureRegexp).append("\n");
     sb.append("  objContactName: ").append(objContactName).append("\n");
     sb.append("  objContactNameDelegation: ").append(objContactNameDelegation).append("\n");
@@ -537,6 +568,7 @@ public class EzsignsignatureResponseCompound {
     sb.append("  bEzsignsignatureCustomdate: ").append(bEzsignsignatureCustomdate).append("\n");
     sb.append("  aObjEzsignsignaturecustomdate: ").append(aObjEzsignsignaturecustomdate).append("\n");
     sb.append("  objCreditcardtransaction: ").append(objCreditcardtransaction).append("\n");
+    sb.append("  aObjEzsignelementdependency: ").append(aObjEzsignelementdependency).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

@@ -12,6 +12,9 @@
 
 package org.openapitools.client.model;
 
+import java.util.*;
+import org.openapitools.client.model.EzsigntemplateelementdependencyResponseCompound;
+import org.openapitools.client.model.FieldEEzsigntemplateformfieldDependencyrequirement;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -41,6 +44,10 @@ public class EzsigntemplateformfieldResponseCompound {
   private Boolean bEzsigntemplateformfieldAutocomplete = null;
   @SerializedName("bEzsigntemplateformfieldSelected")
   private Boolean bEzsigntemplateformfieldSelected = null;
+  @SerializedName("eEzsigntemplateformfieldDependencyrequirement")
+  private FieldEEzsigntemplateformfieldDependencyrequirement eEzsigntemplateformfieldDependencyrequirement = null;
+  @SerializedName("a_objEzsigntemplateelementdependency")
+  private List<EzsigntemplateelementdependencyResponseCompound> aObjEzsigntemplateelementdependency = null;
 
   /**
    * The unique ID of the Ezsigntemplateformfield
@@ -158,6 +165,26 @@ public class EzsigntemplateformfieldResponseCompound {
     this.bEzsigntemplateformfieldSelected = bEzsigntemplateformfieldSelected;
   }
 
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public FieldEEzsigntemplateformfieldDependencyrequirement getEEzsigntemplateformfieldDependencyrequirement() {
+    return eEzsigntemplateformfieldDependencyrequirement;
+  }
+  public void setEEzsigntemplateformfieldDependencyrequirement(FieldEEzsigntemplateformfieldDependencyrequirement eEzsigntemplateformfieldDependencyrequirement) {
+    this.eEzsigntemplateformfieldDependencyrequirement = eEzsigntemplateformfieldDependencyrequirement;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public List<EzsigntemplateelementdependencyResponseCompound> getAObjEzsigntemplateelementdependency() {
+    return aObjEzsigntemplateelementdependency;
+  }
+  public void setAObjEzsigntemplateelementdependency(List<EzsigntemplateelementdependencyResponseCompound> aObjEzsigntemplateelementdependency) {
+    this.aObjEzsigntemplateelementdependency = aObjEzsigntemplateelementdependency;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -177,7 +204,9 @@ public class EzsigntemplateformfieldResponseCompound {
         (this.iEzsigntemplateformfieldWidth == null ? ezsigntemplateformfieldResponseCompound.iEzsigntemplateformfieldWidth == null : this.iEzsigntemplateformfieldWidth.equals(ezsigntemplateformfieldResponseCompound.iEzsigntemplateformfieldWidth)) &&
         (this.iEzsigntemplateformfieldHeight == null ? ezsigntemplateformfieldResponseCompound.iEzsigntemplateformfieldHeight == null : this.iEzsigntemplateformfieldHeight.equals(ezsigntemplateformfieldResponseCompound.iEzsigntemplateformfieldHeight)) &&
         (this.bEzsigntemplateformfieldAutocomplete == null ? ezsigntemplateformfieldResponseCompound.bEzsigntemplateformfieldAutocomplete == null : this.bEzsigntemplateformfieldAutocomplete.equals(ezsigntemplateformfieldResponseCompound.bEzsigntemplateformfieldAutocomplete)) &&
-        (this.bEzsigntemplateformfieldSelected == null ? ezsigntemplateformfieldResponseCompound.bEzsigntemplateformfieldSelected == null : this.bEzsigntemplateformfieldSelected.equals(ezsigntemplateformfieldResponseCompound.bEzsigntemplateformfieldSelected));
+        (this.bEzsigntemplateformfieldSelected == null ? ezsigntemplateformfieldResponseCompound.bEzsigntemplateformfieldSelected == null : this.bEzsigntemplateformfieldSelected.equals(ezsigntemplateformfieldResponseCompound.bEzsigntemplateformfieldSelected)) &&
+        (this.eEzsigntemplateformfieldDependencyrequirement == null ? ezsigntemplateformfieldResponseCompound.eEzsigntemplateformfieldDependencyrequirement == null : this.eEzsigntemplateformfieldDependencyrequirement.equals(ezsigntemplateformfieldResponseCompound.eEzsigntemplateformfieldDependencyrequirement)) &&
+        (this.aObjEzsigntemplateelementdependency == null ? ezsigntemplateformfieldResponseCompound.aObjEzsigntemplateelementdependency == null : this.aObjEzsigntemplateelementdependency.equals(ezsigntemplateformfieldResponseCompound.aObjEzsigntemplateelementdependency));
   }
 
   @Override
@@ -193,6 +222,8 @@ public class EzsigntemplateformfieldResponseCompound {
     result = 31 * result + (this.iEzsigntemplateformfieldHeight == null ? 0: this.iEzsigntemplateformfieldHeight.hashCode());
     result = 31 * result + (this.bEzsigntemplateformfieldAutocomplete == null ? 0: this.bEzsigntemplateformfieldAutocomplete.hashCode());
     result = 31 * result + (this.bEzsigntemplateformfieldSelected == null ? 0: this.bEzsigntemplateformfieldSelected.hashCode());
+    result = 31 * result + (this.eEzsigntemplateformfieldDependencyrequirement == null ? 0: this.eEzsigntemplateformfieldDependencyrequirement.hashCode());
+    result = 31 * result + (this.aObjEzsigntemplateelementdependency == null ? 0: this.aObjEzsigntemplateelementdependency.hashCode());
     return result;
   }
 
@@ -211,6 +242,8 @@ public class EzsigntemplateformfieldResponseCompound {
     sb.append("  iEzsigntemplateformfieldHeight: ").append(iEzsigntemplateformfieldHeight).append("\n");
     sb.append("  bEzsigntemplateformfieldAutocomplete: ").append(bEzsigntemplateformfieldAutocomplete).append("\n");
     sb.append("  bEzsigntemplateformfieldSelected: ").append(bEzsigntemplateformfieldSelected).append("\n");
+    sb.append("  eEzsigntemplateformfieldDependencyrequirement: ").append(eEzsigntemplateformfieldDependencyrequirement).append("\n");
+    sb.append("  aObjEzsigntemplateelementdependency: ").append(aObjEzsigntemplateelementdependency).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

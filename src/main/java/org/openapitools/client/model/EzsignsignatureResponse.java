@@ -15,6 +15,7 @@ package org.openapitools.client.model;
 import org.openapitools.client.model.CustomContactNameResponse;
 import org.openapitools.client.model.EnumTextvalidation;
 import org.openapitools.client.model.FieldEEzsignsignatureAttachmentnamesource;
+import org.openapitools.client.model.FieldEEzsignsignatureDependencyrequirement;
 import org.openapitools.client.model.FieldEEzsignsignatureFont;
 import org.openapitools.client.model.FieldEEzsignsignatureTooltipposition;
 import org.openapitools.client.model.FieldEEzsignsignatureType;
@@ -74,6 +75,8 @@ public class EzsignsignatureResponse {
   private Integer iEzsignsignatureMaxlength = null;
   @SerializedName("eEzsignsignatureTextvalidation")
   private EnumTextvalidation eEzsignsignatureTextvalidation = null;
+  @SerializedName("eEzsignsignatureDependencyrequirement")
+  private FieldEEzsignsignatureDependencyrequirement eEzsignsignatureDependencyrequirement = null;
   @SerializedName("sEzsignsignatureRegexp")
   private String sEzsignsignatureRegexp = null;
   @SerializedName("objContactName")
@@ -343,6 +346,16 @@ public class EzsignsignatureResponse {
   }
 
   /**
+   **/
+  @ApiModelProperty(value = "")
+  public FieldEEzsignsignatureDependencyrequirement getEEzsignsignatureDependencyrequirement() {
+    return eEzsignsignatureDependencyrequirement;
+  }
+  public void setEEzsignsignatureDependencyrequirement(FieldEEzsignsignatureDependencyrequirement eEzsignsignatureDependencyrequirement) {
+    this.eEzsignsignatureDependencyrequirement = eEzsignsignatureDependencyrequirement;
+  }
+
+  /**
    * A regular expression to indicate what values are acceptable for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom**
    **/
   @ApiModelProperty(value = "A regular expression to indicate what values are acceptable for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom**")
@@ -416,6 +429,7 @@ public class EzsignsignatureResponse {
         (this.sEzsignsignatureDescription == null ? ezsignsignatureResponse.sEzsignsignatureDescription == null : this.sEzsignsignatureDescription.equals(ezsignsignatureResponse.sEzsignsignatureDescription)) &&
         (this.iEzsignsignatureMaxlength == null ? ezsignsignatureResponse.iEzsignsignatureMaxlength == null : this.iEzsignsignatureMaxlength.equals(ezsignsignatureResponse.iEzsignsignatureMaxlength)) &&
         (this.eEzsignsignatureTextvalidation == null ? ezsignsignatureResponse.eEzsignsignatureTextvalidation == null : this.eEzsignsignatureTextvalidation.equals(ezsignsignatureResponse.eEzsignsignatureTextvalidation)) &&
+        (this.eEzsignsignatureDependencyrequirement == null ? ezsignsignatureResponse.eEzsignsignatureDependencyrequirement == null : this.eEzsignsignatureDependencyrequirement.equals(ezsignsignatureResponse.eEzsignsignatureDependencyrequirement)) &&
         (this.sEzsignsignatureRegexp == null ? ezsignsignatureResponse.sEzsignsignatureRegexp == null : this.sEzsignsignatureRegexp.equals(ezsignsignatureResponse.sEzsignsignatureRegexp)) &&
         (this.objContactName == null ? ezsignsignatureResponse.objContactName == null : this.objContactName.equals(ezsignsignatureResponse.objContactName)) &&
         (this.objContactNameDelegation == null ? ezsignsignatureResponse.objContactNameDelegation == null : this.objContactNameDelegation.equals(ezsignsignatureResponse.objContactNameDelegation)) &&
@@ -448,6 +462,7 @@ public class EzsignsignatureResponse {
     result = 31 * result + (this.sEzsignsignatureDescription == null ? 0: this.sEzsignsignatureDescription.hashCode());
     result = 31 * result + (this.iEzsignsignatureMaxlength == null ? 0: this.iEzsignsignatureMaxlength.hashCode());
     result = 31 * result + (this.eEzsignsignatureTextvalidation == null ? 0: this.eEzsignsignatureTextvalidation.hashCode());
+    result = 31 * result + (this.eEzsignsignatureDependencyrequirement == null ? 0: this.eEzsignsignatureDependencyrequirement.hashCode());
     result = 31 * result + (this.sEzsignsignatureRegexp == null ? 0: this.sEzsignsignatureRegexp.hashCode());
     result = 31 * result + (this.objContactName == null ? 0: this.objContactName.hashCode());
     result = 31 * result + (this.objContactNameDelegation == null ? 0: this.objContactNameDelegation.hashCode());
@@ -483,6 +498,7 @@ public class EzsignsignatureResponse {
     sb.append("  sEzsignsignatureDescription: ").append(sEzsignsignatureDescription).append("\n");
     sb.append("  iEzsignsignatureMaxlength: ").append(iEzsignsignatureMaxlength).append("\n");
     sb.append("  eEzsignsignatureTextvalidation: ").append(eEzsignsignatureTextvalidation).append("\n");
+    sb.append("  eEzsignsignatureDependencyrequirement: ").append(eEzsignsignatureDependencyrequirement).append("\n");
     sb.append("  sEzsignsignatureRegexp: ").append(sEzsignsignatureRegexp).append("\n");
     sb.append("  objContactName: ").append(objContactName).append("\n");
     sb.append("  objContactNameDelegation: ").append(objContactNameDelegation).append("\n");
