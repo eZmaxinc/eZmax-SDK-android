@@ -42,7 +42,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sSelector** | **String**| The type of Ezsigntsarequirements to return | [default to null] [enum: User, Usergroup]
+ **sSelector** | **String**| The type of Ezsigntsarequirements to return | [default to null] [enum: All, User, Usergroup]
  **fkiEzsignfoldertypeID** | **Integer**|  | [optional] [default to null]
  **eFilterActive** | **String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive]
  **sQuery** | **String**| Allow to filter the returned results | [optional] [default to null]

@@ -4057,6 +4057,18 @@ public class JsonUtil {
       return new TypeToken<List<UsergroupmembershipResponseCompound>>(){}.getType();
     }
     
+    if ("UserlogintypeAutocompleteElementResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UserlogintypeAutocompleteElementResponse>>(){}.getType();
+    }
+    
+    if ("UserlogintypeGetAutocompleteV2Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UserlogintypeGetAutocompleteV2Response>>(){}.getType();
+    }
+    
+    if ("UserlogintypeGetAutocompleteV2ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UserlogintypeGetAutocompleteV2ResponseMPayload>>(){}.getType();
+    }
+    
     if ("UserstagedCreateUserV1Response".equalsIgnoreCase(className)) {
       return new TypeToken<List<UserstagedCreateUserV1Response>>(){}.getType();
     }
@@ -8325,6 +8337,18 @@ public class JsonUtil {
     
     if ("UsergroupmembershipResponseCompound".equalsIgnoreCase(className)) {
       return new TypeToken<UsergroupmembershipResponseCompound>(){}.getType();
+    }
+    
+    if ("UserlogintypeAutocompleteElementResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<UserlogintypeAutocompleteElementResponse>(){}.getType();
+    }
+    
+    if ("UserlogintypeGetAutocompleteV2Response".equalsIgnoreCase(className)) {
+      return new TypeToken<UserlogintypeGetAutocompleteV2Response>(){}.getType();
+    }
+    
+    if ("UserlogintypeGetAutocompleteV2ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<UserlogintypeGetAutocompleteV2ResponseMPayload>(){}.getType();
     }
     
     if ("UserstagedCreateUserV1Response".equalsIgnoreCase(className)) {

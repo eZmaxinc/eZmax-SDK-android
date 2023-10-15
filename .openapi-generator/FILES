@@ -879,6 +879,7 @@ docs/ObjectUserApi.md
 docs/ObjectUsergroupApi.md
 docs/ObjectUsergroupdelegationApi.md
 docs/ObjectUsergroupmembershipApi.md
+docs/ObjectUserlogintypeApi.md
 docs/ObjectUserstagedApi.md
 docs/ObjectVariableexpenseApi.md
 docs/ObjectVersionhistoryApi.md
@@ -1074,6 +1075,9 @@ docs/UsergroupmembershipRequest.md
 docs/UsergroupmembershipRequestCompound.md
 docs/UsergroupmembershipResponse.md
 docs/UsergroupmembershipResponseCompound.md
+docs/UserlogintypeAutocompleteElementResponse.md
+docs/UserlogintypeGetAutocompleteV2Response.md
+docs/UserlogintypeGetAutocompleteV2ResponseMPayload.md
 docs/UserstagedCreateUserV1Response.md
 docs/UserstagedCreateUserV1ResponseMPayload.md
 docs/UserstagedDeleteObjectV1Response.md
@@ -1224,6 +1228,7 @@ src/main/java/org/openapitools/client/api/ObjectUserApi.java
 src/main/java/org/openapitools/client/api/ObjectUsergroupApi.java
 src/main/java/org/openapitools/client/api/ObjectUsergroupdelegationApi.java
 src/main/java/org/openapitools/client/api/ObjectUsergroupmembershipApi.java
+src/main/java/org/openapitools/client/api/ObjectUserlogintypeApi.java
 src/main/java/org/openapitools/client/api/ObjectUserstagedApi.java
 src/main/java/org/openapitools/client/api/ObjectVariableexpenseApi.java
 src/main/java/org/openapitools/client/api/ObjectVersionhistoryApi.java
@@ -2231,6 +2236,9 @@ src/main/java/org/openapitools/client/model/UsergroupmembershipRequest.java
 src/main/java/org/openapitools/client/model/UsergroupmembershipRequestCompound.java
 src/main/java/org/openapitools/client/model/UsergroupmembershipResponse.java
 src/main/java/org/openapitools/client/model/UsergroupmembershipResponseCompound.java
+src/main/java/org/openapitools/client/model/UserlogintypeAutocompleteElementResponse.java
+src/main/java/org/openapitools/client/model/UserlogintypeGetAutocompleteV2Response.java
+src/main/java/org/openapitools/client/model/UserlogintypeGetAutocompleteV2ResponseMPayload.java
 src/main/java/org/openapitools/client/model/UserstagedCreateUserV1Response.java
 src/main/java/org/openapitools/client/model/UserstagedCreateUserV1ResponseMPayload.java
 src/main/java/org/openapitools/client/model/UserstagedDeleteObjectV1Response.java
