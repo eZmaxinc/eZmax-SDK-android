@@ -151,7 +151,7 @@ public class CustomWebhookResponse {
   /**
    * Whether the Webhook is active or not
    **/
-  @ApiModelProperty(value = "Whether the Webhook is active or not")
+  @ApiModelProperty(required = true, value = "Whether the Webhook is active or not")
   public Boolean getBWebhookIsactive() {
     return bWebhookIsactive;
   }

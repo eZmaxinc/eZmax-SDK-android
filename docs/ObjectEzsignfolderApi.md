@@ -15,6 +15,8 @@ Method | HTTP request | Description
 [**ezsignfolderGetActionableElementsV1**](ObjectEzsignfolderApi.md#ezsignfolderGetActionableElementsV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements | Retrieve actionable elements for the Ezsignfolder
 [**ezsignfolderGetCommunicationCountV1**](ObjectEzsignfolderApi.md#ezsignfolderGetCommunicationCountV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationCount | Retrieve Communication count
 [**ezsignfolderGetCommunicationListV1**](ObjectEzsignfolderApi.md#ezsignfolderGetCommunicationListV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationList | Retrieve Communication list
+[**ezsignfolderGetCommunicationrecipientsV1**](ObjectEzsignfolderApi.md#ezsignfolderGetCommunicationrecipientsV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationrecipients | Retrieve Ezsignfolder&#39;s Communicationrecipient
+[**ezsignfolderGetCommunicationsendersV1**](ObjectEzsignfolderApi.md#ezsignfolderGetCommunicationsendersV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationsenders | Retrieve Ezsignfolder&#39;s Communicationsender
 [**ezsignfolderGetEzsigndocumentsV1**](ObjectEzsignfolderApi.md#ezsignfolderGetEzsigndocumentsV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments | Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments
 [**ezsignfolderGetEzsignfoldersignerassociationsV1**](ObjectEzsignfolderApi.md#ezsignfolderGetEzsignfoldersignerassociationsV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociations | Retrieve an existing Ezsignfolder&#39;s Ezsignfoldersignerassociations
 [**ezsignfolderGetEzsignsignaturesAutomaticV1**](ObjectEzsignfolderApi.md#ezsignfolderGetEzsignsignaturesAutomaticV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignsignaturesAutomatic | Retrieve an existing Ezsignfolder&#39;s automatic Ezsignsignatures
@@ -542,6 +544,98 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
+## ezsignfolderGetCommunicationrecipientsV1
+
+> EzsignfolderGetCommunicationrecipientsV1Response ezsignfolderGetCommunicationrecipientsV1(pkiEzsignfolderID)
+
+Retrieve Ezsignfolder&#39;s Communicationrecipient
+
+
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectEzsignfolderApi;
+
+ObjectEzsignfolderApi apiInstance = new ObjectEzsignfolderApi();
+Integer pkiEzsignfolderID = null; // Integer | 
+try {
+    EzsignfolderGetCommunicationrecipientsV1Response result = apiInstance.ezsignfolderGetCommunicationrecipientsV1(pkiEzsignfolderID);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectEzsignfolderApi#ezsignfolderGetCommunicationrecipientsV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignfolderID** | **Integer**|  | [default to null]
+
+### Return type
+
+[**EzsignfolderGetCommunicationrecipientsV1Response**](EzsignfolderGetCommunicationrecipientsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## ezsignfolderGetCommunicationsendersV1
+
+> EzsignfolderGetCommunicationsendersV1Response ezsignfolderGetCommunicationsendersV1(pkiEzsignfolderID)
+
+Retrieve Ezsignfolder&#39;s Communicationsender
+
+
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectEzsignfolderApi;
+
+ObjectEzsignfolderApi apiInstance = new ObjectEzsignfolderApi();
+Integer pkiEzsignfolderID = null; // Integer | 
+try {
+    EzsignfolderGetCommunicationsendersV1Response result = apiInstance.ezsignfolderGetCommunicationsendersV1(pkiEzsignfolderID);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectEzsignfolderApi#ezsignfolderGetCommunicationsendersV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignfolderID** | **Integer**|  | [default to null]
+
+### Return type
+
+[**EzsignfolderGetCommunicationsendersV1Response**](EzsignfolderGetCommunicationsendersV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
 ## ezsignfolderGetEzsigndocumentsV1
 
 > EzsignfolderGetEzsigndocumentsV1Response ezsignfolderGetEzsigndocumentsV1(pkiEzsignfolderID)
@@ -732,7 +826,7 @@ Name | Type | Description  | Notes
 
 Retrieve Ezsignfolder list
 
-Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |---| | sContactFirstname | | sContactLastname | | sEzsigndocumentName |
+Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |---| | fkiUserID | | sContactFirstname | | sContactLastname | | sEzsigndocumentName |
 
 ### Example
 
@@ -742,7 +836,7 @@ Enum values that can be filtered in query parameter *sFilter*:  | Variable | Val
 
 ObjectEzsignfolderApi apiInstance = new ObjectEzsignfolderApi();
 String eOrderBy = null; // String | Specify how you want the results to be sorted
-Integer iRowMax = 10000; // Integer | 
+Integer iRowMax = null; // Integer | 
 Integer iRowOffset = 0; // Integer | 
 HeaderAcceptLanguage acceptLanguage = null; // HeaderAcceptLanguage | 
 String sFilter = null; // String | 
@@ -761,7 +855,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **eOrderBy** | **String**| Specify how you want the results to be sorted | [optional] [default to null] [enum: pkiEzsignfolderID_ASC, pkiEzsignfolderID_DESC, sEzsignfolderDescription_ASC, sEzsignfolderDescription_DESC, dtCreatedDate_ASC, dtCreatedDate_DESC, fkiEzsignfoldertypeID_ASC, fkiEzsignfoldertypeID_DESC, sEzsignfoldertypeNameX_ASC, sEzsignfoldertypeNameX_DESC, eEzsignfolderStep_ASC, eEzsignfolderStep_DESC, dtEzsignfolderSentdate_ASC, dtEzsignfolderSentdate_DESC, dtEzsignfolderDuedate_ASC, dtEzsignfolderDuedate_DESC, iEzsigndocument_ASC, iEzsigndocument_DESC, iEzsigndocumentEdm_ASC, iEzsigndocumentEdm_DESC, iEzsignsignature_ASC, iEzsignsignature_DESC, iEzsignsignatureSigned_ASC, iEzsignsignatureSigned_DESC]
- **iRowMax** | **Integer**|  | [optional] [default to 10000]
+ **iRowMax** | **Integer**|  | [optional] [default to null]
  **iRowOffset** | **Integer**|  | [optional] [default to 0]
  **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [default to null] [enum: *, en, fr]
  **sFilter** | **String**|  | [optional] [default to null]

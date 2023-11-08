@@ -23,8 +23,8 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
-import org.openapitools.client.model.CommonResponseError;
-import org.openapitools.client.model.CommunicationGetObjectV2Response;
+import org.openapitools.client.model.CommunicationSendV1Request;
+import org.openapitools.client.model.CommunicationSendV1Response;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
@@ -57,21 +57,21 @@ public class ObjectCommunicationApi {
   }
 
   /**
-  * Retrieve an existing Communication
-  * 
-   * @param pkiCommunicationID 
-   * @return CommunicationGetObjectV2Response
+  * Send a new Communication
+  * The endpoint allows to send one or many elements at once.
+   * @param communicationSendV1Request 
+   * @return CommunicationSendV1Response
   */
-  public CommunicationGetObjectV2Response communicationGetObjectV2 (Integer pkiCommunicationID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
-    Object postBody = null;
-    // verify the required parameter 'pkiCommunicationID' is set
-    if (pkiCommunicationID == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'pkiCommunicationID' when calling communicationGetObjectV2",
-        new ApiException(400, "Missing the required parameter 'pkiCommunicationID' when calling communicationGetObjectV2"));
+  public CommunicationSendV1Response communicationSendV1 (CommunicationSendV1Request communicationSendV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = communicationSendV1Request;
+    // verify the required parameter 'communicationSendV1Request' is set
+    if (communicationSendV1Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'communicationSendV1Request' when calling communicationSendV1",
+        new ApiException(400, "Missing the required parameter 'communicationSendV1Request' when calling communicationSendV1"));
     }
 
     // create path and map variables
-    String path = "/2/object/communication/{pkiCommunicationID}".replaceAll("\\{" + "pkiCommunicationID" + "\\}", apiInvoker.escapeString(pkiCommunicationID.toString()));
+    String path = "/1/object/communication/send";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -80,6 +80,7 @@ public class ObjectCommunicationApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
     String[] contentTypes = {
+      "application/json"
     };
     String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
 
@@ -95,9 +96,9 @@ public class ObjectCommunicationApi {
     String[] authNames = new String[] { "Authorization" };
 
     try {
-      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommunicationGetObjectV2Response) ApiInvoker.deserialize(localVarResponse, "", CommunicationGetObjectV2Response.class);
+         return (CommunicationSendV1Response) ApiInvoker.deserialize(localVarResponse, "", CommunicationSendV1Response.class);
       } else {
          return null;
       }
@@ -119,21 +120,21 @@ public class ObjectCommunicationApi {
   }
 
       /**
-   * Retrieve an existing Communication
-   * 
-   * @param pkiCommunicationID 
+   * Send a new Communication
+   * The endpoint allows to send one or many elements at once.
+   * @param communicationSendV1Request 
   */
-  public void communicationGetObjectV2 (Integer pkiCommunicationID, final Response.Listener<CommunicationGetObjectV2Response> responseListener, final Response.ErrorListener errorListener) {
-    Object postBody = null;
+  public void communicationSendV1 (CommunicationSendV1Request communicationSendV1Request, final Response.Listener<CommunicationSendV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = communicationSendV1Request;
 
-    // verify the required parameter 'pkiCommunicationID' is set
-    if (pkiCommunicationID == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'pkiCommunicationID' when calling communicationGetObjectV2",
-        new ApiException(400, "Missing the required parameter 'pkiCommunicationID' when calling communicationGetObjectV2"));
+    // verify the required parameter 'communicationSendV1Request' is set
+    if (communicationSendV1Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'communicationSendV1Request' when calling communicationSendV1",
+        new ApiException(400, "Missing the required parameter 'communicationSendV1Request' when calling communicationSendV1"));
     }
 
     // create path and map variables
-    String path = "/2/object/communication/{pkiCommunicationID}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiCommunicationID" + "\\}", apiInvoker.escapeString(pkiCommunicationID.toString()));
+    String path = "/1/object/communication/send".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -145,7 +146,7 @@ public class ObjectCommunicationApi {
 
 
     String[] contentTypes = {
-      
+      "application/json"
     };
     String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
 
@@ -163,12 +164,12 @@ public class ObjectCommunicationApi {
     String[] authNames = new String[] { "Authorization" };
 
     try {
-      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+      apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames,
         new Response.Listener<String>() {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommunicationGetObjectV2Response) ApiInvoker.deserialize(localVarResponse,  "", CommunicationGetObjectV2Response.class));
+              responseListener.onResponse((CommunicationSendV1Response) ApiInvoker.deserialize(localVarResponse,  "", CommunicationSendV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

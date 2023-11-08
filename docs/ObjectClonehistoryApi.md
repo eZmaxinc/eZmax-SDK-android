@@ -24,7 +24,7 @@ Retrieve Clonehistory list
 
 ObjectClonehistoryApi apiInstance = new ObjectClonehistoryApi();
 String eOrderBy = null; // String | Specify how you want the results to be sorted
-Integer iRowMax = 10000; // Integer | 
+Integer iRowMax = null; // Integer | 
 Integer iRowOffset = 0; // Integer | 
 HeaderAcceptLanguage acceptLanguage = null; // HeaderAcceptLanguage | 
 String sFilter = null; // String | 
@@ -43,7 +43,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **eOrderBy** | **String**| Specify how you want the results to be sorted | [optional] [default to null] [enum: pkiClonehistoryID_ASC, pkiClonehistoryID_DESC, fkiUserIDCloning_ASC, fkiUserIDCloning_DESC, fkiUserIDCloned_ASC, fkiUserIDCloned_DESC, dtClonehistoryFirsthit_ASC, dtClonehistoryFirsthit_DESC, dtClonehistoryLasthit_ASC, dtClonehistoryLasthit_DESC, sUserLoginnameCloning_ASC, sUserLoginnameCloning_DESC, sUserFirstnameCloning_ASC, sUserFirstnameCloning_DESC, sUserLastnameCloning_ASC, sUserLastnameCloning_DESC, sUserLoginnameCloned_ASC, sUserLoginnameCloned_DESC, sUserFirstnameCloned_ASC, sUserFirstnameCloned_DESC, sUserLastnameCloned_ASC, sUserLastnameCloned_DESC]
- **iRowMax** | **Integer**|  | [optional] [default to 10000]
+ **iRowMax** | **Integer**|  | [optional] [default to null]
  **iRowOffset** | **Integer**|  | [optional] [default to 0]
  **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [default to null] [enum: *, en, fr]
  **sFilter** | **String**|  | [optional] [default to null]

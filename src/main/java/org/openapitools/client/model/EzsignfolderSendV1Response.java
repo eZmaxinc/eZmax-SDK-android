@@ -18,9 +18,9 @@ import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Response for POST /1/object/ezsignfolder/{pkiEzsignfolderID}/send
+ * Response for GET /1/object/attachment/{pkiAttachmentID}/download
  **/
-@ApiModel(description = "Response for POST /1/object/ezsignfolder/{pkiEzsignfolderID}/send")
+@ApiModel(description = "Response for GET /1/object/attachment/{pkiAttachmentID}/download")
 public class EzsignfolderSendV1Response {
   
   @SerializedName("objDebugPayload")

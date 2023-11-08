@@ -16,9 +16,9 @@ import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * The type for the Communicationrecipient
+ * The type for the Communicationrecipient.  Only used when eCommunicationType is **Email**
  **/
-@ApiModel(description = "The type for the Communicationrecipient")
+@ApiModel(description = "The type for the Communicationrecipient.  Only used when eCommunicationType is **Email**")
 public class FieldECommunicationrecipientType {
   
 

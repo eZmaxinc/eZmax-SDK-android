@@ -39,6 +39,8 @@ import org.openapitools.client.model.EzsignfolderEditObjectV1Response;
 import org.openapitools.client.model.EzsignfolderGetActionableElementsV1Response;
 import org.openapitools.client.model.EzsignfolderGetCommunicationCountV1Response;
 import org.openapitools.client.model.EzsignfolderGetCommunicationListV1Response;
+import org.openapitools.client.model.EzsignfolderGetCommunicationrecipientsV1Response;
+import org.openapitools.client.model.EzsignfolderGetCommunicationsendersV1Response;
 import org.openapitools.client.model.EzsignfolderGetEzsigndocumentsV1Response;
 import org.openapitools.client.model.EzsignfolderGetEzsignfoldersignerassociationsV1Response;
 import org.openapitools.client.model.EzsignfolderGetEzsignsignaturesAutomaticV1Response;
@@ -1542,6 +1544,260 @@ public class ObjectEzsignfolderApi {
     }
   }
   /**
+  * Retrieve Ezsignfolder&#39;s Communicationrecipient
+  * 
+   * @param pkiEzsignfolderID 
+   * @return EzsignfolderGetCommunicationrecipientsV1Response
+  */
+  public EzsignfolderGetCommunicationrecipientsV1Response ezsignfolderGetCommunicationrecipientsV1 (Integer pkiEzsignfolderID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiEzsignfolderID' is set
+    if (pkiEzsignfolderID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsignfolderID' when calling ezsignfolderGetCommunicationrecipientsV1",
+        new ApiException(400, "Missing the required parameter 'pkiEzsignfolderID' when calling ezsignfolderGetCommunicationrecipientsV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationrecipients".replaceAll("\\{" + "pkiEzsignfolderID" + "\\}", apiInvoker.escapeString(pkiEzsignfolderID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (EzsignfolderGetCommunicationrecipientsV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsignfolderGetCommunicationrecipientsV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve Ezsignfolder&#39;s Communicationrecipient
+   * 
+   * @param pkiEzsignfolderID 
+  */
+  public void ezsignfolderGetCommunicationrecipientsV1 (Integer pkiEzsignfolderID, final Response.Listener<EzsignfolderGetCommunicationrecipientsV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiEzsignfolderID' is set
+    if (pkiEzsignfolderID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsignfolderID' when calling ezsignfolderGetCommunicationrecipientsV1",
+        new ApiException(400, "Missing the required parameter 'pkiEzsignfolderID' when calling ezsignfolderGetCommunicationrecipientsV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationrecipients".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiEzsignfolderID" + "\\}", apiInvoker.escapeString(pkiEzsignfolderID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((EzsignfolderGetCommunicationrecipientsV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsignfolderGetCommunicationrecipientsV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Retrieve Ezsignfolder&#39;s Communicationsender
+  * 
+   * @param pkiEzsignfolderID 
+   * @return EzsignfolderGetCommunicationsendersV1Response
+  */
+  public EzsignfolderGetCommunicationsendersV1Response ezsignfolderGetCommunicationsendersV1 (Integer pkiEzsignfolderID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiEzsignfolderID' is set
+    if (pkiEzsignfolderID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsignfolderID' when calling ezsignfolderGetCommunicationsendersV1",
+        new ApiException(400, "Missing the required parameter 'pkiEzsignfolderID' when calling ezsignfolderGetCommunicationsendersV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationsenders".replaceAll("\\{" + "pkiEzsignfolderID" + "\\}", apiInvoker.escapeString(pkiEzsignfolderID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (EzsignfolderGetCommunicationsendersV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsignfolderGetCommunicationsendersV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve Ezsignfolder&#39;s Communicationsender
+   * 
+   * @param pkiEzsignfolderID 
+  */
+  public void ezsignfolderGetCommunicationsendersV1 (Integer pkiEzsignfolderID, final Response.Listener<EzsignfolderGetCommunicationsendersV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiEzsignfolderID' is set
+    if (pkiEzsignfolderID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsignfolderID' when calling ezsignfolderGetCommunicationsendersV1",
+        new ApiException(400, "Missing the required parameter 'pkiEzsignfolderID' when calling ezsignfolderGetCommunicationsendersV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationsenders".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiEzsignfolderID" + "\\}", apiInvoker.escapeString(pkiEzsignfolderID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((EzsignfolderGetCommunicationsendersV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsignfolderGetCommunicationsendersV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
   * Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments
   * 
    * @param pkiEzsignfolderID 
@@ -2051,7 +2307,7 @@ public class ObjectEzsignfolderApi {
   }
   /**
   * Retrieve Ezsignfolder list
-  * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |---| | sContactFirstname | | sContactLastname | | sEzsigndocumentName |
+  * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |---| | fkiUserID | | sContactFirstname | | sContactLastname | | sEzsigndocumentName |
    * @param eOrderBy Specify how you want the results to be sorted
    * @param iRowMax 
    * @param iRowOffset 
@@ -2117,7 +2373,7 @@ public class ObjectEzsignfolderApi {
 
       /**
    * Retrieve Ezsignfolder list
-   * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |---| | sContactFirstname | | sContactLastname | | sEzsigndocumentName |
+   * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |---| | fkiUserID | | sContactFirstname | | sContactLastname | | sEzsigndocumentName |
    * @param eOrderBy Specify how you want the results to be sorted   * @param iRowMax    * @param iRowOffset    * @param acceptLanguage    * @param sFilter 
   */
   public void ezsignfolderGetListV1 (String eOrderBy, Integer iRowMax, Integer iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter, final Response.Listener<EzsignfolderGetListV1Response> responseListener, final Response.ErrorListener errorListener) {

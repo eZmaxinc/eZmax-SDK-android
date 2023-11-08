@@ -4,17 +4,17 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**communicationGetObjectV2**](ObjectCommunicationApi.md#communicationGetObjectV2) | **GET** /2/object/communication/{pkiCommunicationID} | Retrieve an existing Communication
+[**communicationSendV1**](ObjectCommunicationApi.md#communicationSendV1) | **POST** /1/object/communication/send | Send a new Communication
 
 
 
-## communicationGetObjectV2
+## communicationSendV1
 
-> CommunicationGetObjectV2Response communicationGetObjectV2(pkiCommunicationID)
+> CommunicationSendV1Response communicationSendV1(communicationSendV1Request)
 
-Retrieve an existing Communication
+Send a new Communication
 
-
+The endpoint allows to send one or many elements at once.
 
 ### Example
 
@@ -23,12 +23,12 @@ Retrieve an existing Communication
 //import org.openapitools.client.api.ObjectCommunicationApi;
 
 ObjectCommunicationApi apiInstance = new ObjectCommunicationApi();
-Integer pkiCommunicationID = null; // Integer | 
+CommunicationSendV1Request communicationSendV1Request = new CommunicationSendV1Request(); // CommunicationSendV1Request | 
 try {
-    CommunicationGetObjectV2Response result = apiInstance.communicationGetObjectV2(pkiCommunicationID);
+    CommunicationSendV1Response result = apiInstance.communicationSendV1(communicationSendV1Request);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling ObjectCommunicationApi#communicationGetObjectV2");
+    System.err.println("Exception when calling ObjectCommunicationApi#communicationSendV1");
     e.printStackTrace();
 }
 ```
@@ -38,11 +38,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiCommunicationID** | **Integer**|  | [default to null]
+ **communicationSendV1Request** | [**CommunicationSendV1Request**](CommunicationSendV1Request.md)|  |
 
 ### Return type
 
-[**CommunicationGetObjectV2Response**](CommunicationGetObjectV2Response.md)
+[**CommunicationSendV1Response**](CommunicationSendV1Response.md)
 
 ### Authorization
 
@@ -50,6 +50,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
+- **Content-Type**: application/json
 - **Accept**: application/json
 

@@ -218,7 +218,7 @@ Enum values that can be filtered in query parameter *sFilter*:  | Variable | Val
 
 ObjectWebhookApi apiInstance = new ObjectWebhookApi();
 String eOrderBy = null; // String | Specify how you want the results to be sorted
-Integer iRowMax = 10000; // Integer | 
+Integer iRowMax = null; // Integer | 
 Integer iRowOffset = 0; // Integer | 
 HeaderAcceptLanguage acceptLanguage = null; // HeaderAcceptLanguage | 
 String sFilter = null; // String | 
@@ -237,7 +237,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **eOrderBy** | **String**| Specify how you want the results to be sorted | [optional] [default to null] [enum: pkiWebhookID_ASC, pkiWebhookID_DESC, sWebhookDescription_ASC, sWebhookDescription_DESC, eWebhookEzsignevent_ASC, eWebhookEzsignevent_DESC, eWebhookManagementevent_ASC, eWebhookManagementevent_DESC, eWebhookModule_ASC, eWebhookModule_DESC, sWebhookEmailfailed_ASC, sWebhookEmailfailed_DESC, sWebhookEvent_ASC, sWebhookEvent_DESC, sWebhookUrl_ASC, sWebhookUrl_DESC, bWebhookIsactive_ASC, bWebhookIsactive_DESC]
- **iRowMax** | **Integer**|  | [optional] [default to 10000]
+ **iRowMax** | **Integer**|  | [optional] [default to null]
  **iRowOffset** | **Integer**|  | [optional] [default to 0]
  **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [default to null] [enum: *, en, fr]
  **sFilter** | **String**|  | [optional] [default to null]

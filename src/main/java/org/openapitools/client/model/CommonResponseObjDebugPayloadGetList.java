@@ -37,7 +37,7 @@ public class CommonResponseObjDebugPayloadGetList {
   @SerializedName("a_OrderBy")
   private Map<String, String> aOrderBy = null;
   @SerializedName("iRowMax")
-  private Integer iRowMax = 10000;
+  private Integer iRowMax = null;
   @SerializedName("iRowOffset")
   private Integer iRowOffset = 0;
 
@@ -107,11 +107,11 @@ public class CommonResponseObjDebugPayloadGetList {
   }
 
   /**
-   * The maximum numbers of results to be returned
+   * The maximum numbers of results to be returned.  When the content-type is **application/json** there is an implicit default of 10 000.  When it's **application/vnd.openxmlformats-officedocument.spreadsheetml.sheet** the is no implicit default so if you do not specify iRowMax, all records will be returned.
    * minimum: 1
    * maximum: 10000
    **/
-  @ApiModelProperty(required = true, value = "The maximum numbers of results to be returned")
+  @ApiModelProperty(required = true, value = "The maximum numbers of results to be returned.  When the content-type is **application/json** there is an implicit default of 10 000.  When it's **application/vnd.openxmlformats-officedocument.spreadsheetml.sheet** the is no implicit default so if you do not specify iRowMax, all records will be returned.")
   public Integer getIRowMax() {
     return iRowMax;
   }

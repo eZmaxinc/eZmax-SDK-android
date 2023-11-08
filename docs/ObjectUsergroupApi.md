@@ -324,7 +324,7 @@ Retrieve Usergroup list
 
 ObjectUsergroupApi apiInstance = new ObjectUsergroupApi();
 String eOrderBy = null; // String | Specify how you want the results to be sorted
-Integer iRowMax = 10000; // Integer | 
+Integer iRowMax = null; // Integer | 
 Integer iRowOffset = 0; // Integer | 
 HeaderAcceptLanguage acceptLanguage = null; // HeaderAcceptLanguage | 
 String sFilter = null; // String | 
@@ -343,7 +343,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **eOrderBy** | **String**| Specify how you want the results to be sorted | [optional] [default to null] [enum: pkiUsergroupID_ASC, pkiUsergroupID_DESC, sUsergroupNameX_ASC, sUsergroupNameX_DESC, iCountUser_ASC, iCountUser_DESC]
- **iRowMax** | **Integer**|  | [optional] [default to 10000]
+ **iRowMax** | **Integer**|  | [optional] [default to null]
  **iRowOffset** | **Integer**|  | [optional] [default to 0]
  **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [default to null] [enum: *, en, fr]
  **sFilter** | **String**|  | [optional] [default to null]
