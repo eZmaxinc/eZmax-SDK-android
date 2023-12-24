@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **sEmailAddress** | **String** | The email address. |  [optional]
 **sPhoneE164** | **String** | A phone number in E.164 Format |  [optional]
 **eCommunicationexternalrecipientType** | [**FieldECommunicationexternalrecipientType**](FieldECommunicationexternalrecipientType.md) |  |  [optional]
-**sCommunicationexternalrecipientName** | **String** | The name of the Communicationexternalrecipient | 
+**sCommunicationexternalrecipientName** | **String** | The name of the Communicationexternalrecipient |  [optional]
 
 
 

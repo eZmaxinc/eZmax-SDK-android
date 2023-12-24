@@ -39,6 +39,10 @@ public class EzsignsignatureResponseCompound {
   private Integer fkiEzsigndocumentID = null;
   @SerializedName("fkiEzsignfoldersignerassociationID")
   private Integer fkiEzsignfoldersignerassociationID = null;
+  @SerializedName("fkiEzsignsigningreasonID")
+  private Integer fkiEzsignsigningreasonID = null;
+  @SerializedName("sEzsignsigningreasonDescriptionX")
+  private String sEzsignsigningreasonDescriptionX = null;
   @SerializedName("iEzsignpagePagenumber")
   private Integer iEzsignpagePagenumber = null;
   @SerializedName("iEzsignsignatureX")
@@ -132,6 +136,30 @@ public class EzsignsignatureResponseCompound {
   }
   public void setFkiEzsignfoldersignerassociationID(Integer fkiEzsignfoldersignerassociationID) {
     this.fkiEzsignfoldersignerassociationID = fkiEzsignfoldersignerassociationID;
+  }
+
+  /**
+   * The unique ID of the Ezsignsigningreason
+   * minimum: 0
+   * maximum: 255
+   **/
+  @ApiModelProperty(value = "The unique ID of the Ezsignsigningreason")
+  public Integer getFkiEzsignsigningreasonID() {
+    return fkiEzsignsigningreasonID;
+  }
+  public void setFkiEzsignsigningreasonID(Integer fkiEzsignsigningreasonID) {
+    this.fkiEzsignsigningreasonID = fkiEzsignsigningreasonID;
+  }
+
+  /**
+   * The description of the Ezsignsigningreason in the language of the requester
+   **/
+  @ApiModelProperty(value = "The description of the Ezsignsigningreason in the language of the requester")
+  public String getSEzsignsigningreasonDescriptionX() {
+    return sEzsignsigningreasonDescriptionX;
+  }
+  public void setSEzsignsigningreasonDescriptionX(String sEzsignsigningreasonDescriptionX) {
+    this.sEzsignsigningreasonDescriptionX = sEzsignsigningreasonDescriptionX;
   }
 
   /**
@@ -463,6 +491,8 @@ public class EzsignsignatureResponseCompound {
     return (this.pkiEzsignsignatureID == null ? ezsignsignatureResponseCompound.pkiEzsignsignatureID == null : this.pkiEzsignsignatureID.equals(ezsignsignatureResponseCompound.pkiEzsignsignatureID)) &&
         (this.fkiEzsigndocumentID == null ? ezsignsignatureResponseCompound.fkiEzsigndocumentID == null : this.fkiEzsigndocumentID.equals(ezsignsignatureResponseCompound.fkiEzsigndocumentID)) &&
         (this.fkiEzsignfoldersignerassociationID == null ? ezsignsignatureResponseCompound.fkiEzsignfoldersignerassociationID == null : this.fkiEzsignfoldersignerassociationID.equals(ezsignsignatureResponseCompound.fkiEzsignfoldersignerassociationID)) &&
+        (this.fkiEzsignsigningreasonID == null ? ezsignsignatureResponseCompound.fkiEzsignsigningreasonID == null : this.fkiEzsignsigningreasonID.equals(ezsignsignatureResponseCompound.fkiEzsignsigningreasonID)) &&
+        (this.sEzsignsigningreasonDescriptionX == null ? ezsignsignatureResponseCompound.sEzsignsigningreasonDescriptionX == null : this.sEzsignsigningreasonDescriptionX.equals(ezsignsignatureResponseCompound.sEzsignsigningreasonDescriptionX)) &&
         (this.iEzsignpagePagenumber == null ? ezsignsignatureResponseCompound.iEzsignpagePagenumber == null : this.iEzsignpagePagenumber.equals(ezsignsignatureResponseCompound.iEzsignpagePagenumber)) &&
         (this.iEzsignsignatureX == null ? ezsignsignatureResponseCompound.iEzsignsignatureX == null : this.iEzsignsignatureX.equals(ezsignsignatureResponseCompound.iEzsignsignatureX)) &&
         (this.iEzsignsignatureY == null ? ezsignsignatureResponseCompound.iEzsignsignatureY == null : this.iEzsignsignatureY.equals(ezsignsignatureResponseCompound.iEzsignsignatureY)) &&
@@ -500,6 +530,8 @@ public class EzsignsignatureResponseCompound {
     result = 31 * result + (this.pkiEzsignsignatureID == null ? 0: this.pkiEzsignsignatureID.hashCode());
     result = 31 * result + (this.fkiEzsigndocumentID == null ? 0: this.fkiEzsigndocumentID.hashCode());
     result = 31 * result + (this.fkiEzsignfoldersignerassociationID == null ? 0: this.fkiEzsignfoldersignerassociationID.hashCode());
+    result = 31 * result + (this.fkiEzsignsigningreasonID == null ? 0: this.fkiEzsignsigningreasonID.hashCode());
+    result = 31 * result + (this.sEzsignsigningreasonDescriptionX == null ? 0: this.sEzsignsigningreasonDescriptionX.hashCode());
     result = 31 * result + (this.iEzsignpagePagenumber == null ? 0: this.iEzsignpagePagenumber.hashCode());
     result = 31 * result + (this.iEzsignsignatureX == null ? 0: this.iEzsignsignatureX.hashCode());
     result = 31 * result + (this.iEzsignsignatureY == null ? 0: this.iEzsignsignatureY.hashCode());
@@ -540,6 +572,8 @@ public class EzsignsignatureResponseCompound {
     sb.append("  pkiEzsignsignatureID: ").append(pkiEzsignsignatureID).append("\n");
     sb.append("  fkiEzsigndocumentID: ").append(fkiEzsigndocumentID).append("\n");
     sb.append("  fkiEzsignfoldersignerassociationID: ").append(fkiEzsignfoldersignerassociationID).append("\n");
+    sb.append("  fkiEzsignsigningreasonID: ").append(fkiEzsignsigningreasonID).append("\n");
+    sb.append("  sEzsignsigningreasonDescriptionX: ").append(sEzsignsigningreasonDescriptionX).append("\n");
     sb.append("  iEzsignpagePagenumber: ").append(iEzsignpagePagenumber).append("\n");
     sb.append("  iEzsignsignatureX: ").append(iEzsignsignatureX).append("\n");
     sb.append("  iEzsignsignatureY: ").append(iEzsignsignatureY).append("\n");

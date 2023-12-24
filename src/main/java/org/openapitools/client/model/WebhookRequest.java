@@ -42,6 +42,8 @@ public class WebhookRequest {
   private String sWebhookEmailfailed = null;
   @SerializedName("bWebhookIsactive")
   private Boolean bWebhookIsactive = null;
+  @SerializedName("bWebhookIssigned")
+  private Boolean bWebhookIssigned = null;
   @SerializedName("bWebhookSkipsslvalidation")
   private Boolean bWebhookSkipsslvalidation = null;
 
@@ -143,6 +145,17 @@ public class WebhookRequest {
   }
 
   /**
+   * Whether the requests will be signed or not
+   **/
+  @ApiModelProperty(value = "Whether the requests will be signed or not")
+  public Boolean getBWebhookIssigned() {
+    return bWebhookIssigned;
+  }
+  public void setBWebhookIssigned(Boolean bWebhookIssigned) {
+    this.bWebhookIssigned = bWebhookIssigned;
+  }
+
+  /**
    * Wheter the server's SSL certificate should be validated or not. Not recommended to skip for production use
    **/
   @ApiModelProperty(required = true, value = "Wheter the server's SSL certificate should be validated or not. Not recommended to skip for production use")
@@ -172,6 +185,7 @@ public class WebhookRequest {
         (this.sWebhookUrl == null ? webhookRequest.sWebhookUrl == null : this.sWebhookUrl.equals(webhookRequest.sWebhookUrl)) &&
         (this.sWebhookEmailfailed == null ? webhookRequest.sWebhookEmailfailed == null : this.sWebhookEmailfailed.equals(webhookRequest.sWebhookEmailfailed)) &&
         (this.bWebhookIsactive == null ? webhookRequest.bWebhookIsactive == null : this.bWebhookIsactive.equals(webhookRequest.bWebhookIsactive)) &&
+        (this.bWebhookIssigned == null ? webhookRequest.bWebhookIssigned == null : this.bWebhookIssigned.equals(webhookRequest.bWebhookIssigned)) &&
         (this.bWebhookSkipsslvalidation == null ? webhookRequest.bWebhookSkipsslvalidation == null : this.bWebhookSkipsslvalidation.equals(webhookRequest.bWebhookSkipsslvalidation));
   }
 
@@ -187,6 +201,7 @@ public class WebhookRequest {
     result = 31 * result + (this.sWebhookUrl == null ? 0: this.sWebhookUrl.hashCode());
     result = 31 * result + (this.sWebhookEmailfailed == null ? 0: this.sWebhookEmailfailed.hashCode());
     result = 31 * result + (this.bWebhookIsactive == null ? 0: this.bWebhookIsactive.hashCode());
+    result = 31 * result + (this.bWebhookIssigned == null ? 0: this.bWebhookIssigned.hashCode());
     result = 31 * result + (this.bWebhookSkipsslvalidation == null ? 0: this.bWebhookSkipsslvalidation.hashCode());
     return result;
   }
@@ -205,6 +220,7 @@ public class WebhookRequest {
     sb.append("  sWebhookUrl: ").append(sWebhookUrl).append("\n");
     sb.append("  sWebhookEmailfailed: ").append(sWebhookEmailfailed).append("\n");
     sb.append("  bWebhookIsactive: ").append(bWebhookIsactive).append("\n");
+    sb.append("  bWebhookIssigned: ").append(bWebhookIssigned).append("\n");
     sb.append("  bWebhookSkipsslvalidation: ").append(bWebhookSkipsslvalidation).append("\n");
     sb.append("}\n");
     return sb.toString();

@@ -29,12 +29,16 @@ import java.io.File;
 import org.openapitools.client.model.HeaderAcceptLanguage;
 import org.openapitools.client.model.WebhookCreateObjectV1Request;
 import org.openapitools.client.model.WebhookCreateObjectV1Response;
+import org.openapitools.client.model.WebhookCreateObjectV2Request;
+import org.openapitools.client.model.WebhookCreateObjectV2Response;
 import org.openapitools.client.model.WebhookDeleteObjectV1Response;
 import org.openapitools.client.model.WebhookEditObjectV1Request;
 import org.openapitools.client.model.WebhookEditObjectV1Response;
 import org.openapitools.client.model.WebhookGetHistoryV1Response;
 import org.openapitools.client.model.WebhookGetListV1Response;
 import org.openapitools.client.model.WebhookGetObjectV2Response;
+import org.openapitools.client.model.WebhookRegenerateApikeyV1Request;
+import org.openapitools.client.model.WebhookRegenerateApikeyV1Response;
 import org.openapitools.client.model.WebhookTestV1Response;
 
 import org.apache.http.HttpEntity;
@@ -181,6 +185,134 @@ public class ObjectWebhookApi {
           public void onResponse(String localVarResponse) {
             try {
               responseListener.onResponse((WebhookCreateObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", WebhookCreateObjectV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Create a new Webhook
+  * The endpoint allows to create one or many elements at once.
+   * @param webhookCreateObjectV2Request 
+   * @return WebhookCreateObjectV2Response
+  */
+  public WebhookCreateObjectV2Response webhookCreateObjectV2 (WebhookCreateObjectV2Request webhookCreateObjectV2Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = webhookCreateObjectV2Request;
+    // verify the required parameter 'webhookCreateObjectV2Request' is set
+    if (webhookCreateObjectV2Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'webhookCreateObjectV2Request' when calling webhookCreateObjectV2",
+        new ApiException(400, "Missing the required parameter 'webhookCreateObjectV2Request' when calling webhookCreateObjectV2"));
+    }
+
+    // create path and map variables
+    String path = "/2/object/webhook";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (WebhookCreateObjectV2Response) ApiInvoker.deserialize(localVarResponse, "", WebhookCreateObjectV2Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Create a new Webhook
+   * The endpoint allows to create one or many elements at once.
+   * @param webhookCreateObjectV2Request 
+  */
+  public void webhookCreateObjectV2 (WebhookCreateObjectV2Request webhookCreateObjectV2Request, final Response.Listener<WebhookCreateObjectV2Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = webhookCreateObjectV2Request;
+
+    // verify the required parameter 'webhookCreateObjectV2Request' is set
+    if (webhookCreateObjectV2Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'webhookCreateObjectV2Request' when calling webhookCreateObjectV2",
+        new ApiException(400, "Missing the required parameter 'webhookCreateObjectV2Request' when calling webhookCreateObjectV2"));
+    }
+
+    // create path and map variables
+    String path = "/2/object/webhook".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((WebhookCreateObjectV2Response) ApiInvoker.deserialize(localVarResponse,  "", WebhookCreateObjectV2Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -845,6 +977,145 @@ public class ObjectWebhookApi {
           public void onResponse(String localVarResponse) {
             try {
               responseListener.onResponse((WebhookGetObjectV2Response) ApiInvoker.deserialize(localVarResponse,  "", WebhookGetObjectV2Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Regenerate the Apikey
+  * 
+   * @param pkiWebhookID 
+   * @param webhookRegenerateApikeyV1Request 
+   * @return WebhookRegenerateApikeyV1Response
+  */
+  public WebhookRegenerateApikeyV1Response webhookRegenerateApikeyV1 (Integer pkiWebhookID, WebhookRegenerateApikeyV1Request webhookRegenerateApikeyV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = webhookRegenerateApikeyV1Request;
+    // verify the required parameter 'pkiWebhookID' is set
+    if (pkiWebhookID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiWebhookID' when calling webhookRegenerateApikeyV1",
+        new ApiException(400, "Missing the required parameter 'pkiWebhookID' when calling webhookRegenerateApikeyV1"));
+    }
+    // verify the required parameter 'webhookRegenerateApikeyV1Request' is set
+    if (webhookRegenerateApikeyV1Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'webhookRegenerateApikeyV1Request' when calling webhookRegenerateApikeyV1",
+        new ApiException(400, "Missing the required parameter 'webhookRegenerateApikeyV1Request' when calling webhookRegenerateApikeyV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/webhook/{pkiWebhookID}/regenerateApikey".replaceAll("\\{" + "pkiWebhookID" + "\\}", apiInvoker.escapeString(pkiWebhookID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (WebhookRegenerateApikeyV1Response) ApiInvoker.deserialize(localVarResponse, "", WebhookRegenerateApikeyV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Regenerate the Apikey
+   * 
+   * @param pkiWebhookID    * @param webhookRegenerateApikeyV1Request 
+  */
+  public void webhookRegenerateApikeyV1 (Integer pkiWebhookID, WebhookRegenerateApikeyV1Request webhookRegenerateApikeyV1Request, final Response.Listener<WebhookRegenerateApikeyV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = webhookRegenerateApikeyV1Request;
+
+    // verify the required parameter 'pkiWebhookID' is set
+    if (pkiWebhookID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiWebhookID' when calling webhookRegenerateApikeyV1",
+        new ApiException(400, "Missing the required parameter 'pkiWebhookID' when calling webhookRegenerateApikeyV1"));
+    }
+    // verify the required parameter 'webhookRegenerateApikeyV1Request' is set
+    if (webhookRegenerateApikeyV1Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'webhookRegenerateApikeyV1Request' when calling webhookRegenerateApikeyV1",
+        new ApiException(400, "Missing the required parameter 'webhookRegenerateApikeyV1Request' when calling webhookRegenerateApikeyV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/webhook/{pkiWebhookID}/regenerateApikey".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiWebhookID" + "\\}", apiInvoker.escapeString(pkiWebhookID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((WebhookRegenerateApikeyV1Response) ApiInvoker.deserialize(localVarResponse,  "", WebhookRegenerateApikeyV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

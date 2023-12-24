@@ -42,8 +42,14 @@ public class CustomWebhookResponse {
   private String sWebhookUrl = null;
   @SerializedName("sWebhookEmailfailed")
   private String sWebhookEmailfailed = null;
+  @SerializedName("sWebhookApikey")
+  private String sWebhookApikey = null;
+  @SerializedName("sWebhookSecret")
+  private String sWebhookSecret = null;
   @SerializedName("bWebhookIsactive")
   private Boolean bWebhookIsactive = null;
+  @SerializedName("bWebhookIssigned")
+  private Boolean bWebhookIssigned = null;
   @SerializedName("bWebhookSkipsslvalidation")
   private Boolean bWebhookSkipsslvalidation = null;
   @SerializedName("pksCustomerCode")
@@ -149,6 +155,28 @@ public class CustomWebhookResponse {
   }
 
   /**
+   * The Apikey for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey.
+   **/
+  @ApiModelProperty(value = "The Apikey for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey.")
+  public String getSWebhookApikey() {
+    return sWebhookApikey;
+  }
+  public void setSWebhookApikey(String sWebhookApikey) {
+    this.sWebhookApikey = sWebhookApikey;
+  }
+
+  /**
+   * The Secret for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey.
+   **/
+  @ApiModelProperty(value = "The Secret for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey.")
+  public String getSWebhookSecret() {
+    return sWebhookSecret;
+  }
+  public void setSWebhookSecret(String sWebhookSecret) {
+    this.sWebhookSecret = sWebhookSecret;
+  }
+
+  /**
    * Whether the Webhook is active or not
    **/
   @ApiModelProperty(required = true, value = "Whether the Webhook is active or not")
@@ -157,6 +185,17 @@ public class CustomWebhookResponse {
   }
   public void setBWebhookIsactive(Boolean bWebhookIsactive) {
     this.bWebhookIsactive = bWebhookIsactive;
+  }
+
+  /**
+   * Whether the requests will be signed or not
+   **/
+  @ApiModelProperty(required = true, value = "Whether the requests will be signed or not")
+  public Boolean getBWebhookIssigned() {
+    return bWebhookIssigned;
+  }
+  public void setBWebhookIssigned(Boolean bWebhookIssigned) {
+    this.bWebhookIssigned = bWebhookIssigned;
   }
 
   /**
@@ -211,7 +250,10 @@ public class CustomWebhookResponse {
         (this.eWebhookManagementevent == null ? customWebhookResponse.eWebhookManagementevent == null : this.eWebhookManagementevent.equals(customWebhookResponse.eWebhookManagementevent)) &&
         (this.sWebhookUrl == null ? customWebhookResponse.sWebhookUrl == null : this.sWebhookUrl.equals(customWebhookResponse.sWebhookUrl)) &&
         (this.sWebhookEmailfailed == null ? customWebhookResponse.sWebhookEmailfailed == null : this.sWebhookEmailfailed.equals(customWebhookResponse.sWebhookEmailfailed)) &&
+        (this.sWebhookApikey == null ? customWebhookResponse.sWebhookApikey == null : this.sWebhookApikey.equals(customWebhookResponse.sWebhookApikey)) &&
+        (this.sWebhookSecret == null ? customWebhookResponse.sWebhookSecret == null : this.sWebhookSecret.equals(customWebhookResponse.sWebhookSecret)) &&
         (this.bWebhookIsactive == null ? customWebhookResponse.bWebhookIsactive == null : this.bWebhookIsactive.equals(customWebhookResponse.bWebhookIsactive)) &&
+        (this.bWebhookIssigned == null ? customWebhookResponse.bWebhookIssigned == null : this.bWebhookIssigned.equals(customWebhookResponse.bWebhookIssigned)) &&
         (this.bWebhookSkipsslvalidation == null ? customWebhookResponse.bWebhookSkipsslvalidation == null : this.bWebhookSkipsslvalidation.equals(customWebhookResponse.bWebhookSkipsslvalidation)) &&
         (this.pksCustomerCode == null ? customWebhookResponse.pksCustomerCode == null : this.pksCustomerCode.equals(customWebhookResponse.pksCustomerCode)) &&
         (this.bWebhookTest == null ? customWebhookResponse.bWebhookTest == null : this.bWebhookTest.equals(customWebhookResponse.bWebhookTest));
@@ -229,7 +271,10 @@ public class CustomWebhookResponse {
     result = 31 * result + (this.eWebhookManagementevent == null ? 0: this.eWebhookManagementevent.hashCode());
     result = 31 * result + (this.sWebhookUrl == null ? 0: this.sWebhookUrl.hashCode());
     result = 31 * result + (this.sWebhookEmailfailed == null ? 0: this.sWebhookEmailfailed.hashCode());
+    result = 31 * result + (this.sWebhookApikey == null ? 0: this.sWebhookApikey.hashCode());
+    result = 31 * result + (this.sWebhookSecret == null ? 0: this.sWebhookSecret.hashCode());
     result = 31 * result + (this.bWebhookIsactive == null ? 0: this.bWebhookIsactive.hashCode());
+    result = 31 * result + (this.bWebhookIssigned == null ? 0: this.bWebhookIssigned.hashCode());
     result = 31 * result + (this.bWebhookSkipsslvalidation == null ? 0: this.bWebhookSkipsslvalidation.hashCode());
     result = 31 * result + (this.pksCustomerCode == null ? 0: this.pksCustomerCode.hashCode());
     result = 31 * result + (this.bWebhookTest == null ? 0: this.bWebhookTest.hashCode());
@@ -250,7 +295,10 @@ public class CustomWebhookResponse {
     sb.append("  eWebhookManagementevent: ").append(eWebhookManagementevent).append("\n");
     sb.append("  sWebhookUrl: ").append(sWebhookUrl).append("\n");
     sb.append("  sWebhookEmailfailed: ").append(sWebhookEmailfailed).append("\n");
+    sb.append("  sWebhookApikey: ").append(sWebhookApikey).append("\n");
+    sb.append("  sWebhookSecret: ").append(sWebhookSecret).append("\n");
     sb.append("  bWebhookIsactive: ").append(bWebhookIsactive).append("\n");
+    sb.append("  bWebhookIssigned: ").append(bWebhookIssigned).append("\n");
     sb.append("  bWebhookSkipsslvalidation: ").append(bWebhookSkipsslvalidation).append("\n");
     sb.append("  pksCustomerCode: ").append(pksCustomerCode).append("\n");
     sb.append("  bWebhookTest: ").append(bWebhookTest).append("\n");

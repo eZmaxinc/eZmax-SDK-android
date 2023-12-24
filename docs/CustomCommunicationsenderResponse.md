@@ -10,10 +10,12 @@ Name | Type | Description | Notes
 **fkiBrokerID** | **Integer** | The unique ID of the Broker. |  [optional]
 **fkiUserID** | **Integer** | The unique ID of the User |  [optional]
 **fkiMailboxsharedID** | **Integer** | The unique ID of the Mailboxshared |  [optional]
+**fkiPhonelinesharedID** | **Integer** | The unique ID of the Phonelineshared |  [optional]
 **eCommunicationsenderObjecttype** | [**ECommunicationsenderObjecttypeEnum**](#ECommunicationsenderObjecttypeEnum) |  | 
 **objContactName** | [**CustomContactNameResponse**](CustomContactNameResponse.md) |  | 
-**sEmailAddress** | **String** | The email address. |  [optional]
-**sPhoneE164** | **String** | A phone number in E.164 Format |  [optional]
+**objEmail** | [**EmailResponseCompound**](EmailResponseCompound.md) |  |  [optional]
+**objPhoneFax** | [**PhoneResponseCompound**](PhoneResponseCompound.md) |  |  [optional]
+**objPhoneSMS** | [**PhoneResponseCompound**](PhoneResponseCompound.md) |  |  [optional]
 
 
 ## Enum: ECommunicationsenderObjecttypeEnum

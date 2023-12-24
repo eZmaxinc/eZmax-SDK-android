@@ -26,10 +26,10 @@ public class CommunicationrecipientRequest {
   private Integer pkiCommunicationrecipientID = null;
   @SerializedName("fkiAgentID")
   private Integer fkiAgentID = null;
-  @SerializedName("fkiAgentincorporationID")
-  private Integer fkiAgentincorporationID = null;
   @SerializedName("fkiBrokerID")
   private Integer fkiBrokerID = null;
+  @SerializedName("fkiContactID")
+  private Integer fkiContactID = null;
   @SerializedName("fkiCustomerID")
   private Integer fkiCustomerID = null;
   @SerializedName("fkiEmployeeID")
@@ -46,6 +46,10 @@ public class CommunicationrecipientRequest {
   private Integer fkiSupplierID = null;
   @SerializedName("fkiUserID")
   private Integer fkiUserID = null;
+  @SerializedName("fkiMailboxsharedID")
+  private Integer fkiMailboxsharedID = null;
+  @SerializedName("fkiPhonelinesharedID")
+  private Integer fkiPhonelinesharedID = null;
   @SerializedName("eCommunicationrecipientType")
   private FieldECommunicationrecipientType eCommunicationrecipientType = null;
 
@@ -74,18 +78,6 @@ public class CommunicationrecipientRequest {
   }
 
   /**
-   * The unique ID of the Agentincorporation.
-   * minimum: 0
-   **/
-  @ApiModelProperty(value = "The unique ID of the Agentincorporation.")
-  public Integer getFkiAgentincorporationID() {
-    return fkiAgentincorporationID;
-  }
-  public void setFkiAgentincorporationID(Integer fkiAgentincorporationID) {
-    this.fkiAgentincorporationID = fkiAgentincorporationID;
-  }
-
-  /**
    * The unique ID of the Broker.
    * minimum: 0
    **/
@@ -95,6 +87,18 @@ public class CommunicationrecipientRequest {
   }
   public void setFkiBrokerID(Integer fkiBrokerID) {
     this.fkiBrokerID = fkiBrokerID;
+  }
+
+  /**
+   * The unique ID of the Contact
+   * minimum: 0
+   **/
+  @ApiModelProperty(value = "The unique ID of the Contact")
+  public Integer getFkiContactID() {
+    return fkiContactID;
+  }
+  public void setFkiContactID(Integer fkiContactID) {
+    this.fkiContactID = fkiContactID;
   }
 
   /**
@@ -194,6 +198,32 @@ public class CommunicationrecipientRequest {
   }
 
   /**
+   * The unique ID of the Mailboxshared
+   * minimum: 0
+   * maximum: 255
+   **/
+  @ApiModelProperty(value = "The unique ID of the Mailboxshared")
+  public Integer getFkiMailboxsharedID() {
+    return fkiMailboxsharedID;
+  }
+  public void setFkiMailboxsharedID(Integer fkiMailboxsharedID) {
+    this.fkiMailboxsharedID = fkiMailboxsharedID;
+  }
+
+  /**
+   * The unique ID of the Phonelineshared
+   * minimum: 0
+   * maximum: 255
+   **/
+  @ApiModelProperty(value = "The unique ID of the Phonelineshared")
+  public Integer getFkiPhonelinesharedID() {
+    return fkiPhonelinesharedID;
+  }
+  public void setFkiPhonelinesharedID(Integer fkiPhonelinesharedID) {
+    this.fkiPhonelinesharedID = fkiPhonelinesharedID;
+  }
+
+  /**
    **/
   @ApiModelProperty(value = "")
   public FieldECommunicationrecipientType getECommunicationrecipientType() {
@@ -215,8 +245,8 @@ public class CommunicationrecipientRequest {
     CommunicationrecipientRequest communicationrecipientRequest = (CommunicationrecipientRequest) o;
     return (this.pkiCommunicationrecipientID == null ? communicationrecipientRequest.pkiCommunicationrecipientID == null : this.pkiCommunicationrecipientID.equals(communicationrecipientRequest.pkiCommunicationrecipientID)) &&
         (this.fkiAgentID == null ? communicationrecipientRequest.fkiAgentID == null : this.fkiAgentID.equals(communicationrecipientRequest.fkiAgentID)) &&
-        (this.fkiAgentincorporationID == null ? communicationrecipientRequest.fkiAgentincorporationID == null : this.fkiAgentincorporationID.equals(communicationrecipientRequest.fkiAgentincorporationID)) &&
         (this.fkiBrokerID == null ? communicationrecipientRequest.fkiBrokerID == null : this.fkiBrokerID.equals(communicationrecipientRequest.fkiBrokerID)) &&
+        (this.fkiContactID == null ? communicationrecipientRequest.fkiContactID == null : this.fkiContactID.equals(communicationrecipientRequest.fkiContactID)) &&
         (this.fkiCustomerID == null ? communicationrecipientRequest.fkiCustomerID == null : this.fkiCustomerID.equals(communicationrecipientRequest.fkiCustomerID)) &&
         (this.fkiEmployeeID == null ? communicationrecipientRequest.fkiEmployeeID == null : this.fkiEmployeeID.equals(communicationrecipientRequest.fkiEmployeeID)) &&
         (this.fkiAssistantID == null ? communicationrecipientRequest.fkiAssistantID == null : this.fkiAssistantID.equals(communicationrecipientRequest.fkiAssistantID)) &&
@@ -225,6 +255,8 @@ public class CommunicationrecipientRequest {
         (this.fkiNotaryID == null ? communicationrecipientRequest.fkiNotaryID == null : this.fkiNotaryID.equals(communicationrecipientRequest.fkiNotaryID)) &&
         (this.fkiSupplierID == null ? communicationrecipientRequest.fkiSupplierID == null : this.fkiSupplierID.equals(communicationrecipientRequest.fkiSupplierID)) &&
         (this.fkiUserID == null ? communicationrecipientRequest.fkiUserID == null : this.fkiUserID.equals(communicationrecipientRequest.fkiUserID)) &&
+        (this.fkiMailboxsharedID == null ? communicationrecipientRequest.fkiMailboxsharedID == null : this.fkiMailboxsharedID.equals(communicationrecipientRequest.fkiMailboxsharedID)) &&
+        (this.fkiPhonelinesharedID == null ? communicationrecipientRequest.fkiPhonelinesharedID == null : this.fkiPhonelinesharedID.equals(communicationrecipientRequest.fkiPhonelinesharedID)) &&
         (this.eCommunicationrecipientType == null ? communicationrecipientRequest.eCommunicationrecipientType == null : this.eCommunicationrecipientType.equals(communicationrecipientRequest.eCommunicationrecipientType));
   }
 
@@ -233,8 +265,8 @@ public class CommunicationrecipientRequest {
     int result = 17;
     result = 31 * result + (this.pkiCommunicationrecipientID == null ? 0: this.pkiCommunicationrecipientID.hashCode());
     result = 31 * result + (this.fkiAgentID == null ? 0: this.fkiAgentID.hashCode());
-    result = 31 * result + (this.fkiAgentincorporationID == null ? 0: this.fkiAgentincorporationID.hashCode());
     result = 31 * result + (this.fkiBrokerID == null ? 0: this.fkiBrokerID.hashCode());
+    result = 31 * result + (this.fkiContactID == null ? 0: this.fkiContactID.hashCode());
     result = 31 * result + (this.fkiCustomerID == null ? 0: this.fkiCustomerID.hashCode());
     result = 31 * result + (this.fkiEmployeeID == null ? 0: this.fkiEmployeeID.hashCode());
     result = 31 * result + (this.fkiAssistantID == null ? 0: this.fkiAssistantID.hashCode());
@@ -243,6 +275,8 @@ public class CommunicationrecipientRequest {
     result = 31 * result + (this.fkiNotaryID == null ? 0: this.fkiNotaryID.hashCode());
     result = 31 * result + (this.fkiSupplierID == null ? 0: this.fkiSupplierID.hashCode());
     result = 31 * result + (this.fkiUserID == null ? 0: this.fkiUserID.hashCode());
+    result = 31 * result + (this.fkiMailboxsharedID == null ? 0: this.fkiMailboxsharedID.hashCode());
+    result = 31 * result + (this.fkiPhonelinesharedID == null ? 0: this.fkiPhonelinesharedID.hashCode());
     result = 31 * result + (this.eCommunicationrecipientType == null ? 0: this.eCommunicationrecipientType.hashCode());
     return result;
   }
@@ -254,8 +288,8 @@ public class CommunicationrecipientRequest {
     
     sb.append("  pkiCommunicationrecipientID: ").append(pkiCommunicationrecipientID).append("\n");
     sb.append("  fkiAgentID: ").append(fkiAgentID).append("\n");
-    sb.append("  fkiAgentincorporationID: ").append(fkiAgentincorporationID).append("\n");
     sb.append("  fkiBrokerID: ").append(fkiBrokerID).append("\n");
+    sb.append("  fkiContactID: ").append(fkiContactID).append("\n");
     sb.append("  fkiCustomerID: ").append(fkiCustomerID).append("\n");
     sb.append("  fkiEmployeeID: ").append(fkiEmployeeID).append("\n");
     sb.append("  fkiAssistantID: ").append(fkiAssistantID).append("\n");
@@ -264,6 +298,8 @@ public class CommunicationrecipientRequest {
     sb.append("  fkiNotaryID: ").append(fkiNotaryID).append("\n");
     sb.append("  fkiSupplierID: ").append(fkiSupplierID).append("\n");
     sb.append("  fkiUserID: ").append(fkiUserID).append("\n");
+    sb.append("  fkiMailboxsharedID: ").append(fkiMailboxsharedID).append("\n");
+    sb.append("  fkiPhonelinesharedID: ").append(fkiPhonelinesharedID).append("\n");
     sb.append("  eCommunicationrecipientType: ").append(eCommunicationrecipientType).append("\n");
     sb.append("}\n");
     return sb.toString();

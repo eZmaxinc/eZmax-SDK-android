@@ -23,6 +23,8 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Request for POST /1/object/ezsignsignature/{pkiEzsignsignatureID}/sign")
 public class EzsignsignatureSignV1Request {
   
+  @SerializedName("fkiEzsignsigningreasonID")
+  private Integer fkiEzsignsigningreasonID = null;
   @SerializedName("sValue")
   private String sValue = null;
   public enum EAttachmentsConfirmationDecisionEnum {
@@ -38,6 +40,19 @@ public class EzsignsignatureSignV1Request {
   private List<CommonFile> aObjFile = null;
   @SerializedName("bIsAutomatic")
   private Boolean bIsAutomatic = null;
+
+  /**
+   * The unique ID of the Ezsignsigningreason
+   * minimum: 0
+   * maximum: 255
+   **/
+  @ApiModelProperty(value = "The unique ID of the Ezsignsigningreason")
+  public Integer getFkiEzsignsigningreasonID() {
+    return fkiEzsignsigningreasonID;
+  }
+  public void setFkiEzsignsigningreasonID(Integer fkiEzsignsigningreasonID) {
+    this.fkiEzsignsigningreasonID = fkiEzsignsigningreasonID;
+  }
 
   /**
    * The value required for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **City**, **FieldText** or **FieldTextarea**
@@ -114,7 +129,8 @@ public class EzsignsignatureSignV1Request {
       return false;
     }
     EzsignsignatureSignV1Request ezsignsignatureSignV1Request = (EzsignsignatureSignV1Request) o;
-    return (this.sValue == null ? ezsignsignatureSignV1Request.sValue == null : this.sValue.equals(ezsignsignatureSignV1Request.sValue)) &&
+    return (this.fkiEzsignsigningreasonID == null ? ezsignsignatureSignV1Request.fkiEzsignsigningreasonID == null : this.fkiEzsignsigningreasonID.equals(ezsignsignatureSignV1Request.fkiEzsignsigningreasonID)) &&
+        (this.sValue == null ? ezsignsignatureSignV1Request.sValue == null : this.sValue.equals(ezsignsignatureSignV1Request.sValue)) &&
         (this.eAttachmentsConfirmationDecision == null ? ezsignsignatureSignV1Request.eAttachmentsConfirmationDecision == null : this.eAttachmentsConfirmationDecision.equals(ezsignsignatureSignV1Request.eAttachmentsConfirmationDecision)) &&
         (this.sAttachmentsRefusalReason == null ? ezsignsignatureSignV1Request.sAttachmentsRefusalReason == null : this.sAttachmentsRefusalReason.equals(ezsignsignatureSignV1Request.sAttachmentsRefusalReason)) &&
         (this.sSvg == null ? ezsignsignatureSignV1Request.sSvg == null : this.sSvg.equals(ezsignsignatureSignV1Request.sSvg)) &&
@@ -125,6 +141,7 @@ public class EzsignsignatureSignV1Request {
   @Override
   public int hashCode() {
     int result = 17;
+    result = 31 * result + (this.fkiEzsignsigningreasonID == null ? 0: this.fkiEzsignsigningreasonID.hashCode());
     result = 31 * result + (this.sValue == null ? 0: this.sValue.hashCode());
     result = 31 * result + (this.eAttachmentsConfirmationDecision == null ? 0: this.eAttachmentsConfirmationDecision.hashCode());
     result = 31 * result + (this.sAttachmentsRefusalReason == null ? 0: this.sAttachmentsRefusalReason.hashCode());
@@ -139,6 +156,7 @@ public class EzsignsignatureSignV1Request {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignsignatureSignV1Request {\n");
     
+    sb.append("  fkiEzsignsigningreasonID: ").append(fkiEzsignsigningreasonID).append("\n");
     sb.append("  sValue: ").append(sValue).append("\n");
     sb.append("  eAttachmentsConfirmationDecision: ").append(eAttachmentsConfirmationDecision).append("\n");
     sb.append("  sAttachmentsRefusalReason: ").append(sAttachmentsRefusalReason).append("\n");

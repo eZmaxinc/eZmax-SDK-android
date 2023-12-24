@@ -27,6 +27,8 @@ public class CustomCommunicationsenderRequest {
   private Integer fkiBrokerID = null;
   @SerializedName("fkiMailboxsharedID")
   private Integer fkiMailboxsharedID = null;
+  @SerializedName("fkiPhonelinesharedID")
+  private Integer fkiPhonelinesharedID = null;
   @SerializedName("fkiUserID")
   private Integer fkiUserID = null;
 
@@ -68,6 +70,19 @@ public class CustomCommunicationsenderRequest {
   }
 
   /**
+   * The unique ID of the Phonelineshared
+   * minimum: 0
+   * maximum: 255
+   **/
+  @ApiModelProperty(value = "The unique ID of the Phonelineshared")
+  public Integer getFkiPhonelinesharedID() {
+    return fkiPhonelinesharedID;
+  }
+  public void setFkiPhonelinesharedID(Integer fkiPhonelinesharedID) {
+    this.fkiPhonelinesharedID = fkiPhonelinesharedID;
+  }
+
+  /**
    * The unique ID of the User
    * minimum: 0
    **/
@@ -92,6 +107,7 @@ public class CustomCommunicationsenderRequest {
     return (this.fkiAgentID == null ? customCommunicationsenderRequest.fkiAgentID == null : this.fkiAgentID.equals(customCommunicationsenderRequest.fkiAgentID)) &&
         (this.fkiBrokerID == null ? customCommunicationsenderRequest.fkiBrokerID == null : this.fkiBrokerID.equals(customCommunicationsenderRequest.fkiBrokerID)) &&
         (this.fkiMailboxsharedID == null ? customCommunicationsenderRequest.fkiMailboxsharedID == null : this.fkiMailboxsharedID.equals(customCommunicationsenderRequest.fkiMailboxsharedID)) &&
+        (this.fkiPhonelinesharedID == null ? customCommunicationsenderRequest.fkiPhonelinesharedID == null : this.fkiPhonelinesharedID.equals(customCommunicationsenderRequest.fkiPhonelinesharedID)) &&
         (this.fkiUserID == null ? customCommunicationsenderRequest.fkiUserID == null : this.fkiUserID.equals(customCommunicationsenderRequest.fkiUserID));
   }
 
@@ -101,6 +117,7 @@ public class CustomCommunicationsenderRequest {
     result = 31 * result + (this.fkiAgentID == null ? 0: this.fkiAgentID.hashCode());
     result = 31 * result + (this.fkiBrokerID == null ? 0: this.fkiBrokerID.hashCode());
     result = 31 * result + (this.fkiMailboxsharedID == null ? 0: this.fkiMailboxsharedID.hashCode());
+    result = 31 * result + (this.fkiPhonelinesharedID == null ? 0: this.fkiPhonelinesharedID.hashCode());
     result = 31 * result + (this.fkiUserID == null ? 0: this.fkiUserID.hashCode());
     return result;
   }
@@ -113,6 +130,7 @@ public class CustomCommunicationsenderRequest {
     sb.append("  fkiAgentID: ").append(fkiAgentID).append("\n");
     sb.append("  fkiBrokerID: ").append(fkiBrokerID).append("\n");
     sb.append("  fkiMailboxsharedID: ").append(fkiMailboxsharedID).append("\n");
+    sb.append("  fkiPhonelinesharedID: ").append(fkiPhonelinesharedID).append("\n");
     sb.append("  fkiUserID: ").append(fkiUserID).append("\n");
     sb.append("}\n");
     return sb.toString();

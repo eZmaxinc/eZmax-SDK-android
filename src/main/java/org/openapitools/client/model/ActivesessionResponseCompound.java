@@ -18,6 +18,8 @@ import org.openapitools.client.model.ActivesessionResponseCompoundUser;
 import org.openapitools.client.model.FieldEActivesessionOrigin;
 import org.openapitools.client.model.FieldEActivesessionUsertype;
 import org.openapitools.client.model.FieldEActivesessionWeekdaystart;
+import org.openapitools.client.model.FieldEUserEzsignaccess;
+import org.openapitools.client.model.FieldEUserEzsignprepaid;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -49,6 +51,12 @@ public class ActivesessionResponseCompound {
   private Integer fkiSystemconfigurationtypeID = null;
   @SerializedName("fkiSignatureID")
   private Integer fkiSignatureID = null;
+  @SerializedName("eUserEzsignaccess")
+  private FieldEUserEzsignaccess eUserEzsignaccess = null;
+  @SerializedName("eUserEzsignprepaid")
+  private FieldEUserEzsignprepaid eUserEzsignprepaid = null;
+  @SerializedName("dtUserEzsignprepaidexpiration")
+  private String dtUserEzsignprepaidexpiration = null;
   @SerializedName("a_pkiPermissionID")
   private List<Integer> aPkiPermissionID = null;
   @SerializedName("objUserReal")
@@ -184,6 +192,37 @@ public class ActivesessionResponseCompound {
   }
 
   /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public FieldEUserEzsignaccess getEUserEzsignaccess() {
+    return eUserEzsignaccess;
+  }
+  public void setEUserEzsignaccess(FieldEUserEzsignaccess eUserEzsignaccess) {
+    this.eUserEzsignaccess = eUserEzsignaccess;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public FieldEUserEzsignprepaid getEUserEzsignprepaid() {
+    return eUserEzsignprepaid;
+  }
+  public void setEUserEzsignprepaid(FieldEUserEzsignprepaid eUserEzsignprepaid) {
+    this.eUserEzsignprepaid = eUserEzsignprepaid;
+  }
+
+  /**
+   * The eZsign prepaid expiration date
+   **/
+  @ApiModelProperty(value = "The eZsign prepaid expiration date")
+  public String getDtUserEzsignprepaidexpiration() {
+    return dtUserEzsignprepaidexpiration;
+  }
+  public void setDtUserEzsignprepaidexpiration(String dtUserEzsignprepaidexpiration) {
+    this.dtUserEzsignprepaidexpiration = dtUserEzsignprepaidexpiration;
+  }
+
+  /**
    * An array of permissions granted to the user or api key
    **/
   @ApiModelProperty(required = true, value = "An array of permissions granted to the user or api key")
@@ -256,6 +295,9 @@ public class ActivesessionResponseCompound {
         (this.pksCustomerCode == null ? activesessionResponseCompound.pksCustomerCode == null : this.pksCustomerCode.equals(activesessionResponseCompound.pksCustomerCode)) &&
         (this.fkiSystemconfigurationtypeID == null ? activesessionResponseCompound.fkiSystemconfigurationtypeID == null : this.fkiSystemconfigurationtypeID.equals(activesessionResponseCompound.fkiSystemconfigurationtypeID)) &&
         (this.fkiSignatureID == null ? activesessionResponseCompound.fkiSignatureID == null : this.fkiSignatureID.equals(activesessionResponseCompound.fkiSignatureID)) &&
+        (this.eUserEzsignaccess == null ? activesessionResponseCompound.eUserEzsignaccess == null : this.eUserEzsignaccess.equals(activesessionResponseCompound.eUserEzsignaccess)) &&
+        (this.eUserEzsignprepaid == null ? activesessionResponseCompound.eUserEzsignprepaid == null : this.eUserEzsignprepaid.equals(activesessionResponseCompound.eUserEzsignprepaid)) &&
+        (this.dtUserEzsignprepaidexpiration == null ? activesessionResponseCompound.dtUserEzsignprepaidexpiration == null : this.dtUserEzsignprepaidexpiration.equals(activesessionResponseCompound.dtUserEzsignprepaidexpiration)) &&
         (this.aPkiPermissionID == null ? activesessionResponseCompound.aPkiPermissionID == null : this.aPkiPermissionID.equals(activesessionResponseCompound.aPkiPermissionID)) &&
         (this.objUserReal == null ? activesessionResponseCompound.objUserReal == null : this.objUserReal.equals(activesessionResponseCompound.objUserReal)) &&
         (this.objUserCloned == null ? activesessionResponseCompound.objUserCloned == null : this.objUserCloned.equals(activesessionResponseCompound.objUserCloned)) &&
@@ -277,6 +319,9 @@ public class ActivesessionResponseCompound {
     result = 31 * result + (this.pksCustomerCode == null ? 0: this.pksCustomerCode.hashCode());
     result = 31 * result + (this.fkiSystemconfigurationtypeID == null ? 0: this.fkiSystemconfigurationtypeID.hashCode());
     result = 31 * result + (this.fkiSignatureID == null ? 0: this.fkiSignatureID.hashCode());
+    result = 31 * result + (this.eUserEzsignaccess == null ? 0: this.eUserEzsignaccess.hashCode());
+    result = 31 * result + (this.eUserEzsignprepaid == null ? 0: this.eUserEzsignprepaid.hashCode());
+    result = 31 * result + (this.dtUserEzsignprepaidexpiration == null ? 0: this.dtUserEzsignprepaidexpiration.hashCode());
     result = 31 * result + (this.aPkiPermissionID == null ? 0: this.aPkiPermissionID.hashCode());
     result = 31 * result + (this.objUserReal == null ? 0: this.objUserReal.hashCode());
     result = 31 * result + (this.objUserCloned == null ? 0: this.objUserCloned.hashCode());
@@ -301,6 +346,9 @@ public class ActivesessionResponseCompound {
     sb.append("  pksCustomerCode: ").append(pksCustomerCode).append("\n");
     sb.append("  fkiSystemconfigurationtypeID: ").append(fkiSystemconfigurationtypeID).append("\n");
     sb.append("  fkiSignatureID: ").append(fkiSignatureID).append("\n");
+    sb.append("  eUserEzsignaccess: ").append(eUserEzsignaccess).append("\n");
+    sb.append("  eUserEzsignprepaid: ").append(eUserEzsignprepaid).append("\n");
+    sb.append("  dtUserEzsignprepaidexpiration: ").append(dtUserEzsignprepaidexpiration).append("\n");
     sb.append("  aPkiPermissionID: ").append(aPkiPermissionID).append("\n");
     sb.append("  objUserReal: ").append(objUserReal).append("\n");
     sb.append("  objUserCloned: ").append(objUserCloned).append("\n");

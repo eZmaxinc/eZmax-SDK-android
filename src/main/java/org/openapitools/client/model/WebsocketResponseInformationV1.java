@@ -27,6 +27,8 @@ public class WebsocketResponseInformationV1 {
   };
   @SerializedName("eWebsocketMessagetype")
   private EWebsocketMessagetypeEnum eWebsocketMessagetype = null;
+  @SerializedName("sWebsocketChannel")
+  private String sWebsocketChannel = null;
   @SerializedName("mPayload")
   private WebsocketResponseInformationV1MPayload mPayload = null;
 
@@ -39,6 +41,17 @@ public class WebsocketResponseInformationV1 {
   }
   public void setEWebsocketMessagetype(EWebsocketMessagetypeEnum eWebsocketMessagetype) {
     this.eWebsocketMessagetype = eWebsocketMessagetype;
+  }
+
+  /**
+   * The Channel on which to route the websocket message
+   **/
+  @ApiModelProperty(required = true, value = "The Channel on which to route the websocket message")
+  public String getSWebsocketChannel() {
+    return sWebsocketChannel;
+  }
+  public void setSWebsocketChannel(String sWebsocketChannel) {
+    this.sWebsocketChannel = sWebsocketChannel;
   }
 
   /**
@@ -62,6 +75,7 @@ public class WebsocketResponseInformationV1 {
     }
     WebsocketResponseInformationV1 websocketResponseInformationV1 = (WebsocketResponseInformationV1) o;
     return (this.eWebsocketMessagetype == null ? websocketResponseInformationV1.eWebsocketMessagetype == null : this.eWebsocketMessagetype.equals(websocketResponseInformationV1.eWebsocketMessagetype)) &&
+        (this.sWebsocketChannel == null ? websocketResponseInformationV1.sWebsocketChannel == null : this.sWebsocketChannel.equals(websocketResponseInformationV1.sWebsocketChannel)) &&
         (this.mPayload == null ? websocketResponseInformationV1.mPayload == null : this.mPayload.equals(websocketResponseInformationV1.mPayload));
   }
 
@@ -69,6 +83,7 @@ public class WebsocketResponseInformationV1 {
   public int hashCode() {
     int result = 17;
     result = 31 * result + (this.eWebsocketMessagetype == null ? 0: this.eWebsocketMessagetype.hashCode());
+    result = 31 * result + (this.sWebsocketChannel == null ? 0: this.sWebsocketChannel.hashCode());
     result = 31 * result + (this.mPayload == null ? 0: this.mPayload.hashCode());
     return result;
   }
@@ -79,6 +94,7 @@ public class WebsocketResponseInformationV1 {
     sb.append("class WebsocketResponseInformationV1 {\n");
     
     sb.append("  eWebsocketMessagetype: ").append(eWebsocketMessagetype).append("\n");
+    sb.append("  sWebsocketChannel: ").append(sWebsocketChannel).append("\n");
     sb.append("  mPayload: ").append(mPayload).append("\n");
     sb.append("}\n");
     return sb.toString();

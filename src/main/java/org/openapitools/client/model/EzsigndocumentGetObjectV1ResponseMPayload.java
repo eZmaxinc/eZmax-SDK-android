@@ -68,6 +68,8 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
   private CommonAudit objAudit = null;
   @SerializedName("sEzsigndocumentExternalid")
   private String sEzsigndocumentExternalid = null;
+  @SerializedName("iEzsigndocumentEzsignsignatureattachmenttotal")
+  private Integer iEzsigndocumentEzsignsignatureattachmenttotal = null;
   @SerializedName("eEzsigndocumentSteptype")
   private ComputedEEzsigndocumentSteptype eEzsigndocumentSteptype = null;
   @SerializedName("iEzsigndocumentStepformtotal")
@@ -320,6 +322,18 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
   }
 
   /**
+   * The number of Ezsigndocumentattachment total
+   * minimum: 0
+   **/
+  @ApiModelProperty(required = true, value = "The number of Ezsigndocumentattachment total")
+  public Integer getIEzsigndocumentEzsignsignatureattachmenttotal() {
+    return iEzsigndocumentEzsignsignatureattachmenttotal;
+  }
+  public void setIEzsigndocumentEzsignsignatureattachmenttotal(Integer iEzsigndocumentEzsignsignatureattachmenttotal) {
+    this.iEzsigndocumentEzsignsignatureattachmenttotal = iEzsigndocumentEzsignsignatureattachmenttotal;
+  }
+
+  /**
    **/
   @ApiModelProperty(required = true, value = "")
   public ComputedEEzsigndocumentSteptype getEEzsigndocumentSteptype() {
@@ -414,6 +428,7 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
         (this.bEzsigndocumentHassignedsignatures == null ? ezsigndocumentGetObjectV1ResponseMPayload.bEzsigndocumentHassignedsignatures == null : this.bEzsigndocumentHassignedsignatures.equals(ezsigndocumentGetObjectV1ResponseMPayload.bEzsigndocumentHassignedsignatures)) &&
         (this.objAudit == null ? ezsigndocumentGetObjectV1ResponseMPayload.objAudit == null : this.objAudit.equals(ezsigndocumentGetObjectV1ResponseMPayload.objAudit)) &&
         (this.sEzsigndocumentExternalid == null ? ezsigndocumentGetObjectV1ResponseMPayload.sEzsigndocumentExternalid == null : this.sEzsigndocumentExternalid.equals(ezsigndocumentGetObjectV1ResponseMPayload.sEzsigndocumentExternalid)) &&
+        (this.iEzsigndocumentEzsignsignatureattachmenttotal == null ? ezsigndocumentGetObjectV1ResponseMPayload.iEzsigndocumentEzsignsignatureattachmenttotal == null : this.iEzsigndocumentEzsignsignatureattachmenttotal.equals(ezsigndocumentGetObjectV1ResponseMPayload.iEzsigndocumentEzsignsignatureattachmenttotal)) &&
         (this.eEzsigndocumentSteptype == null ? ezsigndocumentGetObjectV1ResponseMPayload.eEzsigndocumentSteptype == null : this.eEzsigndocumentSteptype.equals(ezsigndocumentGetObjectV1ResponseMPayload.eEzsigndocumentSteptype)) &&
         (this.iEzsigndocumentStepformtotal == null ? ezsigndocumentGetObjectV1ResponseMPayload.iEzsigndocumentStepformtotal == null : this.iEzsigndocumentStepformtotal.equals(ezsigndocumentGetObjectV1ResponseMPayload.iEzsigndocumentStepformtotal)) &&
         (this.iEzsigndocumentStepformcurrent == null ? ezsigndocumentGetObjectV1ResponseMPayload.iEzsigndocumentStepformcurrent == null : this.iEzsigndocumentStepformcurrent.equals(ezsigndocumentGetObjectV1ResponseMPayload.iEzsigndocumentStepformcurrent)) &&
@@ -446,6 +461,7 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
     result = 31 * result + (this.bEzsigndocumentHassignedsignatures == null ? 0: this.bEzsigndocumentHassignedsignatures.hashCode());
     result = 31 * result + (this.objAudit == null ? 0: this.objAudit.hashCode());
     result = 31 * result + (this.sEzsigndocumentExternalid == null ? 0: this.sEzsigndocumentExternalid.hashCode());
+    result = 31 * result + (this.iEzsigndocumentEzsignsignatureattachmenttotal == null ? 0: this.iEzsigndocumentEzsignsignatureattachmenttotal.hashCode());
     result = 31 * result + (this.eEzsigndocumentSteptype == null ? 0: this.eEzsigndocumentSteptype.hashCode());
     result = 31 * result + (this.iEzsigndocumentStepformtotal == null ? 0: this.iEzsigndocumentStepformtotal.hashCode());
     result = 31 * result + (this.iEzsigndocumentStepformcurrent == null ? 0: this.iEzsigndocumentStepformcurrent.hashCode());
@@ -481,6 +497,7 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
     sb.append("  bEzsigndocumentHassignedsignatures: ").append(bEzsigndocumentHassignedsignatures).append("\n");
     sb.append("  objAudit: ").append(objAudit).append("\n");
     sb.append("  sEzsigndocumentExternalid: ").append(sEzsigndocumentExternalid).append("\n");
+    sb.append("  iEzsigndocumentEzsignsignatureattachmenttotal: ").append(iEzsigndocumentEzsignsignatureattachmenttotal).append("\n");
     sb.append("  eEzsigndocumentSteptype: ").append(eEzsigndocumentSteptype).append("\n");
     sb.append("  iEzsigndocumentStepformtotal: ").append(iEzsigndocumentStepformtotal).append("\n");
     sb.append("  iEzsigndocumentStepformcurrent: ").append(iEzsigndocumentStepformcurrent).append("\n");

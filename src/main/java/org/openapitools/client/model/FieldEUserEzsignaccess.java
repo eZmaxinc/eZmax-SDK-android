@@ -16,9 +16,9 @@ import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * The type or eZsign access the User has
+ * The type of eZsign access the User has
  **/
-@ApiModel(description = "The type or eZsign access the User has")
+@ApiModel(description = "The type of eZsign access the User has")
 public class FieldEUserEzsignaccess {
   
 

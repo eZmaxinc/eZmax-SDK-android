@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **eWebhookEzsignevent** | [**FieldEWebhookEzsignevent**](FieldEWebhookEzsignevent.md) |  |  [optional]
 **eWebhookManagementevent** | [**FieldEWebhookManagementevent**](FieldEWebhookManagementevent.md) |  |  [optional]
 **bWebhookIsactive** | **Boolean** | Whether the Webhook is active or not | 
+**bWebhookIssigned** | **Boolean** | Whether the requests will be signed or not | 
 
 
 

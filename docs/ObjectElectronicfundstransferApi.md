@@ -4,13 +4,13 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**eletronicfundstransferGetCommunicationListV1**](ObjectElectronicfundstransferApi.md#eletronicfundstransferGetCommunicationListV1) | **GET** /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationList | Retrieve Communication list
+[**electronicfundstransferGetCommunicationListV1**](ObjectElectronicfundstransferApi.md#electronicfundstransferGetCommunicationListV1) | **GET** /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationList | Retrieve Communication list
 
 
 
-## eletronicfundstransferGetCommunicationListV1
+## electronicfundstransferGetCommunicationListV1
 
-> ElectronicfundstransferGetCommunicationListV1Response eletronicfundstransferGetCommunicationListV1(pkiElectronicfundstransferID)
+> ElectronicfundstransferGetCommunicationListV1Response electronicfundstransferGetCommunicationListV1(pkiElectronicfundstransferID)
 
 Retrieve Communication list
 
@@ -25,10 +25,10 @@ Retrieve Communication list
 ObjectElectronicfundstransferApi apiInstance = new ObjectElectronicfundstransferApi();
 Integer pkiElectronicfundstransferID = null; // Integer | 
 try {
-    ElectronicfundstransferGetCommunicationListV1Response result = apiInstance.eletronicfundstransferGetCommunicationListV1(pkiElectronicfundstransferID);
+    ElectronicfundstransferGetCommunicationListV1Response result = apiInstance.electronicfundstransferGetCommunicationListV1(pkiElectronicfundstransferID);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling ObjectElectronicfundstransferApi#eletronicfundstransferGetCommunicationListV1");
+    System.err.println("Exception when calling ObjectElectronicfundstransferApi#electronicfundstransferGetCommunicationListV1");
     e.printStackTrace();
 }
 ```

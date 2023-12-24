@@ -14,19 +14,22 @@ package org.openapitools.client.model;
 
 import org.openapitools.client.model.CommonResponseObjDebug;
 import org.openapitools.client.model.CommonResponseObjDebugPayload;
+import org.openapitools.client.model.EzsignsigningreasonGetAutocompleteV2ResponseMPayload;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Response for POST /1/object/ezsignfolder/{pkiEzsignfolderID}/send
+ * Response for GET /2/object/ezsignsigningreason/getAutocomplete
  **/
-@ApiModel(description = "Response for POST /1/object/ezsignfolder/{pkiEzsignfolderID}/send")
-public class AttachmentDownloadV1Response {
+@ApiModel(description = "Response for GET /2/object/ezsignsigningreason/getAutocomplete")
+public class EzsignsigningreasonGetAutocompleteV2Response {
   
   @SerializedName("objDebugPayload")
   private CommonResponseObjDebugPayload objDebugPayload = null;
   @SerializedName("objDebug")
   private CommonResponseObjDebug objDebug = null;
+  @SerializedName("mPayload")
+  private EzsignsigningreasonGetAutocompleteV2ResponseMPayload mPayload = null;
 
   /**
    **/
@@ -48,6 +51,16 @@ public class AttachmentDownloadV1Response {
     this.objDebug = objDebug;
   }
 
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public EzsignsigningreasonGetAutocompleteV2ResponseMPayload getMPayload() {
+    return mPayload;
+  }
+  public void setMPayload(EzsignsigningreasonGetAutocompleteV2ResponseMPayload mPayload) {
+    this.mPayload = mPayload;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -57,9 +70,10 @@ public class AttachmentDownloadV1Response {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    AttachmentDownloadV1Response attachmentDownloadV1Response = (AttachmentDownloadV1Response) o;
-    return (this.objDebugPayload == null ? attachmentDownloadV1Response.objDebugPayload == null : this.objDebugPayload.equals(attachmentDownloadV1Response.objDebugPayload)) &&
-        (this.objDebug == null ? attachmentDownloadV1Response.objDebug == null : this.objDebug.equals(attachmentDownloadV1Response.objDebug));
+    EzsignsigningreasonGetAutocompleteV2Response ezsignsigningreasonGetAutocompleteV2Response = (EzsignsigningreasonGetAutocompleteV2Response) o;
+    return (this.objDebugPayload == null ? ezsignsigningreasonGetAutocompleteV2Response.objDebugPayload == null : this.objDebugPayload.equals(ezsignsigningreasonGetAutocompleteV2Response.objDebugPayload)) &&
+        (this.objDebug == null ? ezsignsigningreasonGetAutocompleteV2Response.objDebug == null : this.objDebug.equals(ezsignsigningreasonGetAutocompleteV2Response.objDebug)) &&
+        (this.mPayload == null ? ezsignsigningreasonGetAutocompleteV2Response.mPayload == null : this.mPayload.equals(ezsignsigningreasonGetAutocompleteV2Response.mPayload));
   }
 
   @Override
@@ -67,16 +81,18 @@ public class AttachmentDownloadV1Response {
     int result = 17;
     result = 31 * result + (this.objDebugPayload == null ? 0: this.objDebugPayload.hashCode());
     result = 31 * result + (this.objDebug == null ? 0: this.objDebug.hashCode());
+    result = 31 * result + (this.mPayload == null ? 0: this.mPayload.hashCode());
     return result;
   }
 
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class AttachmentDownloadV1Response {\n");
+    sb.append("class EzsignsigningreasonGetAutocompleteV2Response {\n");
     
     sb.append("  objDebugPayload: ").append(objDebugPayload).append("\n");
     sb.append("  objDebug: ").append(objDebug).append("\n");
+    sb.append("  mPayload: ").append(mPayload).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

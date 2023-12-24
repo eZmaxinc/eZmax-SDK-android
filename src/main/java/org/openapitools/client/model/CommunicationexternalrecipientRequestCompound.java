@@ -79,7 +79,7 @@ public class CommunicationexternalrecipientRequestCompound {
   /**
    * The name of the Communicationexternalrecipient
    **/
-  @ApiModelProperty(required = true, value = "The name of the Communicationexternalrecipient")
+  @ApiModelProperty(value = "The name of the Communicationexternalrecipient")
   public String getSCommunicationexternalrecipientName() {
     return sCommunicationexternalrecipientName;
   }

@@ -24,6 +24,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
 import org.openapitools.client.model.CommonResponseError;
+import org.openapitools.client.model.InvoiceGetAttachmentsV1Response;
 import org.openapitools.client.model.InvoiceGetCommunicationListV1Response;
 
 import org.apache.http.HttpEntity;
@@ -56,6 +57,133 @@ public class ObjectInvoiceApi {
     return basePath;
   }
 
+  /**
+  * Retrieve Invoice&#39;s Attachments
+  * 
+   * @param pkiInvoiceID 
+   * @return InvoiceGetAttachmentsV1Response
+  */
+  public InvoiceGetAttachmentsV1Response invoiceGetAttachmentsV1 (Integer pkiInvoiceID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiInvoiceID' is set
+    if (pkiInvoiceID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiInvoiceID' when calling invoiceGetAttachmentsV1",
+        new ApiException(400, "Missing the required parameter 'pkiInvoiceID' when calling invoiceGetAttachmentsV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/invoice/{pkiInvoiceID}/getAttachments".replaceAll("\\{" + "pkiInvoiceID" + "\\}", apiInvoker.escapeString(pkiInvoiceID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (InvoiceGetAttachmentsV1Response) ApiInvoker.deserialize(localVarResponse, "", InvoiceGetAttachmentsV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve Invoice&#39;s Attachments
+   * 
+   * @param pkiInvoiceID 
+  */
+  public void invoiceGetAttachmentsV1 (Integer pkiInvoiceID, final Response.Listener<InvoiceGetAttachmentsV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiInvoiceID' is set
+    if (pkiInvoiceID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiInvoiceID' when calling invoiceGetAttachmentsV1",
+        new ApiException(400, "Missing the required parameter 'pkiInvoiceID' when calling invoiceGetAttachmentsV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/invoice/{pkiInvoiceID}/getAttachments".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiInvoiceID" + "\\}", apiInvoker.escapeString(pkiInvoiceID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((InvoiceGetAttachmentsV1Response) ApiInvoker.deserialize(localVarResponse,  "", InvoiceGetAttachmentsV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
   /**
   * Retrieve Communication list
   * 

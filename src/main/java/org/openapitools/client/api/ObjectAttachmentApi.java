@@ -23,7 +23,8 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
-import org.openapitools.client.model.AttachmentDownloadV1Response;
+import org.openapitools.client.model.AttachmentGetAttachmentlogsV1Response;
+import org.openapitools.client.model.AttachmentGetDownloadUrlV1Response;
 import org.openapitools.client.model.CommonResponseError;
 
 import org.apache.http.HttpEntity;
@@ -60,9 +61,9 @@ public class ObjectAttachmentApi {
   * Retrieve the content
   * Using this endpoint, you can retrieve the content of an attachment.
    * @param pkiAttachmentID 
-   * @return AttachmentDownloadV1Response
+   * @return void
   */
-  public AttachmentDownloadV1Response attachmentDownloadV1 (Integer pkiAttachmentID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public void attachmentDownloadV1 (Integer pkiAttachmentID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'pkiAttachmentID' is set
     if (pkiAttachmentID == null) {
@@ -92,14 +93,14 @@ public class ObjectAttachmentApi {
       // normal form params
     }
 
-    String[] authNames = new String[] { "Authorization" };
+    String[] authNames = new String[] { "Authorization", "Presigned" };
 
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (AttachmentDownloadV1Response) ApiInvoker.deserialize(localVarResponse, "", AttachmentDownloadV1Response.class);
+         return ;
       } else {
-         return null;
+         return ;
       }
     } catch (ApiException ex) {
        throw ex;
@@ -123,7 +124,7 @@ public class ObjectAttachmentApi {
    * Using this endpoint, you can retrieve the content of an attachment.
    * @param pkiAttachmentID 
   */
-  public void attachmentDownloadV1 (Integer pkiAttachmentID, final Response.Listener<AttachmentDownloadV1Response> responseListener, final Response.ErrorListener errorListener) {
+  public void attachmentDownloadV1 (Integer pkiAttachmentID, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'pkiAttachmentID' is set
@@ -160,6 +161,129 @@ public class ObjectAttachmentApi {
       // normal form params
           }
 
+    String[] authNames = new String[] { "Authorization", "Presigned" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+              responseListener.onResponse(localVarResponse);
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Retrieve the Attachmentlogs
+  * Using this endpoint, you can retrieve the Attachmentlogs of an attachment.
+   * @param pkiAttachmentID 
+   * @return AttachmentGetAttachmentlogsV1Response
+  */
+  public AttachmentGetAttachmentlogsV1Response attachmentGetAttachmentlogsV1 (Integer pkiAttachmentID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiAttachmentID' is set
+    if (pkiAttachmentID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiAttachmentID' when calling attachmentGetAttachmentlogsV1",
+        new ApiException(400, "Missing the required parameter 'pkiAttachmentID' when calling attachmentGetAttachmentlogsV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/attachment/{pkiAttachmentID}/getAttachmentlogs".replaceAll("\\{" + "pkiAttachmentID" + "\\}", apiInvoker.escapeString(pkiAttachmentID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (AttachmentGetAttachmentlogsV1Response) ApiInvoker.deserialize(localVarResponse, "", AttachmentGetAttachmentlogsV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve the Attachmentlogs
+   * Using this endpoint, you can retrieve the Attachmentlogs of an attachment.
+   * @param pkiAttachmentID 
+  */
+  public void attachmentGetAttachmentlogsV1 (Integer pkiAttachmentID, final Response.Listener<AttachmentGetAttachmentlogsV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiAttachmentID' is set
+    if (pkiAttachmentID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiAttachmentID' when calling attachmentGetAttachmentlogsV1",
+        new ApiException(400, "Missing the required parameter 'pkiAttachmentID' when calling attachmentGetAttachmentlogsV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/attachment/{pkiAttachmentID}/getAttachmentlogs".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiAttachmentID" + "\\}", apiInvoker.escapeString(pkiAttachmentID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
     String[] authNames = new String[] { "Authorization" };
 
     try {
@@ -168,7 +292,134 @@ public class ObjectAttachmentApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((AttachmentDownloadV1Response) ApiInvoker.deserialize(localVarResponse,  "", AttachmentDownloadV1Response.class));
+              responseListener.onResponse((AttachmentGetAttachmentlogsV1Response) ApiInvoker.deserialize(localVarResponse,  "", AttachmentGetAttachmentlogsV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Retrieve a URL to download attachments.
+  * This endpoint returns an URL to download the attachment.  These links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
+   * @param pkiAttachmentID 
+   * @return AttachmentGetDownloadUrlV1Response
+  */
+  public AttachmentGetDownloadUrlV1Response attachmentGetDownloadUrlV1 (Integer pkiAttachmentID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiAttachmentID' is set
+    if (pkiAttachmentID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiAttachmentID' when calling attachmentGetDownloadUrlV1",
+        new ApiException(400, "Missing the required parameter 'pkiAttachmentID' when calling attachmentGetDownloadUrlV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/attachment/{pkiAttachmentID}/getDownloadUrl".replaceAll("\\{" + "pkiAttachmentID" + "\\}", apiInvoker.escapeString(pkiAttachmentID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (AttachmentGetDownloadUrlV1Response) ApiInvoker.deserialize(localVarResponse, "", AttachmentGetDownloadUrlV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve a URL to download attachments.
+   * This endpoint returns an URL to download the attachment.  These links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
+   * @param pkiAttachmentID 
+  */
+  public void attachmentGetDownloadUrlV1 (Integer pkiAttachmentID, final Response.Listener<AttachmentGetDownloadUrlV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiAttachmentID' is set
+    if (pkiAttachmentID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiAttachmentID' when calling attachmentGetDownloadUrlV1",
+        new ApiException(400, "Missing the required parameter 'pkiAttachmentID' when calling attachmentGetDownloadUrlV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/attachment/{pkiAttachmentID}/getDownloadUrl".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiAttachmentID" + "\\}", apiInvoker.escapeString(pkiAttachmentID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((AttachmentGetDownloadUrlV1Response) ApiInvoker.deserialize(localVarResponse,  "", AttachmentGetDownloadUrlV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

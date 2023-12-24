@@ -42,6 +42,8 @@ public class WebhookListElement {
   private FieldEWebhookManagementevent eWebhookManagementevent = null;
   @SerializedName("bWebhookIsactive")
   private Boolean bWebhookIsactive = null;
+  @SerializedName("bWebhookIssigned")
+  private Boolean bWebhookIssigned = null;
 
   /**
    * The unique ID of the Webhook
@@ -139,6 +141,17 @@ public class WebhookListElement {
     this.bWebhookIsactive = bWebhookIsactive;
   }
 
+  /**
+   * Whether the requests will be signed or not
+   **/
+  @ApiModelProperty(required = true, value = "Whether the requests will be signed or not")
+  public Boolean getBWebhookIssigned() {
+    return bWebhookIssigned;
+  }
+  public void setBWebhookIssigned(Boolean bWebhookIssigned) {
+    this.bWebhookIssigned = bWebhookIssigned;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -157,7 +170,8 @@ public class WebhookListElement {
         (this.eWebhookModule == null ? webhookListElement.eWebhookModule == null : this.eWebhookModule.equals(webhookListElement.eWebhookModule)) &&
         (this.eWebhookEzsignevent == null ? webhookListElement.eWebhookEzsignevent == null : this.eWebhookEzsignevent.equals(webhookListElement.eWebhookEzsignevent)) &&
         (this.eWebhookManagementevent == null ? webhookListElement.eWebhookManagementevent == null : this.eWebhookManagementevent.equals(webhookListElement.eWebhookManagementevent)) &&
-        (this.bWebhookIsactive == null ? webhookListElement.bWebhookIsactive == null : this.bWebhookIsactive.equals(webhookListElement.bWebhookIsactive));
+        (this.bWebhookIsactive == null ? webhookListElement.bWebhookIsactive == null : this.bWebhookIsactive.equals(webhookListElement.bWebhookIsactive)) &&
+        (this.bWebhookIssigned == null ? webhookListElement.bWebhookIssigned == null : this.bWebhookIssigned.equals(webhookListElement.bWebhookIssigned));
   }
 
   @Override
@@ -172,6 +186,7 @@ public class WebhookListElement {
     result = 31 * result + (this.eWebhookEzsignevent == null ? 0: this.eWebhookEzsignevent.hashCode());
     result = 31 * result + (this.eWebhookManagementevent == null ? 0: this.eWebhookManagementevent.hashCode());
     result = 31 * result + (this.bWebhookIsactive == null ? 0: this.bWebhookIsactive.hashCode());
+    result = 31 * result + (this.bWebhookIssigned == null ? 0: this.bWebhookIssigned.hashCode());
     return result;
   }
 
@@ -189,6 +204,7 @@ public class WebhookListElement {
     sb.append("  eWebhookEzsignevent: ").append(eWebhookEzsignevent).append("\n");
     sb.append("  eWebhookManagementevent: ").append(eWebhookManagementevent).append("\n");
     sb.append("  bWebhookIsactive: ").append(bWebhookIsactive).append("\n");
+    sb.append("  bWebhookIssigned: ").append(bWebhookIssigned).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

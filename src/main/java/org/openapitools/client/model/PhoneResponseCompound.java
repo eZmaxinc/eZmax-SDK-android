@@ -32,6 +32,8 @@ public class PhoneResponseCompound {
   private String sPhoneE164 = null;
   @SerializedName("sPhoneExtension")
   private String sPhoneExtension = null;
+  @SerializedName("bPhoneInternational")
+  private Boolean bPhoneInternational = null;
 
   /**
    * The unique ID of the Phone.
@@ -89,6 +91,17 @@ public class PhoneResponseCompound {
     this.sPhoneExtension = sPhoneExtension;
   }
 
+  /**
+   * Indicate the phone number is an international phone number.
+   **/
+  @ApiModelProperty(value = "Indicate the phone number is an international phone number.")
+  public Boolean getBPhoneInternational() {
+    return bPhoneInternational;
+  }
+  public void setBPhoneInternational(Boolean bPhoneInternational) {
+    this.bPhoneInternational = bPhoneInternational;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -103,7 +116,8 @@ public class PhoneResponseCompound {
         (this.fkiPhonetypeID == null ? phoneResponseCompound.fkiPhonetypeID == null : this.fkiPhonetypeID.equals(phoneResponseCompound.fkiPhonetypeID)) &&
         (this.ePhoneType == null ? phoneResponseCompound.ePhoneType == null : this.ePhoneType.equals(phoneResponseCompound.ePhoneType)) &&
         (this.sPhoneE164 == null ? phoneResponseCompound.sPhoneE164 == null : this.sPhoneE164.equals(phoneResponseCompound.sPhoneE164)) &&
-        (this.sPhoneExtension == null ? phoneResponseCompound.sPhoneExtension == null : this.sPhoneExtension.equals(phoneResponseCompound.sPhoneExtension));
+        (this.sPhoneExtension == null ? phoneResponseCompound.sPhoneExtension == null : this.sPhoneExtension.equals(phoneResponseCompound.sPhoneExtension)) &&
+        (this.bPhoneInternational == null ? phoneResponseCompound.bPhoneInternational == null : this.bPhoneInternational.equals(phoneResponseCompound.bPhoneInternational));
   }
 
   @Override
@@ -114,6 +128,7 @@ public class PhoneResponseCompound {
     result = 31 * result + (this.ePhoneType == null ? 0: this.ePhoneType.hashCode());
     result = 31 * result + (this.sPhoneE164 == null ? 0: this.sPhoneE164.hashCode());
     result = 31 * result + (this.sPhoneExtension == null ? 0: this.sPhoneExtension.hashCode());
+    result = 31 * result + (this.bPhoneInternational == null ? 0: this.bPhoneInternational.hashCode());
     return result;
   }
 
@@ -127,6 +142,7 @@ public class PhoneResponseCompound {
     sb.append("  ePhoneType: ").append(ePhoneType).append("\n");
     sb.append("  sPhoneE164: ").append(sPhoneE164).append("\n");
     sb.append("  sPhoneExtension: ").append(sPhoneExtension).append("\n");
+    sb.append("  bPhoneInternational: ").append(bPhoneInternational).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

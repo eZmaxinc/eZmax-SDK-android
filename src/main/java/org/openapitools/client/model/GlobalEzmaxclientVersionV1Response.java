@@ -23,6 +23,8 @@ public class GlobalEzmaxclientVersionV1Response {
   
   @SerializedName("sEzmaxclientVersion")
   private String sEzmaxclientVersion = null;
+  @SerializedName("sEzmaxclientOslatestversion")
+  private String sEzmaxclientOslatestversion = 11;
 
   /**
    * The version on the store
@@ -35,6 +37,17 @@ public class GlobalEzmaxclientVersionV1Response {
     this.sEzmaxclientVersion = sEzmaxclientVersion;
   }
 
+  /**
+   * The latest OS version of the system running the application at the time of release
+   **/
+  @ApiModelProperty(required = true, value = "The latest OS version of the system running the application at the time of release")
+  public String getSEzmaxclientOslatestversion() {
+    return sEzmaxclientOslatestversion;
+  }
+  public void setSEzmaxclientOslatestversion(String sEzmaxclientOslatestversion) {
+    this.sEzmaxclientOslatestversion = sEzmaxclientOslatestversion;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -45,13 +58,15 @@ public class GlobalEzmaxclientVersionV1Response {
       return false;
     }
     GlobalEzmaxclientVersionV1Response globalEzmaxclientVersionV1Response = (GlobalEzmaxclientVersionV1Response) o;
-    return (this.sEzmaxclientVersion == null ? globalEzmaxclientVersionV1Response.sEzmaxclientVersion == null : this.sEzmaxclientVersion.equals(globalEzmaxclientVersionV1Response.sEzmaxclientVersion));
+    return (this.sEzmaxclientVersion == null ? globalEzmaxclientVersionV1Response.sEzmaxclientVersion == null : this.sEzmaxclientVersion.equals(globalEzmaxclientVersionV1Response.sEzmaxclientVersion)) &&
+        (this.sEzmaxclientOslatestversion == null ? globalEzmaxclientVersionV1Response.sEzmaxclientOslatestversion == null : this.sEzmaxclientOslatestversion.equals(globalEzmaxclientVersionV1Response.sEzmaxclientOslatestversion));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
     result = 31 * result + (this.sEzmaxclientVersion == null ? 0: this.sEzmaxclientVersion.hashCode());
+    result = 31 * result + (this.sEzmaxclientOslatestversion == null ? 0: this.sEzmaxclientOslatestversion.hashCode());
     return result;
   }
 
@@ -61,6 +76,7 @@ public class GlobalEzmaxclientVersionV1Response {
     sb.append("class GlobalEzmaxclientVersionV1Response {\n");
     
     sb.append("  sEzmaxclientVersion: ").append(sEzmaxclientVersion).append("\n");
+    sb.append("  sEzmaxclientOslatestversion: ").append(sEzmaxclientOslatestversion).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

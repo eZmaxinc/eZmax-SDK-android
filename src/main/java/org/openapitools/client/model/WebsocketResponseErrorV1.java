@@ -27,6 +27,8 @@ public class WebsocketResponseErrorV1 {
   };
   @SerializedName("eWebsocketMessagetype")
   private EWebsocketMessagetypeEnum eWebsocketMessagetype = null;
+  @SerializedName("sWebsocketChannel")
+  private String sWebsocketChannel = null;
   @SerializedName("mPayload")
   private WebsocketResponseErrorV1MPayload mPayload = null;
 
@@ -39,6 +41,17 @@ public class WebsocketResponseErrorV1 {
   }
   public void setEWebsocketMessagetype(EWebsocketMessagetypeEnum eWebsocketMessagetype) {
     this.eWebsocketMessagetype = eWebsocketMessagetype;
+  }
+
+  /**
+   * The Channel on which to route the websocket message
+   **/
+  @ApiModelProperty(required = true, value = "The Channel on which to route the websocket message")
+  public String getSWebsocketChannel() {
+    return sWebsocketChannel;
+  }
+  public void setSWebsocketChannel(String sWebsocketChannel) {
+    this.sWebsocketChannel = sWebsocketChannel;
   }
 
   /**
@@ -62,6 +75,7 @@ public class WebsocketResponseErrorV1 {
     }
     WebsocketResponseErrorV1 websocketResponseErrorV1 = (WebsocketResponseErrorV1) o;
     return (this.eWebsocketMessagetype == null ? websocketResponseErrorV1.eWebsocketMessagetype == null : this.eWebsocketMessagetype.equals(websocketResponseErrorV1.eWebsocketMessagetype)) &&
+        (this.sWebsocketChannel == null ? websocketResponseErrorV1.sWebsocketChannel == null : this.sWebsocketChannel.equals(websocketResponseErrorV1.sWebsocketChannel)) &&
         (this.mPayload == null ? websocketResponseErrorV1.mPayload == null : this.mPayload.equals(websocketResponseErrorV1.mPayload));
   }
 
@@ -69,6 +83,7 @@ public class WebsocketResponseErrorV1 {
   public int hashCode() {
     int result = 17;
     result = 31 * result + (this.eWebsocketMessagetype == null ? 0: this.eWebsocketMessagetype.hashCode());
+    result = 31 * result + (this.sWebsocketChannel == null ? 0: this.sWebsocketChannel.hashCode());
     result = 31 * result + (this.mPayload == null ? 0: this.mPayload.hashCode());
     return result;
   }
@@ -79,6 +94,7 @@ public class WebsocketResponseErrorV1 {
     sb.append("class WebsocketResponseErrorV1 {\n");
     
     sb.append("  eWebsocketMessagetype: ").append(eWebsocketMessagetype).append("\n");
+    sb.append("  sWebsocketChannel: ").append(sWebsocketChannel).append("\n");
     sb.append("  mPayload: ").append(mPayload).append("\n");
     sb.append("}\n");
     return sb.toString();

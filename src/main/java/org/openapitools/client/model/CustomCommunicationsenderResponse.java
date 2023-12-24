@@ -13,6 +13,8 @@
 package org.openapitools.client.model;
 
 import org.openapitools.client.model.CustomContactNameResponse;
+import org.openapitools.client.model.EmailResponseCompound;
+import org.openapitools.client.model.PhoneResponseCompound;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -30,17 +32,21 @@ public class CustomCommunicationsenderResponse {
   private Integer fkiUserID = null;
   @SerializedName("fkiMailboxsharedID")
   private Integer fkiMailboxsharedID = null;
+  @SerializedName("fkiPhonelinesharedID")
+  private Integer fkiPhonelinesharedID = null;
   public enum ECommunicationsenderObjecttypeEnum {
-     Agent,  Broker,  User,  Mailboxshared, 
+     Agent,  Broker,  User,  Mailboxshared,  Phonelineshared, 
   };
   @SerializedName("eCommunicationsenderObjecttype")
   private ECommunicationsenderObjecttypeEnum eCommunicationsenderObjecttype = null;
   @SerializedName("objContactName")
   private CustomContactNameResponse objContactName = null;
-  @SerializedName("sEmailAddress")
-  private String sEmailAddress = null;
-  @SerializedName("sPhoneE164")
-  private String sPhoneE164 = null;
+  @SerializedName("objEmail")
+  private EmailResponseCompound objEmail = null;
+  @SerializedName("objPhoneFax")
+  private PhoneResponseCompound objPhoneFax = null;
+  @SerializedName("objPhoneSMS")
+  private PhoneResponseCompound objPhoneSMS = null;
 
   /**
    * The unique ID of the Agent.
@@ -92,6 +98,19 @@ public class CustomCommunicationsenderResponse {
   }
 
   /**
+   * The unique ID of the Phonelineshared
+   * minimum: 0
+   * maximum: 255
+   **/
+  @ApiModelProperty(value = "The unique ID of the Phonelineshared")
+  public Integer getFkiPhonelinesharedID() {
+    return fkiPhonelinesharedID;
+  }
+  public void setFkiPhonelinesharedID(Integer fkiPhonelinesharedID) {
+    this.fkiPhonelinesharedID = fkiPhonelinesharedID;
+  }
+
+  /**
    **/
   @ApiModelProperty(required = true, value = "")
   public ECommunicationsenderObjecttypeEnum getECommunicationsenderObjecttype() {
@@ -112,25 +131,33 @@ public class CustomCommunicationsenderResponse {
   }
 
   /**
-   * The email address.
    **/
-  @ApiModelProperty(value = "The email address.")
-  public String getSEmailAddress() {
-    return sEmailAddress;
+  @ApiModelProperty(value = "")
+  public EmailResponseCompound getObjEmail() {
+    return objEmail;
   }
-  public void setSEmailAddress(String sEmailAddress) {
-    this.sEmailAddress = sEmailAddress;
+  public void setObjEmail(EmailResponseCompound objEmail) {
+    this.objEmail = objEmail;
   }
 
   /**
-   * A phone number in E.164 Format
    **/
-  @ApiModelProperty(value = "A phone number in E.164 Format")
-  public String getSPhoneE164() {
-    return sPhoneE164;
+  @ApiModelProperty(value = "")
+  public PhoneResponseCompound getObjPhoneFax() {
+    return objPhoneFax;
   }
-  public void setSPhoneE164(String sPhoneE164) {
-    this.sPhoneE164 = sPhoneE164;
+  public void setObjPhoneFax(PhoneResponseCompound objPhoneFax) {
+    this.objPhoneFax = objPhoneFax;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public PhoneResponseCompound getObjPhoneSMS() {
+    return objPhoneSMS;
+  }
+  public void setObjPhoneSMS(PhoneResponseCompound objPhoneSMS) {
+    this.objPhoneSMS = objPhoneSMS;
   }
 
 
@@ -147,10 +174,12 @@ public class CustomCommunicationsenderResponse {
         (this.fkiBrokerID == null ? customCommunicationsenderResponse.fkiBrokerID == null : this.fkiBrokerID.equals(customCommunicationsenderResponse.fkiBrokerID)) &&
         (this.fkiUserID == null ? customCommunicationsenderResponse.fkiUserID == null : this.fkiUserID.equals(customCommunicationsenderResponse.fkiUserID)) &&
         (this.fkiMailboxsharedID == null ? customCommunicationsenderResponse.fkiMailboxsharedID == null : this.fkiMailboxsharedID.equals(customCommunicationsenderResponse.fkiMailboxsharedID)) &&
+        (this.fkiPhonelinesharedID == null ? customCommunicationsenderResponse.fkiPhonelinesharedID == null : this.fkiPhonelinesharedID.equals(customCommunicationsenderResponse.fkiPhonelinesharedID)) &&
         (this.eCommunicationsenderObjecttype == null ? customCommunicationsenderResponse.eCommunicationsenderObjecttype == null : this.eCommunicationsenderObjecttype.equals(customCommunicationsenderResponse.eCommunicationsenderObjecttype)) &&
         (this.objContactName == null ? customCommunicationsenderResponse.objContactName == null : this.objContactName.equals(customCommunicationsenderResponse.objContactName)) &&
-        (this.sEmailAddress == null ? customCommunicationsenderResponse.sEmailAddress == null : this.sEmailAddress.equals(customCommunicationsenderResponse.sEmailAddress)) &&
-        (this.sPhoneE164 == null ? customCommunicationsenderResponse.sPhoneE164 == null : this.sPhoneE164.equals(customCommunicationsenderResponse.sPhoneE164));
+        (this.objEmail == null ? customCommunicationsenderResponse.objEmail == null : this.objEmail.equals(customCommunicationsenderResponse.objEmail)) &&
+        (this.objPhoneFax == null ? customCommunicationsenderResponse.objPhoneFax == null : this.objPhoneFax.equals(customCommunicationsenderResponse.objPhoneFax)) &&
+        (this.objPhoneSMS == null ? customCommunicationsenderResponse.objPhoneSMS == null : this.objPhoneSMS.equals(customCommunicationsenderResponse.objPhoneSMS));
   }
 
   @Override
@@ -160,10 +189,12 @@ public class CustomCommunicationsenderResponse {
     result = 31 * result + (this.fkiBrokerID == null ? 0: this.fkiBrokerID.hashCode());
     result = 31 * result + (this.fkiUserID == null ? 0: this.fkiUserID.hashCode());
     result = 31 * result + (this.fkiMailboxsharedID == null ? 0: this.fkiMailboxsharedID.hashCode());
+    result = 31 * result + (this.fkiPhonelinesharedID == null ? 0: this.fkiPhonelinesharedID.hashCode());
     result = 31 * result + (this.eCommunicationsenderObjecttype == null ? 0: this.eCommunicationsenderObjecttype.hashCode());
     result = 31 * result + (this.objContactName == null ? 0: this.objContactName.hashCode());
-    result = 31 * result + (this.sEmailAddress == null ? 0: this.sEmailAddress.hashCode());
-    result = 31 * result + (this.sPhoneE164 == null ? 0: this.sPhoneE164.hashCode());
+    result = 31 * result + (this.objEmail == null ? 0: this.objEmail.hashCode());
+    result = 31 * result + (this.objPhoneFax == null ? 0: this.objPhoneFax.hashCode());
+    result = 31 * result + (this.objPhoneSMS == null ? 0: this.objPhoneSMS.hashCode());
     return result;
   }
 
@@ -176,10 +207,12 @@ public class CustomCommunicationsenderResponse {
     sb.append("  fkiBrokerID: ").append(fkiBrokerID).append("\n");
     sb.append("  fkiUserID: ").append(fkiUserID).append("\n");
     sb.append("  fkiMailboxsharedID: ").append(fkiMailboxsharedID).append("\n");
+    sb.append("  fkiPhonelinesharedID: ").append(fkiPhonelinesharedID).append("\n");
     sb.append("  eCommunicationsenderObjecttype: ").append(eCommunicationsenderObjecttype).append("\n");
     sb.append("  objContactName: ").append(objContactName).append("\n");
-    sb.append("  sEmailAddress: ").append(sEmailAddress).append("\n");
-    sb.append("  sPhoneE164: ").append(sPhoneE164).append("\n");
+    sb.append("  objEmail: ").append(objEmail).append("\n");
+    sb.append("  objPhoneFax: ").append(objPhoneFax).append("\n");
+    sb.append("  objPhoneSMS: ").append(objPhoneSMS).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

@@ -62,12 +62,12 @@ public class ObjectElectronicfundstransferApi {
    * @param pkiElectronicfundstransferID 
    * @return ElectronicfundstransferGetCommunicationListV1Response
   */
-  public ElectronicfundstransferGetCommunicationListV1Response eletronicfundstransferGetCommunicationListV1 (Integer pkiElectronicfundstransferID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public ElectronicfundstransferGetCommunicationListV1Response electronicfundstransferGetCommunicationListV1 (Integer pkiElectronicfundstransferID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'pkiElectronicfundstransferID' is set
     if (pkiElectronicfundstransferID == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'pkiElectronicfundstransferID' when calling eletronicfundstransferGetCommunicationListV1",
-        new ApiException(400, "Missing the required parameter 'pkiElectronicfundstransferID' when calling eletronicfundstransferGetCommunicationListV1"));
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiElectronicfundstransferID' when calling electronicfundstransferGetCommunicationListV1",
+        new ApiException(400, "Missing the required parameter 'pkiElectronicfundstransferID' when calling electronicfundstransferGetCommunicationListV1"));
     }
 
     // create path and map variables
@@ -123,13 +123,13 @@ public class ObjectElectronicfundstransferApi {
    * 
    * @param pkiElectronicfundstransferID 
   */
-  public void eletronicfundstransferGetCommunicationListV1 (Integer pkiElectronicfundstransferID, final Response.Listener<ElectronicfundstransferGetCommunicationListV1Response> responseListener, final Response.ErrorListener errorListener) {
+  public void electronicfundstransferGetCommunicationListV1 (Integer pkiElectronicfundstransferID, final Response.Listener<ElectronicfundstransferGetCommunicationListV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'pkiElectronicfundstransferID' is set
     if (pkiElectronicfundstransferID == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'pkiElectronicfundstransferID' when calling eletronicfundstransferGetCommunicationListV1",
-        new ApiException(400, "Missing the required parameter 'pkiElectronicfundstransferID' when calling eletronicfundstransferGetCommunicationListV1"));
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiElectronicfundstransferID' when calling electronicfundstransferGetCommunicationListV1",
+        new ApiException(400, "Missing the required parameter 'pkiElectronicfundstransferID' when calling electronicfundstransferGetCommunicationListV1"));
     }
 
     // create path and map variables

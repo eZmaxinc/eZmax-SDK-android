@@ -71,6 +71,26 @@ public class EzsignfoldertypeResponse {
   private Boolean bEzsignfoldertypeReassign = null;
   @SerializedName("bEzsignfoldertypeSendattatchmentsigner")
   private Boolean bEzsignfoldertypeSendattatchmentsigner = null;
+  @SerializedName("bEzsignfoldertypeSendsignedtoezsignsigner")
+  private Boolean bEzsignfoldertypeSendsignedtoezsignsigner = null;
+  @SerializedName("bEzsignfoldertypeSendsignedtouser")
+  private Boolean bEzsignfoldertypeSendsignedtouser = null;
+  @SerializedName("bEzsignfoldertypeSendattachmentezsignsigner")
+  private Boolean bEzsignfoldertypeSendattachmentezsignsigner = null;
+  @SerializedName("bEzsignfoldertypeSendproofezsignsigner")
+  private Boolean bEzsignfoldertypeSendproofezsignsigner = null;
+  @SerializedName("bEzsignfoldertypeSendattachmentuser")
+  private Boolean bEzsignfoldertypeSendattachmentuser = null;
+  @SerializedName("bEzsignfoldertypeSendproofuser")
+  private Boolean bEzsignfoldertypeSendproofuser = null;
+  @SerializedName("bEzsignfoldertypeSendproofemail")
+  private Boolean bEzsignfoldertypeSendproofemail = null;
+  @SerializedName("bEzsignfoldertypeAllowdownloadattachmentezsignsigner")
+  private Boolean bEzsignfoldertypeAllowdownloadattachmentezsignsigner = null;
+  @SerializedName("bEzsignfoldertypeAllowdownloadproofezsignsigner")
+  private Boolean bEzsignfoldertypeAllowdownloadproofezsignsigner = null;
+  @SerializedName("bEzsignfoldertypeSendproofreceivealldocument")
+  private Boolean bEzsignfoldertypeSendproofreceivealldocument = null;
   @SerializedName("bEzsignfoldertypeSendsignedtodocumentowner")
   private Boolean bEzsignfoldertypeSendsignedtodocumentowner = null;
   @SerializedName("bEzsignfoldertypeSendsignedtofolderowner")
@@ -352,14 +372,124 @@ public class EzsignfoldertypeResponse {
   }
 
   /**
-   * Whether we send the Ezsigndocument and the proof as attachment in the email
+   * THIS FIELD WILL BE DELETED. Whether we send the Ezsigndocument and the proof as attachment in the email
    **/
-  @ApiModelProperty(required = true, value = "Whether we send the Ezsigndocument and the proof as attachment in the email")
+  @ApiModelProperty(value = "THIS FIELD WILL BE DELETED. Whether we send the Ezsigndocument and the proof as attachment in the email")
   public Boolean getBEzsignfoldertypeSendattatchmentsigner() {
     return bEzsignfoldertypeSendattatchmentsigner;
   }
   public void setBEzsignfoldertypeSendattatchmentsigner(Boolean bEzsignfoldertypeSendattatchmentsigner) {
     this.bEzsignfoldertypeSendattatchmentsigner = bEzsignfoldertypeSendattatchmentsigner;
+  }
+
+  /**
+   * Whether we send an email to Ezsignsigner  when document is completed
+   **/
+  @ApiModelProperty(value = "Whether we send an email to Ezsignsigner  when document is completed")
+  public Boolean getBEzsignfoldertypeSendsignedtoezsignsigner() {
+    return bEzsignfoldertypeSendsignedtoezsignsigner;
+  }
+  public void setBEzsignfoldertypeSendsignedtoezsignsigner(Boolean bEzsignfoldertypeSendsignedtoezsignsigner) {
+    this.bEzsignfoldertypeSendsignedtoezsignsigner = bEzsignfoldertypeSendsignedtoezsignsigner;
+  }
+
+  /**
+   * Whether we send an email to User who signed when document is completed
+   **/
+  @ApiModelProperty(value = "Whether we send an email to User who signed when document is completed")
+  public Boolean getBEzsignfoldertypeSendsignedtouser() {
+    return bEzsignfoldertypeSendsignedtouser;
+  }
+  public void setBEzsignfoldertypeSendsignedtouser(Boolean bEzsignfoldertypeSendsignedtouser) {
+    this.bEzsignfoldertypeSendsignedtouser = bEzsignfoldertypeSendsignedtouser;
+  }
+
+  /**
+   * Whether we send the Ezsigndocument in the email to Ezsignsigner
+   **/
+  @ApiModelProperty(value = "Whether we send the Ezsigndocument in the email to Ezsignsigner")
+  public Boolean getBEzsignfoldertypeSendattachmentezsignsigner() {
+    return bEzsignfoldertypeSendattachmentezsignsigner;
+  }
+  public void setBEzsignfoldertypeSendattachmentezsignsigner(Boolean bEzsignfoldertypeSendattachmentezsignsigner) {
+    this.bEzsignfoldertypeSendattachmentezsignsigner = bEzsignfoldertypeSendattachmentezsignsigner;
+  }
+
+  /**
+   * Whether we send the proof in the email to Ezsignsigner
+   **/
+  @ApiModelProperty(value = "Whether we send the proof in the email to Ezsignsigner")
+  public Boolean getBEzsignfoldertypeSendproofezsignsigner() {
+    return bEzsignfoldertypeSendproofezsignsigner;
+  }
+  public void setBEzsignfoldertypeSendproofezsignsigner(Boolean bEzsignfoldertypeSendproofezsignsigner) {
+    this.bEzsignfoldertypeSendproofezsignsigner = bEzsignfoldertypeSendproofezsignsigner;
+  }
+
+  /**
+   * Whether we send the Ezsigndocument in the email to User
+   **/
+  @ApiModelProperty(value = "Whether we send the Ezsigndocument in the email to User")
+  public Boolean getBEzsignfoldertypeSendattachmentuser() {
+    return bEzsignfoldertypeSendattachmentuser;
+  }
+  public void setBEzsignfoldertypeSendattachmentuser(Boolean bEzsignfoldertypeSendattachmentuser) {
+    this.bEzsignfoldertypeSendattachmentuser = bEzsignfoldertypeSendattachmentuser;
+  }
+
+  /**
+   * Whether we send the proof in the email to User
+   **/
+  @ApiModelProperty(value = "Whether we send the proof in the email to User")
+  public Boolean getBEzsignfoldertypeSendproofuser() {
+    return bEzsignfoldertypeSendproofuser;
+  }
+  public void setBEzsignfoldertypeSendproofuser(Boolean bEzsignfoldertypeSendproofuser) {
+    this.bEzsignfoldertypeSendproofuser = bEzsignfoldertypeSendproofuser;
+  }
+
+  /**
+   * Whether we send the proof in the email to external recipient
+   **/
+  @ApiModelProperty(value = "Whether we send the proof in the email to external recipient")
+  public Boolean getBEzsignfoldertypeSendproofemail() {
+    return bEzsignfoldertypeSendproofemail;
+  }
+  public void setBEzsignfoldertypeSendproofemail(Boolean bEzsignfoldertypeSendproofemail) {
+    this.bEzsignfoldertypeSendproofemail = bEzsignfoldertypeSendproofemail;
+  }
+
+  /**
+   * Whether we allow the Ezsigndocument to be downloaded by an Ezsignsigner
+   **/
+  @ApiModelProperty(value = "Whether we allow the Ezsigndocument to be downloaded by an Ezsignsigner")
+  public Boolean getBEzsignfoldertypeAllowdownloadattachmentezsignsigner() {
+    return bEzsignfoldertypeAllowdownloadattachmentezsignsigner;
+  }
+  public void setBEzsignfoldertypeAllowdownloadattachmentezsignsigner(Boolean bEzsignfoldertypeAllowdownloadattachmentezsignsigner) {
+    this.bEzsignfoldertypeAllowdownloadattachmentezsignsigner = bEzsignfoldertypeAllowdownloadattachmentezsignsigner;
+  }
+
+  /**
+   * Whether we allow the proof to be downloaded by an Ezsignsigner
+   **/
+  @ApiModelProperty(value = "Whether we allow the proof to be downloaded by an Ezsignsigner")
+  public Boolean getBEzsignfoldertypeAllowdownloadproofezsignsigner() {
+    return bEzsignfoldertypeAllowdownloadproofezsignsigner;
+  }
+  public void setBEzsignfoldertypeAllowdownloadproofezsignsigner(Boolean bEzsignfoldertypeAllowdownloadproofezsignsigner) {
+    this.bEzsignfoldertypeAllowdownloadproofezsignsigner = bEzsignfoldertypeAllowdownloadproofezsignsigner;
+  }
+
+  /**
+   * Whether we send the proof to user and Ezsignsigner who receive all documents.
+   **/
+  @ApiModelProperty(value = "Whether we send the proof to user and Ezsignsigner who receive all documents.")
+  public Boolean getBEzsignfoldertypeSendproofreceivealldocument() {
+    return bEzsignfoldertypeSendproofreceivealldocument;
+  }
+  public void setBEzsignfoldertypeSendproofreceivealldocument(Boolean bEzsignfoldertypeSendproofreceivealldocument) {
+    this.bEzsignfoldertypeSendproofreceivealldocument = bEzsignfoldertypeSendproofreceivealldocument;
   }
 
   /**
@@ -396,9 +526,9 @@ public class EzsignfoldertypeResponse {
   }
 
   /**
-   * Whether we send the signed Ezsigndocument to the Usergroup that has acces to only their own Ezsignfolders
+   * THIS FIELD WILL BE DELETED. Whether we send the signed Ezsigndocument to the Usergroup that has acces to only their own Ezsignfolders
    **/
-  @ApiModelProperty(value = "Whether we send the signed Ezsigndocument to the Usergroup that has acces to only their own Ezsignfolders")
+  @ApiModelProperty(value = "THIS FIELD WILL BE DELETED. Whether we send the signed Ezsigndocument to the Usergroup that has acces to only their own Ezsignfolders")
   public Boolean getBEzsignfoldertypeSendsignedtolimitedgroup() {
     return bEzsignfoldertypeSendsignedtolimitedgroup;
   }
@@ -473,9 +603,9 @@ public class EzsignfoldertypeResponse {
   }
 
   /**
-   * Whether we include the proof with the signed Ezsigndocument for Ezsignsigners
+   * THIS FIELD WILL BE DELETED. Whether we include the proof with the signed Ezsigndocument for Ezsignsigners
    **/
-  @ApiModelProperty(required = true, value = "Whether we include the proof with the signed Ezsigndocument for Ezsignsigners")
+  @ApiModelProperty(value = "THIS FIELD WILL BE DELETED. Whether we include the proof with the signed Ezsigndocument for Ezsignsigners")
   public Boolean getBEzsignfoldertypeIncludeproofsigner() {
     return bEzsignfoldertypeIncludeproofsigner;
   }
@@ -538,6 +668,16 @@ public class EzsignfoldertypeResponse {
         (this.bEzsignfoldertypeDelegate == null ? ezsignfoldertypeResponse.bEzsignfoldertypeDelegate == null : this.bEzsignfoldertypeDelegate.equals(ezsignfoldertypeResponse.bEzsignfoldertypeDelegate)) &&
         (this.bEzsignfoldertypeReassign == null ? ezsignfoldertypeResponse.bEzsignfoldertypeReassign == null : this.bEzsignfoldertypeReassign.equals(ezsignfoldertypeResponse.bEzsignfoldertypeReassign)) &&
         (this.bEzsignfoldertypeSendattatchmentsigner == null ? ezsignfoldertypeResponse.bEzsignfoldertypeSendattatchmentsigner == null : this.bEzsignfoldertypeSendattatchmentsigner.equals(ezsignfoldertypeResponse.bEzsignfoldertypeSendattatchmentsigner)) &&
+        (this.bEzsignfoldertypeSendsignedtoezsignsigner == null ? ezsignfoldertypeResponse.bEzsignfoldertypeSendsignedtoezsignsigner == null : this.bEzsignfoldertypeSendsignedtoezsignsigner.equals(ezsignfoldertypeResponse.bEzsignfoldertypeSendsignedtoezsignsigner)) &&
+        (this.bEzsignfoldertypeSendsignedtouser == null ? ezsignfoldertypeResponse.bEzsignfoldertypeSendsignedtouser == null : this.bEzsignfoldertypeSendsignedtouser.equals(ezsignfoldertypeResponse.bEzsignfoldertypeSendsignedtouser)) &&
+        (this.bEzsignfoldertypeSendattachmentezsignsigner == null ? ezsignfoldertypeResponse.bEzsignfoldertypeSendattachmentezsignsigner == null : this.bEzsignfoldertypeSendattachmentezsignsigner.equals(ezsignfoldertypeResponse.bEzsignfoldertypeSendattachmentezsignsigner)) &&
+        (this.bEzsignfoldertypeSendproofezsignsigner == null ? ezsignfoldertypeResponse.bEzsignfoldertypeSendproofezsignsigner == null : this.bEzsignfoldertypeSendproofezsignsigner.equals(ezsignfoldertypeResponse.bEzsignfoldertypeSendproofezsignsigner)) &&
+        (this.bEzsignfoldertypeSendattachmentuser == null ? ezsignfoldertypeResponse.bEzsignfoldertypeSendattachmentuser == null : this.bEzsignfoldertypeSendattachmentuser.equals(ezsignfoldertypeResponse.bEzsignfoldertypeSendattachmentuser)) &&
+        (this.bEzsignfoldertypeSendproofuser == null ? ezsignfoldertypeResponse.bEzsignfoldertypeSendproofuser == null : this.bEzsignfoldertypeSendproofuser.equals(ezsignfoldertypeResponse.bEzsignfoldertypeSendproofuser)) &&
+        (this.bEzsignfoldertypeSendproofemail == null ? ezsignfoldertypeResponse.bEzsignfoldertypeSendproofemail == null : this.bEzsignfoldertypeSendproofemail.equals(ezsignfoldertypeResponse.bEzsignfoldertypeSendproofemail)) &&
+        (this.bEzsignfoldertypeAllowdownloadattachmentezsignsigner == null ? ezsignfoldertypeResponse.bEzsignfoldertypeAllowdownloadattachmentezsignsigner == null : this.bEzsignfoldertypeAllowdownloadattachmentezsignsigner.equals(ezsignfoldertypeResponse.bEzsignfoldertypeAllowdownloadattachmentezsignsigner)) &&
+        (this.bEzsignfoldertypeAllowdownloadproofezsignsigner == null ? ezsignfoldertypeResponse.bEzsignfoldertypeAllowdownloadproofezsignsigner == null : this.bEzsignfoldertypeAllowdownloadproofezsignsigner.equals(ezsignfoldertypeResponse.bEzsignfoldertypeAllowdownloadproofezsignsigner)) &&
+        (this.bEzsignfoldertypeSendproofreceivealldocument == null ? ezsignfoldertypeResponse.bEzsignfoldertypeSendproofreceivealldocument == null : this.bEzsignfoldertypeSendproofreceivealldocument.equals(ezsignfoldertypeResponse.bEzsignfoldertypeSendproofreceivealldocument)) &&
         (this.bEzsignfoldertypeSendsignedtodocumentowner == null ? ezsignfoldertypeResponse.bEzsignfoldertypeSendsignedtodocumentowner == null : this.bEzsignfoldertypeSendsignedtodocumentowner.equals(ezsignfoldertypeResponse.bEzsignfoldertypeSendsignedtodocumentowner)) &&
         (this.bEzsignfoldertypeSendsignedtofolderowner == null ? ezsignfoldertypeResponse.bEzsignfoldertypeSendsignedtofolderowner == null : this.bEzsignfoldertypeSendsignedtofolderowner.equals(ezsignfoldertypeResponse.bEzsignfoldertypeSendsignedtofolderowner)) &&
         (this.bEzsignfoldertypeSendsignedtofullgroup == null ? ezsignfoldertypeResponse.bEzsignfoldertypeSendsignedtofullgroup == null : this.bEzsignfoldertypeSendsignedtofullgroup.equals(ezsignfoldertypeResponse.bEzsignfoldertypeSendsignedtofullgroup)) &&
@@ -579,6 +719,16 @@ public class EzsignfoldertypeResponse {
     result = 31 * result + (this.bEzsignfoldertypeDelegate == null ? 0: this.bEzsignfoldertypeDelegate.hashCode());
     result = 31 * result + (this.bEzsignfoldertypeReassign == null ? 0: this.bEzsignfoldertypeReassign.hashCode());
     result = 31 * result + (this.bEzsignfoldertypeSendattatchmentsigner == null ? 0: this.bEzsignfoldertypeSendattatchmentsigner.hashCode());
+    result = 31 * result + (this.bEzsignfoldertypeSendsignedtoezsignsigner == null ? 0: this.bEzsignfoldertypeSendsignedtoezsignsigner.hashCode());
+    result = 31 * result + (this.bEzsignfoldertypeSendsignedtouser == null ? 0: this.bEzsignfoldertypeSendsignedtouser.hashCode());
+    result = 31 * result + (this.bEzsignfoldertypeSendattachmentezsignsigner == null ? 0: this.bEzsignfoldertypeSendattachmentezsignsigner.hashCode());
+    result = 31 * result + (this.bEzsignfoldertypeSendproofezsignsigner == null ? 0: this.bEzsignfoldertypeSendproofezsignsigner.hashCode());
+    result = 31 * result + (this.bEzsignfoldertypeSendattachmentuser == null ? 0: this.bEzsignfoldertypeSendattachmentuser.hashCode());
+    result = 31 * result + (this.bEzsignfoldertypeSendproofuser == null ? 0: this.bEzsignfoldertypeSendproofuser.hashCode());
+    result = 31 * result + (this.bEzsignfoldertypeSendproofemail == null ? 0: this.bEzsignfoldertypeSendproofemail.hashCode());
+    result = 31 * result + (this.bEzsignfoldertypeAllowdownloadattachmentezsignsigner == null ? 0: this.bEzsignfoldertypeAllowdownloadattachmentezsignsigner.hashCode());
+    result = 31 * result + (this.bEzsignfoldertypeAllowdownloadproofezsignsigner == null ? 0: this.bEzsignfoldertypeAllowdownloadproofezsignsigner.hashCode());
+    result = 31 * result + (this.bEzsignfoldertypeSendproofreceivealldocument == null ? 0: this.bEzsignfoldertypeSendproofreceivealldocument.hashCode());
     result = 31 * result + (this.bEzsignfoldertypeSendsignedtodocumentowner == null ? 0: this.bEzsignfoldertypeSendsignedtodocumentowner.hashCode());
     result = 31 * result + (this.bEzsignfoldertypeSendsignedtofolderowner == null ? 0: this.bEzsignfoldertypeSendsignedtofolderowner.hashCode());
     result = 31 * result + (this.bEzsignfoldertypeSendsignedtofullgroup == null ? 0: this.bEzsignfoldertypeSendsignedtofullgroup.hashCode());
@@ -623,6 +773,16 @@ public class EzsignfoldertypeResponse {
     sb.append("  bEzsignfoldertypeDelegate: ").append(bEzsignfoldertypeDelegate).append("\n");
     sb.append("  bEzsignfoldertypeReassign: ").append(bEzsignfoldertypeReassign).append("\n");
     sb.append("  bEzsignfoldertypeSendattatchmentsigner: ").append(bEzsignfoldertypeSendattatchmentsigner).append("\n");
+    sb.append("  bEzsignfoldertypeSendsignedtoezsignsigner: ").append(bEzsignfoldertypeSendsignedtoezsignsigner).append("\n");
+    sb.append("  bEzsignfoldertypeSendsignedtouser: ").append(bEzsignfoldertypeSendsignedtouser).append("\n");
+    sb.append("  bEzsignfoldertypeSendattachmentezsignsigner: ").append(bEzsignfoldertypeSendattachmentezsignsigner).append("\n");
+    sb.append("  bEzsignfoldertypeSendproofezsignsigner: ").append(bEzsignfoldertypeSendproofezsignsigner).append("\n");
+    sb.append("  bEzsignfoldertypeSendattachmentuser: ").append(bEzsignfoldertypeSendattachmentuser).append("\n");
+    sb.append("  bEzsignfoldertypeSendproofuser: ").append(bEzsignfoldertypeSendproofuser).append("\n");
+    sb.append("  bEzsignfoldertypeSendproofemail: ").append(bEzsignfoldertypeSendproofemail).append("\n");
+    sb.append("  bEzsignfoldertypeAllowdownloadattachmentezsignsigner: ").append(bEzsignfoldertypeAllowdownloadattachmentezsignsigner).append("\n");
+    sb.append("  bEzsignfoldertypeAllowdownloadproofezsignsigner: ").append(bEzsignfoldertypeAllowdownloadproofezsignsigner).append("\n");
+    sb.append("  bEzsignfoldertypeSendproofreceivealldocument: ").append(bEzsignfoldertypeSendproofreceivealldocument).append("\n");
     sb.append("  bEzsignfoldertypeSendsignedtodocumentowner: ").append(bEzsignfoldertypeSendsignedtodocumentowner).append("\n");
     sb.append("  bEzsignfoldertypeSendsignedtofolderowner: ").append(bEzsignfoldertypeSendsignedtofolderowner).append("\n");
     sb.append("  bEzsignfoldertypeSendsignedtofullgroup: ").append(bEzsignfoldertypeSendsignedtofullgroup).append("\n");
