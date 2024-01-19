@@ -68,6 +68,8 @@ public class UserRequest {
   private String sUserLastname = null;
   @SerializedName("sUserLoginname")
   private String sUserLoginname = null;
+  @SerializedName("sUserJobtitle")
+  private String sUserJobtitle = null;
   @SerializedName("eUserEzsignaccess")
   private FieldEUserEzsignaccess eUserEzsignaccess = null;
   @SerializedName("bUserIsactive")
@@ -322,6 +324,17 @@ public class UserRequest {
   }
 
   /**
+   * The job title of the user
+   **/
+  @ApiModelProperty(value = "The job title of the user")
+  public String getSUserJobtitle() {
+    return sUserJobtitle;
+  }
+  public void setSUserJobtitle(String sUserJobtitle) {
+    this.sUserJobtitle = sUserJobtitle;
+  }
+
+  /**
    **/
   @ApiModelProperty(required = true, value = "")
   public FieldEUserEzsignaccess getEUserEzsignaccess() {
@@ -417,6 +430,7 @@ public class UserRequest {
         (this.sUserFirstname == null ? userRequest.sUserFirstname == null : this.sUserFirstname.equals(userRequest.sUserFirstname)) &&
         (this.sUserLastname == null ? userRequest.sUserLastname == null : this.sUserLastname.equals(userRequest.sUserLastname)) &&
         (this.sUserLoginname == null ? userRequest.sUserLoginname == null : this.sUserLoginname.equals(userRequest.sUserLoginname)) &&
+        (this.sUserJobtitle == null ? userRequest.sUserJobtitle == null : this.sUserJobtitle.equals(userRequest.sUserJobtitle)) &&
         (this.eUserEzsignaccess == null ? userRequest.eUserEzsignaccess == null : this.eUserEzsignaccess.equals(userRequest.eUserEzsignaccess)) &&
         (this.bUserIsactive == null ? userRequest.bUserIsactive == null : this.bUserIsactive.equals(userRequest.bUserIsactive)) &&
         (this.bUserValidatebyadministration == null ? userRequest.bUserValidatebyadministration == null : this.bUserValidatebyadministration.equals(userRequest.bUserValidatebyadministration)) &&
@@ -449,6 +463,7 @@ public class UserRequest {
     result = 31 * result + (this.sUserFirstname == null ? 0: this.sUserFirstname.hashCode());
     result = 31 * result + (this.sUserLastname == null ? 0: this.sUserLastname.hashCode());
     result = 31 * result + (this.sUserLoginname == null ? 0: this.sUserLoginname.hashCode());
+    result = 31 * result + (this.sUserJobtitle == null ? 0: this.sUserJobtitle.hashCode());
     result = 31 * result + (this.eUserEzsignaccess == null ? 0: this.eUserEzsignaccess.hashCode());
     result = 31 * result + (this.bUserIsactive == null ? 0: this.bUserIsactive.hashCode());
     result = 31 * result + (this.bUserValidatebyadministration == null ? 0: this.bUserValidatebyadministration.hashCode());
@@ -484,6 +499,7 @@ public class UserRequest {
     sb.append("  sUserFirstname: ").append(sUserFirstname).append("\n");
     sb.append("  sUserLastname: ").append(sUserLastname).append("\n");
     sb.append("  sUserLoginname: ").append(sUserLoginname).append("\n");
+    sb.append("  sUserJobtitle: ").append(sUserJobtitle).append("\n");
     sb.append("  eUserEzsignaccess: ").append(eUserEzsignaccess).append("\n");
     sb.append("  bUserIsactive: ").append(bUserIsactive).append("\n");
     sb.append("  bUserValidatebyadministration: ").append(bUserValidatebyadministration).append("\n");

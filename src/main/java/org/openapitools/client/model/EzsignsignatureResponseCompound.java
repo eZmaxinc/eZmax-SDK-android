@@ -55,6 +55,8 @@ public class EzsignsignatureResponseCompound {
   private Integer iEzsignsignatureWidth = null;
   @SerializedName("iEzsignsignatureStep")
   private Integer iEzsignsignatureStep = null;
+  @SerializedName("iEzsignsignatureStepadjusted")
+  private Integer iEzsignsignatureStepadjusted = null;
   @SerializedName("eEzsignsignatureType")
   private FieldEEzsignsignatureType eEzsignsignatureType = null;
   @SerializedName("tEzsignsignatureTooltip")
@@ -231,6 +233,17 @@ public class EzsignsignatureResponseCompound {
   }
   public void setIEzsignsignatureStep(Integer iEzsignsignatureStep) {
     this.iEzsignsignatureStep = iEzsignsignatureStep;
+  }
+
+  /**
+   * The step when the Ezsignsigner will be invited to sign
+   **/
+  @ApiModelProperty(value = "The step when the Ezsignsigner will be invited to sign")
+  public Integer getIEzsignsignatureStepadjusted() {
+    return iEzsignsignatureStepadjusted;
+  }
+  public void setIEzsignsignatureStepadjusted(Integer iEzsignsignatureStepadjusted) {
+    this.iEzsignsignatureStepadjusted = iEzsignsignatureStepadjusted;
   }
 
   /**
@@ -499,6 +512,7 @@ public class EzsignsignatureResponseCompound {
         (this.iEzsignsignatureHeight == null ? ezsignsignatureResponseCompound.iEzsignsignatureHeight == null : this.iEzsignsignatureHeight.equals(ezsignsignatureResponseCompound.iEzsignsignatureHeight)) &&
         (this.iEzsignsignatureWidth == null ? ezsignsignatureResponseCompound.iEzsignsignatureWidth == null : this.iEzsignsignatureWidth.equals(ezsignsignatureResponseCompound.iEzsignsignatureWidth)) &&
         (this.iEzsignsignatureStep == null ? ezsignsignatureResponseCompound.iEzsignsignatureStep == null : this.iEzsignsignatureStep.equals(ezsignsignatureResponseCompound.iEzsignsignatureStep)) &&
+        (this.iEzsignsignatureStepadjusted == null ? ezsignsignatureResponseCompound.iEzsignsignatureStepadjusted == null : this.iEzsignsignatureStepadjusted.equals(ezsignsignatureResponseCompound.iEzsignsignatureStepadjusted)) &&
         (this.eEzsignsignatureType == null ? ezsignsignatureResponseCompound.eEzsignsignatureType == null : this.eEzsignsignatureType.equals(ezsignsignatureResponseCompound.eEzsignsignatureType)) &&
         (this.tEzsignsignatureTooltip == null ? ezsignsignatureResponseCompound.tEzsignsignatureTooltip == null : this.tEzsignsignatureTooltip.equals(ezsignsignatureResponseCompound.tEzsignsignatureTooltip)) &&
         (this.eEzsignsignatureTooltipposition == null ? ezsignsignatureResponseCompound.eEzsignsignatureTooltipposition == null : this.eEzsignsignatureTooltipposition.equals(ezsignsignatureResponseCompound.eEzsignsignatureTooltipposition)) &&
@@ -538,6 +552,7 @@ public class EzsignsignatureResponseCompound {
     result = 31 * result + (this.iEzsignsignatureHeight == null ? 0: this.iEzsignsignatureHeight.hashCode());
     result = 31 * result + (this.iEzsignsignatureWidth == null ? 0: this.iEzsignsignatureWidth.hashCode());
     result = 31 * result + (this.iEzsignsignatureStep == null ? 0: this.iEzsignsignatureStep.hashCode());
+    result = 31 * result + (this.iEzsignsignatureStepadjusted == null ? 0: this.iEzsignsignatureStepadjusted.hashCode());
     result = 31 * result + (this.eEzsignsignatureType == null ? 0: this.eEzsignsignatureType.hashCode());
     result = 31 * result + (this.tEzsignsignatureTooltip == null ? 0: this.tEzsignsignatureTooltip.hashCode());
     result = 31 * result + (this.eEzsignsignatureTooltipposition == null ? 0: this.eEzsignsignatureTooltipposition.hashCode());
@@ -580,6 +595,7 @@ public class EzsignsignatureResponseCompound {
     sb.append("  iEzsignsignatureHeight: ").append(iEzsignsignatureHeight).append("\n");
     sb.append("  iEzsignsignatureWidth: ").append(iEzsignsignatureWidth).append("\n");
     sb.append("  iEzsignsignatureStep: ").append(iEzsignsignatureStep).append("\n");
+    sb.append("  iEzsignsignatureStepadjusted: ").append(iEzsignsignatureStepadjusted).append("\n");
     sb.append("  eEzsignsignatureType: ").append(eEzsignsignatureType).append("\n");
     sb.append("  tEzsignsignatureTooltip: ").append(tEzsignsignatureTooltip).append("\n");
     sb.append("  eEzsignsignatureTooltipposition: ").append(eEzsignsignatureTooltipposition).append("\n");

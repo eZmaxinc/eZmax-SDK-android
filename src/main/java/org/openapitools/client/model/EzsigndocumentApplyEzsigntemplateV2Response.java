@@ -12,8 +12,10 @@
 
 package org.openapitools.client.model;
 
+import java.util.*;
 import org.openapitools.client.model.CommonResponseObjDebug;
 import org.openapitools.client.model.CommonResponseObjDebugPayload;
+import org.openapitools.client.model.CommonResponseWarning;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -27,6 +29,8 @@ public class EzsigndocumentApplyEzsigntemplateV2Response {
   private CommonResponseObjDebugPayload objDebugPayload = null;
   @SerializedName("objDebug")
   private CommonResponseObjDebug objDebug = null;
+  @SerializedName("a_objWarning")
+  private List<CommonResponseWarning> aObjWarning = null;
 
   /**
    **/
@@ -48,6 +52,16 @@ public class EzsigndocumentApplyEzsigntemplateV2Response {
     this.objDebug = objDebug;
   }
 
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public List<CommonResponseWarning> getAObjWarning() {
+    return aObjWarning;
+  }
+  public void setAObjWarning(List<CommonResponseWarning> aObjWarning) {
+    this.aObjWarning = aObjWarning;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -59,7 +73,8 @@ public class EzsigndocumentApplyEzsigntemplateV2Response {
     }
     EzsigndocumentApplyEzsigntemplateV2Response ezsigndocumentApplyEzsigntemplateV2Response = (EzsigndocumentApplyEzsigntemplateV2Response) o;
     return (this.objDebugPayload == null ? ezsigndocumentApplyEzsigntemplateV2Response.objDebugPayload == null : this.objDebugPayload.equals(ezsigndocumentApplyEzsigntemplateV2Response.objDebugPayload)) &&
-        (this.objDebug == null ? ezsigndocumentApplyEzsigntemplateV2Response.objDebug == null : this.objDebug.equals(ezsigndocumentApplyEzsigntemplateV2Response.objDebug));
+        (this.objDebug == null ? ezsigndocumentApplyEzsigntemplateV2Response.objDebug == null : this.objDebug.equals(ezsigndocumentApplyEzsigntemplateV2Response.objDebug)) &&
+        (this.aObjWarning == null ? ezsigndocumentApplyEzsigntemplateV2Response.aObjWarning == null : this.aObjWarning.equals(ezsigndocumentApplyEzsigntemplateV2Response.aObjWarning));
   }
 
   @Override
@@ -67,6 +82,7 @@ public class EzsigndocumentApplyEzsigntemplateV2Response {
     int result = 17;
     result = 31 * result + (this.objDebugPayload == null ? 0: this.objDebugPayload.hashCode());
     result = 31 * result + (this.objDebug == null ? 0: this.objDebug.hashCode());
+    result = 31 * result + (this.aObjWarning == null ? 0: this.aObjWarning.hashCode());
     return result;
   }
 
@@ -77,6 +93,7 @@ public class EzsigndocumentApplyEzsigntemplateV2Response {
     
     sb.append("  objDebugPayload: ").append(objDebugPayload).append("\n");
     sb.append("  objDebug: ").append(objDebug).append("\n");
+    sb.append("  aObjWarning: ").append(aObjWarning).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

@@ -15,6 +15,8 @@ Name | Type | Description | Notes
 **bEzsignfoldertypeAllowdownloadproofezsignsigner** | **Boolean** | Whether we allow the proof to be downloaded by an Ezsignsigner |  [optional]
 **bEzsignfoldertypeDelegate** | **Boolean** | Wheter if delegation of signature is allowed to another user or not |  [optional]
 **bEzsignfoldertypeReassign** | **Boolean** | Wheter if Reassignment of signature is allowed to another signatory or not |  [optional]
+**bEzsignfoldertypeReassignezsignsigner** | **Boolean** | Wheter if Reassignment of signature is allowed by a signatory to another signatory or not |  [optional]
+**bEzsignfoldertypeReassignuser** | **Boolean** | Wheter if Reassignment of signature is allowed by a user to a signatory or another user or not |  [optional]
 
 
 

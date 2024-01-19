@@ -14,6 +14,7 @@ package org.openapitools.client.model;
 
 import org.openapitools.client.model.CommonAudit;
 import org.openapitools.client.model.CustomEzsignfoldertypeResponse;
+import org.openapitools.client.model.FieldEEzsignfolderCompletion;
 import org.openapitools.client.model.FieldEEzsignfolderSendreminderfrequency;
 import org.openapitools.client.model.FieldEEzsignfolderStep;
 import io.swagger.annotations.*;
@@ -31,6 +32,8 @@ public class EzsignfolderGetObjectV1ResponseMPayload {
   private Integer fkiEzsignfoldertypeID = null;
   @SerializedName("objEzsignfoldertype")
   private CustomEzsignfoldertypeResponse objEzsignfoldertype = null;
+  @SerializedName("eEzsignfolderCompletion")
+  private FieldEEzsignfolderCompletion eEzsignfolderCompletion = null;
   @SerializedName("sEzsignfoldertypeNameX")
   private String sEzsignfoldertypeNameX = null;
   @SerializedName("fkiBillingentityinternalID")
@@ -102,6 +105,16 @@ public class EzsignfolderGetObjectV1ResponseMPayload {
   }
   public void setObjEzsignfoldertype(CustomEzsignfoldertypeResponse objEzsignfoldertype) {
     this.objEzsignfoldertype = objEzsignfoldertype;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public FieldEEzsignfolderCompletion getEEzsignfolderCompletion() {
+    return eEzsignfolderCompletion;
+  }
+  public void setEEzsignfolderCompletion(FieldEEzsignfolderCompletion eEzsignfolderCompletion) {
+    this.eEzsignfolderCompletion = eEzsignfolderCompletion;
   }
 
   /**
@@ -325,6 +338,7 @@ public class EzsignfolderGetObjectV1ResponseMPayload {
     return (this.pkiEzsignfolderID == null ? ezsignfolderGetObjectV1ResponseMPayload.pkiEzsignfolderID == null : this.pkiEzsignfolderID.equals(ezsignfolderGetObjectV1ResponseMPayload.pkiEzsignfolderID)) &&
         (this.fkiEzsignfoldertypeID == null ? ezsignfolderGetObjectV1ResponseMPayload.fkiEzsignfoldertypeID == null : this.fkiEzsignfoldertypeID.equals(ezsignfolderGetObjectV1ResponseMPayload.fkiEzsignfoldertypeID)) &&
         (this.objEzsignfoldertype == null ? ezsignfolderGetObjectV1ResponseMPayload.objEzsignfoldertype == null : this.objEzsignfoldertype.equals(ezsignfolderGetObjectV1ResponseMPayload.objEzsignfoldertype)) &&
+        (this.eEzsignfolderCompletion == null ? ezsignfolderGetObjectV1ResponseMPayload.eEzsignfolderCompletion == null : this.eEzsignfolderCompletion.equals(ezsignfolderGetObjectV1ResponseMPayload.eEzsignfolderCompletion)) &&
         (this.sEzsignfoldertypeNameX == null ? ezsignfolderGetObjectV1ResponseMPayload.sEzsignfoldertypeNameX == null : this.sEzsignfoldertypeNameX.equals(ezsignfolderGetObjectV1ResponseMPayload.sEzsignfoldertypeNameX)) &&
         (this.fkiBillingentityinternalID == null ? ezsignfolderGetObjectV1ResponseMPayload.fkiBillingentityinternalID == null : this.fkiBillingentityinternalID.equals(ezsignfolderGetObjectV1ResponseMPayload.fkiBillingentityinternalID)) &&
         (this.sBillingentityinternalDescriptionX == null ? ezsignfolderGetObjectV1ResponseMPayload.sBillingentityinternalDescriptionX == null : this.sBillingentityinternalDescriptionX.equals(ezsignfolderGetObjectV1ResponseMPayload.sBillingentityinternalDescriptionX)) &&
@@ -352,6 +366,7 @@ public class EzsignfolderGetObjectV1ResponseMPayload {
     result = 31 * result + (this.pkiEzsignfolderID == null ? 0: this.pkiEzsignfolderID.hashCode());
     result = 31 * result + (this.fkiEzsignfoldertypeID == null ? 0: this.fkiEzsignfoldertypeID.hashCode());
     result = 31 * result + (this.objEzsignfoldertype == null ? 0: this.objEzsignfoldertype.hashCode());
+    result = 31 * result + (this.eEzsignfolderCompletion == null ? 0: this.eEzsignfolderCompletion.hashCode());
     result = 31 * result + (this.sEzsignfoldertypeNameX == null ? 0: this.sEzsignfoldertypeNameX.hashCode());
     result = 31 * result + (this.fkiBillingentityinternalID == null ? 0: this.fkiBillingentityinternalID.hashCode());
     result = 31 * result + (this.sBillingentityinternalDescriptionX == null ? 0: this.sBillingentityinternalDescriptionX.hashCode());
@@ -382,6 +397,7 @@ public class EzsignfolderGetObjectV1ResponseMPayload {
     sb.append("  pkiEzsignfolderID: ").append(pkiEzsignfolderID).append("\n");
     sb.append("  fkiEzsignfoldertypeID: ").append(fkiEzsignfoldertypeID).append("\n");
     sb.append("  objEzsignfoldertype: ").append(objEzsignfoldertype).append("\n");
+    sb.append("  eEzsignfolderCompletion: ").append(eEzsignfolderCompletion).append("\n");
     sb.append("  sEzsignfoldertypeNameX: ").append(sEzsignfoldertypeNameX).append("\n");
     sb.append("  fkiBillingentityinternalID: ").append(fkiBillingentityinternalID).append("\n");
     sb.append("  sBillingentityinternalDescriptionX: ").append(sBillingentityinternalDescriptionX).append("\n");

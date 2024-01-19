@@ -12,6 +12,7 @@
 
 package org.openapitools.client.model;
 
+import org.openapitools.client.model.CommonAudit;
 import org.openapitools.client.model.FieldEWebhookEzsignevent;
 import org.openapitools.client.model.FieldEWebhookManagementevent;
 import org.openapitools.client.model.FieldEWebhookModule;
@@ -52,6 +53,8 @@ public class WebhookResponse {
   private Boolean bWebhookIssigned = null;
   @SerializedName("bWebhookSkipsslvalidation")
   private Boolean bWebhookSkipsslvalidation = null;
+  @SerializedName("objAudit")
+  private CommonAudit objAudit = null;
 
   /**
    * The unique ID of the Webhook
@@ -205,6 +208,16 @@ public class WebhookResponse {
     this.bWebhookSkipsslvalidation = bWebhookSkipsslvalidation;
   }
 
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public CommonAudit getObjAudit() {
+    return objAudit;
+  }
+  public void setObjAudit(CommonAudit objAudit) {
+    this.objAudit = objAudit;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -228,7 +241,8 @@ public class WebhookResponse {
         (this.sWebhookSecret == null ? webhookResponse.sWebhookSecret == null : this.sWebhookSecret.equals(webhookResponse.sWebhookSecret)) &&
         (this.bWebhookIsactive == null ? webhookResponse.bWebhookIsactive == null : this.bWebhookIsactive.equals(webhookResponse.bWebhookIsactive)) &&
         (this.bWebhookIssigned == null ? webhookResponse.bWebhookIssigned == null : this.bWebhookIssigned.equals(webhookResponse.bWebhookIssigned)) &&
-        (this.bWebhookSkipsslvalidation == null ? webhookResponse.bWebhookSkipsslvalidation == null : this.bWebhookSkipsslvalidation.equals(webhookResponse.bWebhookSkipsslvalidation));
+        (this.bWebhookSkipsslvalidation == null ? webhookResponse.bWebhookSkipsslvalidation == null : this.bWebhookSkipsslvalidation.equals(webhookResponse.bWebhookSkipsslvalidation)) &&
+        (this.objAudit == null ? webhookResponse.objAudit == null : this.objAudit.equals(webhookResponse.objAudit));
   }
 
   @Override
@@ -248,6 +262,7 @@ public class WebhookResponse {
     result = 31 * result + (this.bWebhookIsactive == null ? 0: this.bWebhookIsactive.hashCode());
     result = 31 * result + (this.bWebhookIssigned == null ? 0: this.bWebhookIssigned.hashCode());
     result = 31 * result + (this.bWebhookSkipsslvalidation == null ? 0: this.bWebhookSkipsslvalidation.hashCode());
+    result = 31 * result + (this.objAudit == null ? 0: this.objAudit.hashCode());
     return result;
   }
 
@@ -270,6 +285,7 @@ public class WebhookResponse {
     sb.append("  bWebhookIsactive: ").append(bWebhookIsactive).append("\n");
     sb.append("  bWebhookIssigned: ").append(bWebhookIssigned).append("\n");
     sb.append("  bWebhookSkipsslvalidation: ").append(bWebhookSkipsslvalidation).append("\n");
+    sb.append("  objAudit: ").append(objAudit).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

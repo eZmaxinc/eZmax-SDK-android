@@ -12,6 +12,7 @@
 
 package org.openapitools.client.model;
 
+import org.openapitools.client.model.CommonAudit;
 import org.openapitools.client.model.FieldEWebhookEzsignevent;
 import org.openapitools.client.model.FieldEWebhookManagementevent;
 import org.openapitools.client.model.FieldEWebhookModule;
@@ -52,6 +53,8 @@ public class CustomWebhookResponse {
   private Boolean bWebhookIssigned = null;
   @SerializedName("bWebhookSkipsslvalidation")
   private Boolean bWebhookSkipsslvalidation = null;
+  @SerializedName("objAudit")
+  private CommonAudit objAudit = null;
   @SerializedName("pksCustomerCode")
   private String pksCustomerCode = null;
   @SerializedName("bWebhookTest")
@@ -210,6 +213,16 @@ public class CustomWebhookResponse {
   }
 
   /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public CommonAudit getObjAudit() {
+    return objAudit;
+  }
+  public void setObjAudit(CommonAudit objAudit) {
+    this.objAudit = objAudit;
+  }
+
+  /**
    * The customer code assigned to your account
    **/
   @ApiModelProperty(required = true, value = "The customer code assigned to your account")
@@ -255,6 +268,7 @@ public class CustomWebhookResponse {
         (this.bWebhookIsactive == null ? customWebhookResponse.bWebhookIsactive == null : this.bWebhookIsactive.equals(customWebhookResponse.bWebhookIsactive)) &&
         (this.bWebhookIssigned == null ? customWebhookResponse.bWebhookIssigned == null : this.bWebhookIssigned.equals(customWebhookResponse.bWebhookIssigned)) &&
         (this.bWebhookSkipsslvalidation == null ? customWebhookResponse.bWebhookSkipsslvalidation == null : this.bWebhookSkipsslvalidation.equals(customWebhookResponse.bWebhookSkipsslvalidation)) &&
+        (this.objAudit == null ? customWebhookResponse.objAudit == null : this.objAudit.equals(customWebhookResponse.objAudit)) &&
         (this.pksCustomerCode == null ? customWebhookResponse.pksCustomerCode == null : this.pksCustomerCode.equals(customWebhookResponse.pksCustomerCode)) &&
         (this.bWebhookTest == null ? customWebhookResponse.bWebhookTest == null : this.bWebhookTest.equals(customWebhookResponse.bWebhookTest));
   }
@@ -276,6 +290,7 @@ public class CustomWebhookResponse {
     result = 31 * result + (this.bWebhookIsactive == null ? 0: this.bWebhookIsactive.hashCode());
     result = 31 * result + (this.bWebhookIssigned == null ? 0: this.bWebhookIssigned.hashCode());
     result = 31 * result + (this.bWebhookSkipsslvalidation == null ? 0: this.bWebhookSkipsslvalidation.hashCode());
+    result = 31 * result + (this.objAudit == null ? 0: this.objAudit.hashCode());
     result = 31 * result + (this.pksCustomerCode == null ? 0: this.pksCustomerCode.hashCode());
     result = 31 * result + (this.bWebhookTest == null ? 0: this.bWebhookTest.hashCode());
     return result;
@@ -300,6 +315,7 @@ public class CustomWebhookResponse {
     sb.append("  bWebhookIsactive: ").append(bWebhookIsactive).append("\n");
     sb.append("  bWebhookIssigned: ").append(bWebhookIssigned).append("\n");
     sb.append("  bWebhookSkipsslvalidation: ").append(bWebhookSkipsslvalidation).append("\n");
+    sb.append("  objAudit: ").append(objAudit).append("\n");
     sb.append("  pksCustomerCode: ").append(pksCustomerCode).append("\n");
     sb.append("  bWebhookTest: ").append(bWebhookTest).append("\n");
     sb.append("}\n");

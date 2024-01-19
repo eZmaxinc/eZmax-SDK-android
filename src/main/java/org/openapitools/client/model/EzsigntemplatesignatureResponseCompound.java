@@ -19,6 +19,8 @@ import org.openapitools.client.model.EzsigntemplatesignaturecustomdateResponseCo
 import org.openapitools.client.model.FieldEEzsigntemplatesignatureAttachmentnamesource;
 import org.openapitools.client.model.FieldEEzsigntemplatesignatureDependencyrequirement;
 import org.openapitools.client.model.FieldEEzsigntemplatesignatureFont;
+import org.openapitools.client.model.FieldEEzsigntemplatesignaturePositioning;
+import org.openapitools.client.model.FieldEEzsigntemplatesignaturePositioningoccurence;
 import org.openapitools.client.model.FieldEEzsigntemplatesignatureTooltipposition;
 import org.openapitools.client.model.FieldEEzsigntemplatesignatureType;
 import io.swagger.annotations.*;
@@ -38,6 +40,8 @@ public class EzsigntemplatesignatureResponseCompound {
   private Integer fkiEzsigntemplatesignerID = null;
   @SerializedName("fkiEzsigntemplatesignerIDValidation")
   private Integer fkiEzsigntemplatesignerIDValidation = null;
+  @SerializedName("eEzsigntemplatesignaturePositioning")
+  private FieldEEzsigntemplatesignaturePositioning eEzsigntemplatesignaturePositioning = null;
   @SerializedName("iEzsigntemplatedocumentpagePagenumber")
   private Integer iEzsigntemplatedocumentpagePagenumber = null;
   @SerializedName("iEzsigntemplatesignatureX")
@@ -74,6 +78,14 @@ public class EzsigntemplatesignatureResponseCompound {
   private EnumTextvalidation eEzsigntemplatesignatureTextvalidation = null;
   @SerializedName("eEzsigntemplatesignatureDependencyrequirement")
   private FieldEEzsigntemplatesignatureDependencyrequirement eEzsigntemplatesignatureDependencyrequirement = null;
+  @SerializedName("sEzsigntemplatesignaturePositioningpattern")
+  private String sEzsigntemplatesignaturePositioningpattern = null;
+  @SerializedName("iEzsigntemplatesignaturePositioningoffsetx")
+  private Integer iEzsigntemplatesignaturePositioningoffsetx = null;
+  @SerializedName("iEzsigntemplatesignaturePositioningoffsety")
+  private Integer iEzsigntemplatesignaturePositioningoffsety = null;
+  @SerializedName("eEzsigntemplatesignaturePositioningoccurence")
+  private FieldEEzsigntemplatesignaturePositioningoccurence eEzsigntemplatesignaturePositioningoccurence = null;
   @SerializedName("bEzsigntemplatesignatureCustomdate")
   private Boolean bEzsigntemplatesignatureCustomdate = null;
   @SerializedName("a_objEzsigntemplatesignaturecustomdate")
@@ -130,6 +142,16 @@ public class EzsigntemplatesignatureResponseCompound {
   }
 
   /**
+   **/
+  @ApiModelProperty(value = "")
+  public FieldEEzsigntemplatesignaturePositioning getEEzsigntemplatesignaturePositioning() {
+    return eEzsigntemplatesignaturePositioning;
+  }
+  public void setEEzsigntemplatesignaturePositioning(FieldEEzsigntemplatesignaturePositioning eEzsigntemplatesignaturePositioning) {
+    this.eEzsigntemplatesignaturePositioning = eEzsigntemplatesignaturePositioning;
+  }
+
+  /**
    * The page number in the Ezsigntemplatedocument
    * minimum: 1
    **/
@@ -145,7 +167,7 @@ public class EzsigntemplatesignatureResponseCompound {
    * The X coordinate (Horizontal) where to put the Ezsigntemplatesignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignature 2 inches from the left border of the page, you would use \"200\" for the X coordinate.
    * minimum: 0
    **/
-  @ApiModelProperty(required = true, value = "The X coordinate (Horizontal) where to put the Ezsigntemplatesignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignature 2 inches from the left border of the page, you would use \"200\" for the X coordinate.")
+  @ApiModelProperty(value = "The X coordinate (Horizontal) where to put the Ezsigntemplatesignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignature 2 inches from the left border of the page, you would use \"200\" for the X coordinate.")
   public Integer getIEzsigntemplatesignatureX() {
     return iEzsigntemplatesignatureX;
   }
@@ -157,7 +179,7 @@ public class EzsigntemplatesignatureResponseCompound {
    * The Y coordinate (Vertical) where to put the Ezsigntemplatesignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignature 3 inches from the top border of the page, you would use \"300\" for the Y coordinate.
    * minimum: 0
    **/
-  @ApiModelProperty(required = true, value = "The Y coordinate (Vertical) where to put the Ezsigntemplatesignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignature 3 inches from the top border of the page, you would use \"300\" for the Y coordinate.")
+  @ApiModelProperty(value = "The Y coordinate (Vertical) where to put the Ezsigntemplatesignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignature 3 inches from the top border of the page, you would use \"300\" for the Y coordinate.")
   public Integer getIEzsigntemplatesignatureY() {
     return iEzsigntemplatesignatureY;
   }
@@ -330,6 +352,49 @@ public class EzsigntemplatesignatureResponseCompound {
   }
 
   /**
+   * The string pattern to search for the positioning. **This is not a regexp**  This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates**
+   **/
+  @ApiModelProperty(value = "The string pattern to search for the positioning. **This is not a regexp**  This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates**")
+  public String getSEzsigntemplatesignaturePositioningpattern() {
+    return sEzsigntemplatesignaturePositioningpattern;
+  }
+  public void setSEzsigntemplatesignaturePositioningpattern(String sEzsigntemplatesignaturePositioningpattern) {
+    this.sEzsigntemplatesignaturePositioningpattern = sEzsigntemplatesignaturePositioningpattern;
+  }
+
+  /**
+   * The offset X  This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates**
+   **/
+  @ApiModelProperty(value = "The offset X  This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates**")
+  public Integer getIEzsigntemplatesignaturePositioningoffsetx() {
+    return iEzsigntemplatesignaturePositioningoffsetx;
+  }
+  public void setIEzsigntemplatesignaturePositioningoffsetx(Integer iEzsigntemplatesignaturePositioningoffsetx) {
+    this.iEzsigntemplatesignaturePositioningoffsetx = iEzsigntemplatesignaturePositioningoffsetx;
+  }
+
+  /**
+   * The offset Y  This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates**
+   **/
+  @ApiModelProperty(value = "The offset Y  This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates**")
+  public Integer getIEzsigntemplatesignaturePositioningoffsety() {
+    return iEzsigntemplatesignaturePositioningoffsety;
+  }
+  public void setIEzsigntemplatesignaturePositioningoffsety(Integer iEzsigntemplatesignaturePositioningoffsety) {
+    this.iEzsigntemplatesignaturePositioningoffsety = iEzsigntemplatesignaturePositioningoffsety;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public FieldEEzsigntemplatesignaturePositioningoccurence getEEzsigntemplatesignaturePositioningoccurence() {
+    return eEzsigntemplatesignaturePositioningoccurence;
+  }
+  public void setEEzsigntemplatesignaturePositioningoccurence(FieldEEzsigntemplatesignaturePositioningoccurence eEzsigntemplatesignaturePositioningoccurence) {
+    this.eEzsigntemplatesignaturePositioningoccurence = eEzsigntemplatesignaturePositioningoccurence;
+  }
+
+  /**
    * Whether the Ezsigntemplatesignature has a custom date format or not. (Only possible when eEzsigntemplatesignatureType is **Name** or **Handwritten**)
    **/
   @ApiModelProperty(value = "Whether the Ezsigntemplatesignature has a custom date format or not. (Only possible when eEzsigntemplatesignatureType is **Name** or **Handwritten**)")
@@ -375,6 +440,7 @@ public class EzsigntemplatesignatureResponseCompound {
         (this.fkiEzsigntemplatedocumentID == null ? ezsigntemplatesignatureResponseCompound.fkiEzsigntemplatedocumentID == null : this.fkiEzsigntemplatedocumentID.equals(ezsigntemplatesignatureResponseCompound.fkiEzsigntemplatedocumentID)) &&
         (this.fkiEzsigntemplatesignerID == null ? ezsigntemplatesignatureResponseCompound.fkiEzsigntemplatesignerID == null : this.fkiEzsigntemplatesignerID.equals(ezsigntemplatesignatureResponseCompound.fkiEzsigntemplatesignerID)) &&
         (this.fkiEzsigntemplatesignerIDValidation == null ? ezsigntemplatesignatureResponseCompound.fkiEzsigntemplatesignerIDValidation == null : this.fkiEzsigntemplatesignerIDValidation.equals(ezsigntemplatesignatureResponseCompound.fkiEzsigntemplatesignerIDValidation)) &&
+        (this.eEzsigntemplatesignaturePositioning == null ? ezsigntemplatesignatureResponseCompound.eEzsigntemplatesignaturePositioning == null : this.eEzsigntemplatesignaturePositioning.equals(ezsigntemplatesignatureResponseCompound.eEzsigntemplatesignaturePositioning)) &&
         (this.iEzsigntemplatedocumentpagePagenumber == null ? ezsigntemplatesignatureResponseCompound.iEzsigntemplatedocumentpagePagenumber == null : this.iEzsigntemplatedocumentpagePagenumber.equals(ezsigntemplatesignatureResponseCompound.iEzsigntemplatedocumentpagePagenumber)) &&
         (this.iEzsigntemplatesignatureX == null ? ezsigntemplatesignatureResponseCompound.iEzsigntemplatesignatureX == null : this.iEzsigntemplatesignatureX.equals(ezsigntemplatesignatureResponseCompound.iEzsigntemplatesignatureX)) &&
         (this.iEzsigntemplatesignatureY == null ? ezsigntemplatesignatureResponseCompound.iEzsigntemplatesignatureY == null : this.iEzsigntemplatesignatureY.equals(ezsigntemplatesignatureResponseCompound.iEzsigntemplatesignatureY)) &&
@@ -393,6 +459,10 @@ public class EzsigntemplatesignatureResponseCompound {
         (this.sEzsigntemplatesignatureRegexp == null ? ezsigntemplatesignatureResponseCompound.sEzsigntemplatesignatureRegexp == null : this.sEzsigntemplatesignatureRegexp.equals(ezsigntemplatesignatureResponseCompound.sEzsigntemplatesignatureRegexp)) &&
         (this.eEzsigntemplatesignatureTextvalidation == null ? ezsigntemplatesignatureResponseCompound.eEzsigntemplatesignatureTextvalidation == null : this.eEzsigntemplatesignatureTextvalidation.equals(ezsigntemplatesignatureResponseCompound.eEzsigntemplatesignatureTextvalidation)) &&
         (this.eEzsigntemplatesignatureDependencyrequirement == null ? ezsigntemplatesignatureResponseCompound.eEzsigntemplatesignatureDependencyrequirement == null : this.eEzsigntemplatesignatureDependencyrequirement.equals(ezsigntemplatesignatureResponseCompound.eEzsigntemplatesignatureDependencyrequirement)) &&
+        (this.sEzsigntemplatesignaturePositioningpattern == null ? ezsigntemplatesignatureResponseCompound.sEzsigntemplatesignaturePositioningpattern == null : this.sEzsigntemplatesignaturePositioningpattern.equals(ezsigntemplatesignatureResponseCompound.sEzsigntemplatesignaturePositioningpattern)) &&
+        (this.iEzsigntemplatesignaturePositioningoffsetx == null ? ezsigntemplatesignatureResponseCompound.iEzsigntemplatesignaturePositioningoffsetx == null : this.iEzsigntemplatesignaturePositioningoffsetx.equals(ezsigntemplatesignatureResponseCompound.iEzsigntemplatesignaturePositioningoffsetx)) &&
+        (this.iEzsigntemplatesignaturePositioningoffsety == null ? ezsigntemplatesignatureResponseCompound.iEzsigntemplatesignaturePositioningoffsety == null : this.iEzsigntemplatesignaturePositioningoffsety.equals(ezsigntemplatesignatureResponseCompound.iEzsigntemplatesignaturePositioningoffsety)) &&
+        (this.eEzsigntemplatesignaturePositioningoccurence == null ? ezsigntemplatesignatureResponseCompound.eEzsigntemplatesignaturePositioningoccurence == null : this.eEzsigntemplatesignaturePositioningoccurence.equals(ezsigntemplatesignatureResponseCompound.eEzsigntemplatesignaturePositioningoccurence)) &&
         (this.bEzsigntemplatesignatureCustomdate == null ? ezsigntemplatesignatureResponseCompound.bEzsigntemplatesignatureCustomdate == null : this.bEzsigntemplatesignatureCustomdate.equals(ezsigntemplatesignatureResponseCompound.bEzsigntemplatesignatureCustomdate)) &&
         (this.aObjEzsigntemplatesignaturecustomdate == null ? ezsigntemplatesignatureResponseCompound.aObjEzsigntemplatesignaturecustomdate == null : this.aObjEzsigntemplatesignaturecustomdate.equals(ezsigntemplatesignatureResponseCompound.aObjEzsigntemplatesignaturecustomdate)) &&
         (this.aObjEzsigntemplateelementdependency == null ? ezsigntemplatesignatureResponseCompound.aObjEzsigntemplateelementdependency == null : this.aObjEzsigntemplateelementdependency.equals(ezsigntemplatesignatureResponseCompound.aObjEzsigntemplateelementdependency));
@@ -405,6 +475,7 @@ public class EzsigntemplatesignatureResponseCompound {
     result = 31 * result + (this.fkiEzsigntemplatedocumentID == null ? 0: this.fkiEzsigntemplatedocumentID.hashCode());
     result = 31 * result + (this.fkiEzsigntemplatesignerID == null ? 0: this.fkiEzsigntemplatesignerID.hashCode());
     result = 31 * result + (this.fkiEzsigntemplatesignerIDValidation == null ? 0: this.fkiEzsigntemplatesignerIDValidation.hashCode());
+    result = 31 * result + (this.eEzsigntemplatesignaturePositioning == null ? 0: this.eEzsigntemplatesignaturePositioning.hashCode());
     result = 31 * result + (this.iEzsigntemplatedocumentpagePagenumber == null ? 0: this.iEzsigntemplatedocumentpagePagenumber.hashCode());
     result = 31 * result + (this.iEzsigntemplatesignatureX == null ? 0: this.iEzsigntemplatesignatureX.hashCode());
     result = 31 * result + (this.iEzsigntemplatesignatureY == null ? 0: this.iEzsigntemplatesignatureY.hashCode());
@@ -423,6 +494,10 @@ public class EzsigntemplatesignatureResponseCompound {
     result = 31 * result + (this.sEzsigntemplatesignatureRegexp == null ? 0: this.sEzsigntemplatesignatureRegexp.hashCode());
     result = 31 * result + (this.eEzsigntemplatesignatureTextvalidation == null ? 0: this.eEzsigntemplatesignatureTextvalidation.hashCode());
     result = 31 * result + (this.eEzsigntemplatesignatureDependencyrequirement == null ? 0: this.eEzsigntemplatesignatureDependencyrequirement.hashCode());
+    result = 31 * result + (this.sEzsigntemplatesignaturePositioningpattern == null ? 0: this.sEzsigntemplatesignaturePositioningpattern.hashCode());
+    result = 31 * result + (this.iEzsigntemplatesignaturePositioningoffsetx == null ? 0: this.iEzsigntemplatesignaturePositioningoffsetx.hashCode());
+    result = 31 * result + (this.iEzsigntemplatesignaturePositioningoffsety == null ? 0: this.iEzsigntemplatesignaturePositioningoffsety.hashCode());
+    result = 31 * result + (this.eEzsigntemplatesignaturePositioningoccurence == null ? 0: this.eEzsigntemplatesignaturePositioningoccurence.hashCode());
     result = 31 * result + (this.bEzsigntemplatesignatureCustomdate == null ? 0: this.bEzsigntemplatesignatureCustomdate.hashCode());
     result = 31 * result + (this.aObjEzsigntemplatesignaturecustomdate == null ? 0: this.aObjEzsigntemplatesignaturecustomdate.hashCode());
     result = 31 * result + (this.aObjEzsigntemplateelementdependency == null ? 0: this.aObjEzsigntemplateelementdependency.hashCode());
@@ -438,6 +513,7 @@ public class EzsigntemplatesignatureResponseCompound {
     sb.append("  fkiEzsigntemplatedocumentID: ").append(fkiEzsigntemplatedocumentID).append("\n");
     sb.append("  fkiEzsigntemplatesignerID: ").append(fkiEzsigntemplatesignerID).append("\n");
     sb.append("  fkiEzsigntemplatesignerIDValidation: ").append(fkiEzsigntemplatesignerIDValidation).append("\n");
+    sb.append("  eEzsigntemplatesignaturePositioning: ").append(eEzsigntemplatesignaturePositioning).append("\n");
     sb.append("  iEzsigntemplatedocumentpagePagenumber: ").append(iEzsigntemplatedocumentpagePagenumber).append("\n");
     sb.append("  iEzsigntemplatesignatureX: ").append(iEzsigntemplatesignatureX).append("\n");
     sb.append("  iEzsigntemplatesignatureY: ").append(iEzsigntemplatesignatureY).append("\n");
@@ -456,6 +532,10 @@ public class EzsigntemplatesignatureResponseCompound {
     sb.append("  sEzsigntemplatesignatureRegexp: ").append(sEzsigntemplatesignatureRegexp).append("\n");
     sb.append("  eEzsigntemplatesignatureTextvalidation: ").append(eEzsigntemplatesignatureTextvalidation).append("\n");
     sb.append("  eEzsigntemplatesignatureDependencyrequirement: ").append(eEzsigntemplatesignatureDependencyrequirement).append("\n");
+    sb.append("  sEzsigntemplatesignaturePositioningpattern: ").append(sEzsigntemplatesignaturePositioningpattern).append("\n");
+    sb.append("  iEzsigntemplatesignaturePositioningoffsetx: ").append(iEzsigntemplatesignaturePositioningoffsetx).append("\n");
+    sb.append("  iEzsigntemplatesignaturePositioningoffsety: ").append(iEzsigntemplatesignaturePositioningoffsety).append("\n");
+    sb.append("  eEzsigntemplatesignaturePositioningoccurence: ").append(eEzsigntemplatesignaturePositioningoccurence).append("\n");
     sb.append("  bEzsigntemplatesignatureCustomdate: ").append(bEzsigntemplatesignatureCustomdate).append("\n");
     sb.append("  aObjEzsigntemplatesignaturecustomdate: ").append(aObjEzsigntemplatesignaturecustomdate).append("\n");
     sb.append("  aObjEzsigntemplateelementdependency: ").append(aObjEzsigntemplateelementdependency).append("\n");

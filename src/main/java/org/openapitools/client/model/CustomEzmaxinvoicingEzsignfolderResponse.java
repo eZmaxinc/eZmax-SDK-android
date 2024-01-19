@@ -23,6 +23,8 @@ public class CustomEzmaxinvoicingEzsignfolderResponse {
   
   @SerializedName("fkiEzsignfolderID")
   private Integer fkiEzsignfolderID = null;
+  @SerializedName("fkiBillingentityinternalID")
+  private Integer fkiBillingentityinternalID = null;
   @SerializedName("sEzsignfolderDescription")
   private String sEzsignfolderDescription = null;
   @SerializedName("bEzsigntsarequirementBillable")
@@ -44,6 +46,18 @@ public class CustomEzmaxinvoicingEzsignfolderResponse {
   }
   public void setFkiEzsignfolderID(Integer fkiEzsignfolderID) {
     this.fkiEzsignfolderID = fkiEzsignfolderID;
+  }
+
+  /**
+   * The unique ID of the Billingentityinternal.
+   * minimum: 0
+   **/
+  @ApiModelProperty(value = "The unique ID of the Billingentityinternal.")
+  public Integer getFkiBillingentityinternalID() {
+    return fkiBillingentityinternalID;
+  }
+  public void setFkiBillingentityinternalID(Integer fkiBillingentityinternalID) {
+    this.fkiBillingentityinternalID = fkiBillingentityinternalID;
   }
 
   /**
@@ -112,6 +126,7 @@ public class CustomEzmaxinvoicingEzsignfolderResponse {
     }
     CustomEzmaxinvoicingEzsignfolderResponse customEzmaxinvoicingEzsignfolderResponse = (CustomEzmaxinvoicingEzsignfolderResponse) o;
     return (this.fkiEzsignfolderID == null ? customEzmaxinvoicingEzsignfolderResponse.fkiEzsignfolderID == null : this.fkiEzsignfolderID.equals(customEzmaxinvoicingEzsignfolderResponse.fkiEzsignfolderID)) &&
+        (this.fkiBillingentityinternalID == null ? customEzmaxinvoicingEzsignfolderResponse.fkiBillingentityinternalID == null : this.fkiBillingentityinternalID.equals(customEzmaxinvoicingEzsignfolderResponse.fkiBillingentityinternalID)) &&
         (this.sEzsignfolderDescription == null ? customEzmaxinvoicingEzsignfolderResponse.sEzsignfolderDescription == null : this.sEzsignfolderDescription.equals(customEzmaxinvoicingEzsignfolderResponse.sEzsignfolderDescription)) &&
         (this.bEzsigntsarequirementBillable == null ? customEzmaxinvoicingEzsignfolderResponse.bEzsigntsarequirementBillable == null : this.bEzsigntsarequirementBillable.equals(customEzmaxinvoicingEzsignfolderResponse.bEzsigntsarequirementBillable)) &&
         (this.bEzsignfolderMfaused == null ? customEzmaxinvoicingEzsignfolderResponse.bEzsignfolderMfaused == null : this.bEzsignfolderMfaused.equals(customEzmaxinvoicingEzsignfolderResponse.bEzsignfolderMfaused)) &&
@@ -123,6 +138,7 @@ public class CustomEzmaxinvoicingEzsignfolderResponse {
   public int hashCode() {
     int result = 17;
     result = 31 * result + (this.fkiEzsignfolderID == null ? 0: this.fkiEzsignfolderID.hashCode());
+    result = 31 * result + (this.fkiBillingentityinternalID == null ? 0: this.fkiBillingentityinternalID.hashCode());
     result = 31 * result + (this.sEzsignfolderDescription == null ? 0: this.sEzsignfolderDescription.hashCode());
     result = 31 * result + (this.bEzsigntsarequirementBillable == null ? 0: this.bEzsigntsarequirementBillable.hashCode());
     result = 31 * result + (this.bEzsignfolderMfaused == null ? 0: this.bEzsignfolderMfaused.hashCode());
@@ -137,6 +153,7 @@ public class CustomEzmaxinvoicingEzsignfolderResponse {
     sb.append("class CustomEzmaxinvoicingEzsignfolderResponse {\n");
     
     sb.append("  fkiEzsignfolderID: ").append(fkiEzsignfolderID).append("\n");
+    sb.append("  fkiBillingentityinternalID: ").append(fkiBillingentityinternalID).append("\n");
     sb.append("  sEzsignfolderDescription: ").append(sEzsignfolderDescription).append("\n");
     sb.append("  bEzsigntsarequirementBillable: ").append(bEzsigntsarequirementBillable).append("\n");
     sb.append("  bEzsignfolderMfaused: ").append(bEzsignfolderMfaused).append("\n");

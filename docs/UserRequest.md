@@ -27,6 +27,7 @@ Name | Type | Description | Notes
 **sUserFirstname** | **String** | The first name of the user | 
 **sUserLastname** | **String** | The last name of the user | 
 **sUserLoginname** | **String** | The login name of the User. | 
+**sUserJobtitle** | **String** | The job title of the user |  [optional]
 **eUserEzsignaccess** | [**FieldEUserEzsignaccess**](FieldEUserEzsignaccess.md) |  | 
 **bUserIsactive** | **Boolean** | Whether the User is active or not | 
 **bUserValidatebyadministration** | **Boolean** | Whether if the transactions in which the User is implicated must be validated by administrative personnel or not |  [optional]

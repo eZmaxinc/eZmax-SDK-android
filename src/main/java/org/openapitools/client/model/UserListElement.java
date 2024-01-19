@@ -44,6 +44,8 @@ public class UserListElement {
   private String dtUserEzsignprepaidexpiration = null;
   @SerializedName("sEmailAddress")
   private String sEmailAddress = null;
+  @SerializedName("sUserJobtitle")
+  private String sUserJobtitle = null;
 
   /**
    * The unique ID of the User
@@ -153,6 +155,17 @@ public class UserListElement {
     this.sEmailAddress = sEmailAddress;
   }
 
+  /**
+   * The job title of the user
+   **/
+  @ApiModelProperty(value = "The job title of the user")
+  public String getSUserJobtitle() {
+    return sUserJobtitle;
+  }
+  public void setSUserJobtitle(String sUserJobtitle) {
+    this.sUserJobtitle = sUserJobtitle;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -172,7 +185,8 @@ public class UserListElement {
         (this.eUserOrigin == null ? userListElement.eUserOrigin == null : this.eUserOrigin.equals(userListElement.eUserOrigin)) &&
         (this.eUserEzsignaccess == null ? userListElement.eUserEzsignaccess == null : this.eUserEzsignaccess.equals(userListElement.eUserEzsignaccess)) &&
         (this.dtUserEzsignprepaidexpiration == null ? userListElement.dtUserEzsignprepaidexpiration == null : this.dtUserEzsignprepaidexpiration.equals(userListElement.dtUserEzsignprepaidexpiration)) &&
-        (this.sEmailAddress == null ? userListElement.sEmailAddress == null : this.sEmailAddress.equals(userListElement.sEmailAddress));
+        (this.sEmailAddress == null ? userListElement.sEmailAddress == null : this.sEmailAddress.equals(userListElement.sEmailAddress)) &&
+        (this.sUserJobtitle == null ? userListElement.sUserJobtitle == null : this.sUserJobtitle.equals(userListElement.sUserJobtitle));
   }
 
   @Override
@@ -188,6 +202,7 @@ public class UserListElement {
     result = 31 * result + (this.eUserEzsignaccess == null ? 0: this.eUserEzsignaccess.hashCode());
     result = 31 * result + (this.dtUserEzsignprepaidexpiration == null ? 0: this.dtUserEzsignprepaidexpiration.hashCode());
     result = 31 * result + (this.sEmailAddress == null ? 0: this.sEmailAddress.hashCode());
+    result = 31 * result + (this.sUserJobtitle == null ? 0: this.sUserJobtitle.hashCode());
     return result;
   }
 
@@ -206,6 +221,7 @@ public class UserListElement {
     sb.append("  eUserEzsignaccess: ").append(eUserEzsignaccess).append("\n");
     sb.append("  dtUserEzsignprepaidexpiration: ").append(dtUserEzsignprepaidexpiration).append("\n");
     sb.append("  sEmailAddress: ").append(sEmailAddress).append("\n");
+    sb.append("  sUserJobtitle: ").append(sUserJobtitle).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

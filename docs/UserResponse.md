@@ -33,6 +33,7 @@ Name | Type | Description | Notes
 **sUserFirstname** | **String** | The first name of the user | 
 **sUserLastname** | **String** | The last name of the user | 
 **sUserLoginname** | **String** | The login name of the User. | 
+**sUserJobtitle** | **String** | The job title of the user |  [optional]
 **eUserEzsignaccess** | [**FieldEUserEzsignaccess**](FieldEUserEzsignaccess.md) |  | 
 **dtUserLastlogondate** | **String** | The last logon date of the User |  [optional]
 **dtUserPasswordchanged** | **String** | The date at which the User&#39;s password was last changed |  [optional]

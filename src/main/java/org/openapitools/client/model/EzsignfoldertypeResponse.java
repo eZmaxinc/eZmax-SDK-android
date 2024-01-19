@@ -12,6 +12,7 @@
 
 package org.openapitools.client.model;
 
+import org.openapitools.client.model.FieldEEzsignfoldertypeCompletion;
 import org.openapitools.client.model.FieldEEzsignfoldertypeDisposal;
 import org.openapitools.client.model.FieldEEzsignfoldertypePrivacylevel;
 import org.openapitools.client.model.FieldEEzsignfoldertypeSendreminderfrequency;
@@ -61,6 +62,8 @@ public class EzsignfoldertypeResponse {
   private Integer iEzsignfoldertypeArchivaldays = null;
   @SerializedName("eEzsignfoldertypeDisposal")
   private FieldEEzsignfoldertypeDisposal eEzsignfoldertypeDisposal = null;
+  @SerializedName("eEzsignfoldertypeCompletion")
+  private FieldEEzsignfoldertypeCompletion eEzsignfoldertypeCompletion = null;
   @SerializedName("iEzsignfoldertypeDisposaldays")
   private Integer iEzsignfoldertypeDisposaldays = null;
   @SerializedName("iEzsignfoldertypeDeadlinedays")
@@ -69,6 +72,10 @@ public class EzsignfoldertypeResponse {
   private Boolean bEzsignfoldertypeDelegate = null;
   @SerializedName("bEzsignfoldertypeReassign")
   private Boolean bEzsignfoldertypeReassign = null;
+  @SerializedName("bEzsignfoldertypeReassignezsignsigner")
+  private Boolean bEzsignfoldertypeReassignezsignsigner = null;
+  @SerializedName("bEzsignfoldertypeReassignuser")
+  private Boolean bEzsignfoldertypeReassignuser = null;
   @SerializedName("bEzsignfoldertypeSendattatchmentsigner")
   private Boolean bEzsignfoldertypeSendattatchmentsigner = null;
   @SerializedName("bEzsignfoldertypeSendsignedtoezsignsigner")
@@ -324,6 +331,16 @@ public class EzsignfoldertypeResponse {
   }
 
   /**
+   **/
+  @ApiModelProperty(value = "")
+  public FieldEEzsignfoldertypeCompletion getEEzsignfoldertypeCompletion() {
+    return eEzsignfoldertypeCompletion;
+  }
+  public void setEEzsignfoldertypeCompletion(FieldEEzsignfoldertypeCompletion eEzsignfoldertypeCompletion) {
+    this.eEzsignfoldertypeCompletion = eEzsignfoldertypeCompletion;
+  }
+
+  /**
    * The number of days after the archival before the disposal of the Ezsignfolder
    * minimum: 0
    * maximum: 9999
@@ -369,6 +386,28 @@ public class EzsignfoldertypeResponse {
   }
   public void setBEzsignfoldertypeReassign(Boolean bEzsignfoldertypeReassign) {
     this.bEzsignfoldertypeReassign = bEzsignfoldertypeReassign;
+  }
+
+  /**
+   * Wheter if Reassignment of signature is allowed by a signatory to another signatory or not
+   **/
+  @ApiModelProperty(value = "Wheter if Reassignment of signature is allowed by a signatory to another signatory or not")
+  public Boolean getBEzsignfoldertypeReassignezsignsigner() {
+    return bEzsignfoldertypeReassignezsignsigner;
+  }
+  public void setBEzsignfoldertypeReassignezsignsigner(Boolean bEzsignfoldertypeReassignezsignsigner) {
+    this.bEzsignfoldertypeReassignezsignsigner = bEzsignfoldertypeReassignezsignsigner;
+  }
+
+  /**
+   * Wheter if Reassignment of signature is allowed by a user to a signatory or another user or not
+   **/
+  @ApiModelProperty(value = "Wheter if Reassignment of signature is allowed by a user to a signatory or another user or not")
+  public Boolean getBEzsignfoldertypeReassignuser() {
+    return bEzsignfoldertypeReassignuser;
+  }
+  public void setBEzsignfoldertypeReassignuser(Boolean bEzsignfoldertypeReassignuser) {
+    this.bEzsignfoldertypeReassignuser = bEzsignfoldertypeReassignuser;
   }
 
   /**
@@ -663,10 +702,13 @@ public class EzsignfoldertypeResponse {
         (this.eEzsignfoldertypeSendreminderfrequency == null ? ezsignfoldertypeResponse.eEzsignfoldertypeSendreminderfrequency == null : this.eEzsignfoldertypeSendreminderfrequency.equals(ezsignfoldertypeResponse.eEzsignfoldertypeSendreminderfrequency)) &&
         (this.iEzsignfoldertypeArchivaldays == null ? ezsignfoldertypeResponse.iEzsignfoldertypeArchivaldays == null : this.iEzsignfoldertypeArchivaldays.equals(ezsignfoldertypeResponse.iEzsignfoldertypeArchivaldays)) &&
         (this.eEzsignfoldertypeDisposal == null ? ezsignfoldertypeResponse.eEzsignfoldertypeDisposal == null : this.eEzsignfoldertypeDisposal.equals(ezsignfoldertypeResponse.eEzsignfoldertypeDisposal)) &&
+        (this.eEzsignfoldertypeCompletion == null ? ezsignfoldertypeResponse.eEzsignfoldertypeCompletion == null : this.eEzsignfoldertypeCompletion.equals(ezsignfoldertypeResponse.eEzsignfoldertypeCompletion)) &&
         (this.iEzsignfoldertypeDisposaldays == null ? ezsignfoldertypeResponse.iEzsignfoldertypeDisposaldays == null : this.iEzsignfoldertypeDisposaldays.equals(ezsignfoldertypeResponse.iEzsignfoldertypeDisposaldays)) &&
         (this.iEzsignfoldertypeDeadlinedays == null ? ezsignfoldertypeResponse.iEzsignfoldertypeDeadlinedays == null : this.iEzsignfoldertypeDeadlinedays.equals(ezsignfoldertypeResponse.iEzsignfoldertypeDeadlinedays)) &&
         (this.bEzsignfoldertypeDelegate == null ? ezsignfoldertypeResponse.bEzsignfoldertypeDelegate == null : this.bEzsignfoldertypeDelegate.equals(ezsignfoldertypeResponse.bEzsignfoldertypeDelegate)) &&
         (this.bEzsignfoldertypeReassign == null ? ezsignfoldertypeResponse.bEzsignfoldertypeReassign == null : this.bEzsignfoldertypeReassign.equals(ezsignfoldertypeResponse.bEzsignfoldertypeReassign)) &&
+        (this.bEzsignfoldertypeReassignezsignsigner == null ? ezsignfoldertypeResponse.bEzsignfoldertypeReassignezsignsigner == null : this.bEzsignfoldertypeReassignezsignsigner.equals(ezsignfoldertypeResponse.bEzsignfoldertypeReassignezsignsigner)) &&
+        (this.bEzsignfoldertypeReassignuser == null ? ezsignfoldertypeResponse.bEzsignfoldertypeReassignuser == null : this.bEzsignfoldertypeReassignuser.equals(ezsignfoldertypeResponse.bEzsignfoldertypeReassignuser)) &&
         (this.bEzsignfoldertypeSendattatchmentsigner == null ? ezsignfoldertypeResponse.bEzsignfoldertypeSendattatchmentsigner == null : this.bEzsignfoldertypeSendattatchmentsigner.equals(ezsignfoldertypeResponse.bEzsignfoldertypeSendattatchmentsigner)) &&
         (this.bEzsignfoldertypeSendsignedtoezsignsigner == null ? ezsignfoldertypeResponse.bEzsignfoldertypeSendsignedtoezsignsigner == null : this.bEzsignfoldertypeSendsignedtoezsignsigner.equals(ezsignfoldertypeResponse.bEzsignfoldertypeSendsignedtoezsignsigner)) &&
         (this.bEzsignfoldertypeSendsignedtouser == null ? ezsignfoldertypeResponse.bEzsignfoldertypeSendsignedtouser == null : this.bEzsignfoldertypeSendsignedtouser.equals(ezsignfoldertypeResponse.bEzsignfoldertypeSendsignedtouser)) &&
@@ -714,10 +756,13 @@ public class EzsignfoldertypeResponse {
     result = 31 * result + (this.eEzsignfoldertypeSendreminderfrequency == null ? 0: this.eEzsignfoldertypeSendreminderfrequency.hashCode());
     result = 31 * result + (this.iEzsignfoldertypeArchivaldays == null ? 0: this.iEzsignfoldertypeArchivaldays.hashCode());
     result = 31 * result + (this.eEzsignfoldertypeDisposal == null ? 0: this.eEzsignfoldertypeDisposal.hashCode());
+    result = 31 * result + (this.eEzsignfoldertypeCompletion == null ? 0: this.eEzsignfoldertypeCompletion.hashCode());
     result = 31 * result + (this.iEzsignfoldertypeDisposaldays == null ? 0: this.iEzsignfoldertypeDisposaldays.hashCode());
     result = 31 * result + (this.iEzsignfoldertypeDeadlinedays == null ? 0: this.iEzsignfoldertypeDeadlinedays.hashCode());
     result = 31 * result + (this.bEzsignfoldertypeDelegate == null ? 0: this.bEzsignfoldertypeDelegate.hashCode());
     result = 31 * result + (this.bEzsignfoldertypeReassign == null ? 0: this.bEzsignfoldertypeReassign.hashCode());
+    result = 31 * result + (this.bEzsignfoldertypeReassignezsignsigner == null ? 0: this.bEzsignfoldertypeReassignezsignsigner.hashCode());
+    result = 31 * result + (this.bEzsignfoldertypeReassignuser == null ? 0: this.bEzsignfoldertypeReassignuser.hashCode());
     result = 31 * result + (this.bEzsignfoldertypeSendattatchmentsigner == null ? 0: this.bEzsignfoldertypeSendattatchmentsigner.hashCode());
     result = 31 * result + (this.bEzsignfoldertypeSendsignedtoezsignsigner == null ? 0: this.bEzsignfoldertypeSendsignedtoezsignsigner.hashCode());
     result = 31 * result + (this.bEzsignfoldertypeSendsignedtouser == null ? 0: this.bEzsignfoldertypeSendsignedtouser.hashCode());
@@ -768,10 +813,13 @@ public class EzsignfoldertypeResponse {
     sb.append("  eEzsignfoldertypeSendreminderfrequency: ").append(eEzsignfoldertypeSendreminderfrequency).append("\n");
     sb.append("  iEzsignfoldertypeArchivaldays: ").append(iEzsignfoldertypeArchivaldays).append("\n");
     sb.append("  eEzsignfoldertypeDisposal: ").append(eEzsignfoldertypeDisposal).append("\n");
+    sb.append("  eEzsignfoldertypeCompletion: ").append(eEzsignfoldertypeCompletion).append("\n");
     sb.append("  iEzsignfoldertypeDisposaldays: ").append(iEzsignfoldertypeDisposaldays).append("\n");
     sb.append("  iEzsignfoldertypeDeadlinedays: ").append(iEzsignfoldertypeDeadlinedays).append("\n");
     sb.append("  bEzsignfoldertypeDelegate: ").append(bEzsignfoldertypeDelegate).append("\n");
     sb.append("  bEzsignfoldertypeReassign: ").append(bEzsignfoldertypeReassign).append("\n");
+    sb.append("  bEzsignfoldertypeReassignezsignsigner: ").append(bEzsignfoldertypeReassignezsignsigner).append("\n");
+    sb.append("  bEzsignfoldertypeReassignuser: ").append(bEzsignfoldertypeReassignuser).append("\n");
     sb.append("  bEzsignfoldertypeSendattatchmentsigner: ").append(bEzsignfoldertypeSendattatchmentsigner).append("\n");
     sb.append("  bEzsignfoldertypeSendsignedtoezsignsigner: ").append(bEzsignfoldertypeSendsignedtoezsignsigner).append("\n");
     sb.append("  bEzsignfoldertypeSendsignedtouser: ").append(bEzsignfoldertypeSendsignedtouser).append("\n");

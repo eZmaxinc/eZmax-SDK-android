@@ -37,6 +37,8 @@ public class EzsignfolderListElement {
   private FieldEEzsignfolderStep eEzsignfolderStep = null;
   @SerializedName("dtCreatedDate")
   private String dtCreatedDate = null;
+  @SerializedName("dtEzsignfolderDelayedsenddate")
+  private String dtEzsignfolderDelayedsenddate = null;
   @SerializedName("dtEzsignfolderSentdate")
   private String dtEzsignfolderSentdate = null;
   @SerializedName("dtEzsignfolderDuedate")
@@ -128,6 +130,17 @@ public class EzsignfolderListElement {
   }
 
   /**
+   * The date and time at which the Ezsignfolder will be sent in the future.
+   **/
+  @ApiModelProperty(value = "The date and time at which the Ezsignfolder will be sent in the future.")
+  public String getDtEzsignfolderDelayedsenddate() {
+    return dtEzsignfolderDelayedsenddate;
+  }
+  public void setDtEzsignfolderDelayedsenddate(String dtEzsignfolderDelayedsenddate) {
+    this.dtEzsignfolderDelayedsenddate = dtEzsignfolderDelayedsenddate;
+  }
+
+  /**
    * The date and time at which the Ezsignfolder was sent the last time.
    **/
   @ApiModelProperty(value = "The date and time at which the Ezsignfolder was sent the last time.")
@@ -210,6 +223,7 @@ public class EzsignfolderListElement {
         (this.sEzsignfolderDescription == null ? ezsignfolderListElement.sEzsignfolderDescription == null : this.sEzsignfolderDescription.equals(ezsignfolderListElement.sEzsignfolderDescription)) &&
         (this.eEzsignfolderStep == null ? ezsignfolderListElement.eEzsignfolderStep == null : this.eEzsignfolderStep.equals(ezsignfolderListElement.eEzsignfolderStep)) &&
         (this.dtCreatedDate == null ? ezsignfolderListElement.dtCreatedDate == null : this.dtCreatedDate.equals(ezsignfolderListElement.dtCreatedDate)) &&
+        (this.dtEzsignfolderDelayedsenddate == null ? ezsignfolderListElement.dtEzsignfolderDelayedsenddate == null : this.dtEzsignfolderDelayedsenddate.equals(ezsignfolderListElement.dtEzsignfolderDelayedsenddate)) &&
         (this.dtEzsignfolderSentdate == null ? ezsignfolderListElement.dtEzsignfolderSentdate == null : this.dtEzsignfolderSentdate.equals(ezsignfolderListElement.dtEzsignfolderSentdate)) &&
         (this.dtEzsignfolderDuedate == null ? ezsignfolderListElement.dtEzsignfolderDuedate == null : this.dtEzsignfolderDuedate.equals(ezsignfolderListElement.dtEzsignfolderDuedate)) &&
         (this.iEzsigndocument == null ? ezsignfolderListElement.iEzsigndocument == null : this.iEzsigndocument.equals(ezsignfolderListElement.iEzsigndocument)) &&
@@ -228,6 +242,7 @@ public class EzsignfolderListElement {
     result = 31 * result + (this.sEzsignfolderDescription == null ? 0: this.sEzsignfolderDescription.hashCode());
     result = 31 * result + (this.eEzsignfolderStep == null ? 0: this.eEzsignfolderStep.hashCode());
     result = 31 * result + (this.dtCreatedDate == null ? 0: this.dtCreatedDate.hashCode());
+    result = 31 * result + (this.dtEzsignfolderDelayedsenddate == null ? 0: this.dtEzsignfolderDelayedsenddate.hashCode());
     result = 31 * result + (this.dtEzsignfolderSentdate == null ? 0: this.dtEzsignfolderSentdate.hashCode());
     result = 31 * result + (this.dtEzsignfolderDuedate == null ? 0: this.dtEzsignfolderDuedate.hashCode());
     result = 31 * result + (this.iEzsigndocument == null ? 0: this.iEzsigndocument.hashCode());
@@ -249,6 +264,7 @@ public class EzsignfolderListElement {
     sb.append("  sEzsignfolderDescription: ").append(sEzsignfolderDescription).append("\n");
     sb.append("  eEzsignfolderStep: ").append(eEzsignfolderStep).append("\n");
     sb.append("  dtCreatedDate: ").append(dtCreatedDate).append("\n");
+    sb.append("  dtEzsignfolderDelayedsenddate: ").append(dtEzsignfolderDelayedsenddate).append("\n");
     sb.append("  dtEzsignfolderSentdate: ").append(dtEzsignfolderSentdate).append("\n");
     sb.append("  dtEzsignfolderDuedate: ").append(dtEzsignfolderDuedate).append("\n");
     sb.append("  iEzsigndocument: ").append(iEzsigndocument).append("\n");

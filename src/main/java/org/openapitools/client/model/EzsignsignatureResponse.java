@@ -51,6 +51,8 @@ public class EzsignsignatureResponse {
   private Integer iEzsignsignatureWidth = null;
   @SerializedName("iEzsignsignatureStep")
   private Integer iEzsignsignatureStep = null;
+  @SerializedName("iEzsignsignatureStepadjusted")
+  private Integer iEzsignsignatureStepadjusted = null;
   @SerializedName("eEzsignsignatureType")
   private FieldEEzsignsignatureType eEzsignsignatureType = null;
   @SerializedName("tEzsignsignatureTooltip")
@@ -219,6 +221,17 @@ public class EzsignsignatureResponse {
   }
   public void setIEzsignsignatureStep(Integer iEzsignsignatureStep) {
     this.iEzsignsignatureStep = iEzsignsignatureStep;
+  }
+
+  /**
+   * The step when the Ezsignsigner will be invited to sign
+   **/
+  @ApiModelProperty(value = "The step when the Ezsignsigner will be invited to sign")
+  public Integer getIEzsignsignatureStepadjusted() {
+    return iEzsignsignatureStepadjusted;
+  }
+  public void setIEzsignsignatureStepadjusted(Integer iEzsignsignatureStepadjusted) {
+    this.iEzsignsignatureStepadjusted = iEzsignsignatureStepadjusted;
   }
 
   /**
@@ -445,6 +458,7 @@ public class EzsignsignatureResponse {
         (this.iEzsignsignatureHeight == null ? ezsignsignatureResponse.iEzsignsignatureHeight == null : this.iEzsignsignatureHeight.equals(ezsignsignatureResponse.iEzsignsignatureHeight)) &&
         (this.iEzsignsignatureWidth == null ? ezsignsignatureResponse.iEzsignsignatureWidth == null : this.iEzsignsignatureWidth.equals(ezsignsignatureResponse.iEzsignsignatureWidth)) &&
         (this.iEzsignsignatureStep == null ? ezsignsignatureResponse.iEzsignsignatureStep == null : this.iEzsignsignatureStep.equals(ezsignsignatureResponse.iEzsignsignatureStep)) &&
+        (this.iEzsignsignatureStepadjusted == null ? ezsignsignatureResponse.iEzsignsignatureStepadjusted == null : this.iEzsignsignatureStepadjusted.equals(ezsignsignatureResponse.iEzsignsignatureStepadjusted)) &&
         (this.eEzsignsignatureType == null ? ezsignsignatureResponse.eEzsignsignatureType == null : this.eEzsignsignatureType.equals(ezsignsignatureResponse.eEzsignsignatureType)) &&
         (this.tEzsignsignatureTooltip == null ? ezsignsignatureResponse.tEzsignsignatureTooltip == null : this.tEzsignsignatureTooltip.equals(ezsignsignatureResponse.tEzsignsignatureTooltip)) &&
         (this.eEzsignsignatureTooltipposition == null ? ezsignsignatureResponse.eEzsignsignatureTooltipposition == null : this.eEzsignsignatureTooltipposition.equals(ezsignsignatureResponse.eEzsignsignatureTooltipposition)) &&
@@ -480,6 +494,7 @@ public class EzsignsignatureResponse {
     result = 31 * result + (this.iEzsignsignatureHeight == null ? 0: this.iEzsignsignatureHeight.hashCode());
     result = 31 * result + (this.iEzsignsignatureWidth == null ? 0: this.iEzsignsignatureWidth.hashCode());
     result = 31 * result + (this.iEzsignsignatureStep == null ? 0: this.iEzsignsignatureStep.hashCode());
+    result = 31 * result + (this.iEzsignsignatureStepadjusted == null ? 0: this.iEzsignsignatureStepadjusted.hashCode());
     result = 31 * result + (this.eEzsignsignatureType == null ? 0: this.eEzsignsignatureType.hashCode());
     result = 31 * result + (this.tEzsignsignatureTooltip == null ? 0: this.tEzsignsignatureTooltip.hashCode());
     result = 31 * result + (this.eEzsignsignatureTooltipposition == null ? 0: this.eEzsignsignatureTooltipposition.hashCode());
@@ -518,6 +533,7 @@ public class EzsignsignatureResponse {
     sb.append("  iEzsignsignatureHeight: ").append(iEzsignsignatureHeight).append("\n");
     sb.append("  iEzsignsignatureWidth: ").append(iEzsignsignatureWidth).append("\n");
     sb.append("  iEzsignsignatureStep: ").append(iEzsignsignatureStep).append("\n");
+    sb.append("  iEzsignsignatureStepadjusted: ").append(iEzsignsignatureStepadjusted).append("\n");
     sb.append("  eEzsignsignatureType: ").append(eEzsignsignatureType).append("\n");
     sb.append("  tEzsignsignatureTooltip: ").append(tEzsignsignatureTooltip).append("\n");
     sb.append("  eEzsignsignatureTooltipposition: ").append(eEzsignsignatureTooltipposition).append("\n");

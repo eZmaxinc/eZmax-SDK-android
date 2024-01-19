@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **eUserEzsignaccess** | [**FieldEUserEzsignaccess**](FieldEUserEzsignaccess.md) |  | 
 **dtUserEzsignprepaidexpiration** | **String** | The eZsign prepaid expiration date |  [optional]
 **sEmailAddress** | **String** | The email address. | 
+**sUserJobtitle** | **String** | The job title of the user |  [optional]
 
 
 

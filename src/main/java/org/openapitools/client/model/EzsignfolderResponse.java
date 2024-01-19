@@ -14,6 +14,7 @@ package org.openapitools.client.model;
 
 import org.openapitools.client.model.CommonAudit;
 import org.openapitools.client.model.CustomEzsignfoldertypeResponse;
+import org.openapitools.client.model.FieldEEzsignfolderCompletion;
 import org.openapitools.client.model.FieldEEzsignfolderSendreminderfrequency;
 import org.openapitools.client.model.FieldEEzsignfolderStep;
 import io.swagger.annotations.*;
@@ -31,6 +32,8 @@ public class EzsignfolderResponse {
   private Integer fkiEzsignfoldertypeID = null;
   @SerializedName("objEzsignfoldertype")
   private CustomEzsignfoldertypeResponse objEzsignfoldertype = null;
+  @SerializedName("eEzsignfolderCompletion")
+  private FieldEEzsignfolderCompletion eEzsignfolderCompletion = null;
   @SerializedName("sEzsignfoldertypeNameX")
   private String sEzsignfoldertypeNameX = null;
   @SerializedName("fkiBillingentityinternalID")
@@ -102,6 +105,16 @@ public class EzsignfolderResponse {
   }
   public void setObjEzsignfoldertype(CustomEzsignfoldertypeResponse objEzsignfoldertype) {
     this.objEzsignfoldertype = objEzsignfoldertype;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public FieldEEzsignfolderCompletion getEEzsignfolderCompletion() {
+    return eEzsignfolderCompletion;
+  }
+  public void setEEzsignfolderCompletion(FieldEEzsignfolderCompletion eEzsignfolderCompletion) {
+    this.eEzsignfolderCompletion = eEzsignfolderCompletion;
   }
 
   /**
@@ -325,6 +338,7 @@ public class EzsignfolderResponse {
     return (this.pkiEzsignfolderID == null ? ezsignfolderResponse.pkiEzsignfolderID == null : this.pkiEzsignfolderID.equals(ezsignfolderResponse.pkiEzsignfolderID)) &&
         (this.fkiEzsignfoldertypeID == null ? ezsignfolderResponse.fkiEzsignfoldertypeID == null : this.fkiEzsignfoldertypeID.equals(ezsignfolderResponse.fkiEzsignfoldertypeID)) &&
         (this.objEzsignfoldertype == null ? ezsignfolderResponse.objEzsignfoldertype == null : this.objEzsignfoldertype.equals(ezsignfolderResponse.objEzsignfoldertype)) &&
+        (this.eEzsignfolderCompletion == null ? ezsignfolderResponse.eEzsignfolderCompletion == null : this.eEzsignfolderCompletion.equals(ezsignfolderResponse.eEzsignfolderCompletion)) &&
         (this.sEzsignfoldertypeNameX == null ? ezsignfolderResponse.sEzsignfoldertypeNameX == null : this.sEzsignfoldertypeNameX.equals(ezsignfolderResponse.sEzsignfoldertypeNameX)) &&
         (this.fkiBillingentityinternalID == null ? ezsignfolderResponse.fkiBillingentityinternalID == null : this.fkiBillingentityinternalID.equals(ezsignfolderResponse.fkiBillingentityinternalID)) &&
         (this.sBillingentityinternalDescriptionX == null ? ezsignfolderResponse.sBillingentityinternalDescriptionX == null : this.sBillingentityinternalDescriptionX.equals(ezsignfolderResponse.sBillingentityinternalDescriptionX)) &&
@@ -352,6 +366,7 @@ public class EzsignfolderResponse {
     result = 31 * result + (this.pkiEzsignfolderID == null ? 0: this.pkiEzsignfolderID.hashCode());
     result = 31 * result + (this.fkiEzsignfoldertypeID == null ? 0: this.fkiEzsignfoldertypeID.hashCode());
     result = 31 * result + (this.objEzsignfoldertype == null ? 0: this.objEzsignfoldertype.hashCode());
+    result = 31 * result + (this.eEzsignfolderCompletion == null ? 0: this.eEzsignfolderCompletion.hashCode());
     result = 31 * result + (this.sEzsignfoldertypeNameX == null ? 0: this.sEzsignfoldertypeNameX.hashCode());
     result = 31 * result + (this.fkiBillingentityinternalID == null ? 0: this.fkiBillingentityinternalID.hashCode());
     result = 31 * result + (this.sBillingentityinternalDescriptionX == null ? 0: this.sBillingentityinternalDescriptionX.hashCode());
@@ -382,6 +397,7 @@ public class EzsignfolderResponse {
     sb.append("  pkiEzsignfolderID: ").append(pkiEzsignfolderID).append("\n");
     sb.append("  fkiEzsignfoldertypeID: ").append(fkiEzsignfoldertypeID).append("\n");
     sb.append("  objEzsignfoldertype: ").append(objEzsignfoldertype).append("\n");
+    sb.append("  eEzsignfolderCompletion: ").append(eEzsignfolderCompletion).append("\n");
     sb.append("  sEzsignfoldertypeNameX: ").append(sEzsignfoldertypeNameX).append("\n");
     sb.append("  fkiBillingentityinternalID: ").append(fkiBillingentityinternalID).append("\n");
     sb.append("  sBillingentityinternalDescriptionX: ").append(sBillingentityinternalDescriptionX).append("\n");

@@ -82,6 +82,8 @@ public class UserResponse {
   private String sUserLastname = null;
   @SerializedName("sUserLoginname")
   private String sUserLoginname = null;
+  @SerializedName("sUserJobtitle")
+  private String sUserJobtitle = null;
   @SerializedName("eUserEzsignaccess")
   private FieldEUserEzsignaccess eUserEzsignaccess = null;
   @SerializedName("dtUserLastlogondate")
@@ -409,6 +411,17 @@ public class UserResponse {
   }
 
   /**
+   * The job title of the user
+   **/
+  @ApiModelProperty(value = "The job title of the user")
+  public String getSUserJobtitle() {
+    return sUserJobtitle;
+  }
+  public void setSUserJobtitle(String sUserJobtitle) {
+    this.sUserJobtitle = sUserJobtitle;
+  }
+
+  /**
    **/
   @ApiModelProperty(required = true, value = "")
   public FieldEUserEzsignaccess getEUserEzsignaccess() {
@@ -553,6 +566,7 @@ public class UserResponse {
         (this.sUserFirstname == null ? userResponse.sUserFirstname == null : this.sUserFirstname.equals(userResponse.sUserFirstname)) &&
         (this.sUserLastname == null ? userResponse.sUserLastname == null : this.sUserLastname.equals(userResponse.sUserLastname)) &&
         (this.sUserLoginname == null ? userResponse.sUserLoginname == null : this.sUserLoginname.equals(userResponse.sUserLoginname)) &&
+        (this.sUserJobtitle == null ? userResponse.sUserJobtitle == null : this.sUserJobtitle.equals(userResponse.sUserJobtitle)) &&
         (this.eUserEzsignaccess == null ? userResponse.eUserEzsignaccess == null : this.eUserEzsignaccess.equals(userResponse.eUserEzsignaccess)) &&
         (this.dtUserLastlogondate == null ? userResponse.dtUserLastlogondate == null : this.dtUserLastlogondate.equals(userResponse.dtUserLastlogondate)) &&
         (this.dtUserPasswordchanged == null ? userResponse.dtUserPasswordchanged == null : this.dtUserPasswordchanged.equals(userResponse.dtUserPasswordchanged)) &&
@@ -595,6 +609,7 @@ public class UserResponse {
     result = 31 * result + (this.sUserFirstname == null ? 0: this.sUserFirstname.hashCode());
     result = 31 * result + (this.sUserLastname == null ? 0: this.sUserLastname.hashCode());
     result = 31 * result + (this.sUserLoginname == null ? 0: this.sUserLoginname.hashCode());
+    result = 31 * result + (this.sUserJobtitle == null ? 0: this.sUserJobtitle.hashCode());
     result = 31 * result + (this.eUserEzsignaccess == null ? 0: this.eUserEzsignaccess.hashCode());
     result = 31 * result + (this.dtUserLastlogondate == null ? 0: this.dtUserLastlogondate.hashCode());
     result = 31 * result + (this.dtUserPasswordchanged == null ? 0: this.dtUserPasswordchanged.hashCode());
@@ -640,6 +655,7 @@ public class UserResponse {
     sb.append("  sUserFirstname: ").append(sUserFirstname).append("\n");
     sb.append("  sUserLastname: ").append(sUserLastname).append("\n");
     sb.append("  sUserLoginname: ").append(sUserLoginname).append("\n");
+    sb.append("  sUserJobtitle: ").append(sUserJobtitle).append("\n");
     sb.append("  eUserEzsignaccess: ").append(eUserEzsignaccess).append("\n");
     sb.append("  dtUserLastlogondate: ").append(dtUserLastlogondate).append("\n");
     sb.append("  dtUserPasswordchanged: ").append(dtUserPasswordchanged).append("\n");

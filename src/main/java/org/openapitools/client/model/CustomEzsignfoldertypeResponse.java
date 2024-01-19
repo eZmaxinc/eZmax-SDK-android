@@ -39,6 +39,10 @@ public class CustomEzsignfoldertypeResponse {
   private Boolean bEzsignfoldertypeDelegate = null;
   @SerializedName("bEzsignfoldertypeReassign")
   private Boolean bEzsignfoldertypeReassign = null;
+  @SerializedName("bEzsignfoldertypeReassignezsignsigner")
+  private Boolean bEzsignfoldertypeReassignezsignsigner = null;
+  @SerializedName("bEzsignfoldertypeReassignuser")
+  private Boolean bEzsignfoldertypeReassignuser = null;
 
   /**
    * The unique ID of the Ezsignfoldertype.
@@ -140,6 +144,28 @@ public class CustomEzsignfoldertypeResponse {
     this.bEzsignfoldertypeReassign = bEzsignfoldertypeReassign;
   }
 
+  /**
+   * Wheter if Reassignment of signature is allowed by a signatory to another signatory or not
+   **/
+  @ApiModelProperty(value = "Wheter if Reassignment of signature is allowed by a signatory to another signatory or not")
+  public Boolean getBEzsignfoldertypeReassignezsignsigner() {
+    return bEzsignfoldertypeReassignezsignsigner;
+  }
+  public void setBEzsignfoldertypeReassignezsignsigner(Boolean bEzsignfoldertypeReassignezsignsigner) {
+    this.bEzsignfoldertypeReassignezsignsigner = bEzsignfoldertypeReassignezsignsigner;
+  }
+
+  /**
+   * Wheter if Reassignment of signature is allowed by a user to a signatory or another user or not
+   **/
+  @ApiModelProperty(value = "Wheter if Reassignment of signature is allowed by a user to a signatory or another user or not")
+  public Boolean getBEzsignfoldertypeReassignuser() {
+    return bEzsignfoldertypeReassignuser;
+  }
+  public void setBEzsignfoldertypeReassignuser(Boolean bEzsignfoldertypeReassignuser) {
+    this.bEzsignfoldertypeReassignuser = bEzsignfoldertypeReassignuser;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -158,7 +184,9 @@ public class CustomEzsignfoldertypeResponse {
         (this.bEzsignfoldertypeAllowdownloadattachmentezsignsigner == null ? customEzsignfoldertypeResponse.bEzsignfoldertypeAllowdownloadattachmentezsignsigner == null : this.bEzsignfoldertypeAllowdownloadattachmentezsignsigner.equals(customEzsignfoldertypeResponse.bEzsignfoldertypeAllowdownloadattachmentezsignsigner)) &&
         (this.bEzsignfoldertypeAllowdownloadproofezsignsigner == null ? customEzsignfoldertypeResponse.bEzsignfoldertypeAllowdownloadproofezsignsigner == null : this.bEzsignfoldertypeAllowdownloadproofezsignsigner.equals(customEzsignfoldertypeResponse.bEzsignfoldertypeAllowdownloadproofezsignsigner)) &&
         (this.bEzsignfoldertypeDelegate == null ? customEzsignfoldertypeResponse.bEzsignfoldertypeDelegate == null : this.bEzsignfoldertypeDelegate.equals(customEzsignfoldertypeResponse.bEzsignfoldertypeDelegate)) &&
-        (this.bEzsignfoldertypeReassign == null ? customEzsignfoldertypeResponse.bEzsignfoldertypeReassign == null : this.bEzsignfoldertypeReassign.equals(customEzsignfoldertypeResponse.bEzsignfoldertypeReassign));
+        (this.bEzsignfoldertypeReassign == null ? customEzsignfoldertypeResponse.bEzsignfoldertypeReassign == null : this.bEzsignfoldertypeReassign.equals(customEzsignfoldertypeResponse.bEzsignfoldertypeReassign)) &&
+        (this.bEzsignfoldertypeReassignezsignsigner == null ? customEzsignfoldertypeResponse.bEzsignfoldertypeReassignezsignsigner == null : this.bEzsignfoldertypeReassignezsignsigner.equals(customEzsignfoldertypeResponse.bEzsignfoldertypeReassignezsignsigner)) &&
+        (this.bEzsignfoldertypeReassignuser == null ? customEzsignfoldertypeResponse.bEzsignfoldertypeReassignuser == null : this.bEzsignfoldertypeReassignuser.equals(customEzsignfoldertypeResponse.bEzsignfoldertypeReassignuser));
   }
 
   @Override
@@ -173,6 +201,8 @@ public class CustomEzsignfoldertypeResponse {
     result = 31 * result + (this.bEzsignfoldertypeAllowdownloadproofezsignsigner == null ? 0: this.bEzsignfoldertypeAllowdownloadproofezsignsigner.hashCode());
     result = 31 * result + (this.bEzsignfoldertypeDelegate == null ? 0: this.bEzsignfoldertypeDelegate.hashCode());
     result = 31 * result + (this.bEzsignfoldertypeReassign == null ? 0: this.bEzsignfoldertypeReassign.hashCode());
+    result = 31 * result + (this.bEzsignfoldertypeReassignezsignsigner == null ? 0: this.bEzsignfoldertypeReassignezsignsigner.hashCode());
+    result = 31 * result + (this.bEzsignfoldertypeReassignuser == null ? 0: this.bEzsignfoldertypeReassignuser.hashCode());
     return result;
   }
 
@@ -190,6 +220,8 @@ public class CustomEzsignfoldertypeResponse {
     sb.append("  bEzsignfoldertypeAllowdownloadproofezsignsigner: ").append(bEzsignfoldertypeAllowdownloadproofezsignsigner).append("\n");
     sb.append("  bEzsignfoldertypeDelegate: ").append(bEzsignfoldertypeDelegate).append("\n");
     sb.append("  bEzsignfoldertypeReassign: ").append(bEzsignfoldertypeReassign).append("\n");
+    sb.append("  bEzsignfoldertypeReassignezsignsigner: ").append(bEzsignfoldertypeReassignezsignsigner).append("\n");
+    sb.append("  bEzsignfoldertypeReassignuser: ").append(bEzsignfoldertypeReassignuser).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

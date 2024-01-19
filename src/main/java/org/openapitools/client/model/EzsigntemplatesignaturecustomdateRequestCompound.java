@@ -27,6 +27,10 @@ public class EzsigntemplatesignaturecustomdateRequestCompound {
   private Integer iEzsigntemplatesignaturecustomdateX = null;
   @SerializedName("iEzsigntemplatesignaturecustomdateY")
   private Integer iEzsigntemplatesignaturecustomdateY = null;
+  @SerializedName("iEzsigntemplatesignaturecustomdateOffsetx")
+  private Integer iEzsigntemplatesignaturecustomdateOffsetx = null;
+  @SerializedName("iEzsigntemplatesignaturecustomdateOffsety")
+  private Integer iEzsigntemplatesignaturecustomdateOffsety = null;
   @SerializedName("sEzsigntemplatesignaturecustomdateFormat")
   private String sEzsigntemplatesignaturecustomdateFormat = null;
 
@@ -46,7 +50,7 @@ public class EzsigntemplatesignaturecustomdateRequestCompound {
    * The X coordinate (Horizontal) where to put the Ezsigntemplatesignaturecustomdate on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignaturecustomdate 2 inches from the left border of the page, you would use \"200\" for the X coordinate.
    * minimum: 0
    **/
-  @ApiModelProperty(required = true, value = "The X coordinate (Horizontal) where to put the Ezsigntemplatesignaturecustomdate on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignaturecustomdate 2 inches from the left border of the page, you would use \"200\" for the X coordinate.")
+  @ApiModelProperty(value = "The X coordinate (Horizontal) where to put the Ezsigntemplatesignaturecustomdate on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignaturecustomdate 2 inches from the left border of the page, you would use \"200\" for the X coordinate.")
   public Integer getIEzsigntemplatesignaturecustomdateX() {
     return iEzsigntemplatesignaturecustomdateX;
   }
@@ -58,12 +62,36 @@ public class EzsigntemplatesignaturecustomdateRequestCompound {
    * The Y coordinate (Vertical) where to put the Ezsigntemplatesignaturecustomdate on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignaturecustomdate 3 inches from the top border of the page, you would use \"300\" for the Y coordinate.
    * minimum: 0
    **/
-  @ApiModelProperty(required = true, value = "The Y coordinate (Vertical) where to put the Ezsigntemplatesignaturecustomdate on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignaturecustomdate 3 inches from the top border of the page, you would use \"300\" for the Y coordinate.")
+  @ApiModelProperty(value = "The Y coordinate (Vertical) where to put the Ezsigntemplatesignaturecustomdate on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignaturecustomdate 3 inches from the top border of the page, you would use \"300\" for the Y coordinate.")
   public Integer getIEzsigntemplatesignaturecustomdateY() {
     return iEzsigntemplatesignaturecustomdateY;
   }
   public void setIEzsigntemplatesignaturecustomdateY(Integer iEzsigntemplatesignaturecustomdateY) {
     this.iEzsigntemplatesignaturecustomdateY = iEzsigntemplatesignaturecustomdateY;
+  }
+
+  /**
+   * The X coordinate (Horizontal) where to put the Ezsigntemplatesignaturecustomdate on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignaturecustomdate 2 inches from the left of the signature, you would use \"200\" for the X coordinate.
+   * minimum: 0
+   **/
+  @ApiModelProperty(value = "The X coordinate (Horizontal) where to put the Ezsigntemplatesignaturecustomdate on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignaturecustomdate 2 inches from the left of the signature, you would use \"200\" for the X coordinate.")
+  public Integer getIEzsigntemplatesignaturecustomdateOffsetx() {
+    return iEzsigntemplatesignaturecustomdateOffsetx;
+  }
+  public void setIEzsigntemplatesignaturecustomdateOffsetx(Integer iEzsigntemplatesignaturecustomdateOffsetx) {
+    this.iEzsigntemplatesignaturecustomdateOffsetx = iEzsigntemplatesignaturecustomdateOffsetx;
+  }
+
+  /**
+   * The X coordinate (Horizontal) where to put the Ezsigntemplatesignaturecustomdate on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignaturecustomdate 2 inches from the top of the signature, you would use \"200\" for the Y coordinate.
+   * minimum: 0
+   **/
+  @ApiModelProperty(value = "The X coordinate (Horizontal) where to put the Ezsigntemplatesignaturecustomdate on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignaturecustomdate 2 inches from the top of the signature, you would use \"200\" for the Y coordinate.")
+  public Integer getIEzsigntemplatesignaturecustomdateOffsety() {
+    return iEzsigntemplatesignaturecustomdateOffsety;
+  }
+  public void setIEzsigntemplatesignaturecustomdateOffsety(Integer iEzsigntemplatesignaturecustomdateOffsety) {
+    this.iEzsigntemplatesignaturecustomdateOffsety = iEzsigntemplatesignaturecustomdateOffsety;
   }
 
   /**
@@ -90,6 +118,8 @@ public class EzsigntemplatesignaturecustomdateRequestCompound {
     return (this.pkiEzsigntemplatesignaturecustomdateID == null ? ezsigntemplatesignaturecustomdateRequestCompound.pkiEzsigntemplatesignaturecustomdateID == null : this.pkiEzsigntemplatesignaturecustomdateID.equals(ezsigntemplatesignaturecustomdateRequestCompound.pkiEzsigntemplatesignaturecustomdateID)) &&
         (this.iEzsigntemplatesignaturecustomdateX == null ? ezsigntemplatesignaturecustomdateRequestCompound.iEzsigntemplatesignaturecustomdateX == null : this.iEzsigntemplatesignaturecustomdateX.equals(ezsigntemplatesignaturecustomdateRequestCompound.iEzsigntemplatesignaturecustomdateX)) &&
         (this.iEzsigntemplatesignaturecustomdateY == null ? ezsigntemplatesignaturecustomdateRequestCompound.iEzsigntemplatesignaturecustomdateY == null : this.iEzsigntemplatesignaturecustomdateY.equals(ezsigntemplatesignaturecustomdateRequestCompound.iEzsigntemplatesignaturecustomdateY)) &&
+        (this.iEzsigntemplatesignaturecustomdateOffsetx == null ? ezsigntemplatesignaturecustomdateRequestCompound.iEzsigntemplatesignaturecustomdateOffsetx == null : this.iEzsigntemplatesignaturecustomdateOffsetx.equals(ezsigntemplatesignaturecustomdateRequestCompound.iEzsigntemplatesignaturecustomdateOffsetx)) &&
+        (this.iEzsigntemplatesignaturecustomdateOffsety == null ? ezsigntemplatesignaturecustomdateRequestCompound.iEzsigntemplatesignaturecustomdateOffsety == null : this.iEzsigntemplatesignaturecustomdateOffsety.equals(ezsigntemplatesignaturecustomdateRequestCompound.iEzsigntemplatesignaturecustomdateOffsety)) &&
         (this.sEzsigntemplatesignaturecustomdateFormat == null ? ezsigntemplatesignaturecustomdateRequestCompound.sEzsigntemplatesignaturecustomdateFormat == null : this.sEzsigntemplatesignaturecustomdateFormat.equals(ezsigntemplatesignaturecustomdateRequestCompound.sEzsigntemplatesignaturecustomdateFormat));
   }
 
@@ -99,6 +129,8 @@ public class EzsigntemplatesignaturecustomdateRequestCompound {
     result = 31 * result + (this.pkiEzsigntemplatesignaturecustomdateID == null ? 0: this.pkiEzsigntemplatesignaturecustomdateID.hashCode());
     result = 31 * result + (this.iEzsigntemplatesignaturecustomdateX == null ? 0: this.iEzsigntemplatesignaturecustomdateX.hashCode());
     result = 31 * result + (this.iEzsigntemplatesignaturecustomdateY == null ? 0: this.iEzsigntemplatesignaturecustomdateY.hashCode());
+    result = 31 * result + (this.iEzsigntemplatesignaturecustomdateOffsetx == null ? 0: this.iEzsigntemplatesignaturecustomdateOffsetx.hashCode());
+    result = 31 * result + (this.iEzsigntemplatesignaturecustomdateOffsety == null ? 0: this.iEzsigntemplatesignaturecustomdateOffsety.hashCode());
     result = 31 * result + (this.sEzsigntemplatesignaturecustomdateFormat == null ? 0: this.sEzsigntemplatesignaturecustomdateFormat.hashCode());
     return result;
   }
@@ -111,6 +143,8 @@ public class EzsigntemplatesignaturecustomdateRequestCompound {
     sb.append("  pkiEzsigntemplatesignaturecustomdateID: ").append(pkiEzsigntemplatesignaturecustomdateID).append("\n");
     sb.append("  iEzsigntemplatesignaturecustomdateX: ").append(iEzsigntemplatesignaturecustomdateX).append("\n");
     sb.append("  iEzsigntemplatesignaturecustomdateY: ").append(iEzsigntemplatesignaturecustomdateY).append("\n");
+    sb.append("  iEzsigntemplatesignaturecustomdateOffsetx: ").append(iEzsigntemplatesignaturecustomdateOffsetx).append("\n");
+    sb.append("  iEzsigntemplatesignaturecustomdateOffsety: ").append(iEzsigntemplatesignaturecustomdateOffsety).append("\n");
     sb.append("  sEzsigntemplatesignaturecustomdateFormat: ").append(sEzsigntemplatesignaturecustomdateFormat).append("\n");
     sb.append("}\n");
     return sb.toString();
