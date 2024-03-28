@@ -67,6 +67,8 @@ public class EzsigndocumentResponse {
   private String sEzsigndocumentExternalid = null;
   @SerializedName("iEzsigndocumentEzsignsignatureattachmenttotal")
   private Integer iEzsigndocumentEzsignsignatureattachmenttotal = null;
+  @SerializedName("iEzsigndocumentEzsigndiscussiontotal")
+  private Integer iEzsigndocumentEzsigndiscussiontotal = null;
 
   /**
    * The unique ID of the Ezsigndocument
@@ -318,6 +320,17 @@ public class EzsigndocumentResponse {
     this.iEzsigndocumentEzsignsignatureattachmenttotal = iEzsigndocumentEzsignsignatureattachmenttotal;
   }
 
+  /**
+   * The total number of Ezsigndiscussions
+   **/
+  @ApiModelProperty(required = true, value = "The total number of Ezsigndiscussions")
+  public Integer getIEzsigndocumentEzsigndiscussiontotal() {
+    return iEzsigndocumentEzsigndiscussiontotal;
+  }
+  public void setIEzsigndocumentEzsigndiscussiontotal(Integer iEzsigndocumentEzsigndiscussiontotal) {
+    this.iEzsigndocumentEzsigndiscussiontotal = iEzsigndocumentEzsigndiscussiontotal;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -349,7 +362,8 @@ public class EzsigndocumentResponse {
         (this.bEzsigndocumentHassignedsignatures == null ? ezsigndocumentResponse.bEzsigndocumentHassignedsignatures == null : this.bEzsigndocumentHassignedsignatures.equals(ezsigndocumentResponse.bEzsigndocumentHassignedsignatures)) &&
         (this.objAudit == null ? ezsigndocumentResponse.objAudit == null : this.objAudit.equals(ezsigndocumentResponse.objAudit)) &&
         (this.sEzsigndocumentExternalid == null ? ezsigndocumentResponse.sEzsigndocumentExternalid == null : this.sEzsigndocumentExternalid.equals(ezsigndocumentResponse.sEzsigndocumentExternalid)) &&
-        (this.iEzsigndocumentEzsignsignatureattachmenttotal == null ? ezsigndocumentResponse.iEzsigndocumentEzsignsignatureattachmenttotal == null : this.iEzsigndocumentEzsignsignatureattachmenttotal.equals(ezsigndocumentResponse.iEzsigndocumentEzsignsignatureattachmenttotal));
+        (this.iEzsigndocumentEzsignsignatureattachmenttotal == null ? ezsigndocumentResponse.iEzsigndocumentEzsignsignatureattachmenttotal == null : this.iEzsigndocumentEzsignsignatureattachmenttotal.equals(ezsigndocumentResponse.iEzsigndocumentEzsignsignatureattachmenttotal)) &&
+        (this.iEzsigndocumentEzsigndiscussiontotal == null ? ezsigndocumentResponse.iEzsigndocumentEzsigndiscussiontotal == null : this.iEzsigndocumentEzsigndiscussiontotal.equals(ezsigndocumentResponse.iEzsigndocumentEzsigndiscussiontotal));
   }
 
   @Override
@@ -377,6 +391,7 @@ public class EzsigndocumentResponse {
     result = 31 * result + (this.objAudit == null ? 0: this.objAudit.hashCode());
     result = 31 * result + (this.sEzsigndocumentExternalid == null ? 0: this.sEzsigndocumentExternalid.hashCode());
     result = 31 * result + (this.iEzsigndocumentEzsignsignatureattachmenttotal == null ? 0: this.iEzsigndocumentEzsignsignatureattachmenttotal.hashCode());
+    result = 31 * result + (this.iEzsigndocumentEzsigndiscussiontotal == null ? 0: this.iEzsigndocumentEzsigndiscussiontotal.hashCode());
     return result;
   }
 
@@ -407,6 +422,7 @@ public class EzsigndocumentResponse {
     sb.append("  objAudit: ").append(objAudit).append("\n");
     sb.append("  sEzsigndocumentExternalid: ").append(sEzsigndocumentExternalid).append("\n");
     sb.append("  iEzsigndocumentEzsignsignatureattachmenttotal: ").append(iEzsigndocumentEzsignsignatureattachmenttotal).append("\n");
+    sb.append("  iEzsigndocumentEzsigndiscussiontotal: ").append(iEzsigndocumentEzsigndiscussiontotal).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

@@ -18,6 +18,7 @@ import org.openapitools.client.model.ActivesessionResponseCompoundUser;
 import org.openapitools.client.model.FieldEActivesessionOrigin;
 import org.openapitools.client.model.FieldEActivesessionUsertype;
 import org.openapitools.client.model.FieldEActivesessionWeekdaystart;
+import org.openapitools.client.model.FieldESystemconfigurationEzsignofficeplan;
 import org.openapitools.client.model.FieldEUserEzsignaccess;
 import org.openapitools.client.model.FieldEUserEzsignprepaid;
 import io.swagger.annotations.*;
@@ -51,6 +52,10 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
   private Integer fkiSystemconfigurationtypeID = null;
   @SerializedName("fkiSignatureID")
   private Integer fkiSignatureID = null;
+  @SerializedName("bSystemconfigurationEzsignpaidbyoffice")
+  private Boolean bSystemconfigurationEzsignpaidbyoffice = null;
+  @SerializedName("eSystemconfigurationEzsignofficeplan")
+  private FieldESystemconfigurationEzsignofficeplan eSystemconfigurationEzsignofficeplan = null;
   @SerializedName("eUserEzsignaccess")
   private FieldEUserEzsignaccess eUserEzsignaccess = null;
   @SerializedName("eUserEzsignprepaid")
@@ -192,6 +197,27 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
   }
 
   /**
+   * Whether if Ezsign is paid by the company or not
+   **/
+  @ApiModelProperty(value = "Whether if Ezsign is paid by the company or not")
+  public Boolean getBSystemconfigurationEzsignpaidbyoffice() {
+    return bSystemconfigurationEzsignpaidbyoffice;
+  }
+  public void setBSystemconfigurationEzsignpaidbyoffice(Boolean bSystemconfigurationEzsignpaidbyoffice) {
+    this.bSystemconfigurationEzsignpaidbyoffice = bSystemconfigurationEzsignpaidbyoffice;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public FieldESystemconfigurationEzsignofficeplan getESystemconfigurationEzsignofficeplan() {
+    return eSystemconfigurationEzsignofficeplan;
+  }
+  public void setESystemconfigurationEzsignofficeplan(FieldESystemconfigurationEzsignofficeplan eSystemconfigurationEzsignofficeplan) {
+    this.eSystemconfigurationEzsignofficeplan = eSystemconfigurationEzsignofficeplan;
+  }
+
+  /**
    **/
   @ApiModelProperty(required = true, value = "")
   public FieldEUserEzsignaccess getEUserEzsignaccess() {
@@ -295,6 +321,8 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
         (this.pksCustomerCode == null ? activesessionGetCurrentV1ResponseMPayload.pksCustomerCode == null : this.pksCustomerCode.equals(activesessionGetCurrentV1ResponseMPayload.pksCustomerCode)) &&
         (this.fkiSystemconfigurationtypeID == null ? activesessionGetCurrentV1ResponseMPayload.fkiSystemconfigurationtypeID == null : this.fkiSystemconfigurationtypeID.equals(activesessionGetCurrentV1ResponseMPayload.fkiSystemconfigurationtypeID)) &&
         (this.fkiSignatureID == null ? activesessionGetCurrentV1ResponseMPayload.fkiSignatureID == null : this.fkiSignatureID.equals(activesessionGetCurrentV1ResponseMPayload.fkiSignatureID)) &&
+        (this.bSystemconfigurationEzsignpaidbyoffice == null ? activesessionGetCurrentV1ResponseMPayload.bSystemconfigurationEzsignpaidbyoffice == null : this.bSystemconfigurationEzsignpaidbyoffice.equals(activesessionGetCurrentV1ResponseMPayload.bSystemconfigurationEzsignpaidbyoffice)) &&
+        (this.eSystemconfigurationEzsignofficeplan == null ? activesessionGetCurrentV1ResponseMPayload.eSystemconfigurationEzsignofficeplan == null : this.eSystemconfigurationEzsignofficeplan.equals(activesessionGetCurrentV1ResponseMPayload.eSystemconfigurationEzsignofficeplan)) &&
         (this.eUserEzsignaccess == null ? activesessionGetCurrentV1ResponseMPayload.eUserEzsignaccess == null : this.eUserEzsignaccess.equals(activesessionGetCurrentV1ResponseMPayload.eUserEzsignaccess)) &&
         (this.eUserEzsignprepaid == null ? activesessionGetCurrentV1ResponseMPayload.eUserEzsignprepaid == null : this.eUserEzsignprepaid.equals(activesessionGetCurrentV1ResponseMPayload.eUserEzsignprepaid)) &&
         (this.dtUserEzsignprepaidexpiration == null ? activesessionGetCurrentV1ResponseMPayload.dtUserEzsignprepaidexpiration == null : this.dtUserEzsignprepaidexpiration.equals(activesessionGetCurrentV1ResponseMPayload.dtUserEzsignprepaidexpiration)) &&
@@ -319,6 +347,8 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
     result = 31 * result + (this.pksCustomerCode == null ? 0: this.pksCustomerCode.hashCode());
     result = 31 * result + (this.fkiSystemconfigurationtypeID == null ? 0: this.fkiSystemconfigurationtypeID.hashCode());
     result = 31 * result + (this.fkiSignatureID == null ? 0: this.fkiSignatureID.hashCode());
+    result = 31 * result + (this.bSystemconfigurationEzsignpaidbyoffice == null ? 0: this.bSystemconfigurationEzsignpaidbyoffice.hashCode());
+    result = 31 * result + (this.eSystemconfigurationEzsignofficeplan == null ? 0: this.eSystemconfigurationEzsignofficeplan.hashCode());
     result = 31 * result + (this.eUserEzsignaccess == null ? 0: this.eUserEzsignaccess.hashCode());
     result = 31 * result + (this.eUserEzsignprepaid == null ? 0: this.eUserEzsignprepaid.hashCode());
     result = 31 * result + (this.dtUserEzsignprepaidexpiration == null ? 0: this.dtUserEzsignprepaidexpiration.hashCode());
@@ -346,6 +376,8 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
     sb.append("  pksCustomerCode: ").append(pksCustomerCode).append("\n");
     sb.append("  fkiSystemconfigurationtypeID: ").append(fkiSystemconfigurationtypeID).append("\n");
     sb.append("  fkiSignatureID: ").append(fkiSignatureID).append("\n");
+    sb.append("  bSystemconfigurationEzsignpaidbyoffice: ").append(bSystemconfigurationEzsignpaidbyoffice).append("\n");
+    sb.append("  eSystemconfigurationEzsignofficeplan: ").append(eSystemconfigurationEzsignofficeplan).append("\n");
     sb.append("  eUserEzsignaccess: ").append(eUserEzsignaccess).append("\n");
     sb.append("  eUserEzsignprepaid: ").append(eUserEzsignprepaid).append("\n");
     sb.append("  dtUserEzsignprepaidexpiration: ").append(dtUserEzsignprepaidexpiration).append("\n");

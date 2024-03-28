@@ -12,9 +12,11 @@
 
 package org.openapitools.client.model;
 
+import java.util.*;
 import org.openapitools.client.model.FieldEWebhookEzsignevent;
 import org.openapitools.client.model.FieldEWebhookManagementevent;
 import org.openapitools.client.model.FieldEWebhookModule;
+import org.openapitools.client.model.WebhookheaderRequestCompound;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -46,6 +48,8 @@ public class WebhookRequestCompound {
   private Boolean bWebhookIssigned = null;
   @SerializedName("bWebhookSkipsslvalidation")
   private Boolean bWebhookSkipsslvalidation = null;
+  @SerializedName("a_objWebhookheader")
+  private List<WebhookheaderRequestCompound> aObjWebhookheader = null;
 
   /**
    * The unique ID of the Webhook
@@ -61,6 +65,7 @@ public class WebhookRequestCompound {
   /**
    * The unique ID of the Ezsignfoldertype.
    * minimum: 0
+   * maximum: 65535
    **/
   @ApiModelProperty(value = "The unique ID of the Ezsignfoldertype.")
   public Integer getFkiEzsignfoldertypeID() {
@@ -166,6 +171,16 @@ public class WebhookRequestCompound {
     this.bWebhookSkipsslvalidation = bWebhookSkipsslvalidation;
   }
 
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public List<WebhookheaderRequestCompound> getAObjWebhookheader() {
+    return aObjWebhookheader;
+  }
+  public void setAObjWebhookheader(List<WebhookheaderRequestCompound> aObjWebhookheader) {
+    this.aObjWebhookheader = aObjWebhookheader;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -186,7 +201,8 @@ public class WebhookRequestCompound {
         (this.sWebhookEmailfailed == null ? webhookRequestCompound.sWebhookEmailfailed == null : this.sWebhookEmailfailed.equals(webhookRequestCompound.sWebhookEmailfailed)) &&
         (this.bWebhookIsactive == null ? webhookRequestCompound.bWebhookIsactive == null : this.bWebhookIsactive.equals(webhookRequestCompound.bWebhookIsactive)) &&
         (this.bWebhookIssigned == null ? webhookRequestCompound.bWebhookIssigned == null : this.bWebhookIssigned.equals(webhookRequestCompound.bWebhookIssigned)) &&
-        (this.bWebhookSkipsslvalidation == null ? webhookRequestCompound.bWebhookSkipsslvalidation == null : this.bWebhookSkipsslvalidation.equals(webhookRequestCompound.bWebhookSkipsslvalidation));
+        (this.bWebhookSkipsslvalidation == null ? webhookRequestCompound.bWebhookSkipsslvalidation == null : this.bWebhookSkipsslvalidation.equals(webhookRequestCompound.bWebhookSkipsslvalidation)) &&
+        (this.aObjWebhookheader == null ? webhookRequestCompound.aObjWebhookheader == null : this.aObjWebhookheader.equals(webhookRequestCompound.aObjWebhookheader));
   }
 
   @Override
@@ -203,6 +219,7 @@ public class WebhookRequestCompound {
     result = 31 * result + (this.bWebhookIsactive == null ? 0: this.bWebhookIsactive.hashCode());
     result = 31 * result + (this.bWebhookIssigned == null ? 0: this.bWebhookIssigned.hashCode());
     result = 31 * result + (this.bWebhookSkipsslvalidation == null ? 0: this.bWebhookSkipsslvalidation.hashCode());
+    result = 31 * result + (this.aObjWebhookheader == null ? 0: this.aObjWebhookheader.hashCode());
     return result;
   }
 
@@ -222,6 +239,7 @@ public class WebhookRequestCompound {
     sb.append("  bWebhookIsactive: ").append(bWebhookIsactive).append("\n");
     sb.append("  bWebhookIssigned: ").append(bWebhookIssigned).append("\n");
     sb.append("  bWebhookSkipsslvalidation: ").append(bWebhookSkipsslvalidation).append("\n");
+    sb.append("  aObjWebhookheader: ").append(aObjWebhookheader).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

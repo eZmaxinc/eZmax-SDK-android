@@ -81,6 +81,7 @@ public class WebhookResponse {
   /**
    * The unique ID of the Ezsignfoldertype.
    * minimum: 0
+   * maximum: 65535
    **/
   @ApiModelProperty(value = "The unique ID of the Ezsignfoldertype.")
   public Integer getFkiEzsignfoldertypeID() {

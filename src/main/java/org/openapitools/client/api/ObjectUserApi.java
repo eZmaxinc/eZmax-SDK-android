@@ -28,6 +28,8 @@ import java.io.File;
 import org.openapitools.client.model.HeaderAcceptLanguage;
 import org.openapitools.client.model.UserCreateObjectV1Request;
 import org.openapitools.client.model.UserCreateObjectV1Response;
+import org.openapitools.client.model.UserCreateObjectV2Request;
+import org.openapitools.client.model.UserCreateObjectV2Response;
 import org.openapitools.client.model.UserEditObjectV1Request;
 import org.openapitools.client.model.UserEditObjectV1Response;
 import org.openapitools.client.model.UserEditPermissionsV1Request;
@@ -39,6 +41,8 @@ import org.openapitools.client.model.UserGetListV1Response;
 import org.openapitools.client.model.UserGetObjectV2Response;
 import org.openapitools.client.model.UserGetPermissionsV1Response;
 import org.openapitools.client.model.UserGetSubnetsV1Response;
+import org.openapitools.client.model.UserGetUsergroupexternalsV1Response;
+import org.openapitools.client.model.UserGetUsergroupsV1Response;
 import org.openapitools.client.model.UserSendPasswordResetV1Response;
 
 import org.apache.http.HttpEntity;
@@ -185,6 +189,134 @@ public class ObjectUserApi {
           public void onResponse(String localVarResponse) {
             try {
               responseListener.onResponse((UserCreateObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", UserCreateObjectV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Create a new User
+  * The endpoint allows to create one or many elements at once.
+   * @param userCreateObjectV2Request 
+   * @return UserCreateObjectV2Response
+  */
+  public UserCreateObjectV2Response userCreateObjectV2 (UserCreateObjectV2Request userCreateObjectV2Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = userCreateObjectV2Request;
+    // verify the required parameter 'userCreateObjectV2Request' is set
+    if (userCreateObjectV2Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'userCreateObjectV2Request' when calling userCreateObjectV2",
+        new ApiException(400, "Missing the required parameter 'userCreateObjectV2Request' when calling userCreateObjectV2"));
+    }
+
+    // create path and map variables
+    String path = "/2/object/user";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (UserCreateObjectV2Response) ApiInvoker.deserialize(localVarResponse, "", UserCreateObjectV2Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Create a new User
+   * The endpoint allows to create one or many elements at once.
+   * @param userCreateObjectV2Request 
+  */
+  public void userCreateObjectV2 (UserCreateObjectV2Request userCreateObjectV2Request, final Response.Listener<UserCreateObjectV2Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = userCreateObjectV2Request;
+
+    // verify the required parameter 'userCreateObjectV2Request' is set
+    if (userCreateObjectV2Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'userCreateObjectV2Request' when calling userCreateObjectV2",
+        new ApiException(400, "Missing the required parameter 'userCreateObjectV2Request' when calling userCreateObjectV2"));
+    }
+
+    // create path and map variables
+    String path = "/2/object/user".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((UserCreateObjectV2Response) ApiInvoker.deserialize(localVarResponse,  "", UserCreateObjectV2Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -1365,6 +1497,260 @@ public class ObjectUserApi {
           public void onResponse(String localVarResponse) {
             try {
               responseListener.onResponse((UserGetSubnetsV1Response) ApiInvoker.deserialize(localVarResponse,  "", UserGetSubnetsV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Get User&#39;s Usergroupexternals
+  * 
+   * @param pkiUserID 
+   * @return UserGetUsergroupexternalsV1Response
+  */
+  public UserGetUsergroupexternalsV1Response userGetUsergroupexternalsV1 (Integer pkiUserID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiUserID' is set
+    if (pkiUserID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiUserID' when calling userGetUsergroupexternalsV1",
+        new ApiException(400, "Missing the required parameter 'pkiUserID' when calling userGetUsergroupexternalsV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/user/{pkiUserID}/getUsergroupexternals".replaceAll("\\{" + "pkiUserID" + "\\}", apiInvoker.escapeString(pkiUserID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (UserGetUsergroupexternalsV1Response) ApiInvoker.deserialize(localVarResponse, "", UserGetUsergroupexternalsV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Get User&#39;s Usergroupexternals
+   * 
+   * @param pkiUserID 
+  */
+  public void userGetUsergroupexternalsV1 (Integer pkiUserID, final Response.Listener<UserGetUsergroupexternalsV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiUserID' is set
+    if (pkiUserID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiUserID' when calling userGetUsergroupexternalsV1",
+        new ApiException(400, "Missing the required parameter 'pkiUserID' when calling userGetUsergroupexternalsV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/user/{pkiUserID}/getUsergroupexternals".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiUserID" + "\\}", apiInvoker.escapeString(pkiUserID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((UserGetUsergroupexternalsV1Response) ApiInvoker.deserialize(localVarResponse,  "", UserGetUsergroupexternalsV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Get User&#39;s Usergroups
+  * 
+   * @param pkiUserID 
+   * @return UserGetUsergroupsV1Response
+  */
+  public UserGetUsergroupsV1Response userGetUsergroupsV1 (Integer pkiUserID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiUserID' is set
+    if (pkiUserID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiUserID' when calling userGetUsergroupsV1",
+        new ApiException(400, "Missing the required parameter 'pkiUserID' when calling userGetUsergroupsV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/user/{pkiUserID}/getUsergroups".replaceAll("\\{" + "pkiUserID" + "\\}", apiInvoker.escapeString(pkiUserID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (UserGetUsergroupsV1Response) ApiInvoker.deserialize(localVarResponse, "", UserGetUsergroupsV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Get User&#39;s Usergroups
+   * 
+   * @param pkiUserID 
+  */
+  public void userGetUsergroupsV1 (Integer pkiUserID, final Response.Listener<UserGetUsergroupsV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiUserID' is set
+    if (pkiUserID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiUserID' when calling userGetUsergroupsV1",
+        new ApiException(400, "Missing the required parameter 'pkiUserID' when calling userGetUsergroupsV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/user/{pkiUserID}/getUsergroups".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiUserID" + "\\}", apiInvoker.escapeString(pkiUserID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((UserGetUsergroupsV1Response) ApiInvoker.deserialize(localVarResponse,  "", UserGetUsergroupsV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

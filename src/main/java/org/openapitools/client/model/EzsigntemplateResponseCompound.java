@@ -16,6 +16,7 @@ import java.util.*;
 import org.openapitools.client.model.CommonAudit;
 import org.openapitools.client.model.EzsigntemplatedocumentResponse;
 import org.openapitools.client.model.EzsigntemplatesignerResponseCompound;
+import org.openapitools.client.model.FieldEEzsigntemplateType;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -37,12 +38,18 @@ public class EzsigntemplateResponseCompound {
   private String sLanguageNameX = null;
   @SerializedName("sEzsigntemplateDescription")
   private String sEzsigntemplateDescription = null;
+  @SerializedName("sEzsigntemplateFilenamepattern")
+  private String sEzsigntemplateFilenamepattern = null;
   @SerializedName("bEzsigntemplateAdminonly")
   private Boolean bEzsigntemplateAdminonly = null;
   @SerializedName("sEzsignfoldertypeNameX")
   private String sEzsignfoldertypeNameX = null;
   @SerializedName("objAudit")
   private CommonAudit objAudit = null;
+  @SerializedName("bEzsigntemplateEditallowed")
+  private Boolean bEzsigntemplateEditallowed = null;
+  @SerializedName("eEzsigntemplateType")
+  private FieldEEzsigntemplateType eEzsigntemplateType = null;
   @SerializedName("objEzsigntemplatedocument")
   private EzsigntemplatedocumentResponse objEzsigntemplatedocument = null;
   @SerializedName("a_objEzsigntemplatesigner")
@@ -75,8 +82,9 @@ public class EzsigntemplateResponseCompound {
   /**
    * The unique ID of the Ezsignfoldertype.
    * minimum: 0
+   * maximum: 65535
    **/
-  @ApiModelProperty(required = true, value = "The unique ID of the Ezsignfoldertype.")
+  @ApiModelProperty(value = "The unique ID of the Ezsignfoldertype.")
   public Integer getFkiEzsignfoldertypeID() {
     return fkiEzsignfoldertypeID;
   }
@@ -120,6 +128,17 @@ public class EzsigntemplateResponseCompound {
   }
 
   /**
+   * The filename pattern of the Ezsigntemplate
+   **/
+  @ApiModelProperty(value = "The filename pattern of the Ezsigntemplate")
+  public String getSEzsigntemplateFilenamepattern() {
+    return sEzsigntemplateFilenamepattern;
+  }
+  public void setSEzsigntemplateFilenamepattern(String sEzsigntemplateFilenamepattern) {
+    this.sEzsigntemplateFilenamepattern = sEzsigntemplateFilenamepattern;
+  }
+
+  /**
    * Whether the Ezsigntemplate can be accessed by admin users only (eUserType=Normal)
    **/
   @ApiModelProperty(required = true, value = "Whether the Ezsigntemplate can be accessed by admin users only (eUserType=Normal)")
@@ -133,7 +152,7 @@ public class EzsigntemplateResponseCompound {
   /**
    * The name of the Ezsignfoldertype in the language of the requester
    **/
-  @ApiModelProperty(required = true, value = "The name of the Ezsignfoldertype in the language of the requester")
+  @ApiModelProperty(value = "The name of the Ezsignfoldertype in the language of the requester")
   public String getSEzsignfoldertypeNameX() {
     return sEzsignfoldertypeNameX;
   }
@@ -149,6 +168,27 @@ public class EzsigntemplateResponseCompound {
   }
   public void setObjAudit(CommonAudit objAudit) {
     this.objAudit = objAudit;
+  }
+
+  /**
+   * Whether the Ezsigntemplate if allowed to edit or not
+   **/
+  @ApiModelProperty(required = true, value = "Whether the Ezsigntemplate if allowed to edit or not")
+  public Boolean getBEzsigntemplateEditallowed() {
+    return bEzsigntemplateEditallowed;
+  }
+  public void setBEzsigntemplateEditallowed(Boolean bEzsigntemplateEditallowed) {
+    this.bEzsigntemplateEditallowed = bEzsigntemplateEditallowed;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public FieldEEzsigntemplateType getEEzsigntemplateType() {
+    return eEzsigntemplateType;
+  }
+  public void setEEzsigntemplateType(FieldEEzsigntemplateType eEzsigntemplateType) {
+    this.eEzsigntemplateType = eEzsigntemplateType;
   }
 
   /**
@@ -187,9 +227,12 @@ public class EzsigntemplateResponseCompound {
         (this.fkiLanguageID == null ? ezsigntemplateResponseCompound.fkiLanguageID == null : this.fkiLanguageID.equals(ezsigntemplateResponseCompound.fkiLanguageID)) &&
         (this.sLanguageNameX == null ? ezsigntemplateResponseCompound.sLanguageNameX == null : this.sLanguageNameX.equals(ezsigntemplateResponseCompound.sLanguageNameX)) &&
         (this.sEzsigntemplateDescription == null ? ezsigntemplateResponseCompound.sEzsigntemplateDescription == null : this.sEzsigntemplateDescription.equals(ezsigntemplateResponseCompound.sEzsigntemplateDescription)) &&
+        (this.sEzsigntemplateFilenamepattern == null ? ezsigntemplateResponseCompound.sEzsigntemplateFilenamepattern == null : this.sEzsigntemplateFilenamepattern.equals(ezsigntemplateResponseCompound.sEzsigntemplateFilenamepattern)) &&
         (this.bEzsigntemplateAdminonly == null ? ezsigntemplateResponseCompound.bEzsigntemplateAdminonly == null : this.bEzsigntemplateAdminonly.equals(ezsigntemplateResponseCompound.bEzsigntemplateAdminonly)) &&
         (this.sEzsignfoldertypeNameX == null ? ezsigntemplateResponseCompound.sEzsignfoldertypeNameX == null : this.sEzsignfoldertypeNameX.equals(ezsigntemplateResponseCompound.sEzsignfoldertypeNameX)) &&
         (this.objAudit == null ? ezsigntemplateResponseCompound.objAudit == null : this.objAudit.equals(ezsigntemplateResponseCompound.objAudit)) &&
+        (this.bEzsigntemplateEditallowed == null ? ezsigntemplateResponseCompound.bEzsigntemplateEditallowed == null : this.bEzsigntemplateEditallowed.equals(ezsigntemplateResponseCompound.bEzsigntemplateEditallowed)) &&
+        (this.eEzsigntemplateType == null ? ezsigntemplateResponseCompound.eEzsigntemplateType == null : this.eEzsigntemplateType.equals(ezsigntemplateResponseCompound.eEzsigntemplateType)) &&
         (this.objEzsigntemplatedocument == null ? ezsigntemplateResponseCompound.objEzsigntemplatedocument == null : this.objEzsigntemplatedocument.equals(ezsigntemplateResponseCompound.objEzsigntemplatedocument)) &&
         (this.aObjEzsigntemplatesigner == null ? ezsigntemplateResponseCompound.aObjEzsigntemplatesigner == null : this.aObjEzsigntemplatesigner.equals(ezsigntemplateResponseCompound.aObjEzsigntemplatesigner));
   }
@@ -203,9 +246,12 @@ public class EzsigntemplateResponseCompound {
     result = 31 * result + (this.fkiLanguageID == null ? 0: this.fkiLanguageID.hashCode());
     result = 31 * result + (this.sLanguageNameX == null ? 0: this.sLanguageNameX.hashCode());
     result = 31 * result + (this.sEzsigntemplateDescription == null ? 0: this.sEzsigntemplateDescription.hashCode());
+    result = 31 * result + (this.sEzsigntemplateFilenamepattern == null ? 0: this.sEzsigntemplateFilenamepattern.hashCode());
     result = 31 * result + (this.bEzsigntemplateAdminonly == null ? 0: this.bEzsigntemplateAdminonly.hashCode());
     result = 31 * result + (this.sEzsignfoldertypeNameX == null ? 0: this.sEzsignfoldertypeNameX.hashCode());
     result = 31 * result + (this.objAudit == null ? 0: this.objAudit.hashCode());
+    result = 31 * result + (this.bEzsigntemplateEditallowed == null ? 0: this.bEzsigntemplateEditallowed.hashCode());
+    result = 31 * result + (this.eEzsigntemplateType == null ? 0: this.eEzsigntemplateType.hashCode());
     result = 31 * result + (this.objEzsigntemplatedocument == null ? 0: this.objEzsigntemplatedocument.hashCode());
     result = 31 * result + (this.aObjEzsigntemplatesigner == null ? 0: this.aObjEzsigntemplatesigner.hashCode());
     return result;
@@ -222,9 +268,12 @@ public class EzsigntemplateResponseCompound {
     sb.append("  fkiLanguageID: ").append(fkiLanguageID).append("\n");
     sb.append("  sLanguageNameX: ").append(sLanguageNameX).append("\n");
     sb.append("  sEzsigntemplateDescription: ").append(sEzsigntemplateDescription).append("\n");
+    sb.append("  sEzsigntemplateFilenamepattern: ").append(sEzsigntemplateFilenamepattern).append("\n");
     sb.append("  bEzsigntemplateAdminonly: ").append(bEzsigntemplateAdminonly).append("\n");
     sb.append("  sEzsignfoldertypeNameX: ").append(sEzsignfoldertypeNameX).append("\n");
     sb.append("  objAudit: ").append(objAudit).append("\n");
+    sb.append("  bEzsigntemplateEditallowed: ").append(bEzsigntemplateEditallowed).append("\n");
+    sb.append("  eEzsigntemplateType: ").append(eEzsigntemplateType).append("\n");
     sb.append("  objEzsigntemplatedocument: ").append(objEzsigntemplatedocument).append("\n");
     sb.append("  aObjEzsigntemplatesigner: ").append(aObjEzsigntemplatesigner).append("\n");
     sb.append("}\n");

@@ -27,6 +27,8 @@ public class UsergroupmembershipResponseCompound {
   private Integer fkiUsergroupID = null;
   @SerializedName("fkiUserID")
   private Integer fkiUserID = null;
+  @SerializedName("fkiUsergroupexternalID")
+  private Integer fkiUsergroupexternalID = null;
   @SerializedName("sUserFirstname")
   private String sUserFirstname = null;
   @SerializedName("sUserLastname")
@@ -37,6 +39,8 @@ public class UsergroupmembershipResponseCompound {
   private String sEmailAddress = null;
   @SerializedName("sUsergroupNameX")
   private String sUsergroupNameX = null;
+  @SerializedName("sUsergroupexternalName")
+  private String sUsergroupexternalName = null;
 
   /**
    * The unique ID of the Usergroupmembership
@@ -68,7 +72,7 @@ public class UsergroupmembershipResponseCompound {
    * The unique ID of the User
    * minimum: 0
    **/
-  @ApiModelProperty(required = true, value = "The unique ID of the User")
+  @ApiModelProperty(value = "The unique ID of the User")
   public Integer getFkiUserID() {
     return fkiUserID;
   }
@@ -77,9 +81,22 @@ public class UsergroupmembershipResponseCompound {
   }
 
   /**
+   * The unique ID of the Usergroupexternal
+   * minimum: 0
+   * maximum: 255
+   **/
+  @ApiModelProperty(value = "The unique ID of the Usergroupexternal")
+  public Integer getFkiUsergroupexternalID() {
+    return fkiUsergroupexternalID;
+  }
+  public void setFkiUsergroupexternalID(Integer fkiUsergroupexternalID) {
+    this.fkiUsergroupexternalID = fkiUsergroupexternalID;
+  }
+
+  /**
    * The first name of the user
    **/
-  @ApiModelProperty(required = true, value = "The first name of the user")
+  @ApiModelProperty(value = "The first name of the user")
   public String getSUserFirstname() {
     return sUserFirstname;
   }
@@ -90,7 +107,7 @@ public class UsergroupmembershipResponseCompound {
   /**
    * The last name of the user
    **/
-  @ApiModelProperty(required = true, value = "The last name of the user")
+  @ApiModelProperty(value = "The last name of the user")
   public String getSUserLastname() {
     return sUserLastname;
   }
@@ -101,7 +118,7 @@ public class UsergroupmembershipResponseCompound {
   /**
    * The login name of the User.
    **/
-  @ApiModelProperty(required = true, value = "The login name of the User.")
+  @ApiModelProperty(value = "The login name of the User.")
   public String getSUserLoginname() {
     return sUserLoginname;
   }
@@ -131,6 +148,17 @@ public class UsergroupmembershipResponseCompound {
     this.sUsergroupNameX = sUsergroupNameX;
   }
 
+  /**
+   * The name of the Usergroupexternal
+   **/
+  @ApiModelProperty(value = "The name of the Usergroupexternal")
+  public String getSUsergroupexternalName() {
+    return sUsergroupexternalName;
+  }
+  public void setSUsergroupexternalName(String sUsergroupexternalName) {
+    this.sUsergroupexternalName = sUsergroupexternalName;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -144,11 +172,13 @@ public class UsergroupmembershipResponseCompound {
     return (this.pkiUsergroupmembershipID == null ? usergroupmembershipResponseCompound.pkiUsergroupmembershipID == null : this.pkiUsergroupmembershipID.equals(usergroupmembershipResponseCompound.pkiUsergroupmembershipID)) &&
         (this.fkiUsergroupID == null ? usergroupmembershipResponseCompound.fkiUsergroupID == null : this.fkiUsergroupID.equals(usergroupmembershipResponseCompound.fkiUsergroupID)) &&
         (this.fkiUserID == null ? usergroupmembershipResponseCompound.fkiUserID == null : this.fkiUserID.equals(usergroupmembershipResponseCompound.fkiUserID)) &&
+        (this.fkiUsergroupexternalID == null ? usergroupmembershipResponseCompound.fkiUsergroupexternalID == null : this.fkiUsergroupexternalID.equals(usergroupmembershipResponseCompound.fkiUsergroupexternalID)) &&
         (this.sUserFirstname == null ? usergroupmembershipResponseCompound.sUserFirstname == null : this.sUserFirstname.equals(usergroupmembershipResponseCompound.sUserFirstname)) &&
         (this.sUserLastname == null ? usergroupmembershipResponseCompound.sUserLastname == null : this.sUserLastname.equals(usergroupmembershipResponseCompound.sUserLastname)) &&
         (this.sUserLoginname == null ? usergroupmembershipResponseCompound.sUserLoginname == null : this.sUserLoginname.equals(usergroupmembershipResponseCompound.sUserLoginname)) &&
         (this.sEmailAddress == null ? usergroupmembershipResponseCompound.sEmailAddress == null : this.sEmailAddress.equals(usergroupmembershipResponseCompound.sEmailAddress)) &&
-        (this.sUsergroupNameX == null ? usergroupmembershipResponseCompound.sUsergroupNameX == null : this.sUsergroupNameX.equals(usergroupmembershipResponseCompound.sUsergroupNameX));
+        (this.sUsergroupNameX == null ? usergroupmembershipResponseCompound.sUsergroupNameX == null : this.sUsergroupNameX.equals(usergroupmembershipResponseCompound.sUsergroupNameX)) &&
+        (this.sUsergroupexternalName == null ? usergroupmembershipResponseCompound.sUsergroupexternalName == null : this.sUsergroupexternalName.equals(usergroupmembershipResponseCompound.sUsergroupexternalName));
   }
 
   @Override
@@ -157,11 +187,13 @@ public class UsergroupmembershipResponseCompound {
     result = 31 * result + (this.pkiUsergroupmembershipID == null ? 0: this.pkiUsergroupmembershipID.hashCode());
     result = 31 * result + (this.fkiUsergroupID == null ? 0: this.fkiUsergroupID.hashCode());
     result = 31 * result + (this.fkiUserID == null ? 0: this.fkiUserID.hashCode());
+    result = 31 * result + (this.fkiUsergroupexternalID == null ? 0: this.fkiUsergroupexternalID.hashCode());
     result = 31 * result + (this.sUserFirstname == null ? 0: this.sUserFirstname.hashCode());
     result = 31 * result + (this.sUserLastname == null ? 0: this.sUserLastname.hashCode());
     result = 31 * result + (this.sUserLoginname == null ? 0: this.sUserLoginname.hashCode());
     result = 31 * result + (this.sEmailAddress == null ? 0: this.sEmailAddress.hashCode());
     result = 31 * result + (this.sUsergroupNameX == null ? 0: this.sUsergroupNameX.hashCode());
+    result = 31 * result + (this.sUsergroupexternalName == null ? 0: this.sUsergroupexternalName.hashCode());
     return result;
   }
 
@@ -173,11 +205,13 @@ public class UsergroupmembershipResponseCompound {
     sb.append("  pkiUsergroupmembershipID: ").append(pkiUsergroupmembershipID).append("\n");
     sb.append("  fkiUsergroupID: ").append(fkiUsergroupID).append("\n");
     sb.append("  fkiUserID: ").append(fkiUserID).append("\n");
+    sb.append("  fkiUsergroupexternalID: ").append(fkiUsergroupexternalID).append("\n");
     sb.append("  sUserFirstname: ").append(sUserFirstname).append("\n");
     sb.append("  sUserLastname: ").append(sUserLastname).append("\n");
     sb.append("  sUserLoginname: ").append(sUserLoginname).append("\n");
     sb.append("  sEmailAddress: ").append(sEmailAddress).append("\n");
     sb.append("  sUsergroupNameX: ").append(sUsergroupNameX).append("\n");
+    sb.append("  sUsergroupexternalName: ").append(sUsergroupexternalName).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

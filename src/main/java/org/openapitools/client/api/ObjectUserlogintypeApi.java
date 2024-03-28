@@ -60,12 +60,13 @@ public class ObjectUserlogintypeApi {
   * Retrieve Userlogintypes and IDs
   * Get the list of Userlogintype to be used in a dropdown or autocomplete control.
    * @param sSelector The type of Userlogintypes to return
+   * @param fkiEzsignfoldertypeID 
    * @param eFilterActive Specify which results we want to display.
    * @param sQuery Allow to filter the returned results
    * @param acceptLanguage 
    * @return UserlogintypeGetAutocompleteV2Response
   */
-  public UserlogintypeGetAutocompleteV2Response userlogintypeGetAutocompleteV2 (String sSelector, String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public UserlogintypeGetAutocompleteV2Response userlogintypeGetAutocompleteV2 (String sSelector, Integer fkiEzsignfoldertypeID, String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'sSelector' is set
     if (sSelector == null) {
@@ -82,6 +83,7 @@ public class ObjectUserlogintypeApi {
     Map<String, String> headerParams = new HashMap<String, String>();
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "fkiEzsignfoldertypeID", fkiEzsignfoldertypeID));
     queryParams.addAll(ApiInvoker.parameterToPairs("", "eFilterActive", eFilterActive));
     queryParams.addAll(ApiInvoker.parameterToPairs("", "sQuery", sQuery));
     headerParams.put("Accept-Language", ApiInvoker.parameterToString(acceptLanguage));
@@ -127,9 +129,9 @@ public class ObjectUserlogintypeApi {
       /**
    * Retrieve Userlogintypes and IDs
    * Get the list of Userlogintype to be used in a dropdown or autocomplete control.
-   * @param sSelector The type of Userlogintypes to return   * @param eFilterActive Specify which results we want to display.   * @param sQuery Allow to filter the returned results   * @param acceptLanguage 
+   * @param sSelector The type of Userlogintypes to return   * @param fkiEzsignfoldertypeID    * @param eFilterActive Specify which results we want to display.   * @param sQuery Allow to filter the returned results   * @param acceptLanguage 
   */
-  public void userlogintypeGetAutocompleteV2 (String sSelector, String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage, final Response.Listener<UserlogintypeGetAutocompleteV2Response> responseListener, final Response.ErrorListener errorListener) {
+  public void userlogintypeGetAutocompleteV2 (String sSelector, Integer fkiEzsignfoldertypeID, String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage, final Response.Listener<UserlogintypeGetAutocompleteV2Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'sSelector' is set
@@ -148,6 +150,7 @@ public class ObjectUserlogintypeApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
 
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "fkiEzsignfoldertypeID", fkiEzsignfoldertypeID));
     queryParams.addAll(ApiInvoker.parameterToPairs("", "eFilterActive", eFilterActive));
     queryParams.addAll(ApiInvoker.parameterToPairs("", "sQuery", sQuery));
 

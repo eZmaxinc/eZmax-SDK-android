@@ -13,6 +13,7 @@
 package org.openapitools.client.model;
 
 import org.openapitools.client.model.FieldEBrandingLogo;
+import org.openapitools.client.model.FieldEBrandingLogointerface;
 import org.openapitools.client.model.MultilingualBrandingDescription;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
@@ -37,6 +38,8 @@ public class BrandingResponseCompound {
   private String sEmailAddress = null;
   @SerializedName("eBrandingLogo")
   private FieldEBrandingLogo eBrandingLogo = null;
+  @SerializedName("eBrandingLogointerface")
+  private FieldEBrandingLogointerface eBrandingLogointerface = null;
   @SerializedName("iBrandingColortext")
   private Integer iBrandingColortext = null;
   @SerializedName("iBrandingColortextlinkbox")
@@ -49,10 +52,14 @@ public class BrandingResponseCompound {
   private Integer iBrandingColorbackgroundbutton = null;
   @SerializedName("iBrandingColorbackgroundsmallbox")
   private Integer iBrandingColorbackgroundsmallbox = null;
+  @SerializedName("iBrandingInterfacecolor")
+  private Integer iBrandingInterfacecolor = null;
   @SerializedName("bBrandingIsactive")
   private Boolean bBrandingIsactive = null;
   @SerializedName("sBrandingLogourl")
   private String sBrandingLogourl = null;
+  @SerializedName("sBrandingLogointerfaceurl")
+  private String sBrandingLogointerfaceurl = null;
 
   /**
    * The unique ID of the Branding
@@ -130,6 +137,16 @@ public class BrandingResponseCompound {
   }
   public void setEBrandingLogo(FieldEBrandingLogo eBrandingLogo) {
     this.eBrandingLogo = eBrandingLogo;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public FieldEBrandingLogointerface getEBrandingLogointerface() {
+    return eBrandingLogointerface;
+  }
+  public void setEBrandingLogointerface(FieldEBrandingLogointerface eBrandingLogointerface) {
+    this.eBrandingLogointerface = eBrandingLogointerface;
   }
 
   /**
@@ -211,6 +228,19 @@ public class BrandingResponseCompound {
   }
 
   /**
+   * The color of the interface. This is a RGB color converted into integer
+   * minimum: 0
+   * maximum: 16777215
+   **/
+  @ApiModelProperty(value = "The color of the interface. This is a RGB color converted into integer")
+  public Integer getIBrandingInterfacecolor() {
+    return iBrandingInterfacecolor;
+  }
+  public void setIBrandingInterfacecolor(Integer iBrandingInterfacecolor) {
+    this.iBrandingInterfacecolor = iBrandingInterfacecolor;
+  }
+
+  /**
    * Whether the Branding is active or not
    **/
   @ApiModelProperty(required = true, value = "Whether the Branding is active or not")
@@ -232,6 +262,17 @@ public class BrandingResponseCompound {
     this.sBrandingLogourl = sBrandingLogourl;
   }
 
+  /**
+   * The url of the picture used as logo in the Branding
+   **/
+  @ApiModelProperty(value = "The url of the picture used as logo in the Branding")
+  public String getSBrandingLogointerfaceurl() {
+    return sBrandingLogointerfaceurl;
+  }
+  public void setSBrandingLogointerfaceurl(String sBrandingLogointerfaceurl) {
+    this.sBrandingLogointerfaceurl = sBrandingLogointerfaceurl;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -249,14 +290,17 @@ public class BrandingResponseCompound {
         (this.sBrandingName == null ? brandingResponseCompound.sBrandingName == null : this.sBrandingName.equals(brandingResponseCompound.sBrandingName)) &&
         (this.sEmailAddress == null ? brandingResponseCompound.sEmailAddress == null : this.sEmailAddress.equals(brandingResponseCompound.sEmailAddress)) &&
         (this.eBrandingLogo == null ? brandingResponseCompound.eBrandingLogo == null : this.eBrandingLogo.equals(brandingResponseCompound.eBrandingLogo)) &&
+        (this.eBrandingLogointerface == null ? brandingResponseCompound.eBrandingLogointerface == null : this.eBrandingLogointerface.equals(brandingResponseCompound.eBrandingLogointerface)) &&
         (this.iBrandingColortext == null ? brandingResponseCompound.iBrandingColortext == null : this.iBrandingColortext.equals(brandingResponseCompound.iBrandingColortext)) &&
         (this.iBrandingColortextlinkbox == null ? brandingResponseCompound.iBrandingColortextlinkbox == null : this.iBrandingColortextlinkbox.equals(brandingResponseCompound.iBrandingColortextlinkbox)) &&
         (this.iBrandingColortextbutton == null ? brandingResponseCompound.iBrandingColortextbutton == null : this.iBrandingColortextbutton.equals(brandingResponseCompound.iBrandingColortextbutton)) &&
         (this.iBrandingColorbackground == null ? brandingResponseCompound.iBrandingColorbackground == null : this.iBrandingColorbackground.equals(brandingResponseCompound.iBrandingColorbackground)) &&
         (this.iBrandingColorbackgroundbutton == null ? brandingResponseCompound.iBrandingColorbackgroundbutton == null : this.iBrandingColorbackgroundbutton.equals(brandingResponseCompound.iBrandingColorbackgroundbutton)) &&
         (this.iBrandingColorbackgroundsmallbox == null ? brandingResponseCompound.iBrandingColorbackgroundsmallbox == null : this.iBrandingColorbackgroundsmallbox.equals(brandingResponseCompound.iBrandingColorbackgroundsmallbox)) &&
+        (this.iBrandingInterfacecolor == null ? brandingResponseCompound.iBrandingInterfacecolor == null : this.iBrandingInterfacecolor.equals(brandingResponseCompound.iBrandingInterfacecolor)) &&
         (this.bBrandingIsactive == null ? brandingResponseCompound.bBrandingIsactive == null : this.bBrandingIsactive.equals(brandingResponseCompound.bBrandingIsactive)) &&
-        (this.sBrandingLogourl == null ? brandingResponseCompound.sBrandingLogourl == null : this.sBrandingLogourl.equals(brandingResponseCompound.sBrandingLogourl));
+        (this.sBrandingLogourl == null ? brandingResponseCompound.sBrandingLogourl == null : this.sBrandingLogourl.equals(brandingResponseCompound.sBrandingLogourl)) &&
+        (this.sBrandingLogointerfaceurl == null ? brandingResponseCompound.sBrandingLogointerfaceurl == null : this.sBrandingLogointerfaceurl.equals(brandingResponseCompound.sBrandingLogointerfaceurl));
   }
 
   @Override
@@ -269,14 +313,17 @@ public class BrandingResponseCompound {
     result = 31 * result + (this.sBrandingName == null ? 0: this.sBrandingName.hashCode());
     result = 31 * result + (this.sEmailAddress == null ? 0: this.sEmailAddress.hashCode());
     result = 31 * result + (this.eBrandingLogo == null ? 0: this.eBrandingLogo.hashCode());
+    result = 31 * result + (this.eBrandingLogointerface == null ? 0: this.eBrandingLogointerface.hashCode());
     result = 31 * result + (this.iBrandingColortext == null ? 0: this.iBrandingColortext.hashCode());
     result = 31 * result + (this.iBrandingColortextlinkbox == null ? 0: this.iBrandingColortextlinkbox.hashCode());
     result = 31 * result + (this.iBrandingColortextbutton == null ? 0: this.iBrandingColortextbutton.hashCode());
     result = 31 * result + (this.iBrandingColorbackground == null ? 0: this.iBrandingColorbackground.hashCode());
     result = 31 * result + (this.iBrandingColorbackgroundbutton == null ? 0: this.iBrandingColorbackgroundbutton.hashCode());
     result = 31 * result + (this.iBrandingColorbackgroundsmallbox == null ? 0: this.iBrandingColorbackgroundsmallbox.hashCode());
+    result = 31 * result + (this.iBrandingInterfacecolor == null ? 0: this.iBrandingInterfacecolor.hashCode());
     result = 31 * result + (this.bBrandingIsactive == null ? 0: this.bBrandingIsactive.hashCode());
     result = 31 * result + (this.sBrandingLogourl == null ? 0: this.sBrandingLogourl.hashCode());
+    result = 31 * result + (this.sBrandingLogointerfaceurl == null ? 0: this.sBrandingLogointerfaceurl.hashCode());
     return result;
   }
 
@@ -292,14 +339,17 @@ public class BrandingResponseCompound {
     sb.append("  sBrandingName: ").append(sBrandingName).append("\n");
     sb.append("  sEmailAddress: ").append(sEmailAddress).append("\n");
     sb.append("  eBrandingLogo: ").append(eBrandingLogo).append("\n");
+    sb.append("  eBrandingLogointerface: ").append(eBrandingLogointerface).append("\n");
     sb.append("  iBrandingColortext: ").append(iBrandingColortext).append("\n");
     sb.append("  iBrandingColortextlinkbox: ").append(iBrandingColortextlinkbox).append("\n");
     sb.append("  iBrandingColortextbutton: ").append(iBrandingColortextbutton).append("\n");
     sb.append("  iBrandingColorbackground: ").append(iBrandingColorbackground).append("\n");
     sb.append("  iBrandingColorbackgroundbutton: ").append(iBrandingColorbackgroundbutton).append("\n");
     sb.append("  iBrandingColorbackgroundsmallbox: ").append(iBrandingColorbackgroundsmallbox).append("\n");
+    sb.append("  iBrandingInterfacecolor: ").append(iBrandingInterfacecolor).append("\n");
     sb.append("  bBrandingIsactive: ").append(bBrandingIsactive).append("\n");
     sb.append("  sBrandingLogourl: ").append(sBrandingLogourl).append("\n");
+    sb.append("  sBrandingLogointerfaceurl: ").append(sBrandingLogointerfaceurl).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

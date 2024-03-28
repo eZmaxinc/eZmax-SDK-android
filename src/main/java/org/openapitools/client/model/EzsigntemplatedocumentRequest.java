@@ -48,7 +48,7 @@ public class EzsigntemplatedocumentRequest {
   @SerializedName("bEzsigntemplatedocumentForcerepair")
   private Boolean bEzsigntemplatedocumentForcerepair = null;
   public enum EEzsigntemplatedocumentFormEnum {
-     Keep,  Convert, 
+     Keep,  Convert,  Discard, 
   };
   @SerializedName("eEzsigntemplatedocumentForm")
   private EEzsigntemplatedocumentFormEnum eEzsigntemplatedocumentForm = null;
@@ -170,9 +170,9 @@ public class EzsigntemplatedocumentRequest {
   }
 
   /**
-   * If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsigntemplateformfieldgroups and assign them to the specified **fkiEzsigntemplatesignerID**
+   * If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsigntemplateformfieldgroups and assign them to the specified **fkiEzsigntemplatesignerID**  **Discard** removes the form from the document
    **/
-  @ApiModelProperty(value = "If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsigntemplateformfieldgroups and assign them to the specified **fkiEzsigntemplatesignerID**")
+  @ApiModelProperty(value = "If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsigntemplateformfieldgroups and assign them to the specified **fkiEzsigntemplatesignerID**  **Discard** removes the form from the document")
   public EEzsigntemplatedocumentFormEnum getEEzsigntemplatedocumentForm() {
     return eEzsigntemplatedocumentForm;
   }

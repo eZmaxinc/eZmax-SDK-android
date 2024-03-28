@@ -51,6 +51,14 @@ public class EzsignfolderListElement {
   private Integer iEzsignsignature = null;
   @SerializedName("iEzsignsignatureSigned")
   private Integer iEzsignsignatureSigned = null;
+  @SerializedName("iEzsignformfieldgroup")
+  private Integer iEzsignformfieldgroup = null;
+  @SerializedName("iEzsignformfieldgroupCompleted")
+  private Integer iEzsignformfieldgroupCompleted = null;
+  @SerializedName("bEzsignformHasdependencies")
+  private Boolean bEzsignformHasdependencies = null;
+  @SerializedName("dEzsignfolderCompletedpercentage")
+  private String dEzsignfolderCompletedpercentage = null;
 
   /**
    * The unique ID of the Ezsignfolder
@@ -67,6 +75,7 @@ public class EzsignfolderListElement {
   /**
    * The unique ID of the Ezsignfoldertype.
    * minimum: 0
+   * maximum: 65535
    **/
   @ApiModelProperty(required = true, value = "The unique ID of the Ezsignfoldertype.")
   public Integer getFkiEzsignfoldertypeID() {
@@ -206,6 +215,50 @@ public class EzsignfolderListElement {
     this.iEzsignsignatureSigned = iEzsignsignatureSigned;
   }
 
+  /**
+   * The total number of Ezsignformfieldgroup in all Ezsigndocuments in the folder
+   **/
+  @ApiModelProperty(required = true, value = "The total number of Ezsignformfieldgroup in all Ezsigndocuments in the folder")
+  public Integer getIEzsignformfieldgroup() {
+    return iEzsignformfieldgroup;
+  }
+  public void setIEzsignformfieldgroup(Integer iEzsignformfieldgroup) {
+    this.iEzsignformfieldgroup = iEzsignformfieldgroup;
+  }
+
+  /**
+   * The total number of completed Ezsignformfieldgroup in all Ezsigndocuments in the folder
+   **/
+  @ApiModelProperty(required = true, value = "The total number of completed Ezsignformfieldgroup in all Ezsigndocuments in the folder")
+  public Integer getIEzsignformfieldgroupCompleted() {
+    return iEzsignformfieldgroupCompleted;
+  }
+  public void setIEzsignformfieldgroupCompleted(Integer iEzsignformfieldgroupCompleted) {
+    this.iEzsignformfieldgroupCompleted = iEzsignformfieldgroupCompleted;
+  }
+
+  /**
+   * Whether the Ezsignform/Ezsignsignatures has dependencies or not
+   **/
+  @ApiModelProperty(value = "Whether the Ezsignform/Ezsignsignatures has dependencies or not")
+  public Boolean getBEzsignformHasdependencies() {
+    return bEzsignformHasdependencies;
+  }
+  public void setBEzsignformHasdependencies(Boolean bEzsignformHasdependencies) {
+    this.bEzsignformHasdependencies = bEzsignformHasdependencies;
+  }
+
+  /**
+   * Whether the Ezsignform/Ezsignsignatures has dependencies or not
+   **/
+  @ApiModelProperty(required = true, value = "Whether the Ezsignform/Ezsignsignatures has dependencies or not")
+  public String getDEzsignfolderCompletedpercentage() {
+    return dEzsignfolderCompletedpercentage;
+  }
+  public void setDEzsignfolderCompletedpercentage(String dEzsignfolderCompletedpercentage) {
+    this.dEzsignfolderCompletedpercentage = dEzsignfolderCompletedpercentage;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -229,7 +282,11 @@ public class EzsignfolderListElement {
         (this.iEzsigndocument == null ? ezsignfolderListElement.iEzsigndocument == null : this.iEzsigndocument.equals(ezsignfolderListElement.iEzsigndocument)) &&
         (this.iEzsigndocumentEdm == null ? ezsignfolderListElement.iEzsigndocumentEdm == null : this.iEzsigndocumentEdm.equals(ezsignfolderListElement.iEzsigndocumentEdm)) &&
         (this.iEzsignsignature == null ? ezsignfolderListElement.iEzsignsignature == null : this.iEzsignsignature.equals(ezsignfolderListElement.iEzsignsignature)) &&
-        (this.iEzsignsignatureSigned == null ? ezsignfolderListElement.iEzsignsignatureSigned == null : this.iEzsignsignatureSigned.equals(ezsignfolderListElement.iEzsignsignatureSigned));
+        (this.iEzsignsignatureSigned == null ? ezsignfolderListElement.iEzsignsignatureSigned == null : this.iEzsignsignatureSigned.equals(ezsignfolderListElement.iEzsignsignatureSigned)) &&
+        (this.iEzsignformfieldgroup == null ? ezsignfolderListElement.iEzsignformfieldgroup == null : this.iEzsignformfieldgroup.equals(ezsignfolderListElement.iEzsignformfieldgroup)) &&
+        (this.iEzsignformfieldgroupCompleted == null ? ezsignfolderListElement.iEzsignformfieldgroupCompleted == null : this.iEzsignformfieldgroupCompleted.equals(ezsignfolderListElement.iEzsignformfieldgroupCompleted)) &&
+        (this.bEzsignformHasdependencies == null ? ezsignfolderListElement.bEzsignformHasdependencies == null : this.bEzsignformHasdependencies.equals(ezsignfolderListElement.bEzsignformHasdependencies)) &&
+        (this.dEzsignfolderCompletedpercentage == null ? ezsignfolderListElement.dEzsignfolderCompletedpercentage == null : this.dEzsignfolderCompletedpercentage.equals(ezsignfolderListElement.dEzsignfolderCompletedpercentage));
   }
 
   @Override
@@ -249,6 +306,10 @@ public class EzsignfolderListElement {
     result = 31 * result + (this.iEzsigndocumentEdm == null ? 0: this.iEzsigndocumentEdm.hashCode());
     result = 31 * result + (this.iEzsignsignature == null ? 0: this.iEzsignsignature.hashCode());
     result = 31 * result + (this.iEzsignsignatureSigned == null ? 0: this.iEzsignsignatureSigned.hashCode());
+    result = 31 * result + (this.iEzsignformfieldgroup == null ? 0: this.iEzsignformfieldgroup.hashCode());
+    result = 31 * result + (this.iEzsignformfieldgroupCompleted == null ? 0: this.iEzsignformfieldgroupCompleted.hashCode());
+    result = 31 * result + (this.bEzsignformHasdependencies == null ? 0: this.bEzsignformHasdependencies.hashCode());
+    result = 31 * result + (this.dEzsignfolderCompletedpercentage == null ? 0: this.dEzsignfolderCompletedpercentage.hashCode());
     return result;
   }
 
@@ -271,6 +332,10 @@ public class EzsignfolderListElement {
     sb.append("  iEzsigndocumentEdm: ").append(iEzsigndocumentEdm).append("\n");
     sb.append("  iEzsignsignature: ").append(iEzsignsignature).append("\n");
     sb.append("  iEzsignsignatureSigned: ").append(iEzsignsignatureSigned).append("\n");
+    sb.append("  iEzsignformfieldgroup: ").append(iEzsignformfieldgroup).append("\n");
+    sb.append("  iEzsignformfieldgroupCompleted: ").append(iEzsignformfieldgroupCompleted).append("\n");
+    sb.append("  bEzsignformHasdependencies: ").append(bEzsignformHasdependencies).append("\n");
+    sb.append("  dEzsignfolderCompletedpercentage: ").append(dEzsignfolderCompletedpercentage).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

@@ -88,6 +88,7 @@ public class EzsignfolderResponse {
   /**
    * The unique ID of the Ezsignfoldertype.
    * minimum: 0
+   * maximum: 65535
    **/
   @ApiModelProperty(value = "The unique ID of the Ezsignfoldertype.")
   public Integer getFkiEzsignfoldertypeID() {
@@ -109,7 +110,7 @@ public class EzsignfolderResponse {
 
   /**
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "")
   public FieldEEzsignfolderCompletion getEEzsignfolderCompletion() {
     return eEzsignfolderCompletion;
   }

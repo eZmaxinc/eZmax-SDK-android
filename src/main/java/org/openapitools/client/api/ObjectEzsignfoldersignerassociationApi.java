@@ -24,6 +24,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
 import org.openapitools.client.model.CommonResponseError;
+import org.openapitools.client.model.EzsignfoldersignerassociationCreateEmbeddedUrlV1Request;
+import org.openapitools.client.model.EzsignfoldersignerassociationCreateEmbeddedUrlV1Response;
 import org.openapitools.client.model.EzsignfoldersignerassociationCreateObjectV1Request;
 import org.openapitools.client.model.EzsignfoldersignerassociationCreateObjectV1Response;
 import org.openapitools.client.model.EzsignfoldersignerassociationCreateObjectV2Request;
@@ -69,6 +71,145 @@ public class ObjectEzsignfoldersignerassociationApi {
     return basePath;
   }
 
+  /**
+  * Creates an Url to allow embedded signing
+  * This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.
+   * @param pkiEzsignfoldersignerassociationID 
+   * @param ezsignfoldersignerassociationCreateEmbeddedUrlV1Request 
+   * @return EzsignfoldersignerassociationCreateEmbeddedUrlV1Response
+  */
+  public EzsignfoldersignerassociationCreateEmbeddedUrlV1Response ezsignfoldersignerassociationCreateEmbeddedUrlV1 (Integer pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationCreateEmbeddedUrlV1Request ezsignfoldersignerassociationCreateEmbeddedUrlV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = ezsignfoldersignerassociationCreateEmbeddedUrlV1Request;
+    // verify the required parameter 'pkiEzsignfoldersignerassociationID' is set
+    if (pkiEzsignfoldersignerassociationID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsignfoldersignerassociationID' when calling ezsignfoldersignerassociationCreateEmbeddedUrlV1",
+        new ApiException(400, "Missing the required parameter 'pkiEzsignfoldersignerassociationID' when calling ezsignfoldersignerassociationCreateEmbeddedUrlV1"));
+    }
+    // verify the required parameter 'ezsignfoldersignerassociationCreateEmbeddedUrlV1Request' is set
+    if (ezsignfoldersignerassociationCreateEmbeddedUrlV1Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'ezsignfoldersignerassociationCreateEmbeddedUrlV1Request' when calling ezsignfoldersignerassociationCreateEmbeddedUrlV1",
+        new ApiException(400, "Missing the required parameter 'ezsignfoldersignerassociationCreateEmbeddedUrlV1Request' when calling ezsignfoldersignerassociationCreateEmbeddedUrlV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/createEmbeddedUrl".replaceAll("\\{" + "pkiEzsignfoldersignerassociationID" + "\\}", apiInvoker.escapeString(pkiEzsignfoldersignerassociationID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (EzsignfoldersignerassociationCreateEmbeddedUrlV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsignfoldersignerassociationCreateEmbeddedUrlV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Creates an Url to allow embedded signing
+   * This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.
+   * @param pkiEzsignfoldersignerassociationID    * @param ezsignfoldersignerassociationCreateEmbeddedUrlV1Request 
+  */
+  public void ezsignfoldersignerassociationCreateEmbeddedUrlV1 (Integer pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationCreateEmbeddedUrlV1Request ezsignfoldersignerassociationCreateEmbeddedUrlV1Request, final Response.Listener<EzsignfoldersignerassociationCreateEmbeddedUrlV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = ezsignfoldersignerassociationCreateEmbeddedUrlV1Request;
+
+    // verify the required parameter 'pkiEzsignfoldersignerassociationID' is set
+    if (pkiEzsignfoldersignerassociationID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsignfoldersignerassociationID' when calling ezsignfoldersignerassociationCreateEmbeddedUrlV1",
+        new ApiException(400, "Missing the required parameter 'pkiEzsignfoldersignerassociationID' when calling ezsignfoldersignerassociationCreateEmbeddedUrlV1"));
+    }
+    // verify the required parameter 'ezsignfoldersignerassociationCreateEmbeddedUrlV1Request' is set
+    if (ezsignfoldersignerassociationCreateEmbeddedUrlV1Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'ezsignfoldersignerassociationCreateEmbeddedUrlV1Request' when calling ezsignfoldersignerassociationCreateEmbeddedUrlV1",
+        new ApiException(400, "Missing the required parameter 'ezsignfoldersignerassociationCreateEmbeddedUrlV1Request' when calling ezsignfoldersignerassociationCreateEmbeddedUrlV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/createEmbeddedUrl".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiEzsignfoldersignerassociationID" + "\\}", apiInvoker.escapeString(pkiEzsignfoldersignerassociationID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((EzsignfoldersignerassociationCreateEmbeddedUrlV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsignfoldersignerassociationCreateEmbeddedUrlV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
   /**
   * Create a new Ezsignfoldersignerassociation
   * The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.

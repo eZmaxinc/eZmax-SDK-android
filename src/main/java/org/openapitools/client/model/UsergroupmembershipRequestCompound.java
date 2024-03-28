@@ -27,6 +27,8 @@ public class UsergroupmembershipRequestCompound {
   private Integer fkiUsergroupID = null;
   @SerializedName("fkiUserID")
   private Integer fkiUserID = null;
+  @SerializedName("fkiUsergroupexternalID")
+  private Integer fkiUsergroupexternalID = null;
 
   /**
    * The unique ID of the Usergroupmembership
@@ -58,12 +60,25 @@ public class UsergroupmembershipRequestCompound {
    * The unique ID of the User
    * minimum: 0
    **/
-  @ApiModelProperty(required = true, value = "The unique ID of the User")
+  @ApiModelProperty(value = "The unique ID of the User")
   public Integer getFkiUserID() {
     return fkiUserID;
   }
   public void setFkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
+  }
+
+  /**
+   * The unique ID of the Usergroupexternal
+   * minimum: 0
+   * maximum: 255
+   **/
+  @ApiModelProperty(value = "The unique ID of the Usergroupexternal")
+  public Integer getFkiUsergroupexternalID() {
+    return fkiUsergroupexternalID;
+  }
+  public void setFkiUsergroupexternalID(Integer fkiUsergroupexternalID) {
+    this.fkiUsergroupexternalID = fkiUsergroupexternalID;
   }
 
 
@@ -78,7 +93,8 @@ public class UsergroupmembershipRequestCompound {
     UsergroupmembershipRequestCompound usergroupmembershipRequestCompound = (UsergroupmembershipRequestCompound) o;
     return (this.pkiUsergroupmembershipID == null ? usergroupmembershipRequestCompound.pkiUsergroupmembershipID == null : this.pkiUsergroupmembershipID.equals(usergroupmembershipRequestCompound.pkiUsergroupmembershipID)) &&
         (this.fkiUsergroupID == null ? usergroupmembershipRequestCompound.fkiUsergroupID == null : this.fkiUsergroupID.equals(usergroupmembershipRequestCompound.fkiUsergroupID)) &&
-        (this.fkiUserID == null ? usergroupmembershipRequestCompound.fkiUserID == null : this.fkiUserID.equals(usergroupmembershipRequestCompound.fkiUserID));
+        (this.fkiUserID == null ? usergroupmembershipRequestCompound.fkiUserID == null : this.fkiUserID.equals(usergroupmembershipRequestCompound.fkiUserID)) &&
+        (this.fkiUsergroupexternalID == null ? usergroupmembershipRequestCompound.fkiUsergroupexternalID == null : this.fkiUsergroupexternalID.equals(usergroupmembershipRequestCompound.fkiUsergroupexternalID));
   }
 
   @Override
@@ -87,6 +103,7 @@ public class UsergroupmembershipRequestCompound {
     result = 31 * result + (this.pkiUsergroupmembershipID == null ? 0: this.pkiUsergroupmembershipID.hashCode());
     result = 31 * result + (this.fkiUsergroupID == null ? 0: this.fkiUsergroupID.hashCode());
     result = 31 * result + (this.fkiUserID == null ? 0: this.fkiUserID.hashCode());
+    result = 31 * result + (this.fkiUsergroupexternalID == null ? 0: this.fkiUsergroupexternalID.hashCode());
     return result;
   }
 
@@ -98,6 +115,7 @@ public class UsergroupmembershipRequestCompound {
     sb.append("  pkiUsergroupmembershipID: ").append(pkiUsergroupmembershipID).append("\n");
     sb.append("  fkiUsergroupID: ").append(fkiUsergroupID).append("\n");
     sb.append("  fkiUserID: ").append(fkiUserID).append("\n");
+    sb.append("  fkiUsergroupexternalID: ").append(fkiUsergroupexternalID).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

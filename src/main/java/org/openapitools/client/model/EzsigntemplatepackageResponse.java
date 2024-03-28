@@ -39,6 +39,8 @@ public class EzsigntemplatepackageResponse {
   private Boolean bEzsigntemplatepackageIsactive = null;
   @SerializedName("sEzsignfoldertypeNameX")
   private String sEzsignfoldertypeNameX = null;
+  @SerializedName("bEzsigntemplatepackageEditallowed")
+  private Boolean bEzsigntemplatepackageEditallowed = null;
 
   /**
    * The unique ID of the Ezsigntemplatepackage
@@ -55,6 +57,7 @@ public class EzsigntemplatepackageResponse {
   /**
    * The unique ID of the Ezsignfoldertype.
    * minimum: 0
+   * maximum: 65535
    **/
   @ApiModelProperty(required = true, value = "The unique ID of the Ezsignfoldertype.")
   public Integer getFkiEzsignfoldertypeID() {
@@ -143,6 +146,17 @@ public class EzsigntemplatepackageResponse {
     this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
   }
 
+  /**
+   * Whether the Ezsigntemplatepackage if allowed to edit or not
+   **/
+  @ApiModelProperty(required = true, value = "Whether the Ezsigntemplatepackage if allowed to edit or not")
+  public Boolean getBEzsigntemplatepackageEditallowed() {
+    return bEzsigntemplatepackageEditallowed;
+  }
+  public void setBEzsigntemplatepackageEditallowed(Boolean bEzsigntemplatepackageEditallowed) {
+    this.bEzsigntemplatepackageEditallowed = bEzsigntemplatepackageEditallowed;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -161,7 +175,8 @@ public class EzsigntemplatepackageResponse {
         (this.bEzsigntemplatepackageAdminonly == null ? ezsigntemplatepackageResponse.bEzsigntemplatepackageAdminonly == null : this.bEzsigntemplatepackageAdminonly.equals(ezsigntemplatepackageResponse.bEzsigntemplatepackageAdminonly)) &&
         (this.bEzsigntemplatepackageNeedvalidation == null ? ezsigntemplatepackageResponse.bEzsigntemplatepackageNeedvalidation == null : this.bEzsigntemplatepackageNeedvalidation.equals(ezsigntemplatepackageResponse.bEzsigntemplatepackageNeedvalidation)) &&
         (this.bEzsigntemplatepackageIsactive == null ? ezsigntemplatepackageResponse.bEzsigntemplatepackageIsactive == null : this.bEzsigntemplatepackageIsactive.equals(ezsigntemplatepackageResponse.bEzsigntemplatepackageIsactive)) &&
-        (this.sEzsignfoldertypeNameX == null ? ezsigntemplatepackageResponse.sEzsignfoldertypeNameX == null : this.sEzsignfoldertypeNameX.equals(ezsigntemplatepackageResponse.sEzsignfoldertypeNameX));
+        (this.sEzsignfoldertypeNameX == null ? ezsigntemplatepackageResponse.sEzsignfoldertypeNameX == null : this.sEzsignfoldertypeNameX.equals(ezsigntemplatepackageResponse.sEzsignfoldertypeNameX)) &&
+        (this.bEzsigntemplatepackageEditallowed == null ? ezsigntemplatepackageResponse.bEzsigntemplatepackageEditallowed == null : this.bEzsigntemplatepackageEditallowed.equals(ezsigntemplatepackageResponse.bEzsigntemplatepackageEditallowed));
   }
 
   @Override
@@ -176,6 +191,7 @@ public class EzsigntemplatepackageResponse {
     result = 31 * result + (this.bEzsigntemplatepackageNeedvalidation == null ? 0: this.bEzsigntemplatepackageNeedvalidation.hashCode());
     result = 31 * result + (this.bEzsigntemplatepackageIsactive == null ? 0: this.bEzsigntemplatepackageIsactive.hashCode());
     result = 31 * result + (this.sEzsignfoldertypeNameX == null ? 0: this.sEzsignfoldertypeNameX.hashCode());
+    result = 31 * result + (this.bEzsigntemplatepackageEditallowed == null ? 0: this.bEzsigntemplatepackageEditallowed.hashCode());
     return result;
   }
 
@@ -193,6 +209,7 @@ public class EzsigntemplatepackageResponse {
     sb.append("  bEzsigntemplatepackageNeedvalidation: ").append(bEzsigntemplatepackageNeedvalidation).append("\n");
     sb.append("  bEzsigntemplatepackageIsactive: ").append(bEzsigntemplatepackageIsactive).append("\n");
     sb.append("  sEzsignfoldertypeNameX: ").append(sEzsignfoldertypeNameX).append("\n");
+    sb.append("  bEzsigntemplatepackageEditallowed: ").append(bEzsigntemplatepackageEditallowed).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

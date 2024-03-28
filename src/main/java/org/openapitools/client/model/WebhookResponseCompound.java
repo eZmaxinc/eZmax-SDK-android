@@ -12,10 +12,12 @@
 
 package org.openapitools.client.model;
 
+import java.util.*;
 import org.openapitools.client.model.CommonAudit;
 import org.openapitools.client.model.FieldEWebhookEzsignevent;
 import org.openapitools.client.model.FieldEWebhookManagementevent;
 import org.openapitools.client.model.FieldEWebhookModule;
+import org.openapitools.client.model.WebhookheaderResponseCompound;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -57,6 +59,8 @@ public class WebhookResponseCompound {
   private CommonAudit objAudit = null;
   @SerializedName("sWebhookEvent")
   private String sWebhookEvent = null;
+  @SerializedName("a_objWebhookheader")
+  private List<WebhookheaderResponseCompound> aObjWebhookheader = null;
 
   /**
    * The unique ID of the Webhook
@@ -83,6 +87,7 @@ public class WebhookResponseCompound {
   /**
    * The unique ID of the Ezsignfoldertype.
    * minimum: 0
+   * maximum: 65535
    **/
   @ApiModelProperty(value = "The unique ID of the Ezsignfoldertype.")
   public Integer getFkiEzsignfoldertypeID() {
@@ -231,6 +236,16 @@ public class WebhookResponseCompound {
     this.sWebhookEvent = sWebhookEvent;
   }
 
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public List<WebhookheaderResponseCompound> getAObjWebhookheader() {
+    return aObjWebhookheader;
+  }
+  public void setAObjWebhookheader(List<WebhookheaderResponseCompound> aObjWebhookheader) {
+    this.aObjWebhookheader = aObjWebhookheader;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -256,7 +271,8 @@ public class WebhookResponseCompound {
         (this.bWebhookIssigned == null ? webhookResponseCompound.bWebhookIssigned == null : this.bWebhookIssigned.equals(webhookResponseCompound.bWebhookIssigned)) &&
         (this.bWebhookSkipsslvalidation == null ? webhookResponseCompound.bWebhookSkipsslvalidation == null : this.bWebhookSkipsslvalidation.equals(webhookResponseCompound.bWebhookSkipsslvalidation)) &&
         (this.objAudit == null ? webhookResponseCompound.objAudit == null : this.objAudit.equals(webhookResponseCompound.objAudit)) &&
-        (this.sWebhookEvent == null ? webhookResponseCompound.sWebhookEvent == null : this.sWebhookEvent.equals(webhookResponseCompound.sWebhookEvent));
+        (this.sWebhookEvent == null ? webhookResponseCompound.sWebhookEvent == null : this.sWebhookEvent.equals(webhookResponseCompound.sWebhookEvent)) &&
+        (this.aObjWebhookheader == null ? webhookResponseCompound.aObjWebhookheader == null : this.aObjWebhookheader.equals(webhookResponseCompound.aObjWebhookheader));
   }
 
   @Override
@@ -278,6 +294,7 @@ public class WebhookResponseCompound {
     result = 31 * result + (this.bWebhookSkipsslvalidation == null ? 0: this.bWebhookSkipsslvalidation.hashCode());
     result = 31 * result + (this.objAudit == null ? 0: this.objAudit.hashCode());
     result = 31 * result + (this.sWebhookEvent == null ? 0: this.sWebhookEvent.hashCode());
+    result = 31 * result + (this.aObjWebhookheader == null ? 0: this.aObjWebhookheader.hashCode());
     return result;
   }
 
@@ -302,6 +319,7 @@ public class WebhookResponseCompound {
     sb.append("  bWebhookSkipsslvalidation: ").append(bWebhookSkipsslvalidation).append("\n");
     sb.append("  objAudit: ").append(objAudit).append("\n");
     sb.append("  sWebhookEvent: ").append(sWebhookEvent).append("\n");
+    sb.append("  aObjWebhookheader: ").append(aObjWebhookheader).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

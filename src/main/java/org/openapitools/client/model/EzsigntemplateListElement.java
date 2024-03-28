@@ -12,6 +12,7 @@
 
 package org.openapitools.client.model;
 
+import org.openapitools.client.model.FieldEEzsigntemplateType;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -39,6 +40,8 @@ public class EzsigntemplateListElement {
   private Boolean bEzsigntemplateIncomplete = null;
   @SerializedName("sEzsignfoldertypeNameX")
   private String sEzsignfoldertypeNameX = null;
+  @SerializedName("eEzsigntemplateType")
+  private FieldEEzsigntemplateType eEzsigntemplateType = null;
 
   /**
    * The unique ID of the Ezsigntemplate
@@ -55,8 +58,9 @@ public class EzsigntemplateListElement {
   /**
    * The unique ID of the Ezsignfoldertype.
    * minimum: 0
+   * maximum: 65535
    **/
-  @ApiModelProperty(required = true, value = "The unique ID of the Ezsignfoldertype.")
+  @ApiModelProperty(value = "The unique ID of the Ezsignfoldertype.")
   public Integer getFkiEzsignfoldertypeID() {
     return fkiEzsignfoldertypeID;
   }
@@ -136,12 +140,22 @@ public class EzsigntemplateListElement {
   /**
    * The name of the Ezsignfoldertype in the language of the requester
    **/
-  @ApiModelProperty(required = true, value = "The name of the Ezsignfoldertype in the language of the requester")
+  @ApiModelProperty(value = "The name of the Ezsignfoldertype in the language of the requester")
   public String getSEzsignfoldertypeNameX() {
     return sEzsignfoldertypeNameX;
   }
   public void setSEzsignfoldertypeNameX(String sEzsignfoldertypeNameX) {
     this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public FieldEEzsigntemplateType getEEzsigntemplateType() {
+    return eEzsigntemplateType;
+  }
+  public void setEEzsigntemplateType(FieldEEzsigntemplateType eEzsigntemplateType) {
+    this.eEzsigntemplateType = eEzsigntemplateType;
   }
 
 
@@ -162,7 +176,8 @@ public class EzsigntemplateListElement {
         (this.iEzsigntemplateSignaturetotal == null ? ezsigntemplateListElement.iEzsigntemplateSignaturetotal == null : this.iEzsigntemplateSignaturetotal.equals(ezsigntemplateListElement.iEzsigntemplateSignaturetotal)) &&
         (this.iEzsigntemplateFormfieldtotal == null ? ezsigntemplateListElement.iEzsigntemplateFormfieldtotal == null : this.iEzsigntemplateFormfieldtotal.equals(ezsigntemplateListElement.iEzsigntemplateFormfieldtotal)) &&
         (this.bEzsigntemplateIncomplete == null ? ezsigntemplateListElement.bEzsigntemplateIncomplete == null : this.bEzsigntemplateIncomplete.equals(ezsigntemplateListElement.bEzsigntemplateIncomplete)) &&
-        (this.sEzsignfoldertypeNameX == null ? ezsigntemplateListElement.sEzsignfoldertypeNameX == null : this.sEzsignfoldertypeNameX.equals(ezsigntemplateListElement.sEzsignfoldertypeNameX));
+        (this.sEzsignfoldertypeNameX == null ? ezsigntemplateListElement.sEzsignfoldertypeNameX == null : this.sEzsignfoldertypeNameX.equals(ezsigntemplateListElement.sEzsignfoldertypeNameX)) &&
+        (this.eEzsigntemplateType == null ? ezsigntemplateListElement.eEzsigntemplateType == null : this.eEzsigntemplateType.equals(ezsigntemplateListElement.eEzsigntemplateType));
   }
 
   @Override
@@ -177,6 +192,7 @@ public class EzsigntemplateListElement {
     result = 31 * result + (this.iEzsigntemplateFormfieldtotal == null ? 0: this.iEzsigntemplateFormfieldtotal.hashCode());
     result = 31 * result + (this.bEzsigntemplateIncomplete == null ? 0: this.bEzsigntemplateIncomplete.hashCode());
     result = 31 * result + (this.sEzsignfoldertypeNameX == null ? 0: this.sEzsignfoldertypeNameX.hashCode());
+    result = 31 * result + (this.eEzsigntemplateType == null ? 0: this.eEzsigntemplateType.hashCode());
     return result;
   }
 
@@ -194,6 +210,7 @@ public class EzsigntemplateListElement {
     sb.append("  iEzsigntemplateFormfieldtotal: ").append(iEzsigntemplateFormfieldtotal).append("\n");
     sb.append("  bEzsigntemplateIncomplete: ").append(bEzsigntemplateIncomplete).append("\n");
     sb.append("  sEzsignfoldertypeNameX: ").append(sEzsignfoldertypeNameX).append("\n");
+    sb.append("  eEzsigntemplateType: ").append(eEzsigntemplateType).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

@@ -14,6 +14,7 @@ package org.openapitools.client.model;
 
 import java.util.*;
 import org.openapitools.client.model.EzsigntemplateResponseCompound;
+import org.openapitools.client.model.EzsigntemplateglobalResponseCompound;
 import org.openapitools.client.model.EzsigntemplatepackageResponseCompound;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
@@ -28,6 +29,8 @@ public class EzsignSuggestTemplatesV1ResponseMPayload {
   private List<EzsigntemplateResponseCompound> aObjEzsigntemplate = null;
   @SerializedName("a_objEzsigntemplatepackage")
   private List<EzsigntemplatepackageResponseCompound> aObjEzsigntemplatepackage = null;
+  @SerializedName("a_objEzsigntemplateglobal")
+  private List<EzsigntemplateglobalResponseCompound> aObjEzsigntemplateglobal = null;
 
   /**
    **/
@@ -49,6 +52,16 @@ public class EzsignSuggestTemplatesV1ResponseMPayload {
     this.aObjEzsigntemplatepackage = aObjEzsigntemplatepackage;
   }
 
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public List<EzsigntemplateglobalResponseCompound> getAObjEzsigntemplateglobal() {
+    return aObjEzsigntemplateglobal;
+  }
+  public void setAObjEzsigntemplateglobal(List<EzsigntemplateglobalResponseCompound> aObjEzsigntemplateglobal) {
+    this.aObjEzsigntemplateglobal = aObjEzsigntemplateglobal;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -60,7 +73,8 @@ public class EzsignSuggestTemplatesV1ResponseMPayload {
     }
     EzsignSuggestTemplatesV1ResponseMPayload ezsignSuggestTemplatesV1ResponseMPayload = (EzsignSuggestTemplatesV1ResponseMPayload) o;
     return (this.aObjEzsigntemplate == null ? ezsignSuggestTemplatesV1ResponseMPayload.aObjEzsigntemplate == null : this.aObjEzsigntemplate.equals(ezsignSuggestTemplatesV1ResponseMPayload.aObjEzsigntemplate)) &&
-        (this.aObjEzsigntemplatepackage == null ? ezsignSuggestTemplatesV1ResponseMPayload.aObjEzsigntemplatepackage == null : this.aObjEzsigntemplatepackage.equals(ezsignSuggestTemplatesV1ResponseMPayload.aObjEzsigntemplatepackage));
+        (this.aObjEzsigntemplatepackage == null ? ezsignSuggestTemplatesV1ResponseMPayload.aObjEzsigntemplatepackage == null : this.aObjEzsigntemplatepackage.equals(ezsignSuggestTemplatesV1ResponseMPayload.aObjEzsigntemplatepackage)) &&
+        (this.aObjEzsigntemplateglobal == null ? ezsignSuggestTemplatesV1ResponseMPayload.aObjEzsigntemplateglobal == null : this.aObjEzsigntemplateglobal.equals(ezsignSuggestTemplatesV1ResponseMPayload.aObjEzsigntemplateglobal));
   }
 
   @Override
@@ -68,6 +82,7 @@ public class EzsignSuggestTemplatesV1ResponseMPayload {
     int result = 17;
     result = 31 * result + (this.aObjEzsigntemplate == null ? 0: this.aObjEzsigntemplate.hashCode());
     result = 31 * result + (this.aObjEzsigntemplatepackage == null ? 0: this.aObjEzsigntemplatepackage.hashCode());
+    result = 31 * result + (this.aObjEzsigntemplateglobal == null ? 0: this.aObjEzsigntemplateglobal.hashCode());
     return result;
   }
 
@@ -78,6 +93,7 @@ public class EzsignSuggestTemplatesV1ResponseMPayload {
     
     sb.append("  aObjEzsigntemplate: ").append(aObjEzsigntemplate).append("\n");
     sb.append("  aObjEzsigntemplatepackage: ").append(aObjEzsigntemplatepackage).append("\n");
+    sb.append("  aObjEzsigntemplateglobal: ").append(aObjEzsigntemplateglobal).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

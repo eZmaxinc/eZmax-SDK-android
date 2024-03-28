@@ -12,10 +12,12 @@
 
 package org.openapitools.client.model;
 
+import java.util.*;
 import org.openapitools.client.model.CommonAudit;
 import org.openapitools.client.model.FieldEWebhookEzsignevent;
 import org.openapitools.client.model.FieldEWebhookManagementevent;
 import org.openapitools.client.model.FieldEWebhookModule;
+import org.openapitools.client.model.WebhookheaderResponseCompound;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -55,6 +57,10 @@ public class CustomWebhookResponse {
   private Boolean bWebhookSkipsslvalidation = null;
   @SerializedName("objAudit")
   private CommonAudit objAudit = null;
+  @SerializedName("sWebhookEvent")
+  private String sWebhookEvent = null;
+  @SerializedName("a_objWebhookheader")
+  private List<WebhookheaderResponseCompound> aObjWebhookheader = null;
   @SerializedName("pksCustomerCode")
   private String pksCustomerCode = null;
   @SerializedName("bWebhookTest")
@@ -85,6 +91,7 @@ public class CustomWebhookResponse {
   /**
    * The unique ID of the Ezsignfoldertype.
    * minimum: 0
+   * maximum: 65535
    **/
   @ApiModelProperty(value = "The unique ID of the Ezsignfoldertype.")
   public Integer getFkiEzsignfoldertypeID() {
@@ -223,6 +230,27 @@ public class CustomWebhookResponse {
   }
 
   /**
+   * The concatenated string to describe the Webhook event
+   **/
+  @ApiModelProperty(value = "The concatenated string to describe the Webhook event")
+  public String getSWebhookEvent() {
+    return sWebhookEvent;
+  }
+  public void setSWebhookEvent(String sWebhookEvent) {
+    this.sWebhookEvent = sWebhookEvent;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public List<WebhookheaderResponseCompound> getAObjWebhookheader() {
+    return aObjWebhookheader;
+  }
+  public void setAObjWebhookheader(List<WebhookheaderResponseCompound> aObjWebhookheader) {
+    this.aObjWebhookheader = aObjWebhookheader;
+  }
+
+  /**
    * The customer code assigned to your account
    **/
   @ApiModelProperty(required = true, value = "The customer code assigned to your account")
@@ -269,6 +297,8 @@ public class CustomWebhookResponse {
         (this.bWebhookIssigned == null ? customWebhookResponse.bWebhookIssigned == null : this.bWebhookIssigned.equals(customWebhookResponse.bWebhookIssigned)) &&
         (this.bWebhookSkipsslvalidation == null ? customWebhookResponse.bWebhookSkipsslvalidation == null : this.bWebhookSkipsslvalidation.equals(customWebhookResponse.bWebhookSkipsslvalidation)) &&
         (this.objAudit == null ? customWebhookResponse.objAudit == null : this.objAudit.equals(customWebhookResponse.objAudit)) &&
+        (this.sWebhookEvent == null ? customWebhookResponse.sWebhookEvent == null : this.sWebhookEvent.equals(customWebhookResponse.sWebhookEvent)) &&
+        (this.aObjWebhookheader == null ? customWebhookResponse.aObjWebhookheader == null : this.aObjWebhookheader.equals(customWebhookResponse.aObjWebhookheader)) &&
         (this.pksCustomerCode == null ? customWebhookResponse.pksCustomerCode == null : this.pksCustomerCode.equals(customWebhookResponse.pksCustomerCode)) &&
         (this.bWebhookTest == null ? customWebhookResponse.bWebhookTest == null : this.bWebhookTest.equals(customWebhookResponse.bWebhookTest));
   }
@@ -291,6 +321,8 @@ public class CustomWebhookResponse {
     result = 31 * result + (this.bWebhookIssigned == null ? 0: this.bWebhookIssigned.hashCode());
     result = 31 * result + (this.bWebhookSkipsslvalidation == null ? 0: this.bWebhookSkipsslvalidation.hashCode());
     result = 31 * result + (this.objAudit == null ? 0: this.objAudit.hashCode());
+    result = 31 * result + (this.sWebhookEvent == null ? 0: this.sWebhookEvent.hashCode());
+    result = 31 * result + (this.aObjWebhookheader == null ? 0: this.aObjWebhookheader.hashCode());
     result = 31 * result + (this.pksCustomerCode == null ? 0: this.pksCustomerCode.hashCode());
     result = 31 * result + (this.bWebhookTest == null ? 0: this.bWebhookTest.hashCode());
     return result;
@@ -316,6 +348,8 @@ public class CustomWebhookResponse {
     sb.append("  bWebhookIssigned: ").append(bWebhookIssigned).append("\n");
     sb.append("  bWebhookSkipsslvalidation: ").append(bWebhookSkipsslvalidation).append("\n");
     sb.append("  objAudit: ").append(objAudit).append("\n");
+    sb.append("  sWebhookEvent: ").append(sWebhookEvent).append("\n");
+    sb.append("  aObjWebhookheader: ").append(aObjWebhookheader).append("\n");
     sb.append("  pksCustomerCode: ").append(pksCustomerCode).append("\n");
     sb.append("  bWebhookTest: ").append(bWebhookTest).append("\n");
     sb.append("}\n");

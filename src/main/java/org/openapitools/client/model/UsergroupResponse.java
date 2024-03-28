@@ -26,6 +26,8 @@ public class UsergroupResponse {
   private Integer pkiUsergroupID = null;
   @SerializedName("objUsergroupName")
   private MultilingualUsergroupName objUsergroupName = null;
+  @SerializedName("sUsergroupNameX")
+  private String sUsergroupNameX = null;
 
   /**
    * The unique ID of the Usergroup
@@ -50,6 +52,17 @@ public class UsergroupResponse {
     this.objUsergroupName = objUsergroupName;
   }
 
+  /**
+   * The Name of the Usergroup in the language of the requester
+   **/
+  @ApiModelProperty(value = "The Name of the Usergroup in the language of the requester")
+  public String getSUsergroupNameX() {
+    return sUsergroupNameX;
+  }
+  public void setSUsergroupNameX(String sUsergroupNameX) {
+    this.sUsergroupNameX = sUsergroupNameX;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -61,7 +74,8 @@ public class UsergroupResponse {
     }
     UsergroupResponse usergroupResponse = (UsergroupResponse) o;
     return (this.pkiUsergroupID == null ? usergroupResponse.pkiUsergroupID == null : this.pkiUsergroupID.equals(usergroupResponse.pkiUsergroupID)) &&
-        (this.objUsergroupName == null ? usergroupResponse.objUsergroupName == null : this.objUsergroupName.equals(usergroupResponse.objUsergroupName));
+        (this.objUsergroupName == null ? usergroupResponse.objUsergroupName == null : this.objUsergroupName.equals(usergroupResponse.objUsergroupName)) &&
+        (this.sUsergroupNameX == null ? usergroupResponse.sUsergroupNameX == null : this.sUsergroupNameX.equals(usergroupResponse.sUsergroupNameX));
   }
 
   @Override
@@ -69,6 +83,7 @@ public class UsergroupResponse {
     int result = 17;
     result = 31 * result + (this.pkiUsergroupID == null ? 0: this.pkiUsergroupID.hashCode());
     result = 31 * result + (this.objUsergroupName == null ? 0: this.objUsergroupName.hashCode());
+    result = 31 * result + (this.sUsergroupNameX == null ? 0: this.sUsergroupNameX.hashCode());
     return result;
   }
 
@@ -79,6 +94,7 @@ public class UsergroupResponse {
     
     sb.append("  pkiUsergroupID: ").append(pkiUsergroupID).append("\n");
     sb.append("  objUsergroupName: ").append(objUsergroupName).append("\n");
+    sb.append("  sUsergroupNameX: ").append(sUsergroupNameX).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

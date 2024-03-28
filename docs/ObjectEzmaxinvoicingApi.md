@@ -4,63 +4,10 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ezmaxinvoicingGetAutocompleteV1**](ObjectEzmaxinvoicingApi.md#ezmaxinvoicingGetAutocompleteV1) | **GET** /1/object/ezmaxinvoicing/getAutocomplete/{sSelector} | Retrieve Ezmaxinvoicings and IDs
 [**ezmaxinvoicingGetAutocompleteV2**](ObjectEzmaxinvoicingApi.md#ezmaxinvoicingGetAutocompleteV2) | **GET** /2/object/ezmaxinvoicing/getAutocomplete/{sSelector} | Retrieve Ezmaxinvoicings and IDs
 [**ezmaxinvoicingGetObjectV2**](ObjectEzmaxinvoicingApi.md#ezmaxinvoicingGetObjectV2) | **GET** /2/object/ezmaxinvoicing/{pkiEzmaxinvoicingID} | Retrieve an existing Ezmaxinvoicing
 [**ezmaxinvoicingGetProvisionalV1**](ObjectEzmaxinvoicingApi.md#ezmaxinvoicingGetProvisionalV1) | **GET** /1/object/ezmaxinvoicing/getProvisional | Retrieve provisional Ezmaxinvoicing
 
-
-
-## ezmaxinvoicingGetAutocompleteV1
-
-> CommonGetAutocompleteV1Response ezmaxinvoicingGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage)
-
-Retrieve Ezmaxinvoicings and IDs
-
-Get the list of Ezmaxinvoicing to be used in a dropdown or autocomplete control.
-
-### Example
-
-```java
-// Import classes:
-//import org.openapitools.client.api.ObjectEzmaxinvoicingApi;
-
-ObjectEzmaxinvoicingApi apiInstance = new ObjectEzmaxinvoicingApi();
-String sSelector = null; // String | The type of Ezmaxinvoicings to return
-String eFilterActive = null; // String | Specify which results we want to display. Active is the default value.
-String sQuery = null; // String | Allow to filter the returned results
-HeaderAcceptLanguage acceptLanguage = null; // HeaderAcceptLanguage | 
-try {
-    CommonGetAutocompleteV1Response result = apiInstance.ezmaxinvoicingGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling ObjectEzmaxinvoicingApi#ezmaxinvoicingGetAutocompleteV1");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **sSelector** | **String**| The type of Ezmaxinvoicings to return | [default to null] [enum: All]
- **eFilterActive** | **String**| Specify which results we want to display. Active is the default value. | [optional] [default to null] [enum: All, Active, Inactive]
- **sQuery** | **String**| Allow to filter the returned results | [optional] [default to null]
- **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [default to null] [enum: *, en, fr]
-
-### Return type
-
-[**CommonGetAutocompleteV1Response**](CommonGetAutocompleteV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
 
 
 ## ezmaxinvoicingGetAutocompleteV2

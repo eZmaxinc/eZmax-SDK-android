@@ -72,7 +72,6 @@ public class EzsigntemplatesignaturecustomdateRequest {
 
   /**
    * The X coordinate (Horizontal) where to put the Ezsigntemplatesignaturecustomdate on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignaturecustomdate 2 inches from the left of the signature, you would use \"200\" for the X coordinate.
-   * minimum: 0
    **/
   @ApiModelProperty(value = "The X coordinate (Horizontal) where to put the Ezsigntemplatesignaturecustomdate on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignaturecustomdate 2 inches from the left of the signature, you would use \"200\" for the X coordinate.")
   public Integer getIEzsigntemplatesignaturecustomdateOffsetx() {
@@ -84,7 +83,6 @@ public class EzsigntemplatesignaturecustomdateRequest {
 
   /**
    * The X coordinate (Horizontal) where to put the Ezsigntemplatesignaturecustomdate on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignaturecustomdate 2 inches from the top of the signature, you would use \"200\" for the Y coordinate.
-   * minimum: 0
    **/
   @ApiModelProperty(value = "The X coordinate (Horizontal) where to put the Ezsigntemplatesignaturecustomdate on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignaturecustomdate 2 inches from the top of the signature, you would use \"200\" for the Y coordinate.")
   public Integer getIEzsigntemplatesignaturecustomdateOffsety() {

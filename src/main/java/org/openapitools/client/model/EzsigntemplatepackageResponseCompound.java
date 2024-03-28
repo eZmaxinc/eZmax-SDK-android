@@ -42,6 +42,8 @@ public class EzsigntemplatepackageResponseCompound {
   private Boolean bEzsigntemplatepackageIsactive = null;
   @SerializedName("sEzsignfoldertypeNameX")
   private String sEzsignfoldertypeNameX = null;
+  @SerializedName("bEzsigntemplatepackageEditallowed")
+  private Boolean bEzsigntemplatepackageEditallowed = null;
   @SerializedName("a_objEzsigntemplatepackagesigner")
   private List<EzsigntemplatepackagesignerResponseCompound> aObjEzsigntemplatepackagesigner = null;
   @SerializedName("a_objEzsigntemplatepackagemembership")
@@ -62,6 +64,7 @@ public class EzsigntemplatepackageResponseCompound {
   /**
    * The unique ID of the Ezsignfoldertype.
    * minimum: 0
+   * maximum: 65535
    **/
   @ApiModelProperty(required = true, value = "The unique ID of the Ezsignfoldertype.")
   public Integer getFkiEzsignfoldertypeID() {
@@ -151,6 +154,17 @@ public class EzsigntemplatepackageResponseCompound {
   }
 
   /**
+   * Whether the Ezsigntemplatepackage if allowed to edit or not
+   **/
+  @ApiModelProperty(required = true, value = "Whether the Ezsigntemplatepackage if allowed to edit or not")
+  public Boolean getBEzsigntemplatepackageEditallowed() {
+    return bEzsigntemplatepackageEditallowed;
+  }
+  public void setBEzsigntemplatepackageEditallowed(Boolean bEzsigntemplatepackageEditallowed) {
+    this.bEzsigntemplatepackageEditallowed = bEzsigntemplatepackageEditallowed;
+  }
+
+  /**
    **/
   @ApiModelProperty(required = true, value = "")
   public List<EzsigntemplatepackagesignerResponseCompound> getAObjEzsigntemplatepackagesigner() {
@@ -189,6 +203,7 @@ public class EzsigntemplatepackageResponseCompound {
         (this.bEzsigntemplatepackageNeedvalidation == null ? ezsigntemplatepackageResponseCompound.bEzsigntemplatepackageNeedvalidation == null : this.bEzsigntemplatepackageNeedvalidation.equals(ezsigntemplatepackageResponseCompound.bEzsigntemplatepackageNeedvalidation)) &&
         (this.bEzsigntemplatepackageIsactive == null ? ezsigntemplatepackageResponseCompound.bEzsigntemplatepackageIsactive == null : this.bEzsigntemplatepackageIsactive.equals(ezsigntemplatepackageResponseCompound.bEzsigntemplatepackageIsactive)) &&
         (this.sEzsignfoldertypeNameX == null ? ezsigntemplatepackageResponseCompound.sEzsignfoldertypeNameX == null : this.sEzsignfoldertypeNameX.equals(ezsigntemplatepackageResponseCompound.sEzsignfoldertypeNameX)) &&
+        (this.bEzsigntemplatepackageEditallowed == null ? ezsigntemplatepackageResponseCompound.bEzsigntemplatepackageEditallowed == null : this.bEzsigntemplatepackageEditallowed.equals(ezsigntemplatepackageResponseCompound.bEzsigntemplatepackageEditallowed)) &&
         (this.aObjEzsigntemplatepackagesigner == null ? ezsigntemplatepackageResponseCompound.aObjEzsigntemplatepackagesigner == null : this.aObjEzsigntemplatepackagesigner.equals(ezsigntemplatepackageResponseCompound.aObjEzsigntemplatepackagesigner)) &&
         (this.aObjEzsigntemplatepackagemembership == null ? ezsigntemplatepackageResponseCompound.aObjEzsigntemplatepackagemembership == null : this.aObjEzsigntemplatepackagemembership.equals(ezsigntemplatepackageResponseCompound.aObjEzsigntemplatepackagemembership));
   }
@@ -205,6 +220,7 @@ public class EzsigntemplatepackageResponseCompound {
     result = 31 * result + (this.bEzsigntemplatepackageNeedvalidation == null ? 0: this.bEzsigntemplatepackageNeedvalidation.hashCode());
     result = 31 * result + (this.bEzsigntemplatepackageIsactive == null ? 0: this.bEzsigntemplatepackageIsactive.hashCode());
     result = 31 * result + (this.sEzsignfoldertypeNameX == null ? 0: this.sEzsignfoldertypeNameX.hashCode());
+    result = 31 * result + (this.bEzsigntemplatepackageEditallowed == null ? 0: this.bEzsigntemplatepackageEditallowed.hashCode());
     result = 31 * result + (this.aObjEzsigntemplatepackagesigner == null ? 0: this.aObjEzsigntemplatepackagesigner.hashCode());
     result = 31 * result + (this.aObjEzsigntemplatepackagemembership == null ? 0: this.aObjEzsigntemplatepackagemembership.hashCode());
     return result;
@@ -224,6 +240,7 @@ public class EzsigntemplatepackageResponseCompound {
     sb.append("  bEzsigntemplatepackageNeedvalidation: ").append(bEzsigntemplatepackageNeedvalidation).append("\n");
     sb.append("  bEzsigntemplatepackageIsactive: ").append(bEzsigntemplatepackageIsactive).append("\n");
     sb.append("  sEzsignfoldertypeNameX: ").append(sEzsignfoldertypeNameX).append("\n");
+    sb.append("  bEzsigntemplatepackageEditallowed: ").append(bEzsigntemplatepackageEditallowed).append("\n");
     sb.append("  aObjEzsigntemplatepackagesigner: ").append(aObjEzsigntemplatepackagesigner).append("\n");
     sb.append("  aObjEzsigntemplatepackagemembership: ").append(aObjEzsigntemplatepackagemembership).append("\n");
     sb.append("}\n");

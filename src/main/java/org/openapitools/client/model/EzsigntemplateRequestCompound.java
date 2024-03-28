@@ -29,6 +29,8 @@ public class EzsigntemplateRequestCompound {
   private Integer fkiLanguageID = null;
   @SerializedName("sEzsigntemplateDescription")
   private String sEzsigntemplateDescription = null;
+  @SerializedName("sEzsigntemplateFilenamepattern")
+  private String sEzsigntemplateFilenamepattern = null;
   @SerializedName("bEzsigntemplateAdminonly")
   private Boolean bEzsigntemplateAdminonly = null;
 
@@ -47,6 +49,7 @@ public class EzsigntemplateRequestCompound {
   /**
    * The unique ID of the Ezsignfoldertype.
    * minimum: 0
+   * maximum: 65535
    **/
   @ApiModelProperty(required = true, value = "The unique ID of the Ezsignfoldertype.")
   public Integer getFkiEzsignfoldertypeID() {
@@ -81,6 +84,17 @@ public class EzsigntemplateRequestCompound {
   }
 
   /**
+   * The filename pattern of the Ezsigntemplate
+   **/
+  @ApiModelProperty(value = "The filename pattern of the Ezsigntemplate")
+  public String getSEzsigntemplateFilenamepattern() {
+    return sEzsigntemplateFilenamepattern;
+  }
+  public void setSEzsigntemplateFilenamepattern(String sEzsigntemplateFilenamepattern) {
+    this.sEzsigntemplateFilenamepattern = sEzsigntemplateFilenamepattern;
+  }
+
+  /**
    * Whether the Ezsigntemplate can be accessed by admin users only (eUserType=Normal)
    **/
   @ApiModelProperty(required = true, value = "Whether the Ezsigntemplate can be accessed by admin users only (eUserType=Normal)")
@@ -105,6 +119,7 @@ public class EzsigntemplateRequestCompound {
         (this.fkiEzsignfoldertypeID == null ? ezsigntemplateRequestCompound.fkiEzsignfoldertypeID == null : this.fkiEzsignfoldertypeID.equals(ezsigntemplateRequestCompound.fkiEzsignfoldertypeID)) &&
         (this.fkiLanguageID == null ? ezsigntemplateRequestCompound.fkiLanguageID == null : this.fkiLanguageID.equals(ezsigntemplateRequestCompound.fkiLanguageID)) &&
         (this.sEzsigntemplateDescription == null ? ezsigntemplateRequestCompound.sEzsigntemplateDescription == null : this.sEzsigntemplateDescription.equals(ezsigntemplateRequestCompound.sEzsigntemplateDescription)) &&
+        (this.sEzsigntemplateFilenamepattern == null ? ezsigntemplateRequestCompound.sEzsigntemplateFilenamepattern == null : this.sEzsigntemplateFilenamepattern.equals(ezsigntemplateRequestCompound.sEzsigntemplateFilenamepattern)) &&
         (this.bEzsigntemplateAdminonly == null ? ezsigntemplateRequestCompound.bEzsigntemplateAdminonly == null : this.bEzsigntemplateAdminonly.equals(ezsigntemplateRequestCompound.bEzsigntemplateAdminonly));
   }
 
@@ -115,6 +130,7 @@ public class EzsigntemplateRequestCompound {
     result = 31 * result + (this.fkiEzsignfoldertypeID == null ? 0: this.fkiEzsignfoldertypeID.hashCode());
     result = 31 * result + (this.fkiLanguageID == null ? 0: this.fkiLanguageID.hashCode());
     result = 31 * result + (this.sEzsigntemplateDescription == null ? 0: this.sEzsigntemplateDescription.hashCode());
+    result = 31 * result + (this.sEzsigntemplateFilenamepattern == null ? 0: this.sEzsigntemplateFilenamepattern.hashCode());
     result = 31 * result + (this.bEzsigntemplateAdminonly == null ? 0: this.bEzsigntemplateAdminonly.hashCode());
     return result;
   }
@@ -128,6 +144,7 @@ public class EzsigntemplateRequestCompound {
     sb.append("  fkiEzsignfoldertypeID: ").append(fkiEzsignfoldertypeID).append("\n");
     sb.append("  fkiLanguageID: ").append(fkiLanguageID).append("\n");
     sb.append("  sEzsigntemplateDescription: ").append(sEzsigntemplateDescription).append("\n");
+    sb.append("  sEzsigntemplateFilenamepattern: ").append(sEzsigntemplateFilenamepattern).append("\n");
     sb.append("  bEzsigntemplateAdminonly: ").append(bEzsigntemplateAdminonly).append("\n");
     sb.append("}\n");
     return sb.toString();

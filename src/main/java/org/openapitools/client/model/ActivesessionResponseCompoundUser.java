@@ -70,7 +70,7 @@ public class ActivesessionResponseCompoundUser {
   /**
    * The url of the picture used as avatar
    **/
-  @ApiModelProperty(required = true, value = "The url of the picture used as avatar")
+  @ApiModelProperty(value = "The url of the picture used as avatar")
   public String getSAvatarUrl() {
     return sAvatarUrl;
   }
@@ -103,7 +103,7 @@ public class ActivesessionResponseCompoundUser {
   /**
    * The email address.
    **/
-  @ApiModelProperty(required = true, value = "The email address.")
+  @ApiModelProperty(value = "The email address.")
   public String getSEmailAddress() {
     return sEmailAddress;
   }

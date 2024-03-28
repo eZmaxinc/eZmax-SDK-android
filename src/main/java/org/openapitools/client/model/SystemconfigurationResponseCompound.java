@@ -13,6 +13,7 @@
 package org.openapitools.client.model;
 
 import org.openapitools.client.model.FieldESystemconfigurationEzsign;
+import org.openapitools.client.model.FieldESystemconfigurationEzsignofficeplan;
 import org.openapitools.client.model.FieldESystemconfigurationLanguage1;
 import org.openapitools.client.model.FieldESystemconfigurationLanguage2;
 import org.openapitools.client.model.FieldESystemconfigurationNewexternaluseraction;
@@ -39,8 +40,14 @@ public class SystemconfigurationResponseCompound {
   private FieldESystemconfigurationLanguage2 eSystemconfigurationLanguage2 = null;
   @SerializedName("eSystemconfigurationEzsign")
   private FieldESystemconfigurationEzsign eSystemconfigurationEzsign = null;
+  @SerializedName("eSystemconfigurationEzsignofficeplan")
+  private FieldESystemconfigurationEzsignofficeplan eSystemconfigurationEzsignofficeplan = null;
+  @SerializedName("bSystemconfigurationEzsignpaidbyoffice")
+  private Boolean bSystemconfigurationEzsignpaidbyoffice = null;
   @SerializedName("bSystemconfigurationEzsignpersonnal")
   private Boolean bSystemconfigurationEzsignpersonnal = null;
+  @SerializedName("bSystemconfigurationIsdisposalactive")
+  private Boolean bSystemconfigurationIsdisposalactive = null;
   @SerializedName("bSystemconfigurationSspr")
   private Boolean bSystemconfigurationSspr = null;
   @SerializedName("dtSystemconfigurationReadonlyexpirationstart")
@@ -116,12 +123,33 @@ public class SystemconfigurationResponseCompound {
 
   /**
    **/
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(value = "")
   public FieldESystemconfigurationEzsign getESystemconfigurationEzsign() {
     return eSystemconfigurationEzsign;
   }
   public void setESystemconfigurationEzsign(FieldESystemconfigurationEzsign eSystemconfigurationEzsign) {
     this.eSystemconfigurationEzsign = eSystemconfigurationEzsign;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public FieldESystemconfigurationEzsignofficeplan getESystemconfigurationEzsignofficeplan() {
+    return eSystemconfigurationEzsignofficeplan;
+  }
+  public void setESystemconfigurationEzsignofficeplan(FieldESystemconfigurationEzsignofficeplan eSystemconfigurationEzsignofficeplan) {
+    this.eSystemconfigurationEzsignofficeplan = eSystemconfigurationEzsignofficeplan;
+  }
+
+  /**
+   * Whether if Ezsign is paid by the company or not
+   **/
+  @ApiModelProperty(value = "Whether if Ezsign is paid by the company or not")
+  public Boolean getBSystemconfigurationEzsignpaidbyoffice() {
+    return bSystemconfigurationEzsignpaidbyoffice;
+  }
+  public void setBSystemconfigurationEzsignpaidbyoffice(Boolean bSystemconfigurationEzsignpaidbyoffice) {
+    this.bSystemconfigurationEzsignpaidbyoffice = bSystemconfigurationEzsignpaidbyoffice;
   }
 
   /**
@@ -133,6 +161,17 @@ public class SystemconfigurationResponseCompound {
   }
   public void setBSystemconfigurationEzsignpersonnal(Boolean bSystemconfigurationEzsignpersonnal) {
     this.bSystemconfigurationEzsignpersonnal = bSystemconfigurationEzsignpersonnal;
+  }
+
+  /**
+   * Whether is Disposal processus is active or not
+   **/
+  @ApiModelProperty(value = "Whether is Disposal processus is active or not")
+  public Boolean getBSystemconfigurationIsdisposalactive() {
+    return bSystemconfigurationIsdisposalactive;
+  }
+  public void setBSystemconfigurationIsdisposalactive(Boolean bSystemconfigurationIsdisposalactive) {
+    this.bSystemconfigurationIsdisposalactive = bSystemconfigurationIsdisposalactive;
   }
 
   /**
@@ -185,7 +224,10 @@ public class SystemconfigurationResponseCompound {
         (this.eSystemconfigurationLanguage1 == null ? systemconfigurationResponseCompound.eSystemconfigurationLanguage1 == null : this.eSystemconfigurationLanguage1.equals(systemconfigurationResponseCompound.eSystemconfigurationLanguage1)) &&
         (this.eSystemconfigurationLanguage2 == null ? systemconfigurationResponseCompound.eSystemconfigurationLanguage2 == null : this.eSystemconfigurationLanguage2.equals(systemconfigurationResponseCompound.eSystemconfigurationLanguage2)) &&
         (this.eSystemconfigurationEzsign == null ? systemconfigurationResponseCompound.eSystemconfigurationEzsign == null : this.eSystemconfigurationEzsign.equals(systemconfigurationResponseCompound.eSystemconfigurationEzsign)) &&
+        (this.eSystemconfigurationEzsignofficeplan == null ? systemconfigurationResponseCompound.eSystemconfigurationEzsignofficeplan == null : this.eSystemconfigurationEzsignofficeplan.equals(systemconfigurationResponseCompound.eSystemconfigurationEzsignofficeplan)) &&
+        (this.bSystemconfigurationEzsignpaidbyoffice == null ? systemconfigurationResponseCompound.bSystemconfigurationEzsignpaidbyoffice == null : this.bSystemconfigurationEzsignpaidbyoffice.equals(systemconfigurationResponseCompound.bSystemconfigurationEzsignpaidbyoffice)) &&
         (this.bSystemconfigurationEzsignpersonnal == null ? systemconfigurationResponseCompound.bSystemconfigurationEzsignpersonnal == null : this.bSystemconfigurationEzsignpersonnal.equals(systemconfigurationResponseCompound.bSystemconfigurationEzsignpersonnal)) &&
+        (this.bSystemconfigurationIsdisposalactive == null ? systemconfigurationResponseCompound.bSystemconfigurationIsdisposalactive == null : this.bSystemconfigurationIsdisposalactive.equals(systemconfigurationResponseCompound.bSystemconfigurationIsdisposalactive)) &&
         (this.bSystemconfigurationSspr == null ? systemconfigurationResponseCompound.bSystemconfigurationSspr == null : this.bSystemconfigurationSspr.equals(systemconfigurationResponseCompound.bSystemconfigurationSspr)) &&
         (this.dtSystemconfigurationReadonlyexpirationstart == null ? systemconfigurationResponseCompound.dtSystemconfigurationReadonlyexpirationstart == null : this.dtSystemconfigurationReadonlyexpirationstart.equals(systemconfigurationResponseCompound.dtSystemconfigurationReadonlyexpirationstart)) &&
         (this.dtSystemconfigurationReadonlyexpirationend == null ? systemconfigurationResponseCompound.dtSystemconfigurationReadonlyexpirationend == null : this.dtSystemconfigurationReadonlyexpirationend.equals(systemconfigurationResponseCompound.dtSystemconfigurationReadonlyexpirationend));
@@ -201,7 +243,10 @@ public class SystemconfigurationResponseCompound {
     result = 31 * result + (this.eSystemconfigurationLanguage1 == null ? 0: this.eSystemconfigurationLanguage1.hashCode());
     result = 31 * result + (this.eSystemconfigurationLanguage2 == null ? 0: this.eSystemconfigurationLanguage2.hashCode());
     result = 31 * result + (this.eSystemconfigurationEzsign == null ? 0: this.eSystemconfigurationEzsign.hashCode());
+    result = 31 * result + (this.eSystemconfigurationEzsignofficeplan == null ? 0: this.eSystemconfigurationEzsignofficeplan.hashCode());
+    result = 31 * result + (this.bSystemconfigurationEzsignpaidbyoffice == null ? 0: this.bSystemconfigurationEzsignpaidbyoffice.hashCode());
     result = 31 * result + (this.bSystemconfigurationEzsignpersonnal == null ? 0: this.bSystemconfigurationEzsignpersonnal.hashCode());
+    result = 31 * result + (this.bSystemconfigurationIsdisposalactive == null ? 0: this.bSystemconfigurationIsdisposalactive.hashCode());
     result = 31 * result + (this.bSystemconfigurationSspr == null ? 0: this.bSystemconfigurationSspr.hashCode());
     result = 31 * result + (this.dtSystemconfigurationReadonlyexpirationstart == null ? 0: this.dtSystemconfigurationReadonlyexpirationstart.hashCode());
     result = 31 * result + (this.dtSystemconfigurationReadonlyexpirationend == null ? 0: this.dtSystemconfigurationReadonlyexpirationend.hashCode());
@@ -220,7 +265,10 @@ public class SystemconfigurationResponseCompound {
     sb.append("  eSystemconfigurationLanguage1: ").append(eSystemconfigurationLanguage1).append("\n");
     sb.append("  eSystemconfigurationLanguage2: ").append(eSystemconfigurationLanguage2).append("\n");
     sb.append("  eSystemconfigurationEzsign: ").append(eSystemconfigurationEzsign).append("\n");
+    sb.append("  eSystemconfigurationEzsignofficeplan: ").append(eSystemconfigurationEzsignofficeplan).append("\n");
+    sb.append("  bSystemconfigurationEzsignpaidbyoffice: ").append(bSystemconfigurationEzsignpaidbyoffice).append("\n");
     sb.append("  bSystemconfigurationEzsignpersonnal: ").append(bSystemconfigurationEzsignpersonnal).append("\n");
+    sb.append("  bSystemconfigurationIsdisposalactive: ").append(bSystemconfigurationIsdisposalactive).append("\n");
     sb.append("  bSystemconfigurationSspr: ").append(bSystemconfigurationSspr).append("\n");
     sb.append("  dtSystemconfigurationReadonlyexpirationstart: ").append(dtSystemconfigurationReadonlyexpirationstart).append("\n");
     sb.append("  dtSystemconfigurationReadonlyexpirationend: ").append(dtSystemconfigurationReadonlyexpirationend).append("\n");

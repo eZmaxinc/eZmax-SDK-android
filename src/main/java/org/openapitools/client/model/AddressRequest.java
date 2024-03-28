@@ -37,6 +37,10 @@ public class AddressRequest {
   private Integer fkiCountryID = null;
   @SerializedName("sAddressZip")
   private String sAddressZip = null;
+  @SerializedName("fAddressLongitude")
+  private String fAddressLongitude = null;
+  @SerializedName("fAddressLatitude")
+  private String fAddressLatitude = null;
 
   /**
    * The unique ID of the Addresstype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home| |3|Real Estate Invoice| |4|Invoicing| |5|Shipping|
@@ -129,6 +133,28 @@ public class AddressRequest {
     this.sAddressZip = sAddressZip;
   }
 
+  /**
+   * The Longitude of the Address
+   **/
+  @ApiModelProperty(value = "The Longitude of the Address")
+  public String getFAddressLongitude() {
+    return fAddressLongitude;
+  }
+  public void setFAddressLongitude(String fAddressLongitude) {
+    this.fAddressLongitude = fAddressLongitude;
+  }
+
+  /**
+   * The Latitude of the Address
+   **/
+  @ApiModelProperty(value = "The Latitude of the Address")
+  public String getFAddressLatitude() {
+    return fAddressLatitude;
+  }
+  public void setFAddressLatitude(String fAddressLatitude) {
+    this.fAddressLatitude = fAddressLatitude;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -146,7 +172,9 @@ public class AddressRequest {
         (this.sAddressCity == null ? addressRequest.sAddressCity == null : this.sAddressCity.equals(addressRequest.sAddressCity)) &&
         (this.fkiProvinceID == null ? addressRequest.fkiProvinceID == null : this.fkiProvinceID.equals(addressRequest.fkiProvinceID)) &&
         (this.fkiCountryID == null ? addressRequest.fkiCountryID == null : this.fkiCountryID.equals(addressRequest.fkiCountryID)) &&
-        (this.sAddressZip == null ? addressRequest.sAddressZip == null : this.sAddressZip.equals(addressRequest.sAddressZip));
+        (this.sAddressZip == null ? addressRequest.sAddressZip == null : this.sAddressZip.equals(addressRequest.sAddressZip)) &&
+        (this.fAddressLongitude == null ? addressRequest.fAddressLongitude == null : this.fAddressLongitude.equals(addressRequest.fAddressLongitude)) &&
+        (this.fAddressLatitude == null ? addressRequest.fAddressLatitude == null : this.fAddressLatitude.equals(addressRequest.fAddressLatitude));
   }
 
   @Override
@@ -160,6 +188,8 @@ public class AddressRequest {
     result = 31 * result + (this.fkiProvinceID == null ? 0: this.fkiProvinceID.hashCode());
     result = 31 * result + (this.fkiCountryID == null ? 0: this.fkiCountryID.hashCode());
     result = 31 * result + (this.sAddressZip == null ? 0: this.sAddressZip.hashCode());
+    result = 31 * result + (this.fAddressLongitude == null ? 0: this.fAddressLongitude.hashCode());
+    result = 31 * result + (this.fAddressLatitude == null ? 0: this.fAddressLatitude.hashCode());
     return result;
   }
 
@@ -176,6 +206,8 @@ public class AddressRequest {
     sb.append("  fkiProvinceID: ").append(fkiProvinceID).append("\n");
     sb.append("  fkiCountryID: ").append(fkiCountryID).append("\n");
     sb.append("  sAddressZip: ").append(sAddressZip).append("\n");
+    sb.append("  fAddressLongitude: ").append(fAddressLongitude).append("\n");
+    sb.append("  fAddressLatitude: ").append(fAddressLatitude).append("\n");
     sb.append("}\n");
     return sb.toString();
   }
