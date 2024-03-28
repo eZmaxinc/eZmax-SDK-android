@@ -25,8 +25,8 @@ public class EzsignfoldersignerassociationCreateEmbeddedUrlV1Request {
   private String sReturnUrl = null;
   @SerializedName("sIframedomain")
   private String sIframedomain = null;
-  @SerializedName("bIsiframe")
-  private Boolean bIsiframe = null;
+  @SerializedName("bIsIframe")
+  private Boolean bIsIframe = null;
 
   /**
    * The return Url to redirect after the signing is completed
@@ -54,11 +54,11 @@ public class EzsignfoldersignerassociationCreateEmbeddedUrlV1Request {
    * Whether the url would be in an iFrame or not
    **/
   @ApiModelProperty(value = "Whether the url would be in an iFrame or not")
-  public Boolean getBIsiframe() {
-    return bIsiframe;
+  public Boolean getBIsIframe() {
+    return bIsIframe;
   }
-  public void setBIsiframe(Boolean bIsiframe) {
-    this.bIsiframe = bIsiframe;
+  public void setBIsIframe(Boolean bIsIframe) {
+    this.bIsIframe = bIsIframe;
   }
 
 
@@ -73,7 +73,7 @@ public class EzsignfoldersignerassociationCreateEmbeddedUrlV1Request {
     EzsignfoldersignerassociationCreateEmbeddedUrlV1Request ezsignfoldersignerassociationCreateEmbeddedUrlV1Request = (EzsignfoldersignerassociationCreateEmbeddedUrlV1Request) o;
     return (this.sReturnUrl == null ? ezsignfoldersignerassociationCreateEmbeddedUrlV1Request.sReturnUrl == null : this.sReturnUrl.equals(ezsignfoldersignerassociationCreateEmbeddedUrlV1Request.sReturnUrl)) &&
         (this.sIframedomain == null ? ezsignfoldersignerassociationCreateEmbeddedUrlV1Request.sIframedomain == null : this.sIframedomain.equals(ezsignfoldersignerassociationCreateEmbeddedUrlV1Request.sIframedomain)) &&
-        (this.bIsiframe == null ? ezsignfoldersignerassociationCreateEmbeddedUrlV1Request.bIsiframe == null : this.bIsiframe.equals(ezsignfoldersignerassociationCreateEmbeddedUrlV1Request.bIsiframe));
+        (this.bIsIframe == null ? ezsignfoldersignerassociationCreateEmbeddedUrlV1Request.bIsIframe == null : this.bIsIframe.equals(ezsignfoldersignerassociationCreateEmbeddedUrlV1Request.bIsIframe));
   }
 
   @Override
@@ -81,7 +81,7 @@ public class EzsignfoldersignerassociationCreateEmbeddedUrlV1Request {
     int result = 17;
     result = 31 * result + (this.sReturnUrl == null ? 0: this.sReturnUrl.hashCode());
     result = 31 * result + (this.sIframedomain == null ? 0: this.sIframedomain.hashCode());
-    result = 31 * result + (this.bIsiframe == null ? 0: this.bIsiframe.hashCode());
+    result = 31 * result + (this.bIsIframe == null ? 0: this.bIsIframe.hashCode());
     return result;
   }
 
@@ -92,7 +92,7 @@ public class EzsignfoldersignerassociationCreateEmbeddedUrlV1Request {
     
     sb.append("  sReturnUrl: ").append(sReturnUrl).append("\n");
     sb.append("  sIframedomain: ").append(sIframedomain).append("\n");
-    sb.append("  bIsiframe: ").append(bIsiframe).append("\n");
+    sb.append("  bIsIframe: ").append(bIsIframe).append("\n");
     sb.append("}\n");
     return sb.toString();
   }
