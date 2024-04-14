@@ -32,6 +32,8 @@ public class CommonResponseObjDebugPayloadGetList {
   private List<Integer> aRequiredPermission = null;
   @SerializedName("bVersionDeprecated")
   private Boolean bVersionDeprecated = null;
+  @SerializedName("dtResponseDate")
+  private String dtResponseDate = null;
   @SerializedName("a_Filter")
   private CommonResponseFilter aFilter = null;
   @SerializedName("a_OrderBy")
@@ -83,6 +85,17 @@ public class CommonResponseObjDebugPayloadGetList {
   }
   public void setBVersionDeprecated(Boolean bVersionDeprecated) {
     this.bVersionDeprecated = bVersionDeprecated;
+  }
+
+  /**
+   * Represent a Date Time. The timezone is the one configured in the User's profile.
+   **/
+  @ApiModelProperty(required = true, value = "Represent a Date Time. The timezone is the one configured in the User's profile.")
+  public String getDtResponseDate() {
+    return dtResponseDate;
+  }
+  public void setDtResponseDate(String dtResponseDate) {
+    this.dtResponseDate = dtResponseDate;
   }
 
   /**
@@ -145,6 +158,7 @@ public class CommonResponseObjDebugPayloadGetList {
         (this.iVersionMax == null ? commonResponseObjDebugPayloadGetList.iVersionMax == null : this.iVersionMax.equals(commonResponseObjDebugPayloadGetList.iVersionMax)) &&
         (this.aRequiredPermission == null ? commonResponseObjDebugPayloadGetList.aRequiredPermission == null : this.aRequiredPermission.equals(commonResponseObjDebugPayloadGetList.aRequiredPermission)) &&
         (this.bVersionDeprecated == null ? commonResponseObjDebugPayloadGetList.bVersionDeprecated == null : this.bVersionDeprecated.equals(commonResponseObjDebugPayloadGetList.bVersionDeprecated)) &&
+        (this.dtResponseDate == null ? commonResponseObjDebugPayloadGetList.dtResponseDate == null : this.dtResponseDate.equals(commonResponseObjDebugPayloadGetList.dtResponseDate)) &&
         (this.aFilter == null ? commonResponseObjDebugPayloadGetList.aFilter == null : this.aFilter.equals(commonResponseObjDebugPayloadGetList.aFilter)) &&
         (this.aOrderBy == null ? commonResponseObjDebugPayloadGetList.aOrderBy == null : this.aOrderBy.equals(commonResponseObjDebugPayloadGetList.aOrderBy)) &&
         (this.iRowMax == null ? commonResponseObjDebugPayloadGetList.iRowMax == null : this.iRowMax.equals(commonResponseObjDebugPayloadGetList.iRowMax)) &&
@@ -158,6 +172,7 @@ public class CommonResponseObjDebugPayloadGetList {
     result = 31 * result + (this.iVersionMax == null ? 0: this.iVersionMax.hashCode());
     result = 31 * result + (this.aRequiredPermission == null ? 0: this.aRequiredPermission.hashCode());
     result = 31 * result + (this.bVersionDeprecated == null ? 0: this.bVersionDeprecated.hashCode());
+    result = 31 * result + (this.dtResponseDate == null ? 0: this.dtResponseDate.hashCode());
     result = 31 * result + (this.aFilter == null ? 0: this.aFilter.hashCode());
     result = 31 * result + (this.aOrderBy == null ? 0: this.aOrderBy.hashCode());
     result = 31 * result + (this.iRowMax == null ? 0: this.iRowMax.hashCode());
@@ -174,6 +189,7 @@ public class CommonResponseObjDebugPayloadGetList {
     sb.append("  iVersionMax: ").append(iVersionMax).append("\n");
     sb.append("  aRequiredPermission: ").append(aRequiredPermission).append("\n");
     sb.append("  bVersionDeprecated: ").append(bVersionDeprecated).append("\n");
+    sb.append("  dtResponseDate: ").append(dtResponseDate).append("\n");
     sb.append("  aFilter: ").append(aFilter).append("\n");
     sb.append("  aOrderBy: ").append(aOrderBy).append("\n");
     sb.append("  iRowMax: ").append(iRowMax).append("\n");

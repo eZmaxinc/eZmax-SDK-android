@@ -30,6 +30,8 @@ public class CommonResponseObjDebugPayload {
   private List<Integer> aRequiredPermission = null;
   @SerializedName("bVersionDeprecated")
   private Boolean bVersionDeprecated = null;
+  @SerializedName("dtResponseDate")
+  private String dtResponseDate = null;
 
   /**
    * The minimum version of the function that can be called
@@ -75,6 +77,17 @@ public class CommonResponseObjDebugPayload {
     this.bVersionDeprecated = bVersionDeprecated;
   }
 
+  /**
+   * Represent a Date Time. The timezone is the one configured in the User's profile.
+   **/
+  @ApiModelProperty(required = true, value = "Represent a Date Time. The timezone is the one configured in the User's profile.")
+  public String getDtResponseDate() {
+    return dtResponseDate;
+  }
+  public void setDtResponseDate(String dtResponseDate) {
+    this.dtResponseDate = dtResponseDate;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -88,7 +101,8 @@ public class CommonResponseObjDebugPayload {
     return (this.iVersionMin == null ? commonResponseObjDebugPayload.iVersionMin == null : this.iVersionMin.equals(commonResponseObjDebugPayload.iVersionMin)) &&
         (this.iVersionMax == null ? commonResponseObjDebugPayload.iVersionMax == null : this.iVersionMax.equals(commonResponseObjDebugPayload.iVersionMax)) &&
         (this.aRequiredPermission == null ? commonResponseObjDebugPayload.aRequiredPermission == null : this.aRequiredPermission.equals(commonResponseObjDebugPayload.aRequiredPermission)) &&
-        (this.bVersionDeprecated == null ? commonResponseObjDebugPayload.bVersionDeprecated == null : this.bVersionDeprecated.equals(commonResponseObjDebugPayload.bVersionDeprecated));
+        (this.bVersionDeprecated == null ? commonResponseObjDebugPayload.bVersionDeprecated == null : this.bVersionDeprecated.equals(commonResponseObjDebugPayload.bVersionDeprecated)) &&
+        (this.dtResponseDate == null ? commonResponseObjDebugPayload.dtResponseDate == null : this.dtResponseDate.equals(commonResponseObjDebugPayload.dtResponseDate));
   }
 
   @Override
@@ -98,6 +112,7 @@ public class CommonResponseObjDebugPayload {
     result = 31 * result + (this.iVersionMax == null ? 0: this.iVersionMax.hashCode());
     result = 31 * result + (this.aRequiredPermission == null ? 0: this.aRequiredPermission.hashCode());
     result = 31 * result + (this.bVersionDeprecated == null ? 0: this.bVersionDeprecated.hashCode());
+    result = 31 * result + (this.dtResponseDate == null ? 0: this.dtResponseDate.hashCode());
     return result;
   }
 
@@ -110,6 +125,7 @@ public class CommonResponseObjDebugPayload {
     sb.append("  iVersionMax: ").append(iVersionMax).append("\n");
     sb.append("  aRequiredPermission: ").append(aRequiredPermission).append("\n");
     sb.append("  bVersionDeprecated: ").append(bVersionDeprecated).append("\n");
+    sb.append("  dtResponseDate: ").append(dtResponseDate).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

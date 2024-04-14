@@ -34,6 +34,8 @@ public class EzsignfoldersignerassociationGetObjectV1ResponseMPayload {
   private Boolean bEzsignfoldersignerassociationReceivecopy = null;
   @SerializedName("tEzsignfoldersignerassociationMessage")
   private String tEzsignfoldersignerassociationMessage = null;
+  @SerializedName("bEzsignfoldersignerassociationAllowsigninginperson")
+  private Boolean bEzsignfoldersignerassociationAllowsigninginperson = null;
   @SerializedName("objEzsignsignergroup")
   private EzsignsignergroupResponseCompound objEzsignsignergroup = null;
   @SerializedName("objUser")
@@ -99,6 +101,17 @@ public class EzsignfoldersignerassociationGetObjectV1ResponseMPayload {
   }
 
   /**
+   * If the Ezsignfoldersignerassociation is allowed to sign in person or not
+   **/
+  @ApiModelProperty(required = true, value = "If the Ezsignfoldersignerassociation is allowed to sign in person or not")
+  public Boolean getBEzsignfoldersignerassociationAllowsigninginperson() {
+    return bEzsignfoldersignerassociationAllowsigninginperson;
+  }
+  public void setBEzsignfoldersignerassociationAllowsigninginperson(Boolean bEzsignfoldersignerassociationAllowsigninginperson) {
+    this.bEzsignfoldersignerassociationAllowsigninginperson = bEzsignfoldersignerassociationAllowsigninginperson;
+  }
+
+  /**
    **/
   @ApiModelProperty(value = "")
   public EzsignsignergroupResponseCompound getObjEzsignsignergroup() {
@@ -143,6 +156,7 @@ public class EzsignfoldersignerassociationGetObjectV1ResponseMPayload {
         (this.bEzsignfoldersignerassociationDelayedsend == null ? ezsignfoldersignerassociationGetObjectV1ResponseMPayload.bEzsignfoldersignerassociationDelayedsend == null : this.bEzsignfoldersignerassociationDelayedsend.equals(ezsignfoldersignerassociationGetObjectV1ResponseMPayload.bEzsignfoldersignerassociationDelayedsend)) &&
         (this.bEzsignfoldersignerassociationReceivecopy == null ? ezsignfoldersignerassociationGetObjectV1ResponseMPayload.bEzsignfoldersignerassociationReceivecopy == null : this.bEzsignfoldersignerassociationReceivecopy.equals(ezsignfoldersignerassociationGetObjectV1ResponseMPayload.bEzsignfoldersignerassociationReceivecopy)) &&
         (this.tEzsignfoldersignerassociationMessage == null ? ezsignfoldersignerassociationGetObjectV1ResponseMPayload.tEzsignfoldersignerassociationMessage == null : this.tEzsignfoldersignerassociationMessage.equals(ezsignfoldersignerassociationGetObjectV1ResponseMPayload.tEzsignfoldersignerassociationMessage)) &&
+        (this.bEzsignfoldersignerassociationAllowsigninginperson == null ? ezsignfoldersignerassociationGetObjectV1ResponseMPayload.bEzsignfoldersignerassociationAllowsigninginperson == null : this.bEzsignfoldersignerassociationAllowsigninginperson.equals(ezsignfoldersignerassociationGetObjectV1ResponseMPayload.bEzsignfoldersignerassociationAllowsigninginperson)) &&
         (this.objEzsignsignergroup == null ? ezsignfoldersignerassociationGetObjectV1ResponseMPayload.objEzsignsignergroup == null : this.objEzsignsignergroup.equals(ezsignfoldersignerassociationGetObjectV1ResponseMPayload.objEzsignsignergroup)) &&
         (this.objUser == null ? ezsignfoldersignerassociationGetObjectV1ResponseMPayload.objUser == null : this.objUser.equals(ezsignfoldersignerassociationGetObjectV1ResponseMPayload.objUser)) &&
         (this.objEzsignsigner == null ? ezsignfoldersignerassociationGetObjectV1ResponseMPayload.objEzsignsigner == null : this.objEzsignsigner.equals(ezsignfoldersignerassociationGetObjectV1ResponseMPayload.objEzsignsigner));
@@ -156,6 +170,7 @@ public class EzsignfoldersignerassociationGetObjectV1ResponseMPayload {
     result = 31 * result + (this.bEzsignfoldersignerassociationDelayedsend == null ? 0: this.bEzsignfoldersignerassociationDelayedsend.hashCode());
     result = 31 * result + (this.bEzsignfoldersignerassociationReceivecopy == null ? 0: this.bEzsignfoldersignerassociationReceivecopy.hashCode());
     result = 31 * result + (this.tEzsignfoldersignerassociationMessage == null ? 0: this.tEzsignfoldersignerassociationMessage.hashCode());
+    result = 31 * result + (this.bEzsignfoldersignerassociationAllowsigninginperson == null ? 0: this.bEzsignfoldersignerassociationAllowsigninginperson.hashCode());
     result = 31 * result + (this.objEzsignsignergroup == null ? 0: this.objEzsignsignergroup.hashCode());
     result = 31 * result + (this.objUser == null ? 0: this.objUser.hashCode());
     result = 31 * result + (this.objEzsignsigner == null ? 0: this.objEzsignsigner.hashCode());
@@ -172,6 +187,7 @@ public class EzsignfoldersignerassociationGetObjectV1ResponseMPayload {
     sb.append("  bEzsignfoldersignerassociationDelayedsend: ").append(bEzsignfoldersignerassociationDelayedsend).append("\n");
     sb.append("  bEzsignfoldersignerassociationReceivecopy: ").append(bEzsignfoldersignerassociationReceivecopy).append("\n");
     sb.append("  tEzsignfoldersignerassociationMessage: ").append(tEzsignfoldersignerassociationMessage).append("\n");
+    sb.append("  bEzsignfoldersignerassociationAllowsigninginperson: ").append(bEzsignfoldersignerassociationAllowsigninginperson).append("\n");
     sb.append("  objEzsignsignergroup: ").append(objEzsignsignergroup).append("\n");
     sb.append("  objUser: ").append(objUser).append("\n");
     sb.append("  objEzsignsigner: ").append(objEzsignsigner).append("\n");

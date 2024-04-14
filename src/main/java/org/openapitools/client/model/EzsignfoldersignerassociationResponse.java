@@ -31,6 +31,8 @@ public class EzsignfoldersignerassociationResponse {
   private Boolean bEzsignfoldersignerassociationReceivecopy = null;
   @SerializedName("tEzsignfoldersignerassociationMessage")
   private String tEzsignfoldersignerassociationMessage = null;
+  @SerializedName("bEzsignfoldersignerassociationAllowsigninginperson")
+  private Boolean bEzsignfoldersignerassociationAllowsigninginperson = null;
 
   /**
    * The unique ID of the Ezsignfoldersignerassociation
@@ -89,6 +91,17 @@ public class EzsignfoldersignerassociationResponse {
     this.tEzsignfoldersignerassociationMessage = tEzsignfoldersignerassociationMessage;
   }
 
+  /**
+   * If the Ezsignfoldersignerassociation is allowed to sign in person or not
+   **/
+  @ApiModelProperty(required = true, value = "If the Ezsignfoldersignerassociation is allowed to sign in person or not")
+  public Boolean getBEzsignfoldersignerassociationAllowsigninginperson() {
+    return bEzsignfoldersignerassociationAllowsigninginperson;
+  }
+  public void setBEzsignfoldersignerassociationAllowsigninginperson(Boolean bEzsignfoldersignerassociationAllowsigninginperson) {
+    this.bEzsignfoldersignerassociationAllowsigninginperson = bEzsignfoldersignerassociationAllowsigninginperson;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -103,7 +116,8 @@ public class EzsignfoldersignerassociationResponse {
         (this.fkiEzsignfolderID == null ? ezsignfoldersignerassociationResponse.fkiEzsignfolderID == null : this.fkiEzsignfolderID.equals(ezsignfoldersignerassociationResponse.fkiEzsignfolderID)) &&
         (this.bEzsignfoldersignerassociationDelayedsend == null ? ezsignfoldersignerassociationResponse.bEzsignfoldersignerassociationDelayedsend == null : this.bEzsignfoldersignerassociationDelayedsend.equals(ezsignfoldersignerassociationResponse.bEzsignfoldersignerassociationDelayedsend)) &&
         (this.bEzsignfoldersignerassociationReceivecopy == null ? ezsignfoldersignerassociationResponse.bEzsignfoldersignerassociationReceivecopy == null : this.bEzsignfoldersignerassociationReceivecopy.equals(ezsignfoldersignerassociationResponse.bEzsignfoldersignerassociationReceivecopy)) &&
-        (this.tEzsignfoldersignerassociationMessage == null ? ezsignfoldersignerassociationResponse.tEzsignfoldersignerassociationMessage == null : this.tEzsignfoldersignerassociationMessage.equals(ezsignfoldersignerassociationResponse.tEzsignfoldersignerassociationMessage));
+        (this.tEzsignfoldersignerassociationMessage == null ? ezsignfoldersignerassociationResponse.tEzsignfoldersignerassociationMessage == null : this.tEzsignfoldersignerassociationMessage.equals(ezsignfoldersignerassociationResponse.tEzsignfoldersignerassociationMessage)) &&
+        (this.bEzsignfoldersignerassociationAllowsigninginperson == null ? ezsignfoldersignerassociationResponse.bEzsignfoldersignerassociationAllowsigninginperson == null : this.bEzsignfoldersignerassociationAllowsigninginperson.equals(ezsignfoldersignerassociationResponse.bEzsignfoldersignerassociationAllowsigninginperson));
   }
 
   @Override
@@ -114,6 +128,7 @@ public class EzsignfoldersignerassociationResponse {
     result = 31 * result + (this.bEzsignfoldersignerassociationDelayedsend == null ? 0: this.bEzsignfoldersignerassociationDelayedsend.hashCode());
     result = 31 * result + (this.bEzsignfoldersignerassociationReceivecopy == null ? 0: this.bEzsignfoldersignerassociationReceivecopy.hashCode());
     result = 31 * result + (this.tEzsignfoldersignerassociationMessage == null ? 0: this.tEzsignfoldersignerassociationMessage.hashCode());
+    result = 31 * result + (this.bEzsignfoldersignerassociationAllowsigninginperson == null ? 0: this.bEzsignfoldersignerassociationAllowsigninginperson.hashCode());
     return result;
   }
 
@@ -127,6 +142,7 @@ public class EzsignfoldersignerassociationResponse {
     sb.append("  bEzsignfoldersignerassociationDelayedsend: ").append(bEzsignfoldersignerassociationDelayedsend).append("\n");
     sb.append("  bEzsignfoldersignerassociationReceivecopy: ").append(bEzsignfoldersignerassociationReceivecopy).append("\n");
     sb.append("  tEzsignfoldersignerassociationMessage: ").append(tEzsignfoldersignerassociationMessage).append("\n");
+    sb.append("  bEzsignfoldersignerassociationAllowsigninginperson: ").append(bEzsignfoldersignerassociationAllowsigninginperson).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

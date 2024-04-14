@@ -693,6 +693,102 @@ public class JsonUtil {
       return new TypeToken<List<CountryGetAutocompleteV2ResponseMPayload>>(){}.getType();
     }
     
+    if ("CreditcardclientAutocompleteElementResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CreditcardclientAutocompleteElementResponse>>(){}.getType();
+    }
+    
+    if ("CreditcardclientCreateObjectV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CreditcardclientCreateObjectV1Request>>(){}.getType();
+    }
+    
+    if ("CreditcardclientCreateObjectV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CreditcardclientCreateObjectV1Response>>(){}.getType();
+    }
+    
+    if ("CreditcardclientCreateObjectV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CreditcardclientCreateObjectV1ResponseMPayload>>(){}.getType();
+    }
+    
+    if ("CreditcardclientDeleteObjectV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CreditcardclientDeleteObjectV1Response>>(){}.getType();
+    }
+    
+    if ("CreditcardclientEditObjectV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CreditcardclientEditObjectV1Request>>(){}.getType();
+    }
+    
+    if ("CreditcardclientEditObjectV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CreditcardclientEditObjectV1Response>>(){}.getType();
+    }
+    
+    if ("CreditcardclientGetAutocompleteV2Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CreditcardclientGetAutocompleteV2Response>>(){}.getType();
+    }
+    
+    if ("CreditcardclientGetAutocompleteV2ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CreditcardclientGetAutocompleteV2ResponseMPayload>>(){}.getType();
+    }
+    
+    if ("CreditcardclientGetListV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CreditcardclientGetListV1Response>>(){}.getType();
+    }
+    
+    if ("CreditcardclientGetListV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CreditcardclientGetListV1ResponseMPayload>>(){}.getType();
+    }
+    
+    if ("CreditcardclientGetObjectV2Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CreditcardclientGetObjectV2Response>>(){}.getType();
+    }
+    
+    if ("CreditcardclientGetObjectV2ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CreditcardclientGetObjectV2ResponseMPayload>>(){}.getType();
+    }
+    
+    if ("CreditcardclientListElement".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CreditcardclientListElement>>(){}.getType();
+    }
+    
+    if ("CreditcardclientRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CreditcardclientRequest>>(){}.getType();
+    }
+    
+    if ("CreditcardclientRequestCompound".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CreditcardclientRequestCompound>>(){}.getType();
+    }
+    
+    if ("CreditcardclientResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CreditcardclientResponse>>(){}.getType();
+    }
+    
+    if ("CreditcardclientResponseCompound".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CreditcardclientResponseCompound>>(){}.getType();
+    }
+    
+    if ("CreditcarddetailRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CreditcarddetailRequest>>(){}.getType();
+    }
+    
+    if ("CreditcarddetailResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CreditcarddetailResponse>>(){}.getType();
+    }
+    
+    if ("CreditcarddetailResponseCompound".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CreditcarddetailResponseCompound>>(){}.getType();
+    }
+    
+    if ("CreditcardtypeAutocompleteElementResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CreditcardtypeAutocompleteElementResponse>>(){}.getType();
+    }
+    
+    if ("CreditcardtypeGetAutocompleteV2Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CreditcardtypeGetAutocompleteV2Response>>(){}.getType();
+    }
+    
+    if ("CreditcardtypeGetAutocompleteV2ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CreditcardtypeGetAutocompleteV2ResponseMPayload>>(){}.getType();
+    }
+    
     if ("CustomAttachmentResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<CustomAttachmentResponse>>(){}.getType();
     }
@@ -5829,6 +5925,102 @@ public class JsonUtil {
     
     if ("CountryGetAutocompleteV2ResponseMPayload".equalsIgnoreCase(className)) {
       return new TypeToken<CountryGetAutocompleteV2ResponseMPayload>(){}.getType();
+    }
+    
+    if ("CreditcardclientAutocompleteElementResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<CreditcardclientAutocompleteElementResponse>(){}.getType();
+    }
+    
+    if ("CreditcardclientCreateObjectV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<CreditcardclientCreateObjectV1Request>(){}.getType();
+    }
+    
+    if ("CreditcardclientCreateObjectV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<CreditcardclientCreateObjectV1Response>(){}.getType();
+    }
+    
+    if ("CreditcardclientCreateObjectV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<CreditcardclientCreateObjectV1ResponseMPayload>(){}.getType();
+    }
+    
+    if ("CreditcardclientDeleteObjectV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<CreditcardclientDeleteObjectV1Response>(){}.getType();
+    }
+    
+    if ("CreditcardclientEditObjectV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<CreditcardclientEditObjectV1Request>(){}.getType();
+    }
+    
+    if ("CreditcardclientEditObjectV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<CreditcardclientEditObjectV1Response>(){}.getType();
+    }
+    
+    if ("CreditcardclientGetAutocompleteV2Response".equalsIgnoreCase(className)) {
+      return new TypeToken<CreditcardclientGetAutocompleteV2Response>(){}.getType();
+    }
+    
+    if ("CreditcardclientGetAutocompleteV2ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<CreditcardclientGetAutocompleteV2ResponseMPayload>(){}.getType();
+    }
+    
+    if ("CreditcardclientGetListV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<CreditcardclientGetListV1Response>(){}.getType();
+    }
+    
+    if ("CreditcardclientGetListV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<CreditcardclientGetListV1ResponseMPayload>(){}.getType();
+    }
+    
+    if ("CreditcardclientGetObjectV2Response".equalsIgnoreCase(className)) {
+      return new TypeToken<CreditcardclientGetObjectV2Response>(){}.getType();
+    }
+    
+    if ("CreditcardclientGetObjectV2ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<CreditcardclientGetObjectV2ResponseMPayload>(){}.getType();
+    }
+    
+    if ("CreditcardclientListElement".equalsIgnoreCase(className)) {
+      return new TypeToken<CreditcardclientListElement>(){}.getType();
+    }
+    
+    if ("CreditcardclientRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<CreditcardclientRequest>(){}.getType();
+    }
+    
+    if ("CreditcardclientRequestCompound".equalsIgnoreCase(className)) {
+      return new TypeToken<CreditcardclientRequestCompound>(){}.getType();
+    }
+    
+    if ("CreditcardclientResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<CreditcardclientResponse>(){}.getType();
+    }
+    
+    if ("CreditcardclientResponseCompound".equalsIgnoreCase(className)) {
+      return new TypeToken<CreditcardclientResponseCompound>(){}.getType();
+    }
+    
+    if ("CreditcarddetailRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<CreditcarddetailRequest>(){}.getType();
+    }
+    
+    if ("CreditcarddetailResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<CreditcarddetailResponse>(){}.getType();
+    }
+    
+    if ("CreditcarddetailResponseCompound".equalsIgnoreCase(className)) {
+      return new TypeToken<CreditcarddetailResponseCompound>(){}.getType();
+    }
+    
+    if ("CreditcardtypeAutocompleteElementResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<CreditcardtypeAutocompleteElementResponse>(){}.getType();
+    }
+    
+    if ("CreditcardtypeGetAutocompleteV2Response".equalsIgnoreCase(className)) {
+      return new TypeToken<CreditcardtypeGetAutocompleteV2Response>(){}.getType();
+    }
+    
+    if ("CreditcardtypeGetAutocompleteV2ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<CreditcardtypeGetAutocompleteV2ResponseMPayload>(){}.getType();
     }
     
     if ("CustomAttachmentResponse".equalsIgnoreCase(className)) {

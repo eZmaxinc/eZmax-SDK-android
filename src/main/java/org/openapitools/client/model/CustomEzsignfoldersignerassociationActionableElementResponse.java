@@ -34,6 +34,8 @@ public class CustomEzsignfoldersignerassociationActionableElementResponse {
   private Boolean bEzsignfoldersignerassociationReceivecopy = null;
   @SerializedName("tEzsignfoldersignerassociationMessage")
   private String tEzsignfoldersignerassociationMessage = null;
+  @SerializedName("bEzsignfoldersignerassociationAllowsigninginperson")
+  private Boolean bEzsignfoldersignerassociationAllowsigninginperson = null;
   @SerializedName("objEzsignsignergroup")
   private EzsignsignergroupResponseCompound objEzsignsignergroup = null;
   @SerializedName("objUser")
@@ -103,6 +105,17 @@ public class CustomEzsignfoldersignerassociationActionableElementResponse {
   }
 
   /**
+   * If the Ezsignfoldersignerassociation is allowed to sign in person or not
+   **/
+  @ApiModelProperty(required = true, value = "If the Ezsignfoldersignerassociation is allowed to sign in person or not")
+  public Boolean getBEzsignfoldersignerassociationAllowsigninginperson() {
+    return bEzsignfoldersignerassociationAllowsigninginperson;
+  }
+  public void setBEzsignfoldersignerassociationAllowsigninginperson(Boolean bEzsignfoldersignerassociationAllowsigninginperson) {
+    this.bEzsignfoldersignerassociationAllowsigninginperson = bEzsignfoldersignerassociationAllowsigninginperson;
+  }
+
+  /**
    **/
   @ApiModelProperty(value = "")
   public EzsignsignergroupResponseCompound getObjEzsignsignergroup() {
@@ -169,6 +182,7 @@ public class CustomEzsignfoldersignerassociationActionableElementResponse {
         (this.bEzsignfoldersignerassociationDelayedsend == null ? customEzsignfoldersignerassociationActionableElementResponse.bEzsignfoldersignerassociationDelayedsend == null : this.bEzsignfoldersignerassociationDelayedsend.equals(customEzsignfoldersignerassociationActionableElementResponse.bEzsignfoldersignerassociationDelayedsend)) &&
         (this.bEzsignfoldersignerassociationReceivecopy == null ? customEzsignfoldersignerassociationActionableElementResponse.bEzsignfoldersignerassociationReceivecopy == null : this.bEzsignfoldersignerassociationReceivecopy.equals(customEzsignfoldersignerassociationActionableElementResponse.bEzsignfoldersignerassociationReceivecopy)) &&
         (this.tEzsignfoldersignerassociationMessage == null ? customEzsignfoldersignerassociationActionableElementResponse.tEzsignfoldersignerassociationMessage == null : this.tEzsignfoldersignerassociationMessage.equals(customEzsignfoldersignerassociationActionableElementResponse.tEzsignfoldersignerassociationMessage)) &&
+        (this.bEzsignfoldersignerassociationAllowsigninginperson == null ? customEzsignfoldersignerassociationActionableElementResponse.bEzsignfoldersignerassociationAllowsigninginperson == null : this.bEzsignfoldersignerassociationAllowsigninginperson.equals(customEzsignfoldersignerassociationActionableElementResponse.bEzsignfoldersignerassociationAllowsigninginperson)) &&
         (this.objEzsignsignergroup == null ? customEzsignfoldersignerassociationActionableElementResponse.objEzsignsignergroup == null : this.objEzsignsignergroup.equals(customEzsignfoldersignerassociationActionableElementResponse.objEzsignsignergroup)) &&
         (this.objUser == null ? customEzsignfoldersignerassociationActionableElementResponse.objUser == null : this.objUser.equals(customEzsignfoldersignerassociationActionableElementResponse.objUser)) &&
         (this.objEzsignsigner == null ? customEzsignfoldersignerassociationActionableElementResponse.objEzsignsigner == null : this.objEzsignsigner.equals(customEzsignfoldersignerassociationActionableElementResponse.objEzsignsigner)) &&
@@ -184,6 +198,7 @@ public class CustomEzsignfoldersignerassociationActionableElementResponse {
     result = 31 * result + (this.bEzsignfoldersignerassociationDelayedsend == null ? 0: this.bEzsignfoldersignerassociationDelayedsend.hashCode());
     result = 31 * result + (this.bEzsignfoldersignerassociationReceivecopy == null ? 0: this.bEzsignfoldersignerassociationReceivecopy.hashCode());
     result = 31 * result + (this.tEzsignfoldersignerassociationMessage == null ? 0: this.tEzsignfoldersignerassociationMessage.hashCode());
+    result = 31 * result + (this.bEzsignfoldersignerassociationAllowsigninginperson == null ? 0: this.bEzsignfoldersignerassociationAllowsigninginperson.hashCode());
     result = 31 * result + (this.objEzsignsignergroup == null ? 0: this.objEzsignsignergroup.hashCode());
     result = 31 * result + (this.objUser == null ? 0: this.objUser.hashCode());
     result = 31 * result + (this.objEzsignsigner == null ? 0: this.objEzsignsigner.hashCode());
@@ -202,6 +217,7 @@ public class CustomEzsignfoldersignerassociationActionableElementResponse {
     sb.append("  bEzsignfoldersignerassociationDelayedsend: ").append(bEzsignfoldersignerassociationDelayedsend).append("\n");
     sb.append("  bEzsignfoldersignerassociationReceivecopy: ").append(bEzsignfoldersignerassociationReceivecopy).append("\n");
     sb.append("  tEzsignfoldersignerassociationMessage: ").append(tEzsignfoldersignerassociationMessage).append("\n");
+    sb.append("  bEzsignfoldersignerassociationAllowsigninginperson: ").append(bEzsignfoldersignerassociationAllowsigninginperson).append("\n");
     sb.append("  objEzsignsignergroup: ").append(objEzsignsignergroup).append("\n");
     sb.append("  objUser: ").append(objUser).append("\n");
     sb.append("  objEzsignsigner: ").append(objEzsignsigner).append("\n");
