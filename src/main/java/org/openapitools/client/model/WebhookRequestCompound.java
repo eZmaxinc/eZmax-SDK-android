@@ -28,6 +28,8 @@ public class WebhookRequestCompound {
   
   @SerializedName("pkiWebhookID")
   private Integer pkiWebhookID = null;
+  @SerializedName("fkiAuthenticationexternalID")
+  private Integer fkiAuthenticationexternalID = null;
   @SerializedName("fkiEzsignfoldertypeID")
   private Integer fkiEzsignfoldertypeID = null;
   @SerializedName("sWebhookDescription")
@@ -60,6 +62,19 @@ public class WebhookRequestCompound {
   }
   public void setPkiWebhookID(Integer pkiWebhookID) {
     this.pkiWebhookID = pkiWebhookID;
+  }
+
+  /**
+   * The unique ID of the Authenticationexternal
+   * minimum: 0
+   * maximum: 255
+   **/
+  @ApiModelProperty(value = "The unique ID of the Authenticationexternal")
+  public Integer getFkiAuthenticationexternalID() {
+    return fkiAuthenticationexternalID;
+  }
+  public void setFkiAuthenticationexternalID(Integer fkiAuthenticationexternalID) {
+    this.fkiAuthenticationexternalID = fkiAuthenticationexternalID;
   }
 
   /**
@@ -192,6 +207,7 @@ public class WebhookRequestCompound {
     }
     WebhookRequestCompound webhookRequestCompound = (WebhookRequestCompound) o;
     return (this.pkiWebhookID == null ? webhookRequestCompound.pkiWebhookID == null : this.pkiWebhookID.equals(webhookRequestCompound.pkiWebhookID)) &&
+        (this.fkiAuthenticationexternalID == null ? webhookRequestCompound.fkiAuthenticationexternalID == null : this.fkiAuthenticationexternalID.equals(webhookRequestCompound.fkiAuthenticationexternalID)) &&
         (this.fkiEzsignfoldertypeID == null ? webhookRequestCompound.fkiEzsignfoldertypeID == null : this.fkiEzsignfoldertypeID.equals(webhookRequestCompound.fkiEzsignfoldertypeID)) &&
         (this.sWebhookDescription == null ? webhookRequestCompound.sWebhookDescription == null : this.sWebhookDescription.equals(webhookRequestCompound.sWebhookDescription)) &&
         (this.eWebhookModule == null ? webhookRequestCompound.eWebhookModule == null : this.eWebhookModule.equals(webhookRequestCompound.eWebhookModule)) &&
@@ -209,6 +225,7 @@ public class WebhookRequestCompound {
   public int hashCode() {
     int result = 17;
     result = 31 * result + (this.pkiWebhookID == null ? 0: this.pkiWebhookID.hashCode());
+    result = 31 * result + (this.fkiAuthenticationexternalID == null ? 0: this.fkiAuthenticationexternalID.hashCode());
     result = 31 * result + (this.fkiEzsignfoldertypeID == null ? 0: this.fkiEzsignfoldertypeID.hashCode());
     result = 31 * result + (this.sWebhookDescription == null ? 0: this.sWebhookDescription.hashCode());
     result = 31 * result + (this.eWebhookModule == null ? 0: this.eWebhookModule.hashCode());
@@ -229,6 +246,7 @@ public class WebhookRequestCompound {
     sb.append("class WebhookRequestCompound {\n");
     
     sb.append("  pkiWebhookID: ").append(pkiWebhookID).append("\n");
+    sb.append("  fkiAuthenticationexternalID: ").append(fkiAuthenticationexternalID).append("\n");
     sb.append("  fkiEzsignfoldertypeID: ").append(fkiEzsignfoldertypeID).append("\n");
     sb.append("  sWebhookDescription: ").append(sWebhookDescription).append("\n");
     sb.append("  eWebhookModule: ").append(eWebhookModule).append("\n");

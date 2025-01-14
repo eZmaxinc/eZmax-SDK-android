@@ -25,6 +25,8 @@ public class EzsignsignatureSignV1Request {
   
   @SerializedName("fkiEzsignsigningreasonID")
   private Integer fkiEzsignsigningreasonID = null;
+  @SerializedName("fkiFontID")
+  private Integer fkiFontID = null;
   @SerializedName("sValue")
   private String sValue = null;
   public enum EAttachmentsConfirmationDecisionEnum {
@@ -52,6 +54,18 @@ public class EzsignsignatureSignV1Request {
   }
   public void setFkiEzsignsigningreasonID(Integer fkiEzsignsigningreasonID) {
     this.fkiEzsignsigningreasonID = fkiEzsignsigningreasonID;
+  }
+
+  /**
+   * The unique ID of the Font
+   * minimum: 0
+   **/
+  @ApiModelProperty(value = "The unique ID of the Font")
+  public Integer getFkiFontID() {
+    return fkiFontID;
+  }
+  public void setFkiFontID(Integer fkiFontID) {
+    this.fkiFontID = fkiFontID;
   }
 
   /**
@@ -88,9 +102,9 @@ public class EzsignsignatureSignV1Request {
   }
 
   /**
-   * The SVG of the handwritten signature.  This can only be set if eEzsignsignatureType is **Handwritten** and **bIsAutomatic** is false
+   * The SVG of the signature.  This can only be set if eEzsignsignatureType is **Signature**_/_**Initials** and **bIsAutomatic** is false
    **/
-  @ApiModelProperty(value = "The SVG of the handwritten signature.  This can only be set if eEzsignsignatureType is **Handwritten** and **bIsAutomatic** is false")
+  @ApiModelProperty(value = "The SVG of the signature.  This can only be set if eEzsignsignatureType is **Signature**_/_**Initials** and **bIsAutomatic** is false")
   public String getSSvg() {
     return sSvg;
   }
@@ -109,9 +123,9 @@ public class EzsignsignatureSignV1Request {
   }
 
   /**
-   * Indicates if the Ezsignsignature was part of an automatic process or not.  This can only be true if eEzsignsignatureType is **Acknowledgement**, **City**, **Handwritten**, **Initials**, **Name** or **Stamp**. 
+   * Indicates if the Ezsignsignature was part of an automatic process or not.  This can only be true if eEzsignsignatureType is **Acknowledgement**, **City**, **Signature**, **Initials** or **Stamp**. 
    **/
-  @ApiModelProperty(required = true, value = "Indicates if the Ezsignsignature was part of an automatic process or not.  This can only be true if eEzsignsignatureType is **Acknowledgement**, **City**, **Handwritten**, **Initials**, **Name** or **Stamp**. ")
+  @ApiModelProperty(required = true, value = "Indicates if the Ezsignsignature was part of an automatic process or not.  This can only be true if eEzsignsignatureType is **Acknowledgement**, **City**, **Signature**, **Initials** or **Stamp**. ")
   public Boolean getBIsAutomatic() {
     return bIsAutomatic;
   }
@@ -130,6 +144,7 @@ public class EzsignsignatureSignV1Request {
     }
     EzsignsignatureSignV1Request ezsignsignatureSignV1Request = (EzsignsignatureSignV1Request) o;
     return (this.fkiEzsignsigningreasonID == null ? ezsignsignatureSignV1Request.fkiEzsignsigningreasonID == null : this.fkiEzsignsigningreasonID.equals(ezsignsignatureSignV1Request.fkiEzsignsigningreasonID)) &&
+        (this.fkiFontID == null ? ezsignsignatureSignV1Request.fkiFontID == null : this.fkiFontID.equals(ezsignsignatureSignV1Request.fkiFontID)) &&
         (this.sValue == null ? ezsignsignatureSignV1Request.sValue == null : this.sValue.equals(ezsignsignatureSignV1Request.sValue)) &&
         (this.eAttachmentsConfirmationDecision == null ? ezsignsignatureSignV1Request.eAttachmentsConfirmationDecision == null : this.eAttachmentsConfirmationDecision.equals(ezsignsignatureSignV1Request.eAttachmentsConfirmationDecision)) &&
         (this.sAttachmentsRefusalReason == null ? ezsignsignatureSignV1Request.sAttachmentsRefusalReason == null : this.sAttachmentsRefusalReason.equals(ezsignsignatureSignV1Request.sAttachmentsRefusalReason)) &&
@@ -142,6 +157,7 @@ public class EzsignsignatureSignV1Request {
   public int hashCode() {
     int result = 17;
     result = 31 * result + (this.fkiEzsignsigningreasonID == null ? 0: this.fkiEzsignsigningreasonID.hashCode());
+    result = 31 * result + (this.fkiFontID == null ? 0: this.fkiFontID.hashCode());
     result = 31 * result + (this.sValue == null ? 0: this.sValue.hashCode());
     result = 31 * result + (this.eAttachmentsConfirmationDecision == null ? 0: this.eAttachmentsConfirmationDecision.hashCode());
     result = 31 * result + (this.sAttachmentsRefusalReason == null ? 0: this.sAttachmentsRefusalReason.hashCode());
@@ -157,6 +173,7 @@ public class EzsignsignatureSignV1Request {
     sb.append("class EzsignsignatureSignV1Request {\n");
     
     sb.append("  fkiEzsignsigningreasonID: ").append(fkiEzsignsigningreasonID).append("\n");
+    sb.append("  fkiFontID: ").append(fkiFontID).append("\n");
     sb.append("  sValue: ").append(sValue).append("\n");
     sb.append("  eAttachmentsConfirmationDecision: ").append(eAttachmentsConfirmationDecision).append("\n");
     sb.append("  sAttachmentsRefusalReason: ").append(sAttachmentsRefusalReason).append("\n");

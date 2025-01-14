@@ -10,11 +10,15 @@ Method | HTTP request | Description
 [**ezsigndocumentCreateEzsignelementsPositionedByWordV1**](ObjectEzsigndocumentApi.md#ezsigndocumentCreateEzsignelementsPositionedByWordV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/createEzsignelementsPositionedByWord | Create multiple Ezsignsignatures/Ezsignformfieldgroups
 [**ezsigndocumentCreateObjectV1**](ObjectEzsigndocumentApi.md#ezsigndocumentCreateObjectV1) | **POST** /1/object/ezsigndocument | Create a new Ezsigndocument
 [**ezsigndocumentCreateObjectV2**](ObjectEzsigndocumentApi.md#ezsigndocumentCreateObjectV2) | **POST** /2/object/ezsigndocument | Create a new Ezsigndocument
+[**ezsigndocumentCreateObjectV3**](ObjectEzsigndocumentApi.md#ezsigndocumentCreateObjectV3) | **POST** /3/object/ezsigndocument | Create a new Ezsigndocument
 [**ezsigndocumentDeclineToSignV1**](ObjectEzsigndocumentApi.md#ezsigndocumentDeclineToSignV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/declineToSign | Decline to sign
 [**ezsigndocumentDeleteObjectV1**](ObjectEzsigndocumentApi.md#ezsigndocumentDeleteObjectV1) | **DELETE** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Delete an existing Ezsigndocument
+[**ezsigndocumentEditEzsignannotationsV1**](ObjectEzsigndocumentApi.md#ezsigndocumentEditEzsignannotationsV1) | **PUT** /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignannotations | Edit multiple Ezsignannotations
 [**ezsigndocumentEditEzsignformfieldgroupsV1**](ObjectEzsigndocumentApi.md#ezsigndocumentEditEzsignformfieldgroupsV1) | **PUT** /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignformfieldgroups | Edit multiple Ezsignformfieldgroups
 [**ezsigndocumentEditEzsignsignaturesV1**](ObjectEzsigndocumentApi.md#ezsigndocumentEditEzsignsignaturesV1) | **PUT** /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures | Edit multiple Ezsignsignatures
+[**ezsigndocumentEditObjectV1**](ObjectEzsigndocumentApi.md#ezsigndocumentEditObjectV1) | **PUT** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Edit an existing Ezsigndocument
 [**ezsigndocumentEndPrematurelyV1**](ObjectEzsigndocumentApi.md#ezsigndocumentEndPrematurelyV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/endPrematurely | End prematurely
+[**ezsigndocumentExtractTextV1**](ObjectEzsigndocumentApi.md#ezsigndocumentExtractTextV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/extractText | Extract text from Ezsigndocument area
 [**ezsigndocumentFlattenV1**](ObjectEzsigndocumentApi.md#ezsigndocumentFlattenV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/flatten | Flatten
 [**ezsigndocumentGetActionableElementsV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetActionableElementsV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElements | Retrieve actionable elements for the Ezsigndocument
 [**ezsigndocumentGetAttachmentsV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetAttachmentsV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getAttachments | Retrieve Ezsigndocument&#39;s Attachments
@@ -321,6 +325,52 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
+## ezsigndocumentCreateObjectV3
+
+> EzsigndocumentCreateObjectV3Response ezsigndocumentCreateObjectV3(ezsigndocumentCreateObjectV3Request)
+
+Create a new Ezsigndocument
+
+The endpoint allows to create one or many elements at once.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectEzsigndocumentApi;
+
+ObjectEzsigndocumentApi apiInstance = new ObjectEzsigndocumentApi();
+EzsigndocumentCreateObjectV3Request ezsigndocumentCreateObjectV3Request = new EzsigndocumentCreateObjectV3Request(); // EzsigndocumentCreateObjectV3Request | 
+try {
+    EzsigndocumentCreateObjectV3Response result = apiInstance.ezsigndocumentCreateObjectV3(ezsigndocumentCreateObjectV3Request);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectEzsigndocumentApi#ezsigndocumentCreateObjectV3");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ezsigndocumentCreateObjectV3Request** | [**EzsigndocumentCreateObjectV3Request**](EzsigndocumentCreateObjectV3Request.md)|  |
+
+### Return type
+
+[**EzsigndocumentCreateObjectV3Response**](EzsigndocumentCreateObjectV3Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
 ## ezsigndocumentDeclineToSignV1
 
 > EzsigndocumentDeclineToSignV1Response ezsigndocumentDeclineToSignV1(pkiEzsigndocumentID, ezsigndocumentDeclineToSignV1Request)
@@ -412,6 +462,54 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## ezsigndocumentEditEzsignannotationsV1
+
+> EzsigndocumentEditEzsignannotationsV1Response ezsigndocumentEditEzsignannotationsV1(pkiEzsigndocumentID, ezsigndocumentEditEzsignannotationsV1Request)
+
+Edit multiple Ezsignannotations
+
+Using this endpoint, you can edit multiple Ezsignannotations at the same time.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectEzsigndocumentApi;
+
+ObjectEzsigndocumentApi apiInstance = new ObjectEzsigndocumentApi();
+Integer pkiEzsigndocumentID = null; // Integer | 
+EzsigndocumentEditEzsignannotationsV1Request ezsigndocumentEditEzsignannotationsV1Request = new EzsigndocumentEditEzsignannotationsV1Request(); // EzsigndocumentEditEzsignannotationsV1Request | 
+try {
+    EzsigndocumentEditEzsignannotationsV1Response result = apiInstance.ezsigndocumentEditEzsignannotationsV1(pkiEzsigndocumentID, ezsigndocumentEditEzsignannotationsV1Request);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectEzsigndocumentApi#ezsigndocumentEditEzsignannotationsV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsigndocumentID** | **Integer**|  | [default to null]
+ **ezsigndocumentEditEzsignannotationsV1Request** | [**EzsigndocumentEditEzsignannotationsV1Request**](EzsigndocumentEditEzsignannotationsV1Request.md)|  |
+
+### Return type
+
+[**EzsigndocumentEditEzsignannotationsV1Response**](EzsigndocumentEditEzsignannotationsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 
@@ -511,6 +609,54 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
+## ezsigndocumentEditObjectV1
+
+> EzsigndocumentEditObjectV1Response ezsigndocumentEditObjectV1(pkiEzsigndocumentID, ezsigndocumentEditObjectV1Request)
+
+Edit an existing Ezsigndocument
+
+
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectEzsigndocumentApi;
+
+ObjectEzsigndocumentApi apiInstance = new ObjectEzsigndocumentApi();
+Integer pkiEzsigndocumentID = null; // Integer | 
+EzsigndocumentEditObjectV1Request ezsigndocumentEditObjectV1Request = new EzsigndocumentEditObjectV1Request(); // EzsigndocumentEditObjectV1Request | 
+try {
+    EzsigndocumentEditObjectV1Response result = apiInstance.ezsigndocumentEditObjectV1(pkiEzsigndocumentID, ezsigndocumentEditObjectV1Request);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectEzsigndocumentApi#ezsigndocumentEditObjectV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsigndocumentID** | **Integer**|  | [default to null]
+ **ezsigndocumentEditObjectV1Request** | [**EzsigndocumentEditObjectV1Request**](EzsigndocumentEditObjectV1Request.md)|  |
+
+### Return type
+
+[**EzsigndocumentEditObjectV1Response**](EzsigndocumentEditObjectV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
 ## ezsigndocumentEndPrematurelyV1
 
 > EzsigndocumentEndPrematurelyV1Response ezsigndocumentEndPrematurelyV1(pkiEzsigndocumentID, body)
@@ -548,6 +694,54 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsigndocumentEndPrematurelyV1Response**](EzsigndocumentEndPrematurelyV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## ezsigndocumentExtractTextV1
+
+> EzsigndocumentExtractTextV1Response ezsigndocumentExtractTextV1(pkiEzsigndocumentID, ezsigndocumentExtractTextV1Request)
+
+Extract text from Ezsigndocument area
+
+Extract text from Ezsigndocument area
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectEzsigndocumentApi;
+
+ObjectEzsigndocumentApi apiInstance = new ObjectEzsigndocumentApi();
+Integer pkiEzsigndocumentID = null; // Integer | 
+EzsigndocumentExtractTextV1Request ezsigndocumentExtractTextV1Request = new EzsigndocumentExtractTextV1Request(); // EzsigndocumentExtractTextV1Request | 
+try {
+    EzsigndocumentExtractTextV1Response result = apiInstance.ezsigndocumentExtractTextV1(pkiEzsigndocumentID, ezsigndocumentExtractTextV1Request);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectEzsigndocumentApi#ezsigndocumentExtractTextV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsigndocumentID** | **Integer**|  | [default to null]
+ **ezsigndocumentExtractTextV1Request** | [**EzsigndocumentExtractTextV1Request**](EzsigndocumentExtractTextV1Request.md)|  |
+
+### Return type
+
+[**EzsigndocumentExtractTextV1Response**](EzsigndocumentExtractTextV1Response.md)
 
 ### Authorization
 

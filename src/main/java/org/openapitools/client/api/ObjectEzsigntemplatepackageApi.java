@@ -607,9 +607,10 @@ public class ObjectEzsigntemplatepackageApi {
    * @param eFilterActive Specify which results we want to display.
    * @param sQuery Allow to filter the returned results
    * @param acceptLanguage 
+   * @param fkiEzsignfoldertypeID The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic
    * @return EzsigntemplatepackageGetAutocompleteV2Response
   */
-  public EzsigntemplatepackageGetAutocompleteV2Response ezsigntemplatepackageGetAutocompleteV2 (String sSelector, String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public EzsigntemplatepackageGetAutocompleteV2Response ezsigntemplatepackageGetAutocompleteV2 (String sSelector, String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage, Integer fkiEzsignfoldertypeID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'sSelector' is set
     if (sSelector == null) {
@@ -628,6 +629,7 @@ public class ObjectEzsigntemplatepackageApi {
     Map<String, String> formParams = new HashMap<String, String>();
     queryParams.addAll(ApiInvoker.parameterToPairs("", "eFilterActive", eFilterActive));
     queryParams.addAll(ApiInvoker.parameterToPairs("", "sQuery", sQuery));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "fkiEzsignfoldertypeID", fkiEzsignfoldertypeID));
     headerParams.put("Accept-Language", ApiInvoker.parameterToString(acceptLanguage));
     String[] contentTypes = {
     };
@@ -671,9 +673,9 @@ public class ObjectEzsigntemplatepackageApi {
       /**
    * Retrieve Ezsigntemplatepackages and IDs
    * Get the list of Ezsigntemplatepackage to be used in a dropdown or autocomplete control.
-   * @param sSelector The type of Ezsigntemplatepackages to return   * @param eFilterActive Specify which results we want to display.   * @param sQuery Allow to filter the returned results   * @param acceptLanguage 
+   * @param sSelector The type of Ezsigntemplatepackages to return   * @param eFilterActive Specify which results we want to display.   * @param sQuery Allow to filter the returned results   * @param acceptLanguage    * @param fkiEzsignfoldertypeID The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic
   */
-  public void ezsigntemplatepackageGetAutocompleteV2 (String sSelector, String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage, final Response.Listener<EzsigntemplatepackageGetAutocompleteV2Response> responseListener, final Response.ErrorListener errorListener) {
+  public void ezsigntemplatepackageGetAutocompleteV2 (String sSelector, String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage, Integer fkiEzsignfoldertypeID, final Response.Listener<EzsigntemplatepackageGetAutocompleteV2Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'sSelector' is set
@@ -694,6 +696,7 @@ public class ObjectEzsigntemplatepackageApi {
 
     queryParams.addAll(ApiInvoker.parameterToPairs("", "eFilterActive", eFilterActive));
     queryParams.addAll(ApiInvoker.parameterToPairs("", "sQuery", sQuery));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "fkiEzsignfoldertypeID", fkiEzsignfoldertypeID));
 
     headerParams.put("Accept-Language", ApiInvoker.parameterToString(acceptLanguage));
 

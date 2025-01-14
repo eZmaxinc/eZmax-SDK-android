@@ -32,6 +32,8 @@ public class CustomEzsignfoldertransmissionResponse {
   private FieldEEzsignfolderStep eEzsignfolderStep = null;
   @SerializedName("iEzsignfolderSignaturetotal")
   private Integer iEzsignfolderSignaturetotal = null;
+  @SerializedName("iEzsignfolderFormfieldtotal")
+  private Integer iEzsignfolderFormfieldtotal = null;
   @SerializedName("iEzsignfolderSignaturesigned")
   private Integer iEzsignfolderSignaturesigned = null;
   @SerializedName("a_objEzsignfoldertransmissionSigner")
@@ -82,6 +84,17 @@ public class CustomEzsignfoldertransmissionResponse {
   }
 
   /**
+   * The number of total form fields that were requested in the Ezsignfolder
+   **/
+  @ApiModelProperty(required = true, value = "The number of total form fields that were requested in the Ezsignfolder")
+  public Integer getIEzsignfolderFormfieldtotal() {
+    return iEzsignfolderFormfieldtotal;
+  }
+  public void setIEzsignfolderFormfieldtotal(Integer iEzsignfolderFormfieldtotal) {
+    this.iEzsignfolderFormfieldtotal = iEzsignfolderFormfieldtotal;
+  }
+
+  /**
    * The number of signatures that were signed in the Ezsignfolder.
    **/
   @ApiModelProperty(required = true, value = "The number of signatures that were signed in the Ezsignfolder.")
@@ -116,6 +129,7 @@ public class CustomEzsignfoldertransmissionResponse {
         (this.sEzsignfolderDescription == null ? customEzsignfoldertransmissionResponse.sEzsignfolderDescription == null : this.sEzsignfolderDescription.equals(customEzsignfoldertransmissionResponse.sEzsignfolderDescription)) &&
         (this.eEzsignfolderStep == null ? customEzsignfoldertransmissionResponse.eEzsignfolderStep == null : this.eEzsignfolderStep.equals(customEzsignfoldertransmissionResponse.eEzsignfolderStep)) &&
         (this.iEzsignfolderSignaturetotal == null ? customEzsignfoldertransmissionResponse.iEzsignfolderSignaturetotal == null : this.iEzsignfolderSignaturetotal.equals(customEzsignfoldertransmissionResponse.iEzsignfolderSignaturetotal)) &&
+        (this.iEzsignfolderFormfieldtotal == null ? customEzsignfoldertransmissionResponse.iEzsignfolderFormfieldtotal == null : this.iEzsignfolderFormfieldtotal.equals(customEzsignfoldertransmissionResponse.iEzsignfolderFormfieldtotal)) &&
         (this.iEzsignfolderSignaturesigned == null ? customEzsignfoldertransmissionResponse.iEzsignfolderSignaturesigned == null : this.iEzsignfolderSignaturesigned.equals(customEzsignfoldertransmissionResponse.iEzsignfolderSignaturesigned)) &&
         (this.aObjEzsignfoldertransmissionSigner == null ? customEzsignfoldertransmissionResponse.aObjEzsignfoldertransmissionSigner == null : this.aObjEzsignfoldertransmissionSigner.equals(customEzsignfoldertransmissionResponse.aObjEzsignfoldertransmissionSigner));
   }
@@ -127,6 +141,7 @@ public class CustomEzsignfoldertransmissionResponse {
     result = 31 * result + (this.sEzsignfolderDescription == null ? 0: this.sEzsignfolderDescription.hashCode());
     result = 31 * result + (this.eEzsignfolderStep == null ? 0: this.eEzsignfolderStep.hashCode());
     result = 31 * result + (this.iEzsignfolderSignaturetotal == null ? 0: this.iEzsignfolderSignaturetotal.hashCode());
+    result = 31 * result + (this.iEzsignfolderFormfieldtotal == null ? 0: this.iEzsignfolderFormfieldtotal.hashCode());
     result = 31 * result + (this.iEzsignfolderSignaturesigned == null ? 0: this.iEzsignfolderSignaturesigned.hashCode());
     result = 31 * result + (this.aObjEzsignfoldertransmissionSigner == null ? 0: this.aObjEzsignfoldertransmissionSigner.hashCode());
     return result;
@@ -141,6 +156,7 @@ public class CustomEzsignfoldertransmissionResponse {
     sb.append("  sEzsignfolderDescription: ").append(sEzsignfolderDescription).append("\n");
     sb.append("  eEzsignfolderStep: ").append(eEzsignfolderStep).append("\n");
     sb.append("  iEzsignfolderSignaturetotal: ").append(iEzsignfolderSignaturetotal).append("\n");
+    sb.append("  iEzsignfolderFormfieldtotal: ").append(iEzsignfolderFormfieldtotal).append("\n");
     sb.append("  iEzsignfolderSignaturesigned: ").append(iEzsignfolderSignaturesigned).append("\n");
     sb.append("  aObjEzsignfoldertransmissionSigner: ").append(aObjEzsignfoldertransmissionSigner).append("\n");
     sb.append("}\n");

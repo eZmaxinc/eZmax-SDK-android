@@ -28,6 +28,8 @@ public class SystemconfigurationRequest {
   
   @SerializedName("pkiSystemconfigurationID")
   private Integer pkiSystemconfigurationID = null;
+  @SerializedName("fkiBrandingID")
+  private Integer fkiBrandingID = null;
   @SerializedName("eSystemconfigurationNewexternaluseraction")
   private FieldESystemconfigurationNewexternaluseraction eSystemconfigurationNewexternaluseraction = null;
   @SerializedName("eSystemconfigurationLanguage1")
@@ -60,6 +62,18 @@ public class SystemconfigurationRequest {
   }
   public void setPkiSystemconfigurationID(Integer pkiSystemconfigurationID) {
     this.pkiSystemconfigurationID = pkiSystemconfigurationID;
+  }
+
+  /**
+   * The unique ID of the Branding
+   * minimum: 0
+   **/
+  @ApiModelProperty(value = "The unique ID of the Branding")
+  public Integer getFkiBrandingID() {
+    return fkiBrandingID;
+  }
+  public void setFkiBrandingID(Integer fkiBrandingID) {
+    this.fkiBrandingID = fkiBrandingID;
   }
 
   /**
@@ -178,6 +192,7 @@ public class SystemconfigurationRequest {
     }
     SystemconfigurationRequest systemconfigurationRequest = (SystemconfigurationRequest) o;
     return (this.pkiSystemconfigurationID == null ? systemconfigurationRequest.pkiSystemconfigurationID == null : this.pkiSystemconfigurationID.equals(systemconfigurationRequest.pkiSystemconfigurationID)) &&
+        (this.fkiBrandingID == null ? systemconfigurationRequest.fkiBrandingID == null : this.fkiBrandingID.equals(systemconfigurationRequest.fkiBrandingID)) &&
         (this.eSystemconfigurationNewexternaluseraction == null ? systemconfigurationRequest.eSystemconfigurationNewexternaluseraction == null : this.eSystemconfigurationNewexternaluseraction.equals(systemconfigurationRequest.eSystemconfigurationNewexternaluseraction)) &&
         (this.eSystemconfigurationLanguage1 == null ? systemconfigurationRequest.eSystemconfigurationLanguage1 == null : this.eSystemconfigurationLanguage1.equals(systemconfigurationRequest.eSystemconfigurationLanguage1)) &&
         (this.eSystemconfigurationLanguage2 == null ? systemconfigurationRequest.eSystemconfigurationLanguage2 == null : this.eSystemconfigurationLanguage2.equals(systemconfigurationRequest.eSystemconfigurationLanguage2)) &&
@@ -194,6 +209,7 @@ public class SystemconfigurationRequest {
   public int hashCode() {
     int result = 17;
     result = 31 * result + (this.pkiSystemconfigurationID == null ? 0: this.pkiSystemconfigurationID.hashCode());
+    result = 31 * result + (this.fkiBrandingID == null ? 0: this.fkiBrandingID.hashCode());
     result = 31 * result + (this.eSystemconfigurationNewexternaluseraction == null ? 0: this.eSystemconfigurationNewexternaluseraction.hashCode());
     result = 31 * result + (this.eSystemconfigurationLanguage1 == null ? 0: this.eSystemconfigurationLanguage1.hashCode());
     result = 31 * result + (this.eSystemconfigurationLanguage2 == null ? 0: this.eSystemconfigurationLanguage2.hashCode());
@@ -213,6 +229,7 @@ public class SystemconfigurationRequest {
     sb.append("class SystemconfigurationRequest {\n");
     
     sb.append("  pkiSystemconfigurationID: ").append(pkiSystemconfigurationID).append("\n");
+    sb.append("  fkiBrandingID: ").append(fkiBrandingID).append("\n");
     sb.append("  eSystemconfigurationNewexternaluseraction: ").append(eSystemconfigurationNewexternaluseraction).append("\n");
     sb.append("  eSystemconfigurationLanguage1: ").append(eSystemconfigurationLanguage1).append("\n");
     sb.append("  eSystemconfigurationLanguage2: ").append(eSystemconfigurationLanguage2).append("\n");

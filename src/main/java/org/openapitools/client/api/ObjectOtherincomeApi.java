@@ -24,7 +24,10 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
 import org.openapitools.client.model.CommonResponseError;
+import org.openapitools.client.model.OtherincomeGetCommunicationCountV1Response;
 import org.openapitools.client.model.OtherincomeGetCommunicationListV1Response;
+import org.openapitools.client.model.OtherincomeGetCommunicationrecipientsV1Response;
+import org.openapitools.client.model.OtherincomeGetCommunicationsendersV1Response;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
@@ -56,6 +59,133 @@ public class ObjectOtherincomeApi {
     return basePath;
   }
 
+  /**
+  * Retrieve Communication count
+  * 
+   * @param pkiOtherincomeID 
+   * @return OtherincomeGetCommunicationCountV1Response
+  */
+  public OtherincomeGetCommunicationCountV1Response otherincomeGetCommunicationCountV1 (Integer pkiOtherincomeID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiOtherincomeID' is set
+    if (pkiOtherincomeID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiOtherincomeID' when calling otherincomeGetCommunicationCountV1",
+        new ApiException(400, "Missing the required parameter 'pkiOtherincomeID' when calling otherincomeGetCommunicationCountV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/otherincome/{pkiOtherincomeID}/getCommunicationCount".replaceAll("\\{" + "pkiOtherincomeID" + "\\}", apiInvoker.escapeString(pkiOtherincomeID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (OtherincomeGetCommunicationCountV1Response) ApiInvoker.deserialize(localVarResponse, "", OtherincomeGetCommunicationCountV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve Communication count
+   * 
+   * @param pkiOtherincomeID 
+  */
+  public void otherincomeGetCommunicationCountV1 (Integer pkiOtherincomeID, final Response.Listener<OtherincomeGetCommunicationCountV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiOtherincomeID' is set
+    if (pkiOtherincomeID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiOtherincomeID' when calling otherincomeGetCommunicationCountV1",
+        new ApiException(400, "Missing the required parameter 'pkiOtherincomeID' when calling otherincomeGetCommunicationCountV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/otherincome/{pkiOtherincomeID}/getCommunicationCount".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiOtherincomeID" + "\\}", apiInvoker.escapeString(pkiOtherincomeID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((OtherincomeGetCommunicationCountV1Response) ApiInvoker.deserialize(localVarResponse,  "", OtherincomeGetCommunicationCountV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
   /**
   * Retrieve Communication list
   * 
@@ -169,6 +299,260 @@ public class ObjectOtherincomeApi {
           public void onResponse(String localVarResponse) {
             try {
               responseListener.onResponse((OtherincomeGetCommunicationListV1Response) ApiInvoker.deserialize(localVarResponse,  "", OtherincomeGetCommunicationListV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Retrieve Otherincome&#39;s Communicationrecipient
+  * 
+   * @param pkiOtherincomeID 
+   * @return OtherincomeGetCommunicationrecipientsV1Response
+  */
+  public OtherincomeGetCommunicationrecipientsV1Response otherincomeGetCommunicationrecipientsV1 (Integer pkiOtherincomeID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiOtherincomeID' is set
+    if (pkiOtherincomeID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiOtherincomeID' when calling otherincomeGetCommunicationrecipientsV1",
+        new ApiException(400, "Missing the required parameter 'pkiOtherincomeID' when calling otherincomeGetCommunicationrecipientsV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/otherincome/{pkiOtherincomeID}/getCommunicationrecipients".replaceAll("\\{" + "pkiOtherincomeID" + "\\}", apiInvoker.escapeString(pkiOtherincomeID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (OtherincomeGetCommunicationrecipientsV1Response) ApiInvoker.deserialize(localVarResponse, "", OtherincomeGetCommunicationrecipientsV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve Otherincome&#39;s Communicationrecipient
+   * 
+   * @param pkiOtherincomeID 
+  */
+  public void otherincomeGetCommunicationrecipientsV1 (Integer pkiOtherincomeID, final Response.Listener<OtherincomeGetCommunicationrecipientsV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiOtherincomeID' is set
+    if (pkiOtherincomeID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiOtherincomeID' when calling otherincomeGetCommunicationrecipientsV1",
+        new ApiException(400, "Missing the required parameter 'pkiOtherincomeID' when calling otherincomeGetCommunicationrecipientsV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/otherincome/{pkiOtherincomeID}/getCommunicationrecipients".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiOtherincomeID" + "\\}", apiInvoker.escapeString(pkiOtherincomeID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((OtherincomeGetCommunicationrecipientsV1Response) ApiInvoker.deserialize(localVarResponse,  "", OtherincomeGetCommunicationrecipientsV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Retrieve Otherincome&#39;s Communicationsender
+  * 
+   * @param pkiOtherincomeID 
+   * @return OtherincomeGetCommunicationsendersV1Response
+  */
+  public OtherincomeGetCommunicationsendersV1Response otherincomeGetCommunicationsendersV1 (Integer pkiOtherincomeID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiOtherincomeID' is set
+    if (pkiOtherincomeID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiOtherincomeID' when calling otherincomeGetCommunicationsendersV1",
+        new ApiException(400, "Missing the required parameter 'pkiOtherincomeID' when calling otherincomeGetCommunicationsendersV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/otherincome/{pkiOtherincomeID}/getCommunicationsenders".replaceAll("\\{" + "pkiOtherincomeID" + "\\}", apiInvoker.escapeString(pkiOtherincomeID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (OtherincomeGetCommunicationsendersV1Response) ApiInvoker.deserialize(localVarResponse, "", OtherincomeGetCommunicationsendersV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve Otherincome&#39;s Communicationsender
+   * 
+   * @param pkiOtherincomeID 
+  */
+  public void otherincomeGetCommunicationsendersV1 (Integer pkiOtherincomeID, final Response.Listener<OtherincomeGetCommunicationsendersV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiOtherincomeID' is set
+    if (pkiOtherincomeID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiOtherincomeID' when calling otherincomeGetCommunicationsendersV1",
+        new ApiException(400, "Missing the required parameter 'pkiOtherincomeID' when calling otherincomeGetCommunicationsendersV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/otherincome/{pkiOtherincomeID}/getCommunicationsenders".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiOtherincomeID" + "\\}", apiInvoker.escapeString(pkiOtherincomeID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((OtherincomeGetCommunicationsendersV1Response) ApiInvoker.deserialize(localVarResponse,  "", OtherincomeGetCommunicationsendersV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

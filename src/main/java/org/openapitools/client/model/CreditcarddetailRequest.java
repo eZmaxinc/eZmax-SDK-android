@@ -61,7 +61,7 @@ public class CreditcarddetailRequest {
   /**
    * The civic of the Creditcarddetail
    **/
-  @ApiModelProperty(value = "The civic of the Creditcarddetail")
+  @ApiModelProperty(required = true, value = "The civic of the Creditcarddetail")
   public String getSCreditcarddetailCivic() {
     return sCreditcarddetailCivic;
   }
@@ -72,7 +72,7 @@ public class CreditcarddetailRequest {
   /**
    * The street of the Creditcarddetail
    **/
-  @ApiModelProperty(value = "The street of the Creditcarddetail")
+  @ApiModelProperty(required = true, value = "The street of the Creditcarddetail")
   public String getSCreditcarddetailStreet() {
     return sCreditcarddetailStreet;
   }
@@ -83,7 +83,7 @@ public class CreditcarddetailRequest {
   /**
    * The zip of the Creditcarddetail
    **/
-  @ApiModelProperty(value = "The zip of the Creditcarddetail")
+  @ApiModelProperty(required = true, value = "The zip of the Creditcarddetail")
   public String getSCreditcarddetailZip() {
     return sCreditcarddetailZip;
   }

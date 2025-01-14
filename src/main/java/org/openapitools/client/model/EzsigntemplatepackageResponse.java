@@ -25,8 +25,12 @@ public class EzsigntemplatepackageResponse {
   private Integer pkiEzsigntemplatepackageID = null;
   @SerializedName("fkiEzsignfoldertypeID")
   private Integer fkiEzsignfoldertypeID = null;
+  @SerializedName("fkiEzdoctemplatedocumentID")
+  private Integer fkiEzdoctemplatedocumentID = null;
   @SerializedName("fkiLanguageID")
   private Integer fkiLanguageID = null;
+  @SerializedName("sEzdoctemplatedocumentNameX")
+  private String sEzdoctemplatedocumentNameX = null;
   @SerializedName("sLanguageNameX")
   private String sLanguageNameX = null;
   @SerializedName("sEzsigntemplatepackageDescription")
@@ -68,6 +72,19 @@ public class EzsigntemplatepackageResponse {
   }
 
   /**
+   * The unique ID of the Ezdoctemplatedocument
+   * minimum: 0
+   * maximum: 65535
+   **/
+  @ApiModelProperty(value = "The unique ID of the Ezdoctemplatedocument")
+  public Integer getFkiEzdoctemplatedocumentID() {
+    return fkiEzdoctemplatedocumentID;
+  }
+  public void setFkiEzdoctemplatedocumentID(Integer fkiEzdoctemplatedocumentID) {
+    this.fkiEzdoctemplatedocumentID = fkiEzdoctemplatedocumentID;
+  }
+
+  /**
    * The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
    * minimum: 1
    * maximum: 2
@@ -78,6 +95,17 @@ public class EzsigntemplatepackageResponse {
   }
   public void setFkiLanguageID(Integer fkiLanguageID) {
     this.fkiLanguageID = fkiLanguageID;
+  }
+
+  /**
+   * The name of the Ezdoctemplatedocument in the language of the requester
+   **/
+  @ApiModelProperty(value = "The name of the Ezdoctemplatedocument in the language of the requester")
+  public String getSEzdoctemplatedocumentNameX() {
+    return sEzdoctemplatedocumentNameX;
+  }
+  public void setSEzdoctemplatedocumentNameX(String sEzdoctemplatedocumentNameX) {
+    this.sEzdoctemplatedocumentNameX = sEzdoctemplatedocumentNameX;
   }
 
   /**
@@ -169,7 +197,9 @@ public class EzsigntemplatepackageResponse {
     EzsigntemplatepackageResponse ezsigntemplatepackageResponse = (EzsigntemplatepackageResponse) o;
     return (this.pkiEzsigntemplatepackageID == null ? ezsigntemplatepackageResponse.pkiEzsigntemplatepackageID == null : this.pkiEzsigntemplatepackageID.equals(ezsigntemplatepackageResponse.pkiEzsigntemplatepackageID)) &&
         (this.fkiEzsignfoldertypeID == null ? ezsigntemplatepackageResponse.fkiEzsignfoldertypeID == null : this.fkiEzsignfoldertypeID.equals(ezsigntemplatepackageResponse.fkiEzsignfoldertypeID)) &&
+        (this.fkiEzdoctemplatedocumentID == null ? ezsigntemplatepackageResponse.fkiEzdoctemplatedocumentID == null : this.fkiEzdoctemplatedocumentID.equals(ezsigntemplatepackageResponse.fkiEzdoctemplatedocumentID)) &&
         (this.fkiLanguageID == null ? ezsigntemplatepackageResponse.fkiLanguageID == null : this.fkiLanguageID.equals(ezsigntemplatepackageResponse.fkiLanguageID)) &&
+        (this.sEzdoctemplatedocumentNameX == null ? ezsigntemplatepackageResponse.sEzdoctemplatedocumentNameX == null : this.sEzdoctemplatedocumentNameX.equals(ezsigntemplatepackageResponse.sEzdoctemplatedocumentNameX)) &&
         (this.sLanguageNameX == null ? ezsigntemplatepackageResponse.sLanguageNameX == null : this.sLanguageNameX.equals(ezsigntemplatepackageResponse.sLanguageNameX)) &&
         (this.sEzsigntemplatepackageDescription == null ? ezsigntemplatepackageResponse.sEzsigntemplatepackageDescription == null : this.sEzsigntemplatepackageDescription.equals(ezsigntemplatepackageResponse.sEzsigntemplatepackageDescription)) &&
         (this.bEzsigntemplatepackageAdminonly == null ? ezsigntemplatepackageResponse.bEzsigntemplatepackageAdminonly == null : this.bEzsigntemplatepackageAdminonly.equals(ezsigntemplatepackageResponse.bEzsigntemplatepackageAdminonly)) &&
@@ -184,7 +214,9 @@ public class EzsigntemplatepackageResponse {
     int result = 17;
     result = 31 * result + (this.pkiEzsigntemplatepackageID == null ? 0: this.pkiEzsigntemplatepackageID.hashCode());
     result = 31 * result + (this.fkiEzsignfoldertypeID == null ? 0: this.fkiEzsignfoldertypeID.hashCode());
+    result = 31 * result + (this.fkiEzdoctemplatedocumentID == null ? 0: this.fkiEzdoctemplatedocumentID.hashCode());
     result = 31 * result + (this.fkiLanguageID == null ? 0: this.fkiLanguageID.hashCode());
+    result = 31 * result + (this.sEzdoctemplatedocumentNameX == null ? 0: this.sEzdoctemplatedocumentNameX.hashCode());
     result = 31 * result + (this.sLanguageNameX == null ? 0: this.sLanguageNameX.hashCode());
     result = 31 * result + (this.sEzsigntemplatepackageDescription == null ? 0: this.sEzsigntemplatepackageDescription.hashCode());
     result = 31 * result + (this.bEzsigntemplatepackageAdminonly == null ? 0: this.bEzsigntemplatepackageAdminonly.hashCode());
@@ -202,7 +234,9 @@ public class EzsigntemplatepackageResponse {
     
     sb.append("  pkiEzsigntemplatepackageID: ").append(pkiEzsigntemplatepackageID).append("\n");
     sb.append("  fkiEzsignfoldertypeID: ").append(fkiEzsignfoldertypeID).append("\n");
+    sb.append("  fkiEzdoctemplatedocumentID: ").append(fkiEzdoctemplatedocumentID).append("\n");
     sb.append("  fkiLanguageID: ").append(fkiLanguageID).append("\n");
+    sb.append("  sEzdoctemplatedocumentNameX: ").append(sEzdoctemplatedocumentNameX).append("\n");
     sb.append("  sLanguageNameX: ").append(sLanguageNameX).append("\n");
     sb.append("  sEzsigntemplatepackageDescription: ").append(sEzsigntemplatepackageDescription).append("\n");
     sb.append("  bEzsigntemplatepackageAdminonly: ").append(bEzsigntemplatepackageAdminonly).append("\n");

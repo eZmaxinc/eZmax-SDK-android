@@ -25,7 +25,10 @@ import com.android.volley.VolleyError;
 
 import org.openapitools.client.model.CommonResponseError;
 import org.openapitools.client.model.InvoiceGetAttachmentsV1Response;
+import org.openapitools.client.model.InvoiceGetCommunicationCountV1Response;
 import org.openapitools.client.model.InvoiceGetCommunicationListV1Response;
+import org.openapitools.client.model.InvoiceGetCommunicationrecipientsV1Response;
+import org.openapitools.client.model.InvoiceGetCommunicationsendersV1Response;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
@@ -185,6 +188,133 @@ public class ObjectInvoiceApi {
     }
   }
   /**
+  * Retrieve Communication count
+  * 
+   * @param pkiInvoiceID 
+   * @return InvoiceGetCommunicationCountV1Response
+  */
+  public InvoiceGetCommunicationCountV1Response invoiceGetCommunicationCountV1 (Integer pkiInvoiceID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiInvoiceID' is set
+    if (pkiInvoiceID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiInvoiceID' when calling invoiceGetCommunicationCountV1",
+        new ApiException(400, "Missing the required parameter 'pkiInvoiceID' when calling invoiceGetCommunicationCountV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/invoice/{pkiInvoiceID}/getCommunicationCount".replaceAll("\\{" + "pkiInvoiceID" + "\\}", apiInvoker.escapeString(pkiInvoiceID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (InvoiceGetCommunicationCountV1Response) ApiInvoker.deserialize(localVarResponse, "", InvoiceGetCommunicationCountV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve Communication count
+   * 
+   * @param pkiInvoiceID 
+  */
+  public void invoiceGetCommunicationCountV1 (Integer pkiInvoiceID, final Response.Listener<InvoiceGetCommunicationCountV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiInvoiceID' is set
+    if (pkiInvoiceID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiInvoiceID' when calling invoiceGetCommunicationCountV1",
+        new ApiException(400, "Missing the required parameter 'pkiInvoiceID' when calling invoiceGetCommunicationCountV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/invoice/{pkiInvoiceID}/getCommunicationCount".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiInvoiceID" + "\\}", apiInvoker.escapeString(pkiInvoiceID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((InvoiceGetCommunicationCountV1Response) ApiInvoker.deserialize(localVarResponse,  "", InvoiceGetCommunicationCountV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
   * Retrieve Communication list
   * 
    * @param pkiInvoiceID 
@@ -297,6 +427,260 @@ public class ObjectInvoiceApi {
           public void onResponse(String localVarResponse) {
             try {
               responseListener.onResponse((InvoiceGetCommunicationListV1Response) ApiInvoker.deserialize(localVarResponse,  "", InvoiceGetCommunicationListV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Retrieve Invoice&#39;s Communicationrecipient
+  * 
+   * @param pkiInvoiceID 
+   * @return InvoiceGetCommunicationrecipientsV1Response
+  */
+  public InvoiceGetCommunicationrecipientsV1Response invoiceGetCommunicationrecipientsV1 (Integer pkiInvoiceID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiInvoiceID' is set
+    if (pkiInvoiceID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiInvoiceID' when calling invoiceGetCommunicationrecipientsV1",
+        new ApiException(400, "Missing the required parameter 'pkiInvoiceID' when calling invoiceGetCommunicationrecipientsV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/invoice/{pkiInvoiceID}/getCommunicationrecipients".replaceAll("\\{" + "pkiInvoiceID" + "\\}", apiInvoker.escapeString(pkiInvoiceID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (InvoiceGetCommunicationrecipientsV1Response) ApiInvoker.deserialize(localVarResponse, "", InvoiceGetCommunicationrecipientsV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve Invoice&#39;s Communicationrecipient
+   * 
+   * @param pkiInvoiceID 
+  */
+  public void invoiceGetCommunicationrecipientsV1 (Integer pkiInvoiceID, final Response.Listener<InvoiceGetCommunicationrecipientsV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiInvoiceID' is set
+    if (pkiInvoiceID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiInvoiceID' when calling invoiceGetCommunicationrecipientsV1",
+        new ApiException(400, "Missing the required parameter 'pkiInvoiceID' when calling invoiceGetCommunicationrecipientsV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/invoice/{pkiInvoiceID}/getCommunicationrecipients".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiInvoiceID" + "\\}", apiInvoker.escapeString(pkiInvoiceID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((InvoiceGetCommunicationrecipientsV1Response) ApiInvoker.deserialize(localVarResponse,  "", InvoiceGetCommunicationrecipientsV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Retrieve Invoice&#39;s Communicationsender
+  * 
+   * @param pkiInvoiceID 
+   * @return InvoiceGetCommunicationsendersV1Response
+  */
+  public InvoiceGetCommunicationsendersV1Response invoiceGetCommunicationsendersV1 (Integer pkiInvoiceID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiInvoiceID' is set
+    if (pkiInvoiceID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiInvoiceID' when calling invoiceGetCommunicationsendersV1",
+        new ApiException(400, "Missing the required parameter 'pkiInvoiceID' when calling invoiceGetCommunicationsendersV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/invoice/{pkiInvoiceID}/getCommunicationsenders".replaceAll("\\{" + "pkiInvoiceID" + "\\}", apiInvoker.escapeString(pkiInvoiceID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (InvoiceGetCommunicationsendersV1Response) ApiInvoker.deserialize(localVarResponse, "", InvoiceGetCommunicationsendersV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve Invoice&#39;s Communicationsender
+   * 
+   * @param pkiInvoiceID 
+  */
+  public void invoiceGetCommunicationsendersV1 (Integer pkiInvoiceID, final Response.Listener<InvoiceGetCommunicationsendersV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiInvoiceID' is set
+    if (pkiInvoiceID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiInvoiceID' when calling invoiceGetCommunicationsendersV1",
+        new ApiException(400, "Missing the required parameter 'pkiInvoiceID' when calling invoiceGetCommunicationsendersV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/invoice/{pkiInvoiceID}/getCommunicationsenders".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiInvoiceID" + "\\}", apiInvoker.escapeString(pkiInvoiceID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((InvoiceGetCommunicationsendersV1Response) ApiInvoker.deserialize(localVarResponse,  "", InvoiceGetCommunicationsendersV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

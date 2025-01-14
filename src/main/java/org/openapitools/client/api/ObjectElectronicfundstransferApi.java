@@ -24,7 +24,10 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
 import org.openapitools.client.model.CommonResponseError;
+import org.openapitools.client.model.ElectronicfundstransferGetCommunicationCountV1Response;
 import org.openapitools.client.model.ElectronicfundstransferGetCommunicationListV1Response;
+import org.openapitools.client.model.ElectronicfundstransferGetCommunicationrecipientsV1Response;
+import org.openapitools.client.model.ElectronicfundstransferGetCommunicationsendersV1Response;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
@@ -56,6 +59,133 @@ public class ObjectElectronicfundstransferApi {
     return basePath;
   }
 
+  /**
+  * Retrieve Communication count
+  * 
+   * @param pkiElectronicfundstransferID 
+   * @return ElectronicfundstransferGetCommunicationCountV1Response
+  */
+  public ElectronicfundstransferGetCommunicationCountV1Response electronicfundstransferGetCommunicationCountV1 (Integer pkiElectronicfundstransferID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiElectronicfundstransferID' is set
+    if (pkiElectronicfundstransferID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiElectronicfundstransferID' when calling electronicfundstransferGetCommunicationCountV1",
+        new ApiException(400, "Missing the required parameter 'pkiElectronicfundstransferID' when calling electronicfundstransferGetCommunicationCountV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationCount".replaceAll("\\{" + "pkiElectronicfundstransferID" + "\\}", apiInvoker.escapeString(pkiElectronicfundstransferID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (ElectronicfundstransferGetCommunicationCountV1Response) ApiInvoker.deserialize(localVarResponse, "", ElectronicfundstransferGetCommunicationCountV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve Communication count
+   * 
+   * @param pkiElectronicfundstransferID 
+  */
+  public void electronicfundstransferGetCommunicationCountV1 (Integer pkiElectronicfundstransferID, final Response.Listener<ElectronicfundstransferGetCommunicationCountV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiElectronicfundstransferID' is set
+    if (pkiElectronicfundstransferID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiElectronicfundstransferID' when calling electronicfundstransferGetCommunicationCountV1",
+        new ApiException(400, "Missing the required parameter 'pkiElectronicfundstransferID' when calling electronicfundstransferGetCommunicationCountV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationCount".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiElectronicfundstransferID" + "\\}", apiInvoker.escapeString(pkiElectronicfundstransferID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((ElectronicfundstransferGetCommunicationCountV1Response) ApiInvoker.deserialize(localVarResponse,  "", ElectronicfundstransferGetCommunicationCountV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
   /**
   * Retrieve Communication list
   * 
@@ -169,6 +299,260 @@ public class ObjectElectronicfundstransferApi {
           public void onResponse(String localVarResponse) {
             try {
               responseListener.onResponse((ElectronicfundstransferGetCommunicationListV1Response) ApiInvoker.deserialize(localVarResponse,  "", ElectronicfundstransferGetCommunicationListV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Retrieve Electronicfundstransfer&#39;s Communicationrecipient
+  * 
+   * @param pkiElectronicfundstransferID 
+   * @return ElectronicfundstransferGetCommunicationrecipientsV1Response
+  */
+  public ElectronicfundstransferGetCommunicationrecipientsV1Response electronicfundstransferGetCommunicationrecipientsV1 (Integer pkiElectronicfundstransferID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiElectronicfundstransferID' is set
+    if (pkiElectronicfundstransferID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiElectronicfundstransferID' when calling electronicfundstransferGetCommunicationrecipientsV1",
+        new ApiException(400, "Missing the required parameter 'pkiElectronicfundstransferID' when calling electronicfundstransferGetCommunicationrecipientsV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationrecipients".replaceAll("\\{" + "pkiElectronicfundstransferID" + "\\}", apiInvoker.escapeString(pkiElectronicfundstransferID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (ElectronicfundstransferGetCommunicationrecipientsV1Response) ApiInvoker.deserialize(localVarResponse, "", ElectronicfundstransferGetCommunicationrecipientsV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve Electronicfundstransfer&#39;s Communicationrecipient
+   * 
+   * @param pkiElectronicfundstransferID 
+  */
+  public void electronicfundstransferGetCommunicationrecipientsV1 (Integer pkiElectronicfundstransferID, final Response.Listener<ElectronicfundstransferGetCommunicationrecipientsV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiElectronicfundstransferID' is set
+    if (pkiElectronicfundstransferID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiElectronicfundstransferID' when calling electronicfundstransferGetCommunicationrecipientsV1",
+        new ApiException(400, "Missing the required parameter 'pkiElectronicfundstransferID' when calling electronicfundstransferGetCommunicationrecipientsV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationrecipients".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiElectronicfundstransferID" + "\\}", apiInvoker.escapeString(pkiElectronicfundstransferID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((ElectronicfundstransferGetCommunicationrecipientsV1Response) ApiInvoker.deserialize(localVarResponse,  "", ElectronicfundstransferGetCommunicationrecipientsV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Retrieve Electronicfundstransfer&#39;s Communicationsender
+  * 
+   * @param pkiElectronicfundstransferID 
+   * @return ElectronicfundstransferGetCommunicationsendersV1Response
+  */
+  public ElectronicfundstransferGetCommunicationsendersV1Response electronicfundstransferGetCommunicationsendersV1 (Integer pkiElectronicfundstransferID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiElectronicfundstransferID' is set
+    if (pkiElectronicfundstransferID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiElectronicfundstransferID' when calling electronicfundstransferGetCommunicationsendersV1",
+        new ApiException(400, "Missing the required parameter 'pkiElectronicfundstransferID' when calling electronicfundstransferGetCommunicationsendersV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationsenders".replaceAll("\\{" + "pkiElectronicfundstransferID" + "\\}", apiInvoker.escapeString(pkiElectronicfundstransferID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (ElectronicfundstransferGetCommunicationsendersV1Response) ApiInvoker.deserialize(localVarResponse, "", ElectronicfundstransferGetCommunicationsendersV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve Electronicfundstransfer&#39;s Communicationsender
+   * 
+   * @param pkiElectronicfundstransferID 
+  */
+  public void electronicfundstransferGetCommunicationsendersV1 (Integer pkiElectronicfundstransferID, final Response.Listener<ElectronicfundstransferGetCommunicationsendersV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiElectronicfundstransferID' is set
+    if (pkiElectronicfundstransferID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiElectronicfundstransferID' when calling electronicfundstransferGetCommunicationsendersV1",
+        new ApiException(400, "Missing the required parameter 'pkiElectronicfundstransferID' when calling electronicfundstransferGetCommunicationsendersV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationsenders".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiElectronicfundstransferID" + "\\}", apiInvoker.escapeString(pkiElectronicfundstransferID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((ElectronicfundstransferGetCommunicationsendersV1Response) ApiInvoker.deserialize(localVarResponse,  "", ElectronicfundstransferGetCommunicationsendersV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

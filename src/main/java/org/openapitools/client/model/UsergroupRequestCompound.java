@@ -12,6 +12,7 @@
 
 package org.openapitools.client.model;
 
+import org.openapitools.client.model.EmailRequest;
 import org.openapitools.client.model.MultilingualUsergroupName;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
@@ -24,6 +25,8 @@ public class UsergroupRequestCompound {
   
   @SerializedName("pkiUsergroupID")
   private Integer pkiUsergroupID = null;
+  @SerializedName("objEmail")
+  private EmailRequest objEmail = null;
   @SerializedName("objUsergroupName")
   private MultilingualUsergroupName objUsergroupName = null;
 
@@ -38,6 +41,16 @@ public class UsergroupRequestCompound {
   }
   public void setPkiUsergroupID(Integer pkiUsergroupID) {
     this.pkiUsergroupID = pkiUsergroupID;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public EmailRequest getObjEmail() {
+    return objEmail;
+  }
+  public void setObjEmail(EmailRequest objEmail) {
+    this.objEmail = objEmail;
   }
 
   /**
@@ -61,6 +74,7 @@ public class UsergroupRequestCompound {
     }
     UsergroupRequestCompound usergroupRequestCompound = (UsergroupRequestCompound) o;
     return (this.pkiUsergroupID == null ? usergroupRequestCompound.pkiUsergroupID == null : this.pkiUsergroupID.equals(usergroupRequestCompound.pkiUsergroupID)) &&
+        (this.objEmail == null ? usergroupRequestCompound.objEmail == null : this.objEmail.equals(usergroupRequestCompound.objEmail)) &&
         (this.objUsergroupName == null ? usergroupRequestCompound.objUsergroupName == null : this.objUsergroupName.equals(usergroupRequestCompound.objUsergroupName));
   }
 
@@ -68,6 +82,7 @@ public class UsergroupRequestCompound {
   public int hashCode() {
     int result = 17;
     result = 31 * result + (this.pkiUsergroupID == null ? 0: this.pkiUsergroupID.hashCode());
+    result = 31 * result + (this.objEmail == null ? 0: this.objEmail.hashCode());
     result = 31 * result + (this.objUsergroupName == null ? 0: this.objUsergroupName.hashCode());
     return result;
   }
@@ -78,6 +93,7 @@ public class UsergroupRequestCompound {
     sb.append("class UsergroupRequestCompound {\n");
     
     sb.append("  pkiUsergroupID: ").append(pkiUsergroupID).append("\n");
+    sb.append("  objEmail: ").append(objEmail).append("\n");
     sb.append("  objUsergroupName: ").append(objUsergroupName).append("\n");
     sb.append("}\n");
     return sb.toString();

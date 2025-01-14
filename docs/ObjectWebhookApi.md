@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**webhookGetListV1**](ObjectWebhookApi.md#webhookGetListV1) | **GET** /1/object/webhook/getList | Retrieve Webhook list
 [**webhookGetObjectV2**](ObjectWebhookApi.md#webhookGetObjectV2) | **GET** /2/object/webhook/{pkiWebhookID} | Retrieve an existing Webhook
 [**webhookRegenerateApikeyV1**](ObjectWebhookApi.md#webhookRegenerateApikeyV1) | **POST** /1/object/webhook/{pkiWebhookID}/regenerateApikey | Regenerate the Apikey
+[**webhookSendWebhookV1**](ObjectWebhookApi.md#webhookSendWebhookV1) | **POST** /1/object/webhook/sendWebhook | Emit a Webhook event
 [**webhookTestV1**](ObjectWebhookApi.md#webhookTestV1) | **POST** /1/object/webhook/{pkiWebhookID}/test | Test the Webhook by calling the Url
 
 
@@ -340,6 +341,50 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**WebhookRegenerateApikeyV1Response**](WebhookRegenerateApikeyV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## webhookSendWebhookV1
+
+> WebhookSendWebhookV1Response webhookSendWebhookV1(webhookSendWebhookV1Request)
+
+Emit a Webhook event
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectWebhookApi;
+
+ObjectWebhookApi apiInstance = new ObjectWebhookApi();
+WebhookSendWebhookV1Request webhookSendWebhookV1Request = new WebhookSendWebhookV1Request(); // WebhookSendWebhookV1Request | 
+try {
+    WebhookSendWebhookV1Response result = apiInstance.webhookSendWebhookV1(webhookSendWebhookV1Request);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectWebhookApi#webhookSendWebhookV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **webhookSendWebhookV1Request** | [**WebhookSendWebhookV1Request**](WebhookSendWebhookV1Request.md)|  |
+
+### Return type
+
+[**WebhookSendWebhookV1Response**](WebhookSendWebhookV1Response.md)
 
 ### Authorization
 

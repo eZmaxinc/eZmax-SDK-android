@@ -8,10 +8,11 @@ Method | HTTP request | Description
 [**ezsignfolderBatchDownloadV1**](ObjectEzsignfolderApi.md#ezsignfolderBatchDownloadV1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/batchDownload | Download multiples files from an Ezsignfolder
 [**ezsignfolderCreateObjectV1**](ObjectEzsignfolderApi.md#ezsignfolderCreateObjectV1) | **POST** /1/object/ezsignfolder | Create a new Ezsignfolder
 [**ezsignfolderCreateObjectV2**](ObjectEzsignfolderApi.md#ezsignfolderCreateObjectV2) | **POST** /2/object/ezsignfolder | Create a new Ezsignfolder
+[**ezsignfolderCreateObjectV3**](ObjectEzsignfolderApi.md#ezsignfolderCreateObjectV3) | **POST** /3/object/ezsignfolder | Create a new Ezsignfolder
 [**ezsignfolderDeleteObjectV1**](ObjectEzsignfolderApi.md#ezsignfolderDeleteObjectV1) | **DELETE** /1/object/ezsignfolder/{pkiEzsignfolderID} | Delete an existing Ezsignfolder
 [**ezsignfolderDisposeEzsignfoldersV1**](ObjectEzsignfolderApi.md#ezsignfolderDisposeEzsignfoldersV1) | **POST** /1/object/ezsignfolder/disposeEzsignfolders | Dispose Ezsignfolders
 [**ezsignfolderDisposeV1**](ObjectEzsignfolderApi.md#ezsignfolderDisposeV1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/dispose | Dispose the Ezsignfolder
-[**ezsignfolderEditObjectV1**](ObjectEzsignfolderApi.md#ezsignfolderEditObjectV1) | **PUT** /1/object/ezsignfolder/{pkiEzsignfolderID} | Edit an existing Ezsignfolder
+[**ezsignfolderEditObjectV3**](ObjectEzsignfolderApi.md#ezsignfolderEditObjectV3) | **PUT** /3/object/ezsignfolder/{pkiEzsignfolderID} | Edit an existing Ezsignfolder
 [**ezsignfolderEndPrematurelyV1**](ObjectEzsignfolderApi.md#ezsignfolderEndPrematurelyV1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/endPrematurely | End prematurely
 [**ezsignfolderGetActionableElementsV1**](ObjectEzsignfolderApi.md#ezsignfolderGetActionableElementsV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements | Retrieve actionable elements for the Ezsignfolder
 [**ezsignfolderGetAttachmentCountV1**](ObjectEzsignfolderApi.md#ezsignfolderGetAttachmentCountV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getAttachmentCount | Retrieve Attachment count
@@ -27,9 +28,11 @@ Method | HTTP request | Description
 [**ezsignfolderGetListV1**](ObjectEzsignfolderApi.md#ezsignfolderGetListV1) | **GET** /1/object/ezsignfolder/getList | Retrieve Ezsignfolder list
 [**ezsignfolderGetObjectV1**](ObjectEzsignfolderApi.md#ezsignfolderGetObjectV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID} | Retrieve an existing Ezsignfolder
 [**ezsignfolderGetObjectV2**](ObjectEzsignfolderApi.md#ezsignfolderGetObjectV2) | **GET** /2/object/ezsignfolder/{pkiEzsignfolderID} | Retrieve an existing Ezsignfolder
+[**ezsignfolderGetObjectV3**](ObjectEzsignfolderApi.md#ezsignfolderGetObjectV3) | **GET** /3/object/ezsignfolder/{pkiEzsignfolderID} | Retrieve an existing Ezsignfolder
 [**ezsignfolderImportEzsignfoldersignerassociationsV1**](ObjectEzsignfolderApi.md#ezsignfolderImportEzsignfoldersignerassociationsV1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsignfoldersignerassociations | Import an existing Ezsignfoldersignerassociation into this Ezsignfolder
 [**ezsignfolderImportEzsigntemplatepackageV1**](ObjectEzsignfolderApi.md#ezsignfolderImportEzsigntemplatepackageV1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage | Import an Ezsigntemplatepackage in the Ezsignfolder.
 [**ezsignfolderReorderV1**](ObjectEzsignfolderApi.md#ezsignfolderReorderV1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/reorder | Reorder Ezsigndocuments in the Ezsignfolder
+[**ezsignfolderReorderV2**](ObjectEzsignfolderApi.md#ezsignfolderReorderV2) | **POST** /2/object/ezsignfolder/{pkiEzsignfolderID}/reorder | Reorder Ezsigndocuments in the Ezsignfolder
 [**ezsignfolderSendV1**](ObjectEzsignfolderApi.md#ezsignfolderSendV1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/send | Send the Ezsignfolder to the signatories for signature
 [**ezsignfolderSendV3**](ObjectEzsignfolderApi.md#ezsignfolderSendV3) | **POST** /3/object/ezsignfolder/{pkiEzsignfolderID}/send | Send the Ezsignfolder to the signatories for signature
 [**ezsignfolderUnsendV1**](ObjectEzsignfolderApi.md#ezsignfolderUnsendV1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/unsend | Unsend the Ezsignfolder
@@ -222,6 +225,52 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
+## ezsignfolderCreateObjectV3
+
+> EzsignfolderCreateObjectV3Response ezsignfolderCreateObjectV3(ezsignfolderCreateObjectV3Request)
+
+Create a new Ezsignfolder
+
+The endpoint allows to create one or many elements at once.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectEzsignfolderApi;
+
+ObjectEzsignfolderApi apiInstance = new ObjectEzsignfolderApi();
+EzsignfolderCreateObjectV3Request ezsignfolderCreateObjectV3Request = new EzsignfolderCreateObjectV3Request(); // EzsignfolderCreateObjectV3Request | 
+try {
+    EzsignfolderCreateObjectV3Response result = apiInstance.ezsignfolderCreateObjectV3(ezsignfolderCreateObjectV3Request);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectEzsignfolderApi#ezsignfolderCreateObjectV3");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ezsignfolderCreateObjectV3Request** | [**EzsignfolderCreateObjectV3Request**](EzsignfolderCreateObjectV3Request.md)|  |
+
+### Return type
+
+[**EzsignfolderCreateObjectV3Response**](EzsignfolderCreateObjectV3Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
 ## ezsignfolderDeleteObjectV1
 
 > EzsignfolderDeleteObjectV1Response ezsignfolderDeleteObjectV1(pkiEzsignfolderID)
@@ -360,9 +409,9 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## ezsignfolderEditObjectV1
+## ezsignfolderEditObjectV3
 
-> EzsignfolderEditObjectV1Response ezsignfolderEditObjectV1(pkiEzsignfolderID, ezsignfolderEditObjectV1Request)
+> EzsignfolderEditObjectV3Response ezsignfolderEditObjectV3(pkiEzsignfolderID, ezsignfolderEditObjectV3Request)
 
 Edit an existing Ezsignfolder
 
@@ -376,12 +425,12 @@ Edit an existing Ezsignfolder
 
 ObjectEzsignfolderApi apiInstance = new ObjectEzsignfolderApi();
 Integer pkiEzsignfolderID = null; // Integer | 
-EzsignfolderEditObjectV1Request ezsignfolderEditObjectV1Request = new EzsignfolderEditObjectV1Request(); // EzsignfolderEditObjectV1Request | 
+EzsignfolderEditObjectV3Request ezsignfolderEditObjectV3Request = new EzsignfolderEditObjectV3Request(); // EzsignfolderEditObjectV3Request | 
 try {
-    EzsignfolderEditObjectV1Response result = apiInstance.ezsignfolderEditObjectV1(pkiEzsignfolderID, ezsignfolderEditObjectV1Request);
+    EzsignfolderEditObjectV3Response result = apiInstance.ezsignfolderEditObjectV3(pkiEzsignfolderID, ezsignfolderEditObjectV3Request);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling ObjectEzsignfolderApi#ezsignfolderEditObjectV1");
+    System.err.println("Exception when calling ObjectEzsignfolderApi#ezsignfolderEditObjectV3");
     e.printStackTrace();
 }
 ```
@@ -392,11 +441,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiEzsignfolderID** | **Integer**|  | [default to null]
- **ezsignfolderEditObjectV1Request** | [**EzsignfolderEditObjectV1Request**](EzsignfolderEditObjectV1Request.md)|  |
+ **ezsignfolderEditObjectV3Request** | [**EzsignfolderEditObjectV3Request**](EzsignfolderEditObjectV3Request.md)|  |
 
 ### Return type
 
-[**EzsignfolderEditObjectV1Response**](EzsignfolderEditObjectV1Response.md)
+[**EzsignfolderEditObjectV3Response**](EzsignfolderEditObjectV3Response.md)
 
 ### Authorization
 
@@ -968,7 +1017,7 @@ Name | Type | Description  | Notes
 
 Retrieve Ezsignfolder list
 
-Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |---| | fkiUserID | | sContactFirstname | | sContactLastname | | sEzsigndocumentName |
+Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |---| | fkiUserID | | sContactFirstname | | sContactLastname | | sUserFirstname | | sUserLastname | | sEzsigndocumentName |
 
 ### Example
 
@@ -996,7 +1045,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **eOrderBy** | **String**| Specify how you want the results to be sorted | [optional] [default to null] [enum: pkiEzsignfolderID_ASC, pkiEzsignfolderID_DESC, sEzsignfolderDescription_ASC, sEzsignfolderDescription_DESC, dtCreatedDate_ASC, dtCreatedDate_DESC, fkiEzsignfoldertypeID_ASC, fkiEzsignfoldertypeID_DESC, sEzsignfoldertypeNameX_ASC, sEzsignfoldertypeNameX_DESC, eEzsignfolderStep_ASC, eEzsignfolderStep_DESC, dtEzsignfolderSentdate_ASC, dtEzsignfolderSentdate_DESC, dtEzsignfolderDuedate_ASC, dtEzsignfolderDuedate_DESC, iEzsigndocument_ASC, iEzsigndocument_DESC, iEzsigndocumentEdm_ASC, iEzsigndocumentEdm_DESC, iEzsignsignature_ASC, iEzsignsignature_DESC, iEzsignsignatureSigned_ASC, iEzsignsignatureSigned_DESC, iEzsignformfieldgroup_ASC, iEzsignformfieldgroup_DESC, iEzsignformfieldgroupCompleted_ASC, iEzsignformfieldgroupCompleted_DESC, dEzsignfolderCompletedpercentage_ASC, dEzsignfolderCompletedpercentage_DESC]
+ **eOrderBy** | **String**| Specify how you want the results to be sorted | [optional] [default to null] [enum: pkiEzsignfolderID_ASC, pkiEzsignfolderID_DESC, sEzsignfolderDescription_ASC, sEzsignfolderDescription_DESC, dtCreatedDate_ASC, dtCreatedDate_DESC, fkiEzsignfoldertypeID_ASC, fkiEzsignfoldertypeID_DESC, sEzsignfoldertypeNameX_ASC, sEzsignfoldertypeNameX_DESC, eEzsignfolderStep_ASC, eEzsignfolderStep_DESC, dtEzsignfolderSentdate_ASC, dtEzsignfolderSentdate_DESC, dtEzsignfolderDuedate_ASC, dtEzsignfolderDuedate_DESC, iEzsigndocument_ASC, iEzsigndocument_DESC, iEzsigndocumentEdm_ASC, iEzsigndocumentEdm_DESC, iEzsignsignature_ASC, iEzsignsignature_DESC, iEzsignsignatureSigned_ASC, iEzsignsignatureSigned_DESC, iEzsignformfieldgroup_ASC, iEzsignformfieldgroup_DESC, iEzsignformfieldgroupCompleted_ASC, iEzsignformfieldgroupCompleted_DESC, dEzsignfolderCompletedpercentage_ASC, dEzsignfolderCompletedpercentage_DESC, dEzsignfolderFormcompletedpercentage_ASC, dEzsignfolderFormcompletedpercentage_DESC, dEzsignfolderSignaturecompletedpercentage_ASC, dEzsignfolderSignaturecompletedpercentagee_DESC]
  **iRowMax** | **Integer**|  | [optional] [default to null]
  **iRowOffset** | **Integer**|  | [optional] [default to 0]
  **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [default to null] [enum: *, en, fr]
@@ -1095,6 +1144,52 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsignfolderGetObjectV2Response**](EzsignfolderGetObjectV2Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## ezsignfolderGetObjectV3
+
+> EzsignfolderGetObjectV3Response ezsignfolderGetObjectV3(pkiEzsignfolderID)
+
+Retrieve an existing Ezsignfolder
+
+
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectEzsignfolderApi;
+
+ObjectEzsignfolderApi apiInstance = new ObjectEzsignfolderApi();
+Integer pkiEzsignfolderID = null; // Integer | 
+try {
+    EzsignfolderGetObjectV3Response result = apiInstance.ezsignfolderGetObjectV3(pkiEzsignfolderID);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectEzsignfolderApi#ezsignfolderGetObjectV3");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignfolderID** | **Integer**|  | [default to null]
+
+### Return type
+
+[**EzsignfolderGetObjectV3Response**](EzsignfolderGetObjectV3Response.md)
 
 ### Authorization
 
@@ -1237,6 +1332,52 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsignfolderReorderV1Response**](EzsignfolderReorderV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## ezsignfolderReorderV2
+
+> EzsignfolderReorderV2Response ezsignfolderReorderV2(pkiEzsignfolderID, ezsignfolderReorderV2Request)
+
+Reorder Ezsigndocuments in the Ezsignfolder
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectEzsignfolderApi;
+
+ObjectEzsignfolderApi apiInstance = new ObjectEzsignfolderApi();
+Integer pkiEzsignfolderID = null; // Integer | 
+EzsignfolderReorderV2Request ezsignfolderReorderV2Request = new EzsignfolderReorderV2Request(); // EzsignfolderReorderV2Request | 
+try {
+    EzsignfolderReorderV2Response result = apiInstance.ezsignfolderReorderV2(pkiEzsignfolderID, ezsignfolderReorderV2Request);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectEzsignfolderApi#ezsignfolderReorderV2");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignfolderID** | **Integer**|  | [default to null]
+ **ezsignfolderReorderV2Request** | [**EzsignfolderReorderV2Request**](EzsignfolderReorderV2Request.md)|  |
+
+### Return type
+
+[**EzsignfolderReorderV2Response**](EzsignfolderReorderV2Response.md)
 
 ### Authorization
 

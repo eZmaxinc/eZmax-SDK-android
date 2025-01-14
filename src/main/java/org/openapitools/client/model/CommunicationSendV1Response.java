@@ -14,7 +14,7 @@ package org.openapitools.client.model;
 
 import org.openapitools.client.model.CommonResponseObjDebug;
 import org.openapitools.client.model.CommonResponseObjDebugPayload;
-import org.openapitools.client.model.CommunicationCreateObjectV1ResponseMPayload;
+import org.openapitools.client.model.CommunicationSendV1ResponseMPayload;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -29,7 +29,7 @@ public class CommunicationSendV1Response {
   @SerializedName("objDebug")
   private CommonResponseObjDebug objDebug = null;
   @SerializedName("mPayload")
-  private CommunicationCreateObjectV1ResponseMPayload mPayload = null;
+  private CommunicationSendV1ResponseMPayload mPayload = null;
 
   /**
    **/
@@ -54,10 +54,10 @@ public class CommunicationSendV1Response {
   /**
    **/
   @ApiModelProperty(required = true, value = "")
-  public CommunicationCreateObjectV1ResponseMPayload getMPayload() {
+  public CommunicationSendV1ResponseMPayload getMPayload() {
     return mPayload;
   }
-  public void setMPayload(CommunicationCreateObjectV1ResponseMPayload mPayload) {
+  public void setMPayload(CommunicationSendV1ResponseMPayload mPayload) {
     this.mPayload = mPayload;
   }
 

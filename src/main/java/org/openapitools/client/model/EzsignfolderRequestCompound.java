@@ -26,6 +26,8 @@ public class EzsignfolderRequestCompound {
   private Integer pkiEzsignfolderID = null;
   @SerializedName("fkiEzsignfoldertypeID")
   private Integer fkiEzsignfoldertypeID = null;
+  @SerializedName("fkiTimezoneID")
+  private Integer fkiTimezoneID = null;
   @SerializedName("fkiEzsigntsarequirementID")
   private Integer fkiEzsigntsarequirementID = null;
   @SerializedName("sEzsignfolderDescription")
@@ -60,6 +62,18 @@ public class EzsignfolderRequestCompound {
   }
   public void setFkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
     this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
+  }
+
+  /**
+   * The unique ID of the Timezone
+   * minimum: 0
+   **/
+  @ApiModelProperty(value = "The unique ID of the Timezone")
+  public Integer getFkiTimezoneID() {
+    return fkiTimezoneID;
+  }
+  public void setFkiTimezoneID(Integer fkiTimezoneID) {
+    this.fkiTimezoneID = fkiTimezoneID;
   }
 
   /**
@@ -130,6 +144,7 @@ public class EzsignfolderRequestCompound {
     EzsignfolderRequestCompound ezsignfolderRequestCompound = (EzsignfolderRequestCompound) o;
     return (this.pkiEzsignfolderID == null ? ezsignfolderRequestCompound.pkiEzsignfolderID == null : this.pkiEzsignfolderID.equals(ezsignfolderRequestCompound.pkiEzsignfolderID)) &&
         (this.fkiEzsignfoldertypeID == null ? ezsignfolderRequestCompound.fkiEzsignfoldertypeID == null : this.fkiEzsignfoldertypeID.equals(ezsignfolderRequestCompound.fkiEzsignfoldertypeID)) &&
+        (this.fkiTimezoneID == null ? ezsignfolderRequestCompound.fkiTimezoneID == null : this.fkiTimezoneID.equals(ezsignfolderRequestCompound.fkiTimezoneID)) &&
         (this.fkiEzsigntsarequirementID == null ? ezsignfolderRequestCompound.fkiEzsigntsarequirementID == null : this.fkiEzsigntsarequirementID.equals(ezsignfolderRequestCompound.fkiEzsigntsarequirementID)) &&
         (this.sEzsignfolderDescription == null ? ezsignfolderRequestCompound.sEzsignfolderDescription == null : this.sEzsignfolderDescription.equals(ezsignfolderRequestCompound.sEzsignfolderDescription)) &&
         (this.tEzsignfolderNote == null ? ezsignfolderRequestCompound.tEzsignfolderNote == null : this.tEzsignfolderNote.equals(ezsignfolderRequestCompound.tEzsignfolderNote)) &&
@@ -142,6 +157,7 @@ public class EzsignfolderRequestCompound {
     int result = 17;
     result = 31 * result + (this.pkiEzsignfolderID == null ? 0: this.pkiEzsignfolderID.hashCode());
     result = 31 * result + (this.fkiEzsignfoldertypeID == null ? 0: this.fkiEzsignfoldertypeID.hashCode());
+    result = 31 * result + (this.fkiTimezoneID == null ? 0: this.fkiTimezoneID.hashCode());
     result = 31 * result + (this.fkiEzsigntsarequirementID == null ? 0: this.fkiEzsigntsarequirementID.hashCode());
     result = 31 * result + (this.sEzsignfolderDescription == null ? 0: this.sEzsignfolderDescription.hashCode());
     result = 31 * result + (this.tEzsignfolderNote == null ? 0: this.tEzsignfolderNote.hashCode());
@@ -157,6 +173,7 @@ public class EzsignfolderRequestCompound {
     
     sb.append("  pkiEzsignfolderID: ").append(pkiEzsignfolderID).append("\n");
     sb.append("  fkiEzsignfoldertypeID: ").append(fkiEzsignfoldertypeID).append("\n");
+    sb.append("  fkiTimezoneID: ").append(fkiTimezoneID).append("\n");
     sb.append("  fkiEzsigntsarequirementID: ").append(fkiEzsigntsarequirementID).append("\n");
     sb.append("  sEzsignfolderDescription: ").append(sEzsignfolderDescription).append("\n");
     sb.append("  tEzsignfolderNote: ").append(tEzsignfolderNote).append("\n");

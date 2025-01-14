@@ -12,7 +12,11 @@
 
 package org.openapitools.client.model;
 
+import org.openapitools.client.model.FieldEActivesessionEzsign;
+import org.openapitools.client.model.FieldEActivesessionEzsignaccess;
+import org.openapitools.client.model.FieldEActivesessionEzsignprepaid;
 import org.openapitools.client.model.FieldEActivesessionOrigin;
+import org.openapitools.client.model.FieldEActivesessionRealestateinprogress;
 import org.openapitools.client.model.FieldEActivesessionUsertype;
 import org.openapitools.client.model.FieldEActivesessionWeekdaystart;
 import io.swagger.annotations.*;
@@ -40,6 +44,22 @@ public class ActivesessionResponse {
   private Boolean bActivesessionDebug = null;
   @SerializedName("bActivesessionIssuperadmin")
   private Boolean bActivesessionIssuperadmin = null;
+  @SerializedName("bActivesessionAttachment")
+  private Boolean bActivesessionAttachment = null;
+  @SerializedName("bActivesessionCanafe")
+  private Boolean bActivesessionCanafe = null;
+  @SerializedName("bActivesessionFinancial")
+  private Boolean bActivesessionFinancial = null;
+  @SerializedName("bActivesessionRealestatecompleted")
+  private Boolean bActivesessionRealestatecompleted = null;
+  @SerializedName("eActivesessionEzsign")
+  private FieldEActivesessionEzsign eActivesessionEzsign = null;
+  @SerializedName("eActivesessionEzsignaccess")
+  private FieldEActivesessionEzsignaccess eActivesessionEzsignaccess = null;
+  @SerializedName("eActivesessionEzsignprepaid")
+  private FieldEActivesessionEzsignprepaid eActivesessionEzsignprepaid = null;
+  @SerializedName("eActivesessionRealestateinprogress")
+  private FieldEActivesessionRealestateinprogress eActivesessionRealestateinprogress = null;
   @SerializedName("pksCustomerCode")
   private String pksCustomerCode = null;
   @SerializedName("fkiSystemconfigurationtypeID")
@@ -135,6 +155,90 @@ public class ActivesessionResponse {
   }
 
   /**
+   * Can access attachment when we clone a user
+   **/
+  @ApiModelProperty(value = "Can access attachment when we clone a user")
+  public Boolean getBActivesessionAttachment() {
+    return bActivesessionAttachment;
+  }
+  public void setBActivesessionAttachment(Boolean bActivesessionAttachment) {
+    this.bActivesessionAttachment = bActivesessionAttachment;
+  }
+
+  /**
+   * Can access canafe when we clone a user
+   **/
+  @ApiModelProperty(value = "Can access canafe when we clone a user")
+  public Boolean getBActivesessionCanafe() {
+    return bActivesessionCanafe;
+  }
+  public void setBActivesessionCanafe(Boolean bActivesessionCanafe) {
+    this.bActivesessionCanafe = bActivesessionCanafe;
+  }
+
+  /**
+   * Can access financial element when we clone a user
+   **/
+  @ApiModelProperty(value = "Can access financial element when we clone a user")
+  public Boolean getBActivesessionFinancial() {
+    return bActivesessionFinancial;
+  }
+  public void setBActivesessionFinancial(Boolean bActivesessionFinancial) {
+    this.bActivesessionFinancial = bActivesessionFinancial;
+  }
+
+  /**
+   * Can access closed realestate folders when we clone a user
+   **/
+  @ApiModelProperty(value = "Can access closed realestate folders when we clone a user")
+  public Boolean getBActivesessionRealestatecompleted() {
+    return bActivesessionRealestatecompleted;
+  }
+  public void setBActivesessionRealestatecompleted(Boolean bActivesessionRealestatecompleted) {
+    this.bActivesessionRealestatecompleted = bActivesessionRealestatecompleted;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public FieldEActivesessionEzsign getEActivesessionEzsign() {
+    return eActivesessionEzsign;
+  }
+  public void setEActivesessionEzsign(FieldEActivesessionEzsign eActivesessionEzsign) {
+    this.eActivesessionEzsign = eActivesessionEzsign;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public FieldEActivesessionEzsignaccess getEActivesessionEzsignaccess() {
+    return eActivesessionEzsignaccess;
+  }
+  public void setEActivesessionEzsignaccess(FieldEActivesessionEzsignaccess eActivesessionEzsignaccess) {
+    this.eActivesessionEzsignaccess = eActivesessionEzsignaccess;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public FieldEActivesessionEzsignprepaid getEActivesessionEzsignprepaid() {
+    return eActivesessionEzsignprepaid;
+  }
+  public void setEActivesessionEzsignprepaid(FieldEActivesessionEzsignprepaid eActivesessionEzsignprepaid) {
+    this.eActivesessionEzsignprepaid = eActivesessionEzsignprepaid;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public FieldEActivesessionRealestateinprogress getEActivesessionRealestateinprogress() {
+    return eActivesessionRealestateinprogress;
+  }
+  public void setEActivesessionRealestateinprogress(FieldEActivesessionRealestateinprogress eActivesessionRealestateinprogress) {
+    this.eActivesessionRealestateinprogress = eActivesessionRealestateinprogress;
+  }
+
+  /**
    * The customer code assigned to your account
    **/
   @ApiModelProperty(required = true, value = "The customer code assigned to your account")
@@ -188,6 +292,14 @@ public class ActivesessionResponse {
         (this.sDepartmentNameX == null ? activesessionResponse.sDepartmentNameX == null : this.sDepartmentNameX.equals(activesessionResponse.sDepartmentNameX)) &&
         (this.bActivesessionDebug == null ? activesessionResponse.bActivesessionDebug == null : this.bActivesessionDebug.equals(activesessionResponse.bActivesessionDebug)) &&
         (this.bActivesessionIssuperadmin == null ? activesessionResponse.bActivesessionIssuperadmin == null : this.bActivesessionIssuperadmin.equals(activesessionResponse.bActivesessionIssuperadmin)) &&
+        (this.bActivesessionAttachment == null ? activesessionResponse.bActivesessionAttachment == null : this.bActivesessionAttachment.equals(activesessionResponse.bActivesessionAttachment)) &&
+        (this.bActivesessionCanafe == null ? activesessionResponse.bActivesessionCanafe == null : this.bActivesessionCanafe.equals(activesessionResponse.bActivesessionCanafe)) &&
+        (this.bActivesessionFinancial == null ? activesessionResponse.bActivesessionFinancial == null : this.bActivesessionFinancial.equals(activesessionResponse.bActivesessionFinancial)) &&
+        (this.bActivesessionRealestatecompleted == null ? activesessionResponse.bActivesessionRealestatecompleted == null : this.bActivesessionRealestatecompleted.equals(activesessionResponse.bActivesessionRealestatecompleted)) &&
+        (this.eActivesessionEzsign == null ? activesessionResponse.eActivesessionEzsign == null : this.eActivesessionEzsign.equals(activesessionResponse.eActivesessionEzsign)) &&
+        (this.eActivesessionEzsignaccess == null ? activesessionResponse.eActivesessionEzsignaccess == null : this.eActivesessionEzsignaccess.equals(activesessionResponse.eActivesessionEzsignaccess)) &&
+        (this.eActivesessionEzsignprepaid == null ? activesessionResponse.eActivesessionEzsignprepaid == null : this.eActivesessionEzsignprepaid.equals(activesessionResponse.eActivesessionEzsignprepaid)) &&
+        (this.eActivesessionRealestateinprogress == null ? activesessionResponse.eActivesessionRealestateinprogress == null : this.eActivesessionRealestateinprogress.equals(activesessionResponse.eActivesessionRealestateinprogress)) &&
         (this.pksCustomerCode == null ? activesessionResponse.pksCustomerCode == null : this.pksCustomerCode.equals(activesessionResponse.pksCustomerCode)) &&
         (this.fkiSystemconfigurationtypeID == null ? activesessionResponse.fkiSystemconfigurationtypeID == null : this.fkiSystemconfigurationtypeID.equals(activesessionResponse.fkiSystemconfigurationtypeID)) &&
         (this.fkiSignatureID == null ? activesessionResponse.fkiSignatureID == null : this.fkiSignatureID.equals(activesessionResponse.fkiSignatureID));
@@ -204,6 +316,14 @@ public class ActivesessionResponse {
     result = 31 * result + (this.sDepartmentNameX == null ? 0: this.sDepartmentNameX.hashCode());
     result = 31 * result + (this.bActivesessionDebug == null ? 0: this.bActivesessionDebug.hashCode());
     result = 31 * result + (this.bActivesessionIssuperadmin == null ? 0: this.bActivesessionIssuperadmin.hashCode());
+    result = 31 * result + (this.bActivesessionAttachment == null ? 0: this.bActivesessionAttachment.hashCode());
+    result = 31 * result + (this.bActivesessionCanafe == null ? 0: this.bActivesessionCanafe.hashCode());
+    result = 31 * result + (this.bActivesessionFinancial == null ? 0: this.bActivesessionFinancial.hashCode());
+    result = 31 * result + (this.bActivesessionRealestatecompleted == null ? 0: this.bActivesessionRealestatecompleted.hashCode());
+    result = 31 * result + (this.eActivesessionEzsign == null ? 0: this.eActivesessionEzsign.hashCode());
+    result = 31 * result + (this.eActivesessionEzsignaccess == null ? 0: this.eActivesessionEzsignaccess.hashCode());
+    result = 31 * result + (this.eActivesessionEzsignprepaid == null ? 0: this.eActivesessionEzsignprepaid.hashCode());
+    result = 31 * result + (this.eActivesessionRealestateinprogress == null ? 0: this.eActivesessionRealestateinprogress.hashCode());
     result = 31 * result + (this.pksCustomerCode == null ? 0: this.pksCustomerCode.hashCode());
     result = 31 * result + (this.fkiSystemconfigurationtypeID == null ? 0: this.fkiSystemconfigurationtypeID.hashCode());
     result = 31 * result + (this.fkiSignatureID == null ? 0: this.fkiSignatureID.hashCode());
@@ -223,6 +343,14 @@ public class ActivesessionResponse {
     sb.append("  sDepartmentNameX: ").append(sDepartmentNameX).append("\n");
     sb.append("  bActivesessionDebug: ").append(bActivesessionDebug).append("\n");
     sb.append("  bActivesessionIssuperadmin: ").append(bActivesessionIssuperadmin).append("\n");
+    sb.append("  bActivesessionAttachment: ").append(bActivesessionAttachment).append("\n");
+    sb.append("  bActivesessionCanafe: ").append(bActivesessionCanafe).append("\n");
+    sb.append("  bActivesessionFinancial: ").append(bActivesessionFinancial).append("\n");
+    sb.append("  bActivesessionRealestatecompleted: ").append(bActivesessionRealestatecompleted).append("\n");
+    sb.append("  eActivesessionEzsign: ").append(eActivesessionEzsign).append("\n");
+    sb.append("  eActivesessionEzsignaccess: ").append(eActivesessionEzsignaccess).append("\n");
+    sb.append("  eActivesessionEzsignprepaid: ").append(eActivesessionEzsignprepaid).append("\n");
+    sb.append("  eActivesessionRealestateinprogress: ").append(eActivesessionRealestateinprogress).append("\n");
     sb.append("  pksCustomerCode: ").append(pksCustomerCode).append("\n");
     sb.append("  fkiSystemconfigurationtypeID: ").append(fkiSystemconfigurationtypeID).append("\n");
     sb.append("  fkiSignatureID: ").append(fkiSignatureID).append("\n");

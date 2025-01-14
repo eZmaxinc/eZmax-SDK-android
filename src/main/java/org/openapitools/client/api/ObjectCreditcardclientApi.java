@@ -24,6 +24,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
 import org.openapitools.client.model.CommonResponseError;
+import org.openapitools.client.model.CommonResponseErrorCreditcardValidation;
 import org.openapitools.client.model.CreditcardclientCreateObjectV1Request;
 import org.openapitools.client.model.CreditcardclientCreateObjectV1Response;
 import org.openapitools.client.model.CreditcardclientDeleteObjectV1Response;
@@ -32,6 +33,8 @@ import org.openapitools.client.model.CreditcardclientEditObjectV1Response;
 import org.openapitools.client.model.CreditcardclientGetAutocompleteV2Response;
 import org.openapitools.client.model.CreditcardclientGetListV1Response;
 import org.openapitools.client.model.CreditcardclientGetObjectV2Response;
+import org.openapitools.client.model.CreditcardclientPatchObjectV1Request;
+import org.openapitools.client.model.CreditcardclientPatchObjectV1Response;
 import java.io.File;
 import org.openapitools.client.model.HeaderAcceptLanguage;
 
@@ -839,6 +842,145 @@ public class ObjectCreditcardclientApi {
           public void onResponse(String localVarResponse) {
             try {
               responseListener.onResponse((CreditcardclientGetObjectV2Response) ApiInvoker.deserialize(localVarResponse,  "", CreditcardclientGetObjectV2Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Patch an existing Creditcardclient
+  * 
+   * @param pkiCreditcardclientID The unique ID of the Creditcardclient
+   * @param creditcardclientPatchObjectV1Request 
+   * @return CreditcardclientPatchObjectV1Response
+  */
+  public CreditcardclientPatchObjectV1Response creditcardclientPatchObjectV1 (Integer pkiCreditcardclientID, CreditcardclientPatchObjectV1Request creditcardclientPatchObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = creditcardclientPatchObjectV1Request;
+    // verify the required parameter 'pkiCreditcardclientID' is set
+    if (pkiCreditcardclientID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiCreditcardclientID' when calling creditcardclientPatchObjectV1",
+        new ApiException(400, "Missing the required parameter 'pkiCreditcardclientID' when calling creditcardclientPatchObjectV1"));
+    }
+    // verify the required parameter 'creditcardclientPatchObjectV1Request' is set
+    if (creditcardclientPatchObjectV1Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'creditcardclientPatchObjectV1Request' when calling creditcardclientPatchObjectV1",
+        new ApiException(400, "Missing the required parameter 'creditcardclientPatchObjectV1Request' when calling creditcardclientPatchObjectV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/creditcardclient/{pkiCreditcardclientID}".replaceAll("\\{" + "pkiCreditcardclientID" + "\\}", apiInvoker.escapeString(pkiCreditcardclientID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PATCH", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (CreditcardclientPatchObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", CreditcardclientPatchObjectV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Patch an existing Creditcardclient
+   * 
+   * @param pkiCreditcardclientID The unique ID of the Creditcardclient   * @param creditcardclientPatchObjectV1Request 
+  */
+  public void creditcardclientPatchObjectV1 (Integer pkiCreditcardclientID, CreditcardclientPatchObjectV1Request creditcardclientPatchObjectV1Request, final Response.Listener<CreditcardclientPatchObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = creditcardclientPatchObjectV1Request;
+
+    // verify the required parameter 'pkiCreditcardclientID' is set
+    if (pkiCreditcardclientID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiCreditcardclientID' when calling creditcardclientPatchObjectV1",
+        new ApiException(400, "Missing the required parameter 'pkiCreditcardclientID' when calling creditcardclientPatchObjectV1"));
+    }
+    // verify the required parameter 'creditcardclientPatchObjectV1Request' is set
+    if (creditcardclientPatchObjectV1Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'creditcardclientPatchObjectV1Request' when calling creditcardclientPatchObjectV1",
+        new ApiException(400, "Missing the required parameter 'creditcardclientPatchObjectV1Request' when calling creditcardclientPatchObjectV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/creditcardclient/{pkiCreditcardclientID}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiCreditcardclientID" + "\\}", apiInvoker.escapeString(pkiCreditcardclientID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "PATCH", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((CreditcardclientPatchObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", CreditcardclientPatchObjectV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

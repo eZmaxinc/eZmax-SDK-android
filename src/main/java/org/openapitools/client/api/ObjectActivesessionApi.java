@@ -23,6 +23,8 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
+import org.openapitools.client.model.ActivesessionGenerateFederationTokenV1Request;
+import org.openapitools.client.model.ActivesessionGenerateFederationTokenV1Response;
 import org.openapitools.client.model.ActivesessionGetCurrentV1Response;
 import org.openapitools.client.model.ActivesessionGetListV1Response;
 import org.openapitools.client.model.CommonResponseError;
@@ -60,6 +62,134 @@ public class ObjectActivesessionApi {
     return basePath;
   }
 
+  /**
+  * Generate a federation token
+  * 
+   * @param activesessionGenerateFederationTokenV1Request 
+   * @return ActivesessionGenerateFederationTokenV1Response
+  */
+  public ActivesessionGenerateFederationTokenV1Response activesessionGenerateFederationTokenV1 (ActivesessionGenerateFederationTokenV1Request activesessionGenerateFederationTokenV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = activesessionGenerateFederationTokenV1Request;
+    // verify the required parameter 'activesessionGenerateFederationTokenV1Request' is set
+    if (activesessionGenerateFederationTokenV1Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'activesessionGenerateFederationTokenV1Request' when calling activesessionGenerateFederationTokenV1",
+        new ApiException(400, "Missing the required parameter 'activesessionGenerateFederationTokenV1Request' when calling activesessionGenerateFederationTokenV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/activesession/generateFederationToken";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (ActivesessionGenerateFederationTokenV1Response) ApiInvoker.deserialize(localVarResponse, "", ActivesessionGenerateFederationTokenV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Generate a federation token
+   * 
+   * @param activesessionGenerateFederationTokenV1Request 
+  */
+  public void activesessionGenerateFederationTokenV1 (ActivesessionGenerateFederationTokenV1Request activesessionGenerateFederationTokenV1Request, final Response.Listener<ActivesessionGenerateFederationTokenV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = activesessionGenerateFederationTokenV1Request;
+
+    // verify the required parameter 'activesessionGenerateFederationTokenV1Request' is set
+    if (activesessionGenerateFederationTokenV1Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'activesessionGenerateFederationTokenV1Request' when calling activesessionGenerateFederationTokenV1",
+        new ApiException(400, "Missing the required parameter 'activesessionGenerateFederationTokenV1Request' when calling activesessionGenerateFederationTokenV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/activesession/generateFederationToken".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((ActivesessionGenerateFederationTokenV1Response) ApiInvoker.deserialize(localVarResponse,  "", ActivesessionGenerateFederationTokenV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
   /**
   * Get Current Activesession
   * Retrieve the details about the current activesession

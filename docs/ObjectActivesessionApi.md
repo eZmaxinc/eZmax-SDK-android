@@ -4,9 +4,56 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**activesessionGenerateFederationTokenV1**](ObjectActivesessionApi.md#activesessionGenerateFederationTokenV1) | **POST** /1/object/activesession/generateFederationToken | Generate a federation token
 [**activesessionGetCurrentV1**](ObjectActivesessionApi.md#activesessionGetCurrentV1) | **GET** /1/object/activesession/getCurrent | Get Current Activesession
 [**activesessionGetListV1**](ObjectActivesessionApi.md#activesessionGetListV1) | **GET** /1/object/activesession/getList | Retrieve Activesession list
 
+
+
+## activesessionGenerateFederationTokenV1
+
+> ActivesessionGenerateFederationTokenV1Response activesessionGenerateFederationTokenV1(activesessionGenerateFederationTokenV1Request)
+
+Generate a federation token
+
+
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectActivesessionApi;
+
+ObjectActivesessionApi apiInstance = new ObjectActivesessionApi();
+ActivesessionGenerateFederationTokenV1Request activesessionGenerateFederationTokenV1Request = new ActivesessionGenerateFederationTokenV1Request(); // ActivesessionGenerateFederationTokenV1Request | 
+try {
+    ActivesessionGenerateFederationTokenV1Response result = apiInstance.activesessionGenerateFederationTokenV1(activesessionGenerateFederationTokenV1Request);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectActivesessionApi#activesessionGenerateFederationTokenV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **activesessionGenerateFederationTokenV1Request** | [**ActivesessionGenerateFederationTokenV1Request**](ActivesessionGenerateFederationTokenV1Request.md)|  |
+
+### Return type
+
+[**ActivesessionGenerateFederationTokenV1Response**](ActivesessionGenerateFederationTokenV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 
 ## activesessionGetCurrentV1

@@ -12,9 +12,11 @@
 
 package org.openapitools.client.model;
 
+import org.openapitools.client.model.EnumHorizontalalignment;
 import org.openapitools.client.model.FieldEEzsigntemplateformfieldDependencyrequirement;
 import org.openapitools.client.model.FieldEEzsigntemplateformfieldPositioning;
 import org.openapitools.client.model.FieldEEzsigntemplateformfieldPositioningoccurence;
+import org.openapitools.client.model.TextstylestaticRequestCompound;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -56,6 +58,10 @@ public class EzsigntemplateformfieldRequest {
   private Integer iEzsigntemplateformfieldPositioningoffsety = null;
   @SerializedName("eEzsigntemplateformfieldPositioningoccurence")
   private FieldEEzsigntemplateformfieldPositioningoccurence eEzsigntemplateformfieldPositioningoccurence = null;
+  @SerializedName("eEzsigntemplateformfieldHorizontalalignment")
+  private EnumHorizontalalignment eEzsigntemplateformfieldHorizontalalignment = null;
+  @SerializedName("objTextstylestatic")
+  private TextstylestaticRequestCompound objTextstylestatic = null;
 
   /**
    * The unique ID of the Ezsigntemplateformfield
@@ -138,10 +144,10 @@ public class EzsigntemplateformfieldRequest {
   }
 
   /**
-   * The Width of the Ezsigntemplateformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsigntemplateformfieldgroupType.  | eEzsigntemplateformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22-65535     | | Radio                     | 22           | | Text                      | 22-65535     | | Textarea                  | 22-65535     |
+   * The Width of the Ezsigntemplateformfield in pixels calculated at 100 DPI
    * minimum: 0
    **/
-  @ApiModelProperty(required = true, value = "The Width of the Ezsigntemplateformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsigntemplateformfieldgroupType.  | eEzsigntemplateformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22-65535     | | Radio                     | 22           | | Text                      | 22-65535     | | Textarea                  | 22-65535     |")
+  @ApiModelProperty(required = true, value = "The Width of the Ezsigntemplateformfield in pixels calculated at 100 DPI")
   public Integer getIEzsigntemplateformfieldWidth() {
     return iEzsigntemplateformfieldWidth;
   }
@@ -150,10 +156,10 @@ public class EzsigntemplateformfieldRequest {
   }
 
   /**
-   * The Height of the Ezsigntemplateformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsigntemplateformfieldgroupType.  | eEzsigntemplateformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22           | | Radio                     | 22           | | Text                      | 22           | | Textarea                  | 22-65535     | 
+   * The Height of the Ezsigntemplateformfield in pixels calculated at 100 DPI 
    * minimum: 0
    **/
-  @ApiModelProperty(required = true, value = "The Height of the Ezsigntemplateformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsigntemplateformfieldgroupType.  | eEzsigntemplateformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22           | | Radio                     | 22           | | Text                      | 22           | | Textarea                  | 22-65535     | ")
+  @ApiModelProperty(required = true, value = "The Height of the Ezsigntemplateformfield in pixels calculated at 100 DPI ")
   public Integer getIEzsigntemplateformfieldHeight() {
     return iEzsigntemplateformfieldHeight;
   }
@@ -236,6 +242,26 @@ public class EzsigntemplateformfieldRequest {
     this.eEzsigntemplateformfieldPositioningoccurence = eEzsigntemplateformfieldPositioningoccurence;
   }
 
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public EnumHorizontalalignment getEEzsigntemplateformfieldHorizontalalignment() {
+    return eEzsigntemplateformfieldHorizontalalignment;
+  }
+  public void setEEzsigntemplateformfieldHorizontalalignment(EnumHorizontalalignment eEzsigntemplateformfieldHorizontalalignment) {
+    this.eEzsigntemplateformfieldHorizontalalignment = eEzsigntemplateformfieldHorizontalalignment;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public TextstylestaticRequestCompound getObjTextstylestatic() {
+    return objTextstylestatic;
+  }
+  public void setObjTextstylestatic(TextstylestaticRequestCompound objTextstylestatic) {
+    this.objTextstylestatic = objTextstylestatic;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -261,7 +287,9 @@ public class EzsigntemplateformfieldRequest {
         (this.sEzsigntemplateformfieldPositioningpattern == null ? ezsigntemplateformfieldRequest.sEzsigntemplateformfieldPositioningpattern == null : this.sEzsigntemplateformfieldPositioningpattern.equals(ezsigntemplateformfieldRequest.sEzsigntemplateformfieldPositioningpattern)) &&
         (this.iEzsigntemplateformfieldPositioningoffsetx == null ? ezsigntemplateformfieldRequest.iEzsigntemplateformfieldPositioningoffsetx == null : this.iEzsigntemplateformfieldPositioningoffsetx.equals(ezsigntemplateformfieldRequest.iEzsigntemplateformfieldPositioningoffsetx)) &&
         (this.iEzsigntemplateformfieldPositioningoffsety == null ? ezsigntemplateformfieldRequest.iEzsigntemplateformfieldPositioningoffsety == null : this.iEzsigntemplateformfieldPositioningoffsety.equals(ezsigntemplateformfieldRequest.iEzsigntemplateformfieldPositioningoffsety)) &&
-        (this.eEzsigntemplateformfieldPositioningoccurence == null ? ezsigntemplateformfieldRequest.eEzsigntemplateformfieldPositioningoccurence == null : this.eEzsigntemplateformfieldPositioningoccurence.equals(ezsigntemplateformfieldRequest.eEzsigntemplateformfieldPositioningoccurence));
+        (this.eEzsigntemplateformfieldPositioningoccurence == null ? ezsigntemplateformfieldRequest.eEzsigntemplateformfieldPositioningoccurence == null : this.eEzsigntemplateformfieldPositioningoccurence.equals(ezsigntemplateformfieldRequest.eEzsigntemplateformfieldPositioningoccurence)) &&
+        (this.eEzsigntemplateformfieldHorizontalalignment == null ? ezsigntemplateformfieldRequest.eEzsigntemplateformfieldHorizontalalignment == null : this.eEzsigntemplateformfieldHorizontalalignment.equals(ezsigntemplateformfieldRequest.eEzsigntemplateformfieldHorizontalalignment)) &&
+        (this.objTextstylestatic == null ? ezsigntemplateformfieldRequest.objTextstylestatic == null : this.objTextstylestatic.equals(ezsigntemplateformfieldRequest.objTextstylestatic));
   }
 
   @Override
@@ -283,6 +311,8 @@ public class EzsigntemplateformfieldRequest {
     result = 31 * result + (this.iEzsigntemplateformfieldPositioningoffsetx == null ? 0: this.iEzsigntemplateformfieldPositioningoffsetx.hashCode());
     result = 31 * result + (this.iEzsigntemplateformfieldPositioningoffsety == null ? 0: this.iEzsigntemplateformfieldPositioningoffsety.hashCode());
     result = 31 * result + (this.eEzsigntemplateformfieldPositioningoccurence == null ? 0: this.eEzsigntemplateformfieldPositioningoccurence.hashCode());
+    result = 31 * result + (this.eEzsigntemplateformfieldHorizontalalignment == null ? 0: this.eEzsigntemplateformfieldHorizontalalignment.hashCode());
+    result = 31 * result + (this.objTextstylestatic == null ? 0: this.objTextstylestatic.hashCode());
     return result;
   }
 
@@ -307,6 +337,8 @@ public class EzsigntemplateformfieldRequest {
     sb.append("  iEzsigntemplateformfieldPositioningoffsetx: ").append(iEzsigntemplateformfieldPositioningoffsetx).append("\n");
     sb.append("  iEzsigntemplateformfieldPositioningoffsety: ").append(iEzsigntemplateformfieldPositioningoffsety).append("\n");
     sb.append("  eEzsigntemplateformfieldPositioningoccurence: ").append(eEzsigntemplateformfieldPositioningoccurence).append("\n");
+    sb.append("  eEzsigntemplateformfieldHorizontalalignment: ").append(eEzsigntemplateformfieldHorizontalalignment).append("\n");
+    sb.append("  objTextstylestatic: ").append(objTextstylestatic).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

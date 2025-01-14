@@ -6,11 +6,12 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ezsignsignatureCreateObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignatureCreateObjectV1) | **POST** /1/object/ezsignsignature | Create a new Ezsignsignature
 [**ezsignsignatureCreateObjectV2**](ObjectEzsignsignatureApi.md#ezsignsignatureCreateObjectV2) | **POST** /2/object/ezsignsignature | Create a new Ezsignsignature
+[**ezsignsignatureCreateObjectV3**](ObjectEzsignsignatureApi.md#ezsignsignatureCreateObjectV3) | **POST** /3/object/ezsignsignature | Create a new Ezsignsignature
 [**ezsignsignatureDeleteObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignatureDeleteObjectV1) | **DELETE** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Delete an existing Ezsignsignature
-[**ezsignsignatureEditObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignatureEditObjectV1) | **PUT** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Edit an existing Ezsignsignature
+[**ezsignsignatureEditObjectV2**](ObjectEzsignsignatureApi.md#ezsignsignatureEditObjectV2) | **PUT** /2/object/ezsignsignature/{pkiEzsignsignatureID} | Edit an existing Ezsignsignature
 [**ezsignsignatureGetEzsignsignatureattachmentV1**](ObjectEzsignsignatureApi.md#ezsignsignatureGetEzsignsignatureattachmentV1) | **GET** /1/object/ezsignsignature/{pkiEzsignsignatureID}/getEzsignsignatureattachment | Retrieve an existing Ezsignsignature&#39;s Ezsignsignatureattachments
 [**ezsignsignatureGetEzsignsignaturesAutomaticV1**](ObjectEzsignsignatureApi.md#ezsignsignatureGetEzsignsignaturesAutomaticV1) | **GET** /1/object/ezsignsignature/getEzsignsignaturesAutomatic | Retrieve all automatic Ezsignsignatures
-[**ezsignsignatureGetObjectV2**](ObjectEzsignsignatureApi.md#ezsignsignatureGetObjectV2) | **GET** /2/object/ezsignsignature/{pkiEzsignsignatureID} | Retrieve an existing Ezsignsignature
+[**ezsignsignatureGetObjectV3**](ObjectEzsignsignatureApi.md#ezsignsignatureGetObjectV3) | **GET** /3/object/ezsignsignature/{pkiEzsignsignatureID} | Retrieve an existing Ezsignsignature
 [**ezsignsignatureSignV1**](ObjectEzsignsignatureApi.md#ezsignsignatureSignV1) | **POST** /1/object/ezsignsignature/{pkiEzsignsignatureID}/sign | Sign the Ezsignsignature
 
 
@@ -107,6 +108,52 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
+## ezsignsignatureCreateObjectV3
+
+> EzsignsignatureCreateObjectV3Response ezsignsignatureCreateObjectV3(ezsignsignatureCreateObjectV3Request)
+
+Create a new Ezsignsignature
+
+The endpoint allows to create one or many elements at once.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectEzsignsignatureApi;
+
+ObjectEzsignsignatureApi apiInstance = new ObjectEzsignsignatureApi();
+EzsignsignatureCreateObjectV3Request ezsignsignatureCreateObjectV3Request = new EzsignsignatureCreateObjectV3Request(); // EzsignsignatureCreateObjectV3Request | 
+try {
+    EzsignsignatureCreateObjectV3Response result = apiInstance.ezsignsignatureCreateObjectV3(ezsignsignatureCreateObjectV3Request);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectEzsignsignatureApi#ezsignsignatureCreateObjectV3");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ezsignsignatureCreateObjectV3Request** | [**EzsignsignatureCreateObjectV3Request**](EzsignsignatureCreateObjectV3Request.md)|  |
+
+### Return type
+
+[**EzsignsignatureCreateObjectV3Response**](EzsignsignatureCreateObjectV3Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
 ## ezsignsignatureDeleteObjectV1
 
 > EzsignsignatureDeleteObjectV1Response ezsignsignatureDeleteObjectV1(pkiEzsignsignatureID)
@@ -153,9 +200,9 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## ezsignsignatureEditObjectV1
+## ezsignsignatureEditObjectV2
 
-> EzsignsignatureEditObjectV1Response ezsignsignatureEditObjectV1(pkiEzsignsignatureID, ezsignsignatureEditObjectV1Request)
+> EzsignsignatureEditObjectV2Response ezsignsignatureEditObjectV2(pkiEzsignsignatureID, ezsignsignatureEditObjectV2Request)
 
 Edit an existing Ezsignsignature
 
@@ -169,12 +216,12 @@ Edit an existing Ezsignsignature
 
 ObjectEzsignsignatureApi apiInstance = new ObjectEzsignsignatureApi();
 Integer pkiEzsignsignatureID = null; // Integer | 
-EzsignsignatureEditObjectV1Request ezsignsignatureEditObjectV1Request = new EzsignsignatureEditObjectV1Request(); // EzsignsignatureEditObjectV1Request | 
+EzsignsignatureEditObjectV2Request ezsignsignatureEditObjectV2Request = new EzsignsignatureEditObjectV2Request(); // EzsignsignatureEditObjectV2Request | 
 try {
-    EzsignsignatureEditObjectV1Response result = apiInstance.ezsignsignatureEditObjectV1(pkiEzsignsignatureID, ezsignsignatureEditObjectV1Request);
+    EzsignsignatureEditObjectV2Response result = apiInstance.ezsignsignatureEditObjectV2(pkiEzsignsignatureID, ezsignsignatureEditObjectV2Request);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling ObjectEzsignsignatureApi#ezsignsignatureEditObjectV1");
+    System.err.println("Exception when calling ObjectEzsignsignatureApi#ezsignsignatureEditObjectV2");
     e.printStackTrace();
 }
 ```
@@ -185,11 +232,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiEzsignsignatureID** | **Integer**|  | [default to null]
- **ezsignsignatureEditObjectV1Request** | [**EzsignsignatureEditObjectV1Request**](EzsignsignatureEditObjectV1Request.md)|  |
+ **ezsignsignatureEditObjectV2Request** | [**EzsignsignatureEditObjectV2Request**](EzsignsignatureEditObjectV2Request.md)|  |
 
 ### Return type
 
-[**EzsignsignatureEditObjectV1Response**](EzsignsignatureEditObjectV1Response.md)
+[**EzsignsignatureEditObjectV2Response**](EzsignsignatureEditObjectV2Response.md)
 
 ### Authorization
 
@@ -287,9 +334,9 @@ This endpoint does not need any parameter.
 - **Accept**: application/json
 
 
-## ezsignsignatureGetObjectV2
+## ezsignsignatureGetObjectV3
 
-> EzsignsignatureGetObjectV2Response ezsignsignatureGetObjectV2(pkiEzsignsignatureID)
+> EzsignsignatureGetObjectV3Response ezsignsignatureGetObjectV3(pkiEzsignsignatureID)
 
 Retrieve an existing Ezsignsignature
 
@@ -304,10 +351,10 @@ Retrieve an existing Ezsignsignature
 ObjectEzsignsignatureApi apiInstance = new ObjectEzsignsignatureApi();
 Integer pkiEzsignsignatureID = null; // Integer | 
 try {
-    EzsignsignatureGetObjectV2Response result = apiInstance.ezsignsignatureGetObjectV2(pkiEzsignsignatureID);
+    EzsignsignatureGetObjectV3Response result = apiInstance.ezsignsignatureGetObjectV3(pkiEzsignsignatureID);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling ObjectEzsignsignatureApi#ezsignsignatureGetObjectV2");
+    System.err.println("Exception when calling ObjectEzsignsignatureApi#ezsignsignatureGetObjectV3");
     e.printStackTrace();
 }
 ```
@@ -321,7 +368,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsignsignatureGetObjectV2Response**](EzsignsignatureGetObjectV2Response.md)
+[**EzsignsignatureGetObjectV3Response**](EzsignsignatureGetObjectV3Response.md)
 
 ### Authorization
 

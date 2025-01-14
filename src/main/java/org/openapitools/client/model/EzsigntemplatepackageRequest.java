@@ -25,6 +25,8 @@ public class EzsigntemplatepackageRequest {
   private Integer pkiEzsigntemplatepackageID = null;
   @SerializedName("fkiEzsignfoldertypeID")
   private Integer fkiEzsignfoldertypeID = null;
+  @SerializedName("fkiEzdoctemplatedocumentID")
+  private Integer fkiEzdoctemplatedocumentID = null;
   @SerializedName("fkiLanguageID")
   private Integer fkiLanguageID = null;
   @SerializedName("sEzsigntemplatepackageDescription")
@@ -57,6 +59,19 @@ public class EzsigntemplatepackageRequest {
   }
   public void setFkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
     this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
+  }
+
+  /**
+   * The unique ID of the Ezdoctemplatedocument
+   * minimum: 0
+   * maximum: 65535
+   **/
+  @ApiModelProperty(value = "The unique ID of the Ezdoctemplatedocument")
+  public Integer getFkiEzdoctemplatedocumentID() {
+    return fkiEzdoctemplatedocumentID;
+  }
+  public void setFkiEzdoctemplatedocumentID(Integer fkiEzdoctemplatedocumentID) {
+    this.fkiEzdoctemplatedocumentID = fkiEzdoctemplatedocumentID;
   }
 
   /**
@@ -117,6 +132,7 @@ public class EzsigntemplatepackageRequest {
     EzsigntemplatepackageRequest ezsigntemplatepackageRequest = (EzsigntemplatepackageRequest) o;
     return (this.pkiEzsigntemplatepackageID == null ? ezsigntemplatepackageRequest.pkiEzsigntemplatepackageID == null : this.pkiEzsigntemplatepackageID.equals(ezsigntemplatepackageRequest.pkiEzsigntemplatepackageID)) &&
         (this.fkiEzsignfoldertypeID == null ? ezsigntemplatepackageRequest.fkiEzsignfoldertypeID == null : this.fkiEzsignfoldertypeID.equals(ezsigntemplatepackageRequest.fkiEzsignfoldertypeID)) &&
+        (this.fkiEzdoctemplatedocumentID == null ? ezsigntemplatepackageRequest.fkiEzdoctemplatedocumentID == null : this.fkiEzdoctemplatedocumentID.equals(ezsigntemplatepackageRequest.fkiEzdoctemplatedocumentID)) &&
         (this.fkiLanguageID == null ? ezsigntemplatepackageRequest.fkiLanguageID == null : this.fkiLanguageID.equals(ezsigntemplatepackageRequest.fkiLanguageID)) &&
         (this.sEzsigntemplatepackageDescription == null ? ezsigntemplatepackageRequest.sEzsigntemplatepackageDescription == null : this.sEzsigntemplatepackageDescription.equals(ezsigntemplatepackageRequest.sEzsigntemplatepackageDescription)) &&
         (this.bEzsigntemplatepackageAdminonly == null ? ezsigntemplatepackageRequest.bEzsigntemplatepackageAdminonly == null : this.bEzsigntemplatepackageAdminonly.equals(ezsigntemplatepackageRequest.bEzsigntemplatepackageAdminonly)) &&
@@ -128,6 +144,7 @@ public class EzsigntemplatepackageRequest {
     int result = 17;
     result = 31 * result + (this.pkiEzsigntemplatepackageID == null ? 0: this.pkiEzsigntemplatepackageID.hashCode());
     result = 31 * result + (this.fkiEzsignfoldertypeID == null ? 0: this.fkiEzsignfoldertypeID.hashCode());
+    result = 31 * result + (this.fkiEzdoctemplatedocumentID == null ? 0: this.fkiEzdoctemplatedocumentID.hashCode());
     result = 31 * result + (this.fkiLanguageID == null ? 0: this.fkiLanguageID.hashCode());
     result = 31 * result + (this.sEzsigntemplatepackageDescription == null ? 0: this.sEzsigntemplatepackageDescription.hashCode());
     result = 31 * result + (this.bEzsigntemplatepackageAdminonly == null ? 0: this.bEzsigntemplatepackageAdminonly.hashCode());
@@ -142,6 +159,7 @@ public class EzsigntemplatepackageRequest {
     
     sb.append("  pkiEzsigntemplatepackageID: ").append(pkiEzsigntemplatepackageID).append("\n");
     sb.append("  fkiEzsignfoldertypeID: ").append(fkiEzsignfoldertypeID).append("\n");
+    sb.append("  fkiEzdoctemplatedocumentID: ").append(fkiEzdoctemplatedocumentID).append("\n");
     sb.append("  fkiLanguageID: ").append(fkiLanguageID).append("\n");
     sb.append("  sEzsigntemplatepackageDescription: ").append(sEzsigntemplatepackageDescription).append("\n");
     sb.append("  bEzsigntemplatepackageAdminonly: ").append(bEzsigntemplatepackageAdminonly).append("\n");

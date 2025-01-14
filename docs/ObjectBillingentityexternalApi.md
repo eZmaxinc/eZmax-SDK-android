@@ -4,8 +4,57 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**billingentityexternalGenerateFederationTokenV1**](ObjectBillingentityexternalApi.md#billingentityexternalGenerateFederationTokenV1) | **POST** /1/object/billingentityexternal/{pkiBillingentityexternalID}/generateFederationToken | Generate a federation token
 [**billingentityexternalGetAutocompleteV2**](ObjectBillingentityexternalApi.md#billingentityexternalGetAutocompleteV2) | **GET** /2/object/billingentityexternal/getAutocomplete/{sSelector} | Retrieve Billingentityexternals and IDs
 
+
+
+## billingentityexternalGenerateFederationTokenV1
+
+> BillingentityexternalGenerateFederationTokenV1Response billingentityexternalGenerateFederationTokenV1(pkiBillingentityexternalID, billingentityexternalGenerateFederationTokenV1Request)
+
+Generate a federation token
+
+
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectBillingentityexternalApi;
+
+ObjectBillingentityexternalApi apiInstance = new ObjectBillingentityexternalApi();
+Integer pkiBillingentityexternalID = null; // Integer | 
+BillingentityexternalGenerateFederationTokenV1Request billingentityexternalGenerateFederationTokenV1Request = new BillingentityexternalGenerateFederationTokenV1Request(); // BillingentityexternalGenerateFederationTokenV1Request | 
+try {
+    BillingentityexternalGenerateFederationTokenV1Response result = apiInstance.billingentityexternalGenerateFederationTokenV1(pkiBillingentityexternalID, billingentityexternalGenerateFederationTokenV1Request);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectBillingentityexternalApi#billingentityexternalGenerateFederationTokenV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiBillingentityexternalID** | **Integer**|  | [default to null]
+ **billingentityexternalGenerateFederationTokenV1Request** | [**BillingentityexternalGenerateFederationTokenV1Request**](BillingentityexternalGenerateFederationTokenV1Request.md)|  |
+
+### Return type
+
+[**BillingentityexternalGenerateFederationTokenV1Response**](BillingentityexternalGenerateFederationTokenV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 
 ## billingentityexternalGetAutocompleteV2

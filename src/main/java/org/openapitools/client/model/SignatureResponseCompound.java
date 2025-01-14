@@ -23,8 +23,12 @@ public class SignatureResponseCompound {
   
   @SerializedName("pkiSignatureID")
   private Integer pkiSignatureID = null;
+  @SerializedName("fkiFontID")
+  private Integer fkiFontID = null;
   @SerializedName("sSignatureUrl")
   private String sSignatureUrl = null;
+  @SerializedName("sSignatureUrlinitials")
+  private String sSignatureUrlinitials = null;
 
   /**
    * The unique ID of the Signature
@@ -40,14 +44,37 @@ public class SignatureResponseCompound {
   }
 
   /**
+   * The unique ID of the Font
+   * minimum: 0
+   **/
+  @ApiModelProperty(value = "The unique ID of the Font")
+  public Integer getFkiFontID() {
+    return fkiFontID;
+  }
+  public void setFkiFontID(Integer fkiFontID) {
+    this.fkiFontID = fkiFontID;
+  }
+
+  /**
    * The URL of the SVG file for the Signature
    **/
-  @ApiModelProperty(required = true, value = "The URL of the SVG file for the Signature")
+  @ApiModelProperty(value = "The URL of the SVG file for the Signature")
   public String getSSignatureUrl() {
     return sSignatureUrl;
   }
   public void setSSignatureUrl(String sSignatureUrl) {
     this.sSignatureUrl = sSignatureUrl;
+  }
+
+  /**
+   * The URL of the SVG file for the Initials
+   **/
+  @ApiModelProperty(value = "The URL of the SVG file for the Initials")
+  public String getSSignatureUrlinitials() {
+    return sSignatureUrlinitials;
+  }
+  public void setSSignatureUrlinitials(String sSignatureUrlinitials) {
+    this.sSignatureUrlinitials = sSignatureUrlinitials;
   }
 
 
@@ -61,14 +88,18 @@ public class SignatureResponseCompound {
     }
     SignatureResponseCompound signatureResponseCompound = (SignatureResponseCompound) o;
     return (this.pkiSignatureID == null ? signatureResponseCompound.pkiSignatureID == null : this.pkiSignatureID.equals(signatureResponseCompound.pkiSignatureID)) &&
-        (this.sSignatureUrl == null ? signatureResponseCompound.sSignatureUrl == null : this.sSignatureUrl.equals(signatureResponseCompound.sSignatureUrl));
+        (this.fkiFontID == null ? signatureResponseCompound.fkiFontID == null : this.fkiFontID.equals(signatureResponseCompound.fkiFontID)) &&
+        (this.sSignatureUrl == null ? signatureResponseCompound.sSignatureUrl == null : this.sSignatureUrl.equals(signatureResponseCompound.sSignatureUrl)) &&
+        (this.sSignatureUrlinitials == null ? signatureResponseCompound.sSignatureUrlinitials == null : this.sSignatureUrlinitials.equals(signatureResponseCompound.sSignatureUrlinitials));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
     result = 31 * result + (this.pkiSignatureID == null ? 0: this.pkiSignatureID.hashCode());
+    result = 31 * result + (this.fkiFontID == null ? 0: this.fkiFontID.hashCode());
     result = 31 * result + (this.sSignatureUrl == null ? 0: this.sSignatureUrl.hashCode());
+    result = 31 * result + (this.sSignatureUrlinitials == null ? 0: this.sSignatureUrlinitials.hashCode());
     return result;
   }
 
@@ -78,7 +109,9 @@ public class SignatureResponseCompound {
     sb.append("class SignatureResponseCompound {\n");
     
     sb.append("  pkiSignatureID: ").append(pkiSignatureID).append("\n");
+    sb.append("  fkiFontID: ").append(fkiFontID).append("\n");
     sb.append("  sSignatureUrl: ").append(sSignatureUrl).append("\n");
+    sb.append("  sSignatureUrlinitials: ").append(sSignatureUrlinitials).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

@@ -12,6 +12,7 @@
 
 package org.openapitools.client.model;
 
+import org.openapitools.client.model.EmailRequest;
 import org.openapitools.client.model.MultilingualUsergroupName;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
@@ -28,6 +29,8 @@ public class UsergroupResponseCompound {
   private MultilingualUsergroupName objUsergroupName = null;
   @SerializedName("sUsergroupNameX")
   private String sUsergroupNameX = null;
+  @SerializedName("objEmail")
+  private EmailRequest objEmail = null;
 
   /**
    * The unique ID of the Usergroup
@@ -63,6 +66,16 @@ public class UsergroupResponseCompound {
     this.sUsergroupNameX = sUsergroupNameX;
   }
 
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public EmailRequest getObjEmail() {
+    return objEmail;
+  }
+  public void setObjEmail(EmailRequest objEmail) {
+    this.objEmail = objEmail;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -75,7 +88,8 @@ public class UsergroupResponseCompound {
     UsergroupResponseCompound usergroupResponseCompound = (UsergroupResponseCompound) o;
     return (this.pkiUsergroupID == null ? usergroupResponseCompound.pkiUsergroupID == null : this.pkiUsergroupID.equals(usergroupResponseCompound.pkiUsergroupID)) &&
         (this.objUsergroupName == null ? usergroupResponseCompound.objUsergroupName == null : this.objUsergroupName.equals(usergroupResponseCompound.objUsergroupName)) &&
-        (this.sUsergroupNameX == null ? usergroupResponseCompound.sUsergroupNameX == null : this.sUsergroupNameX.equals(usergroupResponseCompound.sUsergroupNameX));
+        (this.sUsergroupNameX == null ? usergroupResponseCompound.sUsergroupNameX == null : this.sUsergroupNameX.equals(usergroupResponseCompound.sUsergroupNameX)) &&
+        (this.objEmail == null ? usergroupResponseCompound.objEmail == null : this.objEmail.equals(usergroupResponseCompound.objEmail));
   }
 
   @Override
@@ -84,6 +98,7 @@ public class UsergroupResponseCompound {
     result = 31 * result + (this.pkiUsergroupID == null ? 0: this.pkiUsergroupID.hashCode());
     result = 31 * result + (this.objUsergroupName == null ? 0: this.objUsergroupName.hashCode());
     result = 31 * result + (this.sUsergroupNameX == null ? 0: this.sUsergroupNameX.hashCode());
+    result = 31 * result + (this.objEmail == null ? 0: this.objEmail.hashCode());
     return result;
   }
 
@@ -95,6 +110,7 @@ public class UsergroupResponseCompound {
     sb.append("  pkiUsergroupID: ").append(pkiUsergroupID).append("\n");
     sb.append("  objUsergroupName: ").append(objUsergroupName).append("\n");
     sb.append("  sUsergroupNameX: ").append(sUsergroupNameX).append("\n");
+    sb.append("  objEmail: ").append(objEmail).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

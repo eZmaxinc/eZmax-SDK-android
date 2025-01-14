@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **pkiEzsignfolderID** | **Integer** | The unique ID of the Ezsignfolder | 
 **fkiEzsignfoldertypeID** | **Integer** | The unique ID of the Ezsignfoldertype. |  [optional]
 **objEzsignfoldertype** | [**CustomEzsignfoldertypeResponse**](CustomEzsignfoldertypeResponse.md) |  |  [optional]
+**fkiTimezoneID** | **Integer** | The unique ID of the Timezone |  [optional]
 **eEzsignfolderCompletion** | [**FieldEEzsignfolderCompletion**](FieldEEzsignfolderCompletion.md) |  | 
 **sEzsignfoldertypeNameX** | **String** |  |  [optional]
 **fkiBillingentityinternalID** | **Integer** | The unique ID of the Billingentityinternal. |  [optional]
@@ -19,6 +20,8 @@ Name | Type | Description | Notes
 **tEzsignfolderNote** | **String** | Note about the Ezsignfolder |  [optional]
 **bEzsignfolderIsdisposable** | **Boolean** | If the Ezsigndocument can be disposed |  [optional]
 **eEzsignfolderSendreminderfrequency** | [**FieldEEzsignfolderSendreminderfrequency**](FieldEEzsignfolderSendreminderfrequency.md) |  |  [optional]
+**iEzsignfolderSendreminderfirstdays** | **Integer** | The number of days before the the first reminder sending |  [optional]
+**iEzsignfolderSendreminderotherdays** | **Integer** | The number of days after the first reminder sending |  [optional]
 **dtEzsignfolderDelayedsenddate** | **String** | The date and time at which the Ezsignfolder will be sent in the future. |  [optional]
 **dtEzsignfolderDuedate** | **String** | The maximum date and time at which the Ezsignfolder can be signed. |  [optional]
 **dtEzsignfolderSentdate** | **String** | The date and time at which the Ezsignfolder was sent the last time. |  [optional]

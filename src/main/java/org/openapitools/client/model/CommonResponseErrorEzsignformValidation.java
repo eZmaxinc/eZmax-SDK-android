@@ -28,6 +28,8 @@ public class CommonResponseErrorEzsignformValidation {
   private String sErrorMessage = null;
   @SerializedName("eErrorCode")
   private FieldEErrorCode eErrorCode = null;
+  @SerializedName("a_sErrorMessagedetail")
+  private List<String> aSErrorMessagedetail = null;
   @SerializedName("a_objEzsignformfielderror")
   private List<CustomEzsignformfielderrorResponse> aObjEzsignformfielderror = null;
 
@@ -53,6 +55,17 @@ public class CommonResponseErrorEzsignformValidation {
   }
 
   /**
+   * More error message detail
+   **/
+  @ApiModelProperty(value = "More error message detail")
+  public List<String> getASErrorMessagedetail() {
+    return aSErrorMessagedetail;
+  }
+  public void setASErrorMessagedetail(List<String> aSErrorMessagedetail) {
+    this.aSErrorMessagedetail = aSErrorMessagedetail;
+  }
+
+  /**
    * 
    **/
   @ApiModelProperty(required = true, value = "")
@@ -75,6 +88,7 @@ public class CommonResponseErrorEzsignformValidation {
     CommonResponseErrorEzsignformValidation commonResponseErrorEzsignformValidation = (CommonResponseErrorEzsignformValidation) o;
     return (this.sErrorMessage == null ? commonResponseErrorEzsignformValidation.sErrorMessage == null : this.sErrorMessage.equals(commonResponseErrorEzsignformValidation.sErrorMessage)) &&
         (this.eErrorCode == null ? commonResponseErrorEzsignformValidation.eErrorCode == null : this.eErrorCode.equals(commonResponseErrorEzsignformValidation.eErrorCode)) &&
+        (this.aSErrorMessagedetail == null ? commonResponseErrorEzsignformValidation.aSErrorMessagedetail == null : this.aSErrorMessagedetail.equals(commonResponseErrorEzsignformValidation.aSErrorMessagedetail)) &&
         (this.aObjEzsignformfielderror == null ? commonResponseErrorEzsignformValidation.aObjEzsignformfielderror == null : this.aObjEzsignformfielderror.equals(commonResponseErrorEzsignformValidation.aObjEzsignformfielderror));
   }
 
@@ -83,6 +97,7 @@ public class CommonResponseErrorEzsignformValidation {
     int result = 17;
     result = 31 * result + (this.sErrorMessage == null ? 0: this.sErrorMessage.hashCode());
     result = 31 * result + (this.eErrorCode == null ? 0: this.eErrorCode.hashCode());
+    result = 31 * result + (this.aSErrorMessagedetail == null ? 0: this.aSErrorMessagedetail.hashCode());
     result = 31 * result + (this.aObjEzsignformfielderror == null ? 0: this.aObjEzsignformfielderror.hashCode());
     return result;
   }
@@ -94,6 +109,7 @@ public class CommonResponseErrorEzsignformValidation {
     
     sb.append("  sErrorMessage: ").append(sErrorMessage).append("\n");
     sb.append("  eErrorCode: ").append(eErrorCode).append("\n");
+    sb.append("  aSErrorMessagedetail: ").append(aSErrorMessagedetail).append("\n");
     sb.append("  aObjEzsignformfielderror: ").append(aObjEzsignformfielderror).append("\n");
     sb.append("}\n");
     return sb.toString();

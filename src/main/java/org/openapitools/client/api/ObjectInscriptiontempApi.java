@@ -24,7 +24,10 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
 import org.openapitools.client.model.CommonResponseError;
+import org.openapitools.client.model.InscriptiontempGetCommunicationCountV1Response;
 import org.openapitools.client.model.InscriptiontempGetCommunicationListV1Response;
+import org.openapitools.client.model.InscriptiontempGetCommunicationrecipientsV1Response;
+import org.openapitools.client.model.InscriptiontempGetCommunicationsendersV1Response;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
@@ -56,6 +59,133 @@ public class ObjectInscriptiontempApi {
     return basePath;
   }
 
+  /**
+  * Retrieve Communication count
+  * 
+   * @param pkiInscriptiontempID 
+   * @return InscriptiontempGetCommunicationCountV1Response
+  */
+  public InscriptiontempGetCommunicationCountV1Response inscriptiontempGetCommunicationCountV1 (Integer pkiInscriptiontempID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiInscriptiontempID' is set
+    if (pkiInscriptiontempID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiInscriptiontempID' when calling inscriptiontempGetCommunicationCountV1",
+        new ApiException(400, "Missing the required parameter 'pkiInscriptiontempID' when calling inscriptiontempGetCommunicationCountV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationCount".replaceAll("\\{" + "pkiInscriptiontempID" + "\\}", apiInvoker.escapeString(pkiInscriptiontempID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (InscriptiontempGetCommunicationCountV1Response) ApiInvoker.deserialize(localVarResponse, "", InscriptiontempGetCommunicationCountV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve Communication count
+   * 
+   * @param pkiInscriptiontempID 
+  */
+  public void inscriptiontempGetCommunicationCountV1 (Integer pkiInscriptiontempID, final Response.Listener<InscriptiontempGetCommunicationCountV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiInscriptiontempID' is set
+    if (pkiInscriptiontempID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiInscriptiontempID' when calling inscriptiontempGetCommunicationCountV1",
+        new ApiException(400, "Missing the required parameter 'pkiInscriptiontempID' when calling inscriptiontempGetCommunicationCountV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationCount".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiInscriptiontempID" + "\\}", apiInvoker.escapeString(pkiInscriptiontempID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((InscriptiontempGetCommunicationCountV1Response) ApiInvoker.deserialize(localVarResponse,  "", InscriptiontempGetCommunicationCountV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
   /**
   * Retrieve Communication list
   * 
@@ -169,6 +299,260 @@ public class ObjectInscriptiontempApi {
           public void onResponse(String localVarResponse) {
             try {
               responseListener.onResponse((InscriptiontempGetCommunicationListV1Response) ApiInvoker.deserialize(localVarResponse,  "", InscriptiontempGetCommunicationListV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Retrieve Inscriptiontemp&#39;s Communicationrecipient
+  * 
+   * @param pkiInscriptiontempID 
+   * @return InscriptiontempGetCommunicationrecipientsV1Response
+  */
+  public InscriptiontempGetCommunicationrecipientsV1Response inscriptiontempGetCommunicationrecipientsV1 (Integer pkiInscriptiontempID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiInscriptiontempID' is set
+    if (pkiInscriptiontempID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiInscriptiontempID' when calling inscriptiontempGetCommunicationrecipientsV1",
+        new ApiException(400, "Missing the required parameter 'pkiInscriptiontempID' when calling inscriptiontempGetCommunicationrecipientsV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationrecipients".replaceAll("\\{" + "pkiInscriptiontempID" + "\\}", apiInvoker.escapeString(pkiInscriptiontempID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (InscriptiontempGetCommunicationrecipientsV1Response) ApiInvoker.deserialize(localVarResponse, "", InscriptiontempGetCommunicationrecipientsV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve Inscriptiontemp&#39;s Communicationrecipient
+   * 
+   * @param pkiInscriptiontempID 
+  */
+  public void inscriptiontempGetCommunicationrecipientsV1 (Integer pkiInscriptiontempID, final Response.Listener<InscriptiontempGetCommunicationrecipientsV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiInscriptiontempID' is set
+    if (pkiInscriptiontempID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiInscriptiontempID' when calling inscriptiontempGetCommunicationrecipientsV1",
+        new ApiException(400, "Missing the required parameter 'pkiInscriptiontempID' when calling inscriptiontempGetCommunicationrecipientsV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationrecipients".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiInscriptiontempID" + "\\}", apiInvoker.escapeString(pkiInscriptiontempID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((InscriptiontempGetCommunicationrecipientsV1Response) ApiInvoker.deserialize(localVarResponse,  "", InscriptiontempGetCommunicationrecipientsV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Retrieve Inscriptiontemp&#39;s Communicationsender
+  * 
+   * @param pkiInscriptiontempID 
+   * @return InscriptiontempGetCommunicationsendersV1Response
+  */
+  public InscriptiontempGetCommunicationsendersV1Response inscriptiontempGetCommunicationsendersV1 (Integer pkiInscriptiontempID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiInscriptiontempID' is set
+    if (pkiInscriptiontempID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiInscriptiontempID' when calling inscriptiontempGetCommunicationsendersV1",
+        new ApiException(400, "Missing the required parameter 'pkiInscriptiontempID' when calling inscriptiontempGetCommunicationsendersV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationsenders".replaceAll("\\{" + "pkiInscriptiontempID" + "\\}", apiInvoker.escapeString(pkiInscriptiontempID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (InscriptiontempGetCommunicationsendersV1Response) ApiInvoker.deserialize(localVarResponse, "", InscriptiontempGetCommunicationsendersV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve Inscriptiontemp&#39;s Communicationsender
+   * 
+   * @param pkiInscriptiontempID 
+  */
+  public void inscriptiontempGetCommunicationsendersV1 (Integer pkiInscriptiontempID, final Response.Listener<InscriptiontempGetCommunicationsendersV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiInscriptiontempID' is set
+    if (pkiInscriptiontempID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiInscriptiontempID' when calling inscriptiontempGetCommunicationsendersV1",
+        new ApiException(400, "Missing the required parameter 'pkiInscriptiontempID' when calling inscriptiontempGetCommunicationsendersV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationsenders".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiInscriptiontempID" + "\\}", apiInvoker.escapeString(pkiInscriptiontempID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((InscriptiontempGetCommunicationsendersV1Response) ApiInvoker.deserialize(localVarResponse,  "", InscriptiontempGetCommunicationsendersV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

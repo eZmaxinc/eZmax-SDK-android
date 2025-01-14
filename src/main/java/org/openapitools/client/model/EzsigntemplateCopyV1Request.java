@@ -24,15 +24,41 @@ public class EzsigntemplateCopyV1Request {
   
   @SerializedName("a_fkiEzsignfoldertypeID")
   private List<Integer> aFkiEzsignfoldertypeID = null;
+  @SerializedName("bCopyCompany")
+  private Boolean bCopyCompany = null;
+  @SerializedName("bCopyUser")
+  private Boolean bCopyUser = null;
 
   /**
    **/
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(value = "")
   public List<Integer> getAFkiEzsignfoldertypeID() {
     return aFkiEzsignfoldertypeID;
   }
   public void setAFkiEzsignfoldertypeID(List<Integer> aFkiEzsignfoldertypeID) {
     this.aFkiEzsignfoldertypeID = aFkiEzsignfoldertypeID;
+  }
+
+  /**
+   * Whether we shall copy the Ezsigntemplate as a company Ezsigntemplate
+   **/
+  @ApiModelProperty(value = "Whether we shall copy the Ezsigntemplate as a company Ezsigntemplate")
+  public Boolean getBCopyCompany() {
+    return bCopyCompany;
+  }
+  public void setBCopyCompany(Boolean bCopyCompany) {
+    this.bCopyCompany = bCopyCompany;
+  }
+
+  /**
+   * Whether we shall copy the Ezsigntemplate as a user Ezsigntemplate
+   **/
+  @ApiModelProperty(value = "Whether we shall copy the Ezsigntemplate as a user Ezsigntemplate")
+  public Boolean getBCopyUser() {
+    return bCopyUser;
+  }
+  public void setBCopyUser(Boolean bCopyUser) {
+    this.bCopyUser = bCopyUser;
   }
 
 
@@ -45,13 +71,17 @@ public class EzsigntemplateCopyV1Request {
       return false;
     }
     EzsigntemplateCopyV1Request ezsigntemplateCopyV1Request = (EzsigntemplateCopyV1Request) o;
-    return (this.aFkiEzsignfoldertypeID == null ? ezsigntemplateCopyV1Request.aFkiEzsignfoldertypeID == null : this.aFkiEzsignfoldertypeID.equals(ezsigntemplateCopyV1Request.aFkiEzsignfoldertypeID));
+    return (this.aFkiEzsignfoldertypeID == null ? ezsigntemplateCopyV1Request.aFkiEzsignfoldertypeID == null : this.aFkiEzsignfoldertypeID.equals(ezsigntemplateCopyV1Request.aFkiEzsignfoldertypeID)) &&
+        (this.bCopyCompany == null ? ezsigntemplateCopyV1Request.bCopyCompany == null : this.bCopyCompany.equals(ezsigntemplateCopyV1Request.bCopyCompany)) &&
+        (this.bCopyUser == null ? ezsigntemplateCopyV1Request.bCopyUser == null : this.bCopyUser.equals(ezsigntemplateCopyV1Request.bCopyUser));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
     result = 31 * result + (this.aFkiEzsignfoldertypeID == null ? 0: this.aFkiEzsignfoldertypeID.hashCode());
+    result = 31 * result + (this.bCopyCompany == null ? 0: this.bCopyCompany.hashCode());
+    result = 31 * result + (this.bCopyUser == null ? 0: this.bCopyUser.hashCode());
     return result;
   }
 
@@ -61,6 +91,8 @@ public class EzsigntemplateCopyV1Request {
     sb.append("class EzsigntemplateCopyV1Request {\n");
     
     sb.append("  aFkiEzsignfoldertypeID: ").append(aFkiEzsignfoldertypeID).append("\n");
+    sb.append("  bCopyCompany: ").append(bCopyCompany).append("\n");
+    sb.append("  bCopyUser: ").append(bCopyUser).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

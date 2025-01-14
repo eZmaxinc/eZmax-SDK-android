@@ -25,8 +25,8 @@ public class CreditcarddetailResponseCompound {
   private Integer pkiCreditcarddetailID = null;
   @SerializedName("fkiCreditcardtypeID")
   private Integer fkiCreditcardtypeID = null;
-  @SerializedName("sCreditcarddetailNumbermasked")
-  private String sCreditcarddetailNumbermasked = null;
+  @SerializedName("iCreditcarddetailLastdigits")
+  private Integer iCreditcarddetailLastdigits = null;
   @SerializedName("iCreditcarddetailExpirationmonth")
   private Integer iCreditcarddetailExpirationmonth = null;
   @SerializedName("iCreditcarddetailExpirationyear")
@@ -65,14 +65,16 @@ public class CreditcarddetailResponseCompound {
   }
 
   /**
-   * The numbermasked of the Creditcarddetail
+   * The last digits of the Creditcarddetail
+   * minimum: 0
+   * maximum: 9999
    **/
-  @ApiModelProperty(required = true, value = "The numbermasked of the Creditcarddetail")
-  public String getSCreditcarddetailNumbermasked() {
-    return sCreditcarddetailNumbermasked;
+  @ApiModelProperty(required = true, value = "The last digits of the Creditcarddetail")
+  public Integer getICreditcarddetailLastdigits() {
+    return iCreditcarddetailLastdigits;
   }
-  public void setSCreditcarddetailNumbermasked(String sCreditcarddetailNumbermasked) {
-    this.sCreditcarddetailNumbermasked = sCreditcarddetailNumbermasked;
+  public void setICreditcarddetailLastdigits(Integer iCreditcarddetailLastdigits) {
+    this.iCreditcarddetailLastdigits = iCreditcarddetailLastdigits;
   }
 
   /**
@@ -146,7 +148,7 @@ public class CreditcarddetailResponseCompound {
     CreditcarddetailResponseCompound creditcarddetailResponseCompound = (CreditcarddetailResponseCompound) o;
     return (this.pkiCreditcarddetailID == null ? creditcarddetailResponseCompound.pkiCreditcarddetailID == null : this.pkiCreditcarddetailID.equals(creditcarddetailResponseCompound.pkiCreditcarddetailID)) &&
         (this.fkiCreditcardtypeID == null ? creditcarddetailResponseCompound.fkiCreditcardtypeID == null : this.fkiCreditcardtypeID.equals(creditcarddetailResponseCompound.fkiCreditcardtypeID)) &&
-        (this.sCreditcarddetailNumbermasked == null ? creditcarddetailResponseCompound.sCreditcarddetailNumbermasked == null : this.sCreditcarddetailNumbermasked.equals(creditcarddetailResponseCompound.sCreditcarddetailNumbermasked)) &&
+        (this.iCreditcarddetailLastdigits == null ? creditcarddetailResponseCompound.iCreditcarddetailLastdigits == null : this.iCreditcarddetailLastdigits.equals(creditcarddetailResponseCompound.iCreditcarddetailLastdigits)) &&
         (this.iCreditcarddetailExpirationmonth == null ? creditcarddetailResponseCompound.iCreditcarddetailExpirationmonth == null : this.iCreditcarddetailExpirationmonth.equals(creditcarddetailResponseCompound.iCreditcarddetailExpirationmonth)) &&
         (this.iCreditcarddetailExpirationyear == null ? creditcarddetailResponseCompound.iCreditcarddetailExpirationyear == null : this.iCreditcarddetailExpirationyear.equals(creditcarddetailResponseCompound.iCreditcarddetailExpirationyear)) &&
         (this.sCreditcarddetailCivic == null ? creditcarddetailResponseCompound.sCreditcarddetailCivic == null : this.sCreditcarddetailCivic.equals(creditcarddetailResponseCompound.sCreditcarddetailCivic)) &&
@@ -159,7 +161,7 @@ public class CreditcarddetailResponseCompound {
     int result = 17;
     result = 31 * result + (this.pkiCreditcarddetailID == null ? 0: this.pkiCreditcarddetailID.hashCode());
     result = 31 * result + (this.fkiCreditcardtypeID == null ? 0: this.fkiCreditcardtypeID.hashCode());
-    result = 31 * result + (this.sCreditcarddetailNumbermasked == null ? 0: this.sCreditcarddetailNumbermasked.hashCode());
+    result = 31 * result + (this.iCreditcarddetailLastdigits == null ? 0: this.iCreditcarddetailLastdigits.hashCode());
     result = 31 * result + (this.iCreditcarddetailExpirationmonth == null ? 0: this.iCreditcarddetailExpirationmonth.hashCode());
     result = 31 * result + (this.iCreditcarddetailExpirationyear == null ? 0: this.iCreditcarddetailExpirationyear.hashCode());
     result = 31 * result + (this.sCreditcarddetailCivic == null ? 0: this.sCreditcarddetailCivic.hashCode());
@@ -175,7 +177,7 @@ public class CreditcarddetailResponseCompound {
     
     sb.append("  pkiCreditcarddetailID: ").append(pkiCreditcarddetailID).append("\n");
     sb.append("  fkiCreditcardtypeID: ").append(fkiCreditcardtypeID).append("\n");
-    sb.append("  sCreditcarddetailNumbermasked: ").append(sCreditcarddetailNumbermasked).append("\n");
+    sb.append("  iCreditcarddetailLastdigits: ").append(iCreditcarddetailLastdigits).append("\n");
     sb.append("  iCreditcarddetailExpirationmonth: ").append(iCreditcarddetailExpirationmonth).append("\n");
     sb.append("  iCreditcarddetailExpirationyear: ").append(iCreditcarddetailExpirationyear).append("\n");
     sb.append("  sCreditcarddetailCivic: ").append(sCreditcarddetailCivic).append("\n");

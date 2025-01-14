@@ -14,6 +14,7 @@ package org.openapitools.client.model;
 
 import org.openapitools.client.model.CommonAudit;
 import org.openapitools.client.model.CustomEzsignfoldertypeResponse;
+import org.openapitools.client.model.CustomTimezoneWithCodeResponse;
 import org.openapitools.client.model.FieldEEzsignfolderCompletion;
 import org.openapitools.client.model.FieldEEzsignfolderSendreminderfrequency;
 import org.openapitools.client.model.FieldEEzsignfolderStep;
@@ -32,6 +33,8 @@ public class EzsignfolderResponseCompound {
   private Integer fkiEzsignfoldertypeID = null;
   @SerializedName("objEzsignfoldertype")
   private CustomEzsignfoldertypeResponse objEzsignfoldertype = null;
+  @SerializedName("fkiTimezoneID")
+  private Integer fkiTimezoneID = null;
   @SerializedName("eEzsignfolderCompletion")
   private FieldEEzsignfolderCompletion eEzsignfolderCompletion = null;
   @SerializedName("sEzsignfoldertypeNameX")
@@ -52,6 +55,10 @@ public class EzsignfolderResponseCompound {
   private Boolean bEzsignfolderIsdisposable = null;
   @SerializedName("eEzsignfolderSendreminderfrequency")
   private FieldEEzsignfolderSendreminderfrequency eEzsignfolderSendreminderfrequency = null;
+  @SerializedName("iEzsignfolderSendreminderfirstdays")
+  private Integer iEzsignfolderSendreminderfirstdays = null;
+  @SerializedName("iEzsignfolderSendreminderotherdays")
+  private Integer iEzsignfolderSendreminderotherdays = null;
   @SerializedName("dtEzsignfolderDelayedsenddate")
   private String dtEzsignfolderDelayedsenddate = null;
   @SerializedName("dtEzsignfolderDuedate")
@@ -72,6 +79,8 @@ public class EzsignfolderResponseCompound {
   private CommonAudit objAudit = null;
   @SerializedName("sEzsignfolderExternalid")
   private String sEzsignfolderExternalid = null;
+  @SerializedName("objTimezone")
+  private CustomTimezoneWithCodeResponse objTimezone = null;
 
   /**
    * The unique ID of the Ezsignfolder
@@ -106,6 +115,18 @@ public class EzsignfolderResponseCompound {
   }
   public void setObjEzsignfoldertype(CustomEzsignfoldertypeResponse objEzsignfoldertype) {
     this.objEzsignfoldertype = objEzsignfoldertype;
+  }
+
+  /**
+   * The unique ID of the Timezone
+   * minimum: 0
+   **/
+  @ApiModelProperty(value = "The unique ID of the Timezone")
+  public Integer getFkiTimezoneID() {
+    return fkiTimezoneID;
+  }
+  public void setFkiTimezoneID(Integer fkiTimezoneID) {
+    this.fkiTimezoneID = fkiTimezoneID;
   }
 
   /**
@@ -219,6 +240,32 @@ public class EzsignfolderResponseCompound {
   }
 
   /**
+   * The number of days before the the first reminder sending
+   * minimum: 0
+   * maximum: 255
+   **/
+  @ApiModelProperty(value = "The number of days before the the first reminder sending")
+  public Integer getIEzsignfolderSendreminderfirstdays() {
+    return iEzsignfolderSendreminderfirstdays;
+  }
+  public void setIEzsignfolderSendreminderfirstdays(Integer iEzsignfolderSendreminderfirstdays) {
+    this.iEzsignfolderSendreminderfirstdays = iEzsignfolderSendreminderfirstdays;
+  }
+
+  /**
+   * The number of days after the first reminder sending
+   * minimum: 0
+   * maximum: 255
+   **/
+  @ApiModelProperty(value = "The number of days after the first reminder sending")
+  public Integer getIEzsignfolderSendreminderotherdays() {
+    return iEzsignfolderSendreminderotherdays;
+  }
+  public void setIEzsignfolderSendreminderotherdays(Integer iEzsignfolderSendreminderotherdays) {
+    this.iEzsignfolderSendreminderotherdays = iEzsignfolderSendreminderotherdays;
+  }
+
+  /**
    * The date and time at which the Ezsignfolder will be sent in the future.
    **/
   @ApiModelProperty(value = "The date and time at which the Ezsignfolder will be sent in the future.")
@@ -326,6 +373,16 @@ public class EzsignfolderResponseCompound {
     this.sEzsignfolderExternalid = sEzsignfolderExternalid;
   }
 
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public CustomTimezoneWithCodeResponse getObjTimezone() {
+    return objTimezone;
+  }
+  public void setObjTimezone(CustomTimezoneWithCodeResponse objTimezone) {
+    this.objTimezone = objTimezone;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -339,6 +396,7 @@ public class EzsignfolderResponseCompound {
     return (this.pkiEzsignfolderID == null ? ezsignfolderResponseCompound.pkiEzsignfolderID == null : this.pkiEzsignfolderID.equals(ezsignfolderResponseCompound.pkiEzsignfolderID)) &&
         (this.fkiEzsignfoldertypeID == null ? ezsignfolderResponseCompound.fkiEzsignfoldertypeID == null : this.fkiEzsignfoldertypeID.equals(ezsignfolderResponseCompound.fkiEzsignfoldertypeID)) &&
         (this.objEzsignfoldertype == null ? ezsignfolderResponseCompound.objEzsignfoldertype == null : this.objEzsignfoldertype.equals(ezsignfolderResponseCompound.objEzsignfoldertype)) &&
+        (this.fkiTimezoneID == null ? ezsignfolderResponseCompound.fkiTimezoneID == null : this.fkiTimezoneID.equals(ezsignfolderResponseCompound.fkiTimezoneID)) &&
         (this.eEzsignfolderCompletion == null ? ezsignfolderResponseCompound.eEzsignfolderCompletion == null : this.eEzsignfolderCompletion.equals(ezsignfolderResponseCompound.eEzsignfolderCompletion)) &&
         (this.sEzsignfoldertypeNameX == null ? ezsignfolderResponseCompound.sEzsignfoldertypeNameX == null : this.sEzsignfoldertypeNameX.equals(ezsignfolderResponseCompound.sEzsignfoldertypeNameX)) &&
         (this.fkiBillingentityinternalID == null ? ezsignfolderResponseCompound.fkiBillingentityinternalID == null : this.fkiBillingentityinternalID.equals(ezsignfolderResponseCompound.fkiBillingentityinternalID)) &&
@@ -349,6 +407,8 @@ public class EzsignfolderResponseCompound {
         (this.tEzsignfolderNote == null ? ezsignfolderResponseCompound.tEzsignfolderNote == null : this.tEzsignfolderNote.equals(ezsignfolderResponseCompound.tEzsignfolderNote)) &&
         (this.bEzsignfolderIsdisposable == null ? ezsignfolderResponseCompound.bEzsignfolderIsdisposable == null : this.bEzsignfolderIsdisposable.equals(ezsignfolderResponseCompound.bEzsignfolderIsdisposable)) &&
         (this.eEzsignfolderSendreminderfrequency == null ? ezsignfolderResponseCompound.eEzsignfolderSendreminderfrequency == null : this.eEzsignfolderSendreminderfrequency.equals(ezsignfolderResponseCompound.eEzsignfolderSendreminderfrequency)) &&
+        (this.iEzsignfolderSendreminderfirstdays == null ? ezsignfolderResponseCompound.iEzsignfolderSendreminderfirstdays == null : this.iEzsignfolderSendreminderfirstdays.equals(ezsignfolderResponseCompound.iEzsignfolderSendreminderfirstdays)) &&
+        (this.iEzsignfolderSendreminderotherdays == null ? ezsignfolderResponseCompound.iEzsignfolderSendreminderotherdays == null : this.iEzsignfolderSendreminderotherdays.equals(ezsignfolderResponseCompound.iEzsignfolderSendreminderotherdays)) &&
         (this.dtEzsignfolderDelayedsenddate == null ? ezsignfolderResponseCompound.dtEzsignfolderDelayedsenddate == null : this.dtEzsignfolderDelayedsenddate.equals(ezsignfolderResponseCompound.dtEzsignfolderDelayedsenddate)) &&
         (this.dtEzsignfolderDuedate == null ? ezsignfolderResponseCompound.dtEzsignfolderDuedate == null : this.dtEzsignfolderDuedate.equals(ezsignfolderResponseCompound.dtEzsignfolderDuedate)) &&
         (this.dtEzsignfolderSentdate == null ? ezsignfolderResponseCompound.dtEzsignfolderSentdate == null : this.dtEzsignfolderSentdate.equals(ezsignfolderResponseCompound.dtEzsignfolderSentdate)) &&
@@ -358,7 +418,8 @@ public class EzsignfolderResponseCompound {
         (this.dtEzsignfolderClose == null ? ezsignfolderResponseCompound.dtEzsignfolderClose == null : this.dtEzsignfolderClose.equals(ezsignfolderResponseCompound.dtEzsignfolderClose)) &&
         (this.tEzsignfolderMessage == null ? ezsignfolderResponseCompound.tEzsignfolderMessage == null : this.tEzsignfolderMessage.equals(ezsignfolderResponseCompound.tEzsignfolderMessage)) &&
         (this.objAudit == null ? ezsignfolderResponseCompound.objAudit == null : this.objAudit.equals(ezsignfolderResponseCompound.objAudit)) &&
-        (this.sEzsignfolderExternalid == null ? ezsignfolderResponseCompound.sEzsignfolderExternalid == null : this.sEzsignfolderExternalid.equals(ezsignfolderResponseCompound.sEzsignfolderExternalid));
+        (this.sEzsignfolderExternalid == null ? ezsignfolderResponseCompound.sEzsignfolderExternalid == null : this.sEzsignfolderExternalid.equals(ezsignfolderResponseCompound.sEzsignfolderExternalid)) &&
+        (this.objTimezone == null ? ezsignfolderResponseCompound.objTimezone == null : this.objTimezone.equals(ezsignfolderResponseCompound.objTimezone));
   }
 
   @Override
@@ -367,6 +428,7 @@ public class EzsignfolderResponseCompound {
     result = 31 * result + (this.pkiEzsignfolderID == null ? 0: this.pkiEzsignfolderID.hashCode());
     result = 31 * result + (this.fkiEzsignfoldertypeID == null ? 0: this.fkiEzsignfoldertypeID.hashCode());
     result = 31 * result + (this.objEzsignfoldertype == null ? 0: this.objEzsignfoldertype.hashCode());
+    result = 31 * result + (this.fkiTimezoneID == null ? 0: this.fkiTimezoneID.hashCode());
     result = 31 * result + (this.eEzsignfolderCompletion == null ? 0: this.eEzsignfolderCompletion.hashCode());
     result = 31 * result + (this.sEzsignfoldertypeNameX == null ? 0: this.sEzsignfoldertypeNameX.hashCode());
     result = 31 * result + (this.fkiBillingentityinternalID == null ? 0: this.fkiBillingentityinternalID.hashCode());
@@ -377,6 +439,8 @@ public class EzsignfolderResponseCompound {
     result = 31 * result + (this.tEzsignfolderNote == null ? 0: this.tEzsignfolderNote.hashCode());
     result = 31 * result + (this.bEzsignfolderIsdisposable == null ? 0: this.bEzsignfolderIsdisposable.hashCode());
     result = 31 * result + (this.eEzsignfolderSendreminderfrequency == null ? 0: this.eEzsignfolderSendreminderfrequency.hashCode());
+    result = 31 * result + (this.iEzsignfolderSendreminderfirstdays == null ? 0: this.iEzsignfolderSendreminderfirstdays.hashCode());
+    result = 31 * result + (this.iEzsignfolderSendreminderotherdays == null ? 0: this.iEzsignfolderSendreminderotherdays.hashCode());
     result = 31 * result + (this.dtEzsignfolderDelayedsenddate == null ? 0: this.dtEzsignfolderDelayedsenddate.hashCode());
     result = 31 * result + (this.dtEzsignfolderDuedate == null ? 0: this.dtEzsignfolderDuedate.hashCode());
     result = 31 * result + (this.dtEzsignfolderSentdate == null ? 0: this.dtEzsignfolderSentdate.hashCode());
@@ -387,6 +451,7 @@ public class EzsignfolderResponseCompound {
     result = 31 * result + (this.tEzsignfolderMessage == null ? 0: this.tEzsignfolderMessage.hashCode());
     result = 31 * result + (this.objAudit == null ? 0: this.objAudit.hashCode());
     result = 31 * result + (this.sEzsignfolderExternalid == null ? 0: this.sEzsignfolderExternalid.hashCode());
+    result = 31 * result + (this.objTimezone == null ? 0: this.objTimezone.hashCode());
     return result;
   }
 
@@ -398,6 +463,7 @@ public class EzsignfolderResponseCompound {
     sb.append("  pkiEzsignfolderID: ").append(pkiEzsignfolderID).append("\n");
     sb.append("  fkiEzsignfoldertypeID: ").append(fkiEzsignfoldertypeID).append("\n");
     sb.append("  objEzsignfoldertype: ").append(objEzsignfoldertype).append("\n");
+    sb.append("  fkiTimezoneID: ").append(fkiTimezoneID).append("\n");
     sb.append("  eEzsignfolderCompletion: ").append(eEzsignfolderCompletion).append("\n");
     sb.append("  sEzsignfoldertypeNameX: ").append(sEzsignfoldertypeNameX).append("\n");
     sb.append("  fkiBillingentityinternalID: ").append(fkiBillingentityinternalID).append("\n");
@@ -408,6 +474,8 @@ public class EzsignfolderResponseCompound {
     sb.append("  tEzsignfolderNote: ").append(tEzsignfolderNote).append("\n");
     sb.append("  bEzsignfolderIsdisposable: ").append(bEzsignfolderIsdisposable).append("\n");
     sb.append("  eEzsignfolderSendreminderfrequency: ").append(eEzsignfolderSendreminderfrequency).append("\n");
+    sb.append("  iEzsignfolderSendreminderfirstdays: ").append(iEzsignfolderSendreminderfirstdays).append("\n");
+    sb.append("  iEzsignfolderSendreminderotherdays: ").append(iEzsignfolderSendreminderotherdays).append("\n");
     sb.append("  dtEzsignfolderDelayedsenddate: ").append(dtEzsignfolderDelayedsenddate).append("\n");
     sb.append("  dtEzsignfolderDuedate: ").append(dtEzsignfolderDuedate).append("\n");
     sb.append("  dtEzsignfolderSentdate: ").append(dtEzsignfolderSentdate).append("\n");
@@ -418,6 +486,7 @@ public class EzsignfolderResponseCompound {
     sb.append("  tEzsignfolderMessage: ").append(tEzsignfolderMessage).append("\n");
     sb.append("  objAudit: ").append(objAudit).append("\n");
     sb.append("  sEzsignfolderExternalid: ").append(sEzsignfolderExternalid).append("\n");
+    sb.append("  objTimezone: ").append(objTimezone).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

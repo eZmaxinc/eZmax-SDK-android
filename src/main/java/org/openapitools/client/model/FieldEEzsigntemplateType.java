@@ -16,9 +16,9 @@ import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * The Type of Ezsigntemplate
+ * The Type of Ezsigntemplate  **Usergroup** is now deprecated and replace with **Ezsignfoldertype**
  **/
-@ApiModel(description = "The Type of Ezsigntemplate")
+@ApiModel(description = "The Type of Ezsigntemplate  **Usergroup** is now deprecated and replace with **Ezsignfoldertype**")
 public class FieldEEzsigntemplateType {
   
 

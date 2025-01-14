@@ -21,6 +21,8 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "An Address Object")
 public class AddressRequest {
   
+  @SerializedName("pkiAddressID")
+  private Integer pkiAddressID = null;
   @SerializedName("fkiAddresstypeID")
   private Integer fkiAddresstypeID = null;
   @SerializedName("sAddressCivic")
@@ -41,6 +43,18 @@ public class AddressRequest {
   private String fAddressLongitude = null;
   @SerializedName("fAddressLatitude")
   private String fAddressLatitude = null;
+
+  /**
+   * The unique ID of the Address
+   * minimum: 0
+   **/
+  @ApiModelProperty(value = "The unique ID of the Address")
+  public Integer getPkiAddressID() {
+    return pkiAddressID;
+  }
+  public void setPkiAddressID(Integer pkiAddressID) {
+    this.pkiAddressID = pkiAddressID;
+  }
 
   /**
    * The unique ID of the Addresstype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home| |3|Real Estate Invoice| |4|Invoicing| |5|Shipping|
@@ -79,7 +93,7 @@ public class AddressRequest {
   /**
    * The Suite or appartment number
    **/
-  @ApiModelProperty(required = true, value = "The Suite or appartment number")
+  @ApiModelProperty(value = "The Suite or appartment number")
   public String getSAddressSuite() {
     return sAddressSuite;
   }
@@ -165,7 +179,8 @@ public class AddressRequest {
       return false;
     }
     AddressRequest addressRequest = (AddressRequest) o;
-    return (this.fkiAddresstypeID == null ? addressRequest.fkiAddresstypeID == null : this.fkiAddresstypeID.equals(addressRequest.fkiAddresstypeID)) &&
+    return (this.pkiAddressID == null ? addressRequest.pkiAddressID == null : this.pkiAddressID.equals(addressRequest.pkiAddressID)) &&
+        (this.fkiAddresstypeID == null ? addressRequest.fkiAddresstypeID == null : this.fkiAddresstypeID.equals(addressRequest.fkiAddresstypeID)) &&
         (this.sAddressCivic == null ? addressRequest.sAddressCivic == null : this.sAddressCivic.equals(addressRequest.sAddressCivic)) &&
         (this.sAddressStreet == null ? addressRequest.sAddressStreet == null : this.sAddressStreet.equals(addressRequest.sAddressStreet)) &&
         (this.sAddressSuite == null ? addressRequest.sAddressSuite == null : this.sAddressSuite.equals(addressRequest.sAddressSuite)) &&
@@ -180,6 +195,7 @@ public class AddressRequest {
   @Override
   public int hashCode() {
     int result = 17;
+    result = 31 * result + (this.pkiAddressID == null ? 0: this.pkiAddressID.hashCode());
     result = 31 * result + (this.fkiAddresstypeID == null ? 0: this.fkiAddresstypeID.hashCode());
     result = 31 * result + (this.sAddressCivic == null ? 0: this.sAddressCivic.hashCode());
     result = 31 * result + (this.sAddressStreet == null ? 0: this.sAddressStreet.hashCode());
@@ -198,6 +214,7 @@ public class AddressRequest {
     StringBuilder sb = new StringBuilder();
     sb.append("class AddressRequest {\n");
     
+    sb.append("  pkiAddressID: ").append(pkiAddressID).append("\n");
     sb.append("  fkiAddresstypeID: ").append(fkiAddresstypeID).append("\n");
     sb.append("  sAddressCivic: ").append(sAddressCivic).append("\n");
     sb.append("  sAddressStreet: ").append(sAddressStreet).append("\n");

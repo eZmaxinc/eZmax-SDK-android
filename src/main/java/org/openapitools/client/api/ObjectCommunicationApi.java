@@ -23,6 +23,7 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
+import org.openapitools.client.model.CommonResponseError;
 import org.openapitools.client.model.CommunicationSendV1Request;
 import org.openapitools.client.model.CommunicationSendV1Response;
 
@@ -56,6 +57,129 @@ public class ObjectCommunicationApi {
     return basePath;
   }
 
+  /**
+  * Retrieve the communication body.
+  * This endpoint returns the communication body.
+   * @param pkiCommunicationID 
+   * @return void
+  */
+  public void communicationGetCommunicationBodyV1 (Integer pkiCommunicationID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiCommunicationID' is set
+    if (pkiCommunicationID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiCommunicationID' when calling communicationGetCommunicationBodyV1",
+        new ApiException(400, "Missing the required parameter 'pkiCommunicationID' when calling communicationGetCommunicationBodyV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/communication/{pkiCommunicationID}/getCommunicationBody".replaceAll("\\{" + "pkiCommunicationID" + "\\}", apiInvoker.escapeString(pkiCommunicationID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return ;
+      } else {
+         return ;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve the communication body.
+   * This endpoint returns the communication body.
+   * @param pkiCommunicationID 
+  */
+  public void communicationGetCommunicationBodyV1 (Integer pkiCommunicationID, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiCommunicationID' is set
+    if (pkiCommunicationID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiCommunicationID' when calling communicationGetCommunicationBodyV1",
+        new ApiException(400, "Missing the required parameter 'pkiCommunicationID' when calling communicationGetCommunicationBodyV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/communication/{pkiCommunicationID}/getCommunicationBody".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiCommunicationID" + "\\}", apiInvoker.escapeString(pkiCommunicationID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+              responseListener.onResponse(localVarResponse);
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
   /**
   * Send a new Communication
   * The endpoint allows to send one or many elements at once.

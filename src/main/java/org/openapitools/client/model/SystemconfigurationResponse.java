@@ -12,6 +12,7 @@
 
 package org.openapitools.client.model;
 
+import org.openapitools.client.model.CustomBrandingResponse;
 import org.openapitools.client.model.FieldESystemconfigurationEzsign;
 import org.openapitools.client.model.FieldESystemconfigurationEzsignofficeplan;
 import org.openapitools.client.model.FieldESystemconfigurationLanguage1;
@@ -30,6 +31,8 @@ public class SystemconfigurationResponse {
   private Integer pkiSystemconfigurationID = null;
   @SerializedName("fkiSystemconfigurationtypeID")
   private Integer fkiSystemconfigurationtypeID = null;
+  @SerializedName("fkiBrandingID")
+  private Integer fkiBrandingID = null;
   @SerializedName("sSystemconfigurationtypeDescriptionX")
   private String sSystemconfigurationtypeDescriptionX = null;
   @SerializedName("eSystemconfigurationNewexternaluseraction")
@@ -46,6 +49,8 @@ public class SystemconfigurationResponse {
   private Boolean bSystemconfigurationEzsignpaidbyoffice = null;
   @SerializedName("bSystemconfigurationEzsignpersonnal")
   private Boolean bSystemconfigurationEzsignpersonnal = null;
+  @SerializedName("bSystemconfigurationHascreditcardmerchant")
+  private Boolean bSystemconfigurationHascreditcardmerchant = null;
   @SerializedName("bSystemconfigurationIsdisposalactive")
   private Boolean bSystemconfigurationIsdisposalactive = null;
   @SerializedName("bSystemconfigurationSspr")
@@ -54,6 +59,8 @@ public class SystemconfigurationResponse {
   private String dtSystemconfigurationReadonlyexpirationstart = null;
   @SerializedName("dtSystemconfigurationReadonlyexpirationend")
   private String dtSystemconfigurationReadonlyexpirationend = null;
+  @SerializedName("objBranding")
+  private CustomBrandingResponse objBranding = null;
 
   /**
    * The unique ID of the Systemconfiguration
@@ -78,6 +85,18 @@ public class SystemconfigurationResponse {
   }
   public void setFkiSystemconfigurationtypeID(Integer fkiSystemconfigurationtypeID) {
     this.fkiSystemconfigurationtypeID = fkiSystemconfigurationtypeID;
+  }
+
+  /**
+   * The unique ID of the Branding
+   * minimum: 0
+   **/
+  @ApiModelProperty(value = "The unique ID of the Branding")
+  public Integer getFkiBrandingID() {
+    return fkiBrandingID;
+  }
+  public void setFkiBrandingID(Integer fkiBrandingID) {
+    this.fkiBrandingID = fkiBrandingID;
   }
 
   /**
@@ -164,6 +183,17 @@ public class SystemconfigurationResponse {
   }
 
   /**
+   * Whether there is a creditcard merchant configured or not
+   **/
+  @ApiModelProperty(value = "Whether there is a creditcard merchant configured or not")
+  public Boolean getBSystemconfigurationHascreditcardmerchant() {
+    return bSystemconfigurationHascreditcardmerchant;
+  }
+  public void setBSystemconfigurationHascreditcardmerchant(Boolean bSystemconfigurationHascreditcardmerchant) {
+    this.bSystemconfigurationHascreditcardmerchant = bSystemconfigurationHascreditcardmerchant;
+  }
+
+  /**
    * Whether is Disposal processus is active or not
    **/
   @ApiModelProperty(value = "Whether is Disposal processus is active or not")
@@ -207,6 +237,16 @@ public class SystemconfigurationResponse {
     this.dtSystemconfigurationReadonlyexpirationend = dtSystemconfigurationReadonlyexpirationend;
   }
 
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public CustomBrandingResponse getObjBranding() {
+    return objBranding;
+  }
+  public void setObjBranding(CustomBrandingResponse objBranding) {
+    this.objBranding = objBranding;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -219,6 +259,7 @@ public class SystemconfigurationResponse {
     SystemconfigurationResponse systemconfigurationResponse = (SystemconfigurationResponse) o;
     return (this.pkiSystemconfigurationID == null ? systemconfigurationResponse.pkiSystemconfigurationID == null : this.pkiSystemconfigurationID.equals(systemconfigurationResponse.pkiSystemconfigurationID)) &&
         (this.fkiSystemconfigurationtypeID == null ? systemconfigurationResponse.fkiSystemconfigurationtypeID == null : this.fkiSystemconfigurationtypeID.equals(systemconfigurationResponse.fkiSystemconfigurationtypeID)) &&
+        (this.fkiBrandingID == null ? systemconfigurationResponse.fkiBrandingID == null : this.fkiBrandingID.equals(systemconfigurationResponse.fkiBrandingID)) &&
         (this.sSystemconfigurationtypeDescriptionX == null ? systemconfigurationResponse.sSystemconfigurationtypeDescriptionX == null : this.sSystemconfigurationtypeDescriptionX.equals(systemconfigurationResponse.sSystemconfigurationtypeDescriptionX)) &&
         (this.eSystemconfigurationNewexternaluseraction == null ? systemconfigurationResponse.eSystemconfigurationNewexternaluseraction == null : this.eSystemconfigurationNewexternaluseraction.equals(systemconfigurationResponse.eSystemconfigurationNewexternaluseraction)) &&
         (this.eSystemconfigurationLanguage1 == null ? systemconfigurationResponse.eSystemconfigurationLanguage1 == null : this.eSystemconfigurationLanguage1.equals(systemconfigurationResponse.eSystemconfigurationLanguage1)) &&
@@ -227,10 +268,12 @@ public class SystemconfigurationResponse {
         (this.eSystemconfigurationEzsignofficeplan == null ? systemconfigurationResponse.eSystemconfigurationEzsignofficeplan == null : this.eSystemconfigurationEzsignofficeplan.equals(systemconfigurationResponse.eSystemconfigurationEzsignofficeplan)) &&
         (this.bSystemconfigurationEzsignpaidbyoffice == null ? systemconfigurationResponse.bSystemconfigurationEzsignpaidbyoffice == null : this.bSystemconfigurationEzsignpaidbyoffice.equals(systemconfigurationResponse.bSystemconfigurationEzsignpaidbyoffice)) &&
         (this.bSystemconfigurationEzsignpersonnal == null ? systemconfigurationResponse.bSystemconfigurationEzsignpersonnal == null : this.bSystemconfigurationEzsignpersonnal.equals(systemconfigurationResponse.bSystemconfigurationEzsignpersonnal)) &&
+        (this.bSystemconfigurationHascreditcardmerchant == null ? systemconfigurationResponse.bSystemconfigurationHascreditcardmerchant == null : this.bSystemconfigurationHascreditcardmerchant.equals(systemconfigurationResponse.bSystemconfigurationHascreditcardmerchant)) &&
         (this.bSystemconfigurationIsdisposalactive == null ? systemconfigurationResponse.bSystemconfigurationIsdisposalactive == null : this.bSystemconfigurationIsdisposalactive.equals(systemconfigurationResponse.bSystemconfigurationIsdisposalactive)) &&
         (this.bSystemconfigurationSspr == null ? systemconfigurationResponse.bSystemconfigurationSspr == null : this.bSystemconfigurationSspr.equals(systemconfigurationResponse.bSystemconfigurationSspr)) &&
         (this.dtSystemconfigurationReadonlyexpirationstart == null ? systemconfigurationResponse.dtSystemconfigurationReadonlyexpirationstart == null : this.dtSystemconfigurationReadonlyexpirationstart.equals(systemconfigurationResponse.dtSystemconfigurationReadonlyexpirationstart)) &&
-        (this.dtSystemconfigurationReadonlyexpirationend == null ? systemconfigurationResponse.dtSystemconfigurationReadonlyexpirationend == null : this.dtSystemconfigurationReadonlyexpirationend.equals(systemconfigurationResponse.dtSystemconfigurationReadonlyexpirationend));
+        (this.dtSystemconfigurationReadonlyexpirationend == null ? systemconfigurationResponse.dtSystemconfigurationReadonlyexpirationend == null : this.dtSystemconfigurationReadonlyexpirationend.equals(systemconfigurationResponse.dtSystemconfigurationReadonlyexpirationend)) &&
+        (this.objBranding == null ? systemconfigurationResponse.objBranding == null : this.objBranding.equals(systemconfigurationResponse.objBranding));
   }
 
   @Override
@@ -238,6 +281,7 @@ public class SystemconfigurationResponse {
     int result = 17;
     result = 31 * result + (this.pkiSystemconfigurationID == null ? 0: this.pkiSystemconfigurationID.hashCode());
     result = 31 * result + (this.fkiSystemconfigurationtypeID == null ? 0: this.fkiSystemconfigurationtypeID.hashCode());
+    result = 31 * result + (this.fkiBrandingID == null ? 0: this.fkiBrandingID.hashCode());
     result = 31 * result + (this.sSystemconfigurationtypeDescriptionX == null ? 0: this.sSystemconfigurationtypeDescriptionX.hashCode());
     result = 31 * result + (this.eSystemconfigurationNewexternaluseraction == null ? 0: this.eSystemconfigurationNewexternaluseraction.hashCode());
     result = 31 * result + (this.eSystemconfigurationLanguage1 == null ? 0: this.eSystemconfigurationLanguage1.hashCode());
@@ -246,10 +290,12 @@ public class SystemconfigurationResponse {
     result = 31 * result + (this.eSystemconfigurationEzsignofficeplan == null ? 0: this.eSystemconfigurationEzsignofficeplan.hashCode());
     result = 31 * result + (this.bSystemconfigurationEzsignpaidbyoffice == null ? 0: this.bSystemconfigurationEzsignpaidbyoffice.hashCode());
     result = 31 * result + (this.bSystemconfigurationEzsignpersonnal == null ? 0: this.bSystemconfigurationEzsignpersonnal.hashCode());
+    result = 31 * result + (this.bSystemconfigurationHascreditcardmerchant == null ? 0: this.bSystemconfigurationHascreditcardmerchant.hashCode());
     result = 31 * result + (this.bSystemconfigurationIsdisposalactive == null ? 0: this.bSystemconfigurationIsdisposalactive.hashCode());
     result = 31 * result + (this.bSystemconfigurationSspr == null ? 0: this.bSystemconfigurationSspr.hashCode());
     result = 31 * result + (this.dtSystemconfigurationReadonlyexpirationstart == null ? 0: this.dtSystemconfigurationReadonlyexpirationstart.hashCode());
     result = 31 * result + (this.dtSystemconfigurationReadonlyexpirationend == null ? 0: this.dtSystemconfigurationReadonlyexpirationend.hashCode());
+    result = 31 * result + (this.objBranding == null ? 0: this.objBranding.hashCode());
     return result;
   }
 
@@ -260,6 +306,7 @@ public class SystemconfigurationResponse {
     
     sb.append("  pkiSystemconfigurationID: ").append(pkiSystemconfigurationID).append("\n");
     sb.append("  fkiSystemconfigurationtypeID: ").append(fkiSystemconfigurationtypeID).append("\n");
+    sb.append("  fkiBrandingID: ").append(fkiBrandingID).append("\n");
     sb.append("  sSystemconfigurationtypeDescriptionX: ").append(sSystemconfigurationtypeDescriptionX).append("\n");
     sb.append("  eSystemconfigurationNewexternaluseraction: ").append(eSystemconfigurationNewexternaluseraction).append("\n");
     sb.append("  eSystemconfigurationLanguage1: ").append(eSystemconfigurationLanguage1).append("\n");
@@ -268,10 +315,12 @@ public class SystemconfigurationResponse {
     sb.append("  eSystemconfigurationEzsignofficeplan: ").append(eSystemconfigurationEzsignofficeplan).append("\n");
     sb.append("  bSystemconfigurationEzsignpaidbyoffice: ").append(bSystemconfigurationEzsignpaidbyoffice).append("\n");
     sb.append("  bSystemconfigurationEzsignpersonnal: ").append(bSystemconfigurationEzsignpersonnal).append("\n");
+    sb.append("  bSystemconfigurationHascreditcardmerchant: ").append(bSystemconfigurationHascreditcardmerchant).append("\n");
     sb.append("  bSystemconfigurationIsdisposalactive: ").append(bSystemconfigurationIsdisposalactive).append("\n");
     sb.append("  bSystemconfigurationSspr: ").append(bSystemconfigurationSspr).append("\n");
     sb.append("  dtSystemconfigurationReadonlyexpirationstart: ").append(dtSystemconfigurationReadonlyexpirationstart).append("\n");
     sb.append("  dtSystemconfigurationReadonlyexpirationend: ").append(dtSystemconfigurationReadonlyexpirationend).append("\n");
+    sb.append("  objBranding: ").append(objBranding).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

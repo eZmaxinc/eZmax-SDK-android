@@ -25,6 +25,8 @@ public class TextstylestaticResponseCompound {
   private Integer pkiTextstylestaticID = null;
   @SerializedName("fkiFontID")
   private Integer fkiFontID = null;
+  @SerializedName("sFontName")
+  private String sFontName = null;
   @SerializedName("bTextstylestaticBold")
   private Boolean bTextstylestaticBold = null;
   @SerializedName("bTextstylestaticUnderline")
@@ -60,6 +62,17 @@ public class TextstylestaticResponseCompound {
   }
   public void setFkiFontID(Integer fkiFontID) {
     this.fkiFontID = fkiFontID;
+  }
+
+  /**
+   * The name of the Font
+   **/
+  @ApiModelProperty(required = true, value = "The name of the Font")
+  public String getSFontName() {
+    return sFontName;
+  }
+  public void setSFontName(String sFontName) {
+    this.sFontName = sFontName;
   }
 
   /**
@@ -144,6 +157,7 @@ public class TextstylestaticResponseCompound {
     TextstylestaticResponseCompound textstylestaticResponseCompound = (TextstylestaticResponseCompound) o;
     return (this.pkiTextstylestaticID == null ? textstylestaticResponseCompound.pkiTextstylestaticID == null : this.pkiTextstylestaticID.equals(textstylestaticResponseCompound.pkiTextstylestaticID)) &&
         (this.fkiFontID == null ? textstylestaticResponseCompound.fkiFontID == null : this.fkiFontID.equals(textstylestaticResponseCompound.fkiFontID)) &&
+        (this.sFontName == null ? textstylestaticResponseCompound.sFontName == null : this.sFontName.equals(textstylestaticResponseCompound.sFontName)) &&
         (this.bTextstylestaticBold == null ? textstylestaticResponseCompound.bTextstylestaticBold == null : this.bTextstylestaticBold.equals(textstylestaticResponseCompound.bTextstylestaticBold)) &&
         (this.bTextstylestaticUnderline == null ? textstylestaticResponseCompound.bTextstylestaticUnderline == null : this.bTextstylestaticUnderline.equals(textstylestaticResponseCompound.bTextstylestaticUnderline)) &&
         (this.bTextstylestaticItalic == null ? textstylestaticResponseCompound.bTextstylestaticItalic == null : this.bTextstylestaticItalic.equals(textstylestaticResponseCompound.bTextstylestaticItalic)) &&
@@ -157,6 +171,7 @@ public class TextstylestaticResponseCompound {
     int result = 17;
     result = 31 * result + (this.pkiTextstylestaticID == null ? 0: this.pkiTextstylestaticID.hashCode());
     result = 31 * result + (this.fkiFontID == null ? 0: this.fkiFontID.hashCode());
+    result = 31 * result + (this.sFontName == null ? 0: this.sFontName.hashCode());
     result = 31 * result + (this.bTextstylestaticBold == null ? 0: this.bTextstylestaticBold.hashCode());
     result = 31 * result + (this.bTextstylestaticUnderline == null ? 0: this.bTextstylestaticUnderline.hashCode());
     result = 31 * result + (this.bTextstylestaticItalic == null ? 0: this.bTextstylestaticItalic.hashCode());
@@ -173,6 +188,7 @@ public class TextstylestaticResponseCompound {
     
     sb.append("  pkiTextstylestaticID: ").append(pkiTextstylestaticID).append("\n");
     sb.append("  fkiFontID: ").append(fkiFontID).append("\n");
+    sb.append("  sFontName: ").append(sFontName).append("\n");
     sb.append("  bTextstylestaticBold: ").append(bTextstylestaticBold).append("\n");
     sb.append("  bTextstylestaticUnderline: ").append(bTextstylestaticUnderline).append("\n");
     sb.append("  bTextstylestaticItalic: ").append(bTextstylestaticItalic).append("\n");

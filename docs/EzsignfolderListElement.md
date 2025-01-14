@@ -23,7 +23,10 @@ Name | Type | Description | Notes
 **iEzsignformfieldgroup** | **Integer** | The total number of Ezsignformfieldgroup in all Ezsigndocuments in the folder | 
 **iEzsignformfieldgroupCompleted** | **Integer** | The total number of completed Ezsignformfieldgroup in all Ezsigndocuments in the folder | 
 **bEzsignformHasdependencies** | **Boolean** | Whether the Ezsignform/Ezsignsignatures has dependencies or not |  [optional]
-**dEzsignfolderCompletedpercentage** | **String** | Whether the Ezsignform/Ezsignsignatures has dependencies or not | 
+**dEzsignfolderCompletedpercentage** | **String** | Percentage of Ezsignform/Ezsignsignatures has completed | 
+**dEzsignfolderFormcompletedpercentage** | **String** | Percentage of Ezsignform has completed | 
+**dEzsignfolderSignaturecompletedpercentage** | **String** | Percentage of Ezsignsignatures has signed | 
+**bEzsignfolderSigner** | **Boolean** | Whether the Ezsignfolder has an Ezsignsignatures that need to be signed or an Ezsignformfieldgroups that need to be filled by the current user |  [optional]
 
 
 

@@ -12,6 +12,7 @@
 
 package org.openapitools.client.model;
 
+import org.openapitools.client.model.FieldESignaturePreference;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -23,8 +24,14 @@ public class SignatureRequestCompound {
   
   @SerializedName("pkiSignatureID")
   private Integer pkiSignatureID = null;
+  @SerializedName("fkiFontID")
+  private Integer fkiFontID = null;
+  @SerializedName("eSignaturePreference")
+  private FieldESignaturePreference eSignaturePreference = null;
   @SerializedName("tSignatureSvg")
   private String tSignatureSvg = null;
+  @SerializedName("tSignatureSvginitials")
+  private String tSignatureSvginitials = null;
 
   /**
    * The unique ID of the Signature
@@ -40,14 +47,47 @@ public class SignatureRequestCompound {
   }
 
   /**
+   * The unique ID of the Font
+   * minimum: 0
+   **/
+  @ApiModelProperty(required = true, value = "The unique ID of the Font")
+  public Integer getFkiFontID() {
+    return fkiFontID;
+  }
+  public void setFkiFontID(Integer fkiFontID) {
+    this.fkiFontID = fkiFontID;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public FieldESignaturePreference getESignaturePreference() {
+    return eSignaturePreference;
+  }
+  public void setESignaturePreference(FieldESignaturePreference eSignaturePreference) {
+    this.eSignaturePreference = eSignaturePreference;
+  }
+
+  /**
    * The svg of the Signature
    **/
-  @ApiModelProperty(required = true, value = "The svg of the Signature")
+  @ApiModelProperty(value = "The svg of the Signature")
   public String getTSignatureSvg() {
     return tSignatureSvg;
   }
   public void setTSignatureSvg(String tSignatureSvg) {
     this.tSignatureSvg = tSignatureSvg;
+  }
+
+  /**
+   * The svg of the Initials
+   **/
+  @ApiModelProperty(value = "The svg of the Initials")
+  public String getTSignatureSvginitials() {
+    return tSignatureSvginitials;
+  }
+  public void setTSignatureSvginitials(String tSignatureSvginitials) {
+    this.tSignatureSvginitials = tSignatureSvginitials;
   }
 
 
@@ -61,14 +101,20 @@ public class SignatureRequestCompound {
     }
     SignatureRequestCompound signatureRequestCompound = (SignatureRequestCompound) o;
     return (this.pkiSignatureID == null ? signatureRequestCompound.pkiSignatureID == null : this.pkiSignatureID.equals(signatureRequestCompound.pkiSignatureID)) &&
-        (this.tSignatureSvg == null ? signatureRequestCompound.tSignatureSvg == null : this.tSignatureSvg.equals(signatureRequestCompound.tSignatureSvg));
+        (this.fkiFontID == null ? signatureRequestCompound.fkiFontID == null : this.fkiFontID.equals(signatureRequestCompound.fkiFontID)) &&
+        (this.eSignaturePreference == null ? signatureRequestCompound.eSignaturePreference == null : this.eSignaturePreference.equals(signatureRequestCompound.eSignaturePreference)) &&
+        (this.tSignatureSvg == null ? signatureRequestCompound.tSignatureSvg == null : this.tSignatureSvg.equals(signatureRequestCompound.tSignatureSvg)) &&
+        (this.tSignatureSvginitials == null ? signatureRequestCompound.tSignatureSvginitials == null : this.tSignatureSvginitials.equals(signatureRequestCompound.tSignatureSvginitials));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
     result = 31 * result + (this.pkiSignatureID == null ? 0: this.pkiSignatureID.hashCode());
+    result = 31 * result + (this.fkiFontID == null ? 0: this.fkiFontID.hashCode());
+    result = 31 * result + (this.eSignaturePreference == null ? 0: this.eSignaturePreference.hashCode());
     result = 31 * result + (this.tSignatureSvg == null ? 0: this.tSignatureSvg.hashCode());
+    result = 31 * result + (this.tSignatureSvginitials == null ? 0: this.tSignatureSvginitials.hashCode());
     return result;
   }
 
@@ -78,7 +124,10 @@ public class SignatureRequestCompound {
     sb.append("class SignatureRequestCompound {\n");
     
     sb.append("  pkiSignatureID: ").append(pkiSignatureID).append("\n");
+    sb.append("  fkiFontID: ").append(fkiFontID).append("\n");
+    sb.append("  eSignaturePreference: ").append(eSignaturePreference).append("\n");
     sb.append("  tSignatureSvg: ").append(tSignatureSvg).append("\n");
+    sb.append("  tSignatureSvginitials: ").append(tSignatureSvginitials).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

@@ -12,6 +12,7 @@
 
 package org.openapitools.client.model;
 
+import java.util.*;
 import org.openapitools.client.model.FieldEErrorCode;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
@@ -26,6 +27,8 @@ public class CommonResponseErrorTooManyRequests {
   private String sErrorMessage = null;
   @SerializedName("eErrorCode")
   private FieldEErrorCode eErrorCode = null;
+  @SerializedName("a_sErrorMessagedetail")
+  private List<String> aSErrorMessagedetail = null;
 
   /**
    * The message giving details about the error
@@ -48,6 +51,17 @@ public class CommonResponseErrorTooManyRequests {
     this.eErrorCode = eErrorCode;
   }
 
+  /**
+   * More error message detail
+   **/
+  @ApiModelProperty(value = "More error message detail")
+  public List<String> getASErrorMessagedetail() {
+    return aSErrorMessagedetail;
+  }
+  public void setASErrorMessagedetail(List<String> aSErrorMessagedetail) {
+    this.aSErrorMessagedetail = aSErrorMessagedetail;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -59,7 +73,8 @@ public class CommonResponseErrorTooManyRequests {
     }
     CommonResponseErrorTooManyRequests commonResponseErrorTooManyRequests = (CommonResponseErrorTooManyRequests) o;
     return (this.sErrorMessage == null ? commonResponseErrorTooManyRequests.sErrorMessage == null : this.sErrorMessage.equals(commonResponseErrorTooManyRequests.sErrorMessage)) &&
-        (this.eErrorCode == null ? commonResponseErrorTooManyRequests.eErrorCode == null : this.eErrorCode.equals(commonResponseErrorTooManyRequests.eErrorCode));
+        (this.eErrorCode == null ? commonResponseErrorTooManyRequests.eErrorCode == null : this.eErrorCode.equals(commonResponseErrorTooManyRequests.eErrorCode)) &&
+        (this.aSErrorMessagedetail == null ? commonResponseErrorTooManyRequests.aSErrorMessagedetail == null : this.aSErrorMessagedetail.equals(commonResponseErrorTooManyRequests.aSErrorMessagedetail));
   }
 
   @Override
@@ -67,6 +82,7 @@ public class CommonResponseErrorTooManyRequests {
     int result = 17;
     result = 31 * result + (this.sErrorMessage == null ? 0: this.sErrorMessage.hashCode());
     result = 31 * result + (this.eErrorCode == null ? 0: this.eErrorCode.hashCode());
+    result = 31 * result + (this.aSErrorMessagedetail == null ? 0: this.aSErrorMessagedetail.hashCode());
     return result;
   }
 
@@ -77,6 +93,7 @@ public class CommonResponseErrorTooManyRequests {
     
     sb.append("  sErrorMessage: ").append(sErrorMessage).append("\n");
     sb.append("  eErrorCode: ").append(eErrorCode).append("\n");
+    sb.append("  aSErrorMessagedetail: ").append(aSErrorMessagedetail).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

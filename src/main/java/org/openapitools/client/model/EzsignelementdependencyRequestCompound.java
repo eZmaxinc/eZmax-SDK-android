@@ -45,7 +45,7 @@ public class EzsignelementdependencyRequestCompound {
   /**
    * The unique ID of the Ezsignelementdependency
    * minimum: 0
-   * maximum: 65535
+   * maximum: 16777215
    **/
   @ApiModelProperty(value = "The unique ID of the Ezsignelementdependency")
   public Integer getPkiEzsignelementdependencyID() {

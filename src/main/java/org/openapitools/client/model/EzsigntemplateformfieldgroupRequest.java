@@ -51,6 +51,8 @@ public class EzsigntemplateformfieldgroupRequest {
   private Boolean bEzsigntemplateformfieldgroupEncrypted = null;
   @SerializedName("sEzsigntemplateformfieldgroupRegexp")
   private String sEzsigntemplateformfieldgroupRegexp = null;
+  @SerializedName("sEzsigntemplateformfieldgroupTextvalidationcustommessage")
+  private String sEzsigntemplateformfieldgroupTextvalidationcustommessage = null;
   @SerializedName("eEzsigntemplateformfieldgroupTextvalidation")
   private EnumTextvalidation eEzsigntemplateformfieldgroupTextvalidation = null;
   @SerializedName("tEzsigntemplateformfieldgroupTooltip")
@@ -207,6 +209,17 @@ public class EzsigntemplateformfieldgroupRequest {
   }
 
   /**
+   * Description of validation rule. Show by signatory.
+   **/
+  @ApiModelProperty(value = "Description of validation rule. Show by signatory.")
+  public String getSEzsigntemplateformfieldgroupTextvalidationcustommessage() {
+    return sEzsigntemplateformfieldgroupTextvalidationcustommessage;
+  }
+  public void setSEzsigntemplateformfieldgroupTextvalidationcustommessage(String sEzsigntemplateformfieldgroupTextvalidationcustommessage) {
+    this.sEzsigntemplateformfieldgroupTextvalidationcustommessage = sEzsigntemplateformfieldgroupTextvalidationcustommessage;
+  }
+
+  /**
    **/
   @ApiModelProperty(value = "")
   public EnumTextvalidation getEEzsigntemplateformfieldgroupTextvalidation() {
@@ -260,6 +273,7 @@ public class EzsigntemplateformfieldgroupRequest {
         (this.iEzsigntemplateformfieldgroupMaxlength == null ? ezsigntemplateformfieldgroupRequest.iEzsigntemplateformfieldgroupMaxlength == null : this.iEzsigntemplateformfieldgroupMaxlength.equals(ezsigntemplateformfieldgroupRequest.iEzsigntemplateformfieldgroupMaxlength)) &&
         (this.bEzsigntemplateformfieldgroupEncrypted == null ? ezsigntemplateformfieldgroupRequest.bEzsigntemplateformfieldgroupEncrypted == null : this.bEzsigntemplateformfieldgroupEncrypted.equals(ezsigntemplateformfieldgroupRequest.bEzsigntemplateformfieldgroupEncrypted)) &&
         (this.sEzsigntemplateformfieldgroupRegexp == null ? ezsigntemplateformfieldgroupRequest.sEzsigntemplateformfieldgroupRegexp == null : this.sEzsigntemplateformfieldgroupRegexp.equals(ezsigntemplateformfieldgroupRequest.sEzsigntemplateformfieldgroupRegexp)) &&
+        (this.sEzsigntemplateformfieldgroupTextvalidationcustommessage == null ? ezsigntemplateformfieldgroupRequest.sEzsigntemplateformfieldgroupTextvalidationcustommessage == null : this.sEzsigntemplateformfieldgroupTextvalidationcustommessage.equals(ezsigntemplateformfieldgroupRequest.sEzsigntemplateformfieldgroupTextvalidationcustommessage)) &&
         (this.eEzsigntemplateformfieldgroupTextvalidation == null ? ezsigntemplateformfieldgroupRequest.eEzsigntemplateformfieldgroupTextvalidation == null : this.eEzsigntemplateformfieldgroupTextvalidation.equals(ezsigntemplateformfieldgroupRequest.eEzsigntemplateformfieldgroupTextvalidation)) &&
         (this.tEzsigntemplateformfieldgroupTooltip == null ? ezsigntemplateformfieldgroupRequest.tEzsigntemplateformfieldgroupTooltip == null : this.tEzsigntemplateformfieldgroupTooltip.equals(ezsigntemplateformfieldgroupRequest.tEzsigntemplateformfieldgroupTooltip)) &&
         (this.eEzsigntemplateformfieldgroupTooltipposition == null ? ezsigntemplateformfieldgroupRequest.eEzsigntemplateformfieldgroupTooltipposition == null : this.eEzsigntemplateformfieldgroupTooltipposition.equals(ezsigntemplateformfieldgroupRequest.eEzsigntemplateformfieldgroupTooltipposition));
@@ -281,6 +295,7 @@ public class EzsigntemplateformfieldgroupRequest {
     result = 31 * result + (this.iEzsigntemplateformfieldgroupMaxlength == null ? 0: this.iEzsigntemplateformfieldgroupMaxlength.hashCode());
     result = 31 * result + (this.bEzsigntemplateformfieldgroupEncrypted == null ? 0: this.bEzsigntemplateformfieldgroupEncrypted.hashCode());
     result = 31 * result + (this.sEzsigntemplateformfieldgroupRegexp == null ? 0: this.sEzsigntemplateformfieldgroupRegexp.hashCode());
+    result = 31 * result + (this.sEzsigntemplateformfieldgroupTextvalidationcustommessage == null ? 0: this.sEzsigntemplateformfieldgroupTextvalidationcustommessage.hashCode());
     result = 31 * result + (this.eEzsigntemplateformfieldgroupTextvalidation == null ? 0: this.eEzsigntemplateformfieldgroupTextvalidation.hashCode());
     result = 31 * result + (this.tEzsigntemplateformfieldgroupTooltip == null ? 0: this.tEzsigntemplateformfieldgroupTooltip.hashCode());
     result = 31 * result + (this.eEzsigntemplateformfieldgroupTooltipposition == null ? 0: this.eEzsigntemplateformfieldgroupTooltipposition.hashCode());
@@ -305,6 +320,7 @@ public class EzsigntemplateformfieldgroupRequest {
     sb.append("  iEzsigntemplateformfieldgroupMaxlength: ").append(iEzsigntemplateformfieldgroupMaxlength).append("\n");
     sb.append("  bEzsigntemplateformfieldgroupEncrypted: ").append(bEzsigntemplateformfieldgroupEncrypted).append("\n");
     sb.append("  sEzsigntemplateformfieldgroupRegexp: ").append(sEzsigntemplateformfieldgroupRegexp).append("\n");
+    sb.append("  sEzsigntemplateformfieldgroupTextvalidationcustommessage: ").append(sEzsigntemplateformfieldgroupTextvalidationcustommessage).append("\n");
     sb.append("  eEzsigntemplateformfieldgroupTextvalidation: ").append(eEzsigntemplateformfieldgroupTextvalidation).append("\n");
     sb.append("  tEzsigntemplateformfieldgroupTooltip: ").append(tEzsigntemplateformfieldgroupTooltip).append("\n");
     sb.append("  eEzsigntemplateformfieldgroupTooltipposition: ").append(eEzsigntemplateformfieldgroupTooltipposition).append("\n");

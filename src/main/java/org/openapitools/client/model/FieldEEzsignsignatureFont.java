@@ -16,9 +16,9 @@ import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * The font of the signature. This can only be set if eEzsignsignatureType is **Name** or **Initials**
+ * The font of the signature. This can only be set if eEzsignsignatureType is **Name** or **Initials** **Deprecated**
  **/
-@ApiModel(description = "The font of the signature. This can only be set if eEzsignsignatureType is **Name** or **Initials**")
+@ApiModel(description = "The font of the signature. This can only be set if eEzsignsignatureType is **Name** or **Initials** **Deprecated**")
 public class FieldEEzsignsignatureFont {
   
 

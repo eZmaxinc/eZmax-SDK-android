@@ -59,6 +59,12 @@ public class EzsignfolderListElement {
   private Boolean bEzsignformHasdependencies = null;
   @SerializedName("dEzsignfolderCompletedpercentage")
   private String dEzsignfolderCompletedpercentage = null;
+  @SerializedName("dEzsignfolderFormcompletedpercentage")
+  private String dEzsignfolderFormcompletedpercentage = null;
+  @SerializedName("dEzsignfolderSignaturecompletedpercentage")
+  private String dEzsignfolderSignaturecompletedpercentage = null;
+  @SerializedName("bEzsignfolderSigner")
+  private Boolean bEzsignfolderSigner = null;
 
   /**
    * The unique ID of the Ezsignfolder
@@ -249,14 +255,47 @@ public class EzsignfolderListElement {
   }
 
   /**
-   * Whether the Ezsignform/Ezsignsignatures has dependencies or not
+   * Percentage of Ezsignform/Ezsignsignatures has completed
    **/
-  @ApiModelProperty(required = true, value = "Whether the Ezsignform/Ezsignsignatures has dependencies or not")
+  @ApiModelProperty(required = true, value = "Percentage of Ezsignform/Ezsignsignatures has completed")
   public String getDEzsignfolderCompletedpercentage() {
     return dEzsignfolderCompletedpercentage;
   }
   public void setDEzsignfolderCompletedpercentage(String dEzsignfolderCompletedpercentage) {
     this.dEzsignfolderCompletedpercentage = dEzsignfolderCompletedpercentage;
+  }
+
+  /**
+   * Percentage of Ezsignform has completed
+   **/
+  @ApiModelProperty(required = true, value = "Percentage of Ezsignform has completed")
+  public String getDEzsignfolderFormcompletedpercentage() {
+    return dEzsignfolderFormcompletedpercentage;
+  }
+  public void setDEzsignfolderFormcompletedpercentage(String dEzsignfolderFormcompletedpercentage) {
+    this.dEzsignfolderFormcompletedpercentage = dEzsignfolderFormcompletedpercentage;
+  }
+
+  /**
+   * Percentage of Ezsignsignatures has signed
+   **/
+  @ApiModelProperty(required = true, value = "Percentage of Ezsignsignatures has signed")
+  public String getDEzsignfolderSignaturecompletedpercentage() {
+    return dEzsignfolderSignaturecompletedpercentage;
+  }
+  public void setDEzsignfolderSignaturecompletedpercentage(String dEzsignfolderSignaturecompletedpercentage) {
+    this.dEzsignfolderSignaturecompletedpercentage = dEzsignfolderSignaturecompletedpercentage;
+  }
+
+  /**
+   * Whether the Ezsignfolder has an Ezsignsignatures that need to be signed or an Ezsignformfieldgroups that need to be filled by the current user
+   **/
+  @ApiModelProperty(value = "Whether the Ezsignfolder has an Ezsignsignatures that need to be signed or an Ezsignformfieldgroups that need to be filled by the current user")
+  public Boolean getBEzsignfolderSigner() {
+    return bEzsignfolderSigner;
+  }
+  public void setBEzsignfolderSigner(Boolean bEzsignfolderSigner) {
+    this.bEzsignfolderSigner = bEzsignfolderSigner;
   }
 
 
@@ -286,7 +325,10 @@ public class EzsignfolderListElement {
         (this.iEzsignformfieldgroup == null ? ezsignfolderListElement.iEzsignformfieldgroup == null : this.iEzsignformfieldgroup.equals(ezsignfolderListElement.iEzsignformfieldgroup)) &&
         (this.iEzsignformfieldgroupCompleted == null ? ezsignfolderListElement.iEzsignformfieldgroupCompleted == null : this.iEzsignformfieldgroupCompleted.equals(ezsignfolderListElement.iEzsignformfieldgroupCompleted)) &&
         (this.bEzsignformHasdependencies == null ? ezsignfolderListElement.bEzsignformHasdependencies == null : this.bEzsignformHasdependencies.equals(ezsignfolderListElement.bEzsignformHasdependencies)) &&
-        (this.dEzsignfolderCompletedpercentage == null ? ezsignfolderListElement.dEzsignfolderCompletedpercentage == null : this.dEzsignfolderCompletedpercentage.equals(ezsignfolderListElement.dEzsignfolderCompletedpercentage));
+        (this.dEzsignfolderCompletedpercentage == null ? ezsignfolderListElement.dEzsignfolderCompletedpercentage == null : this.dEzsignfolderCompletedpercentage.equals(ezsignfolderListElement.dEzsignfolderCompletedpercentage)) &&
+        (this.dEzsignfolderFormcompletedpercentage == null ? ezsignfolderListElement.dEzsignfolderFormcompletedpercentage == null : this.dEzsignfolderFormcompletedpercentage.equals(ezsignfolderListElement.dEzsignfolderFormcompletedpercentage)) &&
+        (this.dEzsignfolderSignaturecompletedpercentage == null ? ezsignfolderListElement.dEzsignfolderSignaturecompletedpercentage == null : this.dEzsignfolderSignaturecompletedpercentage.equals(ezsignfolderListElement.dEzsignfolderSignaturecompletedpercentage)) &&
+        (this.bEzsignfolderSigner == null ? ezsignfolderListElement.bEzsignfolderSigner == null : this.bEzsignfolderSigner.equals(ezsignfolderListElement.bEzsignfolderSigner));
   }
 
   @Override
@@ -310,6 +352,9 @@ public class EzsignfolderListElement {
     result = 31 * result + (this.iEzsignformfieldgroupCompleted == null ? 0: this.iEzsignformfieldgroupCompleted.hashCode());
     result = 31 * result + (this.bEzsignformHasdependencies == null ? 0: this.bEzsignformHasdependencies.hashCode());
     result = 31 * result + (this.dEzsignfolderCompletedpercentage == null ? 0: this.dEzsignfolderCompletedpercentage.hashCode());
+    result = 31 * result + (this.dEzsignfolderFormcompletedpercentage == null ? 0: this.dEzsignfolderFormcompletedpercentage.hashCode());
+    result = 31 * result + (this.dEzsignfolderSignaturecompletedpercentage == null ? 0: this.dEzsignfolderSignaturecompletedpercentage.hashCode());
+    result = 31 * result + (this.bEzsignfolderSigner == null ? 0: this.bEzsignfolderSigner.hashCode());
     return result;
   }
 
@@ -336,6 +381,9 @@ public class EzsignfolderListElement {
     sb.append("  iEzsignformfieldgroupCompleted: ").append(iEzsignformfieldgroupCompleted).append("\n");
     sb.append("  bEzsignformHasdependencies: ").append(bEzsignformHasdependencies).append("\n");
     sb.append("  dEzsignfolderCompletedpercentage: ").append(dEzsignfolderCompletedpercentage).append("\n");
+    sb.append("  dEzsignfolderFormcompletedpercentage: ").append(dEzsignfolderFormcompletedpercentage).append("\n");
+    sb.append("  dEzsignfolderSignaturecompletedpercentage: ").append(dEzsignfolderSignaturecompletedpercentage).append("\n");
+    sb.append("  bEzsignfolderSigner: ").append(bEzsignfolderSigner).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

@@ -32,6 +32,8 @@ public class CustomEzsignsignaturestatusResponse {
   private Integer iEzsignsignaturestatusTotal = null;
   @SerializedName("iEzsignsignaturestatusSigned")
   private Integer iEzsignsignaturestatusSigned = null;
+  @SerializedName("iEzsignsignaturestatusConditional")
+  private Integer iEzsignsignaturestatusConditional = null;
 
   /**
    * Type of step
@@ -77,6 +79,17 @@ public class CustomEzsignsignaturestatusResponse {
     this.iEzsignsignaturestatusSigned = iEzsignsignaturestatusSigned;
   }
 
+  /**
+   * The number of signature or form fields the Ezsignsigner need to sign or fill under current conditions.
+   **/
+  @ApiModelProperty(required = true, value = "The number of signature or form fields the Ezsignsigner need to sign or fill under current conditions.")
+  public Integer getIEzsignsignaturestatusConditional() {
+    return iEzsignsignaturestatusConditional;
+  }
+  public void setIEzsignsignaturestatusConditional(Integer iEzsignsignaturestatusConditional) {
+    this.iEzsignsignaturestatusConditional = iEzsignsignaturestatusConditional;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -90,7 +103,8 @@ public class CustomEzsignsignaturestatusResponse {
     return (this.eEzsignsignaturestatusSteptype == null ? customEzsignsignaturestatusResponse.eEzsignsignaturestatusSteptype == null : this.eEzsignsignaturestatusSteptype.equals(customEzsignsignaturestatusResponse.eEzsignsignaturestatusSteptype)) &&
         (this.iEzsignsignaturestatusStep == null ? customEzsignsignaturestatusResponse.iEzsignsignaturestatusStep == null : this.iEzsignsignaturestatusStep.equals(customEzsignsignaturestatusResponse.iEzsignsignaturestatusStep)) &&
         (this.iEzsignsignaturestatusTotal == null ? customEzsignsignaturestatusResponse.iEzsignsignaturestatusTotal == null : this.iEzsignsignaturestatusTotal.equals(customEzsignsignaturestatusResponse.iEzsignsignaturestatusTotal)) &&
-        (this.iEzsignsignaturestatusSigned == null ? customEzsignsignaturestatusResponse.iEzsignsignaturestatusSigned == null : this.iEzsignsignaturestatusSigned.equals(customEzsignsignaturestatusResponse.iEzsignsignaturestatusSigned));
+        (this.iEzsignsignaturestatusSigned == null ? customEzsignsignaturestatusResponse.iEzsignsignaturestatusSigned == null : this.iEzsignsignaturestatusSigned.equals(customEzsignsignaturestatusResponse.iEzsignsignaturestatusSigned)) &&
+        (this.iEzsignsignaturestatusConditional == null ? customEzsignsignaturestatusResponse.iEzsignsignaturestatusConditional == null : this.iEzsignsignaturestatusConditional.equals(customEzsignsignaturestatusResponse.iEzsignsignaturestatusConditional));
   }
 
   @Override
@@ -100,6 +114,7 @@ public class CustomEzsignsignaturestatusResponse {
     result = 31 * result + (this.iEzsignsignaturestatusStep == null ? 0: this.iEzsignsignaturestatusStep.hashCode());
     result = 31 * result + (this.iEzsignsignaturestatusTotal == null ? 0: this.iEzsignsignaturestatusTotal.hashCode());
     result = 31 * result + (this.iEzsignsignaturestatusSigned == null ? 0: this.iEzsignsignaturestatusSigned.hashCode());
+    result = 31 * result + (this.iEzsignsignaturestatusConditional == null ? 0: this.iEzsignsignaturestatusConditional.hashCode());
     return result;
   }
 
@@ -112,6 +127,7 @@ public class CustomEzsignsignaturestatusResponse {
     sb.append("  iEzsignsignaturestatusStep: ").append(iEzsignsignaturestatusStep).append("\n");
     sb.append("  iEzsignsignaturestatusTotal: ").append(iEzsignsignaturestatusTotal).append("\n");
     sb.append("  iEzsignsignaturestatusSigned: ").append(iEzsignsignaturestatusSigned).append("\n");
+    sb.append("  iEzsignsignaturestatusConditional: ").append(iEzsignsignaturestatusConditional).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

@@ -13,8 +13,8 @@ Name | Type | Description | Notes
 **sEzsigntemplateformfieldValue** | **String** | The value for the Ezsigntemplateformfield |  [optional]
 **iEzsigntemplateformfieldX** | **Integer** | The X coordinate (Horizontal) where to put the Ezsigntemplateformfield on the Ezsigntemplatepage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplateformfield 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate. |  [optional]
 **iEzsigntemplateformfieldY** | **Integer** | The Y coordinate (Vertical) where to put the Ezsigntemplateformfield on the Ezsigntemplatepage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplateformfield 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate. |  [optional]
-**iEzsigntemplateformfieldWidth** | **Integer** | The Width of the Ezsigntemplateformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsigntemplateformfieldgroupType.  | eEzsigntemplateformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22-65535     | | Radio                     | 22           | | Text                      | 22-65535     | | Textarea                  | 22-65535     | | 
-**iEzsigntemplateformfieldHeight** | **Integer** | The Height of the Ezsigntemplateformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsigntemplateformfieldgroupType.  | eEzsigntemplateformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22           | | Radio                     | 22           | | Text                      | 22           | | Textarea                  | 22-65535     |  | 
+**iEzsigntemplateformfieldWidth** | **Integer** | The Width of the Ezsigntemplateformfield in pixels calculated at 100 DPI | 
+**iEzsigntemplateformfieldHeight** | **Integer** | The Height of the Ezsigntemplateformfield in pixels calculated at 100 DPI  | 
 **bEzsigntemplateformfieldAutocomplete** | **Boolean** | Whether the Ezsigntemplateformfield allows the use of the autocomplete of the browser.  This can only be set if eEzsigntemplateformfieldgroupType is **Text** |  [optional]
 **bEzsigntemplateformfieldSelected** | **Boolean** | Whether the Ezsigntemplateformfield is selected or not by default.  This can only be set if eEzsigntemplateformfieldgroupType is **Checkbox** or **Radio** |  [optional]
 **eEzsigntemplateformfieldDependencyrequirement** | [**FieldEEzsigntemplateformfieldDependencyrequirement**](FieldEEzsigntemplateformfieldDependencyrequirement.md) |  |  [optional]
@@ -22,6 +22,8 @@ Name | Type | Description | Notes
 **iEzsigntemplateformfieldPositioningoffsetx** | **Integer** | The offset X  This will be required if **eEzsigntemplateformfieldPositioning** is set to **PerCoordinates** |  [optional]
 **iEzsigntemplateformfieldPositioningoffsety** | **Integer** | The offset Y  This will be required if **eEzsigntemplateformfieldPositioning** is set to **PerCoordinates** |  [optional]
 **eEzsigntemplateformfieldPositioningoccurence** | [**FieldEEzsigntemplateformfieldPositioningoccurence**](FieldEEzsigntemplateformfieldPositioningoccurence.md) |  |  [optional]
+**eEzsigntemplateformfieldHorizontalalignment** | [**EnumHorizontalalignment**](EnumHorizontalalignment.md) |  |  [optional]
+**objTextstylestatic** | [**TextstylestaticResponseCompound**](TextstylestaticResponseCompound.md) |  |  [optional]
 **aObjEzsigntemplateelementdependency** | [**List&lt;EzsigntemplateelementdependencyResponseCompound&gt;**](EzsigntemplateelementdependencyResponseCompound.md) |  |  [optional]
 
 

@@ -21,10 +21,25 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "A Website Object and children to create a complete structure")
 public class WebsiteRequestCompound {
   
+  @SerializedName("pkiWebsiteID")
+  private Integer pkiWebsiteID = null;
   @SerializedName("fkiWebsitetypeID")
   private Integer fkiWebsitetypeID = null;
   @SerializedName("sWebsiteAddress")
   private String sWebsiteAddress = null;
+
+  /**
+   * The unique ID of the Website Default
+   * minimum: 0
+   * maximum: 16777215
+   **/
+  @ApiModelProperty(value = "The unique ID of the Website Default")
+  public Integer getPkiWebsiteID() {
+    return pkiWebsiteID;
+  }
+  public void setPkiWebsiteID(Integer pkiWebsiteID) {
+    this.pkiWebsiteID = pkiWebsiteID;
+  }
 
   /**
    * The unique ID of the Websitetype.  Valid values:  |Value|Description| |-|-| |1|Website| |2|Twitter| |3|Facebook| |4|Survey|
@@ -59,13 +74,15 @@ public class WebsiteRequestCompound {
       return false;
     }
     WebsiteRequestCompound websiteRequestCompound = (WebsiteRequestCompound) o;
-    return (this.fkiWebsitetypeID == null ? websiteRequestCompound.fkiWebsitetypeID == null : this.fkiWebsitetypeID.equals(websiteRequestCompound.fkiWebsitetypeID)) &&
+    return (this.pkiWebsiteID == null ? websiteRequestCompound.pkiWebsiteID == null : this.pkiWebsiteID.equals(websiteRequestCompound.pkiWebsiteID)) &&
+        (this.fkiWebsitetypeID == null ? websiteRequestCompound.fkiWebsitetypeID == null : this.fkiWebsitetypeID.equals(websiteRequestCompound.fkiWebsitetypeID)) &&
         (this.sWebsiteAddress == null ? websiteRequestCompound.sWebsiteAddress == null : this.sWebsiteAddress.equals(websiteRequestCompound.sWebsiteAddress));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
+    result = 31 * result + (this.pkiWebsiteID == null ? 0: this.pkiWebsiteID.hashCode());
     result = 31 * result + (this.fkiWebsitetypeID == null ? 0: this.fkiWebsitetypeID.hashCode());
     result = 31 * result + (this.sWebsiteAddress == null ? 0: this.sWebsiteAddress.hashCode());
     return result;
@@ -76,6 +93,7 @@ public class WebsiteRequestCompound {
     StringBuilder sb = new StringBuilder();
     sb.append("class WebsiteRequestCompound {\n");
     
+    sb.append("  pkiWebsiteID: ").append(pkiWebsiteID).append("\n");
     sb.append("  fkiWebsitetypeID: ").append(fkiWebsitetypeID).append("\n");
     sb.append("  sWebsiteAddress: ").append(sWebsiteAddress).append("\n");
     sb.append("}\n");

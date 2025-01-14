@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**apikeyCreateObjectV2**](ObjectApikeyApi.md#apikeyCreateObjectV2) | **POST** /2/object/apikey | Create a new Apikey
 [**apikeyEditObjectV1**](ObjectApikeyApi.md#apikeyEditObjectV1) | **PUT** /1/object/apikey/{pkiApikeyID} | Edit an existing Apikey
 [**apikeyEditPermissionsV1**](ObjectApikeyApi.md#apikeyEditPermissionsV1) | **PUT** /1/object/apikey/{pkiApikeyID}/editPermissions | Edit multiple Permissions
+[**apikeyGenerateDelegatedCredentialsV1**](ObjectApikeyApi.md#apikeyGenerateDelegatedCredentialsV1) | **POST** /1/object/apikey/generateDelegatedCredentials | Generate a delegated credentials
 [**apikeyGetCorsV1**](ObjectApikeyApi.md#apikeyGetCorsV1) | **GET** /1/object/apikey/{pkiApikeyID}/getCors | Retrieve an existing Apikey&#39;s cors
 [**apikeyGetListV1**](ObjectApikeyApi.md#apikeyGetListV1) | **GET** /1/object/apikey/getList | Retrieve Apikey list
 [**apikeyGetObjectV2**](ObjectApikeyApi.md#apikeyGetObjectV2) | **GET** /2/object/apikey/{pkiApikeyID} | Retrieve an existing Apikey
@@ -147,6 +148,52 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApikeyEditPermissionsV1Response**](ApikeyEditPermissionsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## apikeyGenerateDelegatedCredentialsV1
+
+> ApikeyGenerateDelegatedCredentialsV1Response apikeyGenerateDelegatedCredentialsV1(apikeyGenerateDelegatedCredentialsV1Request)
+
+Generate a delegated credentials
+
+
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectApikeyApi;
+
+ObjectApikeyApi apiInstance = new ObjectApikeyApi();
+ApikeyGenerateDelegatedCredentialsV1Request apikeyGenerateDelegatedCredentialsV1Request = new ApikeyGenerateDelegatedCredentialsV1Request(); // ApikeyGenerateDelegatedCredentialsV1Request | 
+try {
+    ApikeyGenerateDelegatedCredentialsV1Response result = apiInstance.apikeyGenerateDelegatedCredentialsV1(apikeyGenerateDelegatedCredentialsV1Request);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectApikeyApi#apikeyGenerateDelegatedCredentialsV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **apikeyGenerateDelegatedCredentialsV1Request** | [**ApikeyGenerateDelegatedCredentialsV1Request**](ApikeyGenerateDelegatedCredentialsV1Request.md)|  |
+
+### Return type
+
+[**ApikeyGenerateDelegatedCredentialsV1Response**](ApikeyGenerateDelegatedCredentialsV1Response.md)
 
 ### Authorization
 

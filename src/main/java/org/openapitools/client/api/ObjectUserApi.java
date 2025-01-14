@@ -30,12 +30,15 @@ import org.openapitools.client.model.UserCreateObjectV1Request;
 import org.openapitools.client.model.UserCreateObjectV1Response;
 import org.openapitools.client.model.UserCreateObjectV2Request;
 import org.openapitools.client.model.UserCreateObjectV2Response;
+import org.openapitools.client.model.UserEditColleaguesV2Request;
+import org.openapitools.client.model.UserEditColleaguesV2Response;
 import org.openapitools.client.model.UserEditObjectV1Request;
 import org.openapitools.client.model.UserEditObjectV1Response;
 import org.openapitools.client.model.UserEditPermissionsV1Request;
 import org.openapitools.client.model.UserEditPermissionsV1Response;
 import org.openapitools.client.model.UserGetApikeysV1Response;
 import org.openapitools.client.model.UserGetAutocompleteV2Response;
+import org.openapitools.client.model.UserGetColleaguesV2Response;
 import org.openapitools.client.model.UserGetEffectivePermissionsV1Response;
 import org.openapitools.client.model.UserGetListV1Response;
 import org.openapitools.client.model.UserGetObjectV2Response;
@@ -317,6 +320,145 @@ public class ObjectUserApi {
           public void onResponse(String localVarResponse) {
             try {
               responseListener.onResponse((UserCreateObjectV2Response) ApiInvoker.deserialize(localVarResponse,  "", UserCreateObjectV2Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Edit multiple Colleagues
+  * Using this endpoint, you can edit multiple Colleagues at the same time.
+   * @param pkiUserID 
+   * @param userEditColleaguesV2Request 
+   * @return UserEditColleaguesV2Response
+  */
+  public UserEditColleaguesV2Response userEditColleaguesV2 (Integer pkiUserID, UserEditColleaguesV2Request userEditColleaguesV2Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = userEditColleaguesV2Request;
+    // verify the required parameter 'pkiUserID' is set
+    if (pkiUserID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiUserID' when calling userEditColleaguesV2",
+        new ApiException(400, "Missing the required parameter 'pkiUserID' when calling userEditColleaguesV2"));
+    }
+    // verify the required parameter 'userEditColleaguesV2Request' is set
+    if (userEditColleaguesV2Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'userEditColleaguesV2Request' when calling userEditColleaguesV2",
+        new ApiException(400, "Missing the required parameter 'userEditColleaguesV2Request' when calling userEditColleaguesV2"));
+    }
+
+    // create path and map variables
+    String path = "/2/object/user/{pkiUserID}/editColleagues".replaceAll("\\{" + "pkiUserID" + "\\}", apiInvoker.escapeString(pkiUserID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (UserEditColleaguesV2Response) ApiInvoker.deserialize(localVarResponse, "", UserEditColleaguesV2Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Edit multiple Colleagues
+   * Using this endpoint, you can edit multiple Colleagues at the same time.
+   * @param pkiUserID    * @param userEditColleaguesV2Request 
+  */
+  public void userEditColleaguesV2 (Integer pkiUserID, UserEditColleaguesV2Request userEditColleaguesV2Request, final Response.Listener<UserEditColleaguesV2Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = userEditColleaguesV2Request;
+
+    // verify the required parameter 'pkiUserID' is set
+    if (pkiUserID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiUserID' when calling userEditColleaguesV2",
+        new ApiException(400, "Missing the required parameter 'pkiUserID' when calling userEditColleaguesV2"));
+    }
+    // verify the required parameter 'userEditColleaguesV2Request' is set
+    if (userEditColleaguesV2Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'userEditColleaguesV2Request' when calling userEditColleaguesV2",
+        new ApiException(400, "Missing the required parameter 'userEditColleaguesV2Request' when calling userEditColleaguesV2"));
+    }
+
+    // create path and map variables
+    String path = "/2/object/user/{pkiUserID}/editColleagues".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiUserID" + "\\}", apiInvoker.escapeString(pkiUserID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((UserEditColleaguesV2Response) ApiInvoker.deserialize(localVarResponse,  "", UserEditColleaguesV2Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -858,6 +1000,133 @@ public class ObjectUserApi {
           public void onResponse(String localVarResponse) {
             try {
               responseListener.onResponse((UserGetAutocompleteV2Response) ApiInvoker.deserialize(localVarResponse,  "", UserGetAutocompleteV2Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Retrieve an existing User&#39;s Colleagues
+  * 
+   * @param pkiUserID 
+   * @return UserGetColleaguesV2Response
+  */
+  public UserGetColleaguesV2Response userGetColleaguesV2 (Integer pkiUserID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiUserID' is set
+    if (pkiUserID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiUserID' when calling userGetColleaguesV2",
+        new ApiException(400, "Missing the required parameter 'pkiUserID' when calling userGetColleaguesV2"));
+    }
+
+    // create path and map variables
+    String path = "/2/object/user/{pkiUserID}/getColleagues".replaceAll("\\{" + "pkiUserID" + "\\}", apiInvoker.escapeString(pkiUserID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (UserGetColleaguesV2Response) ApiInvoker.deserialize(localVarResponse, "", UserGetColleaguesV2Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve an existing User&#39;s Colleagues
+   * 
+   * @param pkiUserID 
+  */
+  public void userGetColleaguesV2 (Integer pkiUserID, final Response.Listener<UserGetColleaguesV2Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiUserID' is set
+    if (pkiUserID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiUserID' when calling userGetColleaguesV2",
+        new ApiException(400, "Missing the required parameter 'pkiUserID' when calling userGetColleaguesV2"));
+    }
+
+    // create path and map variables
+    String path = "/2/object/user/{pkiUserID}/getColleagues".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiUserID" + "\\}", apiInvoker.escapeString(pkiUserID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((UserGetColleaguesV2Response) ApiInvoker.deserialize(localVarResponse,  "", UserGetColleaguesV2Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

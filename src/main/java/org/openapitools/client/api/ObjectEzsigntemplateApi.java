@@ -26,19 +26,14 @@ import com.android.volley.VolleyError;
 import org.openapitools.client.model.CommonResponseError;
 import org.openapitools.client.model.EzsigntemplateCopyV1Request;
 import org.openapitools.client.model.EzsigntemplateCopyV1Response;
-import org.openapitools.client.model.EzsigntemplateCreateObjectV1Request;
-import org.openapitools.client.model.EzsigntemplateCreateObjectV1Response;
-import org.openapitools.client.model.EzsigntemplateCreateObjectV2Request;
-import org.openapitools.client.model.EzsigntemplateCreateObjectV2Response;
+import org.openapitools.client.model.EzsigntemplateCreateObjectV3Request;
+import org.openapitools.client.model.EzsigntemplateCreateObjectV3Response;
 import org.openapitools.client.model.EzsigntemplateDeleteObjectV1Response;
-import org.openapitools.client.model.EzsigntemplateEditObjectV1Request;
-import org.openapitools.client.model.EzsigntemplateEditObjectV1Response;
-import org.openapitools.client.model.EzsigntemplateEditObjectV2Request;
-import org.openapitools.client.model.EzsigntemplateEditObjectV2Response;
+import org.openapitools.client.model.EzsigntemplateEditObjectV3Request;
+import org.openapitools.client.model.EzsigntemplateEditObjectV3Response;
 import org.openapitools.client.model.EzsigntemplateGetAutocompleteV2Response;
 import org.openapitools.client.model.EzsigntemplateGetListV1Response;
-import org.openapitools.client.model.EzsigntemplateGetObjectV1Response;
-import org.openapitools.client.model.EzsigntemplateGetObjectV2Response;
+import org.openapitools.client.model.EzsigntemplateGetObjectV3Response;
 import java.io.File;
 import org.openapitools.client.model.HeaderAcceptLanguage;
 
@@ -214,19 +209,19 @@ public class ObjectEzsigntemplateApi {
   /**
   * Create a new Ezsigntemplate
   * The endpoint allows to create one or many elements at once.
-   * @param ezsigntemplateCreateObjectV1Request 
-   * @return EzsigntemplateCreateObjectV1Response
+   * @param ezsigntemplateCreateObjectV3Request 
+   * @return EzsigntemplateCreateObjectV3Response
   */
-  public EzsigntemplateCreateObjectV1Response ezsigntemplateCreateObjectV1 (EzsigntemplateCreateObjectV1Request ezsigntemplateCreateObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
-    Object postBody = ezsigntemplateCreateObjectV1Request;
-    // verify the required parameter 'ezsigntemplateCreateObjectV1Request' is set
-    if (ezsigntemplateCreateObjectV1Request == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'ezsigntemplateCreateObjectV1Request' when calling ezsigntemplateCreateObjectV1",
-        new ApiException(400, "Missing the required parameter 'ezsigntemplateCreateObjectV1Request' when calling ezsigntemplateCreateObjectV1"));
+  public EzsigntemplateCreateObjectV3Response ezsigntemplateCreateObjectV3 (EzsigntemplateCreateObjectV3Request ezsigntemplateCreateObjectV3Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = ezsigntemplateCreateObjectV3Request;
+    // verify the required parameter 'ezsigntemplateCreateObjectV3Request' is set
+    if (ezsigntemplateCreateObjectV3Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'ezsigntemplateCreateObjectV3Request' when calling ezsigntemplateCreateObjectV3",
+        new ApiException(400, "Missing the required parameter 'ezsigntemplateCreateObjectV3Request' when calling ezsigntemplateCreateObjectV3"));
     }
 
     // create path and map variables
-    String path = "/1/object/ezsigntemplate";
+    String path = "/3/object/ezsigntemplate";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -253,7 +248,7 @@ public class ObjectEzsigntemplateApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (EzsigntemplateCreateObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsigntemplateCreateObjectV1Response.class);
+         return (EzsigntemplateCreateObjectV3Response) ApiInvoker.deserialize(localVarResponse, "", EzsigntemplateCreateObjectV3Response.class);
       } else {
          return null;
       }
@@ -277,19 +272,19 @@ public class ObjectEzsigntemplateApi {
       /**
    * Create a new Ezsigntemplate
    * The endpoint allows to create one or many elements at once.
-   * @param ezsigntemplateCreateObjectV1Request 
+   * @param ezsigntemplateCreateObjectV3Request 
   */
-  public void ezsigntemplateCreateObjectV1 (EzsigntemplateCreateObjectV1Request ezsigntemplateCreateObjectV1Request, final Response.Listener<EzsigntemplateCreateObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
-    Object postBody = ezsigntemplateCreateObjectV1Request;
+  public void ezsigntemplateCreateObjectV3 (EzsigntemplateCreateObjectV3Request ezsigntemplateCreateObjectV3Request, final Response.Listener<EzsigntemplateCreateObjectV3Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = ezsigntemplateCreateObjectV3Request;
 
-    // verify the required parameter 'ezsigntemplateCreateObjectV1Request' is set
-    if (ezsigntemplateCreateObjectV1Request == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'ezsigntemplateCreateObjectV1Request' when calling ezsigntemplateCreateObjectV1",
-        new ApiException(400, "Missing the required parameter 'ezsigntemplateCreateObjectV1Request' when calling ezsigntemplateCreateObjectV1"));
+    // verify the required parameter 'ezsigntemplateCreateObjectV3Request' is set
+    if (ezsigntemplateCreateObjectV3Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'ezsigntemplateCreateObjectV3Request' when calling ezsigntemplateCreateObjectV3",
+        new ApiException(400, "Missing the required parameter 'ezsigntemplateCreateObjectV3Request' when calling ezsigntemplateCreateObjectV3"));
     }
 
     // create path and map variables
-    String path = "/1/object/ezsigntemplate".replaceAll("\\{format\\}","json");
+    String path = "/3/object/ezsigntemplate".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -324,135 +319,7 @@ public class ObjectEzsigntemplateApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((EzsigntemplateCreateObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsigntemplateCreateObjectV1Response.class));
-            } catch (ApiException exception) {
-               errorListener.onErrorResponse(new VolleyError(exception));
-            }
-          }
-      }, new Response.ErrorListener() {
-          @Override
-          public void onErrorResponse(VolleyError error) {
-            errorListener.onErrorResponse(error);
-          }
-      });
-    } catch (ApiException ex) {
-      errorListener.onErrorResponse(new VolleyError(ex));
-    }
-  }
-  /**
-  * Create a new Ezsigntemplate
-  * The endpoint allows to create one or many elements at once.
-   * @param ezsigntemplateCreateObjectV2Request 
-   * @return EzsigntemplateCreateObjectV2Response
-  */
-  public EzsigntemplateCreateObjectV2Response ezsigntemplateCreateObjectV2 (EzsigntemplateCreateObjectV2Request ezsigntemplateCreateObjectV2Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
-    Object postBody = ezsigntemplateCreateObjectV2Request;
-    // verify the required parameter 'ezsigntemplateCreateObjectV2Request' is set
-    if (ezsigntemplateCreateObjectV2Request == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'ezsigntemplateCreateObjectV2Request' when calling ezsigntemplateCreateObjectV2",
-        new ApiException(400, "Missing the required parameter 'ezsigntemplateCreateObjectV2Request' when calling ezsigntemplateCreateObjectV2"));
-    }
-
-    // create path and map variables
-    String path = "/2/object/ezsigntemplate";
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
-      HttpEntity httpEntity = localVarBuilder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-    }
-
-    String[] authNames = new String[] { "Authorization" };
-
-    try {
-      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
-      if (localVarResponse != null) {
-         return (EzsigntemplateCreateObjectV2Response) ApiInvoker.deserialize(localVarResponse, "", EzsigntemplateCreateObjectV2Response.class);
-      } else {
-         return null;
-      }
-    } catch (ApiException ex) {
-       throw ex;
-    } catch (InterruptedException ex) {
-       throw ex;
-    } catch (ExecutionException ex) {
-      if (ex.getCause() instanceof VolleyError) {
-        VolleyError volleyError = (VolleyError)ex.getCause();
-        if (volleyError.networkResponse != null) {
-          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
-        }
-      }
-      throw ex;
-    } catch (TimeoutException ex) {
-      throw ex;
-    }
-  }
-
-      /**
-   * Create a new Ezsigntemplate
-   * The endpoint allows to create one or many elements at once.
-   * @param ezsigntemplateCreateObjectV2Request 
-  */
-  public void ezsigntemplateCreateObjectV2 (EzsigntemplateCreateObjectV2Request ezsigntemplateCreateObjectV2Request, final Response.Listener<EzsigntemplateCreateObjectV2Response> responseListener, final Response.ErrorListener errorListener) {
-    Object postBody = ezsigntemplateCreateObjectV2Request;
-
-    // verify the required parameter 'ezsigntemplateCreateObjectV2Request' is set
-    if (ezsigntemplateCreateObjectV2Request == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'ezsigntemplateCreateObjectV2Request' when calling ezsigntemplateCreateObjectV2",
-        new ApiException(400, "Missing the required parameter 'ezsigntemplateCreateObjectV2Request' when calling ezsigntemplateCreateObjectV2"));
-    }
-
-    // create path and map variables
-    String path = "/2/object/ezsigntemplate".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = localVarBuilder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-          }
-
-    String[] authNames = new String[] { "Authorization" };
-
-    try {
-      apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames,
-        new Response.Listener<String>() {
-          @Override
-          public void onResponse(String localVarResponse) {
-            try {
-              responseListener.onResponse((EzsigntemplateCreateObjectV2Response) ApiInvoker.deserialize(localVarResponse,  "", EzsigntemplateCreateObjectV2Response.class));
+              responseListener.onResponse((EzsigntemplateCreateObjectV3Response) ApiInvoker.deserialize(localVarResponse,  "", EzsigntemplateCreateObjectV3Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -598,24 +465,24 @@ public class ObjectEzsigntemplateApi {
   * Edit an existing Ezsigntemplate
   * 
    * @param pkiEzsigntemplateID 
-   * @param ezsigntemplateEditObjectV1Request 
-   * @return EzsigntemplateEditObjectV1Response
+   * @param ezsigntemplateEditObjectV3Request 
+   * @return EzsigntemplateEditObjectV3Response
   */
-  public EzsigntemplateEditObjectV1Response ezsigntemplateEditObjectV1 (Integer pkiEzsigntemplateID, EzsigntemplateEditObjectV1Request ezsigntemplateEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
-    Object postBody = ezsigntemplateEditObjectV1Request;
+  public EzsigntemplateEditObjectV3Response ezsigntemplateEditObjectV3 (Integer pkiEzsigntemplateID, EzsigntemplateEditObjectV3Request ezsigntemplateEditObjectV3Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = ezsigntemplateEditObjectV3Request;
     // verify the required parameter 'pkiEzsigntemplateID' is set
     if (pkiEzsigntemplateID == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsigntemplateID' when calling ezsigntemplateEditObjectV1",
-        new ApiException(400, "Missing the required parameter 'pkiEzsigntemplateID' when calling ezsigntemplateEditObjectV1"));
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsigntemplateID' when calling ezsigntemplateEditObjectV3",
+        new ApiException(400, "Missing the required parameter 'pkiEzsigntemplateID' when calling ezsigntemplateEditObjectV3"));
     }
-    // verify the required parameter 'ezsigntemplateEditObjectV1Request' is set
-    if (ezsigntemplateEditObjectV1Request == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'ezsigntemplateEditObjectV1Request' when calling ezsigntemplateEditObjectV1",
-        new ApiException(400, "Missing the required parameter 'ezsigntemplateEditObjectV1Request' when calling ezsigntemplateEditObjectV1"));
+    // verify the required parameter 'ezsigntemplateEditObjectV3Request' is set
+    if (ezsigntemplateEditObjectV3Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'ezsigntemplateEditObjectV3Request' when calling ezsigntemplateEditObjectV3",
+        new ApiException(400, "Missing the required parameter 'ezsigntemplateEditObjectV3Request' when calling ezsigntemplateEditObjectV3"));
     }
 
     // create path and map variables
-    String path = "/1/object/ezsigntemplate/{pkiEzsigntemplateID}".replaceAll("\\{" + "pkiEzsigntemplateID" + "\\}", apiInvoker.escapeString(pkiEzsigntemplateID.toString()));
+    String path = "/3/object/ezsigntemplate/{pkiEzsigntemplateID}".replaceAll("\\{" + "pkiEzsigntemplateID" + "\\}", apiInvoker.escapeString(pkiEzsigntemplateID.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -642,7 +509,7 @@ public class ObjectEzsigntemplateApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (EzsigntemplateEditObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsigntemplateEditObjectV1Response.class);
+         return (EzsigntemplateEditObjectV3Response) ApiInvoker.deserialize(localVarResponse, "", EzsigntemplateEditObjectV3Response.class);
       } else {
          return null;
       }
@@ -666,24 +533,24 @@ public class ObjectEzsigntemplateApi {
       /**
    * Edit an existing Ezsigntemplate
    * 
-   * @param pkiEzsigntemplateID    * @param ezsigntemplateEditObjectV1Request 
+   * @param pkiEzsigntemplateID    * @param ezsigntemplateEditObjectV3Request 
   */
-  public void ezsigntemplateEditObjectV1 (Integer pkiEzsigntemplateID, EzsigntemplateEditObjectV1Request ezsigntemplateEditObjectV1Request, final Response.Listener<EzsigntemplateEditObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
-    Object postBody = ezsigntemplateEditObjectV1Request;
+  public void ezsigntemplateEditObjectV3 (Integer pkiEzsigntemplateID, EzsigntemplateEditObjectV3Request ezsigntemplateEditObjectV3Request, final Response.Listener<EzsigntemplateEditObjectV3Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = ezsigntemplateEditObjectV3Request;
 
     // verify the required parameter 'pkiEzsigntemplateID' is set
     if (pkiEzsigntemplateID == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsigntemplateID' when calling ezsigntemplateEditObjectV1",
-        new ApiException(400, "Missing the required parameter 'pkiEzsigntemplateID' when calling ezsigntemplateEditObjectV1"));
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsigntemplateID' when calling ezsigntemplateEditObjectV3",
+        new ApiException(400, "Missing the required parameter 'pkiEzsigntemplateID' when calling ezsigntemplateEditObjectV3"));
     }
-    // verify the required parameter 'ezsigntemplateEditObjectV1Request' is set
-    if (ezsigntemplateEditObjectV1Request == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'ezsigntemplateEditObjectV1Request' when calling ezsigntemplateEditObjectV1",
-        new ApiException(400, "Missing the required parameter 'ezsigntemplateEditObjectV1Request' when calling ezsigntemplateEditObjectV1"));
+    // verify the required parameter 'ezsigntemplateEditObjectV3Request' is set
+    if (ezsigntemplateEditObjectV3Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'ezsigntemplateEditObjectV3Request' when calling ezsigntemplateEditObjectV3",
+        new ApiException(400, "Missing the required parameter 'ezsigntemplateEditObjectV3Request' when calling ezsigntemplateEditObjectV3"));
     }
 
     // create path and map variables
-    String path = "/1/object/ezsigntemplate/{pkiEzsigntemplateID}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiEzsigntemplateID" + "\\}", apiInvoker.escapeString(pkiEzsigntemplateID.toString()));
+    String path = "/3/object/ezsigntemplate/{pkiEzsigntemplateID}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiEzsigntemplateID" + "\\}", apiInvoker.escapeString(pkiEzsigntemplateID.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -718,146 +585,7 @@ public class ObjectEzsigntemplateApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((EzsigntemplateEditObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsigntemplateEditObjectV1Response.class));
-            } catch (ApiException exception) {
-               errorListener.onErrorResponse(new VolleyError(exception));
-            }
-          }
-      }, new Response.ErrorListener() {
-          @Override
-          public void onErrorResponse(VolleyError error) {
-            errorListener.onErrorResponse(error);
-          }
-      });
-    } catch (ApiException ex) {
-      errorListener.onErrorResponse(new VolleyError(ex));
-    }
-  }
-  /**
-  * Edit an existing Ezsigntemplate
-  * 
-   * @param pkiEzsigntemplateID 
-   * @param ezsigntemplateEditObjectV2Request 
-   * @return EzsigntemplateEditObjectV2Response
-  */
-  public EzsigntemplateEditObjectV2Response ezsigntemplateEditObjectV2 (Integer pkiEzsigntemplateID, EzsigntemplateEditObjectV2Request ezsigntemplateEditObjectV2Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
-    Object postBody = ezsigntemplateEditObjectV2Request;
-    // verify the required parameter 'pkiEzsigntemplateID' is set
-    if (pkiEzsigntemplateID == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsigntemplateID' when calling ezsigntemplateEditObjectV2",
-        new ApiException(400, "Missing the required parameter 'pkiEzsigntemplateID' when calling ezsigntemplateEditObjectV2"));
-    }
-    // verify the required parameter 'ezsigntemplateEditObjectV2Request' is set
-    if (ezsigntemplateEditObjectV2Request == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'ezsigntemplateEditObjectV2Request' when calling ezsigntemplateEditObjectV2",
-        new ApiException(400, "Missing the required parameter 'ezsigntemplateEditObjectV2Request' when calling ezsigntemplateEditObjectV2"));
-    }
-
-    // create path and map variables
-    String path = "/2/object/ezsigntemplate/{pkiEzsigntemplateID}".replaceAll("\\{" + "pkiEzsigntemplateID" + "\\}", apiInvoker.escapeString(pkiEzsigntemplateID.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
-      HttpEntity httpEntity = localVarBuilder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-    }
-
-    String[] authNames = new String[] { "Authorization" };
-
-    try {
-      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
-      if (localVarResponse != null) {
-         return (EzsigntemplateEditObjectV2Response) ApiInvoker.deserialize(localVarResponse, "", EzsigntemplateEditObjectV2Response.class);
-      } else {
-         return null;
-      }
-    } catch (ApiException ex) {
-       throw ex;
-    } catch (InterruptedException ex) {
-       throw ex;
-    } catch (ExecutionException ex) {
-      if (ex.getCause() instanceof VolleyError) {
-        VolleyError volleyError = (VolleyError)ex.getCause();
-        if (volleyError.networkResponse != null) {
-          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
-        }
-      }
-      throw ex;
-    } catch (TimeoutException ex) {
-      throw ex;
-    }
-  }
-
-      /**
-   * Edit an existing Ezsigntemplate
-   * 
-   * @param pkiEzsigntemplateID    * @param ezsigntemplateEditObjectV2Request 
-  */
-  public void ezsigntemplateEditObjectV2 (Integer pkiEzsigntemplateID, EzsigntemplateEditObjectV2Request ezsigntemplateEditObjectV2Request, final Response.Listener<EzsigntemplateEditObjectV2Response> responseListener, final Response.ErrorListener errorListener) {
-    Object postBody = ezsigntemplateEditObjectV2Request;
-
-    // verify the required parameter 'pkiEzsigntemplateID' is set
-    if (pkiEzsigntemplateID == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsigntemplateID' when calling ezsigntemplateEditObjectV2",
-        new ApiException(400, "Missing the required parameter 'pkiEzsigntemplateID' when calling ezsigntemplateEditObjectV2"));
-    }
-    // verify the required parameter 'ezsigntemplateEditObjectV2Request' is set
-    if (ezsigntemplateEditObjectV2Request == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'ezsigntemplateEditObjectV2Request' when calling ezsigntemplateEditObjectV2",
-        new ApiException(400, "Missing the required parameter 'ezsigntemplateEditObjectV2Request' when calling ezsigntemplateEditObjectV2"));
-    }
-
-    // create path and map variables
-    String path = "/2/object/ezsigntemplate/{pkiEzsigntemplateID}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiEzsigntemplateID" + "\\}", apiInvoker.escapeString(pkiEzsigntemplateID.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = localVarBuilder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-          }
-
-    String[] authNames = new String[] { "Authorization" };
-
-    try {
-      apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames,
-        new Response.Listener<String>() {
-          @Override
-          public void onResponse(String localVarResponse) {
-            try {
-              responseListener.onResponse((EzsigntemplateEditObjectV2Response) ApiInvoker.deserialize(localVarResponse,  "", EzsigntemplateEditObjectV2Response.class));
+              responseListener.onResponse((EzsigntemplateEditObjectV3Response) ApiInvoker.deserialize(localVarResponse,  "", EzsigntemplateEditObjectV3Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -879,9 +607,10 @@ public class ObjectEzsigntemplateApi {
    * @param eFilterActive Specify which results we want to display.
    * @param sQuery Allow to filter the returned results
    * @param acceptLanguage 
+   * @param fkiEzsignfoldertypeID The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic
    * @return EzsigntemplateGetAutocompleteV2Response
   */
-  public EzsigntemplateGetAutocompleteV2Response ezsigntemplateGetAutocompleteV2 (String sSelector, String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public EzsigntemplateGetAutocompleteV2Response ezsigntemplateGetAutocompleteV2 (String sSelector, String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage, Integer fkiEzsignfoldertypeID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'sSelector' is set
     if (sSelector == null) {
@@ -900,6 +629,7 @@ public class ObjectEzsigntemplateApi {
     Map<String, String> formParams = new HashMap<String, String>();
     queryParams.addAll(ApiInvoker.parameterToPairs("", "eFilterActive", eFilterActive));
     queryParams.addAll(ApiInvoker.parameterToPairs("", "sQuery", sQuery));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "fkiEzsignfoldertypeID", fkiEzsignfoldertypeID));
     headerParams.put("Accept-Language", ApiInvoker.parameterToString(acceptLanguage));
     String[] contentTypes = {
     };
@@ -943,9 +673,9 @@ public class ObjectEzsigntemplateApi {
       /**
    * Retrieve Ezsigntemplates and IDs
    * Get the list of Ezsigntemplate to be used in a dropdown or autocomplete control.
-   * @param sSelector The type of Ezsigntemplates to return   * @param eFilterActive Specify which results we want to display.   * @param sQuery Allow to filter the returned results   * @param acceptLanguage 
+   * @param sSelector The type of Ezsigntemplates to return   * @param eFilterActive Specify which results we want to display.   * @param sQuery Allow to filter the returned results   * @param acceptLanguage    * @param fkiEzsignfoldertypeID The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic
   */
-  public void ezsigntemplateGetAutocompleteV2 (String sSelector, String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage, final Response.Listener<EzsigntemplateGetAutocompleteV2Response> responseListener, final Response.ErrorListener errorListener) {
+  public void ezsigntemplateGetAutocompleteV2 (String sSelector, String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage, Integer fkiEzsignfoldertypeID, final Response.Listener<EzsigntemplateGetAutocompleteV2Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'sSelector' is set
@@ -966,6 +696,7 @@ public class ObjectEzsigntemplateApi {
 
     queryParams.addAll(ApiInvoker.parameterToPairs("", "eFilterActive", eFilterActive));
     queryParams.addAll(ApiInvoker.parameterToPairs("", "sQuery", sQuery));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "fkiEzsignfoldertypeID", fkiEzsignfoldertypeID));
 
     headerParams.put("Accept-Language", ApiInvoker.parameterToString(acceptLanguage));
 
@@ -1143,18 +874,18 @@ public class ObjectEzsigntemplateApi {
   * Retrieve an existing Ezsigntemplate
   * 
    * @param pkiEzsigntemplateID 
-   * @return EzsigntemplateGetObjectV1Response
+   * @return EzsigntemplateGetObjectV3Response
   */
-  public EzsigntemplateGetObjectV1Response ezsigntemplateGetObjectV1 (Integer pkiEzsigntemplateID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public EzsigntemplateGetObjectV3Response ezsigntemplateGetObjectV3 (Integer pkiEzsigntemplateID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'pkiEzsigntemplateID' is set
     if (pkiEzsigntemplateID == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsigntemplateID' when calling ezsigntemplateGetObjectV1",
-        new ApiException(400, "Missing the required parameter 'pkiEzsigntemplateID' when calling ezsigntemplateGetObjectV1"));
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsigntemplateID' when calling ezsigntemplateGetObjectV3",
+        new ApiException(400, "Missing the required parameter 'pkiEzsigntemplateID' when calling ezsigntemplateGetObjectV3"));
     }
 
     // create path and map variables
-    String path = "/1/object/ezsigntemplate/{pkiEzsigntemplateID}".replaceAll("\\{" + "pkiEzsigntemplateID" + "\\}", apiInvoker.escapeString(pkiEzsigntemplateID.toString()));
+    String path = "/3/object/ezsigntemplate/{pkiEzsigntemplateID}".replaceAll("\\{" + "pkiEzsigntemplateID" + "\\}", apiInvoker.escapeString(pkiEzsigntemplateID.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1180,7 +911,7 @@ public class ObjectEzsigntemplateApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (EzsigntemplateGetObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsigntemplateGetObjectV1Response.class);
+         return (EzsigntemplateGetObjectV3Response) ApiInvoker.deserialize(localVarResponse, "", EzsigntemplateGetObjectV3Response.class);
       } else {
          return null;
       }
@@ -1206,17 +937,17 @@ public class ObjectEzsigntemplateApi {
    * 
    * @param pkiEzsigntemplateID 
   */
-  public void ezsigntemplateGetObjectV1 (Integer pkiEzsigntemplateID, final Response.Listener<EzsigntemplateGetObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
+  public void ezsigntemplateGetObjectV3 (Integer pkiEzsigntemplateID, final Response.Listener<EzsigntemplateGetObjectV3Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'pkiEzsigntemplateID' is set
     if (pkiEzsigntemplateID == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsigntemplateID' when calling ezsigntemplateGetObjectV1",
-        new ApiException(400, "Missing the required parameter 'pkiEzsigntemplateID' when calling ezsigntemplateGetObjectV1"));
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsigntemplateID' when calling ezsigntemplateGetObjectV3",
+        new ApiException(400, "Missing the required parameter 'pkiEzsigntemplateID' when calling ezsigntemplateGetObjectV3"));
     }
 
     // create path and map variables
-    String path = "/1/object/ezsigntemplate/{pkiEzsigntemplateID}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiEzsigntemplateID" + "\\}", apiInvoker.escapeString(pkiEzsigntemplateID.toString()));
+    String path = "/3/object/ezsigntemplate/{pkiEzsigntemplateID}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiEzsigntemplateID" + "\\}", apiInvoker.escapeString(pkiEzsigntemplateID.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1251,134 +982,7 @@ public class ObjectEzsigntemplateApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((EzsigntemplateGetObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsigntemplateGetObjectV1Response.class));
-            } catch (ApiException exception) {
-               errorListener.onErrorResponse(new VolleyError(exception));
-            }
-          }
-      }, new Response.ErrorListener() {
-          @Override
-          public void onErrorResponse(VolleyError error) {
-            errorListener.onErrorResponse(error);
-          }
-      });
-    } catch (ApiException ex) {
-      errorListener.onErrorResponse(new VolleyError(ex));
-    }
-  }
-  /**
-  * Retrieve an existing Ezsigntemplate
-  * 
-   * @param pkiEzsigntemplateID 
-   * @return EzsigntemplateGetObjectV2Response
-  */
-  public EzsigntemplateGetObjectV2Response ezsigntemplateGetObjectV2 (Integer pkiEzsigntemplateID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
-    Object postBody = null;
-    // verify the required parameter 'pkiEzsigntemplateID' is set
-    if (pkiEzsigntemplateID == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsigntemplateID' when calling ezsigntemplateGetObjectV2",
-        new ApiException(400, "Missing the required parameter 'pkiEzsigntemplateID' when calling ezsigntemplateGetObjectV2"));
-    }
-
-    // create path and map variables
-    String path = "/2/object/ezsigntemplate/{pkiEzsigntemplateID}".replaceAll("\\{" + "pkiEzsigntemplateID" + "\\}", apiInvoker.escapeString(pkiEzsigntemplateID.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-    String[] contentTypes = {
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
-      HttpEntity httpEntity = localVarBuilder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-    }
-
-    String[] authNames = new String[] { "Authorization" };
-
-    try {
-      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
-      if (localVarResponse != null) {
-         return (EzsigntemplateGetObjectV2Response) ApiInvoker.deserialize(localVarResponse, "", EzsigntemplateGetObjectV2Response.class);
-      } else {
-         return null;
-      }
-    } catch (ApiException ex) {
-       throw ex;
-    } catch (InterruptedException ex) {
-       throw ex;
-    } catch (ExecutionException ex) {
-      if (ex.getCause() instanceof VolleyError) {
-        VolleyError volleyError = (VolleyError)ex.getCause();
-        if (volleyError.networkResponse != null) {
-          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
-        }
-      }
-      throw ex;
-    } catch (TimeoutException ex) {
-      throw ex;
-    }
-  }
-
-      /**
-   * Retrieve an existing Ezsigntemplate
-   * 
-   * @param pkiEzsigntemplateID 
-  */
-  public void ezsigntemplateGetObjectV2 (Integer pkiEzsigntemplateID, final Response.Listener<EzsigntemplateGetObjectV2Response> responseListener, final Response.ErrorListener errorListener) {
-    Object postBody = null;
-
-    // verify the required parameter 'pkiEzsigntemplateID' is set
-    if (pkiEzsigntemplateID == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsigntemplateID' when calling ezsigntemplateGetObjectV2",
-        new ApiException(400, "Missing the required parameter 'pkiEzsigntemplateID' when calling ezsigntemplateGetObjectV2"));
-    }
-
-    // create path and map variables
-    String path = "/2/object/ezsigntemplate/{pkiEzsigntemplateID}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiEzsigntemplateID" + "\\}", apiInvoker.escapeString(pkiEzsigntemplateID.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-
-
-    String[] contentTypes = {
-      
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = localVarBuilder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-          }
-
-    String[] authNames = new String[] { "Authorization" };
-
-    try {
-      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
-        new Response.Listener<String>() {
-          @Override
-          public void onResponse(String localVarResponse) {
-            try {
-              responseListener.onResponse((EzsigntemplateGetObjectV2Response) ApiInvoker.deserialize(localVarResponse,  "", EzsigntemplateGetObjectV2Response.class));
+              responseListener.onResponse((EzsigntemplateGetObjectV3Response) ApiInvoker.deserialize(localVarResponse,  "", EzsigntemplateGetObjectV3Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

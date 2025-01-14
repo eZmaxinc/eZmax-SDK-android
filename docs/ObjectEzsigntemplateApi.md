@@ -5,15 +5,12 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ezsigntemplateCopyV1**](ObjectEzsigntemplateApi.md#ezsigntemplateCopyV1) | **POST** /1/object/ezsigntemplate/{pkiEzsigntemplateID}/copy | Copy the Ezsigntemplate
-[**ezsigntemplateCreateObjectV1**](ObjectEzsigntemplateApi.md#ezsigntemplateCreateObjectV1) | **POST** /1/object/ezsigntemplate | Create a new Ezsigntemplate
-[**ezsigntemplateCreateObjectV2**](ObjectEzsigntemplateApi.md#ezsigntemplateCreateObjectV2) | **POST** /2/object/ezsigntemplate | Create a new Ezsigntemplate
+[**ezsigntemplateCreateObjectV3**](ObjectEzsigntemplateApi.md#ezsigntemplateCreateObjectV3) | **POST** /3/object/ezsigntemplate | Create a new Ezsigntemplate
 [**ezsigntemplateDeleteObjectV1**](ObjectEzsigntemplateApi.md#ezsigntemplateDeleteObjectV1) | **DELETE** /1/object/ezsigntemplate/{pkiEzsigntemplateID} | Delete an existing Ezsigntemplate
-[**ezsigntemplateEditObjectV1**](ObjectEzsigntemplateApi.md#ezsigntemplateEditObjectV1) | **PUT** /1/object/ezsigntemplate/{pkiEzsigntemplateID} | Edit an existing Ezsigntemplate
-[**ezsigntemplateEditObjectV2**](ObjectEzsigntemplateApi.md#ezsigntemplateEditObjectV2) | **PUT** /2/object/ezsigntemplate/{pkiEzsigntemplateID} | Edit an existing Ezsigntemplate
+[**ezsigntemplateEditObjectV3**](ObjectEzsigntemplateApi.md#ezsigntemplateEditObjectV3) | **PUT** /3/object/ezsigntemplate/{pkiEzsigntemplateID} | Edit an existing Ezsigntemplate
 [**ezsigntemplateGetAutocompleteV2**](ObjectEzsigntemplateApi.md#ezsigntemplateGetAutocompleteV2) | **GET** /2/object/ezsigntemplate/getAutocomplete/{sSelector} | Retrieve Ezsigntemplates and IDs
 [**ezsigntemplateGetListV1**](ObjectEzsigntemplateApi.md#ezsigntemplateGetListV1) | **GET** /1/object/ezsigntemplate/getList | Retrieve Ezsigntemplate list
-[**ezsigntemplateGetObjectV1**](ObjectEzsigntemplateApi.md#ezsigntemplateGetObjectV1) | **GET** /1/object/ezsigntemplate/{pkiEzsigntemplateID} | Retrieve an existing Ezsigntemplate
-[**ezsigntemplateGetObjectV2**](ObjectEzsigntemplateApi.md#ezsigntemplateGetObjectV2) | **GET** /2/object/ezsigntemplate/{pkiEzsigntemplateID} | Retrieve an existing Ezsigntemplate
+[**ezsigntemplateGetObjectV3**](ObjectEzsigntemplateApi.md#ezsigntemplateGetObjectV3) | **GET** /3/object/ezsigntemplate/{pkiEzsigntemplateID} | Retrieve an existing Ezsigntemplate
 
 
 
@@ -65,55 +62,9 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## ezsigntemplateCreateObjectV1
+## ezsigntemplateCreateObjectV3
 
-> EzsigntemplateCreateObjectV1Response ezsigntemplateCreateObjectV1(ezsigntemplateCreateObjectV1Request)
-
-Create a new Ezsigntemplate
-
-The endpoint allows to create one or many elements at once.
-
-### Example
-
-```java
-// Import classes:
-//import org.openapitools.client.api.ObjectEzsigntemplateApi;
-
-ObjectEzsigntemplateApi apiInstance = new ObjectEzsigntemplateApi();
-EzsigntemplateCreateObjectV1Request ezsigntemplateCreateObjectV1Request = new EzsigntemplateCreateObjectV1Request(); // EzsigntemplateCreateObjectV1Request | 
-try {
-    EzsigntemplateCreateObjectV1Response result = apiInstance.ezsigntemplateCreateObjectV1(ezsigntemplateCreateObjectV1Request);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling ObjectEzsigntemplateApi#ezsigntemplateCreateObjectV1");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ezsigntemplateCreateObjectV1Request** | [**EzsigntemplateCreateObjectV1Request**](EzsigntemplateCreateObjectV1Request.md)|  |
-
-### Return type
-
-[**EzsigntemplateCreateObjectV1Response**](EzsigntemplateCreateObjectV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-
-## ezsigntemplateCreateObjectV2
-
-> EzsigntemplateCreateObjectV2Response ezsigntemplateCreateObjectV2(ezsigntemplateCreateObjectV2Request)
+> EzsigntemplateCreateObjectV3Response ezsigntemplateCreateObjectV3(ezsigntemplateCreateObjectV3Request)
 
 Create a new Ezsigntemplate
 
@@ -126,12 +77,12 @@ The endpoint allows to create one or many elements at once.
 //import org.openapitools.client.api.ObjectEzsigntemplateApi;
 
 ObjectEzsigntemplateApi apiInstance = new ObjectEzsigntemplateApi();
-EzsigntemplateCreateObjectV2Request ezsigntemplateCreateObjectV2Request = new EzsigntemplateCreateObjectV2Request(); // EzsigntemplateCreateObjectV2Request | 
+EzsigntemplateCreateObjectV3Request ezsigntemplateCreateObjectV3Request = new EzsigntemplateCreateObjectV3Request(); // EzsigntemplateCreateObjectV3Request | 
 try {
-    EzsigntemplateCreateObjectV2Response result = apiInstance.ezsigntemplateCreateObjectV2(ezsigntemplateCreateObjectV2Request);
+    EzsigntemplateCreateObjectV3Response result = apiInstance.ezsigntemplateCreateObjectV3(ezsigntemplateCreateObjectV3Request);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling ObjectEzsigntemplateApi#ezsigntemplateCreateObjectV2");
+    System.err.println("Exception when calling ObjectEzsigntemplateApi#ezsigntemplateCreateObjectV3");
     e.printStackTrace();
 }
 ```
@@ -141,11 +92,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ezsigntemplateCreateObjectV2Request** | [**EzsigntemplateCreateObjectV2Request**](EzsigntemplateCreateObjectV2Request.md)|  |
+ **ezsigntemplateCreateObjectV3Request** | [**EzsigntemplateCreateObjectV3Request**](EzsigntemplateCreateObjectV3Request.md)|  |
 
 ### Return type
 
-[**EzsigntemplateCreateObjectV2Response**](EzsigntemplateCreateObjectV2Response.md)
+[**EzsigntemplateCreateObjectV3Response**](EzsigntemplateCreateObjectV3Response.md)
 
 ### Authorization
 
@@ -203,57 +154,9 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## ezsigntemplateEditObjectV1
+## ezsigntemplateEditObjectV3
 
-> EzsigntemplateEditObjectV1Response ezsigntemplateEditObjectV1(pkiEzsigntemplateID, ezsigntemplateEditObjectV1Request)
-
-Edit an existing Ezsigntemplate
-
-
-
-### Example
-
-```java
-// Import classes:
-//import org.openapitools.client.api.ObjectEzsigntemplateApi;
-
-ObjectEzsigntemplateApi apiInstance = new ObjectEzsigntemplateApi();
-Integer pkiEzsigntemplateID = null; // Integer | 
-EzsigntemplateEditObjectV1Request ezsigntemplateEditObjectV1Request = new EzsigntemplateEditObjectV1Request(); // EzsigntemplateEditObjectV1Request | 
-try {
-    EzsigntemplateEditObjectV1Response result = apiInstance.ezsigntemplateEditObjectV1(pkiEzsigntemplateID, ezsigntemplateEditObjectV1Request);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling ObjectEzsigntemplateApi#ezsigntemplateEditObjectV1");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiEzsigntemplateID** | **Integer**|  | [default to null]
- **ezsigntemplateEditObjectV1Request** | [**EzsigntemplateEditObjectV1Request**](EzsigntemplateEditObjectV1Request.md)|  |
-
-### Return type
-
-[**EzsigntemplateEditObjectV1Response**](EzsigntemplateEditObjectV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-
-## ezsigntemplateEditObjectV2
-
-> EzsigntemplateEditObjectV2Response ezsigntemplateEditObjectV2(pkiEzsigntemplateID, ezsigntemplateEditObjectV2Request)
+> EzsigntemplateEditObjectV3Response ezsigntemplateEditObjectV3(pkiEzsigntemplateID, ezsigntemplateEditObjectV3Request)
 
 Edit an existing Ezsigntemplate
 
@@ -267,12 +170,12 @@ Edit an existing Ezsigntemplate
 
 ObjectEzsigntemplateApi apiInstance = new ObjectEzsigntemplateApi();
 Integer pkiEzsigntemplateID = null; // Integer | 
-EzsigntemplateEditObjectV2Request ezsigntemplateEditObjectV2Request = new EzsigntemplateEditObjectV2Request(); // EzsigntemplateEditObjectV2Request | 
+EzsigntemplateEditObjectV3Request ezsigntemplateEditObjectV3Request = new EzsigntemplateEditObjectV3Request(); // EzsigntemplateEditObjectV3Request | 
 try {
-    EzsigntemplateEditObjectV2Response result = apiInstance.ezsigntemplateEditObjectV2(pkiEzsigntemplateID, ezsigntemplateEditObjectV2Request);
+    EzsigntemplateEditObjectV3Response result = apiInstance.ezsigntemplateEditObjectV3(pkiEzsigntemplateID, ezsigntemplateEditObjectV3Request);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling ObjectEzsigntemplateApi#ezsigntemplateEditObjectV2");
+    System.err.println("Exception when calling ObjectEzsigntemplateApi#ezsigntemplateEditObjectV3");
     e.printStackTrace();
 }
 ```
@@ -283,11 +186,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiEzsigntemplateID** | **Integer**|  | [default to null]
- **ezsigntemplateEditObjectV2Request** | [**EzsigntemplateEditObjectV2Request**](EzsigntemplateEditObjectV2Request.md)|  |
+ **ezsigntemplateEditObjectV3Request** | [**EzsigntemplateEditObjectV3Request**](EzsigntemplateEditObjectV3Request.md)|  |
 
 ### Return type
 
-[**EzsigntemplateEditObjectV2Response**](EzsigntemplateEditObjectV2Response.md)
+[**EzsigntemplateEditObjectV3Response**](EzsigntemplateEditObjectV3Response.md)
 
 ### Authorization
 
@@ -301,7 +204,7 @@ Name | Type | Description  | Notes
 
 ## ezsigntemplateGetAutocompleteV2
 
-> EzsigntemplateGetAutocompleteV2Response ezsigntemplateGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+> EzsigntemplateGetAutocompleteV2Response ezsigntemplateGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage, fkiEzsignfoldertypeID)
 
 Retrieve Ezsigntemplates and IDs
 
@@ -318,8 +221,9 @@ String sSelector = null; // String | The type of Ezsigntemplates to return
 String eFilterActive = Active; // String | Specify which results we want to display.
 String sQuery = null; // String | Allow to filter the returned results
 HeaderAcceptLanguage acceptLanguage = null; // HeaderAcceptLanguage | 
+Integer fkiEzsignfoldertypeID = null; // Integer | The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic
 try {
-    EzsigntemplateGetAutocompleteV2Response result = apiInstance.ezsigntemplateGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage);
+    EzsigntemplateGetAutocompleteV2Response result = apiInstance.ezsigntemplateGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage, fkiEzsignfoldertypeID);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectEzsigntemplateApi#ezsigntemplateGetAutocompleteV2");
@@ -332,10 +236,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sSelector** | **String**| The type of Ezsigntemplates to return | [default to null] [enum: All]
+ **sSelector** | **String**| The type of Ezsigntemplates to return | [default to null] [enum: All, Ezsigntemplatepublic]
  **eFilterActive** | **String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive]
  **sQuery** | **String**| Allow to filter the returned results | [optional] [default to null]
  **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [default to null] [enum: *, en, fr]
+ **fkiEzsignfoldertypeID** | **Integer**| The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic | [optional] [default to null]
 
 ### Return type
 
@@ -405,55 +310,9 @@ Name | Type | Description  | Notes
 - **Accept**: application/json, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
 
 
-## ezsigntemplateGetObjectV1
+## ezsigntemplateGetObjectV3
 
-> EzsigntemplateGetObjectV1Response ezsigntemplateGetObjectV1(pkiEzsigntemplateID)
-
-Retrieve an existing Ezsigntemplate
-
-
-
-### Example
-
-```java
-// Import classes:
-//import org.openapitools.client.api.ObjectEzsigntemplateApi;
-
-ObjectEzsigntemplateApi apiInstance = new ObjectEzsigntemplateApi();
-Integer pkiEzsigntemplateID = null; // Integer | 
-try {
-    EzsigntemplateGetObjectV1Response result = apiInstance.ezsigntemplateGetObjectV1(pkiEzsigntemplateID);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling ObjectEzsigntemplateApi#ezsigntemplateGetObjectV1");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiEzsigntemplateID** | **Integer**|  | [default to null]
-
-### Return type
-
-[**EzsigntemplateGetObjectV1Response**](EzsigntemplateGetObjectV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## ezsigntemplateGetObjectV2
-
-> EzsigntemplateGetObjectV2Response ezsigntemplateGetObjectV2(pkiEzsigntemplateID)
+> EzsigntemplateGetObjectV3Response ezsigntemplateGetObjectV3(pkiEzsigntemplateID)
 
 Retrieve an existing Ezsigntemplate
 
@@ -468,10 +327,10 @@ Retrieve an existing Ezsigntemplate
 ObjectEzsigntemplateApi apiInstance = new ObjectEzsigntemplateApi();
 Integer pkiEzsigntemplateID = null; // Integer | 
 try {
-    EzsigntemplateGetObjectV2Response result = apiInstance.ezsigntemplateGetObjectV2(pkiEzsigntemplateID);
+    EzsigntemplateGetObjectV3Response result = apiInstance.ezsigntemplateGetObjectV3(pkiEzsigntemplateID);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling ObjectEzsigntemplateApi#ezsigntemplateGetObjectV2");
+    System.err.println("Exception when calling ObjectEzsigntemplateApi#ezsigntemplateGetObjectV3");
     e.printStackTrace();
 }
 ```
@@ -485,7 +344,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsigntemplateGetObjectV2Response**](EzsigntemplateGetObjectV2Response.md)
+[**EzsigntemplateGetObjectV3Response**](EzsigntemplateGetObjectV3Response.md)
 
 ### Authorization
 

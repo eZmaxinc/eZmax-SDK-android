@@ -50,7 +50,7 @@ public class EzsigndocumentRequestCompound {
   @SerializedName("sEzsigndocumentPassword")
   private String sEzsigndocumentPassword = null;
   public enum EEzsigndocumentFormEnum {
-     Keep,  Convert,  Discard, 
+     Keep,  Convert,  Discard,  Flatten, 
   };
   @SerializedName("eEzsigndocumentForm")
   private EEzsigndocumentFormEnum eEzsigndocumentForm = null;
@@ -189,9 +189,9 @@ public class EzsigndocumentRequestCompound {
   }
 
   /**
-   * If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID**  **Discard** removes the form from the document.
+   * If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID**  **Discard** removes the form from the document.  **Flatten** prints the form values in the document.
    **/
-  @ApiModelProperty(value = "If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID**  **Discard** removes the form from the document.")
+  @ApiModelProperty(value = "If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID**  **Discard** removes the form from the document.  **Flatten** prints the form values in the document.")
   public EEzsigndocumentFormEnum getEEzsigndocumentForm() {
     return eEzsigndocumentForm;
   }

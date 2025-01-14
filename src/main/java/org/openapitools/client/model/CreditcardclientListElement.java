@@ -25,24 +25,22 @@ public class CreditcardclientListElement {
   private Integer pkiCreditcardclientID = null;
   @SerializedName("fkiCreditcarddetailID")
   private Integer fkiCreditcarddetailID = null;
+  @SerializedName("fkiCreditcardtypeID")
+  private Integer fkiCreditcardtypeID = null;
   @SerializedName("bCreditcardclientrelationIsdefault")
   private Boolean bCreditcardclientrelationIsdefault = null;
   @SerializedName("sCreditcardclientDescription")
   private String sCreditcardclientDescription = null;
-  @SerializedName("bCreditcardclientIsactive")
-  private Boolean bCreditcardclientIsactive = null;
-  @SerializedName("bCreditcardclientAllowedagencypayment")
-  private Boolean bCreditcardclientAllowedagencypayment = null;
-  @SerializedName("bCreditcardclientAllowedroyallepageprotection")
-  private Boolean bCreditcardclientAllowedroyallepageprotection = null;
+  @SerializedName("bCreditcardclientAllowedcompanypayment")
+  private Boolean bCreditcardclientAllowedcompanypayment = null;
   @SerializedName("bCreditcardclientAllowedtranquillit")
   private Boolean bCreditcardclientAllowedtranquillit = null;
   @SerializedName("iCreditcarddetailExpirationmonth")
   private Integer iCreditcarddetailExpirationmonth = null;
   @SerializedName("iCreditcarddetailExpirationyear")
   private Integer iCreditcarddetailExpirationyear = null;
-  @SerializedName("sCreditcarddetailNumbermasked")
-  private String sCreditcarddetailNumbermasked = null;
+  @SerializedName("iCreditcarddetailLastdigits")
+  private Integer iCreditcarddetailLastdigits = null;
 
   /**
    * The unique ID of the Creditcardclient
@@ -71,9 +69,22 @@ public class CreditcardclientListElement {
   }
 
   /**
-   * Whether if it's an relationisdefault
+   * The unique ID of the Creditcardtype
+   * minimum: 0
+   * maximum: 255
    **/
-  @ApiModelProperty(required = true, value = "Whether if it's an relationisdefault")
+  @ApiModelProperty(required = true, value = "The unique ID of the Creditcardtype")
+  public Integer getFkiCreditcardtypeID() {
+    return fkiCreditcardtypeID;
+  }
+  public void setFkiCreditcardtypeID(Integer fkiCreditcardtypeID) {
+    this.fkiCreditcardtypeID = fkiCreditcardtypeID;
+  }
+
+  /**
+   * Whether if it's the creditcardclient is the default one
+   **/
+  @ApiModelProperty(required = true, value = "Whether if it's the creditcardclient is the default one")
   public Boolean getBCreditcardclientrelationIsdefault() {
     return bCreditcardclientrelationIsdefault;
   }
@@ -93,36 +104,14 @@ public class CreditcardclientListElement {
   }
 
   /**
-   * Whether the creditcardclient is active or not
-   **/
-  @ApiModelProperty(required = true, value = "Whether the creditcardclient is active or not")
-  public Boolean getBCreditcardclientIsactive() {
-    return bCreditcardclientIsactive;
-  }
-  public void setBCreditcardclientIsactive(Boolean bCreditcardclientIsactive) {
-    this.bCreditcardclientIsactive = bCreditcardclientIsactive;
-  }
-
-  /**
    * Whether if it's an allowedagencypayment
    **/
   @ApiModelProperty(required = true, value = "Whether if it's an allowedagencypayment")
-  public Boolean getBCreditcardclientAllowedagencypayment() {
-    return bCreditcardclientAllowedagencypayment;
+  public Boolean getBCreditcardclientAllowedcompanypayment() {
+    return bCreditcardclientAllowedcompanypayment;
   }
-  public void setBCreditcardclientAllowedagencypayment(Boolean bCreditcardclientAllowedagencypayment) {
-    this.bCreditcardclientAllowedagencypayment = bCreditcardclientAllowedagencypayment;
-  }
-
-  /**
-   * Whether if it's an allowedroyallepageprotection
-   **/
-  @ApiModelProperty(required = true, value = "Whether if it's an allowedroyallepageprotection")
-  public Boolean getBCreditcardclientAllowedroyallepageprotection() {
-    return bCreditcardclientAllowedroyallepageprotection;
-  }
-  public void setBCreditcardclientAllowedroyallepageprotection(Boolean bCreditcardclientAllowedroyallepageprotection) {
-    this.bCreditcardclientAllowedroyallepageprotection = bCreditcardclientAllowedroyallepageprotection;
+  public void setBCreditcardclientAllowedcompanypayment(Boolean bCreditcardclientAllowedcompanypayment) {
+    this.bCreditcardclientAllowedcompanypayment = bCreditcardclientAllowedcompanypayment;
   }
 
   /**
@@ -163,14 +152,16 @@ public class CreditcardclientListElement {
   }
 
   /**
-   * The numbermasked of the Creditcarddetail
+   * The last digits of the Creditcarddetail
+   * minimum: 0
+   * maximum: 9999
    **/
-  @ApiModelProperty(required = true, value = "The numbermasked of the Creditcarddetail")
-  public String getSCreditcarddetailNumbermasked() {
-    return sCreditcarddetailNumbermasked;
+  @ApiModelProperty(required = true, value = "The last digits of the Creditcarddetail")
+  public Integer getICreditcarddetailLastdigits() {
+    return iCreditcarddetailLastdigits;
   }
-  public void setSCreditcarddetailNumbermasked(String sCreditcarddetailNumbermasked) {
-    this.sCreditcarddetailNumbermasked = sCreditcarddetailNumbermasked;
+  public void setICreditcarddetailLastdigits(Integer iCreditcarddetailLastdigits) {
+    this.iCreditcarddetailLastdigits = iCreditcarddetailLastdigits;
   }
 
 
@@ -185,15 +176,14 @@ public class CreditcardclientListElement {
     CreditcardclientListElement creditcardclientListElement = (CreditcardclientListElement) o;
     return (this.pkiCreditcardclientID == null ? creditcardclientListElement.pkiCreditcardclientID == null : this.pkiCreditcardclientID.equals(creditcardclientListElement.pkiCreditcardclientID)) &&
         (this.fkiCreditcarddetailID == null ? creditcardclientListElement.fkiCreditcarddetailID == null : this.fkiCreditcarddetailID.equals(creditcardclientListElement.fkiCreditcarddetailID)) &&
+        (this.fkiCreditcardtypeID == null ? creditcardclientListElement.fkiCreditcardtypeID == null : this.fkiCreditcardtypeID.equals(creditcardclientListElement.fkiCreditcardtypeID)) &&
         (this.bCreditcardclientrelationIsdefault == null ? creditcardclientListElement.bCreditcardclientrelationIsdefault == null : this.bCreditcardclientrelationIsdefault.equals(creditcardclientListElement.bCreditcardclientrelationIsdefault)) &&
         (this.sCreditcardclientDescription == null ? creditcardclientListElement.sCreditcardclientDescription == null : this.sCreditcardclientDescription.equals(creditcardclientListElement.sCreditcardclientDescription)) &&
-        (this.bCreditcardclientIsactive == null ? creditcardclientListElement.bCreditcardclientIsactive == null : this.bCreditcardclientIsactive.equals(creditcardclientListElement.bCreditcardclientIsactive)) &&
-        (this.bCreditcardclientAllowedagencypayment == null ? creditcardclientListElement.bCreditcardclientAllowedagencypayment == null : this.bCreditcardclientAllowedagencypayment.equals(creditcardclientListElement.bCreditcardclientAllowedagencypayment)) &&
-        (this.bCreditcardclientAllowedroyallepageprotection == null ? creditcardclientListElement.bCreditcardclientAllowedroyallepageprotection == null : this.bCreditcardclientAllowedroyallepageprotection.equals(creditcardclientListElement.bCreditcardclientAllowedroyallepageprotection)) &&
+        (this.bCreditcardclientAllowedcompanypayment == null ? creditcardclientListElement.bCreditcardclientAllowedcompanypayment == null : this.bCreditcardclientAllowedcompanypayment.equals(creditcardclientListElement.bCreditcardclientAllowedcompanypayment)) &&
         (this.bCreditcardclientAllowedtranquillit == null ? creditcardclientListElement.bCreditcardclientAllowedtranquillit == null : this.bCreditcardclientAllowedtranquillit.equals(creditcardclientListElement.bCreditcardclientAllowedtranquillit)) &&
         (this.iCreditcarddetailExpirationmonth == null ? creditcardclientListElement.iCreditcarddetailExpirationmonth == null : this.iCreditcarddetailExpirationmonth.equals(creditcardclientListElement.iCreditcarddetailExpirationmonth)) &&
         (this.iCreditcarddetailExpirationyear == null ? creditcardclientListElement.iCreditcarddetailExpirationyear == null : this.iCreditcarddetailExpirationyear.equals(creditcardclientListElement.iCreditcarddetailExpirationyear)) &&
-        (this.sCreditcarddetailNumbermasked == null ? creditcardclientListElement.sCreditcarddetailNumbermasked == null : this.sCreditcarddetailNumbermasked.equals(creditcardclientListElement.sCreditcarddetailNumbermasked));
+        (this.iCreditcarddetailLastdigits == null ? creditcardclientListElement.iCreditcarddetailLastdigits == null : this.iCreditcarddetailLastdigits.equals(creditcardclientListElement.iCreditcarddetailLastdigits));
   }
 
   @Override
@@ -201,15 +191,14 @@ public class CreditcardclientListElement {
     int result = 17;
     result = 31 * result + (this.pkiCreditcardclientID == null ? 0: this.pkiCreditcardclientID.hashCode());
     result = 31 * result + (this.fkiCreditcarddetailID == null ? 0: this.fkiCreditcarddetailID.hashCode());
+    result = 31 * result + (this.fkiCreditcardtypeID == null ? 0: this.fkiCreditcardtypeID.hashCode());
     result = 31 * result + (this.bCreditcardclientrelationIsdefault == null ? 0: this.bCreditcardclientrelationIsdefault.hashCode());
     result = 31 * result + (this.sCreditcardclientDescription == null ? 0: this.sCreditcardclientDescription.hashCode());
-    result = 31 * result + (this.bCreditcardclientIsactive == null ? 0: this.bCreditcardclientIsactive.hashCode());
-    result = 31 * result + (this.bCreditcardclientAllowedagencypayment == null ? 0: this.bCreditcardclientAllowedagencypayment.hashCode());
-    result = 31 * result + (this.bCreditcardclientAllowedroyallepageprotection == null ? 0: this.bCreditcardclientAllowedroyallepageprotection.hashCode());
+    result = 31 * result + (this.bCreditcardclientAllowedcompanypayment == null ? 0: this.bCreditcardclientAllowedcompanypayment.hashCode());
     result = 31 * result + (this.bCreditcardclientAllowedtranquillit == null ? 0: this.bCreditcardclientAllowedtranquillit.hashCode());
     result = 31 * result + (this.iCreditcarddetailExpirationmonth == null ? 0: this.iCreditcarddetailExpirationmonth.hashCode());
     result = 31 * result + (this.iCreditcarddetailExpirationyear == null ? 0: this.iCreditcarddetailExpirationyear.hashCode());
-    result = 31 * result + (this.sCreditcarddetailNumbermasked == null ? 0: this.sCreditcarddetailNumbermasked.hashCode());
+    result = 31 * result + (this.iCreditcarddetailLastdigits == null ? 0: this.iCreditcarddetailLastdigits.hashCode());
     return result;
   }
 
@@ -220,15 +209,14 @@ public class CreditcardclientListElement {
     
     sb.append("  pkiCreditcardclientID: ").append(pkiCreditcardclientID).append("\n");
     sb.append("  fkiCreditcarddetailID: ").append(fkiCreditcarddetailID).append("\n");
+    sb.append("  fkiCreditcardtypeID: ").append(fkiCreditcardtypeID).append("\n");
     sb.append("  bCreditcardclientrelationIsdefault: ").append(bCreditcardclientrelationIsdefault).append("\n");
     sb.append("  sCreditcardclientDescription: ").append(sCreditcardclientDescription).append("\n");
-    sb.append("  bCreditcardclientIsactive: ").append(bCreditcardclientIsactive).append("\n");
-    sb.append("  bCreditcardclientAllowedagencypayment: ").append(bCreditcardclientAllowedagencypayment).append("\n");
-    sb.append("  bCreditcardclientAllowedroyallepageprotection: ").append(bCreditcardclientAllowedroyallepageprotection).append("\n");
+    sb.append("  bCreditcardclientAllowedcompanypayment: ").append(bCreditcardclientAllowedcompanypayment).append("\n");
     sb.append("  bCreditcardclientAllowedtranquillit: ").append(bCreditcardclientAllowedtranquillit).append("\n");
     sb.append("  iCreditcarddetailExpirationmonth: ").append(iCreditcarddetailExpirationmonth).append("\n");
     sb.append("  iCreditcarddetailExpirationyear: ").append(iCreditcarddetailExpirationyear).append("\n");
-    sb.append("  sCreditcarddetailNumbermasked: ").append(sCreditcarddetailNumbermasked).append("\n");
+    sb.append("  iCreditcarddetailLastdigits: ").append(iCreditcarddetailLastdigits).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

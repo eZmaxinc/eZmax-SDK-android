@@ -23,6 +23,12 @@ public class CustomEzsignfoldertypeResponse {
   
   @SerializedName("pkiEzsignfoldertypeID")
   private Integer pkiEzsignfoldertypeID = null;
+  @SerializedName("fkiFontIDAnnotation")
+  private Integer fkiFontIDAnnotation = null;
+  @SerializedName("fkiFontIDFormfield")
+  private Integer fkiFontIDFormfield = null;
+  @SerializedName("fkiFontIDSignature")
+  private Integer fkiFontIDSignature = null;
   @SerializedName("sEzsignfoldertypeNameX")
   private String sEzsignfoldertypeNameX = null;
   @SerializedName("bEzsignfoldertypeSendproofezsignsigner")
@@ -31,6 +37,8 @@ public class CustomEzsignfoldertypeResponse {
   private Boolean bEzsignfoldertypeAllowdownloadattachmentezsignsigner = null;
   @SerializedName("bEzsignfoldertypeAllowdownloadproofezsignsigner")
   private Boolean bEzsignfoldertypeAllowdownloadproofezsignsigner = null;
+  @SerializedName("bEzsignfoldertypeAutomaticsignature")
+  private Boolean bEzsignfoldertypeAutomaticsignature = null;
   @SerializedName("bEzsignfoldertypeDelegate")
   private Boolean bEzsignfoldertypeDelegate = null;
   @SerializedName("bEzsignfoldertypeDiscussion")
@@ -39,6 +47,14 @@ public class CustomEzsignfoldertypeResponse {
   private Boolean bEzsignfoldertypeReassignezsignsigner = null;
   @SerializedName("bEzsignfoldertypeReassignuser")
   private Boolean bEzsignfoldertypeReassignuser = null;
+  @SerializedName("bEzsignfoldertypeReassigngroup")
+  private Boolean bEzsignfoldertypeReassigngroup = null;
+  @SerializedName("iEzsignfoldertypeDeadlinedays")
+  private Integer iEzsignfoldertypeDeadlinedays = null;
+  @SerializedName("iEzsignfoldertypeFontsizeannotation")
+  private Integer iEzsignfoldertypeFontsizeannotation = null;
+  @SerializedName("iEzsignfoldertypeFontsizeformfield")
+  private Integer iEzsignfoldertypeFontsizeformfield = null;
 
   /**
    * The unique ID of the Ezsignfoldertype.
@@ -51,6 +67,42 @@ public class CustomEzsignfoldertypeResponse {
   }
   public void setPkiEzsignfoldertypeID(Integer pkiEzsignfoldertypeID) {
     this.pkiEzsignfoldertypeID = pkiEzsignfoldertypeID;
+  }
+
+  /**
+   * The unique ID of the Font
+   * minimum: 0
+   **/
+  @ApiModelProperty(value = "The unique ID of the Font")
+  public Integer getFkiFontIDAnnotation() {
+    return fkiFontIDAnnotation;
+  }
+  public void setFkiFontIDAnnotation(Integer fkiFontIDAnnotation) {
+    this.fkiFontIDAnnotation = fkiFontIDAnnotation;
+  }
+
+  /**
+   * The unique ID of the Font
+   * minimum: 0
+   **/
+  @ApiModelProperty(value = "The unique ID of the Font")
+  public Integer getFkiFontIDFormfield() {
+    return fkiFontIDFormfield;
+  }
+  public void setFkiFontIDFormfield(Integer fkiFontIDFormfield) {
+    this.fkiFontIDFormfield = fkiFontIDFormfield;
+  }
+
+  /**
+   * The unique ID of the Font
+   * minimum: 0
+   **/
+  @ApiModelProperty(value = "The unique ID of the Font")
+  public Integer getFkiFontIDSignature() {
+    return fkiFontIDSignature;
+  }
+  public void setFkiFontIDSignature(Integer fkiFontIDSignature) {
+    this.fkiFontIDSignature = fkiFontIDSignature;
   }
 
   /**
@@ -98,6 +150,17 @@ public class CustomEzsignfoldertypeResponse {
   }
 
   /**
+   * Whether we allow the automatic signature by an User
+   **/
+  @ApiModelProperty(value = "Whether we allow the automatic signature by an User")
+  public Boolean getBEzsignfoldertypeAutomaticsignature() {
+    return bEzsignfoldertypeAutomaticsignature;
+  }
+  public void setBEzsignfoldertypeAutomaticsignature(Boolean bEzsignfoldertypeAutomaticsignature) {
+    this.bEzsignfoldertypeAutomaticsignature = bEzsignfoldertypeAutomaticsignature;
+  }
+
+  /**
    * Wheter if delegation of signature is allowed to another user or not
    **/
   @ApiModelProperty(value = "Wheter if delegation of signature is allowed to another user or not")
@@ -141,6 +204,56 @@ public class CustomEzsignfoldertypeResponse {
     this.bEzsignfoldertypeReassignuser = bEzsignfoldertypeReassignuser;
   }
 
+  /**
+   * Wheter if Reassignment of signatures of the groups to which the user belongs is authorized by a user to himself
+   **/
+  @ApiModelProperty(value = "Wheter if Reassignment of signatures of the groups to which the user belongs is authorized by a user to himself")
+  public Boolean getBEzsignfoldertypeReassigngroup() {
+    return bEzsignfoldertypeReassigngroup;
+  }
+  public void setBEzsignfoldertypeReassigngroup(Boolean bEzsignfoldertypeReassigngroup) {
+    this.bEzsignfoldertypeReassigngroup = bEzsignfoldertypeReassigngroup;
+  }
+
+  /**
+   * The number of days to get all Ezsignsignatures
+   * minimum: 1
+   * maximum: 60
+   **/
+  @ApiModelProperty(value = "The number of days to get all Ezsignsignatures")
+  public Integer getIEzsignfoldertypeDeadlinedays() {
+    return iEzsignfoldertypeDeadlinedays;
+  }
+  public void setIEzsignfoldertypeDeadlinedays(Integer iEzsignfoldertypeDeadlinedays) {
+    this.iEzsignfoldertypeDeadlinedays = iEzsignfoldertypeDeadlinedays;
+  }
+
+  /**
+   * Font size for annotations
+   * minimum: 1
+   * maximum: 255
+   **/
+  @ApiModelProperty(value = "Font size for annotations")
+  public Integer getIEzsignfoldertypeFontsizeannotation() {
+    return iEzsignfoldertypeFontsizeannotation;
+  }
+  public void setIEzsignfoldertypeFontsizeannotation(Integer iEzsignfoldertypeFontsizeannotation) {
+    this.iEzsignfoldertypeFontsizeannotation = iEzsignfoldertypeFontsizeannotation;
+  }
+
+  /**
+   * Font size for form fields
+   * minimum: 1
+   * maximum: 255
+   **/
+  @ApiModelProperty(value = "Font size for form fields")
+  public Integer getIEzsignfoldertypeFontsizeformfield() {
+    return iEzsignfoldertypeFontsizeformfield;
+  }
+  public void setIEzsignfoldertypeFontsizeformfield(Integer iEzsignfoldertypeFontsizeformfield) {
+    this.iEzsignfoldertypeFontsizeformfield = iEzsignfoldertypeFontsizeformfield;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -152,28 +265,44 @@ public class CustomEzsignfoldertypeResponse {
     }
     CustomEzsignfoldertypeResponse customEzsignfoldertypeResponse = (CustomEzsignfoldertypeResponse) o;
     return (this.pkiEzsignfoldertypeID == null ? customEzsignfoldertypeResponse.pkiEzsignfoldertypeID == null : this.pkiEzsignfoldertypeID.equals(customEzsignfoldertypeResponse.pkiEzsignfoldertypeID)) &&
+        (this.fkiFontIDAnnotation == null ? customEzsignfoldertypeResponse.fkiFontIDAnnotation == null : this.fkiFontIDAnnotation.equals(customEzsignfoldertypeResponse.fkiFontIDAnnotation)) &&
+        (this.fkiFontIDFormfield == null ? customEzsignfoldertypeResponse.fkiFontIDFormfield == null : this.fkiFontIDFormfield.equals(customEzsignfoldertypeResponse.fkiFontIDFormfield)) &&
+        (this.fkiFontIDSignature == null ? customEzsignfoldertypeResponse.fkiFontIDSignature == null : this.fkiFontIDSignature.equals(customEzsignfoldertypeResponse.fkiFontIDSignature)) &&
         (this.sEzsignfoldertypeNameX == null ? customEzsignfoldertypeResponse.sEzsignfoldertypeNameX == null : this.sEzsignfoldertypeNameX.equals(customEzsignfoldertypeResponse.sEzsignfoldertypeNameX)) &&
         (this.bEzsignfoldertypeSendproofezsignsigner == null ? customEzsignfoldertypeResponse.bEzsignfoldertypeSendproofezsignsigner == null : this.bEzsignfoldertypeSendproofezsignsigner.equals(customEzsignfoldertypeResponse.bEzsignfoldertypeSendproofezsignsigner)) &&
         (this.bEzsignfoldertypeAllowdownloadattachmentezsignsigner == null ? customEzsignfoldertypeResponse.bEzsignfoldertypeAllowdownloadattachmentezsignsigner == null : this.bEzsignfoldertypeAllowdownloadattachmentezsignsigner.equals(customEzsignfoldertypeResponse.bEzsignfoldertypeAllowdownloadattachmentezsignsigner)) &&
         (this.bEzsignfoldertypeAllowdownloadproofezsignsigner == null ? customEzsignfoldertypeResponse.bEzsignfoldertypeAllowdownloadproofezsignsigner == null : this.bEzsignfoldertypeAllowdownloadproofezsignsigner.equals(customEzsignfoldertypeResponse.bEzsignfoldertypeAllowdownloadproofezsignsigner)) &&
+        (this.bEzsignfoldertypeAutomaticsignature == null ? customEzsignfoldertypeResponse.bEzsignfoldertypeAutomaticsignature == null : this.bEzsignfoldertypeAutomaticsignature.equals(customEzsignfoldertypeResponse.bEzsignfoldertypeAutomaticsignature)) &&
         (this.bEzsignfoldertypeDelegate == null ? customEzsignfoldertypeResponse.bEzsignfoldertypeDelegate == null : this.bEzsignfoldertypeDelegate.equals(customEzsignfoldertypeResponse.bEzsignfoldertypeDelegate)) &&
         (this.bEzsignfoldertypeDiscussion == null ? customEzsignfoldertypeResponse.bEzsignfoldertypeDiscussion == null : this.bEzsignfoldertypeDiscussion.equals(customEzsignfoldertypeResponse.bEzsignfoldertypeDiscussion)) &&
         (this.bEzsignfoldertypeReassignezsignsigner == null ? customEzsignfoldertypeResponse.bEzsignfoldertypeReassignezsignsigner == null : this.bEzsignfoldertypeReassignezsignsigner.equals(customEzsignfoldertypeResponse.bEzsignfoldertypeReassignezsignsigner)) &&
-        (this.bEzsignfoldertypeReassignuser == null ? customEzsignfoldertypeResponse.bEzsignfoldertypeReassignuser == null : this.bEzsignfoldertypeReassignuser.equals(customEzsignfoldertypeResponse.bEzsignfoldertypeReassignuser));
+        (this.bEzsignfoldertypeReassignuser == null ? customEzsignfoldertypeResponse.bEzsignfoldertypeReassignuser == null : this.bEzsignfoldertypeReassignuser.equals(customEzsignfoldertypeResponse.bEzsignfoldertypeReassignuser)) &&
+        (this.bEzsignfoldertypeReassigngroup == null ? customEzsignfoldertypeResponse.bEzsignfoldertypeReassigngroup == null : this.bEzsignfoldertypeReassigngroup.equals(customEzsignfoldertypeResponse.bEzsignfoldertypeReassigngroup)) &&
+        (this.iEzsignfoldertypeDeadlinedays == null ? customEzsignfoldertypeResponse.iEzsignfoldertypeDeadlinedays == null : this.iEzsignfoldertypeDeadlinedays.equals(customEzsignfoldertypeResponse.iEzsignfoldertypeDeadlinedays)) &&
+        (this.iEzsignfoldertypeFontsizeannotation == null ? customEzsignfoldertypeResponse.iEzsignfoldertypeFontsizeannotation == null : this.iEzsignfoldertypeFontsizeannotation.equals(customEzsignfoldertypeResponse.iEzsignfoldertypeFontsizeannotation)) &&
+        (this.iEzsignfoldertypeFontsizeformfield == null ? customEzsignfoldertypeResponse.iEzsignfoldertypeFontsizeformfield == null : this.iEzsignfoldertypeFontsizeformfield.equals(customEzsignfoldertypeResponse.iEzsignfoldertypeFontsizeformfield));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
     result = 31 * result + (this.pkiEzsignfoldertypeID == null ? 0: this.pkiEzsignfoldertypeID.hashCode());
+    result = 31 * result + (this.fkiFontIDAnnotation == null ? 0: this.fkiFontIDAnnotation.hashCode());
+    result = 31 * result + (this.fkiFontIDFormfield == null ? 0: this.fkiFontIDFormfield.hashCode());
+    result = 31 * result + (this.fkiFontIDSignature == null ? 0: this.fkiFontIDSignature.hashCode());
     result = 31 * result + (this.sEzsignfoldertypeNameX == null ? 0: this.sEzsignfoldertypeNameX.hashCode());
     result = 31 * result + (this.bEzsignfoldertypeSendproofezsignsigner == null ? 0: this.bEzsignfoldertypeSendproofezsignsigner.hashCode());
     result = 31 * result + (this.bEzsignfoldertypeAllowdownloadattachmentezsignsigner == null ? 0: this.bEzsignfoldertypeAllowdownloadattachmentezsignsigner.hashCode());
     result = 31 * result + (this.bEzsignfoldertypeAllowdownloadproofezsignsigner == null ? 0: this.bEzsignfoldertypeAllowdownloadproofezsignsigner.hashCode());
+    result = 31 * result + (this.bEzsignfoldertypeAutomaticsignature == null ? 0: this.bEzsignfoldertypeAutomaticsignature.hashCode());
     result = 31 * result + (this.bEzsignfoldertypeDelegate == null ? 0: this.bEzsignfoldertypeDelegate.hashCode());
     result = 31 * result + (this.bEzsignfoldertypeDiscussion == null ? 0: this.bEzsignfoldertypeDiscussion.hashCode());
     result = 31 * result + (this.bEzsignfoldertypeReassignezsignsigner == null ? 0: this.bEzsignfoldertypeReassignezsignsigner.hashCode());
     result = 31 * result + (this.bEzsignfoldertypeReassignuser == null ? 0: this.bEzsignfoldertypeReassignuser.hashCode());
+    result = 31 * result + (this.bEzsignfoldertypeReassigngroup == null ? 0: this.bEzsignfoldertypeReassigngroup.hashCode());
+    result = 31 * result + (this.iEzsignfoldertypeDeadlinedays == null ? 0: this.iEzsignfoldertypeDeadlinedays.hashCode());
+    result = 31 * result + (this.iEzsignfoldertypeFontsizeannotation == null ? 0: this.iEzsignfoldertypeFontsizeannotation.hashCode());
+    result = 31 * result + (this.iEzsignfoldertypeFontsizeformfield == null ? 0: this.iEzsignfoldertypeFontsizeformfield.hashCode());
     return result;
   }
 
@@ -183,14 +312,22 @@ public class CustomEzsignfoldertypeResponse {
     sb.append("class CustomEzsignfoldertypeResponse {\n");
     
     sb.append("  pkiEzsignfoldertypeID: ").append(pkiEzsignfoldertypeID).append("\n");
+    sb.append("  fkiFontIDAnnotation: ").append(fkiFontIDAnnotation).append("\n");
+    sb.append("  fkiFontIDFormfield: ").append(fkiFontIDFormfield).append("\n");
+    sb.append("  fkiFontIDSignature: ").append(fkiFontIDSignature).append("\n");
     sb.append("  sEzsignfoldertypeNameX: ").append(sEzsignfoldertypeNameX).append("\n");
     sb.append("  bEzsignfoldertypeSendproofezsignsigner: ").append(bEzsignfoldertypeSendproofezsignsigner).append("\n");
     sb.append("  bEzsignfoldertypeAllowdownloadattachmentezsignsigner: ").append(bEzsignfoldertypeAllowdownloadattachmentezsignsigner).append("\n");
     sb.append("  bEzsignfoldertypeAllowdownloadproofezsignsigner: ").append(bEzsignfoldertypeAllowdownloadproofezsignsigner).append("\n");
+    sb.append("  bEzsignfoldertypeAutomaticsignature: ").append(bEzsignfoldertypeAutomaticsignature).append("\n");
     sb.append("  bEzsignfoldertypeDelegate: ").append(bEzsignfoldertypeDelegate).append("\n");
     sb.append("  bEzsignfoldertypeDiscussion: ").append(bEzsignfoldertypeDiscussion).append("\n");
     sb.append("  bEzsignfoldertypeReassignezsignsigner: ").append(bEzsignfoldertypeReassignezsignsigner).append("\n");
     sb.append("  bEzsignfoldertypeReassignuser: ").append(bEzsignfoldertypeReassignuser).append("\n");
+    sb.append("  bEzsignfoldertypeReassigngroup: ").append(bEzsignfoldertypeReassigngroup).append("\n");
+    sb.append("  iEzsignfoldertypeDeadlinedays: ").append(iEzsignfoldertypeDeadlinedays).append("\n");
+    sb.append("  iEzsignfoldertypeFontsizeannotation: ").append(iEzsignfoldertypeFontsizeannotation).append("\n");
+    sb.append("  iEzsignfoldertypeFontsizeformfield: ").append(iEzsignfoldertypeFontsizeformfield).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

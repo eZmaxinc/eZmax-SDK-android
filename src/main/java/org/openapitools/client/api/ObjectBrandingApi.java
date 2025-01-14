@@ -23,13 +23,13 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
-import org.openapitools.client.model.BrandingCreateObjectV1Request;
-import org.openapitools.client.model.BrandingCreateObjectV1Response;
-import org.openapitools.client.model.BrandingEditObjectV1Request;
-import org.openapitools.client.model.BrandingEditObjectV1Response;
+import org.openapitools.client.model.BrandingCreateObjectV2Request;
+import org.openapitools.client.model.BrandingCreateObjectV2Response;
+import org.openapitools.client.model.BrandingEditObjectV2Request;
+import org.openapitools.client.model.BrandingEditObjectV2Response;
 import org.openapitools.client.model.BrandingGetAutocompleteV2Response;
 import org.openapitools.client.model.BrandingGetListV1Response;
-import org.openapitools.client.model.BrandingGetObjectV2Response;
+import org.openapitools.client.model.BrandingGetObjectV3Response;
 import org.openapitools.client.model.CommonResponseError;
 import java.io.File;
 import org.openapitools.client.model.HeaderAcceptLanguage;
@@ -67,19 +67,19 @@ public class ObjectBrandingApi {
   /**
   * Create a new Branding
   * The endpoint allows to create one or many elements at once.
-   * @param brandingCreateObjectV1Request 
-   * @return BrandingCreateObjectV1Response
+   * @param brandingCreateObjectV2Request 
+   * @return BrandingCreateObjectV2Response
   */
-  public BrandingCreateObjectV1Response brandingCreateObjectV1 (BrandingCreateObjectV1Request brandingCreateObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
-    Object postBody = brandingCreateObjectV1Request;
-    // verify the required parameter 'brandingCreateObjectV1Request' is set
-    if (brandingCreateObjectV1Request == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'brandingCreateObjectV1Request' when calling brandingCreateObjectV1",
-        new ApiException(400, "Missing the required parameter 'brandingCreateObjectV1Request' when calling brandingCreateObjectV1"));
+  public BrandingCreateObjectV2Response brandingCreateObjectV2 (BrandingCreateObjectV2Request brandingCreateObjectV2Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = brandingCreateObjectV2Request;
+    // verify the required parameter 'brandingCreateObjectV2Request' is set
+    if (brandingCreateObjectV2Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'brandingCreateObjectV2Request' when calling brandingCreateObjectV2",
+        new ApiException(400, "Missing the required parameter 'brandingCreateObjectV2Request' when calling brandingCreateObjectV2"));
     }
 
     // create path and map variables
-    String path = "/1/object/branding";
+    String path = "/2/object/branding";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -106,7 +106,7 @@ public class ObjectBrandingApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (BrandingCreateObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", BrandingCreateObjectV1Response.class);
+         return (BrandingCreateObjectV2Response) ApiInvoker.deserialize(localVarResponse, "", BrandingCreateObjectV2Response.class);
       } else {
          return null;
       }
@@ -130,19 +130,19 @@ public class ObjectBrandingApi {
       /**
    * Create a new Branding
    * The endpoint allows to create one or many elements at once.
-   * @param brandingCreateObjectV1Request 
+   * @param brandingCreateObjectV2Request 
   */
-  public void brandingCreateObjectV1 (BrandingCreateObjectV1Request brandingCreateObjectV1Request, final Response.Listener<BrandingCreateObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
-    Object postBody = brandingCreateObjectV1Request;
+  public void brandingCreateObjectV2 (BrandingCreateObjectV2Request brandingCreateObjectV2Request, final Response.Listener<BrandingCreateObjectV2Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = brandingCreateObjectV2Request;
 
-    // verify the required parameter 'brandingCreateObjectV1Request' is set
-    if (brandingCreateObjectV1Request == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'brandingCreateObjectV1Request' when calling brandingCreateObjectV1",
-        new ApiException(400, "Missing the required parameter 'brandingCreateObjectV1Request' when calling brandingCreateObjectV1"));
+    // verify the required parameter 'brandingCreateObjectV2Request' is set
+    if (brandingCreateObjectV2Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'brandingCreateObjectV2Request' when calling brandingCreateObjectV2",
+        new ApiException(400, "Missing the required parameter 'brandingCreateObjectV2Request' when calling brandingCreateObjectV2"));
     }
 
     // create path and map variables
-    String path = "/1/object/branding".replaceAll("\\{format\\}","json");
+    String path = "/2/object/branding".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -177,7 +177,7 @@ public class ObjectBrandingApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((BrandingCreateObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", BrandingCreateObjectV1Response.class));
+              responseListener.onResponse((BrandingCreateObjectV2Response) ApiInvoker.deserialize(localVarResponse,  "", BrandingCreateObjectV2Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -196,24 +196,24 @@ public class ObjectBrandingApi {
   * Edit an existing Branding
   * 
    * @param pkiBrandingID 
-   * @param brandingEditObjectV1Request 
-   * @return BrandingEditObjectV1Response
+   * @param brandingEditObjectV2Request 
+   * @return BrandingEditObjectV2Response
   */
-  public BrandingEditObjectV1Response brandingEditObjectV1 (Integer pkiBrandingID, BrandingEditObjectV1Request brandingEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
-    Object postBody = brandingEditObjectV1Request;
+  public BrandingEditObjectV2Response brandingEditObjectV2 (Integer pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = brandingEditObjectV2Request;
     // verify the required parameter 'pkiBrandingID' is set
     if (pkiBrandingID == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'pkiBrandingID' when calling brandingEditObjectV1",
-        new ApiException(400, "Missing the required parameter 'pkiBrandingID' when calling brandingEditObjectV1"));
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiBrandingID' when calling brandingEditObjectV2",
+        new ApiException(400, "Missing the required parameter 'pkiBrandingID' when calling brandingEditObjectV2"));
     }
-    // verify the required parameter 'brandingEditObjectV1Request' is set
-    if (brandingEditObjectV1Request == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'brandingEditObjectV1Request' when calling brandingEditObjectV1",
-        new ApiException(400, "Missing the required parameter 'brandingEditObjectV1Request' when calling brandingEditObjectV1"));
+    // verify the required parameter 'brandingEditObjectV2Request' is set
+    if (brandingEditObjectV2Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'brandingEditObjectV2Request' when calling brandingEditObjectV2",
+        new ApiException(400, "Missing the required parameter 'brandingEditObjectV2Request' when calling brandingEditObjectV2"));
     }
 
     // create path and map variables
-    String path = "/1/object/branding/{pkiBrandingID}".replaceAll("\\{" + "pkiBrandingID" + "\\}", apiInvoker.escapeString(pkiBrandingID.toString()));
+    String path = "/2/object/branding/{pkiBrandingID}".replaceAll("\\{" + "pkiBrandingID" + "\\}", apiInvoker.escapeString(pkiBrandingID.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -240,7 +240,7 @@ public class ObjectBrandingApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (BrandingEditObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", BrandingEditObjectV1Response.class);
+         return (BrandingEditObjectV2Response) ApiInvoker.deserialize(localVarResponse, "", BrandingEditObjectV2Response.class);
       } else {
          return null;
       }
@@ -264,24 +264,24 @@ public class ObjectBrandingApi {
       /**
    * Edit an existing Branding
    * 
-   * @param pkiBrandingID    * @param brandingEditObjectV1Request 
+   * @param pkiBrandingID    * @param brandingEditObjectV2Request 
   */
-  public void brandingEditObjectV1 (Integer pkiBrandingID, BrandingEditObjectV1Request brandingEditObjectV1Request, final Response.Listener<BrandingEditObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
-    Object postBody = brandingEditObjectV1Request;
+  public void brandingEditObjectV2 (Integer pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request, final Response.Listener<BrandingEditObjectV2Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = brandingEditObjectV2Request;
 
     // verify the required parameter 'pkiBrandingID' is set
     if (pkiBrandingID == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'pkiBrandingID' when calling brandingEditObjectV1",
-        new ApiException(400, "Missing the required parameter 'pkiBrandingID' when calling brandingEditObjectV1"));
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiBrandingID' when calling brandingEditObjectV2",
+        new ApiException(400, "Missing the required parameter 'pkiBrandingID' when calling brandingEditObjectV2"));
     }
-    // verify the required parameter 'brandingEditObjectV1Request' is set
-    if (brandingEditObjectV1Request == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'brandingEditObjectV1Request' when calling brandingEditObjectV1",
-        new ApiException(400, "Missing the required parameter 'brandingEditObjectV1Request' when calling brandingEditObjectV1"));
+    // verify the required parameter 'brandingEditObjectV2Request' is set
+    if (brandingEditObjectV2Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'brandingEditObjectV2Request' when calling brandingEditObjectV2",
+        new ApiException(400, "Missing the required parameter 'brandingEditObjectV2Request' when calling brandingEditObjectV2"));
     }
 
     // create path and map variables
-    String path = "/1/object/branding/{pkiBrandingID}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiBrandingID" + "\\}", apiInvoker.escapeString(pkiBrandingID.toString()));
+    String path = "/2/object/branding/{pkiBrandingID}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiBrandingID" + "\\}", apiInvoker.escapeString(pkiBrandingID.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -316,7 +316,7 @@ public class ObjectBrandingApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((BrandingEditObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", BrandingEditObjectV1Response.class));
+              responseListener.onResponse((BrandingEditObjectV2Response) ApiInvoker.deserialize(localVarResponse,  "", BrandingEditObjectV2Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -602,18 +602,18 @@ public class ObjectBrandingApi {
   * Retrieve an existing Branding
   * 
    * @param pkiBrandingID 
-   * @return BrandingGetObjectV2Response
+   * @return BrandingGetObjectV3Response
   */
-  public BrandingGetObjectV2Response brandingGetObjectV2 (Integer pkiBrandingID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public BrandingGetObjectV3Response brandingGetObjectV3 (Integer pkiBrandingID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'pkiBrandingID' is set
     if (pkiBrandingID == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'pkiBrandingID' when calling brandingGetObjectV2",
-        new ApiException(400, "Missing the required parameter 'pkiBrandingID' when calling brandingGetObjectV2"));
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiBrandingID' when calling brandingGetObjectV3",
+        new ApiException(400, "Missing the required parameter 'pkiBrandingID' when calling brandingGetObjectV3"));
     }
 
     // create path and map variables
-    String path = "/2/object/branding/{pkiBrandingID}".replaceAll("\\{" + "pkiBrandingID" + "\\}", apiInvoker.escapeString(pkiBrandingID.toString()));
+    String path = "/3/object/branding/{pkiBrandingID}".replaceAll("\\{" + "pkiBrandingID" + "\\}", apiInvoker.escapeString(pkiBrandingID.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -639,7 +639,7 @@ public class ObjectBrandingApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (BrandingGetObjectV2Response) ApiInvoker.deserialize(localVarResponse, "", BrandingGetObjectV2Response.class);
+         return (BrandingGetObjectV3Response) ApiInvoker.deserialize(localVarResponse, "", BrandingGetObjectV3Response.class);
       } else {
          return null;
       }
@@ -665,17 +665,17 @@ public class ObjectBrandingApi {
    * 
    * @param pkiBrandingID 
   */
-  public void brandingGetObjectV2 (Integer pkiBrandingID, final Response.Listener<BrandingGetObjectV2Response> responseListener, final Response.ErrorListener errorListener) {
+  public void brandingGetObjectV3 (Integer pkiBrandingID, final Response.Listener<BrandingGetObjectV3Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'pkiBrandingID' is set
     if (pkiBrandingID == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'pkiBrandingID' when calling brandingGetObjectV2",
-        new ApiException(400, "Missing the required parameter 'pkiBrandingID' when calling brandingGetObjectV2"));
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiBrandingID' when calling brandingGetObjectV3",
+        new ApiException(400, "Missing the required parameter 'pkiBrandingID' when calling brandingGetObjectV3"));
     }
 
     // create path and map variables
-    String path = "/2/object/branding/{pkiBrandingID}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiBrandingID" + "\\}", apiInvoker.escapeString(pkiBrandingID.toString()));
+    String path = "/3/object/branding/{pkiBrandingID}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiBrandingID" + "\\}", apiInvoker.escapeString(pkiBrandingID.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -710,7 +710,7 @@ public class ObjectBrandingApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((BrandingGetObjectV2Response) ApiInvoker.deserialize(localVarResponse,  "", BrandingGetObjectV2Response.class));
+              responseListener.onResponse((BrandingGetObjectV3Response) ApiInvoker.deserialize(localVarResponse,  "", BrandingGetObjectV3Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

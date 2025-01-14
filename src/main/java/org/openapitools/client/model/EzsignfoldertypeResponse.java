@@ -70,6 +70,8 @@ public class EzsignfoldertypeResponse {
   private Integer iEzsignfoldertypeDisposaldays = null;
   @SerializedName("iEzsignfoldertypeDeadlinedays")
   private Integer iEzsignfoldertypeDeadlinedays = null;
+  @SerializedName("bEzsignfoldertypeAutomaticsignature")
+  private Boolean bEzsignfoldertypeAutomaticsignature = null;
   @SerializedName("bEzsignfoldertypeDelegate")
   private Boolean bEzsignfoldertypeDelegate = null;
   @SerializedName("bEzsignfoldertypeDiscussion")
@@ -78,6 +80,8 @@ public class EzsignfoldertypeResponse {
   private Boolean bEzsignfoldertypeReassignezsignsigner = null;
   @SerializedName("bEzsignfoldertypeReassignuser")
   private Boolean bEzsignfoldertypeReassignuser = null;
+  @SerializedName("bEzsignfoldertypeReassigngroup")
+  private Boolean bEzsignfoldertypeReassigngroup = null;
   @SerializedName("bEzsignfoldertypeSendsignedtoezsignsigner")
   private Boolean bEzsignfoldertypeSendsignedtoezsignsigner = null;
   @SerializedName("bEzsignfoldertypeSendsignedtouser")
@@ -366,6 +370,17 @@ public class EzsignfoldertypeResponse {
   }
 
   /**
+   * Whether we allow the automatic signature by an User
+   **/
+  @ApiModelProperty(value = "Whether we allow the automatic signature by an User")
+  public Boolean getBEzsignfoldertypeAutomaticsignature() {
+    return bEzsignfoldertypeAutomaticsignature;
+  }
+  public void setBEzsignfoldertypeAutomaticsignature(Boolean bEzsignfoldertypeAutomaticsignature) {
+    this.bEzsignfoldertypeAutomaticsignature = bEzsignfoldertypeAutomaticsignature;
+  }
+
+  /**
    * Wheter if delegation of signature is allowed to another user or not
    **/
   @ApiModelProperty(value = "Wheter if delegation of signature is allowed to another user or not")
@@ -407,6 +422,17 @@ public class EzsignfoldertypeResponse {
   }
   public void setBEzsignfoldertypeReassignuser(Boolean bEzsignfoldertypeReassignuser) {
     this.bEzsignfoldertypeReassignuser = bEzsignfoldertypeReassignuser;
+  }
+
+  /**
+   * Wheter if Reassignment of signatures of the groups to which the user belongs is authorized by a user to himself
+   **/
+  @ApiModelProperty(value = "Wheter if Reassignment of signatures of the groups to which the user belongs is authorized by a user to himself")
+  public Boolean getBEzsignfoldertypeReassigngroup() {
+    return bEzsignfoldertypeReassigngroup;
+  }
+  public void setBEzsignfoldertypeReassigngroup(Boolean bEzsignfoldertypeReassigngroup) {
+    this.bEzsignfoldertypeReassigngroup = bEzsignfoldertypeReassigngroup;
   }
 
   /**
@@ -682,10 +708,12 @@ public class EzsignfoldertypeResponse {
         (this.eEzsignfoldertypeCompletion == null ? ezsignfoldertypeResponse.eEzsignfoldertypeCompletion == null : this.eEzsignfoldertypeCompletion.equals(ezsignfoldertypeResponse.eEzsignfoldertypeCompletion)) &&
         (this.iEzsignfoldertypeDisposaldays == null ? ezsignfoldertypeResponse.iEzsignfoldertypeDisposaldays == null : this.iEzsignfoldertypeDisposaldays.equals(ezsignfoldertypeResponse.iEzsignfoldertypeDisposaldays)) &&
         (this.iEzsignfoldertypeDeadlinedays == null ? ezsignfoldertypeResponse.iEzsignfoldertypeDeadlinedays == null : this.iEzsignfoldertypeDeadlinedays.equals(ezsignfoldertypeResponse.iEzsignfoldertypeDeadlinedays)) &&
+        (this.bEzsignfoldertypeAutomaticsignature == null ? ezsignfoldertypeResponse.bEzsignfoldertypeAutomaticsignature == null : this.bEzsignfoldertypeAutomaticsignature.equals(ezsignfoldertypeResponse.bEzsignfoldertypeAutomaticsignature)) &&
         (this.bEzsignfoldertypeDelegate == null ? ezsignfoldertypeResponse.bEzsignfoldertypeDelegate == null : this.bEzsignfoldertypeDelegate.equals(ezsignfoldertypeResponse.bEzsignfoldertypeDelegate)) &&
         (this.bEzsignfoldertypeDiscussion == null ? ezsignfoldertypeResponse.bEzsignfoldertypeDiscussion == null : this.bEzsignfoldertypeDiscussion.equals(ezsignfoldertypeResponse.bEzsignfoldertypeDiscussion)) &&
         (this.bEzsignfoldertypeReassignezsignsigner == null ? ezsignfoldertypeResponse.bEzsignfoldertypeReassignezsignsigner == null : this.bEzsignfoldertypeReassignezsignsigner.equals(ezsignfoldertypeResponse.bEzsignfoldertypeReassignezsignsigner)) &&
         (this.bEzsignfoldertypeReassignuser == null ? ezsignfoldertypeResponse.bEzsignfoldertypeReassignuser == null : this.bEzsignfoldertypeReassignuser.equals(ezsignfoldertypeResponse.bEzsignfoldertypeReassignuser)) &&
+        (this.bEzsignfoldertypeReassigngroup == null ? ezsignfoldertypeResponse.bEzsignfoldertypeReassigngroup == null : this.bEzsignfoldertypeReassigngroup.equals(ezsignfoldertypeResponse.bEzsignfoldertypeReassigngroup)) &&
         (this.bEzsignfoldertypeSendsignedtoezsignsigner == null ? ezsignfoldertypeResponse.bEzsignfoldertypeSendsignedtoezsignsigner == null : this.bEzsignfoldertypeSendsignedtoezsignsigner.equals(ezsignfoldertypeResponse.bEzsignfoldertypeSendsignedtoezsignsigner)) &&
         (this.bEzsignfoldertypeSendsignedtouser == null ? ezsignfoldertypeResponse.bEzsignfoldertypeSendsignedtouser == null : this.bEzsignfoldertypeSendsignedtouser.equals(ezsignfoldertypeResponse.bEzsignfoldertypeSendsignedtouser)) &&
         (this.bEzsignfoldertypeSendattachmentezsignsigner == null ? ezsignfoldertypeResponse.bEzsignfoldertypeSendattachmentezsignsigner == null : this.bEzsignfoldertypeSendattachmentezsignsigner.equals(ezsignfoldertypeResponse.bEzsignfoldertypeSendattachmentezsignsigner)) &&
@@ -734,10 +762,12 @@ public class EzsignfoldertypeResponse {
     result = 31 * result + (this.eEzsignfoldertypeCompletion == null ? 0: this.eEzsignfoldertypeCompletion.hashCode());
     result = 31 * result + (this.iEzsignfoldertypeDisposaldays == null ? 0: this.iEzsignfoldertypeDisposaldays.hashCode());
     result = 31 * result + (this.iEzsignfoldertypeDeadlinedays == null ? 0: this.iEzsignfoldertypeDeadlinedays.hashCode());
+    result = 31 * result + (this.bEzsignfoldertypeAutomaticsignature == null ? 0: this.bEzsignfoldertypeAutomaticsignature.hashCode());
     result = 31 * result + (this.bEzsignfoldertypeDelegate == null ? 0: this.bEzsignfoldertypeDelegate.hashCode());
     result = 31 * result + (this.bEzsignfoldertypeDiscussion == null ? 0: this.bEzsignfoldertypeDiscussion.hashCode());
     result = 31 * result + (this.bEzsignfoldertypeReassignezsignsigner == null ? 0: this.bEzsignfoldertypeReassignezsignsigner.hashCode());
     result = 31 * result + (this.bEzsignfoldertypeReassignuser == null ? 0: this.bEzsignfoldertypeReassignuser.hashCode());
+    result = 31 * result + (this.bEzsignfoldertypeReassigngroup == null ? 0: this.bEzsignfoldertypeReassigngroup.hashCode());
     result = 31 * result + (this.bEzsignfoldertypeSendsignedtoezsignsigner == null ? 0: this.bEzsignfoldertypeSendsignedtoezsignsigner.hashCode());
     result = 31 * result + (this.bEzsignfoldertypeSendsignedtouser == null ? 0: this.bEzsignfoldertypeSendsignedtouser.hashCode());
     result = 31 * result + (this.bEzsignfoldertypeSendattachmentezsignsigner == null ? 0: this.bEzsignfoldertypeSendattachmentezsignsigner.hashCode());
@@ -789,10 +819,12 @@ public class EzsignfoldertypeResponse {
     sb.append("  eEzsignfoldertypeCompletion: ").append(eEzsignfoldertypeCompletion).append("\n");
     sb.append("  iEzsignfoldertypeDisposaldays: ").append(iEzsignfoldertypeDisposaldays).append("\n");
     sb.append("  iEzsignfoldertypeDeadlinedays: ").append(iEzsignfoldertypeDeadlinedays).append("\n");
+    sb.append("  bEzsignfoldertypeAutomaticsignature: ").append(bEzsignfoldertypeAutomaticsignature).append("\n");
     sb.append("  bEzsignfoldertypeDelegate: ").append(bEzsignfoldertypeDelegate).append("\n");
     sb.append("  bEzsignfoldertypeDiscussion: ").append(bEzsignfoldertypeDiscussion).append("\n");
     sb.append("  bEzsignfoldertypeReassignezsignsigner: ").append(bEzsignfoldertypeReassignezsignsigner).append("\n");
     sb.append("  bEzsignfoldertypeReassignuser: ").append(bEzsignfoldertypeReassignuser).append("\n");
+    sb.append("  bEzsignfoldertypeReassigngroup: ").append(bEzsignfoldertypeReassigngroup).append("\n");
     sb.append("  bEzsignfoldertypeSendsignedtoezsignsigner: ").append(bEzsignfoldertypeSendsignedtoezsignsigner).append("\n");
     sb.append("  bEzsignfoldertypeSendsignedtouser: ").append(bEzsignfoldertypeSendsignedtouser).append("\n");
     sb.append("  bEzsignfoldertypeSendattachmentezsignsigner: ").append(bEzsignfoldertypeSendattachmentezsignsigner).append("\n");

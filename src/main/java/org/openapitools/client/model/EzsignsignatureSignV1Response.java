@@ -14,6 +14,7 @@ package org.openapitools.client.model;
 
 import org.openapitools.client.model.CommonResponseObjDebug;
 import org.openapitools.client.model.CommonResponseObjDebugPayload;
+import org.openapitools.client.model.EzsignsignatureSignV1ResponseMPayload;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -27,6 +28,8 @@ public class EzsignsignatureSignV1Response {
   private CommonResponseObjDebugPayload objDebugPayload = null;
   @SerializedName("objDebug")
   private CommonResponseObjDebug objDebug = null;
+  @SerializedName("mPayload")
+  private EzsignsignatureSignV1ResponseMPayload mPayload = null;
 
   /**
    **/
@@ -48,6 +51,16 @@ public class EzsignsignatureSignV1Response {
     this.objDebug = objDebug;
   }
 
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public EzsignsignatureSignV1ResponseMPayload getMPayload() {
+    return mPayload;
+  }
+  public void setMPayload(EzsignsignatureSignV1ResponseMPayload mPayload) {
+    this.mPayload = mPayload;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -59,7 +72,8 @@ public class EzsignsignatureSignV1Response {
     }
     EzsignsignatureSignV1Response ezsignsignatureSignV1Response = (EzsignsignatureSignV1Response) o;
     return (this.objDebugPayload == null ? ezsignsignatureSignV1Response.objDebugPayload == null : this.objDebugPayload.equals(ezsignsignatureSignV1Response.objDebugPayload)) &&
-        (this.objDebug == null ? ezsignsignatureSignV1Response.objDebug == null : this.objDebug.equals(ezsignsignatureSignV1Response.objDebug));
+        (this.objDebug == null ? ezsignsignatureSignV1Response.objDebug == null : this.objDebug.equals(ezsignsignatureSignV1Response.objDebug)) &&
+        (this.mPayload == null ? ezsignsignatureSignV1Response.mPayload == null : this.mPayload.equals(ezsignsignatureSignV1Response.mPayload));
   }
 
   @Override
@@ -67,6 +81,7 @@ public class EzsignsignatureSignV1Response {
     int result = 17;
     result = 31 * result + (this.objDebugPayload == null ? 0: this.objDebugPayload.hashCode());
     result = 31 * result + (this.objDebug == null ? 0: this.objDebug.hashCode());
+    result = 31 * result + (this.mPayload == null ? 0: this.mPayload.hashCode());
     return result;
   }
 
@@ -77,6 +92,7 @@ public class EzsignsignatureSignV1Response {
     
     sb.append("  objDebugPayload: ").append(objDebugPayload).append("\n");
     sb.append("  objDebug: ").append(objDebug).append("\n");
+    sb.append("  mPayload: ").append(mPayload).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

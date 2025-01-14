@@ -51,6 +51,8 @@ public class EzsignformfieldgroupRequest {
   private Boolean bEzsignformfieldgroupEncrypted = null;
   @SerializedName("sEzsignformfieldgroupRegexp")
   private String sEzsignformfieldgroupRegexp = null;
+  @SerializedName("sEzsignformfieldgroupTextvalidationcustommessage")
+  private String sEzsignformfieldgroupTextvalidationcustommessage = null;
   @SerializedName("tEzsignformfieldgroupTooltip")
   private String tEzsignformfieldgroupTooltip = null;
   @SerializedName("eEzsignformfieldgroupTooltipposition")
@@ -126,9 +128,9 @@ public class EzsignformfieldgroupRequest {
   }
 
   /**
-   * The default value for the Ezsignformfieldgroup  You can use the codes below and they will be replaced at signature time.    | Code | Description | Example | | ------------------------- | ------------ | ------------ | | {sUserFirstname} | The first name of the contact | John | | {sUserLastname} | The last name of the contact | Doe | | {sUserJobtitle} | The job title | Sales Representative | | {sEmailAddress} | The email address | email@example.com | | {sPhoneE164} | A phone number in E.164 Format | +15149901516 | | {sPhoneE164Cell} | A phone number in E.164 Format | +15149901516 |
+   * The default value for the Ezsignformfieldgroup  You can use the codes below and they will be replaced at signature time.    | Code | Description | Example | | ------------------------- | ------------ | ------------ | | {sUserFirstname} | The first name of the contact | John | | {sUserLastname} | The last name of the contact | Doe | | {sUserJobtitle} | The job title | Sales Representative | | {sCompany} | Company name | eZmax Solutions Inc. | | {sEmailAddress} | The email address | email@example.com | | {sPhoneE164} | A phone number in E.164 Format | +15149901516 | | {sPhoneE164Cell} | A phone number in E.164 Format | +15149901516 |
    **/
-  @ApiModelProperty(value = "The default value for the Ezsignformfieldgroup  You can use the codes below and they will be replaced at signature time.    | Code | Description | Example | | ------------------------- | ------------ | ------------ | | {sUserFirstname} | The first name of the contact | John | | {sUserLastname} | The last name of the contact | Doe | | {sUserJobtitle} | The job title | Sales Representative | | {sEmailAddress} | The email address | email@example.com | | {sPhoneE164} | A phone number in E.164 Format | +15149901516 | | {sPhoneE164Cell} | A phone number in E.164 Format | +15149901516 |")
+  @ApiModelProperty(value = "The default value for the Ezsignformfieldgroup  You can use the codes below and they will be replaced at signature time.    | Code | Description | Example | | ------------------------- | ------------ | ------------ | | {sUserFirstname} | The first name of the contact | John | | {sUserLastname} | The last name of the contact | Doe | | {sUserJobtitle} | The job title | Sales Representative | | {sCompany} | Company name | eZmax Solutions Inc. | | {sEmailAddress} | The email address | email@example.com | | {sPhoneE164} | A phone number in E.164 Format | +15149901516 | | {sPhoneE164Cell} | A phone number in E.164 Format | +15149901516 |")
   public String getSEzsignformfieldgroupDefaultvalue() {
     return sEzsignformfieldgroupDefaultvalue;
   }
@@ -207,6 +209,17 @@ public class EzsignformfieldgroupRequest {
   }
 
   /**
+   * Description of validation rule. Show by signatory.
+   **/
+  @ApiModelProperty(value = "Description of validation rule. Show by signatory.")
+  public String getSEzsignformfieldgroupTextvalidationcustommessage() {
+    return sEzsignformfieldgroupTextvalidationcustommessage;
+  }
+  public void setSEzsignformfieldgroupTextvalidationcustommessage(String sEzsignformfieldgroupTextvalidationcustommessage) {
+    this.sEzsignformfieldgroupTextvalidationcustommessage = sEzsignformfieldgroupTextvalidationcustommessage;
+  }
+
+  /**
    * A tooltip that will be presented to Ezsignsigner about the Ezsignformfieldgroup
    **/
   @ApiModelProperty(value = "A tooltip that will be presented to Ezsignsigner about the Ezsignformfieldgroup")
@@ -260,6 +273,7 @@ public class EzsignformfieldgroupRequest {
         (this.iEzsignformfieldgroupMaxlength == null ? ezsignformfieldgroupRequest.iEzsignformfieldgroupMaxlength == null : this.iEzsignformfieldgroupMaxlength.equals(ezsignformfieldgroupRequest.iEzsignformfieldgroupMaxlength)) &&
         (this.bEzsignformfieldgroupEncrypted == null ? ezsignformfieldgroupRequest.bEzsignformfieldgroupEncrypted == null : this.bEzsignformfieldgroupEncrypted.equals(ezsignformfieldgroupRequest.bEzsignformfieldgroupEncrypted)) &&
         (this.sEzsignformfieldgroupRegexp == null ? ezsignformfieldgroupRequest.sEzsignformfieldgroupRegexp == null : this.sEzsignformfieldgroupRegexp.equals(ezsignformfieldgroupRequest.sEzsignformfieldgroupRegexp)) &&
+        (this.sEzsignformfieldgroupTextvalidationcustommessage == null ? ezsignformfieldgroupRequest.sEzsignformfieldgroupTextvalidationcustommessage == null : this.sEzsignformfieldgroupTextvalidationcustommessage.equals(ezsignformfieldgroupRequest.sEzsignformfieldgroupTextvalidationcustommessage)) &&
         (this.tEzsignformfieldgroupTooltip == null ? ezsignformfieldgroupRequest.tEzsignformfieldgroupTooltip == null : this.tEzsignformfieldgroupTooltip.equals(ezsignformfieldgroupRequest.tEzsignformfieldgroupTooltip)) &&
         (this.eEzsignformfieldgroupTooltipposition == null ? ezsignformfieldgroupRequest.eEzsignformfieldgroupTooltipposition == null : this.eEzsignformfieldgroupTooltipposition.equals(ezsignformfieldgroupRequest.eEzsignformfieldgroupTooltipposition)) &&
         (this.eEzsignformfieldgroupTextvalidation == null ? ezsignformfieldgroupRequest.eEzsignformfieldgroupTextvalidation == null : this.eEzsignformfieldgroupTextvalidation.equals(ezsignformfieldgroupRequest.eEzsignformfieldgroupTextvalidation));
@@ -281,6 +295,7 @@ public class EzsignformfieldgroupRequest {
     result = 31 * result + (this.iEzsignformfieldgroupMaxlength == null ? 0: this.iEzsignformfieldgroupMaxlength.hashCode());
     result = 31 * result + (this.bEzsignformfieldgroupEncrypted == null ? 0: this.bEzsignformfieldgroupEncrypted.hashCode());
     result = 31 * result + (this.sEzsignformfieldgroupRegexp == null ? 0: this.sEzsignformfieldgroupRegexp.hashCode());
+    result = 31 * result + (this.sEzsignformfieldgroupTextvalidationcustommessage == null ? 0: this.sEzsignformfieldgroupTextvalidationcustommessage.hashCode());
     result = 31 * result + (this.tEzsignformfieldgroupTooltip == null ? 0: this.tEzsignformfieldgroupTooltip.hashCode());
     result = 31 * result + (this.eEzsignformfieldgroupTooltipposition == null ? 0: this.eEzsignformfieldgroupTooltipposition.hashCode());
     result = 31 * result + (this.eEzsignformfieldgroupTextvalidation == null ? 0: this.eEzsignformfieldgroupTextvalidation.hashCode());
@@ -305,6 +320,7 @@ public class EzsignformfieldgroupRequest {
     sb.append("  iEzsignformfieldgroupMaxlength: ").append(iEzsignformfieldgroupMaxlength).append("\n");
     sb.append("  bEzsignformfieldgroupEncrypted: ").append(bEzsignformfieldgroupEncrypted).append("\n");
     sb.append("  sEzsignformfieldgroupRegexp: ").append(sEzsignformfieldgroupRegexp).append("\n");
+    sb.append("  sEzsignformfieldgroupTextvalidationcustommessage: ").append(sEzsignformfieldgroupTextvalidationcustommessage).append("\n");
     sb.append("  tEzsignformfieldgroupTooltip: ").append(tEzsignformfieldgroupTooltip).append("\n");
     sb.append("  eEzsignformfieldgroupTooltipposition: ").append(eEzsignformfieldgroupTooltipposition).append("\n");
     sb.append("  eEzsignformfieldgroupTextvalidation: ").append(eEzsignformfieldgroupTextvalidation).append("\n");

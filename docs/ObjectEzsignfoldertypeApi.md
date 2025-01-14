@@ -4,19 +4,18 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ezsignfoldertypeCreateObjectV2**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypeCreateObjectV2) | **POST** /2/object/ezsignfoldertype | Create a new Ezsignfoldertype
-[**ezsignfoldertypeEditObjectV1**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypeEditObjectV1) | **PUT** /1/object/ezsignfoldertype/{pkiEzsignfoldertypeID} | Edit an existing Ezsignfoldertype
-[**ezsignfoldertypeEditObjectV2**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypeEditObjectV2) | **PUT** /2/object/ezsignfoldertype/{pkiEzsignfoldertypeID} | Edit an existing Ezsignfoldertype
+[**ezsignfoldertypeCreateObjectV3**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypeCreateObjectV3) | **POST** /3/object/ezsignfoldertype | Create a new Ezsignfoldertype
+[**ezsignfoldertypeEditObjectV3**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypeEditObjectV3) | **PUT** /3/object/ezsignfoldertype/{pkiEzsignfoldertypeID} | Edit an existing Ezsignfoldertype
 [**ezsignfoldertypeGetAutocompleteV2**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypeGetAutocompleteV2) | **GET** /2/object/ezsignfoldertype/getAutocomplete/{sSelector} | Retrieve Ezsignfoldertypes and IDs
 [**ezsignfoldertypeGetListV1**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypeGetListV1) | **GET** /1/object/ezsignfoldertype/getList | Retrieve Ezsignfoldertype list
 [**ezsignfoldertypeGetObjectV2**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypeGetObjectV2) | **GET** /2/object/ezsignfoldertype/{pkiEzsignfoldertypeID} | Retrieve an existing Ezsignfoldertype
-[**ezsignfoldertypeGetObjectV3**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypeGetObjectV3) | **GET** /3/object/ezsignfoldertype/{pkiEzsignfoldertypeID} | Retrieve an existing Ezsignfoldertype
+[**ezsignfoldertypeGetObjectV4**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypeGetObjectV4) | **GET** /4/object/ezsignfoldertype/{pkiEzsignfoldertypeID} | Retrieve an existing Ezsignfoldertype
 
 
 
-## ezsignfoldertypeCreateObjectV2
+## ezsignfoldertypeCreateObjectV3
 
-> EzsignfoldertypeCreateObjectV2Response ezsignfoldertypeCreateObjectV2(ezsignfoldertypeCreateObjectV2Request)
+> EzsignfoldertypeCreateObjectV3Response ezsignfoldertypeCreateObjectV3(ezsignfoldertypeCreateObjectV3Request)
 
 Create a new Ezsignfoldertype
 
@@ -29,12 +28,12 @@ The endpoint allows to create one or many elements at once.
 //import org.openapitools.client.api.ObjectEzsignfoldertypeApi;
 
 ObjectEzsignfoldertypeApi apiInstance = new ObjectEzsignfoldertypeApi();
-EzsignfoldertypeCreateObjectV2Request ezsignfoldertypeCreateObjectV2Request = new EzsignfoldertypeCreateObjectV2Request(); // EzsignfoldertypeCreateObjectV2Request | 
+EzsignfoldertypeCreateObjectV3Request ezsignfoldertypeCreateObjectV3Request = new EzsignfoldertypeCreateObjectV3Request(); // EzsignfoldertypeCreateObjectV3Request | 
 try {
-    EzsignfoldertypeCreateObjectV2Response result = apiInstance.ezsignfoldertypeCreateObjectV2(ezsignfoldertypeCreateObjectV2Request);
+    EzsignfoldertypeCreateObjectV3Response result = apiInstance.ezsignfoldertypeCreateObjectV3(ezsignfoldertypeCreateObjectV3Request);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling ObjectEzsignfoldertypeApi#ezsignfoldertypeCreateObjectV2");
+    System.err.println("Exception when calling ObjectEzsignfoldertypeApi#ezsignfoldertypeCreateObjectV3");
     e.printStackTrace();
 }
 ```
@@ -44,11 +43,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ezsignfoldertypeCreateObjectV2Request** | [**EzsignfoldertypeCreateObjectV2Request**](EzsignfoldertypeCreateObjectV2Request.md)|  |
+ **ezsignfoldertypeCreateObjectV3Request** | [**EzsignfoldertypeCreateObjectV3Request**](EzsignfoldertypeCreateObjectV3Request.md)|  |
 
 ### Return type
 
-[**EzsignfoldertypeCreateObjectV2Response**](EzsignfoldertypeCreateObjectV2Response.md)
+[**EzsignfoldertypeCreateObjectV3Response**](EzsignfoldertypeCreateObjectV3Response.md)
 
 ### Authorization
 
@@ -60,9 +59,9 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## ezsignfoldertypeEditObjectV1
+## ezsignfoldertypeEditObjectV3
 
-> EzsignfoldertypeEditObjectV1Response ezsignfoldertypeEditObjectV1(pkiEzsignfoldertypeID, ezsignfoldertypeEditObjectV1Request)
+> EzsignfoldertypeEditObjectV3Response ezsignfoldertypeEditObjectV3(pkiEzsignfoldertypeID, ezsignfoldertypeEditObjectV3Request)
 
 Edit an existing Ezsignfoldertype
 
@@ -76,12 +75,12 @@ Edit an existing Ezsignfoldertype
 
 ObjectEzsignfoldertypeApi apiInstance = new ObjectEzsignfoldertypeApi();
 Integer pkiEzsignfoldertypeID = null; // Integer | 
-EzsignfoldertypeEditObjectV1Request ezsignfoldertypeEditObjectV1Request = new EzsignfoldertypeEditObjectV1Request(); // EzsignfoldertypeEditObjectV1Request | 
+EzsignfoldertypeEditObjectV3Request ezsignfoldertypeEditObjectV3Request = new EzsignfoldertypeEditObjectV3Request(); // EzsignfoldertypeEditObjectV3Request | 
 try {
-    EzsignfoldertypeEditObjectV1Response result = apiInstance.ezsignfoldertypeEditObjectV1(pkiEzsignfoldertypeID, ezsignfoldertypeEditObjectV1Request);
+    EzsignfoldertypeEditObjectV3Response result = apiInstance.ezsignfoldertypeEditObjectV3(pkiEzsignfoldertypeID, ezsignfoldertypeEditObjectV3Request);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling ObjectEzsignfoldertypeApi#ezsignfoldertypeEditObjectV1");
+    System.err.println("Exception when calling ObjectEzsignfoldertypeApi#ezsignfoldertypeEditObjectV3");
     e.printStackTrace();
 }
 ```
@@ -92,59 +91,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiEzsignfoldertypeID** | **Integer**|  | [default to null]
- **ezsignfoldertypeEditObjectV1Request** | [**EzsignfoldertypeEditObjectV1Request**](EzsignfoldertypeEditObjectV1Request.md)|  |
+ **ezsignfoldertypeEditObjectV3Request** | [**EzsignfoldertypeEditObjectV3Request**](EzsignfoldertypeEditObjectV3Request.md)|  |
 
 ### Return type
 
-[**EzsignfoldertypeEditObjectV1Response**](EzsignfoldertypeEditObjectV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-
-## ezsignfoldertypeEditObjectV2
-
-> EzsignfoldertypeEditObjectV2Response ezsignfoldertypeEditObjectV2(pkiEzsignfoldertypeID, ezsignfoldertypeEditObjectV2Request)
-
-Edit an existing Ezsignfoldertype
-
-
-
-### Example
-
-```java
-// Import classes:
-//import org.openapitools.client.api.ObjectEzsignfoldertypeApi;
-
-ObjectEzsignfoldertypeApi apiInstance = new ObjectEzsignfoldertypeApi();
-Integer pkiEzsignfoldertypeID = null; // Integer | 
-EzsignfoldertypeEditObjectV2Request ezsignfoldertypeEditObjectV2Request = new EzsignfoldertypeEditObjectV2Request(); // EzsignfoldertypeEditObjectV2Request | 
-try {
-    EzsignfoldertypeEditObjectV2Response result = apiInstance.ezsignfoldertypeEditObjectV2(pkiEzsignfoldertypeID, ezsignfoldertypeEditObjectV2Request);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling ObjectEzsignfoldertypeApi#ezsignfoldertypeEditObjectV2");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiEzsignfoldertypeID** | **Integer**|  | [default to null]
- **ezsignfoldertypeEditObjectV2Request** | [**EzsignfoldertypeEditObjectV2Request**](EzsignfoldertypeEditObjectV2Request.md)|  |
-
-### Return type
-
-[**EzsignfoldertypeEditObjectV2Response**](EzsignfoldertypeEditObjectV2Response.md)
+[**EzsignfoldertypeEditObjectV3Response**](EzsignfoldertypeEditObjectV3Response.md)
 
 ### Authorization
 
@@ -308,9 +259,9 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## ezsignfoldertypeGetObjectV3
+## ezsignfoldertypeGetObjectV4
 
-> EzsignfoldertypeGetObjectV3Response ezsignfoldertypeGetObjectV3(pkiEzsignfoldertypeID)
+> EzsignfoldertypeGetObjectV4Response ezsignfoldertypeGetObjectV4(pkiEzsignfoldertypeID)
 
 Retrieve an existing Ezsignfoldertype
 
@@ -325,10 +276,10 @@ Retrieve an existing Ezsignfoldertype
 ObjectEzsignfoldertypeApi apiInstance = new ObjectEzsignfoldertypeApi();
 Integer pkiEzsignfoldertypeID = null; // Integer | 
 try {
-    EzsignfoldertypeGetObjectV3Response result = apiInstance.ezsignfoldertypeGetObjectV3(pkiEzsignfoldertypeID);
+    EzsignfoldertypeGetObjectV4Response result = apiInstance.ezsignfoldertypeGetObjectV4(pkiEzsignfoldertypeID);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling ObjectEzsignfoldertypeApi#ezsignfoldertypeGetObjectV3");
+    System.err.println("Exception when calling ObjectEzsignfoldertypeApi#ezsignfoldertypeGetObjectV4");
     e.printStackTrace();
 }
 ```
@@ -342,7 +293,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsignfoldertypeGetObjectV3Response**](EzsignfoldertypeGetObjectV3Response.md)
+[**EzsignfoldertypeGetObjectV4Response**](EzsignfoldertypeGetObjectV4Response.md)
 
 ### Authorization
 

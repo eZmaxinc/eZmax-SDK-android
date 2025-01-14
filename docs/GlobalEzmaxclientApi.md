@@ -38,7 +38,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pksEzmaxclientOs** | [**FieldPksEzmaxclientOs**](.md)|  | [default to null] [enum: iOS, iPadOS, macOS, Windows]
+ **pksEzmaxclientOs** | [**FieldPksEzmaxclientOs**](.md)|  | [default to null] [enum: Android, iOS, iPadOS, macOS, Windows]
 
 ### Return type
 

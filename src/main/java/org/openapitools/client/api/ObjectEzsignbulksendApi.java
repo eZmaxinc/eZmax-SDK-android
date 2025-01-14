@@ -24,8 +24,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
 import org.openapitools.client.model.CommonResponseError;
-import org.openapitools.client.model.EzsignbulksendCreateEzsignbulksendtransmissionV1Request;
-import org.openapitools.client.model.EzsignbulksendCreateEzsignbulksendtransmissionV1Response;
+import org.openapitools.client.model.EzsignbulksendCreateEzsignbulksendtransmissionV2Request;
+import org.openapitools.client.model.EzsignbulksendCreateEzsignbulksendtransmissionV2Response;
 import org.openapitools.client.model.EzsignbulksendCreateObjectV1Request;
 import org.openapitools.client.model.EzsignbulksendCreateObjectV1Response;
 import org.openapitools.client.model.EzsignbulksendDeleteObjectV1Response;
@@ -75,24 +75,24 @@ public class ObjectEzsignbulksendApi {
   * Create a new Ezsignbulksendtransmission in the Ezsignbulksend
   * 
    * @param pkiEzsignbulksendID 
-   * @param ezsignbulksendCreateEzsignbulksendtransmissionV1Request 
-   * @return EzsignbulksendCreateEzsignbulksendtransmissionV1Response
+   * @param ezsignbulksendCreateEzsignbulksendtransmissionV2Request 
+   * @return EzsignbulksendCreateEzsignbulksendtransmissionV2Response
   */
-  public EzsignbulksendCreateEzsignbulksendtransmissionV1Response ezsignbulksendCreateEzsignbulksendtransmissionV1 (Integer pkiEzsignbulksendID, EzsignbulksendCreateEzsignbulksendtransmissionV1Request ezsignbulksendCreateEzsignbulksendtransmissionV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
-    Object postBody = ezsignbulksendCreateEzsignbulksendtransmissionV1Request;
+  public EzsignbulksendCreateEzsignbulksendtransmissionV2Response ezsignbulksendCreateEzsignbulksendtransmissionV2 (Integer pkiEzsignbulksendID, EzsignbulksendCreateEzsignbulksendtransmissionV2Request ezsignbulksendCreateEzsignbulksendtransmissionV2Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = ezsignbulksendCreateEzsignbulksendtransmissionV2Request;
     // verify the required parameter 'pkiEzsignbulksendID' is set
     if (pkiEzsignbulksendID == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsignbulksendID' when calling ezsignbulksendCreateEzsignbulksendtransmissionV1",
-        new ApiException(400, "Missing the required parameter 'pkiEzsignbulksendID' when calling ezsignbulksendCreateEzsignbulksendtransmissionV1"));
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsignbulksendID' when calling ezsignbulksendCreateEzsignbulksendtransmissionV2",
+        new ApiException(400, "Missing the required parameter 'pkiEzsignbulksendID' when calling ezsignbulksendCreateEzsignbulksendtransmissionV2"));
     }
-    // verify the required parameter 'ezsignbulksendCreateEzsignbulksendtransmissionV1Request' is set
-    if (ezsignbulksendCreateEzsignbulksendtransmissionV1Request == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'ezsignbulksendCreateEzsignbulksendtransmissionV1Request' when calling ezsignbulksendCreateEzsignbulksendtransmissionV1",
-        new ApiException(400, "Missing the required parameter 'ezsignbulksendCreateEzsignbulksendtransmissionV1Request' when calling ezsignbulksendCreateEzsignbulksendtransmissionV1"));
+    // verify the required parameter 'ezsignbulksendCreateEzsignbulksendtransmissionV2Request' is set
+    if (ezsignbulksendCreateEzsignbulksendtransmissionV2Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'ezsignbulksendCreateEzsignbulksendtransmissionV2Request' when calling ezsignbulksendCreateEzsignbulksendtransmissionV2",
+        new ApiException(400, "Missing the required parameter 'ezsignbulksendCreateEzsignbulksendtransmissionV2Request' when calling ezsignbulksendCreateEzsignbulksendtransmissionV2"));
     }
 
     // create path and map variables
-    String path = "/1/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission".replaceAll("\\{" + "pkiEzsignbulksendID" + "\\}", apiInvoker.escapeString(pkiEzsignbulksendID.toString()));
+    String path = "/2/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission".replaceAll("\\{" + "pkiEzsignbulksendID" + "\\}", apiInvoker.escapeString(pkiEzsignbulksendID.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -119,7 +119,7 @@ public class ObjectEzsignbulksendApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (EzsignbulksendCreateEzsignbulksendtransmissionV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsignbulksendCreateEzsignbulksendtransmissionV1Response.class);
+         return (EzsignbulksendCreateEzsignbulksendtransmissionV2Response) ApiInvoker.deserialize(localVarResponse, "", EzsignbulksendCreateEzsignbulksendtransmissionV2Response.class);
       } else {
          return null;
       }
@@ -143,24 +143,24 @@ public class ObjectEzsignbulksendApi {
       /**
    * Create a new Ezsignbulksendtransmission in the Ezsignbulksend
    * 
-   * @param pkiEzsignbulksendID    * @param ezsignbulksendCreateEzsignbulksendtransmissionV1Request 
+   * @param pkiEzsignbulksendID    * @param ezsignbulksendCreateEzsignbulksendtransmissionV2Request 
   */
-  public void ezsignbulksendCreateEzsignbulksendtransmissionV1 (Integer pkiEzsignbulksendID, EzsignbulksendCreateEzsignbulksendtransmissionV1Request ezsignbulksendCreateEzsignbulksendtransmissionV1Request, final Response.Listener<EzsignbulksendCreateEzsignbulksendtransmissionV1Response> responseListener, final Response.ErrorListener errorListener) {
-    Object postBody = ezsignbulksendCreateEzsignbulksendtransmissionV1Request;
+  public void ezsignbulksendCreateEzsignbulksendtransmissionV2 (Integer pkiEzsignbulksendID, EzsignbulksendCreateEzsignbulksendtransmissionV2Request ezsignbulksendCreateEzsignbulksendtransmissionV2Request, final Response.Listener<EzsignbulksendCreateEzsignbulksendtransmissionV2Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = ezsignbulksendCreateEzsignbulksendtransmissionV2Request;
 
     // verify the required parameter 'pkiEzsignbulksendID' is set
     if (pkiEzsignbulksendID == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsignbulksendID' when calling ezsignbulksendCreateEzsignbulksendtransmissionV1",
-        new ApiException(400, "Missing the required parameter 'pkiEzsignbulksendID' when calling ezsignbulksendCreateEzsignbulksendtransmissionV1"));
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsignbulksendID' when calling ezsignbulksendCreateEzsignbulksendtransmissionV2",
+        new ApiException(400, "Missing the required parameter 'pkiEzsignbulksendID' when calling ezsignbulksendCreateEzsignbulksendtransmissionV2"));
     }
-    // verify the required parameter 'ezsignbulksendCreateEzsignbulksendtransmissionV1Request' is set
-    if (ezsignbulksendCreateEzsignbulksendtransmissionV1Request == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'ezsignbulksendCreateEzsignbulksendtransmissionV1Request' when calling ezsignbulksendCreateEzsignbulksendtransmissionV1",
-        new ApiException(400, "Missing the required parameter 'ezsignbulksendCreateEzsignbulksendtransmissionV1Request' when calling ezsignbulksendCreateEzsignbulksendtransmissionV1"));
+    // verify the required parameter 'ezsignbulksendCreateEzsignbulksendtransmissionV2Request' is set
+    if (ezsignbulksendCreateEzsignbulksendtransmissionV2Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'ezsignbulksendCreateEzsignbulksendtransmissionV2Request' when calling ezsignbulksendCreateEzsignbulksendtransmissionV2",
+        new ApiException(400, "Missing the required parameter 'ezsignbulksendCreateEzsignbulksendtransmissionV2Request' when calling ezsignbulksendCreateEzsignbulksendtransmissionV2"));
     }
 
     // create path and map variables
-    String path = "/1/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiEzsignbulksendID" + "\\}", apiInvoker.escapeString(pkiEzsignbulksendID.toString()));
+    String path = "/2/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiEzsignbulksendID" + "\\}", apiInvoker.escapeString(pkiEzsignbulksendID.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -195,7 +195,7 @@ public class ObjectEzsignbulksendApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((EzsignbulksendCreateEzsignbulksendtransmissionV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsignbulksendCreateEzsignbulksendtransmissionV1Response.class));
+              responseListener.onResponse((EzsignbulksendCreateEzsignbulksendtransmissionV2Response) ApiInvoker.deserialize(localVarResponse,  "", EzsignbulksendCreateEzsignbulksendtransmissionV2Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

@@ -12,6 +12,7 @@
 
 package org.openapitools.client.model;
 
+import org.openapitools.client.model.FieldEEzsigntemplatesignerMapping;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -25,8 +26,22 @@ public class EzsigntemplatesignerResponse {
   private Integer pkiEzsigntemplatesignerID = null;
   @SerializedName("fkiEzsigntemplateID")
   private Integer fkiEzsigntemplateID = null;
+  @SerializedName("fkiUserID")
+  private Integer fkiUserID = null;
+  @SerializedName("fkiUsergroupID")
+  private Integer fkiUsergroupID = null;
+  @SerializedName("fkiEzdoctemplatedocumentID")
+  private Integer fkiEzdoctemplatedocumentID = null;
+  @SerializedName("bEzsigntemplatesignerReceivecopy")
+  private Boolean bEzsigntemplatesignerReceivecopy = null;
+  @SerializedName("eEzsigntemplatesignerMapping")
+  private FieldEEzsigntemplatesignerMapping eEzsigntemplatesignerMapping = null;
   @SerializedName("sEzsigntemplatesignerDescription")
   private String sEzsigntemplatesignerDescription = null;
+  @SerializedName("sUserName")
+  private String sUserName = null;
+  @SerializedName("sUsergroupNameX")
+  private String sUsergroupNameX = null;
 
   /**
    * The unique ID of the Ezsigntemplatesigner
@@ -53,6 +68,65 @@ public class EzsigntemplatesignerResponse {
   }
 
   /**
+   * The unique ID of the User
+   * minimum: 0
+   **/
+  @ApiModelProperty(value = "The unique ID of the User")
+  public Integer getFkiUserID() {
+    return fkiUserID;
+  }
+  public void setFkiUserID(Integer fkiUserID) {
+    this.fkiUserID = fkiUserID;
+  }
+
+  /**
+   * The unique ID of the Usergroup
+   * minimum: 0
+   * maximum: 255
+   **/
+  @ApiModelProperty(value = "The unique ID of the Usergroup")
+  public Integer getFkiUsergroupID() {
+    return fkiUsergroupID;
+  }
+  public void setFkiUsergroupID(Integer fkiUsergroupID) {
+    this.fkiUsergroupID = fkiUsergroupID;
+  }
+
+  /**
+   * The unique ID of the Ezdoctemplatedocument
+   * minimum: 0
+   * maximum: 65535
+   **/
+  @ApiModelProperty(value = "The unique ID of the Ezdoctemplatedocument")
+  public Integer getFkiEzdoctemplatedocumentID() {
+    return fkiEzdoctemplatedocumentID;
+  }
+  public void setFkiEzdoctemplatedocumentID(Integer fkiEzdoctemplatedocumentID) {
+    this.fkiEzdoctemplatedocumentID = fkiEzdoctemplatedocumentID;
+  }
+
+  /**
+   * If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain't required to sign the document.
+   **/
+  @ApiModelProperty(value = "If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain't required to sign the document.")
+  public Boolean getBEzsigntemplatesignerReceivecopy() {
+    return bEzsigntemplatesignerReceivecopy;
+  }
+  public void setBEzsigntemplatesignerReceivecopy(Boolean bEzsigntemplatesignerReceivecopy) {
+    this.bEzsigntemplatesignerReceivecopy = bEzsigntemplatesignerReceivecopy;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public FieldEEzsigntemplatesignerMapping getEEzsigntemplatesignerMapping() {
+    return eEzsigntemplatesignerMapping;
+  }
+  public void setEEzsigntemplatesignerMapping(FieldEEzsigntemplatesignerMapping eEzsigntemplatesignerMapping) {
+    this.eEzsigntemplatesignerMapping = eEzsigntemplatesignerMapping;
+  }
+
+  /**
    * The description of the Ezsigntemplatesigner
    **/
   @ApiModelProperty(required = true, value = "The description of the Ezsigntemplatesigner")
@@ -61,6 +135,28 @@ public class EzsigntemplatesignerResponse {
   }
   public void setSEzsigntemplatesignerDescription(String sEzsigntemplatesignerDescription) {
     this.sEzsigntemplatesignerDescription = sEzsigntemplatesignerDescription;
+  }
+
+  /**
+   * The description of the User in the language of the requester
+   **/
+  @ApiModelProperty(value = "The description of the User in the language of the requester")
+  public String getSUserName() {
+    return sUserName;
+  }
+  public void setSUserName(String sUserName) {
+    this.sUserName = sUserName;
+  }
+
+  /**
+   * The Name of the Usergroup in the language of the requester
+   **/
+  @ApiModelProperty(value = "The Name of the Usergroup in the language of the requester")
+  public String getSUsergroupNameX() {
+    return sUsergroupNameX;
+  }
+  public void setSUsergroupNameX(String sUsergroupNameX) {
+    this.sUsergroupNameX = sUsergroupNameX;
   }
 
 
@@ -75,7 +171,14 @@ public class EzsigntemplatesignerResponse {
     EzsigntemplatesignerResponse ezsigntemplatesignerResponse = (EzsigntemplatesignerResponse) o;
     return (this.pkiEzsigntemplatesignerID == null ? ezsigntemplatesignerResponse.pkiEzsigntemplatesignerID == null : this.pkiEzsigntemplatesignerID.equals(ezsigntemplatesignerResponse.pkiEzsigntemplatesignerID)) &&
         (this.fkiEzsigntemplateID == null ? ezsigntemplatesignerResponse.fkiEzsigntemplateID == null : this.fkiEzsigntemplateID.equals(ezsigntemplatesignerResponse.fkiEzsigntemplateID)) &&
-        (this.sEzsigntemplatesignerDescription == null ? ezsigntemplatesignerResponse.sEzsigntemplatesignerDescription == null : this.sEzsigntemplatesignerDescription.equals(ezsigntemplatesignerResponse.sEzsigntemplatesignerDescription));
+        (this.fkiUserID == null ? ezsigntemplatesignerResponse.fkiUserID == null : this.fkiUserID.equals(ezsigntemplatesignerResponse.fkiUserID)) &&
+        (this.fkiUsergroupID == null ? ezsigntemplatesignerResponse.fkiUsergroupID == null : this.fkiUsergroupID.equals(ezsigntemplatesignerResponse.fkiUsergroupID)) &&
+        (this.fkiEzdoctemplatedocumentID == null ? ezsigntemplatesignerResponse.fkiEzdoctemplatedocumentID == null : this.fkiEzdoctemplatedocumentID.equals(ezsigntemplatesignerResponse.fkiEzdoctemplatedocumentID)) &&
+        (this.bEzsigntemplatesignerReceivecopy == null ? ezsigntemplatesignerResponse.bEzsigntemplatesignerReceivecopy == null : this.bEzsigntemplatesignerReceivecopy.equals(ezsigntemplatesignerResponse.bEzsigntemplatesignerReceivecopy)) &&
+        (this.eEzsigntemplatesignerMapping == null ? ezsigntemplatesignerResponse.eEzsigntemplatesignerMapping == null : this.eEzsigntemplatesignerMapping.equals(ezsigntemplatesignerResponse.eEzsigntemplatesignerMapping)) &&
+        (this.sEzsigntemplatesignerDescription == null ? ezsigntemplatesignerResponse.sEzsigntemplatesignerDescription == null : this.sEzsigntemplatesignerDescription.equals(ezsigntemplatesignerResponse.sEzsigntemplatesignerDescription)) &&
+        (this.sUserName == null ? ezsigntemplatesignerResponse.sUserName == null : this.sUserName.equals(ezsigntemplatesignerResponse.sUserName)) &&
+        (this.sUsergroupNameX == null ? ezsigntemplatesignerResponse.sUsergroupNameX == null : this.sUsergroupNameX.equals(ezsigntemplatesignerResponse.sUsergroupNameX));
   }
 
   @Override
@@ -83,7 +186,14 @@ public class EzsigntemplatesignerResponse {
     int result = 17;
     result = 31 * result + (this.pkiEzsigntemplatesignerID == null ? 0: this.pkiEzsigntemplatesignerID.hashCode());
     result = 31 * result + (this.fkiEzsigntemplateID == null ? 0: this.fkiEzsigntemplateID.hashCode());
+    result = 31 * result + (this.fkiUserID == null ? 0: this.fkiUserID.hashCode());
+    result = 31 * result + (this.fkiUsergroupID == null ? 0: this.fkiUsergroupID.hashCode());
+    result = 31 * result + (this.fkiEzdoctemplatedocumentID == null ? 0: this.fkiEzdoctemplatedocumentID.hashCode());
+    result = 31 * result + (this.bEzsigntemplatesignerReceivecopy == null ? 0: this.bEzsigntemplatesignerReceivecopy.hashCode());
+    result = 31 * result + (this.eEzsigntemplatesignerMapping == null ? 0: this.eEzsigntemplatesignerMapping.hashCode());
     result = 31 * result + (this.sEzsigntemplatesignerDescription == null ? 0: this.sEzsigntemplatesignerDescription.hashCode());
+    result = 31 * result + (this.sUserName == null ? 0: this.sUserName.hashCode());
+    result = 31 * result + (this.sUsergroupNameX == null ? 0: this.sUsergroupNameX.hashCode());
     return result;
   }
 
@@ -94,7 +204,14 @@ public class EzsigntemplatesignerResponse {
     
     sb.append("  pkiEzsigntemplatesignerID: ").append(pkiEzsigntemplatesignerID).append("\n");
     sb.append("  fkiEzsigntemplateID: ").append(fkiEzsigntemplateID).append("\n");
+    sb.append("  fkiUserID: ").append(fkiUserID).append("\n");
+    sb.append("  fkiUsergroupID: ").append(fkiUsergroupID).append("\n");
+    sb.append("  fkiEzdoctemplatedocumentID: ").append(fkiEzdoctemplatedocumentID).append("\n");
+    sb.append("  bEzsigntemplatesignerReceivecopy: ").append(bEzsigntemplatesignerReceivecopy).append("\n");
+    sb.append("  eEzsigntemplatesignerMapping: ").append(eEzsigntemplatesignerMapping).append("\n");
     sb.append("  sEzsigntemplatesignerDescription: ").append(sEzsigntemplatesignerDescription).append("\n");
+    sb.append("  sUserName: ").append(sUserName).append("\n");
+    sb.append("  sUsergroupNameX: ").append(sUsergroupNameX).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

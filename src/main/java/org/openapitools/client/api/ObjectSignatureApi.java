@@ -30,6 +30,7 @@ import org.openapitools.client.model.SignatureDeleteObjectV1Response;
 import org.openapitools.client.model.SignatureEditObjectV1Request;
 import org.openapitools.client.model.SignatureEditObjectV1Response;
 import org.openapitools.client.model.SignatureGetObjectV2Response;
+import org.openapitools.client.model.SignatureGetObjectV3Response;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
@@ -571,6 +572,379 @@ public class ObjectSignatureApi {
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Retrieve an existing Signature
+  * 
+   * @param pkiSignatureID The unique ID of the Signature
+   * @return SignatureGetObjectV3Response
+  */
+  public SignatureGetObjectV3Response signatureGetObjectV3 (Integer pkiSignatureID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiSignatureID' is set
+    if (pkiSignatureID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiSignatureID' when calling signatureGetObjectV3",
+        new ApiException(400, "Missing the required parameter 'pkiSignatureID' when calling signatureGetObjectV3"));
+    }
+
+    // create path and map variables
+    String path = "/3/object/signature/{pkiSignatureID}".replaceAll("\\{" + "pkiSignatureID" + "\\}", apiInvoker.escapeString(pkiSignatureID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (SignatureGetObjectV3Response) ApiInvoker.deserialize(localVarResponse, "", SignatureGetObjectV3Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve an existing Signature
+   * 
+   * @param pkiSignatureID The unique ID of the Signature
+  */
+  public void signatureGetObjectV3 (Integer pkiSignatureID, final Response.Listener<SignatureGetObjectV3Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiSignatureID' is set
+    if (pkiSignatureID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiSignatureID' when calling signatureGetObjectV3",
+        new ApiException(400, "Missing the required parameter 'pkiSignatureID' when calling signatureGetObjectV3"));
+    }
+
+    // create path and map variables
+    String path = "/3/object/signature/{pkiSignatureID}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiSignatureID" + "\\}", apiInvoker.escapeString(pkiSignatureID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((SignatureGetObjectV3Response) ApiInvoker.deserialize(localVarResponse,  "", SignatureGetObjectV3Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Retrieve an existing Signature initial SVG
+  * 
+   * @param pkiSignatureID The unique ID of the Signature
+   * @return void
+  */
+  public void signatureGetSVGInitialsV1 (Integer pkiSignatureID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiSignatureID' is set
+    if (pkiSignatureID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiSignatureID' when calling signatureGetSVGInitialsV1",
+        new ApiException(400, "Missing the required parameter 'pkiSignatureID' when calling signatureGetSVGInitialsV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/signature/{pkiSignatureID}/getSVGInitials".replaceAll("\\{" + "pkiSignatureID" + "\\}", apiInvoker.escapeString(pkiSignatureID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return ;
+      } else {
+         return ;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve an existing Signature initial SVG
+   * 
+   * @param pkiSignatureID The unique ID of the Signature
+  */
+  public void signatureGetSVGInitialsV1 (Integer pkiSignatureID, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiSignatureID' is set
+    if (pkiSignatureID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiSignatureID' when calling signatureGetSVGInitialsV1",
+        new ApiException(400, "Missing the required parameter 'pkiSignatureID' when calling signatureGetSVGInitialsV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/signature/{pkiSignatureID}/getSVGInitials".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiSignatureID" + "\\}", apiInvoker.escapeString(pkiSignatureID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+              responseListener.onResponse(localVarResponse);
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Retrieve an existing Signature SVG
+  * 
+   * @param pkiSignatureID The unique ID of the Signature
+   * @return void
+  */
+  public void signatureGetSVGSignatureV1 (Integer pkiSignatureID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiSignatureID' is set
+    if (pkiSignatureID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiSignatureID' when calling signatureGetSVGSignatureV1",
+        new ApiException(400, "Missing the required parameter 'pkiSignatureID' when calling signatureGetSVGSignatureV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/signature/{pkiSignatureID}/getSVGSignature".replaceAll("\\{" + "pkiSignatureID" + "\\}", apiInvoker.escapeString(pkiSignatureID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return ;
+      } else {
+         return ;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve an existing Signature SVG
+   * 
+   * @param pkiSignatureID The unique ID of the Signature
+  */
+  public void signatureGetSVGSignatureV1 (Integer pkiSignatureID, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiSignatureID' is set
+    if (pkiSignatureID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiSignatureID' when calling signatureGetSVGSignatureV1",
+        new ApiException(400, "Missing the required parameter 'pkiSignatureID' when calling signatureGetSVGSignatureV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/signature/{pkiSignatureID}/getSVGSignature".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiSignatureID" + "\\}", apiInvoker.escapeString(pkiSignatureID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+              responseListener.onResponse(localVarResponse);
           }
       }, new Response.ErrorListener() {
           @Override

@@ -12,6 +12,7 @@
 
 package org.openapitools.client.model;
 
+import java.util.*;
 import org.openapitools.client.model.FieldEErrorCode;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
@@ -26,6 +27,8 @@ public class CommonResponseError {
   private String sErrorMessage = null;
   @SerializedName("eErrorCode")
   private FieldEErrorCode eErrorCode = null;
+  @SerializedName("a_sErrorMessagedetail")
+  private List<String> aSErrorMessagedetail = null;
 
   /**
    * The message giving details about the error
@@ -48,6 +51,17 @@ public class CommonResponseError {
     this.eErrorCode = eErrorCode;
   }
 
+  /**
+   * More error message detail
+   **/
+  @ApiModelProperty(value = "More error message detail")
+  public List<String> getASErrorMessagedetail() {
+    return aSErrorMessagedetail;
+  }
+  public void setASErrorMessagedetail(List<String> aSErrorMessagedetail) {
+    this.aSErrorMessagedetail = aSErrorMessagedetail;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -59,7 +73,8 @@ public class CommonResponseError {
     }
     CommonResponseError commonResponseError = (CommonResponseError) o;
     return (this.sErrorMessage == null ? commonResponseError.sErrorMessage == null : this.sErrorMessage.equals(commonResponseError.sErrorMessage)) &&
-        (this.eErrorCode == null ? commonResponseError.eErrorCode == null : this.eErrorCode.equals(commonResponseError.eErrorCode));
+        (this.eErrorCode == null ? commonResponseError.eErrorCode == null : this.eErrorCode.equals(commonResponseError.eErrorCode)) &&
+        (this.aSErrorMessagedetail == null ? commonResponseError.aSErrorMessagedetail == null : this.aSErrorMessagedetail.equals(commonResponseError.aSErrorMessagedetail));
   }
 
   @Override
@@ -67,6 +82,7 @@ public class CommonResponseError {
     int result = 17;
     result = 31 * result + (this.sErrorMessage == null ? 0: this.sErrorMessage.hashCode());
     result = 31 * result + (this.eErrorCode == null ? 0: this.eErrorCode.hashCode());
+    result = 31 * result + (this.aSErrorMessagedetail == null ? 0: this.aSErrorMessagedetail.hashCode());
     return result;
   }
 
@@ -77,6 +93,7 @@ public class CommonResponseError {
     
     sb.append("  sErrorMessage: ").append(sErrorMessage).append("\n");
     sb.append("  eErrorCode: ").append(eErrorCode).append("\n");
+    sb.append("  aSErrorMessagedetail: ").append(aSErrorMessagedetail).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

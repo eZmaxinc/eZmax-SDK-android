@@ -25,8 +25,6 @@ public class CreditcardclientAutocompleteElementResponse {
   private Integer pkiCreditcardclientID = null;
   @SerializedName("sCreditcardclientDescription")
   private String sCreditcardclientDescription = null;
-  @SerializedName("bCreditcardclientIsactive")
-  private Boolean bCreditcardclientIsactive = null;
 
   /**
    * The unique ID of the Creditcardclient
@@ -52,17 +50,6 @@ public class CreditcardclientAutocompleteElementResponse {
     this.sCreditcardclientDescription = sCreditcardclientDescription;
   }
 
-  /**
-   * Whether the creditcardclient is active or not
-   **/
-  @ApiModelProperty(required = true, value = "Whether the creditcardclient is active or not")
-  public Boolean getBCreditcardclientIsactive() {
-    return bCreditcardclientIsactive;
-  }
-  public void setBCreditcardclientIsactive(Boolean bCreditcardclientIsactive) {
-    this.bCreditcardclientIsactive = bCreditcardclientIsactive;
-  }
-
 
   @Override
   public boolean equals(Object o) {
@@ -74,8 +61,7 @@ public class CreditcardclientAutocompleteElementResponse {
     }
     CreditcardclientAutocompleteElementResponse creditcardclientAutocompleteElementResponse = (CreditcardclientAutocompleteElementResponse) o;
     return (this.pkiCreditcardclientID == null ? creditcardclientAutocompleteElementResponse.pkiCreditcardclientID == null : this.pkiCreditcardclientID.equals(creditcardclientAutocompleteElementResponse.pkiCreditcardclientID)) &&
-        (this.sCreditcardclientDescription == null ? creditcardclientAutocompleteElementResponse.sCreditcardclientDescription == null : this.sCreditcardclientDescription.equals(creditcardclientAutocompleteElementResponse.sCreditcardclientDescription)) &&
-        (this.bCreditcardclientIsactive == null ? creditcardclientAutocompleteElementResponse.bCreditcardclientIsactive == null : this.bCreditcardclientIsactive.equals(creditcardclientAutocompleteElementResponse.bCreditcardclientIsactive));
+        (this.sCreditcardclientDescription == null ? creditcardclientAutocompleteElementResponse.sCreditcardclientDescription == null : this.sCreditcardclientDescription.equals(creditcardclientAutocompleteElementResponse.sCreditcardclientDescription));
   }
 
   @Override
@@ -83,7 +69,6 @@ public class CreditcardclientAutocompleteElementResponse {
     int result = 17;
     result = 31 * result + (this.pkiCreditcardclientID == null ? 0: this.pkiCreditcardclientID.hashCode());
     result = 31 * result + (this.sCreditcardclientDescription == null ? 0: this.sCreditcardclientDescription.hashCode());
-    result = 31 * result + (this.bCreditcardclientIsactive == null ? 0: this.bCreditcardclientIsactive.hashCode());
     return result;
   }
 
@@ -94,7 +79,6 @@ public class CreditcardclientAutocompleteElementResponse {
     
     sb.append("  pkiCreditcardclientID: ").append(pkiCreditcardclientID).append("\n");
     sb.append("  sCreditcardclientDescription: ").append(sCreditcardclientDescription).append("\n");
-    sb.append("  bCreditcardclientIsactive: ").append(bCreditcardclientIsactive).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

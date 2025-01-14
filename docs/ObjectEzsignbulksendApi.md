@@ -4,7 +4,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ezsignbulksendCreateEzsignbulksendtransmissionV1**](ObjectEzsignbulksendApi.md#ezsignbulksendCreateEzsignbulksendtransmissionV1) | **POST** /1/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission | Create a new Ezsignbulksendtransmission in the Ezsignbulksend
+[**ezsignbulksendCreateEzsignbulksendtransmissionV2**](ObjectEzsignbulksendApi.md#ezsignbulksendCreateEzsignbulksendtransmissionV2) | **POST** /2/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission | Create a new Ezsignbulksendtransmission in the Ezsignbulksend
 [**ezsignbulksendCreateObjectV1**](ObjectEzsignbulksendApi.md#ezsignbulksendCreateObjectV1) | **POST** /1/object/ezsignbulksend | Create a new Ezsignbulksend
 [**ezsignbulksendDeleteObjectV1**](ObjectEzsignbulksendApi.md#ezsignbulksendDeleteObjectV1) | **DELETE** /1/object/ezsignbulksend/{pkiEzsignbulksendID} | Delete an existing Ezsignbulksend
 [**ezsignbulksendEditObjectV1**](ObjectEzsignbulksendApi.md#ezsignbulksendEditObjectV1) | **PUT** /1/object/ezsignbulksend/{pkiEzsignbulksendID} | Edit an existing Ezsignbulksend
@@ -18,9 +18,9 @@ Method | HTTP request | Description
 
 
 
-## ezsignbulksendCreateEzsignbulksendtransmissionV1
+## ezsignbulksendCreateEzsignbulksendtransmissionV2
 
-> EzsignbulksendCreateEzsignbulksendtransmissionV1Response ezsignbulksendCreateEzsignbulksendtransmissionV1(pkiEzsignbulksendID, ezsignbulksendCreateEzsignbulksendtransmissionV1Request)
+> EzsignbulksendCreateEzsignbulksendtransmissionV2Response ezsignbulksendCreateEzsignbulksendtransmissionV2(pkiEzsignbulksendID, ezsignbulksendCreateEzsignbulksendtransmissionV2Request)
 
 Create a new Ezsignbulksendtransmission in the Ezsignbulksend
 
@@ -32,12 +32,12 @@ Create a new Ezsignbulksendtransmission in the Ezsignbulksend
 
 ObjectEzsignbulksendApi apiInstance = new ObjectEzsignbulksendApi();
 Integer pkiEzsignbulksendID = null; // Integer | 
-EzsignbulksendCreateEzsignbulksendtransmissionV1Request ezsignbulksendCreateEzsignbulksendtransmissionV1Request = new EzsignbulksendCreateEzsignbulksendtransmissionV1Request(); // EzsignbulksendCreateEzsignbulksendtransmissionV1Request | 
+EzsignbulksendCreateEzsignbulksendtransmissionV2Request ezsignbulksendCreateEzsignbulksendtransmissionV2Request = new EzsignbulksendCreateEzsignbulksendtransmissionV2Request(); // EzsignbulksendCreateEzsignbulksendtransmissionV2Request | 
 try {
-    EzsignbulksendCreateEzsignbulksendtransmissionV1Response result = apiInstance.ezsignbulksendCreateEzsignbulksendtransmissionV1(pkiEzsignbulksendID, ezsignbulksendCreateEzsignbulksendtransmissionV1Request);
+    EzsignbulksendCreateEzsignbulksendtransmissionV2Response result = apiInstance.ezsignbulksendCreateEzsignbulksendtransmissionV2(pkiEzsignbulksendID, ezsignbulksendCreateEzsignbulksendtransmissionV2Request);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling ObjectEzsignbulksendApi#ezsignbulksendCreateEzsignbulksendtransmissionV1");
+    System.err.println("Exception when calling ObjectEzsignbulksendApi#ezsignbulksendCreateEzsignbulksendtransmissionV2");
     e.printStackTrace();
 }
 ```
@@ -48,11 +48,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiEzsignbulksendID** | **Integer**|  | [default to null]
- **ezsignbulksendCreateEzsignbulksendtransmissionV1Request** | [**EzsignbulksendCreateEzsignbulksendtransmissionV1Request**](EzsignbulksendCreateEzsignbulksendtransmissionV1Request.md)|  |
+ **ezsignbulksendCreateEzsignbulksendtransmissionV2Request** | [**EzsignbulksendCreateEzsignbulksendtransmissionV2Request**](EzsignbulksendCreateEzsignbulksendtransmissionV2Request.md)|  |
 
 ### Return type
 
-[**EzsignbulksendCreateEzsignbulksendtransmissionV1Response**](EzsignbulksendCreateEzsignbulksendtransmissionV1Response.md)
+[**EzsignbulksendCreateEzsignbulksendtransmissionV2Response**](EzsignbulksendCreateEzsignbulksendtransmissionV2Response.md)
 
 ### Authorization
 

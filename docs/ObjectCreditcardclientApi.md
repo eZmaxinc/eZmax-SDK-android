@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**creditcardclientGetAutocompleteV2**](ObjectCreditcardclientApi.md#creditcardclientGetAutocompleteV2) | **GET** /2/object/creditcardclient/getAutocomplete/{sSelector} | Retrieve Creditcardclients and IDs
 [**creditcardclientGetListV1**](ObjectCreditcardclientApi.md#creditcardclientGetListV1) | **GET** /1/object/creditcardclient/getList | Retrieve Creditcardclient list
 [**creditcardclientGetObjectV2**](ObjectCreditcardclientApi.md#creditcardclientGetObjectV2) | **GET** /2/object/creditcardclient/{pkiCreditcardclientID} | Retrieve an existing Creditcardclient
+[**creditcardclientPatchObjectV1**](ObjectCreditcardclientApi.md#creditcardclientPatchObjectV1) | **PATCH** /1/object/creditcardclient/{pkiCreditcardclientID} | Patch an existing Creditcardclient
 
 
 
@@ -239,7 +240,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **eOrderBy** | **String**| Specify how you want the results to be sorted | [optional] [default to null] [enum: pkiCreditcardclientID_ASC, pkiCreditcardclientID_DESC, fkiCreditcarddetailID_ASC, fkiCreditcarddetailID_DESC, bCreditcardclientrelationIsdefault_ASC, bCreditcardclientrelationIsdefault_DESC, sCreditcardclientDescription_ASC, sCreditcardclientDescription_DESC, bCreditcardclientIsactive_ASC, bCreditcardclientIsactive_DESC, bCreditcardclientAllowedagencypayment_ASC, bCreditcardclientAllowedagencypayment_DESC, bCreditcardclientAllowedroyallepageprotection_ASC, bCreditcardclientAllowedroyallepageprotection_DESC, bCreditcardclientAllowedtranquillit_ASC, bCreditcardclientAllowedtranquillit_DESC, iCreditcarddetailExpirationmonth_ASC, iCreditcarddetailExpirationmonth_DESC, iCreditcarddetailExpirationyear_ASC, iCreditcarddetailExpirationyear_DESC]
+ **eOrderBy** | **String**| Specify how you want the results to be sorted | [optional] [default to null] [enum: pkiCreditcardclientID_ASC, pkiCreditcardclientID_DESC, fkiCreditcarddetailID_ASC, fkiCreditcarddetailID_DESC, fkiCreditcardtypeID_ASC, fkiCreditcardtypeID_DESC, bCreditcardclientrelationIsdefault_ASC, bCreditcardclientrelationIsdefault_DESC, sCreditcardclientDescription_ASC, sCreditcardclientDescription_DESC, bCreditcardclientIsactive_ASC, bCreditcardclientIsactive_DESC, bCreditcardclientAllowedagencypayment_ASC, bCreditcardclientAllowedagencypayment_DESC, bCreditcardclientAllowedtranquillit_ASC, bCreditcardclientAllowedtranquillit_DESC, iCreditcarddetailExpirationmonth_ASC, iCreditcarddetailExpirationmonth_DESC, iCreditcarddetailExpirationyear_ASC, iCreditcarddetailExpirationyear_DESC]
  **iRowMax** | **Integer**|  | [optional] [default to null]
  **iRowOffset** | **Integer**|  | [optional] [default to 0]
  **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [default to null] [enum: *, en, fr]
@@ -302,5 +303,53 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## creditcardclientPatchObjectV1
+
+> CreditcardclientPatchObjectV1Response creditcardclientPatchObjectV1(pkiCreditcardclientID, creditcardclientPatchObjectV1Request)
+
+Patch an existing Creditcardclient
+
+
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectCreditcardclientApi;
+
+ObjectCreditcardclientApi apiInstance = new ObjectCreditcardclientApi();
+Integer pkiCreditcardclientID = null; // Integer | The unique ID of the Creditcardclient
+CreditcardclientPatchObjectV1Request creditcardclientPatchObjectV1Request = new CreditcardclientPatchObjectV1Request(); // CreditcardclientPatchObjectV1Request | 
+try {
+    CreditcardclientPatchObjectV1Response result = apiInstance.creditcardclientPatchObjectV1(pkiCreditcardclientID, creditcardclientPatchObjectV1Request);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectCreditcardclientApi#creditcardclientPatchObjectV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiCreditcardclientID** | **Integer**| The unique ID of the Creditcardclient | [default to null]
+ **creditcardclientPatchObjectV1Request** | [**CreditcardclientPatchObjectV1Request**](CreditcardclientPatchObjectV1Request.md)|  |
+
+### Return type
+
+[**CreditcardclientPatchObjectV1Response**](CreditcardclientPatchObjectV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
 - **Accept**: application/json
 

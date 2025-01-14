@@ -39,6 +39,8 @@ import org.openapitools.client.model.EzsignfoldersignerassociationGetObjectV1Res
 import org.openapitools.client.model.EzsignfoldersignerassociationGetObjectV2Response;
 import org.openapitools.client.model.EzsignfoldersignerassociationPatchObjectV1Request;
 import org.openapitools.client.model.EzsignfoldersignerassociationPatchObjectV1Response;
+import org.openapitools.client.model.EzsignfoldersignerassociationReassignV1Request;
+import org.openapitools.client.model.EzsignfoldersignerassociationReassignV1Response;
 import java.util.*;
 
 import org.apache.http.HttpEntity;
@@ -73,7 +75,7 @@ public class ObjectEzsignfoldersignerassociationApi {
 
   /**
   * Creates an Url to allow embedded signing
-  * This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.  There will be a list to retrieve informations after the signing happens in the embedded version. To do so, there is a list of parameter to add to your sReturnUrl.  In example: https://www.example.com/sReturl?sParameter1&amp;sParameter2. The sParameter1 et sParameter2 will be replace when we will redirect on the url.
+  * This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.
    * @param pkiEzsignfoldersignerassociationID 
    * @param ezsignfoldersignerassociationCreateEmbeddedUrlV1Request 
    * @return EzsignfoldersignerassociationCreateEmbeddedUrlV1Response
@@ -142,7 +144,7 @@ public class ObjectEzsignfoldersignerassociationApi {
 
       /**
    * Creates an Url to allow embedded signing
-   * This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.  There will be a list to retrieve informations after the signing happens in the embedded version. To do so, there is a list of parameter to add to your sReturnUrl.  In example: https://www.example.com/sReturl?sParameter1&amp;sParameter2. The sParameter1 et sParameter2 will be replace when we will redirect on the url.
+   * This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.
    * @param pkiEzsignfoldersignerassociationID    * @param ezsignfoldersignerassociationCreateEmbeddedUrlV1Request 
   */
   public void ezsignfoldersignerassociationCreateEmbeddedUrlV1 (Integer pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationCreateEmbeddedUrlV1Request ezsignfoldersignerassociationCreateEmbeddedUrlV1Request, final Response.Listener<EzsignfoldersignerassociationCreateEmbeddedUrlV1Response> responseListener, final Response.ErrorListener errorListener) {
@@ -1377,6 +1379,145 @@ public class ObjectEzsignfoldersignerassociationApi {
           public void onResponse(String localVarResponse) {
             try {
               responseListener.onResponse((EzsignfoldersignerassociationPatchObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsignfoldersignerassociationPatchObjectV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Reassign remaining unsigned signatures and forms
+  * Reassign remaining unsigned signatures and forms
+   * @param pkiEzsignfoldersignerassociationID 
+   * @param ezsignfoldersignerassociationReassignV1Request 
+   * @return EzsignfoldersignerassociationReassignV1Response
+  */
+  public EzsignfoldersignerassociationReassignV1Response ezsignfoldersignerassociationReassignV1 (Integer pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = ezsignfoldersignerassociationReassignV1Request;
+    // verify the required parameter 'pkiEzsignfoldersignerassociationID' is set
+    if (pkiEzsignfoldersignerassociationID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsignfoldersignerassociationID' when calling ezsignfoldersignerassociationReassignV1",
+        new ApiException(400, "Missing the required parameter 'pkiEzsignfoldersignerassociationID' when calling ezsignfoldersignerassociationReassignV1"));
+    }
+    // verify the required parameter 'ezsignfoldersignerassociationReassignV1Request' is set
+    if (ezsignfoldersignerassociationReassignV1Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'ezsignfoldersignerassociationReassignV1Request' when calling ezsignfoldersignerassociationReassignV1",
+        new ApiException(400, "Missing the required parameter 'ezsignfoldersignerassociationReassignV1Request' when calling ezsignfoldersignerassociationReassignV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/reassign".replaceAll("\\{" + "pkiEzsignfoldersignerassociationID" + "\\}", apiInvoker.escapeString(pkiEzsignfoldersignerassociationID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (EzsignfoldersignerassociationReassignV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsignfoldersignerassociationReassignV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Reassign remaining unsigned signatures and forms
+   * Reassign remaining unsigned signatures and forms
+   * @param pkiEzsignfoldersignerassociationID    * @param ezsignfoldersignerassociationReassignV1Request 
+  */
+  public void ezsignfoldersignerassociationReassignV1 (Integer pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request, final Response.Listener<EzsignfoldersignerassociationReassignV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = ezsignfoldersignerassociationReassignV1Request;
+
+    // verify the required parameter 'pkiEzsignfoldersignerassociationID' is set
+    if (pkiEzsignfoldersignerassociationID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsignfoldersignerassociationID' when calling ezsignfoldersignerassociationReassignV1",
+        new ApiException(400, "Missing the required parameter 'pkiEzsignfoldersignerassociationID' when calling ezsignfoldersignerassociationReassignV1"));
+    }
+    // verify the required parameter 'ezsignfoldersignerassociationReassignV1Request' is set
+    if (ezsignfoldersignerassociationReassignV1Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'ezsignfoldersignerassociationReassignV1Request' when calling ezsignfoldersignerassociationReassignV1",
+        new ApiException(400, "Missing the required parameter 'ezsignfoldersignerassociationReassignV1Request' when calling ezsignfoldersignerassociationReassignV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/reassign".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiEzsignfoldersignerassociationID" + "\\}", apiInvoker.escapeString(pkiEzsignfoldersignerassociationID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((EzsignfoldersignerassociationReassignV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsignfoldersignerassociationReassignV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

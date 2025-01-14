@@ -31,10 +31,16 @@ public class EzsigntemplateResponse {
   private Integer fkiEzsignfoldertypeID = null;
   @SerializedName("fkiLanguageID")
   private Integer fkiLanguageID = null;
+  @SerializedName("fkiEzdoctemplatedocumentID")
+  private Integer fkiEzdoctemplatedocumentID = null;
   @SerializedName("sLanguageNameX")
   private String sLanguageNameX = null;
   @SerializedName("sEzsigntemplateDescription")
   private String sEzsigntemplateDescription = null;
+  @SerializedName("sEzsigntemplateExternaldescription")
+  private String sEzsigntemplateExternaldescription = null;
+  @SerializedName("tEzsigntemplateComment")
+  private String tEzsigntemplateComment = null;
   @SerializedName("sEzsigntemplateFilenamepattern")
   private String sEzsigntemplateFilenamepattern = null;
   @SerializedName("bEzsigntemplateAdminonly")
@@ -99,6 +105,19 @@ public class EzsigntemplateResponse {
   }
 
   /**
+   * The unique ID of the Ezdoctemplatedocument
+   * minimum: 0
+   * maximum: 65535
+   **/
+  @ApiModelProperty(value = "The unique ID of the Ezdoctemplatedocument")
+  public Integer getFkiEzdoctemplatedocumentID() {
+    return fkiEzdoctemplatedocumentID;
+  }
+  public void setFkiEzdoctemplatedocumentID(Integer fkiEzdoctemplatedocumentID) {
+    this.fkiEzdoctemplatedocumentID = fkiEzdoctemplatedocumentID;
+  }
+
+  /**
    * The Name of the Language in the language of the requester
    **/
   @ApiModelProperty(required = true, value = "The Name of the Language in the language of the requester")
@@ -118,6 +137,28 @@ public class EzsigntemplateResponse {
   }
   public void setSEzsigntemplateDescription(String sEzsigntemplateDescription) {
     this.sEzsigntemplateDescription = sEzsigntemplateDescription;
+  }
+
+  /**
+   * The external description of the Ezsigntemplate
+   **/
+  @ApiModelProperty(value = "The external description of the Ezsigntemplate")
+  public String getSEzsigntemplateExternaldescription() {
+    return sEzsigntemplateExternaldescription;
+  }
+  public void setSEzsigntemplateExternaldescription(String sEzsigntemplateExternaldescription) {
+    this.sEzsigntemplateExternaldescription = sEzsigntemplateExternaldescription;
+  }
+
+  /**
+   * The comment of the Ezsigntemplate
+   **/
+  @ApiModelProperty(value = "The comment of the Ezsigntemplate")
+  public String getTEzsigntemplateComment() {
+    return tEzsigntemplateComment;
+  }
+  public void setTEzsigntemplateComment(String tEzsigntemplateComment) {
+    this.tEzsigntemplateComment = tEzsigntemplateComment;
   }
 
   /**
@@ -198,8 +239,11 @@ public class EzsigntemplateResponse {
         (this.fkiEzsigntemplatedocumentID == null ? ezsigntemplateResponse.fkiEzsigntemplatedocumentID == null : this.fkiEzsigntemplatedocumentID.equals(ezsigntemplateResponse.fkiEzsigntemplatedocumentID)) &&
         (this.fkiEzsignfoldertypeID == null ? ezsigntemplateResponse.fkiEzsignfoldertypeID == null : this.fkiEzsignfoldertypeID.equals(ezsigntemplateResponse.fkiEzsignfoldertypeID)) &&
         (this.fkiLanguageID == null ? ezsigntemplateResponse.fkiLanguageID == null : this.fkiLanguageID.equals(ezsigntemplateResponse.fkiLanguageID)) &&
+        (this.fkiEzdoctemplatedocumentID == null ? ezsigntemplateResponse.fkiEzdoctemplatedocumentID == null : this.fkiEzdoctemplatedocumentID.equals(ezsigntemplateResponse.fkiEzdoctemplatedocumentID)) &&
         (this.sLanguageNameX == null ? ezsigntemplateResponse.sLanguageNameX == null : this.sLanguageNameX.equals(ezsigntemplateResponse.sLanguageNameX)) &&
         (this.sEzsigntemplateDescription == null ? ezsigntemplateResponse.sEzsigntemplateDescription == null : this.sEzsigntemplateDescription.equals(ezsigntemplateResponse.sEzsigntemplateDescription)) &&
+        (this.sEzsigntemplateExternaldescription == null ? ezsigntemplateResponse.sEzsigntemplateExternaldescription == null : this.sEzsigntemplateExternaldescription.equals(ezsigntemplateResponse.sEzsigntemplateExternaldescription)) &&
+        (this.tEzsigntemplateComment == null ? ezsigntemplateResponse.tEzsigntemplateComment == null : this.tEzsigntemplateComment.equals(ezsigntemplateResponse.tEzsigntemplateComment)) &&
         (this.sEzsigntemplateFilenamepattern == null ? ezsigntemplateResponse.sEzsigntemplateFilenamepattern == null : this.sEzsigntemplateFilenamepattern.equals(ezsigntemplateResponse.sEzsigntemplateFilenamepattern)) &&
         (this.bEzsigntemplateAdminonly == null ? ezsigntemplateResponse.bEzsigntemplateAdminonly == null : this.bEzsigntemplateAdminonly.equals(ezsigntemplateResponse.bEzsigntemplateAdminonly)) &&
         (this.sEzsignfoldertypeNameX == null ? ezsigntemplateResponse.sEzsignfoldertypeNameX == null : this.sEzsignfoldertypeNameX.equals(ezsigntemplateResponse.sEzsignfoldertypeNameX)) &&
@@ -215,8 +259,11 @@ public class EzsigntemplateResponse {
     result = 31 * result + (this.fkiEzsigntemplatedocumentID == null ? 0: this.fkiEzsigntemplatedocumentID.hashCode());
     result = 31 * result + (this.fkiEzsignfoldertypeID == null ? 0: this.fkiEzsignfoldertypeID.hashCode());
     result = 31 * result + (this.fkiLanguageID == null ? 0: this.fkiLanguageID.hashCode());
+    result = 31 * result + (this.fkiEzdoctemplatedocumentID == null ? 0: this.fkiEzdoctemplatedocumentID.hashCode());
     result = 31 * result + (this.sLanguageNameX == null ? 0: this.sLanguageNameX.hashCode());
     result = 31 * result + (this.sEzsigntemplateDescription == null ? 0: this.sEzsigntemplateDescription.hashCode());
+    result = 31 * result + (this.sEzsigntemplateExternaldescription == null ? 0: this.sEzsigntemplateExternaldescription.hashCode());
+    result = 31 * result + (this.tEzsigntemplateComment == null ? 0: this.tEzsigntemplateComment.hashCode());
     result = 31 * result + (this.sEzsigntemplateFilenamepattern == null ? 0: this.sEzsigntemplateFilenamepattern.hashCode());
     result = 31 * result + (this.bEzsigntemplateAdminonly == null ? 0: this.bEzsigntemplateAdminonly.hashCode());
     result = 31 * result + (this.sEzsignfoldertypeNameX == null ? 0: this.sEzsignfoldertypeNameX.hashCode());
@@ -235,8 +282,11 @@ public class EzsigntemplateResponse {
     sb.append("  fkiEzsigntemplatedocumentID: ").append(fkiEzsigntemplatedocumentID).append("\n");
     sb.append("  fkiEzsignfoldertypeID: ").append(fkiEzsignfoldertypeID).append("\n");
     sb.append("  fkiLanguageID: ").append(fkiLanguageID).append("\n");
+    sb.append("  fkiEzdoctemplatedocumentID: ").append(fkiEzdoctemplatedocumentID).append("\n");
     sb.append("  sLanguageNameX: ").append(sLanguageNameX).append("\n");
     sb.append("  sEzsigntemplateDescription: ").append(sEzsigntemplateDescription).append("\n");
+    sb.append("  sEzsigntemplateExternaldescription: ").append(sEzsigntemplateExternaldescription).append("\n");
+    sb.append("  tEzsigntemplateComment: ").append(tEzsigntemplateComment).append("\n");
     sb.append("  sEzsigntemplateFilenamepattern: ").append(sEzsigntemplateFilenamepattern).append("\n");
     sb.append("  bEzsigntemplateAdminonly: ").append(bEzsigntemplateAdminonly).append("\n");
     sb.append("  sEzsignfoldertypeNameX: ").append(sEzsignfoldertypeNameX).append("\n");

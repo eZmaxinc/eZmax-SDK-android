@@ -51,6 +51,8 @@ public class EzsigndocumentResponse {
   private Integer iEzsigndocumentSignaturesigned = null;
   @SerializedName("iEzsigndocumentSignaturetotal")
   private Integer iEzsigndocumentSignaturetotal = null;
+  @SerializedName("iEzsigndocumentFormfieldtotal")
+  private Integer iEzsigndocumentFormfieldtotal = null;
   @SerializedName("sEzsigndocumentMD5initial")
   private String sEzsigndocumentMD5initial = null;
   @SerializedName("tEzsigndocumentDeclinedtosignreason")
@@ -233,6 +235,18 @@ public class EzsigndocumentResponse {
   }
 
   /**
+   * The number of total Ezsignformfield that were requested in the Ezsigndocument.
+   * minimum: 0
+   **/
+  @ApiModelProperty(required = true, value = "The number of total Ezsignformfield that were requested in the Ezsigndocument.")
+  public Integer getIEzsigndocumentFormfieldtotal() {
+    return iEzsigndocumentFormfieldtotal;
+  }
+  public void setIEzsigndocumentFormfieldtotal(Integer iEzsigndocumentFormfieldtotal) {
+    this.iEzsigndocumentFormfieldtotal = iEzsigndocumentFormfieldtotal;
+  }
+
+  /**
    * MD5 Hash of the initial PDF Document before signatures were applied to it.
    **/
   @ApiModelProperty(value = "MD5 Hash of the initial PDF Document before signatures were applied to it.")
@@ -355,6 +369,7 @@ public class EzsigndocumentResponse {
         (this.iEzsigndocumentPagetotal == null ? ezsigndocumentResponse.iEzsigndocumentPagetotal == null : this.iEzsigndocumentPagetotal.equals(ezsigndocumentResponse.iEzsigndocumentPagetotal)) &&
         (this.iEzsigndocumentSignaturesigned == null ? ezsigndocumentResponse.iEzsigndocumentSignaturesigned == null : this.iEzsigndocumentSignaturesigned.equals(ezsigndocumentResponse.iEzsigndocumentSignaturesigned)) &&
         (this.iEzsigndocumentSignaturetotal == null ? ezsigndocumentResponse.iEzsigndocumentSignaturetotal == null : this.iEzsigndocumentSignaturetotal.equals(ezsigndocumentResponse.iEzsigndocumentSignaturetotal)) &&
+        (this.iEzsigndocumentFormfieldtotal == null ? ezsigndocumentResponse.iEzsigndocumentFormfieldtotal == null : this.iEzsigndocumentFormfieldtotal.equals(ezsigndocumentResponse.iEzsigndocumentFormfieldtotal)) &&
         (this.sEzsigndocumentMD5initial == null ? ezsigndocumentResponse.sEzsigndocumentMD5initial == null : this.sEzsigndocumentMD5initial.equals(ezsigndocumentResponse.sEzsigndocumentMD5initial)) &&
         (this.tEzsigndocumentDeclinedtosignreason == null ? ezsigndocumentResponse.tEzsigndocumentDeclinedtosignreason == null : this.tEzsigndocumentDeclinedtosignreason.equals(ezsigndocumentResponse.tEzsigndocumentDeclinedtosignreason)) &&
         (this.sEzsigndocumentMD5signed == null ? ezsigndocumentResponse.sEzsigndocumentMD5signed == null : this.sEzsigndocumentMD5signed.equals(ezsigndocumentResponse.sEzsigndocumentMD5signed)) &&
@@ -383,6 +398,7 @@ public class EzsigndocumentResponse {
     result = 31 * result + (this.iEzsigndocumentPagetotal == null ? 0: this.iEzsigndocumentPagetotal.hashCode());
     result = 31 * result + (this.iEzsigndocumentSignaturesigned == null ? 0: this.iEzsigndocumentSignaturesigned.hashCode());
     result = 31 * result + (this.iEzsigndocumentSignaturetotal == null ? 0: this.iEzsigndocumentSignaturetotal.hashCode());
+    result = 31 * result + (this.iEzsigndocumentFormfieldtotal == null ? 0: this.iEzsigndocumentFormfieldtotal.hashCode());
     result = 31 * result + (this.sEzsigndocumentMD5initial == null ? 0: this.sEzsigndocumentMD5initial.hashCode());
     result = 31 * result + (this.tEzsigndocumentDeclinedtosignreason == null ? 0: this.tEzsigndocumentDeclinedtosignreason.hashCode());
     result = 31 * result + (this.sEzsigndocumentMD5signed == null ? 0: this.sEzsigndocumentMD5signed.hashCode());
@@ -414,6 +430,7 @@ public class EzsigndocumentResponse {
     sb.append("  iEzsigndocumentPagetotal: ").append(iEzsigndocumentPagetotal).append("\n");
     sb.append("  iEzsigndocumentSignaturesigned: ").append(iEzsigndocumentSignaturesigned).append("\n");
     sb.append("  iEzsigndocumentSignaturetotal: ").append(iEzsigndocumentSignaturetotal).append("\n");
+    sb.append("  iEzsigndocumentFormfieldtotal: ").append(iEzsigndocumentFormfieldtotal).append("\n");
     sb.append("  sEzsigndocumentMD5initial: ").append(sEzsigndocumentMD5initial).append("\n");
     sb.append("  tEzsigndocumentDeclinedtosignreason: ").append(tEzsigndocumentDeclinedtosignreason).append("\n");
     sb.append("  sEzsigndocumentMD5signed: ").append(sEzsigndocumentMD5signed).append("\n");

@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **iEzsigndocumentPagetotal** | **Integer** | The number of pages in the Ezsigndocument. | 
 **iEzsigndocumentSignaturesigned** | **Integer** | The number of signatures that were signed in the document. | 
 **iEzsigndocumentSignaturetotal** | **Integer** | The number of total signatures that were requested in the Ezsigndocument. | 
+**iEzsigndocumentFormfieldtotal** | **Integer** | The number of total Ezsignformfield that were requested in the Ezsigndocument. | 
 **sEzsigndocumentMD5initial** | **String** | MD5 Hash of the initial PDF Document before signatures were applied to it. |  [optional]
 **tEzsigndocumentDeclinedtosignreason** | **String** | A custom text message that will contain the refusal message if the Ezsigndocument is declined to sign |  [optional]
 **sEzsigndocumentMD5signed** | **String** | MD5 Hash of the final PDF Document after all signatures were applied to it. |  [optional]
@@ -35,6 +36,7 @@ Name | Type | Description | Notes
 **iEzsigndocumentStepsignaturetotal** | **Integer** | The total number of steps in the signature filling phase | 
 **iEzsigndocumentStepsignatureCurrent** | **Integer** | The current step in the signature phase | 
 **aObjEzsignfoldersignerassociationstatus** | [**List&lt;CustomEzsignfoldersignerassociationstatusResponse&gt;**](CustomEzsignfoldersignerassociationstatusResponse.md) |  | 
+**aObjEzsigndocumentdependency** | [**List&lt;EzsigndocumentdependencyResponse&gt;**](EzsigndocumentdependencyResponse.md) |  |  [optional]
 
 
 

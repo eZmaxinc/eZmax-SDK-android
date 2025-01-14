@@ -29,6 +29,8 @@ import org.openapitools.client.model.ApikeyEditObjectV1Request;
 import org.openapitools.client.model.ApikeyEditObjectV1Response;
 import org.openapitools.client.model.ApikeyEditPermissionsV1Request;
 import org.openapitools.client.model.ApikeyEditPermissionsV1Response;
+import org.openapitools.client.model.ApikeyGenerateDelegatedCredentialsV1Request;
+import org.openapitools.client.model.ApikeyGenerateDelegatedCredentialsV1Response;
 import org.openapitools.client.model.ApikeyGetCorsV1Response;
 import org.openapitools.client.model.ApikeyGetListV1Response;
 import org.openapitools.client.model.ApikeyGetObjectV2Response;
@@ -462,6 +464,134 @@ public class ObjectApikeyApi {
           public void onResponse(String localVarResponse) {
             try {
               responseListener.onResponse((ApikeyEditPermissionsV1Response) ApiInvoker.deserialize(localVarResponse,  "", ApikeyEditPermissionsV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Generate a delegated credentials
+  * 
+   * @param apikeyGenerateDelegatedCredentialsV1Request 
+   * @return ApikeyGenerateDelegatedCredentialsV1Response
+  */
+  public ApikeyGenerateDelegatedCredentialsV1Response apikeyGenerateDelegatedCredentialsV1 (ApikeyGenerateDelegatedCredentialsV1Request apikeyGenerateDelegatedCredentialsV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = apikeyGenerateDelegatedCredentialsV1Request;
+    // verify the required parameter 'apikeyGenerateDelegatedCredentialsV1Request' is set
+    if (apikeyGenerateDelegatedCredentialsV1Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'apikeyGenerateDelegatedCredentialsV1Request' when calling apikeyGenerateDelegatedCredentialsV1",
+        new ApiException(400, "Missing the required parameter 'apikeyGenerateDelegatedCredentialsV1Request' when calling apikeyGenerateDelegatedCredentialsV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/apikey/generateDelegatedCredentials";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (ApikeyGenerateDelegatedCredentialsV1Response) ApiInvoker.deserialize(localVarResponse, "", ApikeyGenerateDelegatedCredentialsV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Generate a delegated credentials
+   * 
+   * @param apikeyGenerateDelegatedCredentialsV1Request 
+  */
+  public void apikeyGenerateDelegatedCredentialsV1 (ApikeyGenerateDelegatedCredentialsV1Request apikeyGenerateDelegatedCredentialsV1Request, final Response.Listener<ApikeyGenerateDelegatedCredentialsV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = apikeyGenerateDelegatedCredentialsV1Request;
+
+    // verify the required parameter 'apikeyGenerateDelegatedCredentialsV1Request' is set
+    if (apikeyGenerateDelegatedCredentialsV1Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'apikeyGenerateDelegatedCredentialsV1Request' when calling apikeyGenerateDelegatedCredentialsV1",
+        new ApiException(400, "Missing the required parameter 'apikeyGenerateDelegatedCredentialsV1Request' when calling apikeyGenerateDelegatedCredentialsV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/apikey/generateDelegatedCredentials".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((ApikeyGenerateDelegatedCredentialsV1Response) ApiInvoker.deserialize(localVarResponse,  "", ApikeyGenerateDelegatedCredentialsV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

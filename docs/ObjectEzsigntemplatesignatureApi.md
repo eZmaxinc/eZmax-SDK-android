@@ -4,16 +4,16 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ezsigntemplatesignatureCreateObjectV1**](ObjectEzsigntemplatesignatureApi.md#ezsigntemplatesignatureCreateObjectV1) | **POST** /1/object/ezsigntemplatesignature | Create a new Ezsigntemplatesignature
+[**ezsigntemplatesignatureCreateObjectV2**](ObjectEzsigntemplatesignatureApi.md#ezsigntemplatesignatureCreateObjectV2) | **POST** /2/object/ezsigntemplatesignature | Create a new Ezsigntemplatesignature
 [**ezsigntemplatesignatureDeleteObjectV1**](ObjectEzsigntemplatesignatureApi.md#ezsigntemplatesignatureDeleteObjectV1) | **DELETE** /1/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID} | Delete an existing Ezsigntemplatesignature
-[**ezsigntemplatesignatureEditObjectV1**](ObjectEzsigntemplatesignatureApi.md#ezsigntemplatesignatureEditObjectV1) | **PUT** /1/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID} | Edit an existing Ezsigntemplatesignature
-[**ezsigntemplatesignatureGetObjectV2**](ObjectEzsigntemplatesignatureApi.md#ezsigntemplatesignatureGetObjectV2) | **GET** /2/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID} | Retrieve an existing Ezsigntemplatesignature
+[**ezsigntemplatesignatureEditObjectV2**](ObjectEzsigntemplatesignatureApi.md#ezsigntemplatesignatureEditObjectV2) | **PUT** /2/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID} | Edit an existing Ezsigntemplatesignature
+[**ezsigntemplatesignatureGetObjectV3**](ObjectEzsigntemplatesignatureApi.md#ezsigntemplatesignatureGetObjectV3) | **GET** /3/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID} | Retrieve an existing Ezsigntemplatesignature
 
 
 
-## ezsigntemplatesignatureCreateObjectV1
+## ezsigntemplatesignatureCreateObjectV2
 
-> EzsigntemplatesignatureCreateObjectV1Response ezsigntemplatesignatureCreateObjectV1(ezsigntemplatesignatureCreateObjectV1Request)
+> EzsigntemplatesignatureCreateObjectV2Response ezsigntemplatesignatureCreateObjectV2(ezsigntemplatesignatureCreateObjectV2Request)
 
 Create a new Ezsigntemplatesignature
 
@@ -26,12 +26,12 @@ The endpoint allows to create one or many elements at once.
 //import org.openapitools.client.api.ObjectEzsigntemplatesignatureApi;
 
 ObjectEzsigntemplatesignatureApi apiInstance = new ObjectEzsigntemplatesignatureApi();
-EzsigntemplatesignatureCreateObjectV1Request ezsigntemplatesignatureCreateObjectV1Request = new EzsigntemplatesignatureCreateObjectV1Request(); // EzsigntemplatesignatureCreateObjectV1Request | 
+EzsigntemplatesignatureCreateObjectV2Request ezsigntemplatesignatureCreateObjectV2Request = new EzsigntemplatesignatureCreateObjectV2Request(); // EzsigntemplatesignatureCreateObjectV2Request | 
 try {
-    EzsigntemplatesignatureCreateObjectV1Response result = apiInstance.ezsigntemplatesignatureCreateObjectV1(ezsigntemplatesignatureCreateObjectV1Request);
+    EzsigntemplatesignatureCreateObjectV2Response result = apiInstance.ezsigntemplatesignatureCreateObjectV2(ezsigntemplatesignatureCreateObjectV2Request);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling ObjectEzsigntemplatesignatureApi#ezsigntemplatesignatureCreateObjectV1");
+    System.err.println("Exception when calling ObjectEzsigntemplatesignatureApi#ezsigntemplatesignatureCreateObjectV2");
     e.printStackTrace();
 }
 ```
@@ -41,11 +41,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ezsigntemplatesignatureCreateObjectV1Request** | [**EzsigntemplatesignatureCreateObjectV1Request**](EzsigntemplatesignatureCreateObjectV1Request.md)|  |
+ **ezsigntemplatesignatureCreateObjectV2Request** | [**EzsigntemplatesignatureCreateObjectV2Request**](EzsigntemplatesignatureCreateObjectV2Request.md)|  |
 
 ### Return type
 
-[**EzsigntemplatesignatureCreateObjectV1Response**](EzsigntemplatesignatureCreateObjectV1Response.md)
+[**EzsigntemplatesignatureCreateObjectV2Response**](EzsigntemplatesignatureCreateObjectV2Response.md)
 
 ### Authorization
 
@@ -103,9 +103,9 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## ezsigntemplatesignatureEditObjectV1
+## ezsigntemplatesignatureEditObjectV2
 
-> EzsigntemplatesignatureEditObjectV1Response ezsigntemplatesignatureEditObjectV1(pkiEzsigntemplatesignatureID, ezsigntemplatesignatureEditObjectV1Request)
+> EzsigntemplatesignatureEditObjectV2Response ezsigntemplatesignatureEditObjectV2(pkiEzsigntemplatesignatureID, ezsigntemplatesignatureEditObjectV2Request)
 
 Edit an existing Ezsigntemplatesignature
 
@@ -119,12 +119,12 @@ Edit an existing Ezsigntemplatesignature
 
 ObjectEzsigntemplatesignatureApi apiInstance = new ObjectEzsigntemplatesignatureApi();
 Integer pkiEzsigntemplatesignatureID = null; // Integer | 
-EzsigntemplatesignatureEditObjectV1Request ezsigntemplatesignatureEditObjectV1Request = new EzsigntemplatesignatureEditObjectV1Request(); // EzsigntemplatesignatureEditObjectV1Request | 
+EzsigntemplatesignatureEditObjectV2Request ezsigntemplatesignatureEditObjectV2Request = new EzsigntemplatesignatureEditObjectV2Request(); // EzsigntemplatesignatureEditObjectV2Request | 
 try {
-    EzsigntemplatesignatureEditObjectV1Response result = apiInstance.ezsigntemplatesignatureEditObjectV1(pkiEzsigntemplatesignatureID, ezsigntemplatesignatureEditObjectV1Request);
+    EzsigntemplatesignatureEditObjectV2Response result = apiInstance.ezsigntemplatesignatureEditObjectV2(pkiEzsigntemplatesignatureID, ezsigntemplatesignatureEditObjectV2Request);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling ObjectEzsigntemplatesignatureApi#ezsigntemplatesignatureEditObjectV1");
+    System.err.println("Exception when calling ObjectEzsigntemplatesignatureApi#ezsigntemplatesignatureEditObjectV2");
     e.printStackTrace();
 }
 ```
@@ -135,11 +135,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiEzsigntemplatesignatureID** | **Integer**|  | [default to null]
- **ezsigntemplatesignatureEditObjectV1Request** | [**EzsigntemplatesignatureEditObjectV1Request**](EzsigntemplatesignatureEditObjectV1Request.md)|  |
+ **ezsigntemplatesignatureEditObjectV2Request** | [**EzsigntemplatesignatureEditObjectV2Request**](EzsigntemplatesignatureEditObjectV2Request.md)|  |
 
 ### Return type
 
-[**EzsigntemplatesignatureEditObjectV1Response**](EzsigntemplatesignatureEditObjectV1Response.md)
+[**EzsigntemplatesignatureEditObjectV2Response**](EzsigntemplatesignatureEditObjectV2Response.md)
 
 ### Authorization
 
@@ -151,9 +151,9 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## ezsigntemplatesignatureGetObjectV2
+## ezsigntemplatesignatureGetObjectV3
 
-> EzsigntemplatesignatureGetObjectV2Response ezsigntemplatesignatureGetObjectV2(pkiEzsigntemplatesignatureID)
+> EzsigntemplatesignatureGetObjectV3Response ezsigntemplatesignatureGetObjectV3(pkiEzsigntemplatesignatureID)
 
 Retrieve an existing Ezsigntemplatesignature
 
@@ -168,10 +168,10 @@ Retrieve an existing Ezsigntemplatesignature
 ObjectEzsigntemplatesignatureApi apiInstance = new ObjectEzsigntemplatesignatureApi();
 Integer pkiEzsigntemplatesignatureID = null; // Integer | 
 try {
-    EzsigntemplatesignatureGetObjectV2Response result = apiInstance.ezsigntemplatesignatureGetObjectV2(pkiEzsigntemplatesignatureID);
+    EzsigntemplatesignatureGetObjectV3Response result = apiInstance.ezsigntemplatesignatureGetObjectV3(pkiEzsigntemplatesignatureID);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling ObjectEzsigntemplatesignatureApi#ezsigntemplatesignatureGetObjectV2");
+    System.err.println("Exception when calling ObjectEzsigntemplatesignatureApi#ezsigntemplatesignatureGetObjectV3");
     e.printStackTrace();
 }
 ```
@@ -185,7 +185,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsigntemplatesignatureGetObjectV2Response**](EzsigntemplatesignatureGetObjectV2Response.md)
+[**EzsigntemplatesignatureGetObjectV3Response**](EzsigntemplatesignatureGetObjectV3Response.md)
 
 ### Authorization
 

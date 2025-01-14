@@ -30,12 +30,8 @@ public class CreditcardclientResponse {
   private Boolean bCreditcardclientrelationIsdefault = null;
   @SerializedName("sCreditcardclientDescription")
   private String sCreditcardclientDescription = null;
-  @SerializedName("bCreditcardclientIsactive")
-  private Boolean bCreditcardclientIsactive = null;
-  @SerializedName("bCreditcardclientAllowedagencypayment")
-  private Boolean bCreditcardclientAllowedagencypayment = null;
-  @SerializedName("bCreditcardclientAllowedroyallepageprotection")
-  private Boolean bCreditcardclientAllowedroyallepageprotection = null;
+  @SerializedName("bCreditcardclientAllowedcompanypayment")
+  private Boolean bCreditcardclientAllowedcompanypayment = null;
   @SerializedName("bCreditcardclientAllowedtranquillit")
   private Boolean bCreditcardclientAllowedtranquillit = null;
   @SerializedName("objCreditcarddetail")
@@ -68,9 +64,9 @@ public class CreditcardclientResponse {
   }
 
   /**
-   * Whether if it's an relationisdefault
+   * Whether if it's the creditcardclient is the default one
    **/
-  @ApiModelProperty(required = true, value = "Whether if it's an relationisdefault")
+  @ApiModelProperty(required = true, value = "Whether if it's the creditcardclient is the default one")
   public Boolean getBCreditcardclientrelationIsdefault() {
     return bCreditcardclientrelationIsdefault;
   }
@@ -90,36 +86,14 @@ public class CreditcardclientResponse {
   }
 
   /**
-   * Whether the creditcardclient is active or not
-   **/
-  @ApiModelProperty(required = true, value = "Whether the creditcardclient is active or not")
-  public Boolean getBCreditcardclientIsactive() {
-    return bCreditcardclientIsactive;
-  }
-  public void setBCreditcardclientIsactive(Boolean bCreditcardclientIsactive) {
-    this.bCreditcardclientIsactive = bCreditcardclientIsactive;
-  }
-
-  /**
    * Whether if it's an allowedagencypayment
    **/
   @ApiModelProperty(required = true, value = "Whether if it's an allowedagencypayment")
-  public Boolean getBCreditcardclientAllowedagencypayment() {
-    return bCreditcardclientAllowedagencypayment;
+  public Boolean getBCreditcardclientAllowedcompanypayment() {
+    return bCreditcardclientAllowedcompanypayment;
   }
-  public void setBCreditcardclientAllowedagencypayment(Boolean bCreditcardclientAllowedagencypayment) {
-    this.bCreditcardclientAllowedagencypayment = bCreditcardclientAllowedagencypayment;
-  }
-
-  /**
-   * Whether if it's an allowedroyallepageprotection
-   **/
-  @ApiModelProperty(required = true, value = "Whether if it's an allowedroyallepageprotection")
-  public Boolean getBCreditcardclientAllowedroyallepageprotection() {
-    return bCreditcardclientAllowedroyallepageprotection;
-  }
-  public void setBCreditcardclientAllowedroyallepageprotection(Boolean bCreditcardclientAllowedroyallepageprotection) {
-    this.bCreditcardclientAllowedroyallepageprotection = bCreditcardclientAllowedroyallepageprotection;
+  public void setBCreditcardclientAllowedcompanypayment(Boolean bCreditcardclientAllowedcompanypayment) {
+    this.bCreditcardclientAllowedcompanypayment = bCreditcardclientAllowedcompanypayment;
   }
 
   /**
@@ -157,9 +131,7 @@ public class CreditcardclientResponse {
         (this.fkiCreditcarddetailID == null ? creditcardclientResponse.fkiCreditcarddetailID == null : this.fkiCreditcarddetailID.equals(creditcardclientResponse.fkiCreditcarddetailID)) &&
         (this.bCreditcardclientrelationIsdefault == null ? creditcardclientResponse.bCreditcardclientrelationIsdefault == null : this.bCreditcardclientrelationIsdefault.equals(creditcardclientResponse.bCreditcardclientrelationIsdefault)) &&
         (this.sCreditcardclientDescription == null ? creditcardclientResponse.sCreditcardclientDescription == null : this.sCreditcardclientDescription.equals(creditcardclientResponse.sCreditcardclientDescription)) &&
-        (this.bCreditcardclientIsactive == null ? creditcardclientResponse.bCreditcardclientIsactive == null : this.bCreditcardclientIsactive.equals(creditcardclientResponse.bCreditcardclientIsactive)) &&
-        (this.bCreditcardclientAllowedagencypayment == null ? creditcardclientResponse.bCreditcardclientAllowedagencypayment == null : this.bCreditcardclientAllowedagencypayment.equals(creditcardclientResponse.bCreditcardclientAllowedagencypayment)) &&
-        (this.bCreditcardclientAllowedroyallepageprotection == null ? creditcardclientResponse.bCreditcardclientAllowedroyallepageprotection == null : this.bCreditcardclientAllowedroyallepageprotection.equals(creditcardclientResponse.bCreditcardclientAllowedroyallepageprotection)) &&
+        (this.bCreditcardclientAllowedcompanypayment == null ? creditcardclientResponse.bCreditcardclientAllowedcompanypayment == null : this.bCreditcardclientAllowedcompanypayment.equals(creditcardclientResponse.bCreditcardclientAllowedcompanypayment)) &&
         (this.bCreditcardclientAllowedtranquillit == null ? creditcardclientResponse.bCreditcardclientAllowedtranquillit == null : this.bCreditcardclientAllowedtranquillit.equals(creditcardclientResponse.bCreditcardclientAllowedtranquillit)) &&
         (this.objCreditcarddetail == null ? creditcardclientResponse.objCreditcarddetail == null : this.objCreditcarddetail.equals(creditcardclientResponse.objCreditcarddetail));
   }
@@ -171,9 +143,7 @@ public class CreditcardclientResponse {
     result = 31 * result + (this.fkiCreditcarddetailID == null ? 0: this.fkiCreditcarddetailID.hashCode());
     result = 31 * result + (this.bCreditcardclientrelationIsdefault == null ? 0: this.bCreditcardclientrelationIsdefault.hashCode());
     result = 31 * result + (this.sCreditcardclientDescription == null ? 0: this.sCreditcardclientDescription.hashCode());
-    result = 31 * result + (this.bCreditcardclientIsactive == null ? 0: this.bCreditcardclientIsactive.hashCode());
-    result = 31 * result + (this.bCreditcardclientAllowedagencypayment == null ? 0: this.bCreditcardclientAllowedagencypayment.hashCode());
-    result = 31 * result + (this.bCreditcardclientAllowedroyallepageprotection == null ? 0: this.bCreditcardclientAllowedroyallepageprotection.hashCode());
+    result = 31 * result + (this.bCreditcardclientAllowedcompanypayment == null ? 0: this.bCreditcardclientAllowedcompanypayment.hashCode());
     result = 31 * result + (this.bCreditcardclientAllowedtranquillit == null ? 0: this.bCreditcardclientAllowedtranquillit.hashCode());
     result = 31 * result + (this.objCreditcarddetail == null ? 0: this.objCreditcarddetail.hashCode());
     return result;
@@ -188,9 +158,7 @@ public class CreditcardclientResponse {
     sb.append("  fkiCreditcarddetailID: ").append(fkiCreditcarddetailID).append("\n");
     sb.append("  bCreditcardclientrelationIsdefault: ").append(bCreditcardclientrelationIsdefault).append("\n");
     sb.append("  sCreditcardclientDescription: ").append(sCreditcardclientDescription).append("\n");
-    sb.append("  bCreditcardclientIsactive: ").append(bCreditcardclientIsactive).append("\n");
-    sb.append("  bCreditcardclientAllowedagencypayment: ").append(bCreditcardclientAllowedagencypayment).append("\n");
-    sb.append("  bCreditcardclientAllowedroyallepageprotection: ").append(bCreditcardclientAllowedroyallepageprotection).append("\n");
+    sb.append("  bCreditcardclientAllowedcompanypayment: ").append(bCreditcardclientAllowedcompanypayment).append("\n");
     sb.append("  bCreditcardclientAllowedtranquillit: ").append(bCreditcardclientAllowedtranquillit).append("\n");
     sb.append("  objCreditcarddetail: ").append(objCreditcarddetail).append("\n");
     sb.append("}\n");

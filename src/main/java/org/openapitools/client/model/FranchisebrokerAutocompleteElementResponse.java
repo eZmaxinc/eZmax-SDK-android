@@ -29,9 +29,9 @@ public class FranchisebrokerAutocompleteElementResponse {
   private Boolean bFranchisebrokerIsactive = null;
 
   /**
-   * The name of the Franchisebroker in the language of the requester
+   * The name of the Franchisebroker
    **/
-  @ApiModelProperty(required = true, value = "The name of the Franchisebroker in the language of the requester")
+  @ApiModelProperty(required = true, value = "The name of the Franchisebroker")
   public String getSFranchisebrokerName() {
     return sFranchisebrokerName;
   }

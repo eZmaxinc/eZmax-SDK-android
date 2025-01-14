@@ -27,6 +27,8 @@ public class WebhookResponse {
   
   @SerializedName("pkiWebhookID")
   private Integer pkiWebhookID = null;
+  @SerializedName("fkiAuthenticationexternalID")
+  private Integer fkiAuthenticationexternalID = null;
   @SerializedName("sWebhookDescription")
   private String sWebhookDescription = null;
   @SerializedName("fkiEzsignfoldertypeID")
@@ -53,6 +55,8 @@ public class WebhookResponse {
   private Boolean bWebhookIssigned = null;
   @SerializedName("bWebhookSkipsslvalidation")
   private Boolean bWebhookSkipsslvalidation = null;
+  @SerializedName("sAuthenticationexternalDescription")
+  private String sAuthenticationexternalDescription = null;
   @SerializedName("objAudit")
   private CommonAudit objAudit = null;
 
@@ -65,6 +69,19 @@ public class WebhookResponse {
   }
   public void setPkiWebhookID(Integer pkiWebhookID) {
     this.pkiWebhookID = pkiWebhookID;
+  }
+
+  /**
+   * The unique ID of the Authenticationexternal
+   * minimum: 0
+   * maximum: 255
+   **/
+  @ApiModelProperty(value = "The unique ID of the Authenticationexternal")
+  public Integer getFkiAuthenticationexternalID() {
+    return fkiAuthenticationexternalID;
+  }
+  public void setFkiAuthenticationexternalID(Integer fkiAuthenticationexternalID) {
+    this.fkiAuthenticationexternalID = fkiAuthenticationexternalID;
   }
 
   /**
@@ -210,6 +227,17 @@ public class WebhookResponse {
   }
 
   /**
+   * The description of the Authenticationexternal
+   **/
+  @ApiModelProperty(value = "The description of the Authenticationexternal")
+  public String getSAuthenticationexternalDescription() {
+    return sAuthenticationexternalDescription;
+  }
+  public void setSAuthenticationexternalDescription(String sAuthenticationexternalDescription) {
+    this.sAuthenticationexternalDescription = sAuthenticationexternalDescription;
+  }
+
+  /**
    **/
   @ApiModelProperty(required = true, value = "")
   public CommonAudit getObjAudit() {
@@ -230,6 +258,7 @@ public class WebhookResponse {
     }
     WebhookResponse webhookResponse = (WebhookResponse) o;
     return (this.pkiWebhookID == null ? webhookResponse.pkiWebhookID == null : this.pkiWebhookID.equals(webhookResponse.pkiWebhookID)) &&
+        (this.fkiAuthenticationexternalID == null ? webhookResponse.fkiAuthenticationexternalID == null : this.fkiAuthenticationexternalID.equals(webhookResponse.fkiAuthenticationexternalID)) &&
         (this.sWebhookDescription == null ? webhookResponse.sWebhookDescription == null : this.sWebhookDescription.equals(webhookResponse.sWebhookDescription)) &&
         (this.fkiEzsignfoldertypeID == null ? webhookResponse.fkiEzsignfoldertypeID == null : this.fkiEzsignfoldertypeID.equals(webhookResponse.fkiEzsignfoldertypeID)) &&
         (this.sEzsignfoldertypeNameX == null ? webhookResponse.sEzsignfoldertypeNameX == null : this.sEzsignfoldertypeNameX.equals(webhookResponse.sEzsignfoldertypeNameX)) &&
@@ -243,6 +272,7 @@ public class WebhookResponse {
         (this.bWebhookIsactive == null ? webhookResponse.bWebhookIsactive == null : this.bWebhookIsactive.equals(webhookResponse.bWebhookIsactive)) &&
         (this.bWebhookIssigned == null ? webhookResponse.bWebhookIssigned == null : this.bWebhookIssigned.equals(webhookResponse.bWebhookIssigned)) &&
         (this.bWebhookSkipsslvalidation == null ? webhookResponse.bWebhookSkipsslvalidation == null : this.bWebhookSkipsslvalidation.equals(webhookResponse.bWebhookSkipsslvalidation)) &&
+        (this.sAuthenticationexternalDescription == null ? webhookResponse.sAuthenticationexternalDescription == null : this.sAuthenticationexternalDescription.equals(webhookResponse.sAuthenticationexternalDescription)) &&
         (this.objAudit == null ? webhookResponse.objAudit == null : this.objAudit.equals(webhookResponse.objAudit));
   }
 
@@ -250,6 +280,7 @@ public class WebhookResponse {
   public int hashCode() {
     int result = 17;
     result = 31 * result + (this.pkiWebhookID == null ? 0: this.pkiWebhookID.hashCode());
+    result = 31 * result + (this.fkiAuthenticationexternalID == null ? 0: this.fkiAuthenticationexternalID.hashCode());
     result = 31 * result + (this.sWebhookDescription == null ? 0: this.sWebhookDescription.hashCode());
     result = 31 * result + (this.fkiEzsignfoldertypeID == null ? 0: this.fkiEzsignfoldertypeID.hashCode());
     result = 31 * result + (this.sEzsignfoldertypeNameX == null ? 0: this.sEzsignfoldertypeNameX.hashCode());
@@ -263,6 +294,7 @@ public class WebhookResponse {
     result = 31 * result + (this.bWebhookIsactive == null ? 0: this.bWebhookIsactive.hashCode());
     result = 31 * result + (this.bWebhookIssigned == null ? 0: this.bWebhookIssigned.hashCode());
     result = 31 * result + (this.bWebhookSkipsslvalidation == null ? 0: this.bWebhookSkipsslvalidation.hashCode());
+    result = 31 * result + (this.sAuthenticationexternalDescription == null ? 0: this.sAuthenticationexternalDescription.hashCode());
     result = 31 * result + (this.objAudit == null ? 0: this.objAudit.hashCode());
     return result;
   }
@@ -273,6 +305,7 @@ public class WebhookResponse {
     sb.append("class WebhookResponse {\n");
     
     sb.append("  pkiWebhookID: ").append(pkiWebhookID).append("\n");
+    sb.append("  fkiAuthenticationexternalID: ").append(fkiAuthenticationexternalID).append("\n");
     sb.append("  sWebhookDescription: ").append(sWebhookDescription).append("\n");
     sb.append("  fkiEzsignfoldertypeID: ").append(fkiEzsignfoldertypeID).append("\n");
     sb.append("  sEzsignfoldertypeNameX: ").append(sEzsignfoldertypeNameX).append("\n");
@@ -286,6 +319,7 @@ public class WebhookResponse {
     sb.append("  bWebhookIsactive: ").append(bWebhookIsactive).append("\n");
     sb.append("  bWebhookIssigned: ").append(bWebhookIssigned).append("\n");
     sb.append("  bWebhookSkipsslvalidation: ").append(bWebhookSkipsslvalidation).append("\n");
+    sb.append("  sAuthenticationexternalDescription: ").append(sAuthenticationexternalDescription).append("\n");
     sb.append("  objAudit: ").append(objAudit).append("\n");
     sb.append("}\n");
     return sb.toString();

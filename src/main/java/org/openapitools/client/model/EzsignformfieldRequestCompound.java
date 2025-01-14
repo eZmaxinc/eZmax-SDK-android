@@ -13,8 +13,10 @@
 package org.openapitools.client.model;
 
 import java.util.*;
+import org.openapitools.client.model.EnumHorizontalalignment;
 import org.openapitools.client.model.EzsignelementdependencyRequestCompound;
 import org.openapitools.client.model.FieldEEzsignformfieldDependencyrequirement;
+import org.openapitools.client.model.TextstylestaticRequestCompound;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -48,6 +50,10 @@ public class EzsignformfieldRequestCompound {
   private String sEzsignformfieldEnteredvalue = null;
   @SerializedName("eEzsignformfieldDependencyrequirement")
   private FieldEEzsignformfieldDependencyrequirement eEzsignformfieldDependencyrequirement = null;
+  @SerializedName("eEzsignformfieldHorizontalalignment")
+  private EnumHorizontalalignment eEzsignformfieldHorizontalalignment = null;
+  @SerializedName("objTextstylestatic")
+  private TextstylestaticRequestCompound objTextstylestatic = null;
   @SerializedName("a_objEzsignelementdependency")
   private List<EzsignelementdependencyRequestCompound> aObjEzsignelementdependency = null;
 
@@ -122,10 +128,10 @@ public class EzsignformfieldRequestCompound {
   }
 
   /**
-   * The Width of the Ezsignformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsignformfieldgroupType.  | eEzsignformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22-65535     | | Radio                     | 22           | | Text                      | 22-65535     | | Textarea                  | 22-65535     |
+   * The Width of the Ezsignformfield in pixels calculated at 100 DPI
    * minimum: 0
    **/
-  @ApiModelProperty(required = true, value = "The Width of the Ezsignformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsignformfieldgroupType.  | eEzsignformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22-65535     | | Radio                     | 22           | | Text                      | 22-65535     | | Textarea                  | 22-65535     |")
+  @ApiModelProperty(required = true, value = "The Width of the Ezsignformfield in pixels calculated at 100 DPI")
   public Integer getIEzsignformfieldWidth() {
     return iEzsignformfieldWidth;
   }
@@ -134,10 +140,10 @@ public class EzsignformfieldRequestCompound {
   }
 
   /**
-   * The Height of the Ezsignformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsignformfieldgroupType.  | eEzsignformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22           | | Radio                     | 22           | | Text                      | 22           | | Textarea                  | 22-65535     | 
+   * The Height of the Ezsignformfield in pixels calculated at 100 DPI 
    * minimum: 0
    **/
-  @ApiModelProperty(required = true, value = "The Height of the Ezsignformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsignformfieldgroupType.  | eEzsignformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22           | | Radio                     | 22           | | Text                      | 22           | | Textarea                  | 22-65535     | ")
+  @ApiModelProperty(required = true, value = "The Height of the Ezsignformfield in pixels calculated at 100 DPI ")
   public Integer getIEzsignformfieldHeight() {
     return iEzsignformfieldHeight;
   }
@@ -191,6 +197,26 @@ public class EzsignformfieldRequestCompound {
   /**
    **/
   @ApiModelProperty(value = "")
+  public EnumHorizontalalignment getEEzsignformfieldHorizontalalignment() {
+    return eEzsignformfieldHorizontalalignment;
+  }
+  public void setEEzsignformfieldHorizontalalignment(EnumHorizontalalignment eEzsignformfieldHorizontalalignment) {
+    this.eEzsignformfieldHorizontalalignment = eEzsignformfieldHorizontalalignment;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public TextstylestaticRequestCompound getObjTextstylestatic() {
+    return objTextstylestatic;
+  }
+  public void setObjTextstylestatic(TextstylestaticRequestCompound objTextstylestatic) {
+    this.objTextstylestatic = objTextstylestatic;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
   public List<EzsignelementdependencyRequestCompound> getAObjEzsignelementdependency() {
     return aObjEzsignelementdependency;
   }
@@ -220,6 +246,8 @@ public class EzsignformfieldRequestCompound {
         (this.bEzsignformfieldSelected == null ? ezsignformfieldRequestCompound.bEzsignformfieldSelected == null : this.bEzsignformfieldSelected.equals(ezsignformfieldRequestCompound.bEzsignformfieldSelected)) &&
         (this.sEzsignformfieldEnteredvalue == null ? ezsignformfieldRequestCompound.sEzsignformfieldEnteredvalue == null : this.sEzsignformfieldEnteredvalue.equals(ezsignformfieldRequestCompound.sEzsignformfieldEnteredvalue)) &&
         (this.eEzsignformfieldDependencyrequirement == null ? ezsignformfieldRequestCompound.eEzsignformfieldDependencyrequirement == null : this.eEzsignformfieldDependencyrequirement.equals(ezsignformfieldRequestCompound.eEzsignformfieldDependencyrequirement)) &&
+        (this.eEzsignformfieldHorizontalalignment == null ? ezsignformfieldRequestCompound.eEzsignformfieldHorizontalalignment == null : this.eEzsignformfieldHorizontalalignment.equals(ezsignformfieldRequestCompound.eEzsignformfieldHorizontalalignment)) &&
+        (this.objTextstylestatic == null ? ezsignformfieldRequestCompound.objTextstylestatic == null : this.objTextstylestatic.equals(ezsignformfieldRequestCompound.objTextstylestatic)) &&
         (this.aObjEzsignelementdependency == null ? ezsignformfieldRequestCompound.aObjEzsignelementdependency == null : this.aObjEzsignelementdependency.equals(ezsignformfieldRequestCompound.aObjEzsignelementdependency));
   }
 
@@ -238,6 +266,8 @@ public class EzsignformfieldRequestCompound {
     result = 31 * result + (this.bEzsignformfieldSelected == null ? 0: this.bEzsignformfieldSelected.hashCode());
     result = 31 * result + (this.sEzsignformfieldEnteredvalue == null ? 0: this.sEzsignformfieldEnteredvalue.hashCode());
     result = 31 * result + (this.eEzsignformfieldDependencyrequirement == null ? 0: this.eEzsignformfieldDependencyrequirement.hashCode());
+    result = 31 * result + (this.eEzsignformfieldHorizontalalignment == null ? 0: this.eEzsignformfieldHorizontalalignment.hashCode());
+    result = 31 * result + (this.objTextstylestatic == null ? 0: this.objTextstylestatic.hashCode());
     result = 31 * result + (this.aObjEzsignelementdependency == null ? 0: this.aObjEzsignelementdependency.hashCode());
     return result;
   }
@@ -259,6 +289,8 @@ public class EzsignformfieldRequestCompound {
     sb.append("  bEzsignformfieldSelected: ").append(bEzsignformfieldSelected).append("\n");
     sb.append("  sEzsignformfieldEnteredvalue: ").append(sEzsignformfieldEnteredvalue).append("\n");
     sb.append("  eEzsignformfieldDependencyrequirement: ").append(eEzsignformfieldDependencyrequirement).append("\n");
+    sb.append("  eEzsignformfieldHorizontalalignment: ").append(eEzsignformfieldHorizontalalignment).append("\n");
+    sb.append("  objTextstylestatic: ").append(objTextstylestatic).append("\n");
     sb.append("  aObjEzsignelementdependency: ").append(aObjEzsignelementdependency).append("\n");
     sb.append("}\n");
     return sb.toString();
