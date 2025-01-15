@@ -12,11 +12,11 @@
 
 package org.openapitools.client.model;
 
-import org.openapitools.client.model.AddressResponseCompound;
-import org.openapitools.client.model.EmailResponseCompound;
+import org.openapitools.client.model.AddressResponse;
+import org.openapitools.client.model.EmailResponse;
 import org.openapitools.client.model.FieldEContactinformationsType;
 import org.openapitools.client.model.PhoneResponseCompound;
-import org.openapitools.client.model.WebsiteResponseCompound;
+import org.openapitools.client.model.WebsiteResponse;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -41,13 +41,13 @@ public class ContactinformationsResponse {
   @SerializedName("sContactinformationsUrl")
   private String sContactinformationsUrl = null;
   @SerializedName("objAddressDefault")
-  private AddressResponseCompound objAddressDefault = null;
+  private AddressResponse objAddressDefault = null;
   @SerializedName("objPhoneDefault")
   private PhoneResponseCompound objPhoneDefault = null;
   @SerializedName("objEmailDefault")
-  private EmailResponseCompound objEmailDefault = null;
+  private EmailResponse objEmailDefault = null;
   @SerializedName("objWebsiteDefault")
-  private WebsiteResponseCompound objWebsiteDefault = null;
+  private WebsiteResponse objWebsiteDefault = null;
 
   /**
    * The unique ID of the Contactinformations
@@ -134,12 +134,13 @@ public class ContactinformationsResponse {
   }
 
   /**
+   * An Address Object and children to create a complete structure
    **/
-  @ApiModelProperty(value = "")
-  public AddressResponseCompound getObjAddressDefault() {
+  @ApiModelProperty(value = "An Address Object and children to create a complete structure")
+  public AddressResponse getObjAddressDefault() {
     return objAddressDefault;
   }
-  public void setObjAddressDefault(AddressResponseCompound objAddressDefault) {
+  public void setObjAddressDefault(AddressResponse objAddressDefault) {
     this.objAddressDefault = objAddressDefault;
   }
 
@@ -154,22 +155,24 @@ public class ContactinformationsResponse {
   }
 
   /**
+   * An Email Object and children to create a complete structure
    **/
-  @ApiModelProperty(value = "")
-  public EmailResponseCompound getObjEmailDefault() {
+  @ApiModelProperty(value = "An Email Object and children to create a complete structure")
+  public EmailResponse getObjEmailDefault() {
     return objEmailDefault;
   }
-  public void setObjEmailDefault(EmailResponseCompound objEmailDefault) {
+  public void setObjEmailDefault(EmailResponse objEmailDefault) {
     this.objEmailDefault = objEmailDefault;
   }
 
   /**
+   * A Website Object and children to create a complete structure
    **/
-  @ApiModelProperty(value = "")
-  public WebsiteResponseCompound getObjWebsiteDefault() {
+  @ApiModelProperty(value = "A Website Object and children to create a complete structure")
+  public WebsiteResponse getObjWebsiteDefault() {
     return objWebsiteDefault;
   }
-  public void setObjWebsiteDefault(WebsiteResponseCompound objWebsiteDefault) {
+  public void setObjWebsiteDefault(WebsiteResponse objWebsiteDefault) {
     this.objWebsiteDefault = objWebsiteDefault;
   }
 

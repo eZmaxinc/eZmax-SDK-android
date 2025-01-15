@@ -12,7 +12,7 @@
 
 package org.openapitools.client.model;
 
-import org.openapitools.client.model.UserResponseCompound;
+import org.openapitools.client.model.UserResponse;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -23,15 +23,16 @@ import com.google.gson.annotations.SerializedName;
 public class UserGetObjectV2ResponseMPayload {
   
   @SerializedName("objUser")
-  private UserResponseCompound objUser = null;
+  private UserResponse objUser = null;
 
   /**
+   * A User Object and children to create a complete structure
    **/
-  @ApiModelProperty(required = true, value = "")
-  public UserResponseCompound getObjUser() {
+  @ApiModelProperty(required = true, value = "A User Object and children to create a complete structure")
+  public UserResponse getObjUser() {
     return objUser;
   }
-  public void setObjUser(UserResponseCompound objUser) {
+  public void setObjUser(UserResponse objUser) {
     this.objUser = objUser;
   }
 

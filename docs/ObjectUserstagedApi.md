@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ## userstagedDeleteObjectV1
 
-> UserstagedDeleteObjectV1Response userstagedDeleteObjectV1(pkiUserstagedID)
+> CommonResponse userstagedDeleteObjectV1(pkiUserstagedID)
 
 Delete an existing Userstaged
 
@@ -77,7 +77,7 @@ Delete an existing Userstaged
 ObjectUserstagedApi apiInstance = new ObjectUserstagedApi();
 Integer pkiUserstagedID = null; // Integer | 
 try {
-    UserstagedDeleteObjectV1Response result = apiInstance.userstagedDeleteObjectV1(pkiUserstagedID);
+    CommonResponse result = apiInstance.userstagedDeleteObjectV1(pkiUserstagedID);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectUserstagedApi#userstagedDeleteObjectV1");
@@ -94,7 +94,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**UserstagedDeleteObjectV1Response**](UserstagedDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -208,7 +208,7 @@ Name | Type | Description  | Notes
 
 ## userstagedMapV1
 
-> UserstagedMapV1Response userstagedMapV1(pkiUserstagedID, userstagedMapV1Request)
+> CommonResponse userstagedMapV1(pkiUserstagedID, userstagedMapV1Request)
 
 Map the Userstaged to an existing user
 
@@ -224,7 +224,7 @@ ObjectUserstagedApi apiInstance = new ObjectUserstagedApi();
 Integer pkiUserstagedID = null; // Integer | 
 UserstagedMapV1Request userstagedMapV1Request = new UserstagedMapV1Request(); // UserstagedMapV1Request | 
 try {
-    UserstagedMapV1Response result = apiInstance.userstagedMapV1(pkiUserstagedID, userstagedMapV1Request);
+    CommonResponse result = apiInstance.userstagedMapV1(pkiUserstagedID, userstagedMapV1Request);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectUserstagedApi#userstagedMapV1");
@@ -242,7 +242,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**UserstagedMapV1Response**](UserstagedMapV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

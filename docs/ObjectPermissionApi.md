@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 
 ## permissionDeleteObjectV1
 
-> PermissionDeleteObjectV1Response permissionDeleteObjectV1(pkiPermissionID)
+> CommonResponse permissionDeleteObjectV1(pkiPermissionID)
 
 Delete an existing Permission
 
@@ -74,7 +74,7 @@ Delete an existing Permission
 ObjectPermissionApi apiInstance = new ObjectPermissionApi();
 Integer pkiPermissionID = null; // Integer | The unique ID of the Permission
 try {
-    PermissionDeleteObjectV1Response result = apiInstance.permissionDeleteObjectV1(pkiPermissionID);
+    CommonResponse result = apiInstance.permissionDeleteObjectV1(pkiPermissionID);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectPermissionApi#permissionDeleteObjectV1");
@@ -91,7 +91,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PermissionDeleteObjectV1Response**](PermissionDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -105,7 +105,7 @@ Name | Type | Description  | Notes
 
 ## permissionEditObjectV1
 
-> PermissionEditObjectV1Response permissionEditObjectV1(pkiPermissionID, permissionEditObjectV1Request)
+> CommonResponse permissionEditObjectV1(pkiPermissionID, permissionEditObjectV1Request)
 
 Edit an existing Permission
 
@@ -121,7 +121,7 @@ ObjectPermissionApi apiInstance = new ObjectPermissionApi();
 Integer pkiPermissionID = null; // Integer | The unique ID of the Permission
 PermissionEditObjectV1Request permissionEditObjectV1Request = new PermissionEditObjectV1Request(); // PermissionEditObjectV1Request | 
 try {
-    PermissionEditObjectV1Response result = apiInstance.permissionEditObjectV1(pkiPermissionID, permissionEditObjectV1Request);
+    CommonResponse result = apiInstance.permissionEditObjectV1(pkiPermissionID, permissionEditObjectV1Request);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectPermissionApi#permissionEditObjectV1");
@@ -139,7 +139,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PermissionEditObjectV1Response**](PermissionEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

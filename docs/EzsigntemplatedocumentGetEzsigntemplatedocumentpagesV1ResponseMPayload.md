@@ -6,7 +6,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjEzsigntemplatedocumentpage** | [**List&lt;EzsigntemplatedocumentpageResponseCompound&gt;**](EzsigntemplatedocumentpageResponseCompound.md) |  | 
+**aObjEzsigntemplatedocumentpage** | [**List&lt;EzsigntemplatedocumentpageResponseCompound&gt;**](EzsigntemplatedocumentpageResponse.md) |  | 
 
 
 

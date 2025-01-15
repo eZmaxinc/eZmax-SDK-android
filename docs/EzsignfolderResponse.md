@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **pkiEzsignfolderID** | **Integer** | The unique ID of the Ezsignfolder | 
 **fkiEzsignfoldertypeID** | **Integer** | The unique ID of the Ezsignfoldertype. |  [optional]
-**objEzsignfoldertype** | [**CustomEzsignfoldertypeResponse**](CustomEzsignfoldertypeResponse.md) |  |  [optional]
+**objEzsignfoldertype** | **Object** | A Custom Ezsignfoldertype Object |  [optional]
 **fkiTimezoneID** | **Integer** | The unique ID of the Timezone |  [optional]
 **eEzsignfolderCompletion** | [**FieldEEzsignfolderCompletion**](FieldEEzsignfolderCompletion.md) |  | 
 **sEzsignfoldertypeNameX** | **String** |  |  [optional]

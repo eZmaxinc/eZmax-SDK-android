@@ -23,12 +23,11 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
+import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseError;
 import org.openapitools.client.model.SubnetCreateObjectV1Request;
 import org.openapitools.client.model.SubnetCreateObjectV1Response;
-import org.openapitools.client.model.SubnetDeleteObjectV1Response;
 import org.openapitools.client.model.SubnetEditObjectV1Request;
-import org.openapitools.client.model.SubnetEditObjectV1Response;
 import org.openapitools.client.model.SubnetGetObjectV2Response;
 
 import org.apache.http.HttpEntity;
@@ -193,9 +192,9 @@ public class ObjectSubnetApi {
   * Delete an existing Subnet
   * 
    * @param pkiSubnetID The unique ID of the Subnet
-   * @return SubnetDeleteObjectV1Response
+   * @return CommonResponse
   */
-  public SubnetDeleteObjectV1Response subnetDeleteObjectV1 (Integer pkiSubnetID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CommonResponse subnetDeleteObjectV1 (Integer pkiSubnetID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'pkiSubnetID' is set
     if (pkiSubnetID == null) {
@@ -230,7 +229,7 @@ public class ObjectSubnetApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "DELETE", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (SubnetDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", SubnetDeleteObjectV1Response.class);
+         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
       } else {
          return null;
       }
@@ -256,7 +255,7 @@ public class ObjectSubnetApi {
    * 
    * @param pkiSubnetID The unique ID of the Subnet
   */
-  public void subnetDeleteObjectV1 (Integer pkiSubnetID, final Response.Listener<SubnetDeleteObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
+  public void subnetDeleteObjectV1 (Integer pkiSubnetID, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'pkiSubnetID' is set
@@ -301,7 +300,7 @@ public class ObjectSubnetApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((SubnetDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", SubnetDeleteObjectV1Response.class));
+              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -321,9 +320,9 @@ public class ObjectSubnetApi {
   * 
    * @param pkiSubnetID The unique ID of the Subnet
    * @param subnetEditObjectV1Request 
-   * @return SubnetEditObjectV1Response
+   * @return CommonResponse
   */
-  public SubnetEditObjectV1Response subnetEditObjectV1 (Integer pkiSubnetID, SubnetEditObjectV1Request subnetEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CommonResponse subnetEditObjectV1 (Integer pkiSubnetID, SubnetEditObjectV1Request subnetEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = subnetEditObjectV1Request;
     // verify the required parameter 'pkiSubnetID' is set
     if (pkiSubnetID == null) {
@@ -364,7 +363,7 @@ public class ObjectSubnetApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (SubnetEditObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", SubnetEditObjectV1Response.class);
+         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
       } else {
          return null;
       }
@@ -390,7 +389,7 @@ public class ObjectSubnetApi {
    * 
    * @param pkiSubnetID The unique ID of the Subnet   * @param subnetEditObjectV1Request 
   */
-  public void subnetEditObjectV1 (Integer pkiSubnetID, SubnetEditObjectV1Request subnetEditObjectV1Request, final Response.Listener<SubnetEditObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
+  public void subnetEditObjectV1 (Integer pkiSubnetID, SubnetEditObjectV1Request subnetEditObjectV1Request, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = subnetEditObjectV1Request;
 
     // verify the required parameter 'pkiSubnetID' is set
@@ -440,7 +439,7 @@ public class ObjectSubnetApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((SubnetEditObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", SubnetEditObjectV1Response.class));
+              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

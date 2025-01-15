@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 
 ## variableexpenseEditObjectV1
 
-> VariableexpenseEditObjectV1Response variableexpenseEditObjectV1(pkiVariableexpenseID, variableexpenseEditObjectV1Request)
+> CommonResponse variableexpenseEditObjectV1(pkiVariableexpenseID, variableexpenseEditObjectV1Request)
 
 Edit an existing Variableexpense
 
@@ -76,7 +76,7 @@ ObjectVariableexpenseApi apiInstance = new ObjectVariableexpenseApi();
 Integer pkiVariableexpenseID = null; // Integer | 
 VariableexpenseEditObjectV1Request variableexpenseEditObjectV1Request = new VariableexpenseEditObjectV1Request(); // VariableexpenseEditObjectV1Request | 
 try {
-    VariableexpenseEditObjectV1Response result = apiInstance.variableexpenseEditObjectV1(pkiVariableexpenseID, variableexpenseEditObjectV1Request);
+    CommonResponse result = apiInstance.variableexpenseEditObjectV1(pkiVariableexpenseID, variableexpenseEditObjectV1Request);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectVariableexpenseApi#variableexpenseEditObjectV1");
@@ -94,7 +94,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VariableexpenseEditObjectV1Response**](VariableexpenseEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

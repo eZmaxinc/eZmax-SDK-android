@@ -14,7 +14,7 @@ package org.openapitools.client.model;
 
 import java.util.*;
 import org.openapitools.client.model.EnumHorizontalalignment;
-import org.openapitools.client.model.EzsignelementdependencyResponseCompound;
+import org.openapitools.client.model.EzsignelementdependencyResponse;
 import org.openapitools.client.model.FieldEEzsignformfieldDependencyrequirement;
 import org.openapitools.client.model.TextstylestaticResponseCompound;
 import io.swagger.annotations.*;

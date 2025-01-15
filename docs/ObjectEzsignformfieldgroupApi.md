@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 
 ## ezsignformfieldgroupDeleteObjectV1
 
-> EzsignformfieldgroupDeleteObjectV1Response ezsignformfieldgroupDeleteObjectV1(pkiEzsignformfieldgroupID)
+> CommonResponse ezsignformfieldgroupDeleteObjectV1(pkiEzsignformfieldgroupID)
 
 Delete an existing Ezsignformfieldgroup
 
@@ -74,7 +74,7 @@ Delete an existing Ezsignformfieldgroup
 ObjectEzsignformfieldgroupApi apiInstance = new ObjectEzsignformfieldgroupApi();
 Integer pkiEzsignformfieldgroupID = null; // Integer | 
 try {
-    EzsignformfieldgroupDeleteObjectV1Response result = apiInstance.ezsignformfieldgroupDeleteObjectV1(pkiEzsignformfieldgroupID);
+    CommonResponse result = apiInstance.ezsignformfieldgroupDeleteObjectV1(pkiEzsignformfieldgroupID);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectEzsignformfieldgroupApi#ezsignformfieldgroupDeleteObjectV1");
@@ -91,7 +91,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsignformfieldgroupDeleteObjectV1Response**](EzsignformfieldgroupDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -105,7 +105,7 @@ Name | Type | Description  | Notes
 
 ## ezsignformfieldgroupEditObjectV1
 
-> EzsignformfieldgroupEditObjectV1Response ezsignformfieldgroupEditObjectV1(pkiEzsignformfieldgroupID, ezsignformfieldgroupEditObjectV1Request)
+> CommonResponse ezsignformfieldgroupEditObjectV1(pkiEzsignformfieldgroupID, ezsignformfieldgroupEditObjectV1Request)
 
 Edit an existing Ezsignformfieldgroup
 
@@ -121,7 +121,7 @@ ObjectEzsignformfieldgroupApi apiInstance = new ObjectEzsignformfieldgroupApi();
 Integer pkiEzsignformfieldgroupID = null; // Integer | 
 EzsignformfieldgroupEditObjectV1Request ezsignformfieldgroupEditObjectV1Request = new EzsignformfieldgroupEditObjectV1Request(); // EzsignformfieldgroupEditObjectV1Request | 
 try {
-    EzsignformfieldgroupEditObjectV1Response result = apiInstance.ezsignformfieldgroupEditObjectV1(pkiEzsignformfieldgroupID, ezsignformfieldgroupEditObjectV1Request);
+    CommonResponse result = apiInstance.ezsignformfieldgroupEditObjectV1(pkiEzsignformfieldgroupID, ezsignformfieldgroupEditObjectV1Request);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectEzsignformfieldgroupApi#ezsignformfieldgroupEditObjectV1");
@@ -139,7 +139,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsignformfieldgroupEditObjectV1Response**](EzsignformfieldgroupEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

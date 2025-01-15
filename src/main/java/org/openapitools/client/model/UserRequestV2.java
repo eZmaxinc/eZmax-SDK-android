@@ -12,11 +12,11 @@
 
 package org.openapitools.client.model;
 
-import org.openapitools.client.model.EmailRequestCompound;
+import org.openapitools.client.model.EmailRequest;
 import org.openapitools.client.model.FieldEUserEzsignaccess;
 import org.openapitools.client.model.FieldEUserLogintype;
 import org.openapitools.client.model.FieldEUserType;
-import org.openapitools.client.model.PhoneRequestCompoundV2;
+import org.openapitools.client.model.PhoneRequestV2;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -45,13 +45,13 @@ public class UserRequestV2 {
   @SerializedName("fkiLanguageID")
   private Integer fkiLanguageID = null;
   @SerializedName("objEmail")
-  private EmailRequestCompound objEmail = null;
+  private EmailRequest objEmail = null;
   @SerializedName("fkiBillingentityinternalID")
   private Integer fkiBillingentityinternalID = null;
   @SerializedName("objPhoneHome")
-  private PhoneRequestCompoundV2 objPhoneHome = null;
+  private PhoneRequestV2 objPhoneHome = null;
   @SerializedName("objPhoneSMS")
-  private PhoneRequestCompoundV2 objPhoneSMS = null;
+  private PhoneRequestV2 objPhoneSMS = null;
   @SerializedName("fkiSecretquestionID")
   private Integer fkiSecretquestionID = null;
   @SerializedName("sUserSecretresponse")
@@ -194,12 +194,13 @@ public class UserRequestV2 {
   }
 
   /**
+   * An Email Object and children to create a complete structure
    **/
-  @ApiModelProperty(required = true, value = "")
-  public EmailRequestCompound getObjEmail() {
+  @ApiModelProperty(required = true, value = "An Email Object and children to create a complete structure")
+  public EmailRequest getObjEmail() {
     return objEmail;
   }
-  public void setObjEmail(EmailRequestCompound objEmail) {
+  public void setObjEmail(EmailRequest objEmail) {
     this.objEmail = objEmail;
   }
 
@@ -216,22 +217,24 @@ public class UserRequestV2 {
   }
 
   /**
+   * A Phone Object and children to create a complete structure
    **/
-  @ApiModelProperty(value = "")
-  public PhoneRequestCompoundV2 getObjPhoneHome() {
+  @ApiModelProperty(value = "A Phone Object and children to create a complete structure")
+  public PhoneRequestV2 getObjPhoneHome() {
     return objPhoneHome;
   }
-  public void setObjPhoneHome(PhoneRequestCompoundV2 objPhoneHome) {
+  public void setObjPhoneHome(PhoneRequestV2 objPhoneHome) {
     this.objPhoneHome = objPhoneHome;
   }
 
   /**
+   * A Phone Object and children to create a complete structure
    **/
-  @ApiModelProperty(value = "")
-  public PhoneRequestCompoundV2 getObjPhoneSMS() {
+  @ApiModelProperty(value = "A Phone Object and children to create a complete structure")
+  public PhoneRequestV2 getObjPhoneSMS() {
     return objPhoneSMS;
   }
-  public void setObjPhoneSMS(PhoneRequestCompoundV2 objPhoneSMS) {
+  public void setObjPhoneSMS(PhoneRequestV2 objPhoneSMS) {
     this.objPhoneSMS = objPhoneSMS;
   }
 

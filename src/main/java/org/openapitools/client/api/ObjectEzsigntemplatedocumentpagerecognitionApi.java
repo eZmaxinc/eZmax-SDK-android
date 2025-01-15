@@ -23,12 +23,11 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
+import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseError;
 import org.openapitools.client.model.EzsigntemplatedocumentpagerecognitionCreateObjectV1Request;
 import org.openapitools.client.model.EzsigntemplatedocumentpagerecognitionCreateObjectV1Response;
-import org.openapitools.client.model.EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response;
 import org.openapitools.client.model.EzsigntemplatedocumentpagerecognitionEditObjectV1Request;
-import org.openapitools.client.model.EzsigntemplatedocumentpagerecognitionEditObjectV1Response;
 import org.openapitools.client.model.EzsigntemplatedocumentpagerecognitionGetObjectV2Response;
 
 import org.apache.http.HttpEntity;
@@ -193,9 +192,9 @@ public class ObjectEzsigntemplatedocumentpagerecognitionApi {
   * Delete an existing Ezsigntemplatedocumentpagerecognition
   * 
    * @param pkiEzsigntemplatedocumentpagerecognitionID The unique ID of the Ezsigntemplatedocumentpagerecognition
-   * @return EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response
+   * @return CommonResponse
   */
-  public EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response ezsigntemplatedocumentpagerecognitionDeleteObjectV1 (Integer pkiEzsigntemplatedocumentpagerecognitionID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CommonResponse ezsigntemplatedocumentpagerecognitionDeleteObjectV1 (Integer pkiEzsigntemplatedocumentpagerecognitionID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'pkiEzsigntemplatedocumentpagerecognitionID' is set
     if (pkiEzsigntemplatedocumentpagerecognitionID == null) {
@@ -230,7 +229,7 @@ public class ObjectEzsigntemplatedocumentpagerecognitionApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "DELETE", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response.class);
+         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
       } else {
          return null;
       }
@@ -256,7 +255,7 @@ public class ObjectEzsigntemplatedocumentpagerecognitionApi {
    * 
    * @param pkiEzsigntemplatedocumentpagerecognitionID The unique ID of the Ezsigntemplatedocumentpagerecognition
   */
-  public void ezsigntemplatedocumentpagerecognitionDeleteObjectV1 (Integer pkiEzsigntemplatedocumentpagerecognitionID, final Response.Listener<EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
+  public void ezsigntemplatedocumentpagerecognitionDeleteObjectV1 (Integer pkiEzsigntemplatedocumentpagerecognitionID, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'pkiEzsigntemplatedocumentpagerecognitionID' is set
@@ -301,7 +300,7 @@ public class ObjectEzsigntemplatedocumentpagerecognitionApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response.class));
+              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -321,9 +320,9 @@ public class ObjectEzsigntemplatedocumentpagerecognitionApi {
   * 
    * @param pkiEzsigntemplatedocumentpagerecognitionID The unique ID of the Ezsigntemplatedocumentpagerecognition
    * @param ezsigntemplatedocumentpagerecognitionEditObjectV1Request 
-   * @return EzsigntemplatedocumentpagerecognitionEditObjectV1Response
+   * @return CommonResponse
   */
-  public EzsigntemplatedocumentpagerecognitionEditObjectV1Response ezsigntemplatedocumentpagerecognitionEditObjectV1 (Integer pkiEzsigntemplatedocumentpagerecognitionID, EzsigntemplatedocumentpagerecognitionEditObjectV1Request ezsigntemplatedocumentpagerecognitionEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CommonResponse ezsigntemplatedocumentpagerecognitionEditObjectV1 (Integer pkiEzsigntemplatedocumentpagerecognitionID, EzsigntemplatedocumentpagerecognitionEditObjectV1Request ezsigntemplatedocumentpagerecognitionEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = ezsigntemplatedocumentpagerecognitionEditObjectV1Request;
     // verify the required parameter 'pkiEzsigntemplatedocumentpagerecognitionID' is set
     if (pkiEzsigntemplatedocumentpagerecognitionID == null) {
@@ -364,7 +363,7 @@ public class ObjectEzsigntemplatedocumentpagerecognitionApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (EzsigntemplatedocumentpagerecognitionEditObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsigntemplatedocumentpagerecognitionEditObjectV1Response.class);
+         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
       } else {
          return null;
       }
@@ -390,7 +389,7 @@ public class ObjectEzsigntemplatedocumentpagerecognitionApi {
    * 
    * @param pkiEzsigntemplatedocumentpagerecognitionID The unique ID of the Ezsigntemplatedocumentpagerecognition   * @param ezsigntemplatedocumentpagerecognitionEditObjectV1Request 
   */
-  public void ezsigntemplatedocumentpagerecognitionEditObjectV1 (Integer pkiEzsigntemplatedocumentpagerecognitionID, EzsigntemplatedocumentpagerecognitionEditObjectV1Request ezsigntemplatedocumentpagerecognitionEditObjectV1Request, final Response.Listener<EzsigntemplatedocumentpagerecognitionEditObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
+  public void ezsigntemplatedocumentpagerecognitionEditObjectV1 (Integer pkiEzsigntemplatedocumentpagerecognitionID, EzsigntemplatedocumentpagerecognitionEditObjectV1Request ezsigntemplatedocumentpagerecognitionEditObjectV1Request, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = ezsigntemplatedocumentpagerecognitionEditObjectV1Request;
 
     // verify the required parameter 'pkiEzsigntemplatedocumentpagerecognitionID' is set
@@ -440,7 +439,7 @@ public class ObjectEzsigntemplatedocumentpagerecognitionApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((EzsigntemplatedocumentpagerecognitionEditObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsigntemplatedocumentpagerecognitionEditObjectV1Response.class));
+              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

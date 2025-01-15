@@ -13,7 +13,6 @@
 package org.openapitools.client.model;
 
 import java.util.*;
-import org.openapitools.client.model.CustomDiscussionconfigurationResponse;
 import org.openapitools.client.model.DiscussionmembershipResponseCompound;
 import org.openapitools.client.model.DiscussionmessageResponseCompound;
 import io.swagger.annotations.*;
@@ -38,7 +37,7 @@ public class DiscussionResponseCompound {
   @SerializedName("iDiscussionmessageCountunread")
   private Integer iDiscussionmessageCountunread = null;
   @SerializedName("objDiscussionconfiguration")
-  private CustomDiscussionconfigurationResponse objDiscussionconfiguration = null;
+  private Object objDiscussionconfiguration = null;
   @SerializedName("a_objDiscussionmembership")
   private List<DiscussionmembershipResponseCompound> aObjDiscussionmembership = null;
   @SerializedName("a_objDiscussionmessage")
@@ -113,12 +112,13 @@ public class DiscussionResponseCompound {
   }
 
   /**
+   * A Custom Discussionconfiguration Object
    **/
-  @ApiModelProperty(value = "")
-  public CustomDiscussionconfigurationResponse getObjDiscussionconfiguration() {
+  @ApiModelProperty(value = "A Custom Discussionconfiguration Object")
+  public Object getObjDiscussionconfiguration() {
     return objDiscussionconfiguration;
   }
-  public void setObjDiscussionconfiguration(CustomDiscussionconfigurationResponse objDiscussionconfiguration) {
+  public void setObjDiscussionconfiguration(Object objDiscussionconfiguration) {
     this.objDiscussionconfiguration = objDiscussionconfiguration;
   }
 

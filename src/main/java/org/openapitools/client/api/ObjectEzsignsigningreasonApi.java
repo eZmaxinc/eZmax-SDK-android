@@ -23,11 +23,11 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
+import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseError;
 import org.openapitools.client.model.EzsignsigningreasonCreateObjectV1Request;
 import org.openapitools.client.model.EzsignsigningreasonCreateObjectV1Response;
 import org.openapitools.client.model.EzsignsigningreasonEditObjectV1Request;
-import org.openapitools.client.model.EzsignsigningreasonEditObjectV1Response;
 import org.openapitools.client.model.EzsignsigningreasonGetAutocompleteV2Response;
 import org.openapitools.client.model.EzsignsigningreasonGetListV1Response;
 import org.openapitools.client.model.EzsignsigningreasonGetObjectV2Response;
@@ -197,9 +197,9 @@ public class ObjectEzsignsigningreasonApi {
   * 
    * @param pkiEzsignsigningreasonID The unique ID of the Ezsignsigningreason
    * @param ezsignsigningreasonEditObjectV1Request 
-   * @return EzsignsigningreasonEditObjectV1Response
+   * @return CommonResponse
   */
-  public EzsignsigningreasonEditObjectV1Response ezsignsigningreasonEditObjectV1 (Integer pkiEzsignsigningreasonID, EzsignsigningreasonEditObjectV1Request ezsignsigningreasonEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CommonResponse ezsignsigningreasonEditObjectV1 (Integer pkiEzsignsigningreasonID, EzsignsigningreasonEditObjectV1Request ezsignsigningreasonEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = ezsignsigningreasonEditObjectV1Request;
     // verify the required parameter 'pkiEzsignsigningreasonID' is set
     if (pkiEzsignsigningreasonID == null) {
@@ -240,7 +240,7 @@ public class ObjectEzsignsigningreasonApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (EzsignsigningreasonEditObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsignsigningreasonEditObjectV1Response.class);
+         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
       } else {
          return null;
       }
@@ -266,7 +266,7 @@ public class ObjectEzsignsigningreasonApi {
    * 
    * @param pkiEzsignsigningreasonID The unique ID of the Ezsignsigningreason   * @param ezsignsigningreasonEditObjectV1Request 
   */
-  public void ezsignsigningreasonEditObjectV1 (Integer pkiEzsignsigningreasonID, EzsignsigningreasonEditObjectV1Request ezsignsigningreasonEditObjectV1Request, final Response.Listener<EzsignsigningreasonEditObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
+  public void ezsignsigningreasonEditObjectV1 (Integer pkiEzsignsigningreasonID, EzsignsigningreasonEditObjectV1Request ezsignsigningreasonEditObjectV1Request, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = ezsignsigningreasonEditObjectV1Request;
 
     // verify the required parameter 'pkiEzsignsigningreasonID' is set
@@ -316,7 +316,7 @@ public class ObjectEzsignsigningreasonApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((EzsignsigningreasonEditObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsignsigningreasonEditObjectV1Response.class));
+              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

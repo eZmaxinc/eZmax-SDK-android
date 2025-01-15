@@ -23,11 +23,11 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
+import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseError;
 import org.openapitools.client.model.EzsignfoldertypeCreateObjectV3Request;
 import org.openapitools.client.model.EzsignfoldertypeCreateObjectV3Response;
 import org.openapitools.client.model.EzsignfoldertypeEditObjectV3Request;
-import org.openapitools.client.model.EzsignfoldertypeEditObjectV3Response;
 import org.openapitools.client.model.EzsignfoldertypeGetAutocompleteV2Response;
 import org.openapitools.client.model.EzsignfoldertypeGetListV1Response;
 import org.openapitools.client.model.EzsignfoldertypeGetObjectV2Response;
@@ -198,9 +198,9 @@ public class ObjectEzsignfoldertypeApi {
   * 
    * @param pkiEzsignfoldertypeID 
    * @param ezsignfoldertypeEditObjectV3Request 
-   * @return EzsignfoldertypeEditObjectV3Response
+   * @return CommonResponse
   */
-  public EzsignfoldertypeEditObjectV3Response ezsignfoldertypeEditObjectV3 (Integer pkiEzsignfoldertypeID, EzsignfoldertypeEditObjectV3Request ezsignfoldertypeEditObjectV3Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CommonResponse ezsignfoldertypeEditObjectV3 (Integer pkiEzsignfoldertypeID, EzsignfoldertypeEditObjectV3Request ezsignfoldertypeEditObjectV3Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = ezsignfoldertypeEditObjectV3Request;
     // verify the required parameter 'pkiEzsignfoldertypeID' is set
     if (pkiEzsignfoldertypeID == null) {
@@ -241,7 +241,7 @@ public class ObjectEzsignfoldertypeApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (EzsignfoldertypeEditObjectV3Response) ApiInvoker.deserialize(localVarResponse, "", EzsignfoldertypeEditObjectV3Response.class);
+         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
       } else {
          return null;
       }
@@ -267,7 +267,7 @@ public class ObjectEzsignfoldertypeApi {
    * 
    * @param pkiEzsignfoldertypeID    * @param ezsignfoldertypeEditObjectV3Request 
   */
-  public void ezsignfoldertypeEditObjectV3 (Integer pkiEzsignfoldertypeID, EzsignfoldertypeEditObjectV3Request ezsignfoldertypeEditObjectV3Request, final Response.Listener<EzsignfoldertypeEditObjectV3Response> responseListener, final Response.ErrorListener errorListener) {
+  public void ezsignfoldertypeEditObjectV3 (Integer pkiEzsignfoldertypeID, EzsignfoldertypeEditObjectV3Request ezsignfoldertypeEditObjectV3Request, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = ezsignfoldertypeEditObjectV3Request;
 
     // verify the required parameter 'pkiEzsignfoldertypeID' is set
@@ -317,7 +317,7 @@ public class ObjectEzsignfoldertypeApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((EzsignfoldertypeEditObjectV3Response) ApiInvoker.deserialize(localVarResponse,  "", EzsignfoldertypeEditObjectV3Response.class));
+              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

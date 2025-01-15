@@ -23,10 +23,10 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
+import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseError;
 import org.openapitools.client.model.EzsignbulksenddocumentmappingCreateObjectV1Request;
 import org.openapitools.client.model.EzsignbulksenddocumentmappingCreateObjectV1Response;
-import org.openapitools.client.model.EzsignbulksenddocumentmappingDeleteObjectV1Response;
 import org.openapitools.client.model.EzsignbulksenddocumentmappingGetObjectV2Response;
 
 import org.apache.http.HttpEntity;
@@ -191,9 +191,9 @@ public class ObjectEzsignbulksenddocumentmappingApi {
   * Delete an existing Ezsignbulksenddocumentmapping
   * 
    * @param pkiEzsignbulksenddocumentmappingID 
-   * @return EzsignbulksenddocumentmappingDeleteObjectV1Response
+   * @return CommonResponse
   */
-  public EzsignbulksenddocumentmappingDeleteObjectV1Response ezsignbulksenddocumentmappingDeleteObjectV1 (Integer pkiEzsignbulksenddocumentmappingID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CommonResponse ezsignbulksenddocumentmappingDeleteObjectV1 (Integer pkiEzsignbulksenddocumentmappingID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'pkiEzsignbulksenddocumentmappingID' is set
     if (pkiEzsignbulksenddocumentmappingID == null) {
@@ -228,7 +228,7 @@ public class ObjectEzsignbulksenddocumentmappingApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "DELETE", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (EzsignbulksenddocumentmappingDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsignbulksenddocumentmappingDeleteObjectV1Response.class);
+         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
       } else {
          return null;
       }
@@ -254,7 +254,7 @@ public class ObjectEzsignbulksenddocumentmappingApi {
    * 
    * @param pkiEzsignbulksenddocumentmappingID 
   */
-  public void ezsignbulksenddocumentmappingDeleteObjectV1 (Integer pkiEzsignbulksenddocumentmappingID, final Response.Listener<EzsignbulksenddocumentmappingDeleteObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
+  public void ezsignbulksenddocumentmappingDeleteObjectV1 (Integer pkiEzsignbulksenddocumentmappingID, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'pkiEzsignbulksenddocumentmappingID' is set
@@ -299,7 +299,7 @@ public class ObjectEzsignbulksenddocumentmappingApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((EzsignbulksenddocumentmappingDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsignbulksenddocumentmappingDeleteObjectV1Response.class));
+              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

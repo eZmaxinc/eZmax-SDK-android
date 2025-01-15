@@ -23,10 +23,10 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
+import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseError;
 import org.openapitools.client.model.DiscussionmembershipCreateObjectV1Request;
 import org.openapitools.client.model.DiscussionmembershipCreateObjectV1Response;
-import org.openapitools.client.model.DiscussionmembershipDeleteObjectV1Response;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
@@ -190,9 +190,9 @@ public class ObjectDiscussionmembershipApi {
   * Delete an existing Discussionmembership
   * 
    * @param pkiDiscussionmembershipID The unique ID of the Discussionmembership
-   * @return DiscussionmembershipDeleteObjectV1Response
+   * @return CommonResponse
   */
-  public DiscussionmembershipDeleteObjectV1Response discussionmembershipDeleteObjectV1 (Integer pkiDiscussionmembershipID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CommonResponse discussionmembershipDeleteObjectV1 (Integer pkiDiscussionmembershipID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'pkiDiscussionmembershipID' is set
     if (pkiDiscussionmembershipID == null) {
@@ -227,7 +227,7 @@ public class ObjectDiscussionmembershipApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "DELETE", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (DiscussionmembershipDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", DiscussionmembershipDeleteObjectV1Response.class);
+         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
       } else {
          return null;
       }
@@ -253,7 +253,7 @@ public class ObjectDiscussionmembershipApi {
    * 
    * @param pkiDiscussionmembershipID The unique ID of the Discussionmembership
   */
-  public void discussionmembershipDeleteObjectV1 (Integer pkiDiscussionmembershipID, final Response.Listener<DiscussionmembershipDeleteObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
+  public void discussionmembershipDeleteObjectV1 (Integer pkiDiscussionmembershipID, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'pkiDiscussionmembershipID' is set
@@ -298,7 +298,7 @@ public class ObjectDiscussionmembershipApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((DiscussionmembershipDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", DiscussionmembershipDeleteObjectV1Response.class));
+              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

@@ -12,9 +12,9 @@
 
 package org.openapitools.client.model;
 
+import java.util.*;
 import org.openapitools.client.model.CommonResponseObjDebug;
 import org.openapitools.client.model.CommonResponseObjDebugPayload;
-import org.openapitools.client.model.WebhookGetHistoryV1ResponseMPayload;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -29,7 +29,7 @@ public class WebhookGetHistoryV1Response {
   @SerializedName("objDebug")
   private CommonResponseObjDebug objDebug = null;
   @SerializedName("mPayload")
-  private WebhookGetHistoryV1ResponseMPayload mPayload = null;
+  private Object mPayload = null;
 
   /**
    **/
@@ -52,12 +52,13 @@ public class WebhookGetHistoryV1Response {
   }
 
   /**
+   * Payload for GET /1/object/webhook/{pkiWebhookID}/getHistory
    **/
-  @ApiModelProperty(required = true, value = "")
-  public WebhookGetHistoryV1ResponseMPayload getMPayload() {
+  @ApiModelProperty(required = true, value = "Payload for GET /1/object/webhook/{pkiWebhookID}/getHistory")
+  public Object getMPayload() {
     return mPayload;
   }
-  public void setMPayload(WebhookGetHistoryV1ResponseMPayload mPayload) {
+  public void setMPayload(Object mPayload) {
     this.mPayload = mPayload;
   }
 

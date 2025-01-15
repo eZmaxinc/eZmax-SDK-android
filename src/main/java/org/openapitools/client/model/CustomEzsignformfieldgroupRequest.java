@@ -13,7 +13,6 @@
 package org.openapitools.client.model;
 
 import java.util.*;
-import org.openapitools.client.model.CustomEzsignformfieldRequest;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 

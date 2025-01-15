@@ -23,14 +23,13 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
+import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseError;
 import java.io.File;
 import org.openapitools.client.model.HeaderAcceptLanguage;
 import org.openapitools.client.model.SupplyCreateObjectV1Request;
 import org.openapitools.client.model.SupplyCreateObjectV1Response;
-import org.openapitools.client.model.SupplyDeleteObjectV1Response;
 import org.openapitools.client.model.SupplyEditObjectV1Request;
-import org.openapitools.client.model.SupplyEditObjectV1Response;
 import org.openapitools.client.model.SupplyGetAutocompleteV2Response;
 import org.openapitools.client.model.SupplyGetListV1Response;
 import org.openapitools.client.model.SupplyGetObjectV2Response;
@@ -197,9 +196,9 @@ public class ObjectSupplyApi {
   * Delete an existing Supply
   * 
    * @param pkiSupplyID The unique ID of the Supply
-   * @return SupplyDeleteObjectV1Response
+   * @return CommonResponse
   */
-  public SupplyDeleteObjectV1Response supplyDeleteObjectV1 (Integer pkiSupplyID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CommonResponse supplyDeleteObjectV1 (Integer pkiSupplyID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'pkiSupplyID' is set
     if (pkiSupplyID == null) {
@@ -234,7 +233,7 @@ public class ObjectSupplyApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "DELETE", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (SupplyDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", SupplyDeleteObjectV1Response.class);
+         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
       } else {
          return null;
       }
@@ -260,7 +259,7 @@ public class ObjectSupplyApi {
    * 
    * @param pkiSupplyID The unique ID of the Supply
   */
-  public void supplyDeleteObjectV1 (Integer pkiSupplyID, final Response.Listener<SupplyDeleteObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
+  public void supplyDeleteObjectV1 (Integer pkiSupplyID, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'pkiSupplyID' is set
@@ -305,7 +304,7 @@ public class ObjectSupplyApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((SupplyDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", SupplyDeleteObjectV1Response.class));
+              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -325,9 +324,9 @@ public class ObjectSupplyApi {
   * 
    * @param pkiSupplyID The unique ID of the Supply
    * @param supplyEditObjectV1Request 
-   * @return SupplyEditObjectV1Response
+   * @return CommonResponse
   */
-  public SupplyEditObjectV1Response supplyEditObjectV1 (Integer pkiSupplyID, SupplyEditObjectV1Request supplyEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CommonResponse supplyEditObjectV1 (Integer pkiSupplyID, SupplyEditObjectV1Request supplyEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = supplyEditObjectV1Request;
     // verify the required parameter 'pkiSupplyID' is set
     if (pkiSupplyID == null) {
@@ -368,7 +367,7 @@ public class ObjectSupplyApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (SupplyEditObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", SupplyEditObjectV1Response.class);
+         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
       } else {
          return null;
       }
@@ -394,7 +393,7 @@ public class ObjectSupplyApi {
    * 
    * @param pkiSupplyID The unique ID of the Supply   * @param supplyEditObjectV1Request 
   */
-  public void supplyEditObjectV1 (Integer pkiSupplyID, SupplyEditObjectV1Request supplyEditObjectV1Request, final Response.Listener<SupplyEditObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
+  public void supplyEditObjectV1 (Integer pkiSupplyID, SupplyEditObjectV1Request supplyEditObjectV1Request, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = supplyEditObjectV1Request;
 
     // verify the required parameter 'pkiSupplyID' is set
@@ -444,7 +443,7 @@ public class ObjectSupplyApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((SupplyEditObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", SupplyEditObjectV1Response.class));
+              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

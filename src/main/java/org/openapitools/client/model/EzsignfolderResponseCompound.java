@@ -13,7 +13,6 @@
 package org.openapitools.client.model;
 
 import org.openapitools.client.model.CommonAudit;
-import org.openapitools.client.model.CustomEzsignfoldertypeResponse;
 import org.openapitools.client.model.CustomTimezoneWithCodeResponse;
 import org.openapitools.client.model.FieldEEzsignfolderCompletion;
 import org.openapitools.client.model.FieldEEzsignfolderSendreminderfrequency;
@@ -32,7 +31,7 @@ public class EzsignfolderResponseCompound {
   @SerializedName("fkiEzsignfoldertypeID")
   private Integer fkiEzsignfoldertypeID = null;
   @SerializedName("objEzsignfoldertype")
-  private CustomEzsignfoldertypeResponse objEzsignfoldertype = null;
+  private Object objEzsignfoldertype = null;
   @SerializedName("fkiTimezoneID")
   private Integer fkiTimezoneID = null;
   @SerializedName("eEzsignfolderCompletion")
@@ -108,12 +107,13 @@ public class EzsignfolderResponseCompound {
   }
 
   /**
+   * A Custom Ezsignfoldertype Object
    **/
-  @ApiModelProperty(value = "")
-  public CustomEzsignfoldertypeResponse getObjEzsignfoldertype() {
+  @ApiModelProperty(value = "A Custom Ezsignfoldertype Object")
+  public Object getObjEzsignfoldertype() {
     return objEzsignfoldertype;
   }
-  public void setObjEzsignfoldertype(CustomEzsignfoldertypeResponse objEzsignfoldertype) {
+  public void setObjEzsignfoldertype(Object objEzsignfoldertype) {
     this.objEzsignfoldertype = objEzsignfoldertype;
   }
 

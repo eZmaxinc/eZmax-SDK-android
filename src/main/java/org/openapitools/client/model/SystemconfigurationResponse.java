@@ -12,7 +12,6 @@
 
 package org.openapitools.client.model;
 
-import org.openapitools.client.model.CustomBrandingResponse;
 import org.openapitools.client.model.FieldESystemconfigurationEzsign;
 import org.openapitools.client.model.FieldESystemconfigurationEzsignofficeplan;
 import org.openapitools.client.model.FieldESystemconfigurationLanguage1;
@@ -60,7 +59,7 @@ public class SystemconfigurationResponse {
   @SerializedName("dtSystemconfigurationReadonlyexpirationend")
   private String dtSystemconfigurationReadonlyexpirationend = null;
   @SerializedName("objBranding")
-  private CustomBrandingResponse objBranding = null;
+  private Object objBranding = null;
 
   /**
    * The unique ID of the Systemconfiguration
@@ -238,12 +237,13 @@ public class SystemconfigurationResponse {
   }
 
   /**
+   * A Custom Branding Object
    **/
-  @ApiModelProperty(value = "")
-  public CustomBrandingResponse getObjBranding() {
+  @ApiModelProperty(value = "A Custom Branding Object")
+  public Object getObjBranding() {
     return objBranding;
   }
-  public void setObjBranding(CustomBrandingResponse objBranding) {
+  public void setObjBranding(Object objBranding) {
     this.objBranding = objBranding;
   }
 

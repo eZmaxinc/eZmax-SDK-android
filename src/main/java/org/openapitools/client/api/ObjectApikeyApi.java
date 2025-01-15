@@ -26,7 +26,6 @@ import com.android.volley.VolleyError;
 import org.openapitools.client.model.ApikeyCreateObjectV2Request;
 import org.openapitools.client.model.ApikeyCreateObjectV2Response;
 import org.openapitools.client.model.ApikeyEditObjectV1Request;
-import org.openapitools.client.model.ApikeyEditObjectV1Response;
 import org.openapitools.client.model.ApikeyEditPermissionsV1Request;
 import org.openapitools.client.model.ApikeyEditPermissionsV1Response;
 import org.openapitools.client.model.ApikeyGenerateDelegatedCredentialsV1Request;
@@ -38,6 +37,7 @@ import org.openapitools.client.model.ApikeyGetPermissionsV1Response;
 import org.openapitools.client.model.ApikeyGetSubnetsV1Response;
 import org.openapitools.client.model.ApikeyRegenerateV1Request;
 import org.openapitools.client.model.ApikeyRegenerateV1Response;
+import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseError;
 import java.io.File;
 import org.openapitools.client.model.HeaderAcceptLanguage;
@@ -205,9 +205,9 @@ public class ObjectApikeyApi {
   * 
    * @param pkiApikeyID The unique ID of the Apikey
    * @param apikeyEditObjectV1Request 
-   * @return ApikeyEditObjectV1Response
+   * @return CommonResponse
   */
-  public ApikeyEditObjectV1Response apikeyEditObjectV1 (Integer pkiApikeyID, ApikeyEditObjectV1Request apikeyEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CommonResponse apikeyEditObjectV1 (Integer pkiApikeyID, ApikeyEditObjectV1Request apikeyEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = apikeyEditObjectV1Request;
     // verify the required parameter 'pkiApikeyID' is set
     if (pkiApikeyID == null) {
@@ -248,7 +248,7 @@ public class ObjectApikeyApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (ApikeyEditObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", ApikeyEditObjectV1Response.class);
+         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
       } else {
          return null;
       }
@@ -274,7 +274,7 @@ public class ObjectApikeyApi {
    * 
    * @param pkiApikeyID The unique ID of the Apikey   * @param apikeyEditObjectV1Request 
   */
-  public void apikeyEditObjectV1 (Integer pkiApikeyID, ApikeyEditObjectV1Request apikeyEditObjectV1Request, final Response.Listener<ApikeyEditObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
+  public void apikeyEditObjectV1 (Integer pkiApikeyID, ApikeyEditObjectV1Request apikeyEditObjectV1Request, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = apikeyEditObjectV1Request;
 
     // verify the required parameter 'pkiApikeyID' is set
@@ -324,7 +324,7 @@ public class ObjectApikeyApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((ApikeyEditObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", ApikeyEditObjectV1Response.class));
+              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

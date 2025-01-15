@@ -12,7 +12,6 @@
 
 package org.openapitools.client.model;
 
-import org.openapitools.client.model.CustomDiscussionconfigurationResponse;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -35,7 +34,7 @@ public class DiscussionResponse {
   @SerializedName("iDiscussionmessageCountunread")
   private Integer iDiscussionmessageCountunread = null;
   @SerializedName("objDiscussionconfiguration")
-  private CustomDiscussionconfigurationResponse objDiscussionconfiguration = null;
+  private Object objDiscussionconfiguration = null;
 
   /**
    * The unique ID of the Discussion
@@ -106,12 +105,13 @@ public class DiscussionResponse {
   }
 
   /**
+   * A Custom Discussionconfiguration Object
    **/
-  @ApiModelProperty(value = "")
-  public CustomDiscussionconfigurationResponse getObjDiscussionconfiguration() {
+  @ApiModelProperty(value = "A Custom Discussionconfiguration Object")
+  public Object getObjDiscussionconfiguration() {
     return objDiscussionconfiguration;
   }
-  public void setObjDiscussionconfiguration(CustomDiscussionconfigurationResponse objDiscussionconfiguration) {
+  public void setObjDiscussionconfiguration(Object objDiscussionconfiguration) {
     this.objDiscussionconfiguration = objDiscussionconfiguration;
   }
 

@@ -14,8 +14,8 @@ package org.openapitools.client.model;
 
 import java.util.*;
 import org.openapitools.client.model.EnumTextvalidation;
-import org.openapitools.client.model.EzsignelementdependencyRequestCompound;
-import org.openapitools.client.model.EzsignsignaturecustomdateRequestCompound;
+import org.openapitools.client.model.EzsignelementdependencyRequest;
+import org.openapitools.client.model.EzsignsignaturecustomdateRequest;
 import org.openapitools.client.model.FieldEEzsignsignatureAttachmentnamesource;
 import org.openapitools.client.model.FieldEEzsignsignatureConsultationtrigger;
 import org.openapitools.client.model.FieldEEzsignsignatureDependencyrequirement;
