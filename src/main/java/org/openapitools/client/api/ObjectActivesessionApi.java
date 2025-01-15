@@ -26,6 +26,7 @@ import com.android.volley.VolleyError;
 import org.openapitools.client.model.ActivesessionGenerateFederationTokenV1Request;
 import org.openapitools.client.model.ActivesessionGenerateFederationTokenV1Response;
 import org.openapitools.client.model.ActivesessionGetCurrentV1Response;
+import org.openapitools.client.model.ActivesessionGetCurrentV2Response;
 import org.openapitools.client.model.ActivesessionGetListV1Response;
 import org.openapitools.client.model.CommonResponseError;
 import org.openapitools.client.model.CommonResponseRedirectSSecretquestionTextX;
@@ -292,6 +293,122 @@ public class ObjectActivesessionApi {
           public void onResponse(String localVarResponse) {
             try {
               responseListener.onResponse((ActivesessionGetCurrentV1Response) ApiInvoker.deserialize(localVarResponse,  "", ActivesessionGetCurrentV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Get Current Activesession
+  * Retrieve the details about the current activesession
+   * @return ActivesessionGetCurrentV2Response
+  */
+  public ActivesessionGetCurrentV2Response activesessionGetCurrentV2 () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/2/object/activesession/getCurrent";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (ActivesessionGetCurrentV2Response) ApiInvoker.deserialize(localVarResponse, "", ActivesessionGetCurrentV2Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Get Current Activesession
+   * Retrieve the details about the current activesession
+
+  */
+  public void activesessionGetCurrentV2 (final Response.Listener<ActivesessionGetCurrentV2Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/2/object/activesession/getCurrent".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((ActivesessionGetCurrentV2Response) ApiInvoker.deserialize(localVarResponse,  "", ActivesessionGetCurrentV2Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

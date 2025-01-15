@@ -77,6 +77,14 @@ public class JsonUtil {
       return new TypeToken<List<ActivesessionGetCurrentV1ResponseMPayload>>(){}.getType();
     }
     
+    if ("ActivesessionGetCurrentV2Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ActivesessionGetCurrentV2Response>>(){}.getType();
+    }
+    
+    if ("ActivesessionGetCurrentV2ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ActivesessionGetCurrentV2ResponseMPayload>>(){}.getType();
+    }
+    
     if ("ActivesessionGetListV1Response".equalsIgnoreCase(className)) {
       return new TypeToken<List<ActivesessionGetListV1Response>>(){}.getType();
     }
@@ -6621,6 +6629,14 @@ public class JsonUtil {
     
     if ("ActivesessionGetCurrentV1ResponseMPayload".equalsIgnoreCase(className)) {
       return new TypeToken<ActivesessionGetCurrentV1ResponseMPayload>(){}.getType();
+    }
+    
+    if ("ActivesessionGetCurrentV2Response".equalsIgnoreCase(className)) {
+      return new TypeToken<ActivesessionGetCurrentV2Response>(){}.getType();
+    }
+    
+    if ("ActivesessionGetCurrentV2ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<ActivesessionGetCurrentV2ResponseMPayload>(){}.getType();
     }
     
     if ("ActivesessionGetListV1Response".equalsIgnoreCase(className)) {

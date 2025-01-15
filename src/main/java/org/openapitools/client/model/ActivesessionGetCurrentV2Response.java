@@ -12,24 +12,24 @@
 
 package org.openapitools.client.model;
 
+import org.openapitools.client.model.ActivesessionGetCurrentV2ResponseMPayload;
 import org.openapitools.client.model.CommonResponseObjDebug;
 import org.openapitools.client.model.CommonResponseObjDebugPayload;
-import org.openapitools.client.model.WebhookGetHistoryV1ResponseMPayload;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Response for GET /1/object/webhook/{pkiWebhookID}/getHistory
+ * Response for GET /2/object/activesession/getCurrent
  **/
-@ApiModel(description = "Response for GET /1/object/webhook/{pkiWebhookID}/getHistory")
-public class WebhookGetHistoryV1Response {
+@ApiModel(description = "Response for GET /2/object/activesession/getCurrent")
+public class ActivesessionGetCurrentV2Response {
   
   @SerializedName("objDebugPayload")
   private CommonResponseObjDebugPayload objDebugPayload = null;
   @SerializedName("objDebug")
   private CommonResponseObjDebug objDebug = null;
   @SerializedName("mPayload")
-  private WebhookGetHistoryV1ResponseMPayload mPayload = null;
+  private ActivesessionGetCurrentV2ResponseMPayload mPayload = null;
 
   /**
    **/
@@ -54,10 +54,10 @@ public class WebhookGetHistoryV1Response {
   /**
    **/
   @ApiModelProperty(required = true, value = "")
-  public WebhookGetHistoryV1ResponseMPayload getMPayload() {
+  public ActivesessionGetCurrentV2ResponseMPayload getMPayload() {
     return mPayload;
   }
-  public void setMPayload(WebhookGetHistoryV1ResponseMPayload mPayload) {
+  public void setMPayload(ActivesessionGetCurrentV2ResponseMPayload mPayload) {
     this.mPayload = mPayload;
   }
 
@@ -70,10 +70,10 @@ public class WebhookGetHistoryV1Response {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    WebhookGetHistoryV1Response webhookGetHistoryV1Response = (WebhookGetHistoryV1Response) o;
-    return (this.objDebugPayload == null ? webhookGetHistoryV1Response.objDebugPayload == null : this.objDebugPayload.equals(webhookGetHistoryV1Response.objDebugPayload)) &&
-        (this.objDebug == null ? webhookGetHistoryV1Response.objDebug == null : this.objDebug.equals(webhookGetHistoryV1Response.objDebug)) &&
-        (this.mPayload == null ? webhookGetHistoryV1Response.mPayload == null : this.mPayload.equals(webhookGetHistoryV1Response.mPayload));
+    ActivesessionGetCurrentV2Response activesessionGetCurrentV2Response = (ActivesessionGetCurrentV2Response) o;
+    return (this.objDebugPayload == null ? activesessionGetCurrentV2Response.objDebugPayload == null : this.objDebugPayload.equals(activesessionGetCurrentV2Response.objDebugPayload)) &&
+        (this.objDebug == null ? activesessionGetCurrentV2Response.objDebug == null : this.objDebug.equals(activesessionGetCurrentV2Response.objDebug)) &&
+        (this.mPayload == null ? activesessionGetCurrentV2Response.mPayload == null : this.mPayload.equals(activesessionGetCurrentV2Response.mPayload));
   }
 
   @Override
@@ -88,7 +88,7 @@ public class WebhookGetHistoryV1Response {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class WebhookGetHistoryV1Response {\n");
+    sb.append("class ActivesessionGetCurrentV2Response {\n");
     
     sb.append("  objDebugPayload: ").append(objDebugPayload).append("\n");
     sb.append("  objDebug: ").append(objDebug).append("\n");

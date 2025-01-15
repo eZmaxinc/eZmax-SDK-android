@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**activesessionGenerateFederationTokenV1**](ObjectActivesessionApi.md#activesessionGenerateFederationTokenV1) | **POST** /1/object/activesession/generateFederationToken | Generate a federation token
 [**activesessionGetCurrentV1**](ObjectActivesessionApi.md#activesessionGetCurrentV1) | **GET** /1/object/activesession/getCurrent | Get Current Activesession
+[**activesessionGetCurrentV2**](ObjectActivesessionApi.md#activesessionGetCurrentV2) | **GET** /2/object/activesession/getCurrent | Get Current Activesession
 [**activesessionGetListV1**](ObjectActivesessionApi.md#activesessionGetListV1) | **GET** /1/object/activesession/getList | Retrieve Activesession list
 
 
@@ -87,6 +88,48 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**ActivesessionGetCurrentV1Response**](ActivesessionGetCurrentV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## activesessionGetCurrentV2
+
+> ActivesessionGetCurrentV2Response activesessionGetCurrentV2()
+
+Get Current Activesession
+
+Retrieve the details about the current activesession
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectActivesessionApi;
+
+ObjectActivesessionApi apiInstance = new ObjectActivesessionApi();
+try {
+    ActivesessionGetCurrentV2Response result = apiInstance.activesessionGetCurrentV2();
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectActivesessionApi#activesessionGetCurrentV2");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ActivesessionGetCurrentV2Response**](ActivesessionGetCurrentV2Response.md)
 
 ### Authorization
 

@@ -7,6 +7,8 @@ docs/ActivesessionGenerateFederationTokenV1Response.md
 docs/ActivesessionGenerateFederationTokenV1ResponseMPayload.md
 docs/ActivesessionGetCurrentV1Response.md
 docs/ActivesessionGetCurrentV1ResponseMPayload.md
+docs/ActivesessionGetCurrentV2Response.md
+docs/ActivesessionGetCurrentV2ResponseMPayload.md
 docs/ActivesessionGetListV1Response.md
 docs/ActivesessionGetListV1ResponseMPayload.md
 docs/ActivesessionListElement.md
@@ -1880,6 +1882,8 @@ src/main/java/org/openapitools/client/model/ActivesessionGenerateFederationToken
 src/main/java/org/openapitools/client/model/ActivesessionGenerateFederationTokenV1ResponseMPayload.java
 src/main/java/org/openapitools/client/model/ActivesessionGetCurrentV1Response.java
 src/main/java/org/openapitools/client/model/ActivesessionGetCurrentV1ResponseMPayload.java
+src/main/java/org/openapitools/client/model/ActivesessionGetCurrentV2Response.java
+src/main/java/org/openapitools/client/model/ActivesessionGetCurrentV2ResponseMPayload.java
 src/main/java/org/openapitools/client/model/ActivesessionGetListV1Response.java
 src/main/java/org/openapitools/client/model/ActivesessionGetListV1ResponseMPayload.java
 src/main/java/org/openapitools/client/model/ActivesessionListElement.java
