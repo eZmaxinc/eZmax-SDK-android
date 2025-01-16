@@ -13,6 +13,7 @@
 package org.openapitools.client.model;
 
 import java.util.*;
+import org.openapitools.client.model.CustomBrandingResponse;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -23,20 +24,19 @@ import com.google.gson.annotations.SerializedName;
 public class EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1ResponseMPayload {
   
   @SerializedName("objBranding")
-  private Object objBranding = null;
+  private CustomBrandingResponse objBranding = null;
   @SerializedName("fkiUserlogintypeID")
   private Integer fkiUserlogintypeID = null;
   @SerializedName("a_sEzsigntemplatesignerDescription")
   private List<String> aSEzsigntemplatesignerDescription = null;
 
   /**
-   * A Custom Branding Object
    **/
-  @ApiModelProperty(value = "A Custom Branding Object")
-  public Object getObjBranding() {
+  @ApiModelProperty(value = "")
+  public CustomBrandingResponse getObjBranding() {
     return objBranding;
   }
-  public void setObjBranding(Object objBranding) {
+  public void setObjBranding(CustomBrandingResponse objBranding) {
     this.objBranding = objBranding;
   }
 
