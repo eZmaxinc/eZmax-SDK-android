@@ -12,6 +12,7 @@
 
 package org.openapitools.client.model;
 
+import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseObjDebug;
 import org.openapitools.client.model.CommonResponseObjDebugPayload;
 import io.swagger.annotations.*;
@@ -21,7 +22,7 @@ import com.google.gson.annotations.SerializedName;
  * Response for PUT /2/object/ezsignsignature/{pkiEzsignsignatureID}
  **/
 @ApiModel(description = "Response for PUT /2/object/ezsignsignature/{pkiEzsignsignatureID}")
-public class EzsignsignatureEditObjectV2Response {
+public class EzsignsignatureEditObjectV2Response extends CommonResponse {
   
   @SerializedName("objDebugPayload")
   private CommonResponseObjDebugPayload objDebugPayload = null;
@@ -74,7 +75,7 @@ public class EzsignsignatureEditObjectV2Response {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignsignatureEditObjectV2Response {\n");
-    
+    sb.append("  " + super.toString()).append("\n");
     sb.append("  objDebugPayload: ").append(objDebugPayload).append("\n");
     sb.append("  objDebug: ").append(objDebug).append("\n");
     sb.append("}\n");

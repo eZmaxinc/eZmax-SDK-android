@@ -14,6 +14,7 @@ package org.openapitools.client.model;
 
 import org.openapitools.client.model.EnumHorizontalalignment;
 import org.openapitools.client.model.EnumVerticalalignment;
+import org.openapitools.client.model.EzsignannotationRequest;
 import org.openapitools.client.model.FieldEEzsignannotationType;
 import org.openapitools.client.model.TextstylestaticRequestCompound;
 import io.swagger.annotations.*;
@@ -23,7 +24,7 @@ import com.google.gson.annotations.SerializedName;
  * A Ezsignannotation Object and children
  **/
 @ApiModel(description = "A Ezsignannotation Object and children")
-public class EzsignannotationRequestCompound {
+public class EzsignannotationRequestCompound extends EzsignannotationRequest {
   
   @SerializedName("pkiEzsignannotationID")
   private Integer pkiEzsignannotationID = null;
@@ -230,7 +231,7 @@ public class EzsignannotationRequestCompound {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignannotationRequestCompound {\n");
-    
+    sb.append("  " + super.toString()).append("\n");
     sb.append("  pkiEzsignannotationID: ").append(pkiEzsignannotationID).append("\n");
     sb.append("  fkiEzsigndocumentID: ").append(fkiEzsigndocumentID).append("\n");
     sb.append("  eEzsignannotationHorizontalalignment: ").append(eEzsignannotationHorizontalalignment).append("\n");

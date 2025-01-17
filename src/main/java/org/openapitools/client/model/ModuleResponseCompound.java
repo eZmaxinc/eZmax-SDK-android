@@ -13,6 +13,7 @@
 package org.openapitools.client.model;
 
 import java.util.*;
+import org.openapitools.client.model.ModuleResponse;
 import org.openapitools.client.model.ModulesectionResponseCompound;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
@@ -21,7 +22,7 @@ import com.google.gson.annotations.SerializedName;
  * A Module Object
  **/
 @ApiModel(description = "A Module Object")
-public class ModuleResponseCompound {
+public class ModuleResponseCompound extends ModuleResponse {
   
   @SerializedName("pkiModuleID")
   private Integer pkiModuleID = null;
@@ -153,7 +154,7 @@ public class ModuleResponseCompound {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class ModuleResponseCompound {\n");
-    
+    sb.append("  " + super.toString()).append("\n");
     sb.append("  pkiModuleID: ").append(pkiModuleID).append("\n");
     sb.append("  fkiModulegroupID: ").append(fkiModulegroupID).append("\n");
     sb.append("  eModuleInternalname: ").append(eModuleInternalname).append("\n");

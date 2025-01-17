@@ -14,6 +14,7 @@ package org.openapitools.client.model;
 
 import java.util.*;
 import org.openapitools.client.model.CommonAudit;
+import org.openapitools.client.model.DomainResponse;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -21,7 +22,7 @@ import com.google.gson.annotations.SerializedName;
  * A Domain Object
  **/
 @ApiModel(description = "A Domain Object")
-public class DomainResponseCompound {
+public class DomainResponseCompound extends DomainResponse {
   
   @SerializedName("pkiDomainID")
   private Integer pkiDomainID = null;
@@ -152,7 +153,7 @@ public class DomainResponseCompound {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class DomainResponseCompound {\n");
-    
+    sb.append("  " + super.toString()).append("\n");
     sb.append("  pkiDomainID: ").append(pkiDomainID).append("\n");
     sb.append("  sDomainName: ").append(sDomainName).append("\n");
     sb.append("  bDomainValiddkim: ").append(bDomainValiddkim).append("\n");

@@ -15,6 +15,7 @@ package org.openapitools.client.model;
 import org.openapitools.client.model.FieldEVersionhistoryType;
 import org.openapitools.client.model.FieldEVersionhistoryUsertype;
 import org.openapitools.client.model.MultilingualVersionhistoryDetail;
+import org.openapitools.client.model.VersionhistoryResponse;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -22,7 +23,7 @@ import com.google.gson.annotations.SerializedName;
  * A Versionhistory Object
  **/
 @ApiModel(description = "A Versionhistory Object")
-public class VersionhistoryResponseCompound {
+public class VersionhistoryResponseCompound extends VersionhistoryResponse {
   
   @SerializedName("pkiVersionhistoryID")
   private Integer pkiVersionhistoryID = null;
@@ -212,7 +213,7 @@ public class VersionhistoryResponseCompound {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class VersionhistoryResponseCompound {\n");
-    
+    sb.append("  " + super.toString()).append("\n");
     sb.append("  pkiVersionhistoryID: ").append(pkiVersionhistoryID).append("\n");
     sb.append("  fkiModuleID: ").append(fkiModuleID).append("\n");
     sb.append("  fkiModulesectionID: ").append(fkiModulesectionID).append("\n");

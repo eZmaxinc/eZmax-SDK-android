@@ -17,6 +17,7 @@ import org.openapitools.client.model.FieldEUserEzsignaccess;
 import org.openapitools.client.model.FieldEUserLogintype;
 import org.openapitools.client.model.FieldEUserType;
 import org.openapitools.client.model.PhoneRequest;
+import org.openapitools.client.model.UserRequest;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -24,7 +25,7 @@ import com.google.gson.annotations.SerializedName;
  * A User Object and children
  **/
 @ApiModel(description = "A User Object and children")
-public class UserRequestCompound {
+public class UserRequestCompound extends UserRequest {
   
   @SerializedName("pkiUserID")
   private Integer pkiUserID = null;
@@ -480,7 +481,7 @@ public class UserRequestCompound {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserRequestCompound {\n");
-    
+    sb.append("  " + super.toString()).append("\n");
     sb.append("  pkiUserID: ").append(pkiUserID).append("\n");
     sb.append("  fkiAgentID: ").append(fkiAgentID).append("\n");
     sb.append("  fkiBrokerID: ").append(fkiBrokerID).append("\n");

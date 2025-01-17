@@ -13,6 +13,7 @@
 package org.openapitools.client.model;
 
 import org.openapitools.client.model.CommonGetReportV1ResponseMPayload;
+import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseObjDebug;
 import org.openapitools.client.model.CommonResponseObjDebugPayload;
 import io.swagger.annotations.*;
@@ -22,7 +23,7 @@ import com.google.gson.annotations.SerializedName;
  * Response for POST /1/report/xxx/xxx and /1/module/report/getReportFromCache
  **/
 @ApiModel(description = "Response for POST /1/report/xxx/xxx and /1/module/report/getReportFromCache")
-public class CommonGetReportV1Response {
+public class CommonGetReportV1Response extends CommonResponse {
   
   @SerializedName("objDebugPayload")
   private CommonResponseObjDebugPayload objDebugPayload = null;
@@ -89,7 +90,7 @@ public class CommonGetReportV1Response {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class CommonGetReportV1Response {\n");
-    
+    sb.append("  " + super.toString()).append("\n");
     sb.append("  objDebugPayload: ").append(objDebugPayload).append("\n");
     sb.append("  objDebug: ").append(objDebug).append("\n");
     sb.append("  mPayload: ").append(mPayload).append("\n");

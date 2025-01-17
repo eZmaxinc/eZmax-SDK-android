@@ -12,6 +12,7 @@
 
 package org.openapitools.client.model;
 
+import org.openapitools.client.model.AuthenticationexternalRequest;
 import org.openapitools.client.model.FieldEAuthenticationexternalType;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
@@ -20,7 +21,7 @@ import com.google.gson.annotations.SerializedName;
  * A Authenticationexternal Object and children
  **/
 @ApiModel(description = "A Authenticationexternal Object and children")
-public class AuthenticationexternalRequestCompound {
+public class AuthenticationexternalRequestCompound extends AuthenticationexternalRequest {
   
   @SerializedName("pkiAuthenticationexternalID")
   private Integer pkiAuthenticationexternalID = null;
@@ -91,7 +92,7 @@ public class AuthenticationexternalRequestCompound {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class AuthenticationexternalRequestCompound {\n");
-    
+    sb.append("  " + super.toString()).append("\n");
     sb.append("  pkiAuthenticationexternalID: ").append(pkiAuthenticationexternalID).append("\n");
     sb.append("  sAuthenticationexternalDescription: ").append(sAuthenticationexternalDescription).append("\n");
     sb.append("  eAuthenticationexternalType: ").append(eAuthenticationexternalType).append("\n");

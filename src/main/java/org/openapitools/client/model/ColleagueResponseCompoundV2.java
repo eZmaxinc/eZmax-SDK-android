@@ -12,6 +12,7 @@
 
 package org.openapitools.client.model;
 
+import org.openapitools.client.model.ColleagueResponseV2;
 import org.openapitools.client.model.CommonAudit;
 import org.openapitools.client.model.CustomUserNameResponse;
 import org.openapitools.client.model.FieldEColleagueEzsign;
@@ -23,7 +24,7 @@ import com.google.gson.annotations.SerializedName;
  * A Colleague Object
  **/
 @ApiModel(description = "A Colleague Object")
-public class ColleagueResponseCompoundV2 {
+public class ColleagueResponseCompoundV2 extends ColleagueResponseV2 {
   
   @SerializedName("pkiColleagueID")
   private Integer pkiColleagueID = null;
@@ -288,7 +289,7 @@ public class ColleagueResponseCompoundV2 {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class ColleagueResponseCompoundV2 {\n");
-    
+    sb.append("  " + super.toString()).append("\n");
     sb.append("  pkiColleagueID: ").append(pkiColleagueID).append("\n");
     sb.append("  fkiUserID: ").append(fkiUserID).append("\n");
     sb.append("  fkiUserIDColleague: ").append(fkiUserIDColleague).append("\n");

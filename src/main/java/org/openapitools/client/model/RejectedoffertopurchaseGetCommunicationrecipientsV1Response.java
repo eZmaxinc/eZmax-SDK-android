@@ -12,6 +12,7 @@
 
 package org.openapitools.client.model;
 
+import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseObjDebug;
 import org.openapitools.client.model.CommonResponseObjDebugPayload;
 import org.openapitools.client.model.RejectedoffertopurchaseGetCommunicationrecipientsV1ResponseMPayload;
@@ -22,7 +23,7 @@ import com.google.gson.annotations.SerializedName;
  * Response for GET /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationrecipients
  **/
 @ApiModel(description = "Response for GET /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationrecipients")
-public class RejectedoffertopurchaseGetCommunicationrecipientsV1Response {
+public class RejectedoffertopurchaseGetCommunicationrecipientsV1Response extends CommonResponse {
   
   @SerializedName("objDebugPayload")
   private CommonResponseObjDebugPayload objDebugPayload = null;
@@ -89,7 +90,7 @@ public class RejectedoffertopurchaseGetCommunicationrecipientsV1Response {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class RejectedoffertopurchaseGetCommunicationrecipientsV1Response {\n");
-    
+    sb.append("  " + super.toString()).append("\n");
     sb.append("  objDebugPayload: ").append(objDebugPayload).append("\n");
     sb.append("  objDebug: ").append(objDebug).append("\n");
     sb.append("  mPayload: ").append(mPayload).append("\n");

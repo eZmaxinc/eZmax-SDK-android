@@ -16,6 +16,7 @@ import java.util.*;
 import org.openapitools.client.model.CommonAudit;
 import org.openapitools.client.model.ComputedEEzsigndocumentSteptype;
 import org.openapitools.client.model.CustomEzsignfoldersignerassociationstatusResponse;
+import org.openapitools.client.model.EzsigndocumentResponse;
 import org.openapitools.client.model.EzsigndocumentdependencyResponse;
 import org.openapitools.client.model.FieldEEzsigndocumentStep;
 import io.swagger.annotations.*;
@@ -25,7 +26,7 @@ import com.google.gson.annotations.SerializedName;
  * An Ezsigndocument Object and children to create a complete structure
  **/
 @ApiModel(description = "An Ezsigndocument Object and children to create a complete structure")
-public class EzsigndocumentResponseCompound {
+public class EzsigndocumentResponseCompound extends EzsigndocumentResponse {
   
   @SerializedName("pkiEzsigndocumentID")
   private Integer pkiEzsigndocumentID = null;
@@ -521,7 +522,7 @@ public class EzsigndocumentResponseCompound {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsigndocumentResponseCompound {\n");
-    
+    sb.append("  " + super.toString()).append("\n");
     sb.append("  pkiEzsigndocumentID: ").append(pkiEzsigndocumentID).append("\n");
     sb.append("  fkiEzsignfolderID: ").append(fkiEzsignfolderID).append("\n");
     sb.append("  fkiEzsignfoldersignerassociationIDDeclinedtosign: ").append(fkiEzsignfoldersignerassociationIDDeclinedtosign).append("\n");

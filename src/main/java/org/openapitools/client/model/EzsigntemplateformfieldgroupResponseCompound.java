@@ -16,6 +16,7 @@ import java.util.*;
 import org.openapitools.client.model.CustomDropdownElementResponse;
 import org.openapitools.client.model.EnumTextvalidation;
 import org.openapitools.client.model.EzsigntemplateformfieldResponseCompound;
+import org.openapitools.client.model.EzsigntemplateformfieldgroupResponse;
 import org.openapitools.client.model.EzsigntemplateformfieldgroupsignerResponse;
 import org.openapitools.client.model.FieldEEzsigntemplateformfieldgroupSignerrequirement;
 import org.openapitools.client.model.FieldEEzsigntemplateformfieldgroupTooltipposition;
@@ -27,7 +28,7 @@ import com.google.gson.annotations.SerializedName;
  * A Ezsigntemplateformfieldgroup Object and children
  **/
 @ApiModel(description = "A Ezsigntemplateformfieldgroup Object and children")
-public class EzsigntemplateformfieldgroupResponseCompound {
+public class EzsigntemplateformfieldgroupResponseCompound extends EzsigntemplateformfieldgroupResponse {
   
   @SerializedName("pkiEzsigntemplateformfieldgroupID")
   private Integer pkiEzsigntemplateformfieldgroupID = null;
@@ -352,7 +353,7 @@ public class EzsigntemplateformfieldgroupResponseCompound {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsigntemplateformfieldgroupResponseCompound {\n");
-    
+    sb.append("  " + super.toString()).append("\n");
     sb.append("  pkiEzsigntemplateformfieldgroupID: ").append(pkiEzsigntemplateformfieldgroupID).append("\n");
     sb.append("  fkiEzsigntemplatedocumentID: ").append(fkiEzsigntemplatedocumentID).append("\n");
     sb.append("  eEzsigntemplateformfieldgroupType: ").append(eEzsigntemplateformfieldgroupType).append("\n");

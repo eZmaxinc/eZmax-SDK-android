@@ -15,6 +15,7 @@ package org.openapitools.client.model;
 import java.util.*;
 import org.openapitools.client.model.AddressRequest;
 import org.openapitools.client.model.ContactRequestCompound;
+import org.openapitools.client.model.FranchisereferalincomeRequest;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -22,7 +23,7 @@ import com.google.gson.annotations.SerializedName;
  * A Franchisereferalincome Object and children to create a complete structure
  **/
 @ApiModel(description = "A Franchisereferalincome Object and children to create a complete structure")
-public class FranchisereferalincomeRequestCompound {
+public class FranchisereferalincomeRequestCompound extends FranchisereferalincomeRequest {
   
   @SerializedName("pkiFranchisereferalincomeID")
   private Integer pkiFranchisereferalincomeID = null;
@@ -260,7 +261,7 @@ public class FranchisereferalincomeRequestCompound {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class FranchisereferalincomeRequestCompound {\n");
-    
+    sb.append("  " + super.toString()).append("\n");
     sb.append("  pkiFranchisereferalincomeID: ").append(pkiFranchisereferalincomeID).append("\n");
     sb.append("  fkiFranchisebrokerID: ").append(fkiFranchisebrokerID).append("\n");
     sb.append("  fkiFranchisereferalincomeprogramID: ").append(fkiFranchisereferalincomeprogramID).append("\n");

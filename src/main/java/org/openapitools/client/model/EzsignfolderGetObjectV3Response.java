@@ -12,6 +12,7 @@
 
 package org.openapitools.client.model;
 
+import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseObjDebug;
 import org.openapitools.client.model.CommonResponseObjDebugPayload;
 import org.openapitools.client.model.EzsignfolderGetObjectV3ResponseMPayload;
@@ -22,7 +23,7 @@ import com.google.gson.annotations.SerializedName;
  * Response for GET /3/object/ezsignfolder/{pkiEzsignfolderID}
  **/
 @ApiModel(description = "Response for GET /3/object/ezsignfolder/{pkiEzsignfolderID}")
-public class EzsignfolderGetObjectV3Response {
+public class EzsignfolderGetObjectV3Response extends CommonResponse {
   
   @SerializedName("objDebugPayload")
   private CommonResponseObjDebugPayload objDebugPayload = null;
@@ -89,7 +90,7 @@ public class EzsignfolderGetObjectV3Response {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignfolderGetObjectV3Response {\n");
-    
+    sb.append("  " + super.toString()).append("\n");
     sb.append("  objDebugPayload: ").append(objDebugPayload).append("\n");
     sb.append("  objDebug: ").append(objDebug).append("\n");
     sb.append("  mPayload: ").append(mPayload).append("\n");

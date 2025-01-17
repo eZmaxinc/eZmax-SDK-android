@@ -13,6 +13,7 @@
 package org.openapitools.client.model;
 
 import java.util.*;
+import org.openapitools.client.model.CommonGetListV1ResponseMPayload;
 import org.openapitools.client.model.PaymenttermListElement;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
@@ -21,7 +22,7 @@ import com.google.gson.annotations.SerializedName;
  * Payload for GET /1/object/paymentterm/getList
  **/
 @ApiModel(description = "Payload for GET /1/object/paymentterm/getList")
-public class PaymenttermGetListV1ResponseMPayload {
+public class PaymenttermGetListV1ResponseMPayload extends CommonGetListV1ResponseMPayload {
   
   @SerializedName("iRowReturned")
   private Integer iRowReturned = null;
@@ -90,7 +91,7 @@ public class PaymenttermGetListV1ResponseMPayload {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class PaymenttermGetListV1ResponseMPayload {\n");
-    
+    sb.append("  " + super.toString()).append("\n");
     sb.append("  iRowReturned: ").append(iRowReturned).append("\n");
     sb.append("  iRowFiltered: ").append(iRowFiltered).append("\n");
     sb.append("  aObjPaymentterm: ").append(aObjPaymentterm).append("\n");

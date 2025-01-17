@@ -14,6 +14,7 @@ package org.openapitools.client.model;
 
 import java.util.*;
 import org.openapitools.client.model.AttemptResponse;
+import org.openapitools.client.model.CommonWebhook;
 import org.openapitools.client.model.CustomWebhookResponse;
 import org.openapitools.client.model.EzsignfolderResponse;
 import org.openapitools.client.model.EzsignfoldersignerassociationResponseCompound;
@@ -24,7 +25,7 @@ import com.google.gson.annotations.SerializedName;
  * This is the base Webhook object
  **/
 @ApiModel(description = "This is the base Webhook object")
-public class WebhookEzsignEzsignsignerAcceptclause {
+public class WebhookEzsignEzsignsignerAcceptclause extends CommonWebhook {
   
   @SerializedName("objWebhook")
   private CustomWebhookResponse objWebhook = null;
@@ -106,7 +107,7 @@ public class WebhookEzsignEzsignsignerAcceptclause {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class WebhookEzsignEzsignsignerAcceptclause {\n");
-    
+    sb.append("  " + super.toString()).append("\n");
     sb.append("  objWebhook: ").append(objWebhook).append("\n");
     sb.append("  aObjAttempt: ").append(aObjAttempt).append("\n");
     sb.append("  objEzsignfolder: ").append(objEzsignfolder).append("\n");

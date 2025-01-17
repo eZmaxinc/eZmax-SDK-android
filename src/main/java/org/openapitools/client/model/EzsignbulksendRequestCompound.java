@@ -12,6 +12,7 @@
 
 package org.openapitools.client.model;
 
+import org.openapitools.client.model.EzsignbulksendRequest;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -19,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
  * A Ezsignbulksend Object and children
  **/
 @ApiModel(description = "A Ezsignbulksend Object and children")
-public class EzsignbulksendRequestCompound {
+public class EzsignbulksendRequestCompound extends EzsignbulksendRequest {
   
   @SerializedName("pkiEzsignbulksendID")
   private Integer pkiEzsignbulksendID = null;
@@ -154,7 +155,7 @@ public class EzsignbulksendRequestCompound {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignbulksendRequestCompound {\n");
-    
+    sb.append("  " + super.toString()).append("\n");
     sb.append("  pkiEzsignbulksendID: ").append(pkiEzsignbulksendID).append("\n");
     sb.append("  fkiEzsignfoldertypeID: ").append(fkiEzsignfoldertypeID).append("\n");
     sb.append("  fkiLanguageID: ").append(fkiLanguageID).append("\n");

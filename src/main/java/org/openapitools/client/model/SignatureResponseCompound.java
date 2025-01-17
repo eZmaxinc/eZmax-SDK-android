@@ -12,6 +12,7 @@
 
 package org.openapitools.client.model;
 
+import org.openapitools.client.model.SignatureResponse;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -19,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
  * A Signature Object
  **/
 @ApiModel(description = "A Signature Object")
-public class SignatureResponseCompound {
+public class SignatureResponseCompound extends SignatureResponse {
   
   @SerializedName("pkiSignatureID")
   private Integer pkiSignatureID = null;
@@ -107,7 +108,7 @@ public class SignatureResponseCompound {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class SignatureResponseCompound {\n");
-    
+    sb.append("  " + super.toString()).append("\n");
     sb.append("  pkiSignatureID: ").append(pkiSignatureID).append("\n");
     sb.append("  fkiFontID: ").append(fkiFontID).append("\n");
     sb.append("  sSignatureUrl: ").append(sSignatureUrl).append("\n");

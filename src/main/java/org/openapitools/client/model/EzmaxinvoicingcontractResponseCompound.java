@@ -13,6 +13,7 @@
 package org.openapitools.client.model;
 
 import org.openapitools.client.model.CommonAudit;
+import org.openapitools.client.model.EzmaxinvoicingcontractResponse;
 import org.openapitools.client.model.FieldEEzmaxinvoicingcontractPaymenttype;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
@@ -21,7 +22,7 @@ import com.google.gson.annotations.SerializedName;
  * A Ezmaxinvoicingcontract Object
  **/
 @ApiModel(description = "A Ezmaxinvoicingcontract Object")
-public class EzmaxinvoicingcontractResponseCompound {
+public class EzmaxinvoicingcontractResponseCompound extends EzmaxinvoicingcontractResponse {
   
   @SerializedName("pkiEzmaxinvoicingcontractID")
   private Integer pkiEzmaxinvoicingcontractID = null;
@@ -181,7 +182,7 @@ public class EzmaxinvoicingcontractResponseCompound {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzmaxinvoicingcontractResponseCompound {\n");
-    
+    sb.append("  " + super.toString()).append("\n");
     sb.append("  pkiEzmaxinvoicingcontractID: ").append(pkiEzmaxinvoicingcontractID).append("\n");
     sb.append("  eEzmaxinvoicingcontractPaymenttype: ").append(eEzmaxinvoicingcontractPaymenttype).append("\n");
     sb.append("  iEzmaxinvoicingcontractLength: ").append(iEzmaxinvoicingcontractLength).append("\n");

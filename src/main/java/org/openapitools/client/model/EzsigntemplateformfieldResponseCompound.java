@@ -15,6 +15,7 @@ package org.openapitools.client.model;
 import java.util.*;
 import org.openapitools.client.model.EnumHorizontalalignment;
 import org.openapitools.client.model.EzsigntemplateelementdependencyResponse;
+import org.openapitools.client.model.EzsigntemplateformfieldResponse;
 import org.openapitools.client.model.FieldEEzsigntemplateformfieldDependencyrequirement;
 import org.openapitools.client.model.FieldEEzsigntemplateformfieldPositioning;
 import org.openapitools.client.model.FieldEEzsigntemplateformfieldPositioningoccurence;
@@ -26,7 +27,7 @@ import com.google.gson.annotations.SerializedName;
  * An Ezsigntemplateformfield Object and children
  **/
 @ApiModel(description = "An Ezsigntemplateformfield Object and children")
-public class EzsigntemplateformfieldResponseCompound {
+public class EzsigntemplateformfieldResponseCompound extends EzsigntemplateformfieldResponse {
   
   @SerializedName("pkiEzsigntemplateformfieldID")
   private Integer pkiEzsigntemplateformfieldID = null;
@@ -336,7 +337,7 @@ public class EzsigntemplateformfieldResponseCompound {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsigntemplateformfieldResponseCompound {\n");
-    
+    sb.append("  " + super.toString()).append("\n");
     sb.append("  pkiEzsigntemplateformfieldID: ").append(pkiEzsigntemplateformfieldID).append("\n");
     sb.append("  eEzsigntemplateformfieldPositioning: ").append(eEzsigntemplateformfieldPositioning).append("\n");
     sb.append("  iEzsigntemplatedocumentpagePagenumber: ").append(iEzsigntemplatedocumentpagePagenumber).append("\n");

@@ -14,6 +14,7 @@ package org.openapitools.client.model;
 
 import java.util.*;
 import org.openapitools.client.model.AddressResponse;
+import org.openapitools.client.model.ContactinformationsResponse;
 import org.openapitools.client.model.EmailResponse;
 import org.openapitools.client.model.FieldEContactinformationsType;
 import org.openapitools.client.model.PhoneResponseCompound;
@@ -25,7 +26,7 @@ import com.google.gson.annotations.SerializedName;
  * A Contactinformations Object
  **/
 @ApiModel(description = "A Contactinformations Object")
-public class ContactinformationsResponseCompound {
+public class ContactinformationsResponseCompound extends ContactinformationsResponse {
   
   @SerializedName("pkiContactinformationsID")
   private Integer pkiContactinformationsID = null;
@@ -277,7 +278,7 @@ public class ContactinformationsResponseCompound {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class ContactinformationsResponseCompound {\n");
-    
+    sb.append("  " + super.toString()).append("\n");
     sb.append("  pkiContactinformationsID: ").append(pkiContactinformationsID).append("\n");
     sb.append("  fkiAddressIDDefault: ").append(fkiAddressIDDefault).append("\n");
     sb.append("  fkiPhoneIDDefault: ").append(fkiPhoneIDDefault).append("\n");

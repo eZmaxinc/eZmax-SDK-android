@@ -13,6 +13,7 @@
 package org.openapitools.client.model;
 
 import org.openapitools.client.model.DiscussionRequest;
+import org.openapitools.client.model.EzsigndiscussionRequest;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -20,7 +21,7 @@ import com.google.gson.annotations.SerializedName;
  * A Ezsigndiscussion Object and children
  **/
 @ApiModel(description = "A Ezsigndiscussion Object and children")
-public class EzsigndiscussionRequestCompound {
+public class EzsigndiscussionRequestCompound extends EzsigndiscussionRequest {
   
   @SerializedName("pkiEzsigndiscussionID")
   private Integer pkiEzsigndiscussionID = null;
@@ -141,7 +142,7 @@ public class EzsigndiscussionRequestCompound {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsigndiscussionRequestCompound {\n");
-    
+    sb.append("  " + super.toString()).append("\n");
     sb.append("  pkiEzsigndiscussionID: ").append(pkiEzsigndiscussionID).append("\n");
     sb.append("  fkiEzsigndocumentID: ").append(fkiEzsigndocumentID).append("\n");
     sb.append("  iEzsigndiscussionPagenumber: ").append(iEzsigndiscussionPagenumber).append("\n");

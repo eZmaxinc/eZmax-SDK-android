@@ -16,6 +16,7 @@ import org.openapitools.client.model.CommonAudit;
 import org.openapitools.client.model.ComputedEEzsignfolderAccess;
 import org.openapitools.client.model.CustomEzsignfoldertypeResponse;
 import org.openapitools.client.model.CustomTimezoneWithCodeResponse;
+import org.openapitools.client.model.EzsignfolderResponseV3;
 import org.openapitools.client.model.FieldEEzsignfolderCompletion;
 import org.openapitools.client.model.FieldEEzsignfolderDocumentdependency;
 import org.openapitools.client.model.FieldEEzsignfolderStep;
@@ -26,7 +27,7 @@ import com.google.gson.annotations.SerializedName;
  * An Ezsignfolder Object and children to create a complete structure
  **/
 @ApiModel(description = "An Ezsignfolder Object and children to create a complete structure")
-public class EzsignfolderResponseCompoundV3 {
+public class EzsignfolderResponseCompoundV3 extends EzsignfolderResponseV3 {
   
   @SerializedName("pkiEzsignfolderID")
   private Integer pkiEzsignfolderID = null;
@@ -474,7 +475,7 @@ public class EzsignfolderResponseCompoundV3 {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignfolderResponseCompoundV3 {\n");
-    
+    sb.append("  " + super.toString()).append("\n");
     sb.append("  pkiEzsignfolderID: ").append(pkiEzsignfolderID).append("\n");
     sb.append("  fkiEzsignfoldertypeID: ").append(fkiEzsignfoldertypeID).append("\n");
     sb.append("  objEzsignfoldertype: ").append(objEzsignfoldertype).append("\n");

@@ -13,6 +13,7 @@
 package org.openapitools.client.model;
 
 import org.openapitools.client.model.CustomContactNameResponse;
+import org.openapitools.client.model.EzmaxinvoicingagentResponse;
 import org.openapitools.client.model.FieldEEzmaxinvoicingagentVariationezmax;
 import org.openapitools.client.model.FieldEEzmaxinvoicingagentVariationezsign;
 import io.swagger.annotations.*;
@@ -22,7 +23,7 @@ import com.google.gson.annotations.SerializedName;
  * A Ezmaxinvoicingagent Object
  **/
 @ApiModel(description = "A Ezmaxinvoicingagent Object")
-public class EzmaxinvoicingagentResponseCompound {
+public class EzmaxinvoicingagentResponseCompound extends EzmaxinvoicingagentResponse {
   
   @SerializedName("pkiEzmaxinvoicingagentID")
   private Integer pkiEzmaxinvoicingagentID = null;
@@ -373,7 +374,7 @@ public class EzmaxinvoicingagentResponseCompound {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzmaxinvoicingagentResponseCompound {\n");
-    
+    sb.append("  " + super.toString()).append("\n");
     sb.append("  pkiEzmaxinvoicingagentID: ").append(pkiEzmaxinvoicingagentID).append("\n");
     sb.append("  fkiEzmaxinvoicingID: ").append(fkiEzmaxinvoicingID).append("\n");
     sb.append("  fkiBillingentityinternalID: ").append(fkiBillingentityinternalID).append("\n");

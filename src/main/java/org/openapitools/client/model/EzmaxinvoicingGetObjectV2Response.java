@@ -12,6 +12,7 @@
 
 package org.openapitools.client.model;
 
+import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseObjDebug;
 import org.openapitools.client.model.CommonResponseObjDebugPayload;
 import org.openapitools.client.model.EzmaxinvoicingGetObjectV2ResponseMPayload;
@@ -22,7 +23,7 @@ import com.google.gson.annotations.SerializedName;
  * Response for GET /2/object/ezmaxinvoicing/{pkiEzmaxinvoicingID}
  **/
 @ApiModel(description = "Response for GET /2/object/ezmaxinvoicing/{pkiEzmaxinvoicingID}")
-public class EzmaxinvoicingGetObjectV2Response {
+public class EzmaxinvoicingGetObjectV2Response extends CommonResponse {
   
   @SerializedName("objDebugPayload")
   private CommonResponseObjDebugPayload objDebugPayload = null;
@@ -89,7 +90,7 @@ public class EzmaxinvoicingGetObjectV2Response {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzmaxinvoicingGetObjectV2Response {\n");
-    
+    sb.append("  " + super.toString()).append("\n");
     sb.append("  objDebugPayload: ").append(objDebugPayload).append("\n");
     sb.append("  objDebug: ").append(objDebug).append("\n");
     sb.append("  mPayload: ").append(mPayload).append("\n");

@@ -14,6 +14,7 @@ package org.openapitools.client.model;
 
 import org.openapitools.client.model.FieldENotificationpreferenceStatus;
 import org.openapitools.client.model.MultilingualNotificationtestName;
+import org.openapitools.client.model.NotificationtestResponse;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -21,7 +22,7 @@ import com.google.gson.annotations.SerializedName;
  * A Notificationtest Object in the context of getNotificationtests
  **/
 @ApiModel(description = "A Notificationtest Object in the context of getNotificationtests")
-public class CustomNotificationtestgetnotificationtestsResponse {
+public class CustomNotificationtestgetnotificationtestsResponse extends NotificationtestResponse {
   
   @SerializedName("pkiNotificationtestID")
   private Integer pkiNotificationtestID = null;
@@ -151,7 +152,7 @@ public class CustomNotificationtestgetnotificationtestsResponse {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class CustomNotificationtestgetnotificationtestsResponse {\n");
-    
+    sb.append("  " + super.toString()).append("\n");
     sb.append("  pkiNotificationtestID: ").append(pkiNotificationtestID).append("\n");
     sb.append("  objNotificationtestName: ").append(objNotificationtestName).append("\n");
     sb.append("  fkiNotificationsubsectionID: ").append(fkiNotificationsubsectionID).append("\n");

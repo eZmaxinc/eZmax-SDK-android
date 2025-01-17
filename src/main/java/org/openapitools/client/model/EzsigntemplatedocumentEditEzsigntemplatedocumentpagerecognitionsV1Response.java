@@ -12,6 +12,7 @@
 
 package org.openapitools.client.model;
 
+import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseObjDebug;
 import org.openapitools.client.model.CommonResponseObjDebugPayload;
 import org.openapitools.client.model.EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1ResponseMPayload;
@@ -22,7 +23,7 @@ import com.google.gson.annotations.SerializedName;
  * Response for PUT /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplatedocumentpagerecognitions
  **/
 @ApiModel(description = "Response for PUT /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplatedocumentpagerecognitions")
-public class EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Response {
+public class EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Response extends CommonResponse {
   
   @SerializedName("objDebugPayload")
   private CommonResponseObjDebugPayload objDebugPayload = null;
@@ -89,7 +90,7 @@ public class EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1R
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Response {\n");
-    
+    sb.append("  " + super.toString()).append("\n");
     sb.append("  objDebugPayload: ").append(objDebugPayload).append("\n");
     sb.append("  objDebug: ").append(objDebug).append("\n");
     sb.append("  mPayload: ").append(mPayload).append("\n");

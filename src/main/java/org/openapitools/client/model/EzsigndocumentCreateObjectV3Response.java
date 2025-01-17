@@ -12,6 +12,7 @@
 
 package org.openapitools.client.model;
 
+import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseObjDebug;
 import org.openapitools.client.model.CommonResponseObjDebugPayload;
 import org.openapitools.client.model.EzsigndocumentCreateObjectV3ResponseMPayload;
@@ -22,7 +23,7 @@ import com.google.gson.annotations.SerializedName;
  * Response for POST /3/object/ezsigndocument
  **/
 @ApiModel(description = "Response for POST /3/object/ezsigndocument")
-public class EzsigndocumentCreateObjectV3Response {
+public class EzsigndocumentCreateObjectV3Response extends CommonResponse {
   
   @SerializedName("objDebugPayload")
   private CommonResponseObjDebugPayload objDebugPayload = null;
@@ -89,7 +90,7 @@ public class EzsigndocumentCreateObjectV3Response {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsigndocumentCreateObjectV3Response {\n");
-    
+    sb.append("  " + super.toString()).append("\n");
     sb.append("  objDebugPayload: ").append(objDebugPayload).append("\n");
     sb.append("  objDebug: ").append(objDebug).append("\n");
     sb.append("  mPayload: ").append(mPayload).append("\n");

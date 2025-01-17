@@ -12,6 +12,7 @@
 
 package org.openapitools.client.model;
 
+import org.openapitools.client.model.EzsignsignergroupmembershipRequest;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -19,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
  * A Ezsignsignergroupmembership Object and children
  **/
 @ApiModel(description = "A Ezsignsignergroupmembership Object and children")
-public class EzsignsignergroupmembershipRequestCompound {
+public class EzsignsignergroupmembershipRequestCompound extends EzsignsignergroupmembershipRequest {
   
   @SerializedName("pkiEzsignsignergroupmembershipID")
   private Integer pkiEzsignsignergroupmembershipID = null;
@@ -127,7 +128,7 @@ public class EzsignsignergroupmembershipRequestCompound {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignsignergroupmembershipRequestCompound {\n");
-    
+    sb.append("  " + super.toString()).append("\n");
     sb.append("  pkiEzsignsignergroupmembershipID: ").append(pkiEzsignsignergroupmembershipID).append("\n");
     sb.append("  fkiEzsignsignergroupID: ").append(fkiEzsignsignergroupID).append("\n");
     sb.append("  fkiEzsignsignerID: ").append(fkiEzsignsignerID).append("\n");

@@ -12,6 +12,7 @@
 
 package org.openapitools.client.model;
 
+import org.openapitools.client.model.AttachmentlogResponse;
 import org.openapitools.client.model.FieldEAttachmentlogType;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
@@ -20,7 +21,7 @@ import com.google.gson.annotations.SerializedName;
  * A Attachmentlog Object
  **/
 @ApiModel(description = "A Attachmentlog Object")
-public class AttachmentlogResponseCompound {
+public class AttachmentlogResponseCompound extends AttachmentlogResponse {
   
   @SerializedName("fkiAttachmentID")
   private Integer fkiAttachmentID = null;
@@ -121,7 +122,7 @@ public class AttachmentlogResponseCompound {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class AttachmentlogResponseCompound {\n");
-    
+    sb.append("  " + super.toString()).append("\n");
     sb.append("  fkiAttachmentID: ").append(fkiAttachmentID).append("\n");
     sb.append("  fkiUserID: ").append(fkiUserID).append("\n");
     sb.append("  dtAttachmentlogDatetime: ").append(dtAttachmentlogDatetime).append("\n");

@@ -14,6 +14,7 @@ package org.openapitools.client.model;
 
 import java.util.*;
 import org.openapitools.client.model.ModuleResponseCompound;
+import org.openapitools.client.model.ModulegroupResponse;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -21,7 +22,7 @@ import com.google.gson.annotations.SerializedName;
  * A Modulegroup Object
  **/
 @ApiModel(description = "A Modulegroup Object")
-public class ModulegroupResponseCompound {
+public class ModulegroupResponseCompound extends ModulegroupResponse {
   
   @SerializedName("pkiModulegroupID")
   private Integer pkiModulegroupID = null;
@@ -92,7 +93,7 @@ public class ModulegroupResponseCompound {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class ModulegroupResponseCompound {\n");
-    
+    sb.append("  " + super.toString()).append("\n");
     sb.append("  pkiModulegroupID: ").append(pkiModulegroupID).append("\n");
     sb.append("  sModulegroupNameX: ").append(sModulegroupNameX).append("\n");
     sb.append("  aObjModule: ").append(aObjModule).append("\n");

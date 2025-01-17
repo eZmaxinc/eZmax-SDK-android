@@ -12,6 +12,7 @@
 
 package org.openapitools.client.model;
 
+import org.openapitools.client.model.EzsignfoldersignerassociationResponse;
 import org.openapitools.client.model.EzsignfoldersignerassociationResponseCompoundUser;
 import org.openapitools.client.model.EzsignsignerResponseCompound;
 import org.openapitools.client.model.EzsignsignergroupResponseCompound;
@@ -22,7 +23,7 @@ import com.google.gson.annotations.SerializedName;
  * An Ezsignfoldersignerassociation Object
  **/
 @ApiModel(description = "An Ezsignfoldersignerassociation Object")
-public class EzsignfoldersignerassociationResponseCompound {
+public class EzsignfoldersignerassociationResponseCompound extends EzsignfoldersignerassociationResponse {
   
   @SerializedName("pkiEzsignfoldersignerassociationID")
   private Integer pkiEzsignfoldersignerassociationID = null;
@@ -181,7 +182,7 @@ public class EzsignfoldersignerassociationResponseCompound {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignfoldersignerassociationResponseCompound {\n");
-    
+    sb.append("  " + super.toString()).append("\n");
     sb.append("  pkiEzsignfoldersignerassociationID: ").append(pkiEzsignfoldersignerassociationID).append("\n");
     sb.append("  fkiEzsignfolderID: ").append(fkiEzsignfolderID).append("\n");
     sb.append("  bEzsignfoldersignerassociationDelayedsend: ").append(bEzsignfoldersignerassociationDelayedsend).append("\n");

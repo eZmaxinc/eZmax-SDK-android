@@ -12,6 +12,7 @@
 
 package org.openapitools.client.model;
 
+import org.openapitools.client.model.EzsigntemplatedocumentRequest;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -19,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
  * A Ezsigntemplatedocument Object and children
  **/
 @ApiModel(description = "A Ezsigntemplatedocument Object and children")
-public class EzsigntemplatedocumentRequestCompound {
+public class EzsigntemplatedocumentRequestCompound extends EzsigntemplatedocumentRequest {
   
   @SerializedName("pkiEzsigntemplatedocumentID")
   private Integer pkiEzsigntemplatedocumentID = null;
@@ -237,7 +238,7 @@ public class EzsigntemplatedocumentRequestCompound {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsigntemplatedocumentRequestCompound {\n");
-    
+    sb.append("  " + super.toString()).append("\n");
     sb.append("  pkiEzsigntemplatedocumentID: ").append(pkiEzsigntemplatedocumentID).append("\n");
     sb.append("  fkiEzsigntemplateID: ").append(fkiEzsigntemplateID).append("\n");
     sb.append("  fkiEzsigndocumentID: ").append(fkiEzsigndocumentID).append("\n");

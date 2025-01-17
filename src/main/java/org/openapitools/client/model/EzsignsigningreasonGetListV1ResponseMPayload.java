@@ -13,6 +13,7 @@
 package org.openapitools.client.model;
 
 import java.util.*;
+import org.openapitools.client.model.CommonGetListV1ResponseMPayload;
 import org.openapitools.client.model.EzsignsigningreasonListElement;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
@@ -21,7 +22,7 @@ import com.google.gson.annotations.SerializedName;
  * Payload for GET /1/object/ezsignsigningreason/getList
  **/
 @ApiModel(description = "Payload for GET /1/object/ezsignsigningreason/getList")
-public class EzsignsigningreasonGetListV1ResponseMPayload {
+public class EzsignsigningreasonGetListV1ResponseMPayload extends CommonGetListV1ResponseMPayload {
   
   @SerializedName("iRowReturned")
   private Integer iRowReturned = null;
@@ -90,7 +91,7 @@ public class EzsignsigningreasonGetListV1ResponseMPayload {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignsigningreasonGetListV1ResponseMPayload {\n");
-    
+    sb.append("  " + super.toString()).append("\n");
     sb.append("  iRowReturned: ").append(iRowReturned).append("\n");
     sb.append("  iRowFiltered: ").append(iRowFiltered).append("\n");
     sb.append("  aObjEzsignsigningreason: ").append(aObjEzsignsigningreason).append("\n");

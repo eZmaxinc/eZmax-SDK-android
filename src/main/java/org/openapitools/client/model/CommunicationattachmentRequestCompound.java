@@ -12,6 +12,7 @@
 
 package org.openapitools.client.model;
 
+import org.openapitools.client.model.CommunicationattachmentRequest;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -19,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
  * A Communicationattachment Object and children
  **/
 @ApiModel(description = "A Communicationattachment Object and children")
-public class CommunicationattachmentRequestCompound {
+public class CommunicationattachmentRequestCompound extends CommunicationattachmentRequest {
   
   @SerializedName("pkiCommunicationattachmentID")
   private Integer pkiCommunicationattachmentID = null;
@@ -107,7 +108,7 @@ public class CommunicationattachmentRequestCompound {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class CommunicationattachmentRequestCompound {\n");
-    
+    sb.append("  " + super.toString()).append("\n");
     sb.append("  pkiCommunicationattachmentID: ").append(pkiCommunicationattachmentID).append("\n");
     sb.append("  fkiAttachmentID: ").append(fkiAttachmentID).append("\n");
     sb.append("  fkiInvoiceID: ").append(fkiInvoiceID).append("\n");

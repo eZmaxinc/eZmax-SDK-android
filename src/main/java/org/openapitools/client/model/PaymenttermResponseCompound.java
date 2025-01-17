@@ -15,6 +15,7 @@ package org.openapitools.client.model;
 import org.openapitools.client.model.CommonAudit;
 import org.openapitools.client.model.FieldEPaymenttermType;
 import org.openapitools.client.model.MultilingualPaymenttermDescription;
+import org.openapitools.client.model.PaymenttermResponse;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -22,7 +23,7 @@ import com.google.gson.annotations.SerializedName;
  * A Paymentterm Object
  **/
 @ApiModel(description = "A Paymentterm Object")
-public class PaymenttermResponseCompound {
+public class PaymenttermResponseCompound extends PaymenttermResponse {
   
   @SerializedName("pkiPaymenttermID")
   private Integer pkiPaymenttermID = null;
@@ -151,7 +152,7 @@ public class PaymenttermResponseCompound {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class PaymenttermResponseCompound {\n");
-    
+    sb.append("  " + super.toString()).append("\n");
     sb.append("  pkiPaymenttermID: ").append(pkiPaymenttermID).append("\n");
     sb.append("  sPaymenttermCode: ").append(sPaymenttermCode).append("\n");
     sb.append("  ePaymenttermType: ").append(ePaymenttermType).append("\n");

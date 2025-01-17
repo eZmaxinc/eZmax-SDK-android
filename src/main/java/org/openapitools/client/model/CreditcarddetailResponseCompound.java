@@ -12,6 +12,7 @@
 
 package org.openapitools.client.model;
 
+import org.openapitools.client.model.CreditcarddetailResponse;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -19,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
  * A Creditcarddetail Object
  **/
 @ApiModel(description = "A Creditcarddetail Object")
-public class CreditcarddetailResponseCompound {
+public class CreditcarddetailResponseCompound extends CreditcarddetailResponse {
   
   @SerializedName("pkiCreditcarddetailID")
   private Integer pkiCreditcarddetailID = null;
@@ -174,7 +175,7 @@ public class CreditcarddetailResponseCompound {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class CreditcarddetailResponseCompound {\n");
-    
+    sb.append("  " + super.toString()).append("\n");
     sb.append("  pkiCreditcarddetailID: ").append(pkiCreditcarddetailID).append("\n");
     sb.append("  fkiCreditcardtypeID: ").append(fkiCreditcardtypeID).append("\n");
     sb.append("  iCreditcarddetailLastdigits: ").append(iCreditcarddetailLastdigits).append("\n");

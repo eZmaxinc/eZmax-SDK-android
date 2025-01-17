@@ -12,6 +12,7 @@
 
 package org.openapitools.client.model;
 
+import org.openapitools.client.model.BillingentityinternalproductResponse;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -19,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
  * A Billingentityinternalproduct Object
  **/
 @ApiModel(description = "A Billingentityinternalproduct Object")
-public class BillingentityinternalproductResponseCompound {
+public class BillingentityinternalproductResponseCompound extends BillingentityinternalproductResponse {
   
   @SerializedName("pkiBillingentityinternalproductID")
   private Integer pkiBillingentityinternalproductID = null;
@@ -154,7 +155,7 @@ public class BillingentityinternalproductResponseCompound {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingentityinternalproductResponseCompound {\n");
-    
+    sb.append("  " + super.toString()).append("\n");
     sb.append("  pkiBillingentityinternalproductID: ").append(pkiBillingentityinternalproductID).append("\n");
     sb.append("  fkiBillingentityinternalID: ").append(fkiBillingentityinternalID).append("\n");
     sb.append("  sBillingentityinternalDescriptionX: ").append(sBillingentityinternalDescriptionX).append("\n");

@@ -13,6 +13,7 @@
 package org.openapitools.client.model;
 
 import java.util.*;
+import org.openapitools.client.model.CommunicationRequest;
 import org.openapitools.client.model.CommunicationexternalrecipientRequestCompound;
 import org.openapitools.client.model.CommunicationrecipientRequestCompound;
 import org.openapitools.client.model.CommunicationreferenceRequest;
@@ -27,7 +28,7 @@ import com.google.gson.annotations.SerializedName;
  * Request for POST /1/object/communication
  **/
 @ApiModel(description = "Request for POST /1/object/communication")
-public class CommunicationRequestCompound {
+public class CommunicationRequestCompound extends CommunicationRequest {
   
   @SerializedName("pkiCommunicationID")
   private Integer pkiCommunicationID = null;
@@ -261,7 +262,7 @@ public class CommunicationRequestCompound {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class CommunicationRequestCompound {\n");
-    
+    sb.append("  " + super.toString()).append("\n");
     sb.append("  pkiCommunicationID: ").append(pkiCommunicationID).append("\n");
     sb.append("  eCommunicationImportance: ").append(eCommunicationImportance).append("\n");
     sb.append("  eCommunicationType: ").append(eCommunicationType).append("\n");

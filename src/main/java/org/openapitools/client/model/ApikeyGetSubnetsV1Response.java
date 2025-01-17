@@ -13,6 +13,7 @@
 package org.openapitools.client.model;
 
 import org.openapitools.client.model.ApikeyGetSubnetsV1ResponseMPayload;
+import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseObjDebug;
 import org.openapitools.client.model.CommonResponseObjDebugPayload;
 import io.swagger.annotations.*;
@@ -22,7 +23,7 @@ import com.google.gson.annotations.SerializedName;
  * Response for GET /1/object/apikey/{pkiApikeyID}/getSubnets
  **/
 @ApiModel(description = "Response for GET /1/object/apikey/{pkiApikeyID}/getSubnets")
-public class ApikeyGetSubnetsV1Response {
+public class ApikeyGetSubnetsV1Response extends CommonResponse {
   
   @SerializedName("objDebugPayload")
   private CommonResponseObjDebugPayload objDebugPayload = null;
@@ -89,7 +90,7 @@ public class ApikeyGetSubnetsV1Response {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class ApikeyGetSubnetsV1Response {\n");
-    
+    sb.append("  " + super.toString()).append("\n");
     sb.append("  objDebugPayload: ").append(objDebugPayload).append("\n");
     sb.append("  objDebug: ").append(objDebug).append("\n");
     sb.append("  mPayload: ").append(mPayload).append("\n");

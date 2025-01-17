@@ -13,6 +13,7 @@
 package org.openapitools.client.model;
 
 import org.openapitools.client.model.CommonAudit;
+import org.openapitools.client.model.DiscussionmessageResponse;
 import org.openapitools.client.model.FieldEDiscussionmessageStatus;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
@@ -21,7 +22,7 @@ import com.google.gson.annotations.SerializedName;
  * A Discussionmessage Object and children
  **/
 @ApiModel(description = "A Discussionmessage Object and children")
-public class DiscussionmessageResponseCompound {
+public class DiscussionmessageResponseCompound extends DiscussionmessageResponse {
   
   @SerializedName("pkiDiscussionmessageID")
   private Integer pkiDiscussionmessageID = null;
@@ -187,7 +188,7 @@ public class DiscussionmessageResponseCompound {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class DiscussionmessageResponseCompound {\n");
-    
+    sb.append("  " + super.toString()).append("\n");
     sb.append("  pkiDiscussionmessageID: ").append(pkiDiscussionmessageID).append("\n");
     sb.append("  fkiDiscussionID: ").append(fkiDiscussionID).append("\n");
     sb.append("  fkiDiscussionmembershipID: ").append(fkiDiscussionmembershipID).append("\n");

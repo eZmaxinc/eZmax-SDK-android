@@ -14,6 +14,7 @@ package org.openapitools.client.model;
 
 import java.util.*;
 import org.openapitools.client.model.AttemptResponse;
+import org.openapitools.client.model.CommonWebhook;
 import org.openapitools.client.model.CustomWebhookResponse;
 import org.openapitools.client.model.UserstagedResponse;
 import io.swagger.annotations.*;
@@ -23,7 +24,7 @@ import com.google.gson.annotations.SerializedName;
  * This is the base Webhook object
  **/
 @ApiModel(description = "This is the base Webhook object")
-public class WebhookUserstagedUserstagedCreated {
+public class WebhookUserstagedUserstagedCreated extends CommonWebhook {
   
   @SerializedName("objWebhook")
   private CustomWebhookResponse objWebhook = null;
@@ -92,7 +93,7 @@ public class WebhookUserstagedUserstagedCreated {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class WebhookUserstagedUserstagedCreated {\n");
-    
+    sb.append("  " + super.toString()).append("\n");
     sb.append("  objWebhook: ").append(objWebhook).append("\n");
     sb.append("  aObjAttempt: ").append(aObjAttempt).append("\n");
     sb.append("  objUserstaged: ").append(objUserstaged).append("\n");

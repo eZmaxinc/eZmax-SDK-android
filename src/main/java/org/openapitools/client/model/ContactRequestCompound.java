@@ -12,6 +12,7 @@
 
 package org.openapitools.client.model;
 
+import org.openapitools.client.model.ContactRequest;
 import org.openapitools.client.model.ContactinformationsRequestCompound;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
@@ -20,7 +21,7 @@ import com.google.gson.annotations.SerializedName;
  * A Contact Object and children to create a complete structure
  **/
 @ApiModel(description = "A Contact Object and children to create a complete structure")
-public class ContactRequestCompound {
+public class ContactRequestCompound extends ContactRequest {
   
   @SerializedName("fkiContacttitleID")
   private Integer fkiContacttitleID = null;
@@ -152,7 +153,7 @@ public class ContactRequestCompound {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class ContactRequestCompound {\n");
-    
+    sb.append("  " + super.toString()).append("\n");
     sb.append("  fkiContacttitleID: ").append(fkiContacttitleID).append("\n");
     sb.append("  fkiLanguageID: ").append(fkiLanguageID).append("\n");
     sb.append("  sContactFirstname: ").append(sContactFirstname).append("\n");

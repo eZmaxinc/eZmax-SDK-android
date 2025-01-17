@@ -12,6 +12,7 @@
 
 package org.openapitools.client.model;
 
+import org.openapitools.client.model.CustomerResponse;
 import org.openapitools.client.model.FieldECustomerMarketingcorrespondence;
 import org.openapitools.client.model.FieldECustomerType;
 import io.swagger.annotations.*;
@@ -21,7 +22,7 @@ import com.google.gson.annotations.SerializedName;
  * A Customer Object
  **/
 @ApiModel(description = "A Customer Object")
-public class CustomerResponseCompound {
+public class CustomerResponseCompound extends CustomerResponse {
   
   @SerializedName("pkiCustomerID")
   private Integer pkiCustomerID = null;
@@ -854,7 +855,7 @@ public class CustomerResponseCompound {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class CustomerResponseCompound {\n");
-    
+    sb.append("  " + super.toString()).append("\n");
     sb.append("  pkiCustomerID: ").append(pkiCustomerID).append("\n");
     sb.append("  fkiCompanyID: ").append(fkiCompanyID).append("\n");
     sb.append("  fkiCustomergroupID: ").append(fkiCustomergroupID).append("\n");

@@ -13,6 +13,7 @@
 package org.openapitools.client.model;
 
 import org.openapitools.client.model.MultilingualSupplyDescription;
+import org.openapitools.client.model.SupplyResponse;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -20,7 +21,7 @@ import com.google.gson.annotations.SerializedName;
  * A Supply Object
  **/
 @ApiModel(description = "A Supply Object")
-public class SupplyResponseCompound {
+public class SupplyResponseCompound extends SupplyResponse {
   
   @SerializedName("pkiSupplyID")
   private Integer pkiSupplyID = null;
@@ -230,7 +231,7 @@ public class SupplyResponseCompound {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class SupplyResponseCompound {\n");
-    
+    sb.append("  " + super.toString()).append("\n");
     sb.append("  pkiSupplyID: ").append(pkiSupplyID).append("\n");
     sb.append("  fkiGlaccountID: ").append(fkiGlaccountID).append("\n");
     sb.append("  fkiGlaccountcontainerID: ").append(fkiGlaccountcontainerID).append("\n");
