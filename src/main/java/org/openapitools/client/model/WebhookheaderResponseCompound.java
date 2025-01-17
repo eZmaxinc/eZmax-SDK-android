@@ -12,7 +12,6 @@
 
 package org.openapitools.client.model;
 
-import org.openapitools.client.model.WebhookheaderResponse;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -20,7 +19,7 @@ import com.google.gson.annotations.SerializedName;
  * A Webhookheader Object
  **/
 @ApiModel(description = "A Webhookheader Object")
-public class WebhookheaderResponseCompound extends WebhookheaderResponse {
+public class WebhookheaderResponseCompound {
   
   @SerializedName("pkiWebhookheaderID")
   private Integer pkiWebhookheaderID = null;
@@ -105,7 +104,7 @@ public class WebhookheaderResponseCompound extends WebhookheaderResponse {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class WebhookheaderResponseCompound {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  pkiWebhookheaderID: ").append(pkiWebhookheaderID).append("\n");
     sb.append("  fkiWebhookID: ").append(fkiWebhookID).append("\n");
     sb.append("  sWebhookheaderName: ").append(sWebhookheaderName).append("\n");

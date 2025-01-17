@@ -13,7 +13,6 @@
 package org.openapitools.client.model;
 
 import org.openapitools.client.model.BrandingGetObjectV3ResponseMPayload;
-import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseObjDebug;
 import org.openapitools.client.model.CommonResponseObjDebugPayload;
 import io.swagger.annotations.*;
@@ -23,7 +22,7 @@ import com.google.gson.annotations.SerializedName;
  * Response for GET /3/object/branding/{pkiBrandingID}
  **/
 @ApiModel(description = "Response for GET /3/object/branding/{pkiBrandingID}")
-public class BrandingGetObjectV3Response extends CommonResponse {
+public class BrandingGetObjectV3Response {
   
   @SerializedName("objDebugPayload")
   private CommonResponseObjDebugPayload objDebugPayload = null;
@@ -90,7 +89,7 @@ public class BrandingGetObjectV3Response extends CommonResponse {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class BrandingGetObjectV3Response {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  objDebugPayload: ").append(objDebugPayload).append("\n");
     sb.append("  objDebug: ").append(objDebug).append("\n");
     sb.append("  mPayload: ").append(mPayload).append("\n");

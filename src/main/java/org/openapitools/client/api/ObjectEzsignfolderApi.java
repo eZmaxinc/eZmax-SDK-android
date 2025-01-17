@@ -23,8 +23,8 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
-import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseError;
+import org.openapitools.client.model.EzsignfolderArchiveV1Response;
 import org.openapitools.client.model.EzsignfolderBatchDownloadV1Request;
 import org.openapitools.client.model.EzsignfolderCreateObjectV1Request;
 import org.openapitools.client.model.EzsignfolderCreateObjectV1Response;
@@ -32,8 +32,13 @@ import org.openapitools.client.model.EzsignfolderCreateObjectV2Request;
 import org.openapitools.client.model.EzsignfolderCreateObjectV2Response;
 import org.openapitools.client.model.EzsignfolderCreateObjectV3Request;
 import org.openapitools.client.model.EzsignfolderCreateObjectV3Response;
+import org.openapitools.client.model.EzsignfolderDeleteObjectV1Response;
 import org.openapitools.client.model.EzsignfolderDisposeEzsignfoldersV1Request;
+import org.openapitools.client.model.EzsignfolderDisposeEzsignfoldersV1Response;
+import org.openapitools.client.model.EzsignfolderDisposeV1Response;
 import org.openapitools.client.model.EzsignfolderEditObjectV3Request;
+import org.openapitools.client.model.EzsignfolderEditObjectV3Response;
+import org.openapitools.client.model.EzsignfolderEndPrematurelyV1Response;
 import org.openapitools.client.model.EzsignfolderGetActionableElementsV1Response;
 import org.openapitools.client.model.EzsignfolderGetAttachmentCountV1Response;
 import org.openapitools.client.model.EzsignfolderGetAttachmentsV1Response;
@@ -54,9 +59,14 @@ import org.openapitools.client.model.EzsignfolderImportEzsignfoldersignerassocia
 import org.openapitools.client.model.EzsignfolderImportEzsigntemplatepackageV1Request;
 import org.openapitools.client.model.EzsignfolderImportEzsigntemplatepackageV1Response;
 import org.openapitools.client.model.EzsignfolderReorderV1Request;
+import org.openapitools.client.model.EzsignfolderReorderV1Response;
 import org.openapitools.client.model.EzsignfolderReorderV2Request;
+import org.openapitools.client.model.EzsignfolderReorderV2Response;
 import org.openapitools.client.model.EzsignfolderSendV1Request;
+import org.openapitools.client.model.EzsignfolderSendV1Response;
 import org.openapitools.client.model.EzsignfolderSendV3Request;
+import org.openapitools.client.model.EzsignfolderSendV3Response;
+import org.openapitools.client.model.EzsignfolderUnsendV1Response;
 import java.io.File;
 import org.openapitools.client.model.HeaderAcceptLanguage;
 import java.util.*;
@@ -96,9 +106,9 @@ public class ObjectEzsignfolderApi {
   * 
    * @param pkiEzsignfolderID 
    * @param body 
-   * @return CommonResponse
+   * @return EzsignfolderArchiveV1Response
   */
-  public CommonResponse ezsignfolderArchiveV1 (Integer pkiEzsignfolderID, Object body) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public EzsignfolderArchiveV1Response ezsignfolderArchiveV1 (Integer pkiEzsignfolderID, Object body) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = body;
     // verify the required parameter 'pkiEzsignfolderID' is set
     if (pkiEzsignfolderID == null) {
@@ -139,7 +149,7 @@ public class ObjectEzsignfolderApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
+         return (EzsignfolderArchiveV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsignfolderArchiveV1Response.class);
       } else {
          return null;
       }
@@ -165,7 +175,7 @@ public class ObjectEzsignfolderApi {
    * 
    * @param pkiEzsignfolderID    * @param body 
   */
-  public void ezsignfolderArchiveV1 (Integer pkiEzsignfolderID, Object body, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void ezsignfolderArchiveV1 (Integer pkiEzsignfolderID, Object body, final Response.Listener<EzsignfolderArchiveV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = body;
 
     // verify the required parameter 'pkiEzsignfolderID' is set
@@ -215,7 +225,7 @@ public class ObjectEzsignfolderApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
+              responseListener.onResponse((EzsignfolderArchiveV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsignfolderArchiveV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -757,9 +767,9 @@ public class ObjectEzsignfolderApi {
   * Delete an existing Ezsignfolder
   * 
    * @param pkiEzsignfolderID 
-   * @return CommonResponse
+   * @return EzsignfolderDeleteObjectV1Response
   */
-  public CommonResponse ezsignfolderDeleteObjectV1 (Integer pkiEzsignfolderID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public EzsignfolderDeleteObjectV1Response ezsignfolderDeleteObjectV1 (Integer pkiEzsignfolderID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'pkiEzsignfolderID' is set
     if (pkiEzsignfolderID == null) {
@@ -794,7 +804,7 @@ public class ObjectEzsignfolderApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "DELETE", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
+         return (EzsignfolderDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsignfolderDeleteObjectV1Response.class);
       } else {
          return null;
       }
@@ -820,7 +830,7 @@ public class ObjectEzsignfolderApi {
    * 
    * @param pkiEzsignfolderID 
   */
-  public void ezsignfolderDeleteObjectV1 (Integer pkiEzsignfolderID, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void ezsignfolderDeleteObjectV1 (Integer pkiEzsignfolderID, final Response.Listener<EzsignfolderDeleteObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'pkiEzsignfolderID' is set
@@ -865,7 +875,7 @@ public class ObjectEzsignfolderApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
+              responseListener.onResponse((EzsignfolderDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsignfolderDeleteObjectV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -884,9 +894,9 @@ public class ObjectEzsignfolderApi {
   * Dispose Ezsignfolders
   * 
    * @param ezsignfolderDisposeEzsignfoldersV1Request 
-   * @return CommonResponse
+   * @return EzsignfolderDisposeEzsignfoldersV1Response
   */
-  public CommonResponse ezsignfolderDisposeEzsignfoldersV1 (EzsignfolderDisposeEzsignfoldersV1Request ezsignfolderDisposeEzsignfoldersV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public EzsignfolderDisposeEzsignfoldersV1Response ezsignfolderDisposeEzsignfoldersV1 (EzsignfolderDisposeEzsignfoldersV1Request ezsignfolderDisposeEzsignfoldersV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = ezsignfolderDisposeEzsignfoldersV1Request;
     // verify the required parameter 'ezsignfolderDisposeEzsignfoldersV1Request' is set
     if (ezsignfolderDisposeEzsignfoldersV1Request == null) {
@@ -922,7 +932,7 @@ public class ObjectEzsignfolderApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
+         return (EzsignfolderDisposeEzsignfoldersV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsignfolderDisposeEzsignfoldersV1Response.class);
       } else {
          return null;
       }
@@ -948,7 +958,7 @@ public class ObjectEzsignfolderApi {
    * 
    * @param ezsignfolderDisposeEzsignfoldersV1Request 
   */
-  public void ezsignfolderDisposeEzsignfoldersV1 (EzsignfolderDisposeEzsignfoldersV1Request ezsignfolderDisposeEzsignfoldersV1Request, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void ezsignfolderDisposeEzsignfoldersV1 (EzsignfolderDisposeEzsignfoldersV1Request ezsignfolderDisposeEzsignfoldersV1Request, final Response.Listener<EzsignfolderDisposeEzsignfoldersV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = ezsignfolderDisposeEzsignfoldersV1Request;
 
     // verify the required parameter 'ezsignfolderDisposeEzsignfoldersV1Request' is set
@@ -993,7 +1003,7 @@ public class ObjectEzsignfolderApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
+              responseListener.onResponse((EzsignfolderDisposeEzsignfoldersV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsignfolderDisposeEzsignfoldersV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -1013,9 +1023,9 @@ public class ObjectEzsignfolderApi {
   * 
    * @param pkiEzsignfolderID 
    * @param body 
-   * @return CommonResponse
+   * @return EzsignfolderDisposeV1Response
   */
-  public CommonResponse ezsignfolderDisposeV1 (Integer pkiEzsignfolderID, Object body) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public EzsignfolderDisposeV1Response ezsignfolderDisposeV1 (Integer pkiEzsignfolderID, Object body) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = body;
     // verify the required parameter 'pkiEzsignfolderID' is set
     if (pkiEzsignfolderID == null) {
@@ -1056,7 +1066,7 @@ public class ObjectEzsignfolderApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
+         return (EzsignfolderDisposeV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsignfolderDisposeV1Response.class);
       } else {
          return null;
       }
@@ -1082,7 +1092,7 @@ public class ObjectEzsignfolderApi {
    * 
    * @param pkiEzsignfolderID    * @param body 
   */
-  public void ezsignfolderDisposeV1 (Integer pkiEzsignfolderID, Object body, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void ezsignfolderDisposeV1 (Integer pkiEzsignfolderID, Object body, final Response.Listener<EzsignfolderDisposeV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = body;
 
     // verify the required parameter 'pkiEzsignfolderID' is set
@@ -1132,7 +1142,7 @@ public class ObjectEzsignfolderApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
+              responseListener.onResponse((EzsignfolderDisposeV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsignfolderDisposeV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -1152,9 +1162,9 @@ public class ObjectEzsignfolderApi {
   * 
    * @param pkiEzsignfolderID 
    * @param ezsignfolderEditObjectV3Request 
-   * @return CommonResponse
+   * @return EzsignfolderEditObjectV3Response
   */
-  public CommonResponse ezsignfolderEditObjectV3 (Integer pkiEzsignfolderID, EzsignfolderEditObjectV3Request ezsignfolderEditObjectV3Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public EzsignfolderEditObjectV3Response ezsignfolderEditObjectV3 (Integer pkiEzsignfolderID, EzsignfolderEditObjectV3Request ezsignfolderEditObjectV3Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = ezsignfolderEditObjectV3Request;
     // verify the required parameter 'pkiEzsignfolderID' is set
     if (pkiEzsignfolderID == null) {
@@ -1195,7 +1205,7 @@ public class ObjectEzsignfolderApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
+         return (EzsignfolderEditObjectV3Response) ApiInvoker.deserialize(localVarResponse, "", EzsignfolderEditObjectV3Response.class);
       } else {
          return null;
       }
@@ -1221,7 +1231,7 @@ public class ObjectEzsignfolderApi {
    * 
    * @param pkiEzsignfolderID    * @param ezsignfolderEditObjectV3Request 
   */
-  public void ezsignfolderEditObjectV3 (Integer pkiEzsignfolderID, EzsignfolderEditObjectV3Request ezsignfolderEditObjectV3Request, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void ezsignfolderEditObjectV3 (Integer pkiEzsignfolderID, EzsignfolderEditObjectV3Request ezsignfolderEditObjectV3Request, final Response.Listener<EzsignfolderEditObjectV3Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = ezsignfolderEditObjectV3Request;
 
     // verify the required parameter 'pkiEzsignfolderID' is set
@@ -1271,7 +1281,7 @@ public class ObjectEzsignfolderApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
+              responseListener.onResponse((EzsignfolderEditObjectV3Response) ApiInvoker.deserialize(localVarResponse,  "", EzsignfolderEditObjectV3Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -1291,9 +1301,9 @@ public class ObjectEzsignfolderApi {
   * End prematurely all Ezsigndocument of Ezsignfolder when some signatures are still required
    * @param pkiEzsignfolderID 
    * @param body 
-   * @return CommonResponse
+   * @return EzsignfolderEndPrematurelyV1Response
   */
-  public CommonResponse ezsignfolderEndPrematurelyV1 (Integer pkiEzsignfolderID, Object body) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public EzsignfolderEndPrematurelyV1Response ezsignfolderEndPrematurelyV1 (Integer pkiEzsignfolderID, Object body) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = body;
     // verify the required parameter 'pkiEzsignfolderID' is set
     if (pkiEzsignfolderID == null) {
@@ -1334,7 +1344,7 @@ public class ObjectEzsignfolderApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
+         return (EzsignfolderEndPrematurelyV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsignfolderEndPrematurelyV1Response.class);
       } else {
          return null;
       }
@@ -1360,7 +1370,7 @@ public class ObjectEzsignfolderApi {
    * End prematurely all Ezsigndocument of Ezsignfolder when some signatures are still required
    * @param pkiEzsignfolderID    * @param body 
   */
-  public void ezsignfolderEndPrematurelyV1 (Integer pkiEzsignfolderID, Object body, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void ezsignfolderEndPrematurelyV1 (Integer pkiEzsignfolderID, Object body, final Response.Listener<EzsignfolderEndPrematurelyV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = body;
 
     // verify the required parameter 'pkiEzsignfolderID' is set
@@ -1410,7 +1420,7 @@ public class ObjectEzsignfolderApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
+              responseListener.onResponse((EzsignfolderEndPrematurelyV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsignfolderEndPrematurelyV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -3617,9 +3627,9 @@ public class ObjectEzsignfolderApi {
   * 
    * @param pkiEzsignfolderID 
    * @param ezsignfolderReorderV1Request 
-   * @return CommonResponse
+   * @return EzsignfolderReorderV1Response
   */
-  public CommonResponse ezsignfolderReorderV1 (Integer pkiEzsignfolderID, EzsignfolderReorderV1Request ezsignfolderReorderV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public EzsignfolderReorderV1Response ezsignfolderReorderV1 (Integer pkiEzsignfolderID, EzsignfolderReorderV1Request ezsignfolderReorderV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = ezsignfolderReorderV1Request;
     // verify the required parameter 'pkiEzsignfolderID' is set
     if (pkiEzsignfolderID == null) {
@@ -3660,7 +3670,7 @@ public class ObjectEzsignfolderApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
+         return (EzsignfolderReorderV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsignfolderReorderV1Response.class);
       } else {
          return null;
       }
@@ -3686,7 +3696,7 @@ public class ObjectEzsignfolderApi {
    * 
    * @param pkiEzsignfolderID    * @param ezsignfolderReorderV1Request 
   */
-  public void ezsignfolderReorderV1 (Integer pkiEzsignfolderID, EzsignfolderReorderV1Request ezsignfolderReorderV1Request, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void ezsignfolderReorderV1 (Integer pkiEzsignfolderID, EzsignfolderReorderV1Request ezsignfolderReorderV1Request, final Response.Listener<EzsignfolderReorderV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = ezsignfolderReorderV1Request;
 
     // verify the required parameter 'pkiEzsignfolderID' is set
@@ -3736,7 +3746,7 @@ public class ObjectEzsignfolderApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
+              responseListener.onResponse((EzsignfolderReorderV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsignfolderReorderV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -3756,9 +3766,9 @@ public class ObjectEzsignfolderApi {
   * 
    * @param pkiEzsignfolderID 
    * @param ezsignfolderReorderV2Request 
-   * @return CommonResponse
+   * @return EzsignfolderReorderV2Response
   */
-  public CommonResponse ezsignfolderReorderV2 (Integer pkiEzsignfolderID, EzsignfolderReorderV2Request ezsignfolderReorderV2Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public EzsignfolderReorderV2Response ezsignfolderReorderV2 (Integer pkiEzsignfolderID, EzsignfolderReorderV2Request ezsignfolderReorderV2Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = ezsignfolderReorderV2Request;
     // verify the required parameter 'pkiEzsignfolderID' is set
     if (pkiEzsignfolderID == null) {
@@ -3799,7 +3809,7 @@ public class ObjectEzsignfolderApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
+         return (EzsignfolderReorderV2Response) ApiInvoker.deserialize(localVarResponse, "", EzsignfolderReorderV2Response.class);
       } else {
          return null;
       }
@@ -3825,7 +3835,7 @@ public class ObjectEzsignfolderApi {
    * 
    * @param pkiEzsignfolderID    * @param ezsignfolderReorderV2Request 
   */
-  public void ezsignfolderReorderV2 (Integer pkiEzsignfolderID, EzsignfolderReorderV2Request ezsignfolderReorderV2Request, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void ezsignfolderReorderV2 (Integer pkiEzsignfolderID, EzsignfolderReorderV2Request ezsignfolderReorderV2Request, final Response.Listener<EzsignfolderReorderV2Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = ezsignfolderReorderV2Request;
 
     // verify the required parameter 'pkiEzsignfolderID' is set
@@ -3875,7 +3885,7 @@ public class ObjectEzsignfolderApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
+              responseListener.onResponse((EzsignfolderReorderV2Response) ApiInvoker.deserialize(localVarResponse,  "", EzsignfolderReorderV2Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -3895,9 +3905,9 @@ public class ObjectEzsignfolderApi {
   * 
    * @param pkiEzsignfolderID 
    * @param ezsignfolderSendV1Request 
-   * @return CommonResponse
+   * @return EzsignfolderSendV1Response
   */
-  public CommonResponse ezsignfolderSendV1 (Integer pkiEzsignfolderID, EzsignfolderSendV1Request ezsignfolderSendV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public EzsignfolderSendV1Response ezsignfolderSendV1 (Integer pkiEzsignfolderID, EzsignfolderSendV1Request ezsignfolderSendV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = ezsignfolderSendV1Request;
     // verify the required parameter 'pkiEzsignfolderID' is set
     if (pkiEzsignfolderID == null) {
@@ -3938,7 +3948,7 @@ public class ObjectEzsignfolderApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
+         return (EzsignfolderSendV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsignfolderSendV1Response.class);
       } else {
          return null;
       }
@@ -3964,7 +3974,7 @@ public class ObjectEzsignfolderApi {
    * 
    * @param pkiEzsignfolderID    * @param ezsignfolderSendV1Request 
   */
-  public void ezsignfolderSendV1 (Integer pkiEzsignfolderID, EzsignfolderSendV1Request ezsignfolderSendV1Request, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void ezsignfolderSendV1 (Integer pkiEzsignfolderID, EzsignfolderSendV1Request ezsignfolderSendV1Request, final Response.Listener<EzsignfolderSendV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = ezsignfolderSendV1Request;
 
     // verify the required parameter 'pkiEzsignfolderID' is set
@@ -4014,7 +4024,7 @@ public class ObjectEzsignfolderApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
+              responseListener.onResponse((EzsignfolderSendV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsignfolderSendV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -4034,9 +4044,9 @@ public class ObjectEzsignfolderApi {
   * 
    * @param pkiEzsignfolderID 
    * @param ezsignfolderSendV3Request 
-   * @return CommonResponse
+   * @return EzsignfolderSendV3Response
   */
-  public CommonResponse ezsignfolderSendV3 (Integer pkiEzsignfolderID, EzsignfolderSendV3Request ezsignfolderSendV3Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public EzsignfolderSendV3Response ezsignfolderSendV3 (Integer pkiEzsignfolderID, EzsignfolderSendV3Request ezsignfolderSendV3Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = ezsignfolderSendV3Request;
     // verify the required parameter 'pkiEzsignfolderID' is set
     if (pkiEzsignfolderID == null) {
@@ -4077,7 +4087,7 @@ public class ObjectEzsignfolderApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
+         return (EzsignfolderSendV3Response) ApiInvoker.deserialize(localVarResponse, "", EzsignfolderSendV3Response.class);
       } else {
          return null;
       }
@@ -4103,7 +4113,7 @@ public class ObjectEzsignfolderApi {
    * 
    * @param pkiEzsignfolderID    * @param ezsignfolderSendV3Request 
   */
-  public void ezsignfolderSendV3 (Integer pkiEzsignfolderID, EzsignfolderSendV3Request ezsignfolderSendV3Request, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void ezsignfolderSendV3 (Integer pkiEzsignfolderID, EzsignfolderSendV3Request ezsignfolderSendV3Request, final Response.Listener<EzsignfolderSendV3Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = ezsignfolderSendV3Request;
 
     // verify the required parameter 'pkiEzsignfolderID' is set
@@ -4153,7 +4163,7 @@ public class ObjectEzsignfolderApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
+              responseListener.onResponse((EzsignfolderSendV3Response) ApiInvoker.deserialize(localVarResponse,  "", EzsignfolderSendV3Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -4173,9 +4183,9 @@ public class ObjectEzsignfolderApi {
   * Once an Ezsignfolder has been sent to signatories, it cannot be modified.  Using this endpoint, you can unsend the Ezsignfolder and make it modifiable again.  Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.  ⚠️ Warning: Any signature previously made by signatories on \&quot;Non-completed\&quot; Ezsigndocuments will be lost.
    * @param pkiEzsignfolderID 
    * @param body 
-   * @return CommonResponse
+   * @return EzsignfolderUnsendV1Response
   */
-  public CommonResponse ezsignfolderUnsendV1 (Integer pkiEzsignfolderID, Object body) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public EzsignfolderUnsendV1Response ezsignfolderUnsendV1 (Integer pkiEzsignfolderID, Object body) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = body;
     // verify the required parameter 'pkiEzsignfolderID' is set
     if (pkiEzsignfolderID == null) {
@@ -4216,7 +4226,7 @@ public class ObjectEzsignfolderApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
+         return (EzsignfolderUnsendV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsignfolderUnsendV1Response.class);
       } else {
          return null;
       }
@@ -4242,7 +4252,7 @@ public class ObjectEzsignfolderApi {
    * Once an Ezsignfolder has been sent to signatories, it cannot be modified.  Using this endpoint, you can unsend the Ezsignfolder and make it modifiable again.  Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.  ⚠️ Warning: Any signature previously made by signatories on \&quot;Non-completed\&quot; Ezsigndocuments will be lost.
    * @param pkiEzsignfolderID    * @param body 
   */
-  public void ezsignfolderUnsendV1 (Integer pkiEzsignfolderID, Object body, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void ezsignfolderUnsendV1 (Integer pkiEzsignfolderID, Object body, final Response.Listener<EzsignfolderUnsendV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = body;
 
     // verify the required parameter 'pkiEzsignfolderID' is set
@@ -4292,7 +4302,7 @@ public class ObjectEzsignfolderApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
+              responseListener.onResponse((EzsignfolderUnsendV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsignfolderUnsendV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

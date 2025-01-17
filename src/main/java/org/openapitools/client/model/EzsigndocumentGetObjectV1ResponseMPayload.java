@@ -16,7 +16,6 @@ import java.util.*;
 import org.openapitools.client.model.CommonAudit;
 import org.openapitools.client.model.ComputedEEzsigndocumentSteptype;
 import org.openapitools.client.model.CustomEzsignfoldersignerassociationstatusResponse;
-import org.openapitools.client.model.EzsigndocumentResponseCompound;
 import org.openapitools.client.model.EzsigndocumentdependencyResponse;
 import org.openapitools.client.model.FieldEEzsigndocumentStep;
 import io.swagger.annotations.*;
@@ -26,7 +25,7 @@ import com.google.gson.annotations.SerializedName;
  * Payload for GET /1/object/ezsigndocument/{pkiEzsigndocumentID}
  **/
 @ApiModel(description = "Payload for GET /1/object/ezsigndocument/{pkiEzsigndocumentID}")
-public class EzsigndocumentGetObjectV1ResponseMPayload extends EzsigndocumentResponseCompound {
+public class EzsigndocumentGetObjectV1ResponseMPayload {
   
   @SerializedName("pkiEzsigndocumentID")
   private Integer pkiEzsigndocumentID = null;
@@ -522,7 +521,7 @@ public class EzsigndocumentGetObjectV1ResponseMPayload extends EzsigndocumentRes
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsigndocumentGetObjectV1ResponseMPayload {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  pkiEzsigndocumentID: ").append(pkiEzsigndocumentID).append("\n");
     sb.append("  fkiEzsignfolderID: ").append(fkiEzsignfolderID).append("\n");
     sb.append("  fkiEzsignfoldersignerassociationIDDeclinedtosign: ").append(fkiEzsignfoldersignerassociationIDDeclinedtosign).append("\n");

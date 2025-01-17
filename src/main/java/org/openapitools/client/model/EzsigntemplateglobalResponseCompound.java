@@ -13,7 +13,6 @@
 package org.openapitools.client.model;
 
 import java.util.*;
-import org.openapitools.client.model.EzsigntemplateglobalResponse;
 import org.openapitools.client.model.EzsigntemplateglobaldocumentResponse;
 import org.openapitools.client.model.EzsigntemplateglobalsignerResponseCompound;
 import org.openapitools.client.model.FieldEEzsigntemplateglobalModule;
@@ -25,7 +24,7 @@ import com.google.gson.annotations.SerializedName;
  * A Ezsigntemplateglobal Object
  **/
 @ApiModel(description = "A Ezsigntemplateglobal Object")
-public class EzsigntemplateglobalResponseCompound extends EzsigntemplateglobalResponse {
+public class EzsigntemplateglobalResponseCompound {
   
   @SerializedName("pkiEzsigntemplateglobalID")
   private Integer pkiEzsigntemplateglobalID = null;
@@ -231,7 +230,7 @@ public class EzsigntemplateglobalResponseCompound extends EzsigntemplateglobalRe
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsigntemplateglobalResponseCompound {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  pkiEzsigntemplateglobalID: ").append(pkiEzsigntemplateglobalID).append("\n");
     sb.append("  fkiEzsigntemplateglobaldocumentID: ").append(fkiEzsigntemplateglobaldocumentID).append("\n");
     sb.append("  fkiModuleID: ").append(fkiModuleID).append("\n");

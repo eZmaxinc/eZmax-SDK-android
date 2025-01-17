@@ -12,7 +12,7 @@
 
 package org.openapitools.client.model;
 
-import org.openapitools.client.model.PermissionRequest;
+import org.openapitools.client.model.PermissionRequestCompound;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -23,16 +23,15 @@ import com.google.gson.annotations.SerializedName;
 public class PermissionEditObjectV1Request {
   
   @SerializedName("objPermission")
-  private PermissionRequest objPermission = null;
+  private PermissionRequestCompound objPermission = null;
 
   /**
-   * A Permission Object and children to create a complete structure
    **/
-  @ApiModelProperty(required = true, value = "A Permission Object and children to create a complete structure")
-  public PermissionRequest getObjPermission() {
+  @ApiModelProperty(required = true, value = "")
+  public PermissionRequestCompound getObjPermission() {
     return objPermission;
   }
-  public void setObjPermission(PermissionRequest objPermission) {
+  public void setObjPermission(PermissionRequestCompound objPermission) {
     this.objPermission = objPermission;
   }
 

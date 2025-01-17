@@ -12,7 +12,6 @@
 
 package org.openapitools.client.model;
 
-import org.openapitools.client.model.UsergroupexternalResponse;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -20,7 +19,7 @@ import com.google.gson.annotations.SerializedName;
  * A Usergroupexternal Object
  **/
 @ApiModel(description = "A Usergroupexternal Object")
-public class UsergroupexternalResponseCompound extends UsergroupexternalResponse {
+public class UsergroupexternalResponseCompound {
   
   @SerializedName("pkiUsergroupexternalID")
   private Integer pkiUsergroupexternalID = null;
@@ -92,7 +91,7 @@ public class UsergroupexternalResponseCompound extends UsergroupexternalResponse
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class UsergroupexternalResponseCompound {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  pkiUsergroupexternalID: ").append(pkiUsergroupexternalID).append("\n");
     sb.append("  sUsergroupexternalName: ").append(sUsergroupexternalName).append("\n");
     sb.append("  sUsergroupexternalID: ").append(sUsergroupexternalID).append("\n");

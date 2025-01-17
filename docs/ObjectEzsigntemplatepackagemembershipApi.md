@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 
 ## ezsigntemplatepackagemembershipDeleteObjectV1
 
-> CommonResponse ezsigntemplatepackagemembershipDeleteObjectV1(pkiEzsigntemplatepackagemembershipID)
+> EzsigntemplatepackagemembershipDeleteObjectV1Response ezsigntemplatepackagemembershipDeleteObjectV1(pkiEzsigntemplatepackagemembershipID)
 
 Delete an existing Ezsigntemplatepackagemembership
 
@@ -73,7 +73,7 @@ Delete an existing Ezsigntemplatepackagemembership
 ObjectEzsigntemplatepackagemembershipApi apiInstance = new ObjectEzsigntemplatepackagemembershipApi();
 Integer pkiEzsigntemplatepackagemembershipID = null; // Integer | 
 try {
-    CommonResponse result = apiInstance.ezsigntemplatepackagemembershipDeleteObjectV1(pkiEzsigntemplatepackagemembershipID);
+    EzsigntemplatepackagemembershipDeleteObjectV1Response result = apiInstance.ezsigntemplatepackagemembershipDeleteObjectV1(pkiEzsigntemplatepackagemembershipID);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectEzsigntemplatepackagemembershipApi#ezsigntemplatepackagemembershipDeleteObjectV1");
@@ -90,7 +90,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsigntemplatepackagemembershipDeleteObjectV1Response**](EzsigntemplatepackagemembershipDeleteObjectV1Response.md)
 
 ### Authorization
 

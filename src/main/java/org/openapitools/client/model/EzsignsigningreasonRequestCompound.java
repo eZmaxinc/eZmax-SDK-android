@@ -12,7 +12,6 @@
 
 package org.openapitools.client.model;
 
-import org.openapitools.client.model.EzsignsigningreasonRequest;
 import org.openapitools.client.model.MultilingualEzsignsigningreasonDescription;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
@@ -21,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
  * A Ezsignsigningreason Object and children
  **/
 @ApiModel(description = "A Ezsignsigningreason Object and children")
-public class EzsignsigningreasonRequestCompound extends EzsignsigningreasonRequest {
+public class EzsignsigningreasonRequestCompound {
   
   @SerializedName("pkiEzsignsigningreasonID")
   private Integer pkiEzsignsigningreasonID = null;
@@ -92,7 +91,7 @@ public class EzsignsigningreasonRequestCompound extends EzsignsigningreasonReque
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignsigningreasonRequestCompound {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  pkiEzsignsigningreasonID: ").append(pkiEzsignsigningreasonID).append("\n");
     sb.append("  objEzsignsigningreasonDescription: ").append(objEzsignsigningreasonDescription).append("\n");
     sb.append("  bEzsignsigningreasonIsactive: ").append(bEzsignsigningreasonIsactive).append("\n");

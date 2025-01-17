@@ -12,7 +12,6 @@
 
 package org.openapitools.client.model;
 
-import org.openapitools.client.model.TextstylestaticRequest;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -20,7 +19,7 @@ import com.google.gson.annotations.SerializedName;
  * A Textstylestatic Object and children
  **/
 @ApiModel(description = "A Textstylestatic Object and children")
-public class TextstylestaticRequestCompound extends TextstylestaticRequest {
+public class TextstylestaticRequestCompound {
   
   @SerializedName("fkiFontID")
   private Integer fkiFontID = null;
@@ -155,7 +154,7 @@ public class TextstylestaticRequestCompound extends TextstylestaticRequest {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class TextstylestaticRequestCompound {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  fkiFontID: ").append(fkiFontID).append("\n");
     sb.append("  bTextstylestaticBold: ").append(bTextstylestaticBold).append("\n");
     sb.append("  bTextstylestaticUnderline: ").append(bTextstylestaticUnderline).append("\n");

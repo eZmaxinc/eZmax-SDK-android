@@ -13,7 +13,6 @@
 package org.openapitools.client.model;
 
 import org.openapitools.client.model.ApikeyEditPermissionsV1ResponseMPayload;
-import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseObjDebug;
 import org.openapitools.client.model.CommonResponseObjDebugPayload;
 import io.swagger.annotations.*;
@@ -23,7 +22,7 @@ import com.google.gson.annotations.SerializedName;
  * Response for PUT /1/object/apikey/{pkiApikeyID}/editPermissions
  **/
 @ApiModel(description = "Response for PUT /1/object/apikey/{pkiApikeyID}/editPermissions")
-public class ApikeyEditPermissionsV1Response extends CommonResponse {
+public class ApikeyEditPermissionsV1Response {
   
   @SerializedName("objDebugPayload")
   private CommonResponseObjDebugPayload objDebugPayload = null;
@@ -90,7 +89,7 @@ public class ApikeyEditPermissionsV1Response extends CommonResponse {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class ApikeyEditPermissionsV1Response {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  objDebugPayload: ").append(objDebugPayload).append("\n");
     sb.append("  objDebug: ").append(objDebug).append("\n");
     sb.append("  mPayload: ").append(mPayload).append("\n");

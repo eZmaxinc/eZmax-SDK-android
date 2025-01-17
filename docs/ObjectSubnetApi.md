@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 
 ## subnetDeleteObjectV1
 
-> CommonResponse subnetDeleteObjectV1(pkiSubnetID)
+> SubnetDeleteObjectV1Response subnetDeleteObjectV1(pkiSubnetID)
 
 Delete an existing Subnet
 
@@ -74,7 +74,7 @@ Delete an existing Subnet
 ObjectSubnetApi apiInstance = new ObjectSubnetApi();
 Integer pkiSubnetID = null; // Integer | The unique ID of the Subnet
 try {
-    CommonResponse result = apiInstance.subnetDeleteObjectV1(pkiSubnetID);
+    SubnetDeleteObjectV1Response result = apiInstance.subnetDeleteObjectV1(pkiSubnetID);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectSubnetApi#subnetDeleteObjectV1");
@@ -91,7 +91,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**SubnetDeleteObjectV1Response**](SubnetDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -105,7 +105,7 @@ Name | Type | Description  | Notes
 
 ## subnetEditObjectV1
 
-> CommonResponse subnetEditObjectV1(pkiSubnetID, subnetEditObjectV1Request)
+> SubnetEditObjectV1Response subnetEditObjectV1(pkiSubnetID, subnetEditObjectV1Request)
 
 Edit an existing Subnet
 
@@ -121,7 +121,7 @@ ObjectSubnetApi apiInstance = new ObjectSubnetApi();
 Integer pkiSubnetID = null; // Integer | The unique ID of the Subnet
 SubnetEditObjectV1Request subnetEditObjectV1Request = new SubnetEditObjectV1Request(); // SubnetEditObjectV1Request | 
 try {
-    CommonResponse result = apiInstance.subnetEditObjectV1(pkiSubnetID, subnetEditObjectV1Request);
+    SubnetEditObjectV1Response result = apiInstance.subnetEditObjectV1(pkiSubnetID, subnetEditObjectV1Request);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectSubnetApi#subnetEditObjectV1");
@@ -139,7 +139,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**SubnetEditObjectV1Response**](SubnetEditObjectV1Response.md)
 
 ### Authorization
 

@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ## ezsigntemplatepackageDeleteObjectV1
 
-> CommonResponse ezsigntemplatepackageDeleteObjectV1(pkiEzsigntemplatepackageID)
+> EzsigntemplatepackageDeleteObjectV1Response ezsigntemplatepackageDeleteObjectV1(pkiEzsigntemplatepackageID)
 
 Delete an existing Ezsigntemplatepackage
 
@@ -77,7 +77,7 @@ Delete an existing Ezsigntemplatepackage
 ObjectEzsigntemplatepackageApi apiInstance = new ObjectEzsigntemplatepackageApi();
 Integer pkiEzsigntemplatepackageID = null; // Integer | 
 try {
-    CommonResponse result = apiInstance.ezsigntemplatepackageDeleteObjectV1(pkiEzsigntemplatepackageID);
+    EzsigntemplatepackageDeleteObjectV1Response result = apiInstance.ezsigntemplatepackageDeleteObjectV1(pkiEzsigntemplatepackageID);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectEzsigntemplatepackageApi#ezsigntemplatepackageDeleteObjectV1");
@@ -94,7 +94,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsigntemplatepackageDeleteObjectV1Response**](EzsigntemplatepackageDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -156,7 +156,7 @@ Name | Type | Description  | Notes
 
 ## ezsigntemplatepackageEditObjectV1
 
-> CommonResponse ezsigntemplatepackageEditObjectV1(pkiEzsigntemplatepackageID, ezsigntemplatepackageEditObjectV1Request)
+> EzsigntemplatepackageEditObjectV1Response ezsigntemplatepackageEditObjectV1(pkiEzsigntemplatepackageID, ezsigntemplatepackageEditObjectV1Request)
 
 Edit an existing Ezsigntemplatepackage
 
@@ -172,7 +172,7 @@ ObjectEzsigntemplatepackageApi apiInstance = new ObjectEzsigntemplatepackageApi(
 Integer pkiEzsigntemplatepackageID = null; // Integer | 
 EzsigntemplatepackageEditObjectV1Request ezsigntemplatepackageEditObjectV1Request = new EzsigntemplatepackageEditObjectV1Request(); // EzsigntemplatepackageEditObjectV1Request | 
 try {
-    CommonResponse result = apiInstance.ezsigntemplatepackageEditObjectV1(pkiEzsigntemplatepackageID, ezsigntemplatepackageEditObjectV1Request);
+    EzsigntemplatepackageEditObjectV1Response result = apiInstance.ezsigntemplatepackageEditObjectV1(pkiEzsigntemplatepackageID, ezsigntemplatepackageEditObjectV1Request);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectEzsigntemplatepackageApi#ezsigntemplatepackageEditObjectV1");
@@ -190,7 +190,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsigntemplatepackageEditObjectV1Response**](EzsigntemplatepackageEditObjectV1Response.md)
 
 ### Authorization
 

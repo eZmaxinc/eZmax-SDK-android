@@ -12,7 +12,6 @@
 
 package org.openapitools.client.model;
 
-import org.openapitools.client.model.DiscussionmembershipRequest;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -20,7 +19,7 @@ import com.google.gson.annotations.SerializedName;
  * A Discussionmembership Object and children
  **/
 @ApiModel(description = "A Discussionmembership Object and children")
-public class DiscussionmembershipRequestCompound extends DiscussionmembershipRequest {
+public class DiscussionmembershipRequestCompound {
   
   @SerializedName("pkiDiscussionmembershipID")
   private Integer pkiDiscussionmembershipID = null;
@@ -143,7 +142,7 @@ public class DiscussionmembershipRequestCompound extends DiscussionmembershipReq
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class DiscussionmembershipRequestCompound {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  pkiDiscussionmembershipID: ").append(pkiDiscussionmembershipID).append("\n");
     sb.append("  fkiDiscussionID: ").append(fkiDiscussionID).append("\n");
     sb.append("  fkiUserID: ").append(fkiUserID).append("\n");

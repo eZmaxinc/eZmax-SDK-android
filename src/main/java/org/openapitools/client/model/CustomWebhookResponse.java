@@ -17,7 +17,6 @@ import org.openapitools.client.model.CommonAudit;
 import org.openapitools.client.model.FieldEWebhookEzsignevent;
 import org.openapitools.client.model.FieldEWebhookManagementevent;
 import org.openapitools.client.model.FieldEWebhookModule;
-import org.openapitools.client.model.WebhookResponseCompound;
 import org.openapitools.client.model.WebhookheaderResponseCompound;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
@@ -26,7 +25,7 @@ import com.google.gson.annotations.SerializedName;
  * A custom Webhook object
  **/
 @ApiModel(description = "A custom Webhook object")
-public class CustomWebhookResponse extends WebhookResponseCompound {
+public class CustomWebhookResponse {
   
   @SerializedName("pkiWebhookID")
   private Integer pkiWebhookID = null;
@@ -383,7 +382,7 @@ public class CustomWebhookResponse extends WebhookResponseCompound {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class CustomWebhookResponse {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  pkiWebhookID: ").append(pkiWebhookID).append("\n");
     sb.append("  fkiAuthenticationexternalID: ").append(fkiAuthenticationexternalID).append("\n");
     sb.append("  sWebhookDescription: ").append(sWebhookDescription).append("\n");

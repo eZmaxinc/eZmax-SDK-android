@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 
 ## ezsignsignergroupmembershipDeleteObjectV1
 
-> CommonResponse ezsignsignergroupmembershipDeleteObjectV1(pkiEzsignsignergroupmembershipID)
+> EzsignsignergroupmembershipDeleteObjectV1Response ezsignsignergroupmembershipDeleteObjectV1(pkiEzsignsignergroupmembershipID)
 
 Delete an existing Ezsignsignergroupmembership
 
@@ -73,7 +73,7 @@ Delete an existing Ezsignsignergroupmembership
 ObjectEzsignsignergroupmembershipApi apiInstance = new ObjectEzsignsignergroupmembershipApi();
 Integer pkiEzsignsignergroupmembershipID = null; // Integer | The unique ID of the Ezsignsignergroupmembership
 try {
-    CommonResponse result = apiInstance.ezsignsignergroupmembershipDeleteObjectV1(pkiEzsignsignergroupmembershipID);
+    EzsignsignergroupmembershipDeleteObjectV1Response result = apiInstance.ezsignsignergroupmembershipDeleteObjectV1(pkiEzsignsignergroupmembershipID);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectEzsignsignergroupmembershipApi#ezsignsignergroupmembershipDeleteObjectV1");
@@ -90,7 +90,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsignsignergroupmembershipDeleteObjectV1Response**](EzsignsignergroupmembershipDeleteObjectV1Response.md)
 
 ### Authorization
 

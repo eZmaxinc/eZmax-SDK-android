@@ -13,7 +13,6 @@
 package org.openapitools.client.model;
 
 import java.util.*;
-import org.openapitools.client.model.CommonResponseError;
 import org.openapitools.client.model.FieldEErrorCode;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
@@ -22,7 +21,7 @@ import com.google.gson.annotations.SerializedName;
  * Error Message when a Franchisebroker is not in this Franchiseoffice.
  **/
 @ApiModel(description = "Error Message when a Franchisebroker is not in this Franchiseoffice.")
-public class CommonResponseErrorWrongFranchiseoffice extends CommonResponseError {
+public class CommonResponseErrorWrongFranchiseoffice {
   
   @SerializedName("sErrorMessage")
   private String sErrorMessage = null;
@@ -154,7 +153,7 @@ public class CommonResponseErrorWrongFranchiseoffice extends CommonResponseError
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class CommonResponseErrorWrongFranchiseoffice {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  sErrorMessage: ").append(sErrorMessage).append("\n");
     sb.append("  eErrorCode: ").append(eErrorCode).append("\n");
     sb.append("  aSErrorMessagedetail: ").append(aSErrorMessagedetail).append("\n");

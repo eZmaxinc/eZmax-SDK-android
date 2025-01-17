@@ -12,10 +12,9 @@
 
 package org.openapitools.client.model;
 
-import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseObjDebug;
 import org.openapitools.client.model.CommonResponseObjDebugPayload;
-import org.openapitools.client.model.EzsigndocumentResponseCompound;
+import org.openapitools.client.model.EzsigndocumentGetObjectV1ResponseMPayload;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -23,14 +22,14 @@ import com.google.gson.annotations.SerializedName;
  * Response for GET /1/object/ezsigndocument/{pkiEzsigndocumentID}
  **/
 @ApiModel(description = "Response for GET /1/object/ezsigndocument/{pkiEzsigndocumentID}")
-public class EzsigndocumentGetObjectV1Response extends CommonResponse {
+public class EzsigndocumentGetObjectV1Response {
   
   @SerializedName("objDebugPayload")
   private CommonResponseObjDebugPayload objDebugPayload = null;
   @SerializedName("objDebug")
   private CommonResponseObjDebug objDebug = null;
   @SerializedName("mPayload")
-  private EzsigndocumentResponseCompound mPayload = null;
+  private EzsigndocumentGetObjectV1ResponseMPayload mPayload = null;
 
   /**
    **/
@@ -53,13 +52,12 @@ public class EzsigndocumentGetObjectV1Response extends CommonResponse {
   }
 
   /**
-   * Payload for GET /1/object/ezsigndocument/{pkiEzsigndocumentID}
    **/
-  @ApiModelProperty(required = true, value = "Payload for GET /1/object/ezsigndocument/{pkiEzsigndocumentID}")
-  public EzsigndocumentResponseCompound getMPayload() {
+  @ApiModelProperty(required = true, value = "")
+  public EzsigndocumentGetObjectV1ResponseMPayload getMPayload() {
     return mPayload;
   }
-  public void setMPayload(EzsigndocumentResponseCompound mPayload) {
+  public void setMPayload(EzsigndocumentGetObjectV1ResponseMPayload mPayload) {
     this.mPayload = mPayload;
   }
 
@@ -91,7 +89,7 @@ public class EzsigndocumentGetObjectV1Response extends CommonResponse {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsigndocumentGetObjectV1Response {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  objDebugPayload: ").append(objDebugPayload).append("\n");
     sb.append("  objDebug: ").append(objDebug).append("\n");
     sb.append("  mPayload: ").append(mPayload).append("\n");

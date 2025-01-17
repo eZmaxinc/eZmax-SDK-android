@@ -16,7 +16,6 @@ import java.util.*;
 import org.openapitools.client.model.FieldEWebhookEzsignevent;
 import org.openapitools.client.model.FieldEWebhookManagementevent;
 import org.openapitools.client.model.FieldEWebhookModule;
-import org.openapitools.client.model.WebhookRequest;
 import org.openapitools.client.model.WebhookheaderRequestCompound;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
@@ -25,7 +24,7 @@ import com.google.gson.annotations.SerializedName;
  * A Webhook Object and children
  **/
 @ApiModel(description = "A Webhook Object and children")
-public class WebhookRequestCompound extends WebhookRequest {
+public class WebhookRequestCompound {
   
   @SerializedName("pkiWebhookID")
   private Integer pkiWebhookID = null;
@@ -245,7 +244,7 @@ public class WebhookRequestCompound extends WebhookRequest {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class WebhookRequestCompound {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  pkiWebhookID: ").append(pkiWebhookID).append("\n");
     sb.append("  fkiAuthenticationexternalID: ").append(fkiAuthenticationexternalID).append("\n");
     sb.append("  fkiEzsignfoldertypeID: ").append(fkiEzsignfoldertypeID).append("\n");

@@ -14,11 +14,10 @@ package org.openapitools.client.model;
 
 import java.util.*;
 import org.openapitools.client.model.CustomCreateEzsignelementsPositionedByWordRequest;
-import org.openapitools.client.model.CustomDropdownElementRequest;
+import org.openapitools.client.model.CustomDropdownElementRequestCompound;
 import org.openapitools.client.model.EnumTextvalidation;
 import org.openapitools.client.model.EzsignformfieldRequestCompound;
-import org.openapitools.client.model.EzsignformfieldgroupRequestCompound;
-import org.openapitools.client.model.EzsignformfieldgroupsignerRequest;
+import org.openapitools.client.model.EzsignformfieldgroupsignerRequestCompound;
 import org.openapitools.client.model.FieldEEzsignformfieldgroupSignerrequirement;
 import org.openapitools.client.model.FieldEEzsignformfieldgroupTooltipposition;
 import org.openapitools.client.model.FieldEEzsignformfieldgroupType;
@@ -29,7 +28,7 @@ import com.google.gson.annotations.SerializedName;
  * An Ezsignformfieldgroup Object in the context of a createEzsignelementsPositionedByWord path
  **/
 @ApiModel(description = "An Ezsignformfieldgroup Object in the context of a createEzsignelementsPositionedByWord path")
-public class CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordRequest extends EzsignformfieldgroupRequestCompound {
+public class CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordRequest {
   
   @SerializedName("pkiEzsignformfieldgroupID")
   private Integer pkiEzsignformfieldgroupID = null;
@@ -368,7 +367,7 @@ public class CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordReque
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordRequest {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  pkiEzsignformfieldgroupID: ").append(pkiEzsignformfieldgroupID).append("\n");
     sb.append("  fkiEzsigndocumentID: ").append(fkiEzsigndocumentID).append("\n");
     sb.append("  eEzsignformfieldgroupType: ").append(eEzsignformfieldgroupType).append("\n");

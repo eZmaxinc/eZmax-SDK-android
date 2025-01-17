@@ -14,7 +14,6 @@ package org.openapitools.client.model;
 
 import org.openapitools.client.model.FieldEVariableexpenseTaxable;
 import org.openapitools.client.model.MultilingualVariableexpenseDescription;
-import org.openapitools.client.model.VariableexpenseResponse;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -22,7 +21,7 @@ import com.google.gson.annotations.SerializedName;
  * A Variableexpense Object
  **/
 @ApiModel(description = "A Variableexpense Object")
-public class VariableexpenseResponseCompound extends VariableexpenseResponse {
+public class VariableexpenseResponseCompound {
   
   @SerializedName("pkiVariableexpenseID")
   private Integer pkiVariableexpenseID = null;
@@ -122,7 +121,7 @@ public class VariableexpenseResponseCompound extends VariableexpenseResponse {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class VariableexpenseResponseCompound {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  pkiVariableexpenseID: ").append(pkiVariableexpenseID).append("\n");
     sb.append("  sVariableexpenseCode: ").append(sVariableexpenseCode).append("\n");
     sb.append("  objVariableexpenseDescription: ").append(objVariableexpenseDescription).append("\n");

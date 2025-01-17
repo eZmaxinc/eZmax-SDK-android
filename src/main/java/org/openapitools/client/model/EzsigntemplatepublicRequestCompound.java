@@ -12,7 +12,6 @@
 
 package org.openapitools.client.model;
 
-import org.openapitools.client.model.EzsigntemplatepublicRequest;
 import org.openapitools.client.model.FieldEEzsigntemplatepublicLimittype;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
@@ -21,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
  * A Ezsigntemplatepublic Object and children
  **/
 @ApiModel(description = "A Ezsigntemplatepublic Object and children")
-public class EzsigntemplatepublicRequestCompound extends EzsigntemplatepublicRequest {
+public class EzsigntemplatepublicRequestCompound {
   
   @SerializedName("pkiEzsigntemplatepublicID")
   private Integer pkiEzsigntemplatepublicID = null;
@@ -204,7 +203,7 @@ public class EzsigntemplatepublicRequestCompound extends EzsigntemplatepublicReq
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsigntemplatepublicRequestCompound {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  pkiEzsigntemplatepublicID: ").append(pkiEzsigntemplatepublicID).append("\n");
     sb.append("  fkiEzsignfoldertypeID: ").append(fkiEzsignfoldertypeID).append("\n");
     sb.append("  fkiUserlogintypeID: ").append(fkiUserlogintypeID).append("\n");

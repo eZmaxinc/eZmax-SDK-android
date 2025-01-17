@@ -13,7 +13,6 @@
 package org.openapitools.client.model;
 
 import java.util.*;
-import org.openapitools.client.model.ActivesessionResponse;
 import org.openapitools.client.model.ActivesessionResponseCompoundApikey;
 import org.openapitools.client.model.ActivesessionResponseCompoundUser;
 import org.openapitools.client.model.FieldEActivesessionEzsign;
@@ -33,7 +32,7 @@ import com.google.gson.annotations.SerializedName;
  * Payload for GET /1/object/activesession/getCurrent
  **/
 @ApiModel(description = "Payload for GET /1/object/activesession/getCurrent")
-public class ActivesessionResponseCompound extends ActivesessionResponse {
+public class ActivesessionResponseCompound {
   
   @SerializedName("eActivesessionUsertype")
   private FieldEActivesessionUsertype eActivesessionUsertype = null;
@@ -517,7 +516,7 @@ public class ActivesessionResponseCompound extends ActivesessionResponse {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class ActivesessionResponseCompound {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  eActivesessionUsertype: ").append(eActivesessionUsertype).append("\n");
     sb.append("  eActivesessionOrigin: ").append(eActivesessionOrigin).append("\n");
     sb.append("  eActivesessionWeekdaystart: ").append(eActivesessionWeekdaystart).append("\n");

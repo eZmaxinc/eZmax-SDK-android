@@ -16,9 +16,8 @@ import java.util.*;
 import org.openapitools.client.model.CustomContactNameResponse;
 import org.openapitools.client.model.CustomCreditcardtransactionResponse;
 import org.openapitools.client.model.EnumTextvalidation;
-import org.openapitools.client.model.EzsignelementdependencyResponse;
-import org.openapitools.client.model.EzsignsignatureResponse;
-import org.openapitools.client.model.EzsignsignaturecustomdateResponseV2;
+import org.openapitools.client.model.EzsignelementdependencyResponseCompound;
+import org.openapitools.client.model.EzsignsignaturecustomdateResponseCompoundV2;
 import org.openapitools.client.model.FieldEEzsignsignatureAttachmentnamesource;
 import org.openapitools.client.model.FieldEEzsignsignatureConsultationtrigger;
 import org.openapitools.client.model.FieldEEzsignsignatureDependencyrequirement;
@@ -33,7 +32,7 @@ import com.google.gson.annotations.SerializedName;
  * An Ezsignsignature Object and children to create a complete structure
  **/
 @ApiModel(description = "An Ezsignsignature Object and children to create a complete structure")
-public class EzsignsignatureResponseCompoundV3 extends EzsignsignatureResponse {
+public class EzsignsignatureResponseCompoundV3 {
   
   @SerializedName("pkiEzsignsignatureID")
   private Integer pkiEzsignsignatureID = null;
@@ -675,7 +674,7 @@ public class EzsignsignatureResponseCompoundV3 extends EzsignsignatureResponse {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignsignatureResponseCompoundV3 {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  pkiEzsignsignatureID: ").append(pkiEzsignsignatureID).append("\n");
     sb.append("  fkiEzsigndocumentID: ").append(fkiEzsigndocumentID).append("\n");
     sb.append("  fkiEzsignfoldersignerassociationID: ").append(fkiEzsignfoldersignerassociationID).append("\n");

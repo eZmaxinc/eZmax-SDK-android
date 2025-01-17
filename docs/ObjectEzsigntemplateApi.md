@@ -110,7 +110,7 @@ Name | Type | Description  | Notes
 
 ## ezsigntemplateDeleteObjectV1
 
-> CommonResponse ezsigntemplateDeleteObjectV1(pkiEzsigntemplateID)
+> EzsigntemplateDeleteObjectV1Response ezsigntemplateDeleteObjectV1(pkiEzsigntemplateID)
 
 Delete an existing Ezsigntemplate
 
@@ -125,7 +125,7 @@ Delete an existing Ezsigntemplate
 ObjectEzsigntemplateApi apiInstance = new ObjectEzsigntemplateApi();
 Integer pkiEzsigntemplateID = null; // Integer | 
 try {
-    CommonResponse result = apiInstance.ezsigntemplateDeleteObjectV1(pkiEzsigntemplateID);
+    EzsigntemplateDeleteObjectV1Response result = apiInstance.ezsigntemplateDeleteObjectV1(pkiEzsigntemplateID);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectEzsigntemplateApi#ezsigntemplateDeleteObjectV1");
@@ -142,7 +142,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsigntemplateDeleteObjectV1Response**](EzsigntemplateDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -156,7 +156,7 @@ Name | Type | Description  | Notes
 
 ## ezsigntemplateEditObjectV3
 
-> CommonResponse ezsigntemplateEditObjectV3(pkiEzsigntemplateID, ezsigntemplateEditObjectV3Request)
+> EzsigntemplateEditObjectV3Response ezsigntemplateEditObjectV3(pkiEzsigntemplateID, ezsigntemplateEditObjectV3Request)
 
 Edit an existing Ezsigntemplate
 
@@ -172,7 +172,7 @@ ObjectEzsigntemplateApi apiInstance = new ObjectEzsigntemplateApi();
 Integer pkiEzsigntemplateID = null; // Integer | 
 EzsigntemplateEditObjectV3Request ezsigntemplateEditObjectV3Request = new EzsigntemplateEditObjectV3Request(); // EzsigntemplateEditObjectV3Request | 
 try {
-    CommonResponse result = apiInstance.ezsigntemplateEditObjectV3(pkiEzsigntemplateID, ezsigntemplateEditObjectV3Request);
+    EzsigntemplateEditObjectV3Response result = apiInstance.ezsigntemplateEditObjectV3(pkiEzsigntemplateID, ezsigntemplateEditObjectV3Request);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectEzsigntemplateApi#ezsigntemplateEditObjectV3");
@@ -190,7 +190,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsigntemplateEditObjectV3Response**](EzsigntemplateEditObjectV3Response.md)
 
 ### Authorization
 

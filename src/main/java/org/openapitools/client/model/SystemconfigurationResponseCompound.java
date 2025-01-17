@@ -18,7 +18,6 @@ import org.openapitools.client.model.FieldESystemconfigurationEzsignofficeplan;
 import org.openapitools.client.model.FieldESystemconfigurationLanguage1;
 import org.openapitools.client.model.FieldESystemconfigurationLanguage2;
 import org.openapitools.client.model.FieldESystemconfigurationNewexternaluseraction;
-import org.openapitools.client.model.SystemconfigurationResponse;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -26,7 +25,7 @@ import com.google.gson.annotations.SerializedName;
  * A Systemconfiguration Object
  **/
 @ApiModel(description = "A Systemconfiguration Object")
-public class SystemconfigurationResponseCompound extends SystemconfigurationResponse {
+public class SystemconfigurationResponseCompound {
   
   @SerializedName("pkiSystemconfigurationID")
   private Integer pkiSystemconfigurationID = null;
@@ -304,7 +303,7 @@ public class SystemconfigurationResponseCompound extends SystemconfigurationResp
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class SystemconfigurationResponseCompound {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  pkiSystemconfigurationID: ").append(pkiSystemconfigurationID).append("\n");
     sb.append("  fkiSystemconfigurationtypeID: ").append(fkiSystemconfigurationtypeID).append("\n");
     sb.append("  fkiBrandingID: ").append(fkiBrandingID).append("\n");

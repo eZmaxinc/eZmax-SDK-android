@@ -13,7 +13,6 @@
 package org.openapitools.client.model;
 
 import org.openapitools.client.model.MultilingualSubnetDescription;
-import org.openapitools.client.model.SubnetResponse;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -21,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
  * A Subnet Object
  **/
 @ApiModel(description = "A Subnet Object")
-public class SubnetResponseCompound extends SubnetResponse {
+public class SubnetResponseCompound {
   
   @SerializedName("pkiSubnetID")
   private Integer pkiSubnetID = null;
@@ -143,7 +142,7 @@ public class SubnetResponseCompound extends SubnetResponse {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class SubnetResponseCompound {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  pkiSubnetID: ").append(pkiSubnetID).append("\n");
     sb.append("  fkiUserID: ").append(fkiUserID).append("\n");
     sb.append("  fkiApikeyID: ").append(fkiApikeyID).append("\n");

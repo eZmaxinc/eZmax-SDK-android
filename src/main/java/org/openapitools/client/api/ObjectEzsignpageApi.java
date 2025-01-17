@@ -23,8 +23,8 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
-import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseError;
+import org.openapitools.client.model.EzsignpageConsultV1Response;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
@@ -61,9 +61,9 @@ public class ObjectEzsignpageApi {
   * 
    * @param pkiEzsignpageID 
    * @param body 
-   * @return CommonResponse
+   * @return EzsignpageConsultV1Response
   */
-  public CommonResponse ezsignpageConsultV1 (Integer pkiEzsignpageID, Object body) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public EzsignpageConsultV1Response ezsignpageConsultV1 (Integer pkiEzsignpageID, Object body) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = body;
     // verify the required parameter 'pkiEzsignpageID' is set
     if (pkiEzsignpageID == null) {
@@ -104,7 +104,7 @@ public class ObjectEzsignpageApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
+         return (EzsignpageConsultV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsignpageConsultV1Response.class);
       } else {
          return null;
       }
@@ -130,7 +130,7 @@ public class ObjectEzsignpageApi {
    * 
    * @param pkiEzsignpageID    * @param body 
   */
-  public void ezsignpageConsultV1 (Integer pkiEzsignpageID, Object body, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void ezsignpageConsultV1 (Integer pkiEzsignpageID, Object body, final Response.Listener<EzsignpageConsultV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = body;
 
     // verify the required parameter 'pkiEzsignpageID' is set
@@ -180,7 +180,7 @@ public class ObjectEzsignpageApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
+              responseListener.onResponse((EzsignpageConsultV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsignpageConsultV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

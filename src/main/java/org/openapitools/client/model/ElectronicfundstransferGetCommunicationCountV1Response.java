@@ -12,7 +12,6 @@
 
 package org.openapitools.client.model;
 
-import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseObjDebug;
 import org.openapitools.client.model.CommonResponseObjDebugPayload;
 import org.openapitools.client.model.ElectronicfundstransferGetCommunicationCountV1ResponseMPayload;
@@ -23,7 +22,7 @@ import com.google.gson.annotations.SerializedName;
  * Response for GET /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationCount
  **/
 @ApiModel(description = "Response for GET /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationCount")
-public class ElectronicfundstransferGetCommunicationCountV1Response extends CommonResponse {
+public class ElectronicfundstransferGetCommunicationCountV1Response {
   
   @SerializedName("objDebugPayload")
   private CommonResponseObjDebugPayload objDebugPayload = null;
@@ -90,7 +89,7 @@ public class ElectronicfundstransferGetCommunicationCountV1Response extends Comm
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class ElectronicfundstransferGetCommunicationCountV1Response {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  objDebugPayload: ").append(objDebugPayload).append("\n");
     sb.append("  objDebug: ").append(objDebug).append("\n");
     sb.append("  mPayload: ").append(mPayload).append("\n");

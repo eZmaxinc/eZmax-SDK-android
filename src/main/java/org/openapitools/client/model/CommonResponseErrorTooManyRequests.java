@@ -13,7 +13,6 @@
 package org.openapitools.client.model;
 
 import java.util.*;
-import org.openapitools.client.model.CommonResponseError;
 import org.openapitools.client.model.FieldEErrorCode;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
@@ -22,7 +21,7 @@ import com.google.gson.annotations.SerializedName;
  * Generic Error Message
  **/
 @ApiModel(description = "Generic Error Message")
-public class CommonResponseErrorTooManyRequests extends CommonResponseError {
+public class CommonResponseErrorTooManyRequests {
   
   @SerializedName("sErrorMessage")
   private String sErrorMessage = null;
@@ -91,7 +90,7 @@ public class CommonResponseErrorTooManyRequests extends CommonResponseError {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class CommonResponseErrorTooManyRequests {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  sErrorMessage: ").append(sErrorMessage).append("\n");
     sb.append("  eErrorCode: ").append(eErrorCode).append("\n");
     sb.append("  aSErrorMessagedetail: ").append(aSErrorMessagedetail).append("\n");

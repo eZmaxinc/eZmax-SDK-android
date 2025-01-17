@@ -14,9 +14,8 @@ package org.openapitools.client.model;
 
 import java.util.*;
 import org.openapitools.client.model.EnumTextvalidation;
-import org.openapitools.client.model.EzsigntemplateelementdependencyRequest;
-import org.openapitools.client.model.EzsigntemplatesignatureRequest;
-import org.openapitools.client.model.EzsigntemplatesignaturecustomdateRequestV2;
+import org.openapitools.client.model.EzsigntemplateelementdependencyRequestCompound;
+import org.openapitools.client.model.EzsigntemplatesignaturecustomdateRequestCompoundV2;
 import org.openapitools.client.model.FieldEEzsigntemplatesignatureAttachmentnamesource;
 import org.openapitools.client.model.FieldEEzsigntemplatesignatureConsultationtrigger;
 import org.openapitools.client.model.FieldEEzsigntemplatesignatureDependencyrequirement;
@@ -32,7 +31,7 @@ import com.google.gson.annotations.SerializedName;
  * A Ezsigntemplatesignature Object and children
  **/
 @ApiModel(description = "A Ezsigntemplatesignature Object and children")
-public class EzsigntemplatesignatureRequestCompoundV2 extends EzsigntemplatesignatureRequest {
+public class EzsigntemplatesignatureRequestCompoundV2 {
   
   @SerializedName("pkiEzsigntemplatesignatureID")
   private Integer pkiEzsigntemplatesignatureID = null;
@@ -584,7 +583,7 @@ public class EzsigntemplatesignatureRequestCompoundV2 extends Ezsigntemplatesign
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsigntemplatesignatureRequestCompoundV2 {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  pkiEzsigntemplatesignatureID: ").append(pkiEzsigntemplatesignatureID).append("\n");
     sb.append("  fkiEzsigntemplatedocumentID: ").append(fkiEzsigntemplatedocumentID).append("\n");
     sb.append("  fkiEzsigntemplatesignerID: ").append(fkiEzsigntemplatesignerID).append("\n");

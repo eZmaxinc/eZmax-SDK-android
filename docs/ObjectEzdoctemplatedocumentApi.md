@@ -107,7 +107,7 @@ null (empty response body)
 
 ## ezdoctemplatedocumentEditObjectV1
 
-> CommonResponse ezdoctemplatedocumentEditObjectV1(pkiEzdoctemplatedocumentID, ezdoctemplatedocumentEditObjectV1Request)
+> EzdoctemplatedocumentEditObjectV1Response ezdoctemplatedocumentEditObjectV1(pkiEzdoctemplatedocumentID, ezdoctemplatedocumentEditObjectV1Request)
 
 Edit an existing Ezdoctemplatedocument
 
@@ -123,7 +123,7 @@ ObjectEzdoctemplatedocumentApi apiInstance = new ObjectEzdoctemplatedocumentApi(
 Integer pkiEzdoctemplatedocumentID = null; // Integer | The unique ID of the Ezdoctemplatedocument
 EzdoctemplatedocumentEditObjectV1Request ezdoctemplatedocumentEditObjectV1Request = new EzdoctemplatedocumentEditObjectV1Request(); // EzdoctemplatedocumentEditObjectV1Request | 
 try {
-    CommonResponse result = apiInstance.ezdoctemplatedocumentEditObjectV1(pkiEzdoctemplatedocumentID, ezdoctemplatedocumentEditObjectV1Request);
+    EzdoctemplatedocumentEditObjectV1Response result = apiInstance.ezdoctemplatedocumentEditObjectV1(pkiEzdoctemplatedocumentID, ezdoctemplatedocumentEditObjectV1Request);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectEzdoctemplatedocumentApi#ezdoctemplatedocumentEditObjectV1");
@@ -141,7 +141,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzdoctemplatedocumentEditObjectV1Response**](EzdoctemplatedocumentEditObjectV1Response.md)
 
 ### Authorization
 
@@ -311,7 +311,7 @@ Name | Type | Description  | Notes
 
 ## ezdoctemplatedocumentPatchObjectV1
 
-> CommonResponse ezdoctemplatedocumentPatchObjectV1(pkiEzdoctemplatedocumentID, ezdoctemplatedocumentPatchObjectV1Request)
+> EzdoctemplatedocumentPatchObjectV1Response ezdoctemplatedocumentPatchObjectV1(pkiEzdoctemplatedocumentID, ezdoctemplatedocumentPatchObjectV1Request)
 
 Patch an existing Ezdoctemplatedocument
 
@@ -327,7 +327,7 @@ ObjectEzdoctemplatedocumentApi apiInstance = new ObjectEzdoctemplatedocumentApi(
 Integer pkiEzdoctemplatedocumentID = null; // Integer | The unique ID of the Ezdoctemplatedocument
 EzdoctemplatedocumentPatchObjectV1Request ezdoctemplatedocumentPatchObjectV1Request = new EzdoctemplatedocumentPatchObjectV1Request(); // EzdoctemplatedocumentPatchObjectV1Request | 
 try {
-    CommonResponse result = apiInstance.ezdoctemplatedocumentPatchObjectV1(pkiEzdoctemplatedocumentID, ezdoctemplatedocumentPatchObjectV1Request);
+    EzdoctemplatedocumentPatchObjectV1Response result = apiInstance.ezdoctemplatedocumentPatchObjectV1(pkiEzdoctemplatedocumentID, ezdoctemplatedocumentPatchObjectV1Request);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectEzdoctemplatedocumentApi#ezdoctemplatedocumentPatchObjectV1");
@@ -345,7 +345,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzdoctemplatedocumentPatchObjectV1Response**](EzdoctemplatedocumentPatchObjectV1Response.md)
 
 ### Authorization
 

@@ -13,7 +13,6 @@
 package org.openapitools.client.model;
 
 import java.util.*;
-import org.openapitools.client.model.BillingentityinternalRequest;
 import org.openapitools.client.model.BillingentityinternalproductRequestCompound;
 import org.openapitools.client.model.MultilingualBillingentityinternalDescription;
 import io.swagger.annotations.*;
@@ -23,7 +22,7 @@ import com.google.gson.annotations.SerializedName;
  * A Billingentityinternal Object and children
  **/
 @ApiModel(description = "A Billingentityinternal Object and children")
-public class BillingentityinternalRequestCompound extends BillingentityinternalRequest {
+public class BillingentityinternalRequestCompound {
   
   @SerializedName("pkiBillingentityinternalID")
   private Integer pkiBillingentityinternalID = null;
@@ -92,7 +91,7 @@ public class BillingentityinternalRequestCompound extends BillingentityinternalR
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingentityinternalRequestCompound {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  pkiBillingentityinternalID: ").append(pkiBillingentityinternalID).append("\n");
     sb.append("  objBillingentityinternalDescription: ").append(objBillingentityinternalDescription).append("\n");
     sb.append("  aObjBillingentityinternalproduct: ").append(aObjBillingentityinternalproduct).append("\n");

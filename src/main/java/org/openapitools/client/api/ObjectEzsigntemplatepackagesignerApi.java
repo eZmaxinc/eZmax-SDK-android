@@ -23,12 +23,12 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
-import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseError;
 import org.openapitools.client.model.EzsigntemplatepackagesignerCreateObjectV1Request;
 import org.openapitools.client.model.EzsigntemplatepackagesignerCreateObjectV1Response;
 import org.openapitools.client.model.EzsigntemplatepackagesignerDeleteObjectV1Response;
 import org.openapitools.client.model.EzsigntemplatepackagesignerEditObjectV1Request;
+import org.openapitools.client.model.EzsigntemplatepackagesignerEditObjectV1Response;
 import org.openapitools.client.model.EzsigntemplatepackagesignerGetObjectV2Response;
 
 import org.apache.http.HttpEntity;
@@ -321,9 +321,9 @@ public class ObjectEzsigntemplatepackagesignerApi {
   * 
    * @param pkiEzsigntemplatepackagesignerID 
    * @param ezsigntemplatepackagesignerEditObjectV1Request 
-   * @return CommonResponse
+   * @return EzsigntemplatepackagesignerEditObjectV1Response
   */
-  public CommonResponse ezsigntemplatepackagesignerEditObjectV1 (Integer pkiEzsigntemplatepackagesignerID, EzsigntemplatepackagesignerEditObjectV1Request ezsigntemplatepackagesignerEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public EzsigntemplatepackagesignerEditObjectV1Response ezsigntemplatepackagesignerEditObjectV1 (Integer pkiEzsigntemplatepackagesignerID, EzsigntemplatepackagesignerEditObjectV1Request ezsigntemplatepackagesignerEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = ezsigntemplatepackagesignerEditObjectV1Request;
     // verify the required parameter 'pkiEzsigntemplatepackagesignerID' is set
     if (pkiEzsigntemplatepackagesignerID == null) {
@@ -364,7 +364,7 @@ public class ObjectEzsigntemplatepackagesignerApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
+         return (EzsigntemplatepackagesignerEditObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsigntemplatepackagesignerEditObjectV1Response.class);
       } else {
          return null;
       }
@@ -390,7 +390,7 @@ public class ObjectEzsigntemplatepackagesignerApi {
    * 
    * @param pkiEzsigntemplatepackagesignerID    * @param ezsigntemplatepackagesignerEditObjectV1Request 
   */
-  public void ezsigntemplatepackagesignerEditObjectV1 (Integer pkiEzsigntemplatepackagesignerID, EzsigntemplatepackagesignerEditObjectV1Request ezsigntemplatepackagesignerEditObjectV1Request, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void ezsigntemplatepackagesignerEditObjectV1 (Integer pkiEzsigntemplatepackagesignerID, EzsigntemplatepackagesignerEditObjectV1Request ezsigntemplatepackagesignerEditObjectV1Request, final Response.Listener<EzsigntemplatepackagesignerEditObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = ezsigntemplatepackagesignerEditObjectV1Request;
 
     // verify the required parameter 'pkiEzsigntemplatepackagesignerID' is set
@@ -440,7 +440,7 @@ public class ObjectEzsigntemplatepackagesignerApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
+              responseListener.onResponse((EzsigntemplatepackagesignerEditObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsigntemplatepackagesignerEditObjectV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

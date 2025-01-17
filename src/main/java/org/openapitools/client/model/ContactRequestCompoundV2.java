@@ -12,7 +12,6 @@
 
 package org.openapitools.client.model;
 
-import org.openapitools.client.model.ContactRequestV2;
 import org.openapitools.client.model.ContactinformationsRequestCompoundV2;
 import org.openapitools.client.model.FieldEContactType;
 import io.swagger.annotations.*;
@@ -22,7 +21,7 @@ import com.google.gson.annotations.SerializedName;
  * A Contact Object and children to create a complete structure
  **/
 @ApiModel(description = "A Contact Object and children to create a complete structure")
-public class ContactRequestCompoundV2 extends ContactRequestV2 {
+public class ContactRequestCompoundV2 {
   
   @SerializedName("fkiContacttitleID")
   private Integer fkiContacttitleID = null;
@@ -213,7 +212,7 @@ public class ContactRequestCompoundV2 extends ContactRequestV2 {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class ContactRequestCompoundV2 {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  fkiContacttitleID: ").append(fkiContacttitleID).append("\n");
     sb.append("  fkiLanguageID: ").append(fkiLanguageID).append("\n");
     sb.append("  eContactType: ").append(eContactType).append("\n");

@@ -14,7 +14,6 @@ package org.openapitools.client.model;
 
 import java.util.*;
 import org.openapitools.client.model.BrandingListElement;
-import org.openapitools.client.model.CommonGetListV1ResponseMPayload;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -22,7 +21,7 @@ import com.google.gson.annotations.SerializedName;
  * Payload for GET /1/object/branding/getList
  **/
 @ApiModel(description = "Payload for GET /1/object/branding/getList")
-public class BrandingGetListV1ResponseMPayload extends CommonGetListV1ResponseMPayload {
+public class BrandingGetListV1ResponseMPayload {
   
   @SerializedName("iRowReturned")
   private Integer iRowReturned = null;
@@ -91,7 +90,7 @@ public class BrandingGetListV1ResponseMPayload extends CommonGetListV1ResponseMP
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class BrandingGetListV1ResponseMPayload {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  iRowReturned: ").append(iRowReturned).append("\n");
     sb.append("  iRowFiltered: ").append(iRowFiltered).append("\n");
     sb.append("  aObjBranding: ").append(aObjBranding).append("\n");

@@ -23,9 +23,9 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
-import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseError;
 import org.openapitools.client.model.EzsignuserEditObjectV1Request;
+import org.openapitools.client.model.EzsignuserEditObjectV1Response;
 import org.openapitools.client.model.EzsignuserGetObjectV2Response;
 
 import org.apache.http.HttpEntity;
@@ -63,9 +63,9 @@ public class ObjectEzsignuserApi {
   * 
    * @param pkiEzsignuserID The unique ID of the Ezsignuser
    * @param ezsignuserEditObjectV1Request 
-   * @return CommonResponse
+   * @return EzsignuserEditObjectV1Response
   */
-  public CommonResponse ezsignuserEditObjectV1 (Integer pkiEzsignuserID, EzsignuserEditObjectV1Request ezsignuserEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public EzsignuserEditObjectV1Response ezsignuserEditObjectV1 (Integer pkiEzsignuserID, EzsignuserEditObjectV1Request ezsignuserEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = ezsignuserEditObjectV1Request;
     // verify the required parameter 'pkiEzsignuserID' is set
     if (pkiEzsignuserID == null) {
@@ -106,7 +106,7 @@ public class ObjectEzsignuserApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
+         return (EzsignuserEditObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsignuserEditObjectV1Response.class);
       } else {
          return null;
       }
@@ -132,7 +132,7 @@ public class ObjectEzsignuserApi {
    * 
    * @param pkiEzsignuserID The unique ID of the Ezsignuser   * @param ezsignuserEditObjectV1Request 
   */
-  public void ezsignuserEditObjectV1 (Integer pkiEzsignuserID, EzsignuserEditObjectV1Request ezsignuserEditObjectV1Request, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void ezsignuserEditObjectV1 (Integer pkiEzsignuserID, EzsignuserEditObjectV1Request ezsignuserEditObjectV1Request, final Response.Listener<EzsignuserEditObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = ezsignuserEditObjectV1Request;
 
     // verify the required parameter 'pkiEzsignuserID' is set
@@ -182,7 +182,7 @@ public class ObjectEzsignuserApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
+              responseListener.onResponse((EzsignuserEditObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsignuserEditObjectV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

@@ -14,8 +14,9 @@ package org.openapitools.client.model;
 
 import java.util.*;
 import org.openapitools.client.model.CommonAudit;
+import org.openapitools.client.model.CustomEzmaxinvoicingEzsigndocumentResponse;
+import org.openapitools.client.model.CustomEzmaxinvoicingEzsignfolderResponse;
 import org.openapitools.client.model.CustomEzmaxpricingResponse;
-import org.openapitools.client.model.EzmaxinvoicingResponse;
 import org.openapitools.client.model.EzmaxinvoicingagentResponseCompound;
 import org.openapitools.client.model.EzmaxinvoicingcontractResponseCompound;
 import org.openapitools.client.model.EzmaxinvoicingsummaryexternalResponseCompound;
@@ -30,7 +31,7 @@ import com.google.gson.annotations.SerializedName;
  * A Ezmaxinvoicing Object
  **/
 @ApiModel(description = "A Ezmaxinvoicing Object")
-public class EzmaxinvoicingResponseCompound extends EzmaxinvoicingResponse {
+public class EzmaxinvoicingResponseCompound {
   
   @SerializedName("pkiEzmaxinvoicingID")
   private Integer pkiEzmaxinvoicingID = null;
@@ -380,7 +381,7 @@ public class EzmaxinvoicingResponseCompound extends EzmaxinvoicingResponse {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzmaxinvoicingResponseCompound {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  pkiEzmaxinvoicingID: ").append(pkiEzmaxinvoicingID).append("\n");
     sb.append("  fkiEzmaxinvoicingcontractID: ").append(fkiEzmaxinvoicingcontractID).append("\n");
     sb.append("  fkiEzmaxpricingID: ").append(fkiEzmaxpricingID).append("\n");

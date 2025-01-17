@@ -13,7 +13,6 @@
 package org.openapitools.client.model;
 
 import org.openapitools.client.model.FieldEPhoneType;
-import org.openapitools.client.model.PhoneResponse;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -21,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
  * A Phone Object and children to create a complete structure
  **/
 @ApiModel(description = "A Phone Object and children to create a complete structure")
-public class PhoneResponseCompound extends PhoneResponse {
+public class PhoneResponseCompound {
   
   @SerializedName("pkiPhoneID")
   private Integer pkiPhoneID = null;
@@ -137,7 +136,7 @@ public class PhoneResponseCompound extends PhoneResponse {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class PhoneResponseCompound {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  pkiPhoneID: ").append(pkiPhoneID).append("\n");
     sb.append("  fkiPhonetypeID: ").append(fkiPhonetypeID).append("\n");
     sb.append("  ePhoneType: ").append(ePhoneType).append("\n");

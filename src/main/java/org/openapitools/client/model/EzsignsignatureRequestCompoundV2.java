@@ -14,9 +14,8 @@ package org.openapitools.client.model;
 
 import java.util.*;
 import org.openapitools.client.model.EnumTextvalidation;
-import org.openapitools.client.model.EzsignelementdependencyRequest;
-import org.openapitools.client.model.EzsignsignatureRequest;
-import org.openapitools.client.model.EzsignsignaturecustomdateRequestV2;
+import org.openapitools.client.model.EzsignelementdependencyRequestCompound;
+import org.openapitools.client.model.EzsignsignaturecustomdateRequestCompoundV2;
 import org.openapitools.client.model.FieldEEzsignsignatureAttachmentnamesource;
 import org.openapitools.client.model.FieldEEzsignsignatureConsultationtrigger;
 import org.openapitools.client.model.FieldEEzsignsignatureDependencyrequirement;
@@ -30,7 +29,7 @@ import com.google.gson.annotations.SerializedName;
  * An Ezsignsignature Object and children to create a complete structure
  **/
 @ApiModel(description = "An Ezsignsignature Object and children to create a complete structure")
-public class EzsignsignatureRequestCompoundV2 extends EzsignsignatureRequest {
+public class EzsignsignatureRequestCompoundV2 {
   
   @SerializedName("pkiEzsignsignatureID")
   private Integer pkiEzsignsignatureID = null;
@@ -508,7 +507,7 @@ public class EzsignsignatureRequestCompoundV2 extends EzsignsignatureRequest {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignsignatureRequestCompoundV2 {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  pkiEzsignsignatureID: ").append(pkiEzsignsignatureID).append("\n");
     sb.append("  fkiEzsignfoldersignerassociationID: ").append(fkiEzsignfoldersignerassociationID).append("\n");
     sb.append("  iEzsignpagePagenumber: ").append(iEzsignpagePagenumber).append("\n");

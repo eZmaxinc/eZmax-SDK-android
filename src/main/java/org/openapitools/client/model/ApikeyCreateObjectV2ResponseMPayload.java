@@ -13,7 +13,7 @@
 package org.openapitools.client.model;
 
 import java.util.*;
-import org.openapitools.client.model.ApikeyResponse;
+import org.openapitools.client.model.ApikeyResponseCompound;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 

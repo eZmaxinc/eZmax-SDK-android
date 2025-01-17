@@ -13,12 +13,11 @@
 package org.openapitools.client.model;
 
 import java.util.*;
-import org.openapitools.client.model.AddressRequest;
-import org.openapitools.client.model.ContactinformationsRequestV2;
-import org.openapitools.client.model.EmailRequest;
+import org.openapitools.client.model.AddressRequestCompound;
+import org.openapitools.client.model.EmailRequestCompound;
 import org.openapitools.client.model.FieldEContactinformationsType;
-import org.openapitools.client.model.PhoneRequest;
-import org.openapitools.client.model.WebsiteRequest;
+import org.openapitools.client.model.PhoneRequestCompound;
+import org.openapitools.client.model.WebsiteRequestCompound;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -26,7 +25,7 @@ import com.google.gson.annotations.SerializedName;
  * A Contactinformations Object and children to create a complete structure
  **/
 @ApiModel(description = "A Contactinformations Object and children to create a complete structure")
-public class ContactinformationsRequestCompoundV2 extends ContactinformationsRequestV2 {
+public class ContactinformationsRequestCompoundV2 {
   
   @SerializedName("eContactinformationsType")
   private FieldEContactinformationsType eContactinformationsType = null;
@@ -181,7 +180,7 @@ public class ContactinformationsRequestCompoundV2 extends ContactinformationsReq
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class ContactinformationsRequestCompoundV2 {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  eContactinformationsType: ").append(eContactinformationsType).append("\n");
     sb.append("  iAddressDefault: ").append(iAddressDefault).append("\n");
     sb.append("  iPhoneDefault: ").append(iPhoneDefault).append("\n");

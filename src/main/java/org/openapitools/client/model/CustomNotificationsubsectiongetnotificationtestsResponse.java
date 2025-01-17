@@ -15,7 +15,6 @@ package org.openapitools.client.model;
 import java.util.*;
 import org.openapitools.client.model.CustomNotificationtestgetnotificationtestsResponse;
 import org.openapitools.client.model.MultilingualNotificationsubsectionName;
-import org.openapitools.client.model.NotificationsubsectionResponse;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -23,7 +22,7 @@ import com.google.gson.annotations.SerializedName;
  * A Notificationsubsection Object in the context of getNotificationtests
  **/
 @ApiModel(description = "A Notificationsubsection Object in the context of getNotificationtests")
-public class CustomNotificationsubsectiongetnotificationtestsResponse extends NotificationsubsectionResponse {
+public class CustomNotificationsubsectiongetnotificationtestsResponse {
   
   @SerializedName("pkiNotificationsubsectionID")
   private Integer pkiNotificationsubsectionID = null;
@@ -138,7 +137,7 @@ public class CustomNotificationsubsectiongetnotificationtestsResponse extends No
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class CustomNotificationsubsectiongetnotificationtestsResponse {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  pkiNotificationsubsectionID: ").append(pkiNotificationsubsectionID).append("\n");
     sb.append("  fkiNotificationsectionID: ").append(fkiNotificationsectionID).append("\n");
     sb.append("  objNotificationsubsectionName: ").append(objNotificationsubsectionName).append("\n");

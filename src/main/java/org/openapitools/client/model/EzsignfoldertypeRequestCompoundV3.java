@@ -13,7 +13,6 @@
 package org.openapitools.client.model;
 
 import java.util.*;
-import org.openapitools.client.model.EzsignfoldertypeRequestV3;
 import org.openapitools.client.model.FieldEEzsignfoldertypeCompletion;
 import org.openapitools.client.model.FieldEEzsignfoldertypeDisposal;
 import org.openapitools.client.model.FieldEEzsignfoldertypeDocumentdependency;
@@ -29,7 +28,7 @@ import com.google.gson.annotations.SerializedName;
  * A Ezsignfoldertype Object and children
  **/
 @ApiModel(description = "A Ezsignfoldertype Object and children")
-public class EzsignfoldertypeRequestCompoundV3 extends EzsignfoldertypeRequestV3 {
+public class EzsignfoldertypeRequestCompoundV3 {
   
   @SerializedName("pkiEzsignfoldertypeID")
   private Integer pkiEzsignfoldertypeID = null;
@@ -996,7 +995,7 @@ public class EzsignfoldertypeRequestCompoundV3 extends EzsignfoldertypeRequestV3
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignfoldertypeRequestCompoundV3 {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  pkiEzsignfoldertypeID: ").append(pkiEzsignfoldertypeID).append("\n");
     sb.append("  objEzsignfoldertypeName: ").append(objEzsignfoldertypeName).append("\n");
     sb.append("  fkiBrandingID: ").append(fkiBrandingID).append("\n");

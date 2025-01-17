@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 
 ## domainDeleteObjectV1
 
-> CommonResponse domainDeleteObjectV1(pkiDomainID)
+> DomainDeleteObjectV1Response domainDeleteObjectV1(pkiDomainID)
 
 Delete an existing Domain
 
@@ -74,7 +74,7 @@ Delete an existing Domain
 ObjectDomainApi apiInstance = new ObjectDomainApi();
 Integer pkiDomainID = null; // Integer | The unique ID of the Domain
 try {
-    CommonResponse result = apiInstance.domainDeleteObjectV1(pkiDomainID);
+    DomainDeleteObjectV1Response result = apiInstance.domainDeleteObjectV1(pkiDomainID);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectDomainApi#domainDeleteObjectV1");
@@ -91,7 +91,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**DomainDeleteObjectV1Response**](DomainDeleteObjectV1Response.md)
 
 ### Authorization
 

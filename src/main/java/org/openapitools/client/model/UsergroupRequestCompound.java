@@ -14,7 +14,6 @@ package org.openapitools.client.model;
 
 import org.openapitools.client.model.EmailRequest;
 import org.openapitools.client.model.MultilingualUsergroupName;
-import org.openapitools.client.model.UsergroupRequest;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -22,7 +21,7 @@ import com.google.gson.annotations.SerializedName;
  * A Usergroup Object and children
  **/
 @ApiModel(description = "A Usergroup Object and children")
-public class UsergroupRequestCompound extends UsergroupRequest {
+public class UsergroupRequestCompound {
   
   @SerializedName("pkiUsergroupID")
   private Integer pkiUsergroupID = null;
@@ -92,7 +91,7 @@ public class UsergroupRequestCompound extends UsergroupRequest {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class UsergroupRequestCompound {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  pkiUsergroupID: ").append(pkiUsergroupID).append("\n");
     sb.append("  objEmail: ").append(objEmail).append("\n");
     sb.append("  objUsergroupName: ").append(objUsergroupName).append("\n");

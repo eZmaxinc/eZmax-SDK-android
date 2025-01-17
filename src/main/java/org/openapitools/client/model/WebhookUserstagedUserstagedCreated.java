@@ -13,10 +13,9 @@
 package org.openapitools.client.model;
 
 import java.util.*;
-import org.openapitools.client.model.AttemptResponse;
-import org.openapitools.client.model.CommonWebhook;
+import org.openapitools.client.model.AttemptResponseCompound;
 import org.openapitools.client.model.CustomWebhookResponse;
-import org.openapitools.client.model.UserstagedResponse;
+import org.openapitools.client.model.UserstagedResponseCompound;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -24,14 +23,14 @@ import com.google.gson.annotations.SerializedName;
  * This is the base Webhook object
  **/
 @ApiModel(description = "This is the base Webhook object")
-public class WebhookUserstagedUserstagedCreated extends CommonWebhook {
+public class WebhookUserstagedUserstagedCreated {
   
   @SerializedName("objWebhook")
   private CustomWebhookResponse objWebhook = null;
   @SerializedName("a_objAttempt")
   private List<AttemptResponseCompound> aObjAttempt = null;
   @SerializedName("objUserstaged")
-  private UserstagedResponse objUserstaged = null;
+  private UserstagedResponseCompound objUserstaged = null;
 
   /**
    **/
@@ -55,13 +54,12 @@ public class WebhookUserstagedUserstagedCreated extends CommonWebhook {
   }
 
   /**
-   * A Userstaged Object
    **/
-  @ApiModelProperty(required = true, value = "A Userstaged Object")
-  public UserstagedResponse getObjUserstaged() {
+  @ApiModelProperty(required = true, value = "")
+  public UserstagedResponseCompound getObjUserstaged() {
     return objUserstaged;
   }
-  public void setObjUserstaged(UserstagedResponse objUserstaged) {
+  public void setObjUserstaged(UserstagedResponseCompound objUserstaged) {
     this.objUserstaged = objUserstaged;
   }
 
@@ -93,7 +91,7 @@ public class WebhookUserstagedUserstagedCreated extends CommonWebhook {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class WebhookUserstagedUserstagedCreated {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  objWebhook: ").append(objWebhook).append("\n");
     sb.append("  aObjAttempt: ").append(aObjAttempt).append("\n");
     sb.append("  objUserstaged: ").append(objUserstaged).append("\n");

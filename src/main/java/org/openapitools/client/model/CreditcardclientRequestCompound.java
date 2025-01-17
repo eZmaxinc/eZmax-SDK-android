@@ -12,7 +12,6 @@
 
 package org.openapitools.client.model;
 
-import org.openapitools.client.model.CreditcardclientRequest;
 import org.openapitools.client.model.CreditcarddetailRequest;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
@@ -21,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
  * A Creditcardclient Object and children
  **/
 @ApiModel(description = "A Creditcardclient Object and children")
-public class CreditcardclientRequestCompound extends CreditcardclientRequest {
+public class CreditcardclientRequestCompound {
   
   @SerializedName("pkiCreditcardclientID")
   private Integer pkiCreditcardclientID = null;
@@ -182,7 +181,7 @@ public class CreditcardclientRequestCompound extends CreditcardclientRequest {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class CreditcardclientRequestCompound {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  pkiCreditcardclientID: ").append(pkiCreditcardclientID).append("\n");
     sb.append("  fksCreditcardtokenID: ").append(fksCreditcardtokenID).append("\n");
     sb.append("  bCreditcardclientrelationIsdefault: ").append(bCreditcardclientrelationIsdefault).append("\n");

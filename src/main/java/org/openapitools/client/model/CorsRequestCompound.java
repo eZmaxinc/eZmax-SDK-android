@@ -12,7 +12,6 @@
 
 package org.openapitools.client.model;
 
-import org.openapitools.client.model.CorsRequest;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -20,7 +19,7 @@ import com.google.gson.annotations.SerializedName;
  * A Cors Object and children
  **/
 @ApiModel(description = "A Cors Object and children")
-public class CorsRequestCompound extends CorsRequest {
+public class CorsRequestCompound {
   
   @SerializedName("pkiCorsID")
   private Integer pkiCorsID = null;
@@ -93,7 +92,7 @@ public class CorsRequestCompound extends CorsRequest {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class CorsRequestCompound {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  pkiCorsID: ").append(pkiCorsID).append("\n");
     sb.append("  fkiApikeyID: ").append(fkiApikeyID).append("\n");
     sb.append("  sCorsEntryurl: ").append(sCorsEntryurl).append("\n");

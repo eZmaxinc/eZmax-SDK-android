@@ -14,8 +14,7 @@ package org.openapitools.client.model;
 
 import java.util.*;
 import org.openapitools.client.model.EnumHorizontalalignment;
-import org.openapitools.client.model.EzsignelementdependencyRequest;
-import org.openapitools.client.model.EzsignformfieldRequest;
+import org.openapitools.client.model.EzsignelementdependencyRequestCompound;
 import org.openapitools.client.model.FieldEEzsignformfieldDependencyrequirement;
 import org.openapitools.client.model.TextstylestaticRequestCompound;
 import io.swagger.annotations.*;
@@ -25,7 +24,7 @@ import com.google.gson.annotations.SerializedName;
  * An Ezsignformfield Object and children to create a complete structure
  **/
 @ApiModel(description = "An Ezsignformfield Object and children to create a complete structure")
-public class EzsignformfieldRequestCompound extends EzsignformfieldRequest {
+public class EzsignformfieldRequestCompound {
   
   @SerializedName("pkiEzsignformfieldID")
   private Integer pkiEzsignformfieldID = null;
@@ -277,7 +276,7 @@ public class EzsignformfieldRequestCompound extends EzsignformfieldRequest {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignformfieldRequestCompound {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  pkiEzsignformfieldID: ").append(pkiEzsignformfieldID).append("\n");
     sb.append("  iEzsignpagePagenumber: ").append(iEzsignpagePagenumber).append("\n");
     sb.append("  sEzsignformfieldLabel: ").append(sEzsignformfieldLabel).append("\n");

@@ -13,7 +13,7 @@
 package org.openapitools.client.model;
 
 import org.openapitools.client.model.CommonAudit;
-import org.openapitools.client.model.EmailResponse;
+import org.openapitools.client.model.EmailResponseCompound;
 import org.openapitools.client.model.FieldEUserEzsignaccess;
 import org.openapitools.client.model.FieldEUserLogintype;
 import org.openapitools.client.model.FieldEUserOrigin;
@@ -55,7 +55,7 @@ public class UserResponse {
   @SerializedName("sLanguageNameX")
   private String sLanguageNameX = null;
   @SerializedName("objEmail")
-  private EmailResponse objEmail = null;
+  private EmailResponseCompound objEmail = null;
   @SerializedName("fkiBillingentityinternalID")
   private Integer fkiBillingentityinternalID = null;
   @SerializedName("sBillingentityinternalDescriptionX")
@@ -260,13 +260,12 @@ public class UserResponse {
   }
 
   /**
-   * An Email Object and children to create a complete structure
    **/
-  @ApiModelProperty(required = true, value = "An Email Object and children to create a complete structure")
-  public EmailResponse getObjEmail() {
+  @ApiModelProperty(required = true, value = "")
+  public EmailResponseCompound getObjEmail() {
     return objEmail;
   }
-  public void setObjEmail(EmailResponse objEmail) {
+  public void setObjEmail(EmailResponseCompound objEmail) {
     this.objEmail = objEmail;
   }
 

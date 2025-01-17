@@ -12,7 +12,6 @@
 
 package org.openapitools.client.model;
 
-import org.openapitools.client.model.UsergroupmembershipRequest;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -20,7 +19,7 @@ import com.google.gson.annotations.SerializedName;
  * A Usergroupmembership Object and children
  **/
 @ApiModel(description = "A Usergroupmembership Object and children")
-public class UsergroupmembershipRequestCompound extends UsergroupmembershipRequest {
+public class UsergroupmembershipRequestCompound {
   
   @SerializedName("pkiUsergroupmembershipID")
   private Integer pkiUsergroupmembershipID = null;
@@ -112,7 +111,7 @@ public class UsergroupmembershipRequestCompound extends UsergroupmembershipReque
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class UsergroupmembershipRequestCompound {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  pkiUsergroupmembershipID: ").append(pkiUsergroupmembershipID).append("\n");
     sb.append("  fkiUsergroupID: ").append(fkiUsergroupID).append("\n");
     sb.append("  fkiUserID: ").append(fkiUserID).append("\n");

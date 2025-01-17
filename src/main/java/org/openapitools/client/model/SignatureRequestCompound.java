@@ -13,7 +13,6 @@
 package org.openapitools.client.model;
 
 import org.openapitools.client.model.FieldESignaturePreference;
-import org.openapitools.client.model.SignatureRequest;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -21,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
  * A Signature Object and children
  **/
 @ApiModel(description = "A Signature Object and children")
-public class SignatureRequestCompound extends SignatureRequest {
+public class SignatureRequestCompound {
   
   @SerializedName("pkiSignatureID")
   private Integer pkiSignatureID = null;
@@ -123,7 +122,7 @@ public class SignatureRequestCompound extends SignatureRequest {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class SignatureRequestCompound {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  pkiSignatureID: ").append(pkiSignatureID).append("\n");
     sb.append("  fkiFontID: ").append(fkiFontID).append("\n");
     sb.append("  eSignaturePreference: ").append(eSignaturePreference).append("\n");

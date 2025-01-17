@@ -14,7 +14,6 @@ package org.openapitools.client.model;
 
 import java.util.*;
 import org.openapitools.client.model.CustomDiscussionconfigurationResponse;
-import org.openapitools.client.model.DiscussionResponse;
 import org.openapitools.client.model.DiscussionmembershipResponseCompound;
 import org.openapitools.client.model.DiscussionmessageResponseCompound;
 import io.swagger.annotations.*;
@@ -24,7 +23,7 @@ import com.google.gson.annotations.SerializedName;
  * A Discussion Object
  **/
 @ApiModel(description = "A Discussion Object")
-public class DiscussionResponseCompound extends DiscussionResponse {
+public class DiscussionResponseCompound {
   
   @SerializedName("pkiDiscussionID")
   private Integer pkiDiscussionID = null;
@@ -183,7 +182,7 @@ public class DiscussionResponseCompound extends DiscussionResponse {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class DiscussionResponseCompound {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  pkiDiscussionID: ").append(pkiDiscussionID).append("\n");
     sb.append("  sDiscussionDescription: ").append(sDiscussionDescription).append("\n");
     sb.append("  bDiscussionClosed: ").append(bDiscussionClosed).append("\n");

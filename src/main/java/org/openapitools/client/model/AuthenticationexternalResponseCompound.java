@@ -12,7 +12,6 @@
 
 package org.openapitools.client.model;
 
-import org.openapitools.client.model.AuthenticationexternalResponse;
 import org.openapitools.client.model.CommonAudit;
 import org.openapitools.client.model.FieldEAuthenticationexternalType;
 import io.swagger.annotations.*;
@@ -22,7 +21,7 @@ import com.google.gson.annotations.SerializedName;
  * A Authenticationexternal Object
  **/
 @ApiModel(description = "A Authenticationexternal Object")
-public class AuthenticationexternalResponseCompound extends AuthenticationexternalResponse {
+public class AuthenticationexternalResponseCompound {
   
   @SerializedName("pkiAuthenticationexternalID")
   private Integer pkiAuthenticationexternalID = null;
@@ -137,7 +136,7 @@ public class AuthenticationexternalResponseCompound extends Authenticationextern
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class AuthenticationexternalResponseCompound {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  pkiAuthenticationexternalID: ").append(pkiAuthenticationexternalID).append("\n");
     sb.append("  sAuthenticationexternalDescription: ").append(sAuthenticationexternalDescription).append("\n");
     sb.append("  eAuthenticationexternalType: ").append(eAuthenticationexternalType).append("\n");

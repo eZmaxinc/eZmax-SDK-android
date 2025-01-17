@@ -14,7 +14,6 @@ package org.openapitools.client.model;
 
 import java.util.*;
 import org.openapitools.client.model.CommonAudit;
-import org.openapitools.client.model.EzsignbulksendResponse;
 import org.openapitools.client.model.EzsignbulksenddocumentmappingResponseCompound;
 import org.openapitools.client.model.EzsignbulksendsignermappingResponse;
 import org.openapitools.client.model.FieldEEzsignfoldertypePrivacylevel;
@@ -25,7 +24,7 @@ import com.google.gson.annotations.SerializedName;
  * An Ezsignbulksend Object and children to create a complete structure
  **/
 @ApiModel(description = "An Ezsignbulksend Object and children to create a complete structure")
-public class EzsignbulksendResponseCompound extends EzsignbulksendResponse {
+public class EzsignbulksendResponseCompound {
   
   @SerializedName("pkiEzsignbulksendID")
   private Integer pkiEzsignbulksendID = null;
@@ -246,7 +245,7 @@ public class EzsignbulksendResponseCompound extends EzsignbulksendResponse {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignbulksendResponseCompound {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  pkiEzsignbulksendID: ").append(pkiEzsignbulksendID).append("\n");
     sb.append("  fkiEzsignfoldertypeID: ").append(fkiEzsignfoldertypeID).append("\n");
     sb.append("  fkiLanguageID: ").append(fkiLanguageID).append("\n");

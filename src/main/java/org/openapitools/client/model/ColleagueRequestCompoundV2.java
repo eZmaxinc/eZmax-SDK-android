@@ -12,7 +12,6 @@
 
 package org.openapitools.client.model;
 
-import org.openapitools.client.model.ColleagueRequestV2;
 import org.openapitools.client.model.FieldEColleagueEzsign;
 import org.openapitools.client.model.FieldEColleagueRealestateinprogess;
 import io.swagger.annotations.*;
@@ -22,7 +21,7 @@ import com.google.gson.annotations.SerializedName;
  * A Colleague Object and children
  **/
 @ApiModel(description = "A Colleague Object and children")
-public class ColleagueRequestCompoundV2 extends ColleagueRequestV2 {
+public class ColleagueRequestCompoundV2 {
   
   @SerializedName("pkiColleagueID")
   private Integer pkiColleagueID = null;
@@ -259,7 +258,7 @@ public class ColleagueRequestCompoundV2 extends ColleagueRequestV2 {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class ColleagueRequestCompoundV2 {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  pkiColleagueID: ").append(pkiColleagueID).append("\n");
     sb.append("  fkiUserID: ").append(fkiUserID).append("\n");
     sb.append("  fkiUserIDColleague: ").append(fkiUserIDColleague).append("\n");

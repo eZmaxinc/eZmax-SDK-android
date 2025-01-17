@@ -12,7 +12,6 @@
 
 package org.openapitools.client.model;
 
-import org.openapitools.client.model.EzsignsignerRequest;
 import org.openapitools.client.model.EzsignsignerRequestCompoundContact;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
@@ -21,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
  * An Ezsignsigner Object and children to create a complete structure
  **/
 @ApiModel(description = "An Ezsignsigner Object and children to create a complete structure")
-public class EzsignsignerRequestCompound extends EzsignsignerRequest {
+public class EzsignsignerRequestCompound {
   
   @SerializedName("fkiUserlogintypeID")
   private Integer fkiUserlogintypeID = null;
@@ -142,7 +141,7 @@ public class EzsignsignerRequestCompound extends EzsignsignerRequest {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignsignerRequestCompound {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  fkiUserlogintypeID: ").append(fkiUserlogintypeID).append("\n");
     sb.append("  fkiTaxassignmentID: ").append(fkiTaxassignmentID).append("\n");
     sb.append("  fkiSecretquestionID: ").append(fkiSecretquestionID).append("\n");

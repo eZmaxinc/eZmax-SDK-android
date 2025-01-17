@@ -13,8 +13,7 @@
 package org.openapitools.client.model;
 
 import java.util.*;
-import org.openapitools.client.model.ModulesectionResponse;
-import org.openapitools.client.model.PermissionResponse;
+import org.openapitools.client.model.PermissionResponseCompound;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -22,7 +21,7 @@ import com.google.gson.annotations.SerializedName;
  * A Modulesection Object
  **/
 @ApiModel(description = "A Modulesection Object")
-public class ModulesectionResponseCompound extends ModulesectionResponse {
+public class ModulesectionResponseCompound {
   
   @SerializedName("pkiModulesectionID")
   private Integer pkiModulesectionID = null;
@@ -123,7 +122,7 @@ public class ModulesectionResponseCompound extends ModulesectionResponse {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class ModulesectionResponseCompound {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  pkiModulesectionID: ").append(pkiModulesectionID).append("\n");
     sb.append("  fkiModuleID: ").append(fkiModuleID).append("\n");
     sb.append("  sModulesectionInternalname: ").append(sModulesectionInternalname).append("\n");

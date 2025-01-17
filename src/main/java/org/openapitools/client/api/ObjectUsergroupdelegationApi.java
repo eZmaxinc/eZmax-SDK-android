@@ -23,11 +23,12 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
-import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseError;
 import org.openapitools.client.model.UsergroupdelegationCreateObjectV1Request;
 import org.openapitools.client.model.UsergroupdelegationCreateObjectV1Response;
+import org.openapitools.client.model.UsergroupdelegationDeleteObjectV1Response;
 import org.openapitools.client.model.UsergroupdelegationEditObjectV1Request;
+import org.openapitools.client.model.UsergroupdelegationEditObjectV1Response;
 import org.openapitools.client.model.UsergroupdelegationGetObjectV2Response;
 
 import org.apache.http.HttpEntity;
@@ -192,9 +193,9 @@ public class ObjectUsergroupdelegationApi {
   * Delete an existing Usergroupdelegation
   * 
    * @param pkiUsergroupdelegationID The unique ID of the Usergroupdelegation
-   * @return CommonResponse
+   * @return UsergroupdelegationDeleteObjectV1Response
   */
-  public CommonResponse usergroupdelegationDeleteObjectV1 (Integer pkiUsergroupdelegationID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public UsergroupdelegationDeleteObjectV1Response usergroupdelegationDeleteObjectV1 (Integer pkiUsergroupdelegationID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'pkiUsergroupdelegationID' is set
     if (pkiUsergroupdelegationID == null) {
@@ -229,7 +230,7 @@ public class ObjectUsergroupdelegationApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "DELETE", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
+         return (UsergroupdelegationDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", UsergroupdelegationDeleteObjectV1Response.class);
       } else {
          return null;
       }
@@ -255,7 +256,7 @@ public class ObjectUsergroupdelegationApi {
    * 
    * @param pkiUsergroupdelegationID The unique ID of the Usergroupdelegation
   */
-  public void usergroupdelegationDeleteObjectV1 (Integer pkiUsergroupdelegationID, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void usergroupdelegationDeleteObjectV1 (Integer pkiUsergroupdelegationID, final Response.Listener<UsergroupdelegationDeleteObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'pkiUsergroupdelegationID' is set
@@ -300,7 +301,7 @@ public class ObjectUsergroupdelegationApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
+              responseListener.onResponse((UsergroupdelegationDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", UsergroupdelegationDeleteObjectV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -320,9 +321,9 @@ public class ObjectUsergroupdelegationApi {
   * 
    * @param pkiUsergroupdelegationID The unique ID of the Usergroupdelegation
    * @param usergroupdelegationEditObjectV1Request 
-   * @return CommonResponse
+   * @return UsergroupdelegationEditObjectV1Response
   */
-  public CommonResponse usergroupdelegationEditObjectV1 (Integer pkiUsergroupdelegationID, UsergroupdelegationEditObjectV1Request usergroupdelegationEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public UsergroupdelegationEditObjectV1Response usergroupdelegationEditObjectV1 (Integer pkiUsergroupdelegationID, UsergroupdelegationEditObjectV1Request usergroupdelegationEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = usergroupdelegationEditObjectV1Request;
     // verify the required parameter 'pkiUsergroupdelegationID' is set
     if (pkiUsergroupdelegationID == null) {
@@ -363,7 +364,7 @@ public class ObjectUsergroupdelegationApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
+         return (UsergroupdelegationEditObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", UsergroupdelegationEditObjectV1Response.class);
       } else {
          return null;
       }
@@ -389,7 +390,7 @@ public class ObjectUsergroupdelegationApi {
    * 
    * @param pkiUsergroupdelegationID The unique ID of the Usergroupdelegation   * @param usergroupdelegationEditObjectV1Request 
   */
-  public void usergroupdelegationEditObjectV1 (Integer pkiUsergroupdelegationID, UsergroupdelegationEditObjectV1Request usergroupdelegationEditObjectV1Request, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void usergroupdelegationEditObjectV1 (Integer pkiUsergroupdelegationID, UsergroupdelegationEditObjectV1Request usergroupdelegationEditObjectV1Request, final Response.Listener<UsergroupdelegationEditObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = usergroupdelegationEditObjectV1Request;
 
     // verify the required parameter 'pkiUsergroupdelegationID' is set
@@ -439,7 +440,7 @@ public class ObjectUsergroupdelegationApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
+              responseListener.onResponse((UsergroupdelegationEditObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", UsergroupdelegationEditObjectV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

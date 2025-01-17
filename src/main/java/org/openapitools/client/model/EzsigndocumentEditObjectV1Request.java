@@ -12,7 +12,7 @@
 
 package org.openapitools.client.model;
 
-import org.openapitools.client.model.EzsigndocumentRequest;
+import org.openapitools.client.model.EzsigndocumentRequestCompound;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -23,16 +23,15 @@ import com.google.gson.annotations.SerializedName;
 public class EzsigndocumentEditObjectV1Request {
   
   @SerializedName("objEzsigndocument")
-  private EzsigndocumentRequest objEzsigndocument = null;
+  private EzsigndocumentRequestCompound objEzsigndocument = null;
 
   /**
-   * An Ezsigndocument Object and children to create a complete structure
    **/
-  @ApiModelProperty(required = true, value = "An Ezsigndocument Object and children to create a complete structure")
-  public EzsigndocumentRequest getObjEzsigndocument() {
+  @ApiModelProperty(required = true, value = "")
+  public EzsigndocumentRequestCompound getObjEzsigndocument() {
     return objEzsigndocument;
   }
-  public void setObjEzsigndocument(EzsigndocumentRequest objEzsigndocument) {
+  public void setObjEzsigndocument(EzsigndocumentRequestCompound objEzsigndocument) {
     this.objEzsigndocument = objEzsigndocument;
   }
 

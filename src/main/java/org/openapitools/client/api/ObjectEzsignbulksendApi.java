@@ -23,19 +23,21 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
-import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseError;
 import org.openapitools.client.model.EzsignbulksendCreateEzsignbulksendtransmissionV2Request;
 import org.openapitools.client.model.EzsignbulksendCreateEzsignbulksendtransmissionV2Response;
 import org.openapitools.client.model.EzsignbulksendCreateObjectV1Request;
 import org.openapitools.client.model.EzsignbulksendCreateObjectV1Response;
+import org.openapitools.client.model.EzsignbulksendDeleteObjectV1Response;
 import org.openapitools.client.model.EzsignbulksendEditObjectV1Request;
+import org.openapitools.client.model.EzsignbulksendEditObjectV1Response;
 import org.openapitools.client.model.EzsignbulksendGetEzsignbulksendtransmissionsV1Response;
 import org.openapitools.client.model.EzsignbulksendGetEzsignsignaturesAutomaticV1Response;
 import org.openapitools.client.model.EzsignbulksendGetFormsDataV1Response;
 import org.openapitools.client.model.EzsignbulksendGetListV1Response;
 import org.openapitools.client.model.EzsignbulksendGetObjectV2Response;
 import org.openapitools.client.model.EzsignbulksendReorderV1Request;
+import org.openapitools.client.model.EzsignbulksendReorderV1Response;
 import java.io.File;
 import org.openapitools.client.model.HeaderAcceptLanguage;
 
@@ -340,9 +342,9 @@ public class ObjectEzsignbulksendApi {
   * Delete an existing Ezsignbulksend
   * 
    * @param pkiEzsignbulksendID 
-   * @return CommonResponse
+   * @return EzsignbulksendDeleteObjectV1Response
   */
-  public CommonResponse ezsignbulksendDeleteObjectV1 (Integer pkiEzsignbulksendID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public EzsignbulksendDeleteObjectV1Response ezsignbulksendDeleteObjectV1 (Integer pkiEzsignbulksendID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'pkiEzsignbulksendID' is set
     if (pkiEzsignbulksendID == null) {
@@ -377,7 +379,7 @@ public class ObjectEzsignbulksendApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "DELETE", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
+         return (EzsignbulksendDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsignbulksendDeleteObjectV1Response.class);
       } else {
          return null;
       }
@@ -403,7 +405,7 @@ public class ObjectEzsignbulksendApi {
    * 
    * @param pkiEzsignbulksendID 
   */
-  public void ezsignbulksendDeleteObjectV1 (Integer pkiEzsignbulksendID, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void ezsignbulksendDeleteObjectV1 (Integer pkiEzsignbulksendID, final Response.Listener<EzsignbulksendDeleteObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'pkiEzsignbulksendID' is set
@@ -448,7 +450,7 @@ public class ObjectEzsignbulksendApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
+              responseListener.onResponse((EzsignbulksendDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsignbulksendDeleteObjectV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -468,9 +470,9 @@ public class ObjectEzsignbulksendApi {
   * 
    * @param pkiEzsignbulksendID 
    * @param ezsignbulksendEditObjectV1Request 
-   * @return CommonResponse
+   * @return EzsignbulksendEditObjectV1Response
   */
-  public CommonResponse ezsignbulksendEditObjectV1 (Integer pkiEzsignbulksendID, EzsignbulksendEditObjectV1Request ezsignbulksendEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public EzsignbulksendEditObjectV1Response ezsignbulksendEditObjectV1 (Integer pkiEzsignbulksendID, EzsignbulksendEditObjectV1Request ezsignbulksendEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = ezsignbulksendEditObjectV1Request;
     // verify the required parameter 'pkiEzsignbulksendID' is set
     if (pkiEzsignbulksendID == null) {
@@ -511,7 +513,7 @@ public class ObjectEzsignbulksendApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
+         return (EzsignbulksendEditObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsignbulksendEditObjectV1Response.class);
       } else {
          return null;
       }
@@ -537,7 +539,7 @@ public class ObjectEzsignbulksendApi {
    * 
    * @param pkiEzsignbulksendID    * @param ezsignbulksendEditObjectV1Request 
   */
-  public void ezsignbulksendEditObjectV1 (Integer pkiEzsignbulksendID, EzsignbulksendEditObjectV1Request ezsignbulksendEditObjectV1Request, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void ezsignbulksendEditObjectV1 (Integer pkiEzsignbulksendID, EzsignbulksendEditObjectV1Request ezsignbulksendEditObjectV1Request, final Response.Listener<EzsignbulksendEditObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = ezsignbulksendEditObjectV1Request;
 
     // verify the required parameter 'pkiEzsignbulksendID' is set
@@ -587,7 +589,7 @@ public class ObjectEzsignbulksendApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
+              responseListener.onResponse((EzsignbulksendEditObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsignbulksendEditObjectV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -1386,9 +1388,9 @@ public class ObjectEzsignbulksendApi {
   * 
    * @param pkiEzsignbulksendID 
    * @param ezsignbulksendReorderV1Request 
-   * @return CommonResponse
+   * @return EzsignbulksendReorderV1Response
   */
-  public CommonResponse ezsignbulksendReorderV1 (Integer pkiEzsignbulksendID, EzsignbulksendReorderV1Request ezsignbulksendReorderV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public EzsignbulksendReorderV1Response ezsignbulksendReorderV1 (Integer pkiEzsignbulksendID, EzsignbulksendReorderV1Request ezsignbulksendReorderV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = ezsignbulksendReorderV1Request;
     // verify the required parameter 'pkiEzsignbulksendID' is set
     if (pkiEzsignbulksendID == null) {
@@ -1429,7 +1431,7 @@ public class ObjectEzsignbulksendApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
+         return (EzsignbulksendReorderV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsignbulksendReorderV1Response.class);
       } else {
          return null;
       }
@@ -1455,7 +1457,7 @@ public class ObjectEzsignbulksendApi {
    * 
    * @param pkiEzsignbulksendID    * @param ezsignbulksendReorderV1Request 
   */
-  public void ezsignbulksendReorderV1 (Integer pkiEzsignbulksendID, EzsignbulksendReorderV1Request ezsignbulksendReorderV1Request, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void ezsignbulksendReorderV1 (Integer pkiEzsignbulksendID, EzsignbulksendReorderV1Request ezsignbulksendReorderV1Request, final Response.Listener<EzsignbulksendReorderV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = ezsignbulksendReorderV1Request;
 
     // verify the required parameter 'pkiEzsignbulksendID' is set
@@ -1505,7 +1507,7 @@ public class ObjectEzsignbulksendApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
+              responseListener.onResponse((EzsignbulksendReorderV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsignbulksendReorderV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

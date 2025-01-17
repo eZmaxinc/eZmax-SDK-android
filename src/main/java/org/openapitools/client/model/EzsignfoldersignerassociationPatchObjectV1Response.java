@@ -12,7 +12,6 @@
 
 package org.openapitools.client.model;
 
-import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseObjDebug;
 import org.openapitools.client.model.CommonResponseObjDebugPayload;
 import io.swagger.annotations.*;
@@ -22,7 +21,7 @@ import com.google.gson.annotations.SerializedName;
  * Response for PATCH /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}
  **/
 @ApiModel(description = "Response for PATCH /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}")
-public class EzsignfoldersignerassociationPatchObjectV1Response extends CommonResponse {
+public class EzsignfoldersignerassociationPatchObjectV1Response {
   
   @SerializedName("objDebugPayload")
   private CommonResponseObjDebugPayload objDebugPayload = null;
@@ -75,7 +74,7 @@ public class EzsignfoldersignerassociationPatchObjectV1Response extends CommonRe
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignfoldersignerassociationPatchObjectV1Response {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  objDebugPayload: ").append(objDebugPayload).append("\n");
     sb.append("  objDebug: ").append(objDebug).append("\n");
     sb.append("}\n");

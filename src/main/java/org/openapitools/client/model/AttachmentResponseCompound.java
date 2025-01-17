@@ -12,7 +12,6 @@
 
 package org.openapitools.client.model;
 
-import org.openapitools.client.model.AttachmentResponse;
 import org.openapitools.client.model.CommonAudit;
 import org.openapitools.client.model.FieldEAttachmentDocumenttype;
 import org.openapitools.client.model.FieldEAttachmentPrivacy;
@@ -25,7 +24,7 @@ import com.google.gson.annotations.SerializedName;
  * A Attachment Object
  **/
 @ApiModel(description = "A Attachment Object")
-public class AttachmentResponseCompound extends AttachmentResponse {
+public class AttachmentResponseCompound {
   
   @SerializedName("pkiAttachmentID")
   private Integer pkiAttachmentID = null;
@@ -1042,7 +1041,7 @@ public class AttachmentResponseCompound extends AttachmentResponse {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class AttachmentResponseCompound {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  pkiAttachmentID: ").append(pkiAttachmentID).append("\n");
     sb.append("  fkiComputerID: ").append(fkiComputerID).append("\n");
     sb.append("  fkiAdjustmentID: ").append(fkiAdjustmentID).append("\n");

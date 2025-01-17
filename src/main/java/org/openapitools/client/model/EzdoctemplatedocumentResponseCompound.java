@@ -12,7 +12,6 @@
 
 package org.openapitools.client.model;
 
-import org.openapitools.client.model.EzdoctemplatedocumentResponse;
 import org.openapitools.client.model.FieldEEzdoctemplatedocumentPrivacylevel;
 import org.openapitools.client.model.MultilingualEzdoctemplatedocumentName;
 import io.swagger.annotations.*;
@@ -22,7 +21,7 @@ import com.google.gson.annotations.SerializedName;
  * A Ezdoctemplatedocument Object
  **/
 @ApiModel(description = "A Ezdoctemplatedocument Object")
-public class EzdoctemplatedocumentResponseCompound extends EzdoctemplatedocumentResponse {
+public class EzdoctemplatedocumentResponseCompound {
   
   @SerializedName("pkiEzdoctemplatedocumentID")
   private Integer pkiEzdoctemplatedocumentID = null;
@@ -235,7 +234,7 @@ public class EzdoctemplatedocumentResponseCompound extends Ezdoctemplatedocument
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzdoctemplatedocumentResponseCompound {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  pkiEzdoctemplatedocumentID: ").append(pkiEzdoctemplatedocumentID).append("\n");
     sb.append("  fkiLanguageID: ").append(fkiLanguageID).append("\n");
     sb.append("  fkiEzsignfoldertypeID: ").append(fkiEzsignfoldertypeID).append("\n");

@@ -6,7 +6,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjEzsignfolder** | [**List&lt;EzsignfolderRequestCompoundV3&gt;**](EzsignfolderRequestV3.md) |  | 
+**aObjEzsignfolder** | [**List&lt;EzsignfolderRequestCompoundV3&gt;**](EzsignfolderRequestCompoundV3.md) |  | 
 
 
 

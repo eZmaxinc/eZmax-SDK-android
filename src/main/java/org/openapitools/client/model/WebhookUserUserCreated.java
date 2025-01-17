@@ -13,10 +13,9 @@
 package org.openapitools.client.model;
 
 import java.util.*;
-import org.openapitools.client.model.AttemptResponse;
-import org.openapitools.client.model.CommonWebhook;
+import org.openapitools.client.model.AttemptResponseCompound;
 import org.openapitools.client.model.CustomWebhookResponse;
-import org.openapitools.client.model.UserResponse;
+import org.openapitools.client.model.UserResponseCompound;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -24,14 +23,14 @@ import com.google.gson.annotations.SerializedName;
  * This is the base Webhook object
  **/
 @ApiModel(description = "This is the base Webhook object")
-public class WebhookUserUserCreated extends CommonWebhook {
+public class WebhookUserUserCreated {
   
   @SerializedName("objWebhook")
   private CustomWebhookResponse objWebhook = null;
   @SerializedName("a_objAttempt")
   private List<AttemptResponseCompound> aObjAttempt = null;
   @SerializedName("objUser")
-  private UserResponse objUser = null;
+  private UserResponseCompound objUser = null;
 
   /**
    **/
@@ -55,13 +54,12 @@ public class WebhookUserUserCreated extends CommonWebhook {
   }
 
   /**
-   * A User Object and children to create a complete structure
    **/
-  @ApiModelProperty(required = true, value = "A User Object and children to create a complete structure")
-  public UserResponse getObjUser() {
+  @ApiModelProperty(required = true, value = "")
+  public UserResponseCompound getObjUser() {
     return objUser;
   }
-  public void setObjUser(UserResponse objUser) {
+  public void setObjUser(UserResponseCompound objUser) {
     this.objUser = objUser;
   }
 
@@ -93,7 +91,7 @@ public class WebhookUserUserCreated extends CommonWebhook {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class WebhookUserUserCreated {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  objWebhook: ").append(objWebhook).append("\n");
     sb.append("  aObjAttempt: ").append(aObjAttempt).append("\n");
     sb.append("  objUser: ").append(objUser).append("\n");

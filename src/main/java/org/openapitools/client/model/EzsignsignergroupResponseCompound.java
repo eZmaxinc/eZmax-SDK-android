@@ -12,7 +12,6 @@
 
 package org.openapitools.client.model;
 
-import org.openapitools.client.model.EzsignsignergroupResponse;
 import org.openapitools.client.model.MultilingualEzsignsignergroupDescription;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
@@ -21,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
  * An Ezsignsignergroup Object
  **/
 @ApiModel(description = "An Ezsignsignergroup Object")
-public class EzsignsignergroupResponseCompound extends EzsignsignergroupResponse {
+public class EzsignsignergroupResponseCompound {
   
   @SerializedName("pkiEzsignsignergroupID")
   private Integer pkiEzsignsignergroupID = null;
@@ -92,7 +91,7 @@ public class EzsignsignergroupResponseCompound extends EzsignsignergroupResponse
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignsignergroupResponseCompound {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  pkiEzsignsignergroupID: ").append(pkiEzsignsignergroupID).append("\n");
     sb.append("  objEzsignsignergroupDescription: ").append(objEzsignsignergroupDescription).append("\n");
     sb.append("  sEzsignsignergroupDescriptionX: ").append(sEzsignsignergroupDescriptionX).append("\n");

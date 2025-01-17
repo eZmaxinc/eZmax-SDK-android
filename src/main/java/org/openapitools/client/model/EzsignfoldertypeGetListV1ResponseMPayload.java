@@ -13,7 +13,6 @@
 package org.openapitools.client.model;
 
 import java.util.*;
-import org.openapitools.client.model.CommonGetListV1ResponseMPayload;
 import org.openapitools.client.model.EzsignfoldertypeListElement;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
@@ -22,7 +21,7 @@ import com.google.gson.annotations.SerializedName;
  * Payload for GET /1/object/ezsignfoldertype/getList
  **/
 @ApiModel(description = "Payload for GET /1/object/ezsignfoldertype/getList")
-public class EzsignfoldertypeGetListV1ResponseMPayload extends CommonGetListV1ResponseMPayload {
+public class EzsignfoldertypeGetListV1ResponseMPayload {
   
   @SerializedName("iRowReturned")
   private Integer iRowReturned = null;
@@ -92,7 +91,7 @@ public class EzsignfoldertypeGetListV1ResponseMPayload extends CommonGetListV1Re
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignfoldertypeGetListV1ResponseMPayload {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  iRowReturned: ").append(iRowReturned).append("\n");
     sb.append("  iRowFiltered: ").append(iRowFiltered).append("\n");
     sb.append("  aObjEzsignfoldertype: ").append(aObjEzsignfoldertype).append("\n");

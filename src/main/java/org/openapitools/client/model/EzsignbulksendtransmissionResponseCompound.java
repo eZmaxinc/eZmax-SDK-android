@@ -15,7 +15,6 @@ package org.openapitools.client.model;
 import java.util.*;
 import org.openapitools.client.model.CommonAudit;
 import org.openapitools.client.model.CustomEzsignfoldertransmissionResponse;
-import org.openapitools.client.model.EzsignbulksendtransmissionResponse;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -23,7 +22,7 @@ import com.google.gson.annotations.SerializedName;
  * An Ezsignbulksendtransmission Object and children to create a complete structure
  **/
 @ApiModel(description = "An Ezsignbulksendtransmission Object and children to create a complete structure")
-public class EzsignbulksendtransmissionResponseCompound extends EzsignbulksendtransmissionResponse {
+public class EzsignbulksendtransmissionResponseCompound {
   
   @SerializedName("pkiEzsignbulksendtransmissionID")
   private Integer pkiEzsignbulksendtransmissionID = null;
@@ -139,7 +138,7 @@ public class EzsignbulksendtransmissionResponseCompound extends Ezsignbulksendtr
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignbulksendtransmissionResponseCompound {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  pkiEzsignbulksendtransmissionID: ").append(pkiEzsignbulksendtransmissionID).append("\n");
     sb.append("  fkiEzsignbulksendID: ").append(fkiEzsignbulksendID).append("\n");
     sb.append("  sEzsignbulksendtransmissionDescription: ").append(sEzsignbulksendtransmissionDescription).append("\n");

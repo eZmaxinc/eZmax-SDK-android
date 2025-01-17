@@ -12,12 +12,11 @@
 
 package org.openapitools.client.model;
 
-import org.openapitools.client.model.EmailRequest;
+import org.openapitools.client.model.EmailRequestCompound;
 import org.openapitools.client.model.FieldEUserEzsignaccess;
 import org.openapitools.client.model.FieldEUserLogintype;
 import org.openapitools.client.model.FieldEUserType;
-import org.openapitools.client.model.PhoneRequest;
-import org.openapitools.client.model.UserRequest;
+import org.openapitools.client.model.PhoneRequestCompound;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -25,7 +24,7 @@ import com.google.gson.annotations.SerializedName;
  * A User Object and children
  **/
 @ApiModel(description = "A User Object and children")
-public class UserRequestCompound extends UserRequest {
+public class UserRequestCompound {
   
   @SerializedName("pkiUserID")
   private Integer pkiUserID = null;
@@ -46,13 +45,13 @@ public class UserRequestCompound extends UserRequest {
   @SerializedName("fkiLanguageID")
   private Integer fkiLanguageID = null;
   @SerializedName("objEmail")
-  private EmailRequest objEmail = null;
+  private EmailRequestCompound objEmail = null;
   @SerializedName("fkiBillingentityinternalID")
   private Integer fkiBillingentityinternalID = null;
   @SerializedName("objPhoneHome")
-  private PhoneRequest objPhoneHome = null;
+  private PhoneRequestCompound objPhoneHome = null;
   @SerializedName("objPhoneSMS")
-  private PhoneRequest objPhoneSMS = null;
+  private PhoneRequestCompound objPhoneSMS = null;
   @SerializedName("fkiSecretquestionID")
   private Integer fkiSecretquestionID = null;
   @SerializedName("sUserSecretresponse")
@@ -195,13 +194,12 @@ public class UserRequestCompound extends UserRequest {
   }
 
   /**
-   * An Email Object and children to create a complete structure
    **/
-  @ApiModelProperty(required = true, value = "An Email Object and children to create a complete structure")
-  public EmailRequest getObjEmail() {
+  @ApiModelProperty(required = true, value = "")
+  public EmailRequestCompound getObjEmail() {
     return objEmail;
   }
-  public void setObjEmail(EmailRequest objEmail) {
+  public void setObjEmail(EmailRequestCompound objEmail) {
     this.objEmail = objEmail;
   }
 
@@ -218,24 +216,22 @@ public class UserRequestCompound extends UserRequest {
   }
 
   /**
-   * A Phone Object and children to create a complete structure
    **/
-  @ApiModelProperty(value = "A Phone Object and children to create a complete structure")
-  public PhoneRequest getObjPhoneHome() {
+  @ApiModelProperty(value = "")
+  public PhoneRequestCompound getObjPhoneHome() {
     return objPhoneHome;
   }
-  public void setObjPhoneHome(PhoneRequest objPhoneHome) {
+  public void setObjPhoneHome(PhoneRequestCompound objPhoneHome) {
     this.objPhoneHome = objPhoneHome;
   }
 
   /**
-   * A Phone Object and children to create a complete structure
    **/
-  @ApiModelProperty(value = "A Phone Object and children to create a complete structure")
-  public PhoneRequest getObjPhoneSMS() {
+  @ApiModelProperty(value = "")
+  public PhoneRequestCompound getObjPhoneSMS() {
     return objPhoneSMS;
   }
-  public void setObjPhoneSMS(PhoneRequest objPhoneSMS) {
+  public void setObjPhoneSMS(PhoneRequestCompound objPhoneSMS) {
     this.objPhoneSMS = objPhoneSMS;
   }
 
@@ -481,7 +477,7 @@ public class UserRequestCompound extends UserRequest {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserRequestCompound {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  pkiUserID: ").append(pkiUserID).append("\n");
     sb.append("  fkiAgentID: ").append(fkiAgentID).append("\n");
     sb.append("  fkiBrokerID: ").append(fkiBrokerID).append("\n");

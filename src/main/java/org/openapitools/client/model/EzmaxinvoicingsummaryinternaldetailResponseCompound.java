@@ -12,7 +12,6 @@
 
 package org.openapitools.client.model;
 
-import org.openapitools.client.model.EzmaxinvoicingsummaryinternaldetailResponse;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -20,7 +19,7 @@ import com.google.gson.annotations.SerializedName;
  * A Ezmaxinvoicingsummaryinternaldetail Object
  **/
 @ApiModel(description = "A Ezmaxinvoicingsummaryinternaldetail Object")
-public class EzmaxinvoicingsummaryinternaldetailResponseCompound extends EzmaxinvoicingsummaryinternaldetailResponse {
+public class EzmaxinvoicingsummaryinternaldetailResponseCompound {
   
   @SerializedName("pkiEzmaxinvoicingsummaryinternaldetailID")
   private Integer pkiEzmaxinvoicingsummaryinternaldetailID = null;
@@ -229,7 +228,7 @@ public class EzmaxinvoicingsummaryinternaldetailResponseCompound extends Ezmaxin
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzmaxinvoicingsummaryinternaldetailResponseCompound {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  pkiEzmaxinvoicingsummaryinternaldetailID: ").append(pkiEzmaxinvoicingsummaryinternaldetailID).append("\n");
     sb.append("  fkiEzmaxinvoicingsummaryinternalID: ").append(fkiEzmaxinvoicingsummaryinternalID).append("\n");
     sb.append("  fkiEzmaxproductID: ").append(fkiEzmaxproductID).append("\n");

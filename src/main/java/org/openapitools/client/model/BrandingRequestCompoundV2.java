@@ -12,7 +12,6 @@
 
 package org.openapitools.client.model;
 
-import org.openapitools.client.model.BrandingRequestV2;
 import org.openapitools.client.model.FieldEBrandingAlignlogo;
 import org.openapitools.client.model.FieldEBrandingLogo;
 import org.openapitools.client.model.MultilingualBrandingDescription;
@@ -23,7 +22,7 @@ import com.google.gson.annotations.SerializedName;
  * A Branding Object and children
  **/
 @ApiModel(description = "A Branding Object and children")
-public class BrandingRequestCompoundV2 extends BrandingRequestV2 {
+public class BrandingRequestCompoundV2 {
   
   @SerializedName("pkiBrandingID")
   private Integer pkiBrandingID = null;
@@ -183,7 +182,7 @@ public class BrandingRequestCompoundV2 extends BrandingRequestV2 {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class BrandingRequestCompoundV2 {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  pkiBrandingID: ").append(pkiBrandingID).append("\n");
     sb.append("  objBrandingDescription: ").append(objBrandingDescription).append("\n");
     sb.append("  eBrandingLogo: ").append(eBrandingLogo).append("\n");

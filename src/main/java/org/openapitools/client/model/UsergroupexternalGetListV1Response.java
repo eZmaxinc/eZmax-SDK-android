@@ -12,7 +12,6 @@
 
 package org.openapitools.client.model;
 
-import org.openapitools.client.model.CommonResponseGetList;
 import org.openapitools.client.model.CommonResponseObjDebug;
 import org.openapitools.client.model.CommonResponseObjDebugPayloadGetList;
 import org.openapitools.client.model.UsergroupexternalGetListV1ResponseMPayload;
@@ -23,7 +22,7 @@ import com.google.gson.annotations.SerializedName;
  * Response for GET /1/object/usergroupexternal/getList
  **/
 @ApiModel(description = "Response for GET /1/object/usergroupexternal/getList")
-public class UsergroupexternalGetListV1Response extends CommonResponseGetList {
+public class UsergroupexternalGetListV1Response {
   
   @SerializedName("objDebugPayload")
   private CommonResponseObjDebugPayloadGetList objDebugPayload = null;
@@ -90,7 +89,7 @@ public class UsergroupexternalGetListV1Response extends CommonResponseGetList {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class UsergroupexternalGetListV1Response {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  objDebugPayload: ").append(objDebugPayload).append("\n");
     sb.append("  objDebug: ").append(objDebug).append("\n");
     sb.append("  mPayload: ").append(mPayload).append("\n");

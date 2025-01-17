@@ -23,7 +23,6 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
-import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseError;
 import org.openapitools.client.model.CommonResponseErrorSTemporaryFileUrl;
 import org.openapitools.client.model.EzsigntemplatedocumentCreateObjectV1Request;
@@ -38,6 +37,7 @@ import org.openapitools.client.model.EzsigntemplatedocumentEditObjectV1Request;
 import org.openapitools.client.model.EzsigntemplatedocumentEditObjectV1Response;
 import org.openapitools.client.model.EzsigntemplatedocumentExtractTextV1Request;
 import org.openapitools.client.model.EzsigntemplatedocumentExtractTextV1Response;
+import org.openapitools.client.model.EzsigntemplatedocumentFlattenV1Response;
 import org.openapitools.client.model.EzsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1Response;
 import org.openapitools.client.model.EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1Response;
 import org.openapitools.client.model.EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response;
@@ -46,6 +46,7 @@ import org.openapitools.client.model.EzsigntemplatedocumentGetObjectV2Response;
 import org.openapitools.client.model.EzsigntemplatedocumentGetWordsPositionsV1Request;
 import org.openapitools.client.model.EzsigntemplatedocumentGetWordsPositionsV1Response;
 import org.openapitools.client.model.EzsigntemplatedocumentPatchObjectV1Request;
+import org.openapitools.client.model.EzsigntemplatedocumentPatchObjectV1Response;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
@@ -905,9 +906,9 @@ public class ObjectEzsigntemplatedocumentApi {
   * Flatten an Ezsigntemplatedocument signatures, forms and annotations. This process finalizes the PDF so that the forms and annotations become part of the document content and cannot be edited.
    * @param pkiEzsigntemplatedocumentID 
    * @param body 
-   * @return CommonResponse
+   * @return EzsigntemplatedocumentFlattenV1Response
   */
-  public CommonResponse ezsigntemplatedocumentFlattenV1 (Integer pkiEzsigntemplatedocumentID, Object body) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public EzsigntemplatedocumentFlattenV1Response ezsigntemplatedocumentFlattenV1 (Integer pkiEzsigntemplatedocumentID, Object body) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = body;
     // verify the required parameter 'pkiEzsigntemplatedocumentID' is set
     if (pkiEzsigntemplatedocumentID == null) {
@@ -948,7 +949,7 @@ public class ObjectEzsigntemplatedocumentApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
+         return (EzsigntemplatedocumentFlattenV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsigntemplatedocumentFlattenV1Response.class);
       } else {
          return null;
       }
@@ -974,7 +975,7 @@ public class ObjectEzsigntemplatedocumentApi {
    * Flatten an Ezsigntemplatedocument signatures, forms and annotations. This process finalizes the PDF so that the forms and annotations become part of the document content and cannot be edited.
    * @param pkiEzsigntemplatedocumentID    * @param body 
   */
-  public void ezsigntemplatedocumentFlattenV1 (Integer pkiEzsigntemplatedocumentID, Object body, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void ezsigntemplatedocumentFlattenV1 (Integer pkiEzsigntemplatedocumentID, Object body, final Response.Listener<EzsigntemplatedocumentFlattenV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = body;
 
     // verify the required parameter 'pkiEzsigntemplatedocumentID' is set
@@ -1024,7 +1025,7 @@ public class ObjectEzsigntemplatedocumentApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
+              responseListener.onResponse((EzsigntemplatedocumentFlattenV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsigntemplatedocumentFlattenV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -1818,9 +1819,9 @@ public class ObjectEzsigntemplatedocumentApi {
   * 
    * @param pkiEzsigntemplatedocumentID 
    * @param ezsigntemplatedocumentPatchObjectV1Request 
-   * @return CommonResponse
+   * @return EzsigntemplatedocumentPatchObjectV1Response
   */
-  public CommonResponse ezsigntemplatedocumentPatchObjectV1 (Integer pkiEzsigntemplatedocumentID, EzsigntemplatedocumentPatchObjectV1Request ezsigntemplatedocumentPatchObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public EzsigntemplatedocumentPatchObjectV1Response ezsigntemplatedocumentPatchObjectV1 (Integer pkiEzsigntemplatedocumentID, EzsigntemplatedocumentPatchObjectV1Request ezsigntemplatedocumentPatchObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = ezsigntemplatedocumentPatchObjectV1Request;
     // verify the required parameter 'pkiEzsigntemplatedocumentID' is set
     if (pkiEzsigntemplatedocumentID == null) {
@@ -1861,7 +1862,7 @@ public class ObjectEzsigntemplatedocumentApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PATCH", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
+         return (EzsigntemplatedocumentPatchObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsigntemplatedocumentPatchObjectV1Response.class);
       } else {
          return null;
       }
@@ -1887,7 +1888,7 @@ public class ObjectEzsigntemplatedocumentApi {
    * 
    * @param pkiEzsigntemplatedocumentID    * @param ezsigntemplatedocumentPatchObjectV1Request 
   */
-  public void ezsigntemplatedocumentPatchObjectV1 (Integer pkiEzsigntemplatedocumentID, EzsigntemplatedocumentPatchObjectV1Request ezsigntemplatedocumentPatchObjectV1Request, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void ezsigntemplatedocumentPatchObjectV1 (Integer pkiEzsigntemplatedocumentID, EzsigntemplatedocumentPatchObjectV1Request ezsigntemplatedocumentPatchObjectV1Request, final Response.Listener<EzsigntemplatedocumentPatchObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = ezsigntemplatedocumentPatchObjectV1Request;
 
     // verify the required parameter 'pkiEzsigntemplatedocumentID' is set
@@ -1937,7 +1938,7 @@ public class ObjectEzsigntemplatedocumentApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
+              responseListener.onResponse((EzsigntemplatedocumentPatchObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsigntemplatedocumentPatchObjectV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

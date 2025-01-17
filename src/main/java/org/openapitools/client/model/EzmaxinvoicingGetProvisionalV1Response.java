@@ -12,10 +12,9 @@
 
 package org.openapitools.client.model;
 
-import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseObjDebug;
 import org.openapitools.client.model.CommonResponseObjDebugPayload;
-import org.openapitools.client.model.EzmaxinvoicingResponseCompound;
+import org.openapitools.client.model.EzmaxinvoicingGetProvisionalV1ResponseMPayload;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -23,14 +22,14 @@ import com.google.gson.annotations.SerializedName;
  * Response for GET /1/object/ezmaxinvoicing/getProvisional
  **/
 @ApiModel(description = "Response for GET /1/object/ezmaxinvoicing/getProvisional")
-public class EzmaxinvoicingGetProvisionalV1Response extends CommonResponse {
+public class EzmaxinvoicingGetProvisionalV1Response {
   
   @SerializedName("objDebugPayload")
   private CommonResponseObjDebugPayload objDebugPayload = null;
   @SerializedName("objDebug")
   private CommonResponseObjDebug objDebug = null;
   @SerializedName("mPayload")
-  private EzmaxinvoicingResponseCompound mPayload = null;
+  private EzmaxinvoicingGetProvisionalV1ResponseMPayload mPayload = null;
 
   /**
    **/
@@ -53,13 +52,12 @@ public class EzmaxinvoicingGetProvisionalV1Response extends CommonResponse {
   }
 
   /**
-   * Payload for GET /1/object/ezmaxinvoicing/getProvisional
    **/
-  @ApiModelProperty(required = true, value = "Payload for GET /1/object/ezmaxinvoicing/getProvisional")
-  public EzmaxinvoicingResponseCompound getMPayload() {
+  @ApiModelProperty(required = true, value = "")
+  public EzmaxinvoicingGetProvisionalV1ResponseMPayload getMPayload() {
     return mPayload;
   }
-  public void setMPayload(EzmaxinvoicingResponseCompound mPayload) {
+  public void setMPayload(EzmaxinvoicingGetProvisionalV1ResponseMPayload mPayload) {
     this.mPayload = mPayload;
   }
 
@@ -91,7 +89,7 @@ public class EzmaxinvoicingGetProvisionalV1Response extends CommonResponse {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzmaxinvoicingGetProvisionalV1Response {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  objDebugPayload: ").append(objDebugPayload).append("\n");
     sb.append("  objDebug: ").append(objDebug).append("\n");
     sb.append("  mPayload: ").append(mPayload).append("\n");

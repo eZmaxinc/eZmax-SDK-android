@@ -13,11 +13,10 @@
 package org.openapitools.client.model;
 
 import java.util.*;
-import org.openapitools.client.model.AddressRequest;
-import org.openapitools.client.model.ContactinformationsRequest;
-import org.openapitools.client.model.EmailRequest;
-import org.openapitools.client.model.PhoneRequest;
-import org.openapitools.client.model.WebsiteRequest;
+import org.openapitools.client.model.AddressRequestCompound;
+import org.openapitools.client.model.EmailRequestCompound;
+import org.openapitools.client.model.PhoneRequestCompound;
+import org.openapitools.client.model.WebsiteRequestCompound;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -25,7 +24,7 @@ import com.google.gson.annotations.SerializedName;
  * A Contactinformations Object and children to create a complete structure
  **/
 @ApiModel(description = "A Contactinformations Object and children to create a complete structure")
-public class ContactinformationsRequestCompound extends ContactinformationsRequest {
+public class ContactinformationsRequestCompound {
   
   @SerializedName("iAddressDefault")
   private Integer iAddressDefault = null;
@@ -166,7 +165,7 @@ public class ContactinformationsRequestCompound extends ContactinformationsReque
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class ContactinformationsRequestCompound {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  iAddressDefault: ").append(iAddressDefault).append("\n");
     sb.append("  iPhoneDefault: ").append(iPhoneDefault).append("\n");
     sb.append("  iEmailDefault: ").append(iEmailDefault).append("\n");

@@ -13,7 +13,6 @@
 package org.openapitools.client.model;
 
 import java.util.*;
-import org.openapitools.client.model.AttachmentResponse;
 import org.openapitools.client.model.AttachmentResponseCompound;
 import org.openapitools.client.model.CommonAudit;
 import org.openapitools.client.model.FieldEAttachmentDocumenttype;
@@ -27,7 +26,7 @@ import com.google.gson.annotations.SerializedName;
  * A Custom Attachment Object
  **/
 @ApiModel(description = "A Custom Attachment Object")
-public class CustomAttachmentResponse extends AttachmentResponse {
+public class CustomAttachmentResponse {
   
   @SerializedName("pkiAttachmentID")
   private Integer pkiAttachmentID = null;
@@ -1100,7 +1099,7 @@ public class CustomAttachmentResponse extends AttachmentResponse {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class CustomAttachmentResponse {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  pkiAttachmentID: ").append(pkiAttachmentID).append("\n");
     sb.append("  fkiComputerID: ").append(fkiComputerID).append("\n");
     sb.append("  fkiAdjustmentID: ").append(fkiAdjustmentID).append("\n");

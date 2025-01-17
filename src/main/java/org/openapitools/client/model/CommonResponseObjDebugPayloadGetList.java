@@ -15,7 +15,6 @@ package org.openapitools.client.model;
 import java.util.*;
 import java.util.Map;
 import org.openapitools.client.model.CommonResponseFilter;
-import org.openapitools.client.model.CommonResponseObjDebugPayload;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -23,7 +22,7 @@ import com.google.gson.annotations.SerializedName;
  * This is a debug object containing debugging information on the actual function
  **/
 @ApiModel(description = "This is a debug object containing debugging information on the actual function")
-public class CommonResponseObjDebugPayloadGetList extends CommonResponseObjDebugPayload {
+public class CommonResponseObjDebugPayloadGetList {
   
   @SerializedName("iVersionMin")
   private Integer iVersionMin = null;
@@ -185,7 +184,7 @@ public class CommonResponseObjDebugPayloadGetList extends CommonResponseObjDebug
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class CommonResponseObjDebugPayloadGetList {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  iVersionMin: ").append(iVersionMin).append("\n");
     sb.append("  iVersionMax: ").append(iVersionMax).append("\n");
     sb.append("  aRequiredPermission: ").append(aRequiredPermission).append("\n");

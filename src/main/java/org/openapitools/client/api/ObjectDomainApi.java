@@ -23,10 +23,10 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
-import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseError;
 import org.openapitools.client.model.DomainCreateObjectV1Request;
 import org.openapitools.client.model.DomainCreateObjectV1Response;
+import org.openapitools.client.model.DomainDeleteObjectV1Response;
 import org.openapitools.client.model.DomainGetListV1Response;
 import org.openapitools.client.model.DomainGetObjectV2Response;
 import java.io.File;
@@ -194,9 +194,9 @@ public class ObjectDomainApi {
   * Delete an existing Domain
   * 
    * @param pkiDomainID The unique ID of the Domain
-   * @return CommonResponse
+   * @return DomainDeleteObjectV1Response
   */
-  public CommonResponse domainDeleteObjectV1 (Integer pkiDomainID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public DomainDeleteObjectV1Response domainDeleteObjectV1 (Integer pkiDomainID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'pkiDomainID' is set
     if (pkiDomainID == null) {
@@ -231,7 +231,7 @@ public class ObjectDomainApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "DELETE", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
+         return (DomainDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", DomainDeleteObjectV1Response.class);
       } else {
          return null;
       }
@@ -257,7 +257,7 @@ public class ObjectDomainApi {
    * 
    * @param pkiDomainID The unique ID of the Domain
   */
-  public void domainDeleteObjectV1 (Integer pkiDomainID, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void domainDeleteObjectV1 (Integer pkiDomainID, final Response.Listener<DomainDeleteObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'pkiDomainID' is set
@@ -302,7 +302,7 @@ public class ObjectDomainApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
+              responseListener.onResponse((DomainDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", DomainDeleteObjectV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

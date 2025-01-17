@@ -14,7 +14,6 @@ package org.openapitools.client.model;
 
 import java.util.*;
 import org.openapitools.client.model.EzsigntemplateResponseCompound;
-import org.openapitools.client.model.EzsigntemplatepackagemembershipResponse;
 import org.openapitools.client.model.EzsigntemplatepackagesignermembershipResponseCompound;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
@@ -23,7 +22,7 @@ import com.google.gson.annotations.SerializedName;
  * A Ezsigntemplatepackagemembership Object
  **/
 @ApiModel(description = "A Ezsigntemplatepackagemembership Object")
-public class EzsigntemplatepackagemembershipResponseCompound extends EzsigntemplatepackagemembershipResponse {
+public class EzsigntemplatepackagemembershipResponseCompound {
   
   @SerializedName("pkiEzsigntemplatepackagemembershipID")
   private Integer pkiEzsigntemplatepackagemembershipID = null;
@@ -140,7 +139,7 @@ public class EzsigntemplatepackagemembershipResponseCompound extends Ezsigntempl
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsigntemplatepackagemembershipResponseCompound {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  pkiEzsigntemplatepackagemembershipID: ").append(pkiEzsigntemplatepackagemembershipID).append("\n");
     sb.append("  fkiEzsigntemplatepackageID: ").append(fkiEzsigntemplatepackageID).append("\n");
     sb.append("  fkiEzsigntemplateID: ").append(fkiEzsigntemplateID).append("\n");

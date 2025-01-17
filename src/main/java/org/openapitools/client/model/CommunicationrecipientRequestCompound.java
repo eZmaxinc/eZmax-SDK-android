@@ -12,7 +12,6 @@
 
 package org.openapitools.client.model;
 
-import org.openapitools.client.model.CommunicationrecipientRequest;
 import org.openapitools.client.model.FieldECommunicationrecipientType;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
@@ -21,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
  * A Communicationrecipient Object and children
  **/
 @ApiModel(description = "A Communicationrecipient Object and children")
-public class CommunicationrecipientRequestCompound extends CommunicationrecipientRequest {
+public class CommunicationrecipientRequestCompound {
   
   @SerializedName("pkiCommunicationrecipientID")
   private Integer pkiCommunicationrecipientID = null;
@@ -286,7 +285,7 @@ public class CommunicationrecipientRequestCompound extends Communicationrecipien
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class CommunicationrecipientRequestCompound {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  pkiCommunicationrecipientID: ").append(pkiCommunicationrecipientID).append("\n");
     sb.append("  fkiAgentID: ").append(fkiAgentID).append("\n");
     sb.append("  fkiBrokerID: ").append(fkiBrokerID).append("\n");

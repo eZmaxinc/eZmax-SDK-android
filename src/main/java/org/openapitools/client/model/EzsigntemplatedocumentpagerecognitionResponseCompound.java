@@ -12,7 +12,6 @@
 
 package org.openapitools.client.model;
 
-import org.openapitools.client.model.EzsigntemplatedocumentpagerecognitionResponse;
 import org.openapitools.client.model.FieldEEzsigntemplatedocumentpagerecognitionOperator;
 import org.openapitools.client.model.FieldEEzsigntemplatedocumentpagerecognitionSection;
 import io.swagger.annotations.*;
@@ -22,7 +21,7 @@ import com.google.gson.annotations.SerializedName;
  * A Ezsigntemplatedocumentpagerecognition Object
  **/
 @ApiModel(description = "A Ezsigntemplatedocumentpagerecognition Object")
-public class EzsigntemplatedocumentpagerecognitionResponseCompound extends EzsigntemplatedocumentpagerecognitionResponse {
+public class EzsigntemplatedocumentpagerecognitionResponseCompound {
   
   @SerializedName("pkiEzsigntemplatedocumentpagerecognitionID")
   private Integer pkiEzsigntemplatedocumentpagerecognitionID = null;
@@ -208,7 +207,7 @@ public class EzsigntemplatedocumentpagerecognitionResponseCompound extends Ezsig
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsigntemplatedocumentpagerecognitionResponseCompound {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  pkiEzsigntemplatedocumentpagerecognitionID: ").append(pkiEzsigntemplatedocumentpagerecognitionID).append("\n");
     sb.append("  fkiEzsigntemplatedocumentpageID: ").append(fkiEzsigntemplatedocumentpageID).append("\n");
     sb.append("  eEzsigntemplatedocumentpagerecognitionOperator: ").append(eEzsigntemplatedocumentpagerecognitionOperator).append("\n");

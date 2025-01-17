@@ -12,7 +12,6 @@
 
 package org.openapitools.client.model;
 
-import org.openapitools.client.model.DomainRequest;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -20,7 +19,7 @@ import com.google.gson.annotations.SerializedName;
  * A Domain Object and children
  **/
 @ApiModel(description = "A Domain Object and children")
-public class DomainRequestCompound extends DomainRequest {
+public class DomainRequestCompound {
   
   @SerializedName("pkiDomainID")
   private Integer pkiDomainID = null;
@@ -77,7 +76,7 @@ public class DomainRequestCompound extends DomainRequest {
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class DomainRequestCompound {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  pkiDomainID: ").append(pkiDomainID).append("\n");
     sb.append("  sDomainName: ").append(sDomainName).append("\n");
     sb.append("}\n");

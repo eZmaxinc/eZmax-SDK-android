@@ -12,7 +12,6 @@
 
 package org.openapitools.client.model;
 
-import org.openapitools.client.model.CommunicationexternalrecipientRequest;
 import org.openapitools.client.model.FieldECommunicationexternalrecipientType;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
@@ -21,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
  * A Communicationexternalrecipient Object and children
  **/
 @ApiModel(description = "A Communicationexternalrecipient Object and children")
-public class CommunicationexternalrecipientRequestCompound extends CommunicationexternalrecipientRequest {
+public class CommunicationexternalrecipientRequestCompound {
   
   @SerializedName("pkiCommunicationexternalrecipientID")
   private Integer pkiCommunicationexternalrecipientID = null;
@@ -120,7 +119,7 @@ public class CommunicationexternalrecipientRequestCompound extends Communication
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class CommunicationexternalrecipientRequestCompound {\n");
-    sb.append("  " + super.toString()).append("\n");
+    
     sb.append("  pkiCommunicationexternalrecipientID: ").append(pkiCommunicationexternalrecipientID).append("\n");
     sb.append("  sEmailAddress: ").append(sEmailAddress).append("\n");
     sb.append("  sPhoneE164: ").append(sPhoneE164).append("\n");
