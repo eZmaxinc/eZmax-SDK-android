@@ -12,7 +12,7 @@
 
 package org.openapitools.client.model;
 
-import org.openapitools.client.model.ActivesessionResponseCompound;
+import org.openapitools.client.model.ActivesessionGetCurrentV1ResponseMPayload;
 import org.openapitools.client.model.CommonResponseObjDebug;
 import org.openapitools.client.model.CommonResponseObjDebugPayload;
 import io.swagger.annotations.*;
@@ -29,7 +29,7 @@ public class ActivesessionGetCurrentV1Response {
   @SerializedName("objDebug")
   private CommonResponseObjDebug objDebug = null;
   @SerializedName("mPayload")
-  private ActivesessionResponseCompound mPayload = null;
+  private ActivesessionGetCurrentV1ResponseMPayload mPayload = null;
 
   /**
    **/
@@ -52,13 +52,12 @@ public class ActivesessionGetCurrentV1Response {
   }
 
   /**
-   * Payload for GET /1/object/activesession/getCurrent
    **/
-  @ApiModelProperty(required = true, value = "Payload for GET /1/object/activesession/getCurrent")
-  public ActivesessionResponseCompound getMPayload() {
+  @ApiModelProperty(required = true, value = "")
+  public ActivesessionGetCurrentV1ResponseMPayload getMPayload() {
     return mPayload;
   }
-  public void setMPayload(ActivesessionResponseCompound mPayload) {
+  public void setMPayload(ActivesessionGetCurrentV1ResponseMPayload mPayload) {
     this.mPayload = mPayload;
   }
 

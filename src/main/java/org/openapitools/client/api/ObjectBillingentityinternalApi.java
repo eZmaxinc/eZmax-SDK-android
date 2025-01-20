@@ -26,10 +26,10 @@ import com.android.volley.VolleyError;
 import org.openapitools.client.model.BillingentityinternalCreateObjectV1Request;
 import org.openapitools.client.model.BillingentityinternalCreateObjectV1Response;
 import org.openapitools.client.model.BillingentityinternalEditObjectV1Request;
+import org.openapitools.client.model.BillingentityinternalEditObjectV1Response;
 import org.openapitools.client.model.BillingentityinternalGetAutocompleteV2Response;
 import org.openapitools.client.model.BillingentityinternalGetListV1Response;
 import org.openapitools.client.model.BillingentityinternalGetObjectV2Response;
-import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseError;
 import java.io.File;
 import org.openapitools.client.model.HeaderAcceptLanguage;
@@ -197,9 +197,9 @@ public class ObjectBillingentityinternalApi {
   * 
    * @param pkiBillingentityinternalID 
    * @param billingentityinternalEditObjectV1Request 
-   * @return CommonResponse
+   * @return BillingentityinternalEditObjectV1Response
   */
-  public CommonResponse billingentityinternalEditObjectV1 (Integer pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public BillingentityinternalEditObjectV1Response billingentityinternalEditObjectV1 (Integer pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = billingentityinternalEditObjectV1Request;
     // verify the required parameter 'pkiBillingentityinternalID' is set
     if (pkiBillingentityinternalID == null) {
@@ -240,7 +240,7 @@ public class ObjectBillingentityinternalApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
+         return (BillingentityinternalEditObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", BillingentityinternalEditObjectV1Response.class);
       } else {
          return null;
       }
@@ -266,7 +266,7 @@ public class ObjectBillingentityinternalApi {
    * 
    * @param pkiBillingentityinternalID    * @param billingentityinternalEditObjectV1Request 
   */
-  public void billingentityinternalEditObjectV1 (Integer pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void billingentityinternalEditObjectV1 (Integer pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request, final Response.Listener<BillingentityinternalEditObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = billingentityinternalEditObjectV1Request;
 
     // verify the required parameter 'pkiBillingentityinternalID' is set
@@ -316,7 +316,7 @@ public class ObjectBillingentityinternalApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
+              responseListener.onResponse((BillingentityinternalEditObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", BillingentityinternalEditObjectV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

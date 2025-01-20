@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 
 ## discussionmembershipDeleteObjectV1
 
-> CommonResponse discussionmembershipDeleteObjectV1(pkiDiscussionmembershipID)
+> DiscussionmembershipDeleteObjectV1Response discussionmembershipDeleteObjectV1(pkiDiscussionmembershipID)
 
 Delete an existing Discussionmembership
 
@@ -72,7 +72,7 @@ Delete an existing Discussionmembership
 ObjectDiscussionmembershipApi apiInstance = new ObjectDiscussionmembershipApi();
 Integer pkiDiscussionmembershipID = null; // Integer | The unique ID of the Discussionmembership
 try {
-    CommonResponse result = apiInstance.discussionmembershipDeleteObjectV1(pkiDiscussionmembershipID);
+    DiscussionmembershipDeleteObjectV1Response result = apiInstance.discussionmembershipDeleteObjectV1(pkiDiscussionmembershipID);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectDiscussionmembershipApi#discussionmembershipDeleteObjectV1");
@@ -89,7 +89,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**DiscussionmembershipDeleteObjectV1Response**](DiscussionmembershipDeleteObjectV1Response.md)
 
 ### Authorization
 

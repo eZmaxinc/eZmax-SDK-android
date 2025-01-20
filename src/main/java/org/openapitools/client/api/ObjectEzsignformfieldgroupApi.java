@@ -23,11 +23,12 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
-import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseError;
 import org.openapitools.client.model.EzsignformfieldgroupCreateObjectV1Request;
 import org.openapitools.client.model.EzsignformfieldgroupCreateObjectV1Response;
+import org.openapitools.client.model.EzsignformfieldgroupDeleteObjectV1Response;
 import org.openapitools.client.model.EzsignformfieldgroupEditObjectV1Request;
+import org.openapitools.client.model.EzsignformfieldgroupEditObjectV1Response;
 import org.openapitools.client.model.EzsignformfieldgroupGetObjectV2Response;
 
 import org.apache.http.HttpEntity;
@@ -192,9 +193,9 @@ public class ObjectEzsignformfieldgroupApi {
   * Delete an existing Ezsignformfieldgroup
   * 
    * @param pkiEzsignformfieldgroupID 
-   * @return CommonResponse
+   * @return EzsignformfieldgroupDeleteObjectV1Response
   */
-  public CommonResponse ezsignformfieldgroupDeleteObjectV1 (Integer pkiEzsignformfieldgroupID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public EzsignformfieldgroupDeleteObjectV1Response ezsignformfieldgroupDeleteObjectV1 (Integer pkiEzsignformfieldgroupID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'pkiEzsignformfieldgroupID' is set
     if (pkiEzsignformfieldgroupID == null) {
@@ -229,7 +230,7 @@ public class ObjectEzsignformfieldgroupApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "DELETE", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
+         return (EzsignformfieldgroupDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsignformfieldgroupDeleteObjectV1Response.class);
       } else {
          return null;
       }
@@ -255,7 +256,7 @@ public class ObjectEzsignformfieldgroupApi {
    * 
    * @param pkiEzsignformfieldgroupID 
   */
-  public void ezsignformfieldgroupDeleteObjectV1 (Integer pkiEzsignformfieldgroupID, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void ezsignformfieldgroupDeleteObjectV1 (Integer pkiEzsignformfieldgroupID, final Response.Listener<EzsignformfieldgroupDeleteObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'pkiEzsignformfieldgroupID' is set
@@ -300,7 +301,7 @@ public class ObjectEzsignformfieldgroupApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
+              responseListener.onResponse((EzsignformfieldgroupDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsignformfieldgroupDeleteObjectV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -320,9 +321,9 @@ public class ObjectEzsignformfieldgroupApi {
   * 
    * @param pkiEzsignformfieldgroupID 
    * @param ezsignformfieldgroupEditObjectV1Request 
-   * @return CommonResponse
+   * @return EzsignformfieldgroupEditObjectV1Response
   */
-  public CommonResponse ezsignformfieldgroupEditObjectV1 (Integer pkiEzsignformfieldgroupID, EzsignformfieldgroupEditObjectV1Request ezsignformfieldgroupEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public EzsignformfieldgroupEditObjectV1Response ezsignformfieldgroupEditObjectV1 (Integer pkiEzsignformfieldgroupID, EzsignformfieldgroupEditObjectV1Request ezsignformfieldgroupEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = ezsignformfieldgroupEditObjectV1Request;
     // verify the required parameter 'pkiEzsignformfieldgroupID' is set
     if (pkiEzsignformfieldgroupID == null) {
@@ -363,7 +364,7 @@ public class ObjectEzsignformfieldgroupApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
+         return (EzsignformfieldgroupEditObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsignformfieldgroupEditObjectV1Response.class);
       } else {
          return null;
       }
@@ -389,7 +390,7 @@ public class ObjectEzsignformfieldgroupApi {
    * 
    * @param pkiEzsignformfieldgroupID    * @param ezsignformfieldgroupEditObjectV1Request 
   */
-  public void ezsignformfieldgroupEditObjectV1 (Integer pkiEzsignformfieldgroupID, EzsignformfieldgroupEditObjectV1Request ezsignformfieldgroupEditObjectV1Request, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void ezsignformfieldgroupEditObjectV1 (Integer pkiEzsignformfieldgroupID, EzsignformfieldgroupEditObjectV1Request ezsignformfieldgroupEditObjectV1Request, final Response.Listener<EzsignformfieldgroupEditObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = ezsignformfieldgroupEditObjectV1Request;
 
     // verify the required parameter 'pkiEzsignformfieldgroupID' is set
@@ -439,7 +440,7 @@ public class ObjectEzsignformfieldgroupApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
+              responseListener.onResponse((EzsignformfieldgroupEditObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsignformfieldgroupEditObjectV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

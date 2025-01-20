@@ -14,6 +14,8 @@ package org.openapitools.client.model;
 
 import java.util.*;
 import org.openapitools.client.model.CommonAudit;
+import org.openapitools.client.model.CustomEzmaxinvoicingEzsigndocumentResponse;
+import org.openapitools.client.model.CustomEzmaxinvoicingEzsignfolderResponse;
 import org.openapitools.client.model.CustomEzmaxpricingResponse;
 import org.openapitools.client.model.EzmaxinvoicingagentResponseCompound;
 import org.openapitools.client.model.EzmaxinvoicingcontractResponseCompound;

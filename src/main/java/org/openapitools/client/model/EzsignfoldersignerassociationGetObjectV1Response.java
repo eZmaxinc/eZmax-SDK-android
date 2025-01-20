@@ -14,7 +14,7 @@ package org.openapitools.client.model;
 
 import org.openapitools.client.model.CommonResponseObjDebug;
 import org.openapitools.client.model.CommonResponseObjDebugPayload;
-import org.openapitools.client.model.EzsignfoldersignerassociationResponseCompound;
+import org.openapitools.client.model.EzsignfoldersignerassociationGetObjectV1ResponseMPayload;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -29,7 +29,7 @@ public class EzsignfoldersignerassociationGetObjectV1Response {
   @SerializedName("objDebug")
   private CommonResponseObjDebug objDebug = null;
   @SerializedName("mPayload")
-  private EzsignfoldersignerassociationResponseCompound mPayload = null;
+  private EzsignfoldersignerassociationGetObjectV1ResponseMPayload mPayload = null;
 
   /**
    **/
@@ -52,13 +52,12 @@ public class EzsignfoldersignerassociationGetObjectV1Response {
   }
 
   /**
-   * Payload for GET /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}
    **/
-  @ApiModelProperty(required = true, value = "Payload for GET /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}")
-  public EzsignfoldersignerassociationResponseCompound getMPayload() {
+  @ApiModelProperty(required = true, value = "")
+  public EzsignfoldersignerassociationGetObjectV1ResponseMPayload getMPayload() {
     return mPayload;
   }
-  public void setMPayload(EzsignfoldersignerassociationResponseCompound mPayload) {
+  public void setMPayload(EzsignfoldersignerassociationGetObjectV1ResponseMPayload mPayload) {
     this.mPayload = mPayload;
   }
 

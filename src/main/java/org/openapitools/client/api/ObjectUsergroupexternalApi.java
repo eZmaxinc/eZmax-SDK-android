@@ -23,13 +23,14 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
-import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseError;
 import java.io.File;
 import org.openapitools.client.model.HeaderAcceptLanguage;
 import org.openapitools.client.model.UsergroupexternalCreateObjectV1Request;
 import org.openapitools.client.model.UsergroupexternalCreateObjectV1Response;
+import org.openapitools.client.model.UsergroupexternalDeleteObjectV1Response;
 import org.openapitools.client.model.UsergroupexternalEditObjectV1Request;
+import org.openapitools.client.model.UsergroupexternalEditObjectV1Response;
 import org.openapitools.client.model.UsergroupexternalGetAutocompleteV2Response;
 import org.openapitools.client.model.UsergroupexternalGetListV1Response;
 import org.openapitools.client.model.UsergroupexternalGetObjectV2Response;
@@ -198,9 +199,9 @@ public class ObjectUsergroupexternalApi {
   * Delete an existing Usergroupexternal
   * 
    * @param pkiUsergroupexternalID The unique ID of the Usergroupexternal
-   * @return CommonResponse
+   * @return UsergroupexternalDeleteObjectV1Response
   */
-  public CommonResponse usergroupexternalDeleteObjectV1 (Integer pkiUsergroupexternalID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public UsergroupexternalDeleteObjectV1Response usergroupexternalDeleteObjectV1 (Integer pkiUsergroupexternalID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'pkiUsergroupexternalID' is set
     if (pkiUsergroupexternalID == null) {
@@ -235,7 +236,7 @@ public class ObjectUsergroupexternalApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "DELETE", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
+         return (UsergroupexternalDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", UsergroupexternalDeleteObjectV1Response.class);
       } else {
          return null;
       }
@@ -261,7 +262,7 @@ public class ObjectUsergroupexternalApi {
    * 
    * @param pkiUsergroupexternalID The unique ID of the Usergroupexternal
   */
-  public void usergroupexternalDeleteObjectV1 (Integer pkiUsergroupexternalID, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void usergroupexternalDeleteObjectV1 (Integer pkiUsergroupexternalID, final Response.Listener<UsergroupexternalDeleteObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'pkiUsergroupexternalID' is set
@@ -306,7 +307,7 @@ public class ObjectUsergroupexternalApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
+              responseListener.onResponse((UsergroupexternalDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", UsergroupexternalDeleteObjectV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -326,9 +327,9 @@ public class ObjectUsergroupexternalApi {
   * 
    * @param pkiUsergroupexternalID The unique ID of the Usergroupexternal
    * @param usergroupexternalEditObjectV1Request 
-   * @return CommonResponse
+   * @return UsergroupexternalEditObjectV1Response
   */
-  public CommonResponse usergroupexternalEditObjectV1 (Integer pkiUsergroupexternalID, UsergroupexternalEditObjectV1Request usergroupexternalEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public UsergroupexternalEditObjectV1Response usergroupexternalEditObjectV1 (Integer pkiUsergroupexternalID, UsergroupexternalEditObjectV1Request usergroupexternalEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = usergroupexternalEditObjectV1Request;
     // verify the required parameter 'pkiUsergroupexternalID' is set
     if (pkiUsergroupexternalID == null) {
@@ -369,7 +370,7 @@ public class ObjectUsergroupexternalApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
+         return (UsergroupexternalEditObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", UsergroupexternalEditObjectV1Response.class);
       } else {
          return null;
       }
@@ -395,7 +396,7 @@ public class ObjectUsergroupexternalApi {
    * 
    * @param pkiUsergroupexternalID The unique ID of the Usergroupexternal   * @param usergroupexternalEditObjectV1Request 
   */
-  public void usergroupexternalEditObjectV1 (Integer pkiUsergroupexternalID, UsergroupexternalEditObjectV1Request usergroupexternalEditObjectV1Request, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void usergroupexternalEditObjectV1 (Integer pkiUsergroupexternalID, UsergroupexternalEditObjectV1Request usergroupexternalEditObjectV1Request, final Response.Listener<UsergroupexternalEditObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = usergroupexternalEditObjectV1Request;
 
     // verify the required parameter 'pkiUsergroupexternalID' is set
@@ -445,7 +446,7 @@ public class ObjectUsergroupexternalApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
+              responseListener.onResponse((UsergroupexternalEditObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", UsergroupexternalEditObjectV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

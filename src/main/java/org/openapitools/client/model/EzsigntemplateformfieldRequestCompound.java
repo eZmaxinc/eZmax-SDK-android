@@ -14,7 +14,7 @@ package org.openapitools.client.model;
 
 import java.util.*;
 import org.openapitools.client.model.EnumHorizontalalignment;
-import org.openapitools.client.model.EzsigntemplateelementdependencyRequest;
+import org.openapitools.client.model.EzsigntemplateelementdependencyRequestCompound;
 import org.openapitools.client.model.FieldEEzsigntemplateformfieldDependencyrequirement;
 import org.openapitools.client.model.FieldEEzsigntemplateformfieldPositioning;
 import org.openapitools.client.model.FieldEEzsigntemplateformfieldPositioningoccurence;

@@ -23,7 +23,6 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
-import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseError;
 import org.openapitools.client.model.EzsignfoldersignerassociationCreateEmbeddedUrlV1Request;
 import org.openapitools.client.model.EzsignfoldersignerassociationCreateEmbeddedUrlV1Response;
@@ -31,12 +30,17 @@ import org.openapitools.client.model.EzsignfoldersignerassociationCreateObjectV1
 import org.openapitools.client.model.EzsignfoldersignerassociationCreateObjectV1Response;
 import org.openapitools.client.model.EzsignfoldersignerassociationCreateObjectV2Request;
 import org.openapitools.client.model.EzsignfoldersignerassociationCreateObjectV2Response;
+import org.openapitools.client.model.EzsignfoldersignerassociationDeleteObjectV1Response;
 import org.openapitools.client.model.EzsignfoldersignerassociationEditObjectV1Request;
+import org.openapitools.client.model.EzsignfoldersignerassociationEditObjectV1Response;
+import org.openapitools.client.model.EzsignfoldersignerassociationForceDisconnectV1Response;
 import org.openapitools.client.model.EzsignfoldersignerassociationGetInPersonLoginUrlV1Response;
 import org.openapitools.client.model.EzsignfoldersignerassociationGetObjectV1Response;
 import org.openapitools.client.model.EzsignfoldersignerassociationGetObjectV2Response;
 import org.openapitools.client.model.EzsignfoldersignerassociationPatchObjectV1Request;
+import org.openapitools.client.model.EzsignfoldersignerassociationPatchObjectV1Response;
 import org.openapitools.client.model.EzsignfoldersignerassociationReassignV1Request;
+import org.openapitools.client.model.EzsignfoldersignerassociationReassignV1Response;
 import java.util.*;
 
 import org.apache.http.HttpEntity;
@@ -468,9 +472,9 @@ public class ObjectEzsignfoldersignerassociationApi {
   * Delete an existing Ezsignfoldersignerassociation
   * 
    * @param pkiEzsignfoldersignerassociationID 
-   * @return CommonResponse
+   * @return EzsignfoldersignerassociationDeleteObjectV1Response
   */
-  public CommonResponse ezsignfoldersignerassociationDeleteObjectV1 (Integer pkiEzsignfoldersignerassociationID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public EzsignfoldersignerassociationDeleteObjectV1Response ezsignfoldersignerassociationDeleteObjectV1 (Integer pkiEzsignfoldersignerassociationID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'pkiEzsignfoldersignerassociationID' is set
     if (pkiEzsignfoldersignerassociationID == null) {
@@ -505,7 +509,7 @@ public class ObjectEzsignfoldersignerassociationApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "DELETE", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
+         return (EzsignfoldersignerassociationDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsignfoldersignerassociationDeleteObjectV1Response.class);
       } else {
          return null;
       }
@@ -531,7 +535,7 @@ public class ObjectEzsignfoldersignerassociationApi {
    * 
    * @param pkiEzsignfoldersignerassociationID 
   */
-  public void ezsignfoldersignerassociationDeleteObjectV1 (Integer pkiEzsignfoldersignerassociationID, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void ezsignfoldersignerassociationDeleteObjectV1 (Integer pkiEzsignfoldersignerassociationID, final Response.Listener<EzsignfoldersignerassociationDeleteObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'pkiEzsignfoldersignerassociationID' is set
@@ -576,7 +580,7 @@ public class ObjectEzsignfoldersignerassociationApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
+              responseListener.onResponse((EzsignfoldersignerassociationDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsignfoldersignerassociationDeleteObjectV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -596,9 +600,9 @@ public class ObjectEzsignfoldersignerassociationApi {
   * 
    * @param pkiEzsignfoldersignerassociationID 
    * @param ezsignfoldersignerassociationEditObjectV1Request 
-   * @return CommonResponse
+   * @return EzsignfoldersignerassociationEditObjectV1Response
   */
-  public CommonResponse ezsignfoldersignerassociationEditObjectV1 (Integer pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationEditObjectV1Request ezsignfoldersignerassociationEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public EzsignfoldersignerassociationEditObjectV1Response ezsignfoldersignerassociationEditObjectV1 (Integer pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationEditObjectV1Request ezsignfoldersignerassociationEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = ezsignfoldersignerassociationEditObjectV1Request;
     // verify the required parameter 'pkiEzsignfoldersignerassociationID' is set
     if (pkiEzsignfoldersignerassociationID == null) {
@@ -639,7 +643,7 @@ public class ObjectEzsignfoldersignerassociationApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
+         return (EzsignfoldersignerassociationEditObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsignfoldersignerassociationEditObjectV1Response.class);
       } else {
          return null;
       }
@@ -665,7 +669,7 @@ public class ObjectEzsignfoldersignerassociationApi {
    * 
    * @param pkiEzsignfoldersignerassociationID    * @param ezsignfoldersignerassociationEditObjectV1Request 
   */
-  public void ezsignfoldersignerassociationEditObjectV1 (Integer pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationEditObjectV1Request ezsignfoldersignerassociationEditObjectV1Request, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void ezsignfoldersignerassociationEditObjectV1 (Integer pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationEditObjectV1Request ezsignfoldersignerassociationEditObjectV1Request, final Response.Listener<EzsignfoldersignerassociationEditObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = ezsignfoldersignerassociationEditObjectV1Request;
 
     // verify the required parameter 'pkiEzsignfoldersignerassociationID' is set
@@ -715,7 +719,7 @@ public class ObjectEzsignfoldersignerassociationApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
+              responseListener.onResponse((EzsignfoldersignerassociationEditObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsignfoldersignerassociationEditObjectV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -735,9 +739,9 @@ public class ObjectEzsignfoldersignerassociationApi {
   * 
    * @param pkiEzsignfoldersignerassociationID 
    * @param body 
-   * @return CommonResponse
+   * @return EzsignfoldersignerassociationForceDisconnectV1Response
   */
-  public CommonResponse ezsignfoldersignerassociationForceDisconnectV1 (Integer pkiEzsignfoldersignerassociationID, Object body) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public EzsignfoldersignerassociationForceDisconnectV1Response ezsignfoldersignerassociationForceDisconnectV1 (Integer pkiEzsignfoldersignerassociationID, Object body) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = body;
     // verify the required parameter 'pkiEzsignfoldersignerassociationID' is set
     if (pkiEzsignfoldersignerassociationID == null) {
@@ -778,7 +782,7 @@ public class ObjectEzsignfoldersignerassociationApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
+         return (EzsignfoldersignerassociationForceDisconnectV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsignfoldersignerassociationForceDisconnectV1Response.class);
       } else {
          return null;
       }
@@ -804,7 +808,7 @@ public class ObjectEzsignfoldersignerassociationApi {
    * 
    * @param pkiEzsignfoldersignerassociationID    * @param body 
   */
-  public void ezsignfoldersignerassociationForceDisconnectV1 (Integer pkiEzsignfoldersignerassociationID, Object body, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void ezsignfoldersignerassociationForceDisconnectV1 (Integer pkiEzsignfoldersignerassociationID, Object body, final Response.Listener<EzsignfoldersignerassociationForceDisconnectV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = body;
 
     // verify the required parameter 'pkiEzsignfoldersignerassociationID' is set
@@ -854,7 +858,7 @@ public class ObjectEzsignfoldersignerassociationApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
+              responseListener.onResponse((EzsignfoldersignerassociationForceDisconnectV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsignfoldersignerassociationForceDisconnectV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -1255,9 +1259,9 @@ public class ObjectEzsignfoldersignerassociationApi {
   * 
    * @param pkiEzsignfoldersignerassociationID 
    * @param ezsignfoldersignerassociationPatchObjectV1Request 
-   * @return CommonResponse
+   * @return EzsignfoldersignerassociationPatchObjectV1Response
   */
-  public CommonResponse ezsignfoldersignerassociationPatchObjectV1 (Integer pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationPatchObjectV1Request ezsignfoldersignerassociationPatchObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public EzsignfoldersignerassociationPatchObjectV1Response ezsignfoldersignerassociationPatchObjectV1 (Integer pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationPatchObjectV1Request ezsignfoldersignerassociationPatchObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = ezsignfoldersignerassociationPatchObjectV1Request;
     // verify the required parameter 'pkiEzsignfoldersignerassociationID' is set
     if (pkiEzsignfoldersignerassociationID == null) {
@@ -1298,7 +1302,7 @@ public class ObjectEzsignfoldersignerassociationApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PATCH", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
+         return (EzsignfoldersignerassociationPatchObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsignfoldersignerassociationPatchObjectV1Response.class);
       } else {
          return null;
       }
@@ -1324,7 +1328,7 @@ public class ObjectEzsignfoldersignerassociationApi {
    * 
    * @param pkiEzsignfoldersignerassociationID    * @param ezsignfoldersignerassociationPatchObjectV1Request 
   */
-  public void ezsignfoldersignerassociationPatchObjectV1 (Integer pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationPatchObjectV1Request ezsignfoldersignerassociationPatchObjectV1Request, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void ezsignfoldersignerassociationPatchObjectV1 (Integer pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationPatchObjectV1Request ezsignfoldersignerassociationPatchObjectV1Request, final Response.Listener<EzsignfoldersignerassociationPatchObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = ezsignfoldersignerassociationPatchObjectV1Request;
 
     // verify the required parameter 'pkiEzsignfoldersignerassociationID' is set
@@ -1374,7 +1378,7 @@ public class ObjectEzsignfoldersignerassociationApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
+              responseListener.onResponse((EzsignfoldersignerassociationPatchObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsignfoldersignerassociationPatchObjectV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -1394,9 +1398,9 @@ public class ObjectEzsignfoldersignerassociationApi {
   * Reassign remaining unsigned signatures and forms
    * @param pkiEzsignfoldersignerassociationID 
    * @param ezsignfoldersignerassociationReassignV1Request 
-   * @return CommonResponse
+   * @return EzsignfoldersignerassociationReassignV1Response
   */
-  public CommonResponse ezsignfoldersignerassociationReassignV1 (Integer pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public EzsignfoldersignerassociationReassignV1Response ezsignfoldersignerassociationReassignV1 (Integer pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = ezsignfoldersignerassociationReassignV1Request;
     // verify the required parameter 'pkiEzsignfoldersignerassociationID' is set
     if (pkiEzsignfoldersignerassociationID == null) {
@@ -1437,7 +1441,7 @@ public class ObjectEzsignfoldersignerassociationApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
+         return (EzsignfoldersignerassociationReassignV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsignfoldersignerassociationReassignV1Response.class);
       } else {
          return null;
       }
@@ -1463,7 +1467,7 @@ public class ObjectEzsignfoldersignerassociationApi {
    * Reassign remaining unsigned signatures and forms
    * @param pkiEzsignfoldersignerassociationID    * @param ezsignfoldersignerassociationReassignV1Request 
   */
-  public void ezsignfoldersignerassociationReassignV1 (Integer pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void ezsignfoldersignerassociationReassignV1 (Integer pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request, final Response.Listener<EzsignfoldersignerassociationReassignV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = ezsignfoldersignerassociationReassignV1Request;
 
     // verify the required parameter 'pkiEzsignfoldersignerassociationID' is set
@@ -1513,7 +1517,7 @@ public class ObjectEzsignfoldersignerassociationApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
+              responseListener.onResponse((EzsignfoldersignerassociationReassignV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsignfoldersignerassociationReassignV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

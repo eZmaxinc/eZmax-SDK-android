@@ -23,11 +23,12 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
-import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseError;
 import org.openapitools.client.model.PermissionCreateObjectV1Request;
 import org.openapitools.client.model.PermissionCreateObjectV1Response;
+import org.openapitools.client.model.PermissionDeleteObjectV1Response;
 import org.openapitools.client.model.PermissionEditObjectV1Request;
+import org.openapitools.client.model.PermissionEditObjectV1Response;
 import org.openapitools.client.model.PermissionGetObjectV2Response;
 
 import org.apache.http.HttpEntity;
@@ -192,9 +193,9 @@ public class ObjectPermissionApi {
   * Delete an existing Permission
   * 
    * @param pkiPermissionID The unique ID of the Permission
-   * @return CommonResponse
+   * @return PermissionDeleteObjectV1Response
   */
-  public CommonResponse permissionDeleteObjectV1 (Integer pkiPermissionID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public PermissionDeleteObjectV1Response permissionDeleteObjectV1 (Integer pkiPermissionID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'pkiPermissionID' is set
     if (pkiPermissionID == null) {
@@ -229,7 +230,7 @@ public class ObjectPermissionApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "DELETE", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
+         return (PermissionDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", PermissionDeleteObjectV1Response.class);
       } else {
          return null;
       }
@@ -255,7 +256,7 @@ public class ObjectPermissionApi {
    * 
    * @param pkiPermissionID The unique ID of the Permission
   */
-  public void permissionDeleteObjectV1 (Integer pkiPermissionID, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void permissionDeleteObjectV1 (Integer pkiPermissionID, final Response.Listener<PermissionDeleteObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'pkiPermissionID' is set
@@ -300,7 +301,7 @@ public class ObjectPermissionApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
+              responseListener.onResponse((PermissionDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", PermissionDeleteObjectV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -320,9 +321,9 @@ public class ObjectPermissionApi {
   * 
    * @param pkiPermissionID The unique ID of the Permission
    * @param permissionEditObjectV1Request 
-   * @return CommonResponse
+   * @return PermissionEditObjectV1Response
   */
-  public CommonResponse permissionEditObjectV1 (Integer pkiPermissionID, PermissionEditObjectV1Request permissionEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public PermissionEditObjectV1Response permissionEditObjectV1 (Integer pkiPermissionID, PermissionEditObjectV1Request permissionEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = permissionEditObjectV1Request;
     // verify the required parameter 'pkiPermissionID' is set
     if (pkiPermissionID == null) {
@@ -363,7 +364,7 @@ public class ObjectPermissionApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
+         return (PermissionEditObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", PermissionEditObjectV1Response.class);
       } else {
          return null;
       }
@@ -389,7 +390,7 @@ public class ObjectPermissionApi {
    * 
    * @param pkiPermissionID The unique ID of the Permission   * @param permissionEditObjectV1Request 
   */
-  public void permissionEditObjectV1 (Integer pkiPermissionID, PermissionEditObjectV1Request permissionEditObjectV1Request, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void permissionEditObjectV1 (Integer pkiPermissionID, PermissionEditObjectV1Request permissionEditObjectV1Request, final Response.Listener<PermissionEditObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = permissionEditObjectV1Request;
 
     // verify the required parameter 'pkiPermissionID' is set
@@ -439,7 +440,7 @@ public class ObjectPermissionApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
+              responseListener.onResponse((PermissionEditObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", PermissionEditObjectV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

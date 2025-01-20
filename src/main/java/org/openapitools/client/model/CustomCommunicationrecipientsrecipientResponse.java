@@ -13,7 +13,7 @@
 package org.openapitools.client.model;
 
 import org.openapitools.client.model.CustomContactNameResponse;
-import org.openapitools.client.model.EmailResponse;
+import org.openapitools.client.model.EmailResponseCompound;
 import org.openapitools.client.model.PhoneResponseCompound;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
@@ -62,7 +62,7 @@ public class CustomCommunicationrecipientsrecipientResponse {
   @SerializedName("objContactName")
   private CustomContactNameResponse objContactName = null;
   @SerializedName("objEmail")
-  private EmailResponse objEmail = null;
+  private EmailResponseCompound objEmail = null;
   @SerializedName("objPhoneFax")
   private PhoneResponseCompound objPhoneFax = null;
   @SerializedName("objPhoneSMS")
@@ -269,13 +269,12 @@ public class CustomCommunicationrecipientsrecipientResponse {
   }
 
   /**
-   * An Email Object and children to create a complete structure
    **/
-  @ApiModelProperty(value = "An Email Object and children to create a complete structure")
-  public EmailResponse getObjEmail() {
+  @ApiModelProperty(value = "")
+  public EmailResponseCompound getObjEmail() {
     return objEmail;
   }
-  public void setObjEmail(EmailResponse objEmail) {
+  public void setObjEmail(EmailResponseCompound objEmail) {
     this.objEmail = objEmail;
   }
 

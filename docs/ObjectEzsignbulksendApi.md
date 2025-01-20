@@ -112,7 +112,7 @@ Name | Type | Description  | Notes
 
 ## ezsignbulksendDeleteObjectV1
 
-> CommonResponse ezsignbulksendDeleteObjectV1(pkiEzsignbulksendID)
+> EzsignbulksendDeleteObjectV1Response ezsignbulksendDeleteObjectV1(pkiEzsignbulksendID)
 
 Delete an existing Ezsignbulksend
 
@@ -127,7 +127,7 @@ Delete an existing Ezsignbulksend
 ObjectEzsignbulksendApi apiInstance = new ObjectEzsignbulksendApi();
 Integer pkiEzsignbulksendID = null; // Integer | 
 try {
-    CommonResponse result = apiInstance.ezsignbulksendDeleteObjectV1(pkiEzsignbulksendID);
+    EzsignbulksendDeleteObjectV1Response result = apiInstance.ezsignbulksendDeleteObjectV1(pkiEzsignbulksendID);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectEzsignbulksendApi#ezsignbulksendDeleteObjectV1");
@@ -144,7 +144,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsignbulksendDeleteObjectV1Response**](EzsignbulksendDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -158,7 +158,7 @@ Name | Type | Description  | Notes
 
 ## ezsignbulksendEditObjectV1
 
-> CommonResponse ezsignbulksendEditObjectV1(pkiEzsignbulksendID, ezsignbulksendEditObjectV1Request)
+> EzsignbulksendEditObjectV1Response ezsignbulksendEditObjectV1(pkiEzsignbulksendID, ezsignbulksendEditObjectV1Request)
 
 Edit an existing Ezsignbulksend
 
@@ -174,7 +174,7 @@ ObjectEzsignbulksendApi apiInstance = new ObjectEzsignbulksendApi();
 Integer pkiEzsignbulksendID = null; // Integer | 
 EzsignbulksendEditObjectV1Request ezsignbulksendEditObjectV1Request = new EzsignbulksendEditObjectV1Request(); // EzsignbulksendEditObjectV1Request | 
 try {
-    CommonResponse result = apiInstance.ezsignbulksendEditObjectV1(pkiEzsignbulksendID, ezsignbulksendEditObjectV1Request);
+    EzsignbulksendEditObjectV1Response result = apiInstance.ezsignbulksendEditObjectV1(pkiEzsignbulksendID, ezsignbulksendEditObjectV1Request);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectEzsignbulksendApi#ezsignbulksendEditObjectV1");
@@ -192,7 +192,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsignbulksendEditObjectV1Response**](EzsignbulksendEditObjectV1Response.md)
 
 ### Authorization
 
@@ -492,7 +492,7 @@ Name | Type | Description  | Notes
 
 ## ezsignbulksendReorderV1
 
-> CommonResponse ezsignbulksendReorderV1(pkiEzsignbulksendID, ezsignbulksendReorderV1Request)
+> EzsignbulksendReorderV1Response ezsignbulksendReorderV1(pkiEzsignbulksendID, ezsignbulksendReorderV1Request)
 
 Reorder Ezsignbulksenddocumentmappings in the Ezsignbulksend
 
@@ -506,7 +506,7 @@ ObjectEzsignbulksendApi apiInstance = new ObjectEzsignbulksendApi();
 Integer pkiEzsignbulksendID = null; // Integer | 
 EzsignbulksendReorderV1Request ezsignbulksendReorderV1Request = new EzsignbulksendReorderV1Request(); // EzsignbulksendReorderV1Request | 
 try {
-    CommonResponse result = apiInstance.ezsignbulksendReorderV1(pkiEzsignbulksendID, ezsignbulksendReorderV1Request);
+    EzsignbulksendReorderV1Response result = apiInstance.ezsignbulksendReorderV1(pkiEzsignbulksendID, ezsignbulksendReorderV1Request);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectEzsignbulksendApi#ezsignbulksendReorderV1");
@@ -524,7 +524,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsignbulksendReorderV1Response**](EzsignbulksendReorderV1Response.md)
 
 ### Authorization
 

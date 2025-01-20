@@ -23,11 +23,12 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
-import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseError;
 import org.openapitools.client.model.UsergroupmembershipCreateObjectV1Request;
 import org.openapitools.client.model.UsergroupmembershipCreateObjectV1Response;
+import org.openapitools.client.model.UsergroupmembershipDeleteObjectV1Response;
 import org.openapitools.client.model.UsergroupmembershipEditObjectV1Request;
+import org.openapitools.client.model.UsergroupmembershipEditObjectV1Response;
 import org.openapitools.client.model.UsergroupmembershipGetObjectV2Response;
 
 import org.apache.http.HttpEntity;
@@ -192,9 +193,9 @@ public class ObjectUsergroupmembershipApi {
   * Delete an existing Usergroupmembership
   * 
    * @param pkiUsergroupmembershipID 
-   * @return CommonResponse
+   * @return UsergroupmembershipDeleteObjectV1Response
   */
-  public CommonResponse usergroupmembershipDeleteObjectV1 (Integer pkiUsergroupmembershipID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public UsergroupmembershipDeleteObjectV1Response usergroupmembershipDeleteObjectV1 (Integer pkiUsergroupmembershipID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'pkiUsergroupmembershipID' is set
     if (pkiUsergroupmembershipID == null) {
@@ -229,7 +230,7 @@ public class ObjectUsergroupmembershipApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "DELETE", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
+         return (UsergroupmembershipDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", UsergroupmembershipDeleteObjectV1Response.class);
       } else {
          return null;
       }
@@ -255,7 +256,7 @@ public class ObjectUsergroupmembershipApi {
    * 
    * @param pkiUsergroupmembershipID 
   */
-  public void usergroupmembershipDeleteObjectV1 (Integer pkiUsergroupmembershipID, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void usergroupmembershipDeleteObjectV1 (Integer pkiUsergroupmembershipID, final Response.Listener<UsergroupmembershipDeleteObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'pkiUsergroupmembershipID' is set
@@ -300,7 +301,7 @@ public class ObjectUsergroupmembershipApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
+              responseListener.onResponse((UsergroupmembershipDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", UsergroupmembershipDeleteObjectV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -320,9 +321,9 @@ public class ObjectUsergroupmembershipApi {
   * 
    * @param pkiUsergroupmembershipID 
    * @param usergroupmembershipEditObjectV1Request 
-   * @return CommonResponse
+   * @return UsergroupmembershipEditObjectV1Response
   */
-  public CommonResponse usergroupmembershipEditObjectV1 (Integer pkiUsergroupmembershipID, UsergroupmembershipEditObjectV1Request usergroupmembershipEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public UsergroupmembershipEditObjectV1Response usergroupmembershipEditObjectV1 (Integer pkiUsergroupmembershipID, UsergroupmembershipEditObjectV1Request usergroupmembershipEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = usergroupmembershipEditObjectV1Request;
     // verify the required parameter 'pkiUsergroupmembershipID' is set
     if (pkiUsergroupmembershipID == null) {
@@ -363,7 +364,7 @@ public class ObjectUsergroupmembershipApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
+         return (UsergroupmembershipEditObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", UsergroupmembershipEditObjectV1Response.class);
       } else {
          return null;
       }
@@ -389,7 +390,7 @@ public class ObjectUsergroupmembershipApi {
    * 
    * @param pkiUsergroupmembershipID    * @param usergroupmembershipEditObjectV1Request 
   */
-  public void usergroupmembershipEditObjectV1 (Integer pkiUsergroupmembershipID, UsergroupmembershipEditObjectV1Request usergroupmembershipEditObjectV1Request, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void usergroupmembershipEditObjectV1 (Integer pkiUsergroupmembershipID, UsergroupmembershipEditObjectV1Request usergroupmembershipEditObjectV1Request, final Response.Listener<UsergroupmembershipEditObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = usergroupmembershipEditObjectV1Request;
 
     // verify the required parameter 'pkiUsergroupmembershipID' is set
@@ -439,7 +440,7 @@ public class ObjectUsergroupmembershipApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
+              responseListener.onResponse((UsergroupmembershipEditObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", UsergroupmembershipEditObjectV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

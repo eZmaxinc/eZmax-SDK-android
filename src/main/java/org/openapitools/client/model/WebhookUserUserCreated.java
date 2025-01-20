@@ -13,9 +13,9 @@
 package org.openapitools.client.model;
 
 import java.util.*;
-import org.openapitools.client.model.AttemptResponse;
+import org.openapitools.client.model.AttemptResponseCompound;
 import org.openapitools.client.model.CustomWebhookResponse;
-import org.openapitools.client.model.UserResponse;
+import org.openapitools.client.model.UserResponseCompound;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -30,7 +30,7 @@ public class WebhookUserUserCreated {
   @SerializedName("a_objAttempt")
   private List<AttemptResponseCompound> aObjAttempt = null;
   @SerializedName("objUser")
-  private UserResponse objUser = null;
+  private UserResponseCompound objUser = null;
 
   /**
    **/
@@ -54,13 +54,12 @@ public class WebhookUserUserCreated {
   }
 
   /**
-   * A User Object and children to create a complete structure
    **/
-  @ApiModelProperty(required = true, value = "A User Object and children to create a complete structure")
-  public UserResponse getObjUser() {
+  @ApiModelProperty(required = true, value = "")
+  public UserResponseCompound getObjUser() {
     return objUser;
   }
-  public void setObjUser(UserResponse objUser) {
+  public void setObjUser(UserResponseCompound objUser) {
     this.objUser = objUser;
   }
 

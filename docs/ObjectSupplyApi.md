@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 
 ## supplyDeleteObjectV1
 
-> CommonResponse supplyDeleteObjectV1(pkiSupplyID)
+> SupplyDeleteObjectV1Response supplyDeleteObjectV1(pkiSupplyID)
 
 Delete an existing Supply
 
@@ -76,7 +76,7 @@ Delete an existing Supply
 ObjectSupplyApi apiInstance = new ObjectSupplyApi();
 Integer pkiSupplyID = null; // Integer | The unique ID of the Supply
 try {
-    CommonResponse result = apiInstance.supplyDeleteObjectV1(pkiSupplyID);
+    SupplyDeleteObjectV1Response result = apiInstance.supplyDeleteObjectV1(pkiSupplyID);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectSupplyApi#supplyDeleteObjectV1");
@@ -93,7 +93,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**SupplyDeleteObjectV1Response**](SupplyDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -107,7 +107,7 @@ Name | Type | Description  | Notes
 
 ## supplyEditObjectV1
 
-> CommonResponse supplyEditObjectV1(pkiSupplyID, supplyEditObjectV1Request)
+> SupplyEditObjectV1Response supplyEditObjectV1(pkiSupplyID, supplyEditObjectV1Request)
 
 Edit an existing Supply
 
@@ -123,7 +123,7 @@ ObjectSupplyApi apiInstance = new ObjectSupplyApi();
 Integer pkiSupplyID = null; // Integer | The unique ID of the Supply
 SupplyEditObjectV1Request supplyEditObjectV1Request = new SupplyEditObjectV1Request(); // SupplyEditObjectV1Request | 
 try {
-    CommonResponse result = apiInstance.supplyEditObjectV1(pkiSupplyID, supplyEditObjectV1Request);
+    SupplyEditObjectV1Response result = apiInstance.supplyEditObjectV1(pkiSupplyID, supplyEditObjectV1Request);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectSupplyApi#supplyEditObjectV1");
@@ -141,7 +141,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**SupplyEditObjectV1Response**](SupplyEditObjectV1Response.md)
 
 ### Authorization
 

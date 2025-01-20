@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## ezsignuserEditObjectV1
 
-> CommonResponse ezsignuserEditObjectV1(pkiEzsignuserID, ezsignuserEditObjectV1Request)
+> EzsignuserEditObjectV1Response ezsignuserEditObjectV1(pkiEzsignuserID, ezsignuserEditObjectV1Request)
 
 Edit an existing Ezsignuser
 
@@ -27,7 +27,7 @@ ObjectEzsignuserApi apiInstance = new ObjectEzsignuserApi();
 Integer pkiEzsignuserID = null; // Integer | The unique ID of the Ezsignuser
 EzsignuserEditObjectV1Request ezsignuserEditObjectV1Request = new EzsignuserEditObjectV1Request(); // EzsignuserEditObjectV1Request | 
 try {
-    CommonResponse result = apiInstance.ezsignuserEditObjectV1(pkiEzsignuserID, ezsignuserEditObjectV1Request);
+    EzsignuserEditObjectV1Response result = apiInstance.ezsignuserEditObjectV1(pkiEzsignuserID, ezsignuserEditObjectV1Request);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectEzsignuserApi#ezsignuserEditObjectV1");
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsignuserEditObjectV1Response**](EzsignuserEditObjectV1Response.md)
 
 ### Authorization
 

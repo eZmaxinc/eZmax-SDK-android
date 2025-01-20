@@ -15,7 +15,7 @@ package org.openapitools.client.model;
 import java.util.*;
 import org.openapitools.client.model.CommunicationexternalrecipientRequestCompound;
 import org.openapitools.client.model.CommunicationrecipientRequestCompound;
-import org.openapitools.client.model.CommunicationreferenceRequest;
+import org.openapitools.client.model.CommunicationreferenceRequestCompound;
 import org.openapitools.client.model.CustomCommunicationattachmentRequest;
 import org.openapitools.client.model.CustomCommunicationsenderRequest;
 import org.openapitools.client.model.FieldECommunicationImportance;
