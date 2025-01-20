@@ -13,10 +13,10 @@
 package org.openapitools.client.model;
 
 import java.util.*;
-import org.openapitools.client.model.CustomDropdownElementResponseCompound;
+import org.openapitools.client.model.CustomDropdownElementResponse;
 import org.openapitools.client.model.EnumTextvalidation;
 import org.openapitools.client.model.EzsigntemplateformfieldResponseCompound;
-import org.openapitools.client.model.EzsigntemplateformfieldgroupsignerResponseCompound;
+import org.openapitools.client.model.EzsigntemplateformfieldgroupsignerResponse;
 import org.openapitools.client.model.FieldEEzsigntemplateformfieldgroupSignerrequirement;
 import org.openapitools.client.model.FieldEEzsigntemplateformfieldgroupTooltipposition;
 import org.openapitools.client.model.FieldEEzsigntemplateformfieldgroupType;

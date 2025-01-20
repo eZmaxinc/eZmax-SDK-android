@@ -13,11 +13,11 @@
 package org.openapitools.client.model;
 
 import java.util.*;
-import org.openapitools.client.model.AddressRequestCompound;
-import org.openapitools.client.model.EmailRequestCompound;
+import org.openapitools.client.model.AddressRequest;
+import org.openapitools.client.model.EmailRequest;
 import org.openapitools.client.model.FieldEContactinformationsType;
-import org.openapitools.client.model.PhoneRequestCompound;
-import org.openapitools.client.model.WebsiteRequestCompound;
+import org.openapitools.client.model.PhoneRequest;
+import org.openapitools.client.model.WebsiteRequest;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 

@@ -13,7 +13,7 @@
 package org.openapitools.client.model;
 
 import java.util.*;
-import org.openapitools.client.model.EzsigndocumentdependencyRequestCompound;
+import org.openapitools.client.model.EzsigndocumentdependencyRequest;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 

@@ -23,10 +23,10 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
+import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseError;
 import org.openapitools.client.model.EzsigndiscussionCreateObjectV1Request;
 import org.openapitools.client.model.EzsigndiscussionCreateObjectV1Response;
-import org.openapitools.client.model.EzsigndiscussionDeleteObjectV1Response;
 import org.openapitools.client.model.EzsigndiscussionGetObjectV2Response;
 
 import org.apache.http.HttpEntity;
@@ -191,9 +191,9 @@ public class ObjectEzsigndiscussionApi {
   * Delete an existing Ezsigndiscussion
   * 
    * @param pkiEzsigndiscussionID The unique ID of the Ezsigndiscussion
-   * @return EzsigndiscussionDeleteObjectV1Response
+   * @return CommonResponse
   */
-  public EzsigndiscussionDeleteObjectV1Response ezsigndiscussionDeleteObjectV1 (Integer pkiEzsigndiscussionID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CommonResponse ezsigndiscussionDeleteObjectV1 (Integer pkiEzsigndiscussionID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'pkiEzsigndiscussionID' is set
     if (pkiEzsigndiscussionID == null) {
@@ -228,7 +228,7 @@ public class ObjectEzsigndiscussionApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "DELETE", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (EzsigndiscussionDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsigndiscussionDeleteObjectV1Response.class);
+         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
       } else {
          return null;
       }
@@ -254,7 +254,7 @@ public class ObjectEzsigndiscussionApi {
    * 
    * @param pkiEzsigndiscussionID The unique ID of the Ezsigndiscussion
   */
-  public void ezsigndiscussionDeleteObjectV1 (Integer pkiEzsigndiscussionID, final Response.Listener<EzsigndiscussionDeleteObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
+  public void ezsigndiscussionDeleteObjectV1 (Integer pkiEzsigndiscussionID, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'pkiEzsigndiscussionID' is set
@@ -299,7 +299,7 @@ public class ObjectEzsigndiscussionApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((EzsigndiscussionDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsigndiscussionDeleteObjectV1Response.class));
+              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

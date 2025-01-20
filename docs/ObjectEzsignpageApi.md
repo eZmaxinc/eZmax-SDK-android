@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## ezsignpageConsultV1
 
-> EzsignpageConsultV1Response ezsignpageConsultV1(pkiEzsignpageID, body)
+> CommonResponse ezsignpageConsultV1(pkiEzsignpageID, body)
 
 Consult an Ezsignpage
 
@@ -24,7 +24,7 @@ ObjectEzsignpageApi apiInstance = new ObjectEzsignpageApi();
 Integer pkiEzsignpageID = null; // Integer | 
 Object body = null; // Object | 
 try {
-    EzsignpageConsultV1Response result = apiInstance.ezsignpageConsultV1(pkiEzsignpageID, body);
+    CommonResponse result = apiInstance.ezsignpageConsultV1(pkiEzsignpageID, body);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectEzsignpageApi#ezsignpageConsultV1");
@@ -42,7 +42,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsignpageConsultV1Response**](EzsignpageConsultV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

@@ -13,9 +13,9 @@
 package org.openapitools.client.model;
 
 import java.util.*;
-import org.openapitools.client.model.AttemptResponseCompound;
+import org.openapitools.client.model.AttemptResponse;
 import org.openapitools.client.model.CustomWebhookResponse;
-import org.openapitools.client.model.UserstagedResponseCompound;
+import org.openapitools.client.model.UserstagedResponse;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -30,7 +30,7 @@ public class WebhookUserstagedUserstagedCreated {
   @SerializedName("a_objAttempt")
   private List<AttemptResponseCompound> aObjAttempt = null;
   @SerializedName("objUserstaged")
-  private UserstagedResponseCompound objUserstaged = null;
+  private UserstagedResponse objUserstaged = null;
 
   /**
    **/
@@ -54,12 +54,13 @@ public class WebhookUserstagedUserstagedCreated {
   }
 
   /**
+   * A Userstaged Object
    **/
-  @ApiModelProperty(required = true, value = "")
-  public UserstagedResponseCompound getObjUserstaged() {
+  @ApiModelProperty(required = true, value = "A Userstaged Object")
+  public UserstagedResponse getObjUserstaged() {
     return objUserstaged;
   }
-  public void setObjUserstaged(UserstagedResponseCompound objUserstaged) {
+  public void setObjUserstaged(UserstagedResponse objUserstaged) {
     this.objUserstaged = objUserstaged;
   }
 

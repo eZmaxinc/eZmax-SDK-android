@@ -23,12 +23,11 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
+import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseError;
 import org.openapitools.client.model.EzsignannotationCreateObjectV1Request;
 import org.openapitools.client.model.EzsignannotationCreateObjectV1Response;
-import org.openapitools.client.model.EzsignannotationDeleteObjectV1Response;
 import org.openapitools.client.model.EzsignannotationEditObjectV1Request;
-import org.openapitools.client.model.EzsignannotationEditObjectV1Response;
 import org.openapitools.client.model.EzsignannotationGetObjectV2Response;
 
 import org.apache.http.HttpEntity;
@@ -193,9 +192,9 @@ public class ObjectEzsignannotationApi {
   * Delete an existing Ezsignannotation
   * 
    * @param pkiEzsignannotationID 
-   * @return EzsignannotationDeleteObjectV1Response
+   * @return CommonResponse
   */
-  public EzsignannotationDeleteObjectV1Response ezsignannotationDeleteObjectV1 (Integer pkiEzsignannotationID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CommonResponse ezsignannotationDeleteObjectV1 (Integer pkiEzsignannotationID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'pkiEzsignannotationID' is set
     if (pkiEzsignannotationID == null) {
@@ -230,7 +229,7 @@ public class ObjectEzsignannotationApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "DELETE", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (EzsignannotationDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsignannotationDeleteObjectV1Response.class);
+         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
       } else {
          return null;
       }
@@ -256,7 +255,7 @@ public class ObjectEzsignannotationApi {
    * 
    * @param pkiEzsignannotationID 
   */
-  public void ezsignannotationDeleteObjectV1 (Integer pkiEzsignannotationID, final Response.Listener<EzsignannotationDeleteObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
+  public void ezsignannotationDeleteObjectV1 (Integer pkiEzsignannotationID, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'pkiEzsignannotationID' is set
@@ -301,7 +300,7 @@ public class ObjectEzsignannotationApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((EzsignannotationDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsignannotationDeleteObjectV1Response.class));
+              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -321,9 +320,9 @@ public class ObjectEzsignannotationApi {
   * 
    * @param pkiEzsignannotationID 
    * @param ezsignannotationEditObjectV1Request 
-   * @return EzsignannotationEditObjectV1Response
+   * @return CommonResponse
   */
-  public EzsignannotationEditObjectV1Response ezsignannotationEditObjectV1 (Integer pkiEzsignannotationID, EzsignannotationEditObjectV1Request ezsignannotationEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CommonResponse ezsignannotationEditObjectV1 (Integer pkiEzsignannotationID, EzsignannotationEditObjectV1Request ezsignannotationEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = ezsignannotationEditObjectV1Request;
     // verify the required parameter 'pkiEzsignannotationID' is set
     if (pkiEzsignannotationID == null) {
@@ -364,7 +363,7 @@ public class ObjectEzsignannotationApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (EzsignannotationEditObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsignannotationEditObjectV1Response.class);
+         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
       } else {
          return null;
       }
@@ -390,7 +389,7 @@ public class ObjectEzsignannotationApi {
    * 
    * @param pkiEzsignannotationID    * @param ezsignannotationEditObjectV1Request 
   */
-  public void ezsignannotationEditObjectV1 (Integer pkiEzsignannotationID, EzsignannotationEditObjectV1Request ezsignannotationEditObjectV1Request, final Response.Listener<EzsignannotationEditObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
+  public void ezsignannotationEditObjectV1 (Integer pkiEzsignannotationID, EzsignannotationEditObjectV1Request ezsignannotationEditObjectV1Request, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = ezsignannotationEditObjectV1Request;
 
     // verify the required parameter 'pkiEzsignannotationID' is set
@@ -440,7 +439,7 @@ public class ObjectEzsignannotationApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((EzsignannotationEditObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsignannotationEditObjectV1Response.class));
+              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

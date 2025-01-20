@@ -23,15 +23,14 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
+import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseError;
 import java.io.File;
 import org.openapitools.client.model.HeaderAcceptLanguage;
 import org.openapitools.client.model.UserstagedCreateUserV1Response;
-import org.openapitools.client.model.UserstagedDeleteObjectV1Response;
 import org.openapitools.client.model.UserstagedGetListV1Response;
 import org.openapitools.client.model.UserstagedGetObjectV2Response;
 import org.openapitools.client.model.UserstagedMapV1Request;
-import org.openapitools.client.model.UserstagedMapV1Response;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
@@ -206,9 +205,9 @@ public class ObjectUserstagedApi {
   * Delete an existing Userstaged
   * 
    * @param pkiUserstagedID 
-   * @return UserstagedDeleteObjectV1Response
+   * @return CommonResponse
   */
-  public UserstagedDeleteObjectV1Response userstagedDeleteObjectV1 (Integer pkiUserstagedID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CommonResponse userstagedDeleteObjectV1 (Integer pkiUserstagedID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'pkiUserstagedID' is set
     if (pkiUserstagedID == null) {
@@ -243,7 +242,7 @@ public class ObjectUserstagedApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "DELETE", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (UserstagedDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", UserstagedDeleteObjectV1Response.class);
+         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
       } else {
          return null;
       }
@@ -269,7 +268,7 @@ public class ObjectUserstagedApi {
    * 
    * @param pkiUserstagedID 
   */
-  public void userstagedDeleteObjectV1 (Integer pkiUserstagedID, final Response.Listener<UserstagedDeleteObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
+  public void userstagedDeleteObjectV1 (Integer pkiUserstagedID, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'pkiUserstagedID' is set
@@ -314,7 +313,7 @@ public class ObjectUserstagedApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((UserstagedDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", UserstagedDeleteObjectV1Response.class));
+              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -592,9 +591,9 @@ public class ObjectUserstagedApi {
   * 
    * @param pkiUserstagedID 
    * @param userstagedMapV1Request 
-   * @return UserstagedMapV1Response
+   * @return CommonResponse
   */
-  public UserstagedMapV1Response userstagedMapV1 (Integer pkiUserstagedID, UserstagedMapV1Request userstagedMapV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CommonResponse userstagedMapV1 (Integer pkiUserstagedID, UserstagedMapV1Request userstagedMapV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = userstagedMapV1Request;
     // verify the required parameter 'pkiUserstagedID' is set
     if (pkiUserstagedID == null) {
@@ -635,7 +634,7 @@ public class ObjectUserstagedApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (UserstagedMapV1Response) ApiInvoker.deserialize(localVarResponse, "", UserstagedMapV1Response.class);
+         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
       } else {
          return null;
       }
@@ -661,7 +660,7 @@ public class ObjectUserstagedApi {
    * 
    * @param pkiUserstagedID    * @param userstagedMapV1Request 
   */
-  public void userstagedMapV1 (Integer pkiUserstagedID, UserstagedMapV1Request userstagedMapV1Request, final Response.Listener<UserstagedMapV1Response> responseListener, final Response.ErrorListener errorListener) {
+  public void userstagedMapV1 (Integer pkiUserstagedID, UserstagedMapV1Request userstagedMapV1Request, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = userstagedMapV1Request;
 
     // verify the required parameter 'pkiUserstagedID' is set
@@ -711,7 +710,7 @@ public class ObjectUserstagedApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((UserstagedMapV1Response) ApiInvoker.deserialize(localVarResponse,  "", UserstagedMapV1Response.class));
+              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

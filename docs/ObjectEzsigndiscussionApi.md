@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 
 ## ezsigndiscussionDeleteObjectV1
 
-> EzsigndiscussionDeleteObjectV1Response ezsigndiscussionDeleteObjectV1(pkiEzsigndiscussionID)
+> CommonResponse ezsigndiscussionDeleteObjectV1(pkiEzsigndiscussionID)
 
 Delete an existing Ezsigndiscussion
 
@@ -73,7 +73,7 @@ Delete an existing Ezsigndiscussion
 ObjectEzsigndiscussionApi apiInstance = new ObjectEzsigndiscussionApi();
 Integer pkiEzsigndiscussionID = null; // Integer | The unique ID of the Ezsigndiscussion
 try {
-    EzsigndiscussionDeleteObjectV1Response result = apiInstance.ezsigndiscussionDeleteObjectV1(pkiEzsigndiscussionID);
+    CommonResponse result = apiInstance.ezsigndiscussionDeleteObjectV1(pkiEzsigndiscussionID);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectEzsigndiscussionApi#ezsigndiscussionDeleteObjectV1");
@@ -90,7 +90,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsigndiscussionDeleteObjectV1Response**](EzsigndiscussionDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

@@ -23,12 +23,11 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
+import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseError;
 import org.openapitools.client.model.CorsCreateObjectV1Request;
 import org.openapitools.client.model.CorsCreateObjectV1Response;
-import org.openapitools.client.model.CorsDeleteObjectV1Response;
 import org.openapitools.client.model.CorsEditObjectV1Request;
-import org.openapitools.client.model.CorsEditObjectV1Response;
 import org.openapitools.client.model.CorsGetObjectV2Response;
 
 import org.apache.http.HttpEntity;
@@ -193,9 +192,9 @@ public class ObjectCorsApi {
   * Delete an existing Cors
   * 
    * @param pkiCorsID The unique ID of the Cors
-   * @return CorsDeleteObjectV1Response
+   * @return CommonResponse
   */
-  public CorsDeleteObjectV1Response corsDeleteObjectV1 (Integer pkiCorsID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CommonResponse corsDeleteObjectV1 (Integer pkiCorsID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'pkiCorsID' is set
     if (pkiCorsID == null) {
@@ -230,7 +229,7 @@ public class ObjectCorsApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "DELETE", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CorsDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", CorsDeleteObjectV1Response.class);
+         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
       } else {
          return null;
       }
@@ -256,7 +255,7 @@ public class ObjectCorsApi {
    * 
    * @param pkiCorsID The unique ID of the Cors
   */
-  public void corsDeleteObjectV1 (Integer pkiCorsID, final Response.Listener<CorsDeleteObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
+  public void corsDeleteObjectV1 (Integer pkiCorsID, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'pkiCorsID' is set
@@ -301,7 +300,7 @@ public class ObjectCorsApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CorsDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", CorsDeleteObjectV1Response.class));
+              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -321,9 +320,9 @@ public class ObjectCorsApi {
   * 
    * @param pkiCorsID The unique ID of the Cors
    * @param corsEditObjectV1Request 
-   * @return CorsEditObjectV1Response
+   * @return CommonResponse
   */
-  public CorsEditObjectV1Response corsEditObjectV1 (Integer pkiCorsID, CorsEditObjectV1Request corsEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CommonResponse corsEditObjectV1 (Integer pkiCorsID, CorsEditObjectV1Request corsEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = corsEditObjectV1Request;
     // verify the required parameter 'pkiCorsID' is set
     if (pkiCorsID == null) {
@@ -364,7 +363,7 @@ public class ObjectCorsApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CorsEditObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", CorsEditObjectV1Response.class);
+         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
       } else {
          return null;
       }
@@ -390,7 +389,7 @@ public class ObjectCorsApi {
    * 
    * @param pkiCorsID The unique ID of the Cors   * @param corsEditObjectV1Request 
   */
-  public void corsEditObjectV1 (Integer pkiCorsID, CorsEditObjectV1Request corsEditObjectV1Request, final Response.Listener<CorsEditObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
+  public void corsEditObjectV1 (Integer pkiCorsID, CorsEditObjectV1Request corsEditObjectV1Request, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = corsEditObjectV1Request;
 
     // verify the required parameter 'pkiCorsID' is set
@@ -440,7 +439,7 @@ public class ObjectCorsApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CorsEditObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", CorsEditObjectV1Response.class));
+              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

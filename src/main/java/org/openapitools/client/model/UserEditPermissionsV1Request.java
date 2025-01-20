@@ -13,7 +13,7 @@
 package org.openapitools.client.model;
 
 import java.util.*;
-import org.openapitools.client.model.PermissionRequestCompound;
+import org.openapitools.client.model.PermissionRequest;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 

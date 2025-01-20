@@ -23,13 +23,13 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
+import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseError;
 import org.openapitools.client.model.EzsigntemplatepublicCreateEzsignfolderV1Request;
 import org.openapitools.client.model.EzsigntemplatepublicCreateEzsignfolderV1Response;
 import org.openapitools.client.model.EzsigntemplatepublicCreateObjectV1Request;
 import org.openapitools.client.model.EzsigntemplatepublicCreateObjectV1Response;
 import org.openapitools.client.model.EzsigntemplatepublicEditObjectV1Request;
-import org.openapitools.client.model.EzsigntemplatepublicEditObjectV1Response;
 import org.openapitools.client.model.EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request;
 import org.openapitools.client.model.EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Response;
 import org.openapitools.client.model.EzsigntemplatepublicGetFormsDataV1Response;
@@ -331,9 +331,9 @@ public class ObjectEzsigntemplatepublicApi {
   * 
    * @param pkiEzsigntemplatepublicID The unique ID of the Ezsigntemplatepublic
    * @param ezsigntemplatepublicEditObjectV1Request 
-   * @return EzsigntemplatepublicEditObjectV1Response
+   * @return CommonResponse
   */
-  public EzsigntemplatepublicEditObjectV1Response ezsigntemplatepublicEditObjectV1 (Integer pkiEzsigntemplatepublicID, EzsigntemplatepublicEditObjectV1Request ezsigntemplatepublicEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CommonResponse ezsigntemplatepublicEditObjectV1 (Integer pkiEzsigntemplatepublicID, EzsigntemplatepublicEditObjectV1Request ezsigntemplatepublicEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = ezsigntemplatepublicEditObjectV1Request;
     // verify the required parameter 'pkiEzsigntemplatepublicID' is set
     if (pkiEzsigntemplatepublicID == null) {
@@ -374,7 +374,7 @@ public class ObjectEzsigntemplatepublicApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (EzsigntemplatepublicEditObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsigntemplatepublicEditObjectV1Response.class);
+         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
       } else {
          return null;
       }
@@ -400,7 +400,7 @@ public class ObjectEzsigntemplatepublicApi {
    * 
    * @param pkiEzsigntemplatepublicID The unique ID of the Ezsigntemplatepublic   * @param ezsigntemplatepublicEditObjectV1Request 
   */
-  public void ezsigntemplatepublicEditObjectV1 (Integer pkiEzsigntemplatepublicID, EzsigntemplatepublicEditObjectV1Request ezsigntemplatepublicEditObjectV1Request, final Response.Listener<EzsigntemplatepublicEditObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
+  public void ezsigntemplatepublicEditObjectV1 (Integer pkiEzsigntemplatepublicID, EzsigntemplatepublicEditObjectV1Request ezsigntemplatepublicEditObjectV1Request, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = ezsigntemplatepublicEditObjectV1Request;
 
     // verify the required parameter 'pkiEzsigntemplatepublicID' is set
@@ -450,7 +450,7 @@ public class ObjectEzsigntemplatepublicApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((EzsigntemplatepublicEditObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsigntemplatepublicEditObjectV1Response.class));
+              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

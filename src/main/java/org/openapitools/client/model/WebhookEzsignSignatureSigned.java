@@ -13,7 +13,7 @@
 package org.openapitools.client.model;
 
 import java.util.*;
-import org.openapitools.client.model.AttemptResponseCompound;
+import org.openapitools.client.model.AttemptResponse;
 import org.openapitools.client.model.CustomWebhookResponse;
 import org.openapitools.client.model.EzsignsignatureResponse;
 import io.swagger.annotations.*;

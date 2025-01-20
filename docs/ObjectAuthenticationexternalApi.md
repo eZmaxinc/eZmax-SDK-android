@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ## authenticationexternalDeleteObjectV1
 
-> AuthenticationexternalDeleteObjectV1Response authenticationexternalDeleteObjectV1(pkiAuthenticationexternalID)
+> CommonResponse authenticationexternalDeleteObjectV1(pkiAuthenticationexternalID)
 
 Delete an existing Authenticationexternal
 
@@ -77,7 +77,7 @@ Delete an existing Authenticationexternal
 ObjectAuthenticationexternalApi apiInstance = new ObjectAuthenticationexternalApi();
 Integer pkiAuthenticationexternalID = null; // Integer | The unique ID of the Authenticationexternal
 try {
-    AuthenticationexternalDeleteObjectV1Response result = apiInstance.authenticationexternalDeleteObjectV1(pkiAuthenticationexternalID);
+    CommonResponse result = apiInstance.authenticationexternalDeleteObjectV1(pkiAuthenticationexternalID);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectAuthenticationexternalApi#authenticationexternalDeleteObjectV1");
@@ -94,7 +94,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AuthenticationexternalDeleteObjectV1Response**](AuthenticationexternalDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -108,7 +108,7 @@ Name | Type | Description  | Notes
 
 ## authenticationexternalEditObjectV1
 
-> AuthenticationexternalEditObjectV1Response authenticationexternalEditObjectV1(pkiAuthenticationexternalID, authenticationexternalEditObjectV1Request)
+> CommonResponse authenticationexternalEditObjectV1(pkiAuthenticationexternalID, authenticationexternalEditObjectV1Request)
 
 Edit an existing Authenticationexternal
 
@@ -124,7 +124,7 @@ ObjectAuthenticationexternalApi apiInstance = new ObjectAuthenticationexternalAp
 Integer pkiAuthenticationexternalID = null; // Integer | The unique ID of the Authenticationexternal
 AuthenticationexternalEditObjectV1Request authenticationexternalEditObjectV1Request = new AuthenticationexternalEditObjectV1Request(); // AuthenticationexternalEditObjectV1Request | 
 try {
-    AuthenticationexternalEditObjectV1Response result = apiInstance.authenticationexternalEditObjectV1(pkiAuthenticationexternalID, authenticationexternalEditObjectV1Request);
+    CommonResponse result = apiInstance.authenticationexternalEditObjectV1(pkiAuthenticationexternalID, authenticationexternalEditObjectV1Request);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectAuthenticationexternalApi#authenticationexternalEditObjectV1");
@@ -142,7 +142,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AuthenticationexternalEditObjectV1Response**](AuthenticationexternalEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -308,7 +308,7 @@ Name | Type | Description  | Notes
 
 ## authenticationexternalResetAuthorizationV1
 
-> AuthenticationexternalResetAuthorizationV1Response authenticationexternalResetAuthorizationV1(pkiAuthenticationexternalID, body)
+> CommonResponse authenticationexternalResetAuthorizationV1(pkiAuthenticationexternalID, body)
 
 Reset the Authenticationexternal authorization
 
@@ -324,7 +324,7 @@ ObjectAuthenticationexternalApi apiInstance = new ObjectAuthenticationexternalAp
 Integer pkiAuthenticationexternalID = null; // Integer | 
 Object body = null; // Object | 
 try {
-    AuthenticationexternalResetAuthorizationV1Response result = apiInstance.authenticationexternalResetAuthorizationV1(pkiAuthenticationexternalID, body);
+    CommonResponse result = apiInstance.authenticationexternalResetAuthorizationV1(pkiAuthenticationexternalID, body);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectAuthenticationexternalApi#authenticationexternalResetAuthorizationV1");
@@ -342,7 +342,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AuthenticationexternalResetAuthorizationV1Response**](AuthenticationexternalResetAuthorizationV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

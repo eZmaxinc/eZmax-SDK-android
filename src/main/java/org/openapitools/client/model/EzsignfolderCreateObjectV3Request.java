@@ -13,7 +13,7 @@
 package org.openapitools.client.model;
 
 import java.util.*;
-import org.openapitools.client.model.EzsignfolderRequestCompoundV3;
+import org.openapitools.client.model.EzsignfolderRequestV3;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
