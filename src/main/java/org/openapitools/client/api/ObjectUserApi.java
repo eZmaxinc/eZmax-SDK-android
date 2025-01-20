@@ -23,6 +23,7 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
+import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseError;
 import java.io.File;
 import org.openapitools.client.model.HeaderAcceptLanguage;
@@ -33,7 +34,6 @@ import org.openapitools.client.model.UserCreateObjectV2Response;
 import org.openapitools.client.model.UserEditColleaguesV2Request;
 import org.openapitools.client.model.UserEditColleaguesV2Response;
 import org.openapitools.client.model.UserEditObjectV1Request;
-import org.openapitools.client.model.UserEditObjectV1Response;
 import org.openapitools.client.model.UserEditPermissionsV1Request;
 import org.openapitools.client.model.UserEditPermissionsV1Response;
 import org.openapitools.client.model.UserGetApikeysV1Response;
@@ -46,7 +46,6 @@ import org.openapitools.client.model.UserGetPermissionsV1Response;
 import org.openapitools.client.model.UserGetSubnetsV1Response;
 import org.openapitools.client.model.UserGetUsergroupexternalsV1Response;
 import org.openapitools.client.model.UserGetUsergroupsV1Response;
-import org.openapitools.client.model.UserSendPasswordResetV1Response;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
@@ -478,9 +477,9 @@ public class ObjectUserApi {
   * 
    * @param pkiUserID The unique ID of the User
    * @param userEditObjectV1Request 
-   * @return UserEditObjectV1Response
+   * @return CommonResponse
   */
-  public UserEditObjectV1Response userEditObjectV1 (Integer pkiUserID, UserEditObjectV1Request userEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CommonResponse userEditObjectV1 (Integer pkiUserID, UserEditObjectV1Request userEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = userEditObjectV1Request;
     // verify the required parameter 'pkiUserID' is set
     if (pkiUserID == null) {
@@ -521,7 +520,7 @@ public class ObjectUserApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (UserEditObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", UserEditObjectV1Response.class);
+         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
       } else {
          return null;
       }
@@ -547,7 +546,7 @@ public class ObjectUserApi {
    * 
    * @param pkiUserID The unique ID of the User   * @param userEditObjectV1Request 
   */
-  public void userEditObjectV1 (Integer pkiUserID, UserEditObjectV1Request userEditObjectV1Request, final Response.Listener<UserEditObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
+  public void userEditObjectV1 (Integer pkiUserID, UserEditObjectV1Request userEditObjectV1Request, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = userEditObjectV1Request;
 
     // verify the required parameter 'pkiUserID' is set
@@ -597,7 +596,7 @@ public class ObjectUserApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((UserEditObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", UserEditObjectV1Response.class));
+              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -2039,9 +2038,9 @@ public class ObjectUserApi {
   * Send the password reset email
    * @param pkiUserID 
    * @param body 
-   * @return UserSendPasswordResetV1Response
+   * @return CommonResponse
   */
-  public UserSendPasswordResetV1Response userSendPasswordResetV1 (Integer pkiUserID, Object body) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CommonResponse userSendPasswordResetV1 (Integer pkiUserID, Object body) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = body;
     // verify the required parameter 'pkiUserID' is set
     if (pkiUserID == null) {
@@ -2082,7 +2081,7 @@ public class ObjectUserApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (UserSendPasswordResetV1Response) ApiInvoker.deserialize(localVarResponse, "", UserSendPasswordResetV1Response.class);
+         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
       } else {
          return null;
       }
@@ -2108,7 +2107,7 @@ public class ObjectUserApi {
    * Send the password reset email
    * @param pkiUserID    * @param body 
   */
-  public void userSendPasswordResetV1 (Integer pkiUserID, Object body, final Response.Listener<UserSendPasswordResetV1Response> responseListener, final Response.ErrorListener errorListener) {
+  public void userSendPasswordResetV1 (Integer pkiUserID, Object body, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = body;
 
     // verify the required parameter 'pkiUserID' is set
@@ -2158,7 +2157,7 @@ public class ObjectUserApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((UserSendPasswordResetV1Response) ApiInvoker.deserialize(localVarResponse,  "", UserSendPasswordResetV1Response.class));
+              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

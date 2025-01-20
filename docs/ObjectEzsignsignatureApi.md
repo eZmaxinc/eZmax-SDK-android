@@ -156,7 +156,7 @@ Name | Type | Description  | Notes
 
 ## ezsignsignatureDeleteObjectV1
 
-> EzsignsignatureDeleteObjectV1Response ezsignsignatureDeleteObjectV1(pkiEzsignsignatureID)
+> CommonResponse ezsignsignatureDeleteObjectV1(pkiEzsignsignatureID)
 
 Delete an existing Ezsignsignature
 
@@ -171,7 +171,7 @@ Delete an existing Ezsignsignature
 ObjectEzsignsignatureApi apiInstance = new ObjectEzsignsignatureApi();
 Integer pkiEzsignsignatureID = null; // Integer | 
 try {
-    EzsignsignatureDeleteObjectV1Response result = apiInstance.ezsignsignatureDeleteObjectV1(pkiEzsignsignatureID);
+    CommonResponse result = apiInstance.ezsignsignatureDeleteObjectV1(pkiEzsignsignatureID);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectEzsignsignatureApi#ezsignsignatureDeleteObjectV1");
@@ -188,7 +188,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsignsignatureDeleteObjectV1Response**](EzsignsignatureDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -202,7 +202,7 @@ Name | Type | Description  | Notes
 
 ## ezsignsignatureEditObjectV2
 
-> EzsignsignatureEditObjectV2Response ezsignsignatureEditObjectV2(pkiEzsignsignatureID, ezsignsignatureEditObjectV2Request)
+> CommonResponse ezsignsignatureEditObjectV2(pkiEzsignsignatureID, ezsignsignatureEditObjectV2Request)
 
 Edit an existing Ezsignsignature
 
@@ -218,7 +218,7 @@ ObjectEzsignsignatureApi apiInstance = new ObjectEzsignsignatureApi();
 Integer pkiEzsignsignatureID = null; // Integer | 
 EzsignsignatureEditObjectV2Request ezsignsignatureEditObjectV2Request = new EzsignsignatureEditObjectV2Request(); // EzsignsignatureEditObjectV2Request | 
 try {
-    EzsignsignatureEditObjectV2Response result = apiInstance.ezsignsignatureEditObjectV2(pkiEzsignsignatureID, ezsignsignatureEditObjectV2Request);
+    CommonResponse result = apiInstance.ezsignsignatureEditObjectV2(pkiEzsignsignatureID, ezsignsignatureEditObjectV2Request);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectEzsignsignatureApi#ezsignsignatureEditObjectV2");
@@ -236,7 +236,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsignsignatureEditObjectV2Response**](EzsignsignatureEditObjectV2Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

@@ -23,12 +23,11 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
+import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseError;
 import org.openapitools.client.model.SignatureCreateObjectV1Request;
 import org.openapitools.client.model.SignatureCreateObjectV1Response;
-import org.openapitools.client.model.SignatureDeleteObjectV1Response;
 import org.openapitools.client.model.SignatureEditObjectV1Request;
-import org.openapitools.client.model.SignatureEditObjectV1Response;
 import org.openapitools.client.model.SignatureGetObjectV2Response;
 import org.openapitools.client.model.SignatureGetObjectV3Response;
 
@@ -194,9 +193,9 @@ public class ObjectSignatureApi {
   * Delete an existing Signature
   * 
    * @param pkiSignatureID The unique ID of the Signature
-   * @return SignatureDeleteObjectV1Response
+   * @return CommonResponse
   */
-  public SignatureDeleteObjectV1Response signatureDeleteObjectV1 (Integer pkiSignatureID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CommonResponse signatureDeleteObjectV1 (Integer pkiSignatureID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'pkiSignatureID' is set
     if (pkiSignatureID == null) {
@@ -231,7 +230,7 @@ public class ObjectSignatureApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "DELETE", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (SignatureDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", SignatureDeleteObjectV1Response.class);
+         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
       } else {
          return null;
       }
@@ -257,7 +256,7 @@ public class ObjectSignatureApi {
    * 
    * @param pkiSignatureID The unique ID of the Signature
   */
-  public void signatureDeleteObjectV1 (Integer pkiSignatureID, final Response.Listener<SignatureDeleteObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
+  public void signatureDeleteObjectV1 (Integer pkiSignatureID, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'pkiSignatureID' is set
@@ -302,7 +301,7 @@ public class ObjectSignatureApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((SignatureDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", SignatureDeleteObjectV1Response.class));
+              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -322,9 +321,9 @@ public class ObjectSignatureApi {
   * 
    * @param pkiSignatureID The unique ID of the Signature
    * @param signatureEditObjectV1Request 
-   * @return SignatureEditObjectV1Response
+   * @return CommonResponse
   */
-  public SignatureEditObjectV1Response signatureEditObjectV1 (Integer pkiSignatureID, SignatureEditObjectV1Request signatureEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CommonResponse signatureEditObjectV1 (Integer pkiSignatureID, SignatureEditObjectV1Request signatureEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = signatureEditObjectV1Request;
     // verify the required parameter 'pkiSignatureID' is set
     if (pkiSignatureID == null) {
@@ -365,7 +364,7 @@ public class ObjectSignatureApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (SignatureEditObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", SignatureEditObjectV1Response.class);
+         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
       } else {
          return null;
       }
@@ -391,7 +390,7 @@ public class ObjectSignatureApi {
    * 
    * @param pkiSignatureID The unique ID of the Signature   * @param signatureEditObjectV1Request 
   */
-  public void signatureEditObjectV1 (Integer pkiSignatureID, SignatureEditObjectV1Request signatureEditObjectV1Request, final Response.Listener<SignatureEditObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
+  public void signatureEditObjectV1 (Integer pkiSignatureID, SignatureEditObjectV1Request signatureEditObjectV1Request, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = signatureEditObjectV1Request;
 
     // verify the required parameter 'pkiSignatureID' is set
@@ -441,7 +440,7 @@ public class ObjectSignatureApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((SignatureEditObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", SignatureEditObjectV1Response.class));
+              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

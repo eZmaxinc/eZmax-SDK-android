@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ## signatureDeleteObjectV1
 
-> SignatureDeleteObjectV1Response signatureDeleteObjectV1(pkiSignatureID)
+> CommonResponse signatureDeleteObjectV1(pkiSignatureID)
 
 Delete an existing Signature
 
@@ -77,7 +77,7 @@ Delete an existing Signature
 ObjectSignatureApi apiInstance = new ObjectSignatureApi();
 Integer pkiSignatureID = null; // Integer | The unique ID of the Signature
 try {
-    SignatureDeleteObjectV1Response result = apiInstance.signatureDeleteObjectV1(pkiSignatureID);
+    CommonResponse result = apiInstance.signatureDeleteObjectV1(pkiSignatureID);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectSignatureApi#signatureDeleteObjectV1");
@@ -94,7 +94,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SignatureDeleteObjectV1Response**](SignatureDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -108,7 +108,7 @@ Name | Type | Description  | Notes
 
 ## signatureEditObjectV1
 
-> SignatureEditObjectV1Response signatureEditObjectV1(pkiSignatureID, signatureEditObjectV1Request)
+> CommonResponse signatureEditObjectV1(pkiSignatureID, signatureEditObjectV1Request)
 
 Edit an existing Signature
 
@@ -124,7 +124,7 @@ ObjectSignatureApi apiInstance = new ObjectSignatureApi();
 Integer pkiSignatureID = null; // Integer | The unique ID of the Signature
 SignatureEditObjectV1Request signatureEditObjectV1Request = new SignatureEditObjectV1Request(); // SignatureEditObjectV1Request | 
 try {
-    SignatureEditObjectV1Response result = apiInstance.signatureEditObjectV1(pkiSignatureID, signatureEditObjectV1Request);
+    CommonResponse result = apiInstance.signatureEditObjectV1(pkiSignatureID, signatureEditObjectV1Request);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectSignatureApi#signatureEditObjectV1");
@@ -142,7 +142,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SignatureEditObjectV1Response**](SignatureEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

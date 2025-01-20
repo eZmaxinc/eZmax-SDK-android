@@ -23,14 +23,13 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
+import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseError;
 import org.openapitools.client.model.EzsigntemplatepackageCreateObjectV1Request;
 import org.openapitools.client.model.EzsigntemplatepackageCreateObjectV1Response;
-import org.openapitools.client.model.EzsigntemplatepackageDeleteObjectV1Response;
 import org.openapitools.client.model.EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Request;
 import org.openapitools.client.model.EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response;
 import org.openapitools.client.model.EzsigntemplatepackageEditObjectV1Request;
-import org.openapitools.client.model.EzsigntemplatepackageEditObjectV1Response;
 import org.openapitools.client.model.EzsigntemplatepackageGetAutocompleteV2Response;
 import org.openapitools.client.model.EzsigntemplatepackageGetListV1Response;
 import org.openapitools.client.model.EzsigntemplatepackageGetObjectV2Response;
@@ -199,9 +198,9 @@ public class ObjectEzsigntemplatepackageApi {
   * Delete an existing Ezsigntemplatepackage
   * 
    * @param pkiEzsigntemplatepackageID 
-   * @return EzsigntemplatepackageDeleteObjectV1Response
+   * @return CommonResponse
   */
-  public EzsigntemplatepackageDeleteObjectV1Response ezsigntemplatepackageDeleteObjectV1 (Integer pkiEzsigntemplatepackageID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CommonResponse ezsigntemplatepackageDeleteObjectV1 (Integer pkiEzsigntemplatepackageID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'pkiEzsigntemplatepackageID' is set
     if (pkiEzsigntemplatepackageID == null) {
@@ -236,7 +235,7 @@ public class ObjectEzsigntemplatepackageApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "DELETE", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (EzsigntemplatepackageDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsigntemplatepackageDeleteObjectV1Response.class);
+         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
       } else {
          return null;
       }
@@ -262,7 +261,7 @@ public class ObjectEzsigntemplatepackageApi {
    * 
    * @param pkiEzsigntemplatepackageID 
   */
-  public void ezsigntemplatepackageDeleteObjectV1 (Integer pkiEzsigntemplatepackageID, final Response.Listener<EzsigntemplatepackageDeleteObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
+  public void ezsigntemplatepackageDeleteObjectV1 (Integer pkiEzsigntemplatepackageID, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'pkiEzsigntemplatepackageID' is set
@@ -307,7 +306,7 @@ public class ObjectEzsigntemplatepackageApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((EzsigntemplatepackageDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsigntemplatepackageDeleteObjectV1Response.class));
+              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -466,9 +465,9 @@ public class ObjectEzsigntemplatepackageApi {
   * 
    * @param pkiEzsigntemplatepackageID 
    * @param ezsigntemplatepackageEditObjectV1Request 
-   * @return EzsigntemplatepackageEditObjectV1Response
+   * @return CommonResponse
   */
-  public EzsigntemplatepackageEditObjectV1Response ezsigntemplatepackageEditObjectV1 (Integer pkiEzsigntemplatepackageID, EzsigntemplatepackageEditObjectV1Request ezsigntemplatepackageEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CommonResponse ezsigntemplatepackageEditObjectV1 (Integer pkiEzsigntemplatepackageID, EzsigntemplatepackageEditObjectV1Request ezsigntemplatepackageEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = ezsigntemplatepackageEditObjectV1Request;
     // verify the required parameter 'pkiEzsigntemplatepackageID' is set
     if (pkiEzsigntemplatepackageID == null) {
@@ -509,7 +508,7 @@ public class ObjectEzsigntemplatepackageApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (EzsigntemplatepackageEditObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsigntemplatepackageEditObjectV1Response.class);
+         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
       } else {
          return null;
       }
@@ -535,7 +534,7 @@ public class ObjectEzsigntemplatepackageApi {
    * 
    * @param pkiEzsigntemplatepackageID    * @param ezsigntemplatepackageEditObjectV1Request 
   */
-  public void ezsigntemplatepackageEditObjectV1 (Integer pkiEzsigntemplatepackageID, EzsigntemplatepackageEditObjectV1Request ezsigntemplatepackageEditObjectV1Request, final Response.Listener<EzsigntemplatepackageEditObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
+  public void ezsigntemplatepackageEditObjectV1 (Integer pkiEzsigntemplatepackageID, EzsigntemplatepackageEditObjectV1Request ezsigntemplatepackageEditObjectV1Request, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = ezsigntemplatepackageEditObjectV1Request;
 
     // verify the required parameter 'pkiEzsigntemplatepackageID' is set
@@ -585,7 +584,7 @@ public class ObjectEzsigntemplatepackageApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((EzsigntemplatepackageEditObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsigntemplatepackageEditObjectV1Response.class));
+              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## systemconfigurationEditObjectV1
 
-> SystemconfigurationEditObjectV1Response systemconfigurationEditObjectV1(pkiSystemconfigurationID, systemconfigurationEditObjectV1Request)
+> CommonResponse systemconfigurationEditObjectV1(pkiSystemconfigurationID, systemconfigurationEditObjectV1Request)
 
 Edit an existing Systemconfiguration
 
@@ -27,7 +27,7 @@ ObjectSystemconfigurationApi apiInstance = new ObjectSystemconfigurationApi();
 Integer pkiSystemconfigurationID = null; // Integer | The unique ID of the Systemconfiguration
 SystemconfigurationEditObjectV1Request systemconfigurationEditObjectV1Request = new SystemconfigurationEditObjectV1Request(); // SystemconfigurationEditObjectV1Request | 
 try {
-    SystemconfigurationEditObjectV1Response result = apiInstance.systemconfigurationEditObjectV1(pkiSystemconfigurationID, systemconfigurationEditObjectV1Request);
+    CommonResponse result = apiInstance.systemconfigurationEditObjectV1(pkiSystemconfigurationID, systemconfigurationEditObjectV1Request);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectSystemconfigurationApi#systemconfigurationEditObjectV1");
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SystemconfigurationEditObjectV1Response**](SystemconfigurationEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

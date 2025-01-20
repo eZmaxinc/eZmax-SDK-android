@@ -12,7 +12,7 @@
 
 package org.openapitools.client.model;
 
-import org.openapitools.client.model.UserstagedResponseCompound;
+import org.openapitools.client.model.UserstagedResponse;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -23,15 +23,16 @@ import com.google.gson.annotations.SerializedName;
 public class UserstagedGetObjectV2ResponseMPayload {
   
   @SerializedName("objUserstaged")
-  private UserstagedResponseCompound objUserstaged = null;
+  private UserstagedResponse objUserstaged = null;
 
   /**
+   * A Userstaged Object
    **/
-  @ApiModelProperty(required = true, value = "")
-  public UserstagedResponseCompound getObjUserstaged() {
+  @ApiModelProperty(required = true, value = "A Userstaged Object")
+  public UserstagedResponse getObjUserstaged() {
     return objUserstaged;
   }
-  public void setObjUserstaged(UserstagedResponseCompound objUserstaged) {
+  public void setObjUserstaged(UserstagedResponse objUserstaged) {
     this.objUserstaged = objUserstaged;
   }
 

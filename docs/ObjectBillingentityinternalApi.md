@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 
 ## billingentityinternalEditObjectV1
 
-> BillingentityinternalEditObjectV1Response billingentityinternalEditObjectV1(pkiBillingentityinternalID, billingentityinternalEditObjectV1Request)
+> CommonResponse billingentityinternalEditObjectV1(pkiBillingentityinternalID, billingentityinternalEditObjectV1Request)
 
 Edit an existing Billingentityinternal
 
@@ -76,7 +76,7 @@ ObjectBillingentityinternalApi apiInstance = new ObjectBillingentityinternalApi(
 Integer pkiBillingentityinternalID = null; // Integer | 
 BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request = new BillingentityinternalEditObjectV1Request(); // BillingentityinternalEditObjectV1Request | 
 try {
-    BillingentityinternalEditObjectV1Response result = apiInstance.billingentityinternalEditObjectV1(pkiBillingentityinternalID, billingentityinternalEditObjectV1Request);
+    CommonResponse result = apiInstance.billingentityinternalEditObjectV1(pkiBillingentityinternalID, billingentityinternalEditObjectV1Request);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectBillingentityinternalApi#billingentityinternalEditObjectV1");
@@ -94,7 +94,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BillingentityinternalEditObjectV1Response**](BillingentityinternalEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

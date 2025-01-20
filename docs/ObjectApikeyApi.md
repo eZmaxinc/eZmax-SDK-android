@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 
 ## apikeyEditObjectV1
 
-> ApikeyEditObjectV1Response apikeyEditObjectV1(pkiApikeyID, apikeyEditObjectV1Request)
+> CommonResponse apikeyEditObjectV1(pkiApikeyID, apikeyEditObjectV1Request)
 
 Edit an existing Apikey
 
@@ -81,7 +81,7 @@ ObjectApikeyApi apiInstance = new ObjectApikeyApi();
 Integer pkiApikeyID = null; // Integer | The unique ID of the Apikey
 ApikeyEditObjectV1Request apikeyEditObjectV1Request = new ApikeyEditObjectV1Request(); // ApikeyEditObjectV1Request | 
 try {
-    ApikeyEditObjectV1Response result = apiInstance.apikeyEditObjectV1(pkiApikeyID, apikeyEditObjectV1Request);
+    CommonResponse result = apiInstance.apikeyEditObjectV1(pkiApikeyID, apikeyEditObjectV1Request);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectApikeyApi#apikeyEditObjectV1");
@@ -99,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ApikeyEditObjectV1Response**](ApikeyEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

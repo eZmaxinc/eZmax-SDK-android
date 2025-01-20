@@ -23,14 +23,13 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
+import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseError;
 import org.openapitools.client.model.EzsignsignergroupCreateObjectV1Request;
 import org.openapitools.client.model.EzsignsignergroupCreateObjectV1Response;
-import org.openapitools.client.model.EzsignsignergroupDeleteObjectV1Response;
 import org.openapitools.client.model.EzsignsignergroupEditEzsignsignergroupmembershipsV1Request;
 import org.openapitools.client.model.EzsignsignergroupEditEzsignsignergroupmembershipsV1Response;
 import org.openapitools.client.model.EzsignsignergroupEditObjectV1Request;
-import org.openapitools.client.model.EzsignsignergroupEditObjectV1Response;
 import org.openapitools.client.model.EzsignsignergroupGetEzsignsignergroupmembershipsV1Response;
 import org.openapitools.client.model.EzsignsignergroupGetObjectV2Response;
 
@@ -196,9 +195,9 @@ public class ObjectEzsignsignergroupApi {
   * Delete an existing Ezsignsignergroup
   * 
    * @param pkiEzsignsignergroupID The unique ID of the Ezsignsignergroup
-   * @return EzsignsignergroupDeleteObjectV1Response
+   * @return CommonResponse
   */
-  public EzsignsignergroupDeleteObjectV1Response ezsignsignergroupDeleteObjectV1 (Integer pkiEzsignsignergroupID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CommonResponse ezsignsignergroupDeleteObjectV1 (Integer pkiEzsignsignergroupID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'pkiEzsignsignergroupID' is set
     if (pkiEzsignsignergroupID == null) {
@@ -233,7 +232,7 @@ public class ObjectEzsignsignergroupApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "DELETE", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (EzsignsignergroupDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsignsignergroupDeleteObjectV1Response.class);
+         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
       } else {
          return null;
       }
@@ -259,7 +258,7 @@ public class ObjectEzsignsignergroupApi {
    * 
    * @param pkiEzsignsignergroupID The unique ID of the Ezsignsignergroup
   */
-  public void ezsignsignergroupDeleteObjectV1 (Integer pkiEzsignsignergroupID, final Response.Listener<EzsignsignergroupDeleteObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
+  public void ezsignsignergroupDeleteObjectV1 (Integer pkiEzsignsignergroupID, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'pkiEzsignsignergroupID' is set
@@ -304,7 +303,7 @@ public class ObjectEzsignsignergroupApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((EzsignsignergroupDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsignsignergroupDeleteObjectV1Response.class));
+              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -463,9 +462,9 @@ public class ObjectEzsignsignergroupApi {
   * 
    * @param pkiEzsignsignergroupID The unique ID of the Ezsignsignergroup
    * @param ezsignsignergroupEditObjectV1Request 
-   * @return EzsignsignergroupEditObjectV1Response
+   * @return CommonResponse
   */
-  public EzsignsignergroupEditObjectV1Response ezsignsignergroupEditObjectV1 (Integer pkiEzsignsignergroupID, EzsignsignergroupEditObjectV1Request ezsignsignergroupEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CommonResponse ezsignsignergroupEditObjectV1 (Integer pkiEzsignsignergroupID, EzsignsignergroupEditObjectV1Request ezsignsignergroupEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = ezsignsignergroupEditObjectV1Request;
     // verify the required parameter 'pkiEzsignsignergroupID' is set
     if (pkiEzsignsignergroupID == null) {
@@ -506,7 +505,7 @@ public class ObjectEzsignsignergroupApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (EzsignsignergroupEditObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsignsignergroupEditObjectV1Response.class);
+         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
       } else {
          return null;
       }
@@ -532,7 +531,7 @@ public class ObjectEzsignsignergroupApi {
    * 
    * @param pkiEzsignsignergroupID The unique ID of the Ezsignsignergroup   * @param ezsignsignergroupEditObjectV1Request 
   */
-  public void ezsignsignergroupEditObjectV1 (Integer pkiEzsignsignergroupID, EzsignsignergroupEditObjectV1Request ezsignsignergroupEditObjectV1Request, final Response.Listener<EzsignsignergroupEditObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
+  public void ezsignsignergroupEditObjectV1 (Integer pkiEzsignsignergroupID, EzsignsignergroupEditObjectV1Request ezsignsignergroupEditObjectV1Request, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = ezsignsignergroupEditObjectV1Request;
 
     // verify the required parameter 'pkiEzsignsignergroupID' is set
@@ -582,7 +581,7 @@ public class ObjectEzsignsignergroupApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((EzsignsignergroupEditObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsignsignergroupEditObjectV1Response.class));
+              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

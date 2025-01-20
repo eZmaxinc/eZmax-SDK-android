@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 
 ## usergroupdelegationDeleteObjectV1
 
-> UsergroupdelegationDeleteObjectV1Response usergroupdelegationDeleteObjectV1(pkiUsergroupdelegationID)
+> CommonResponse usergroupdelegationDeleteObjectV1(pkiUsergroupdelegationID)
 
 Delete an existing Usergroupdelegation
 
@@ -74,7 +74,7 @@ Delete an existing Usergroupdelegation
 ObjectUsergroupdelegationApi apiInstance = new ObjectUsergroupdelegationApi();
 Integer pkiUsergroupdelegationID = null; // Integer | The unique ID of the Usergroupdelegation
 try {
-    UsergroupdelegationDeleteObjectV1Response result = apiInstance.usergroupdelegationDeleteObjectV1(pkiUsergroupdelegationID);
+    CommonResponse result = apiInstance.usergroupdelegationDeleteObjectV1(pkiUsergroupdelegationID);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectUsergroupdelegationApi#usergroupdelegationDeleteObjectV1");
@@ -91,7 +91,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**UsergroupdelegationDeleteObjectV1Response**](UsergroupdelegationDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -105,7 +105,7 @@ Name | Type | Description  | Notes
 
 ## usergroupdelegationEditObjectV1
 
-> UsergroupdelegationEditObjectV1Response usergroupdelegationEditObjectV1(pkiUsergroupdelegationID, usergroupdelegationEditObjectV1Request)
+> CommonResponse usergroupdelegationEditObjectV1(pkiUsergroupdelegationID, usergroupdelegationEditObjectV1Request)
 
 Edit an existing Usergroupdelegation
 
@@ -121,7 +121,7 @@ ObjectUsergroupdelegationApi apiInstance = new ObjectUsergroupdelegationApi();
 Integer pkiUsergroupdelegationID = null; // Integer | The unique ID of the Usergroupdelegation
 UsergroupdelegationEditObjectV1Request usergroupdelegationEditObjectV1Request = new UsergroupdelegationEditObjectV1Request(); // UsergroupdelegationEditObjectV1Request | 
 try {
-    UsergroupdelegationEditObjectV1Response result = apiInstance.usergroupdelegationEditObjectV1(pkiUsergroupdelegationID, usergroupdelegationEditObjectV1Request);
+    CommonResponse result = apiInstance.usergroupdelegationEditObjectV1(pkiUsergroupdelegationID, usergroupdelegationEditObjectV1Request);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectUsergroupdelegationApi#usergroupdelegationEditObjectV1");
@@ -139,7 +139,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**UsergroupdelegationEditObjectV1Response**](UsergroupdelegationEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

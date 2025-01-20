@@ -23,8 +23,8 @@ Name | Type | Description | Notes
 **eEzsigntemplateformfieldgroupTextvalidation** | [**EnumTextvalidation**](EnumTextvalidation.md) |  |  [optional]
 **tEzsigntemplateformfieldgroupTooltip** | **String** | A tooltip that will be presented to Ezsigntemplatesigner about the Ezsigntemplateformfieldgroup |  [optional]
 **eEzsigntemplateformfieldgroupTooltipposition** | [**FieldEEzsigntemplateformfieldgroupTooltipposition**](FieldEEzsigntemplateformfieldgroupTooltipposition.md) |  |  [optional]
-**aObjEzsigntemplateformfieldgroupsigner** | [**List&lt;EzsigntemplateformfieldgroupsignerResponseCompound&gt;**](EzsigntemplateformfieldgroupsignerResponseCompound.md) |  | 
-**aObjDropdownElement** | [**List&lt;CustomDropdownElementResponseCompound&gt;**](CustomDropdownElementResponseCompound.md) |  |  [optional]
+**aObjEzsigntemplateformfieldgroupsigner** | [**List&lt;EzsigntemplateformfieldgroupsignerResponseCompound&gt;**](EzsigntemplateformfieldgroupsignerResponse.md) |  | 
+**aObjDropdownElement** | [**List&lt;CustomDropdownElementResponseCompound&gt;**](CustomDropdownElementResponse.md) |  |  [optional]
 **aObjEzsigntemplateformfield** | [**List&lt;EzsigntemplateformfieldResponseCompound&gt;**](EzsigntemplateformfieldResponseCompound.md) |  | 
 
 

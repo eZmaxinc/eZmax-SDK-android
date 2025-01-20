@@ -23,15 +23,13 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
+import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseError;
 import org.openapitools.client.model.DiscussionCreateObjectV1Request;
 import org.openapitools.client.model.DiscussionCreateObjectV1Response;
-import org.openapitools.client.model.DiscussionDeleteObjectV1Response;
 import org.openapitools.client.model.DiscussionGetObjectV2Response;
 import org.openapitools.client.model.DiscussionPatchObjectV1Request;
-import org.openapitools.client.model.DiscussionPatchObjectV1Response;
 import org.openapitools.client.model.DiscussionUpdateDiscussionreadstatusV1Request;
-import org.openapitools.client.model.DiscussionUpdateDiscussionreadstatusV1Response;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
@@ -195,9 +193,9 @@ public class ObjectDiscussionApi {
   * Delete an existing Discussion
   * 
    * @param pkiDiscussionID The unique ID of the Discussion
-   * @return DiscussionDeleteObjectV1Response
+   * @return CommonResponse
   */
-  public DiscussionDeleteObjectV1Response discussionDeleteObjectV1 (Integer pkiDiscussionID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CommonResponse discussionDeleteObjectV1 (Integer pkiDiscussionID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'pkiDiscussionID' is set
     if (pkiDiscussionID == null) {
@@ -232,7 +230,7 @@ public class ObjectDiscussionApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "DELETE", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (DiscussionDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", DiscussionDeleteObjectV1Response.class);
+         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
       } else {
          return null;
       }
@@ -258,7 +256,7 @@ public class ObjectDiscussionApi {
    * 
    * @param pkiDiscussionID The unique ID of the Discussion
   */
-  public void discussionDeleteObjectV1 (Integer pkiDiscussionID, final Response.Listener<DiscussionDeleteObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
+  public void discussionDeleteObjectV1 (Integer pkiDiscussionID, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'pkiDiscussionID' is set
@@ -303,7 +301,7 @@ public class ObjectDiscussionApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((DiscussionDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", DiscussionDeleteObjectV1Response.class));
+              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -450,9 +448,9 @@ public class ObjectDiscussionApi {
   * 
    * @param pkiDiscussionID The unique ID of the Discussion
    * @param discussionPatchObjectV1Request 
-   * @return DiscussionPatchObjectV1Response
+   * @return CommonResponse
   */
-  public DiscussionPatchObjectV1Response discussionPatchObjectV1 (Integer pkiDiscussionID, DiscussionPatchObjectV1Request discussionPatchObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CommonResponse discussionPatchObjectV1 (Integer pkiDiscussionID, DiscussionPatchObjectV1Request discussionPatchObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = discussionPatchObjectV1Request;
     // verify the required parameter 'pkiDiscussionID' is set
     if (pkiDiscussionID == null) {
@@ -493,7 +491,7 @@ public class ObjectDiscussionApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PATCH", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (DiscussionPatchObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", DiscussionPatchObjectV1Response.class);
+         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
       } else {
          return null;
       }
@@ -519,7 +517,7 @@ public class ObjectDiscussionApi {
    * 
    * @param pkiDiscussionID The unique ID of the Discussion   * @param discussionPatchObjectV1Request 
   */
-  public void discussionPatchObjectV1 (Integer pkiDiscussionID, DiscussionPatchObjectV1Request discussionPatchObjectV1Request, final Response.Listener<DiscussionPatchObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
+  public void discussionPatchObjectV1 (Integer pkiDiscussionID, DiscussionPatchObjectV1Request discussionPatchObjectV1Request, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = discussionPatchObjectV1Request;
 
     // verify the required parameter 'pkiDiscussionID' is set
@@ -569,7 +567,7 @@ public class ObjectDiscussionApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((DiscussionPatchObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", DiscussionPatchObjectV1Response.class));
+              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -589,9 +587,9 @@ public class ObjectDiscussionApi {
   * 
    * @param pkiDiscussionID 
    * @param discussionUpdateDiscussionreadstatusV1Request 
-   * @return DiscussionUpdateDiscussionreadstatusV1Response
+   * @return CommonResponse
   */
-  public DiscussionUpdateDiscussionreadstatusV1Response discussionUpdateDiscussionreadstatusV1 (Integer pkiDiscussionID, DiscussionUpdateDiscussionreadstatusV1Request discussionUpdateDiscussionreadstatusV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CommonResponse discussionUpdateDiscussionreadstatusV1 (Integer pkiDiscussionID, DiscussionUpdateDiscussionreadstatusV1Request discussionUpdateDiscussionreadstatusV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = discussionUpdateDiscussionreadstatusV1Request;
     // verify the required parameter 'pkiDiscussionID' is set
     if (pkiDiscussionID == null) {
@@ -632,7 +630,7 @@ public class ObjectDiscussionApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (DiscussionUpdateDiscussionreadstatusV1Response) ApiInvoker.deserialize(localVarResponse, "", DiscussionUpdateDiscussionreadstatusV1Response.class);
+         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
       } else {
          return null;
       }
@@ -658,7 +656,7 @@ public class ObjectDiscussionApi {
    * 
    * @param pkiDiscussionID    * @param discussionUpdateDiscussionreadstatusV1Request 
   */
-  public void discussionUpdateDiscussionreadstatusV1 (Integer pkiDiscussionID, DiscussionUpdateDiscussionreadstatusV1Request discussionUpdateDiscussionreadstatusV1Request, final Response.Listener<DiscussionUpdateDiscussionreadstatusV1Response> responseListener, final Response.ErrorListener errorListener) {
+  public void discussionUpdateDiscussionreadstatusV1 (Integer pkiDiscussionID, DiscussionUpdateDiscussionreadstatusV1Request discussionUpdateDiscussionreadstatusV1Request, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = discussionUpdateDiscussionreadstatusV1Request;
 
     // verify the required parameter 'pkiDiscussionID' is set
@@ -708,7 +706,7 @@ public class ObjectDiscussionApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((DiscussionUpdateDiscussionreadstatusV1Response) ApiInvoker.deserialize(localVarResponse,  "", DiscussionUpdateDiscussionreadstatusV1Response.class));
+              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

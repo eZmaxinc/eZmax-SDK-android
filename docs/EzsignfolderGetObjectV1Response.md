@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | 
 **objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
-**mPayload** | [**EzsignfolderGetObjectV1ResponseMPayload**](EzsignfolderGetObjectV1ResponseMPayload.md) |  | 
+**mPayload** | [**EzsignfolderResponseCompound**](EzsignfolderResponseCompound.md) | Payload for GET /1/object/ezsignfolder/{pkiEzsignfolderID} | 
 
 
 

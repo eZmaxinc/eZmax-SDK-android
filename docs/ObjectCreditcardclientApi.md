@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ## creditcardclientDeleteObjectV1
 
-> CreditcardclientDeleteObjectV1Response creditcardclientDeleteObjectV1(pkiCreditcardclientID)
+> CommonResponse creditcardclientDeleteObjectV1(pkiCreditcardclientID)
 
 Delete an existing Creditcardclient
 
@@ -77,7 +77,7 @@ Delete an existing Creditcardclient
 ObjectCreditcardclientApi apiInstance = new ObjectCreditcardclientApi();
 Integer pkiCreditcardclientID = null; // Integer | The unique ID of the Creditcardclient
 try {
-    CreditcardclientDeleteObjectV1Response result = apiInstance.creditcardclientDeleteObjectV1(pkiCreditcardclientID);
+    CommonResponse result = apiInstance.creditcardclientDeleteObjectV1(pkiCreditcardclientID);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectCreditcardclientApi#creditcardclientDeleteObjectV1");
@@ -94,7 +94,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreditcardclientDeleteObjectV1Response**](CreditcardclientDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -108,7 +108,7 @@ Name | Type | Description  | Notes
 
 ## creditcardclientEditObjectV1
 
-> CreditcardclientEditObjectV1Response creditcardclientEditObjectV1(pkiCreditcardclientID, creditcardclientEditObjectV1Request)
+> CommonResponse creditcardclientEditObjectV1(pkiCreditcardclientID, creditcardclientEditObjectV1Request)
 
 Edit an existing Creditcardclient
 
@@ -124,7 +124,7 @@ ObjectCreditcardclientApi apiInstance = new ObjectCreditcardclientApi();
 Integer pkiCreditcardclientID = null; // Integer | The unique ID of the Creditcardclient
 CreditcardclientEditObjectV1Request creditcardclientEditObjectV1Request = new CreditcardclientEditObjectV1Request(); // CreditcardclientEditObjectV1Request | 
 try {
-    CreditcardclientEditObjectV1Response result = apiInstance.creditcardclientEditObjectV1(pkiCreditcardclientID, creditcardclientEditObjectV1Request);
+    CommonResponse result = apiInstance.creditcardclientEditObjectV1(pkiCreditcardclientID, creditcardclientEditObjectV1Request);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectCreditcardclientApi#creditcardclientEditObjectV1");
@@ -142,7 +142,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreditcardclientEditObjectV1Response**](CreditcardclientEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -308,7 +308,7 @@ Name | Type | Description  | Notes
 
 ## creditcardclientPatchObjectV1
 
-> CreditcardclientPatchObjectV1Response creditcardclientPatchObjectV1(pkiCreditcardclientID, creditcardclientPatchObjectV1Request)
+> CommonResponse creditcardclientPatchObjectV1(pkiCreditcardclientID, creditcardclientPatchObjectV1Request)
 
 Patch an existing Creditcardclient
 
@@ -324,7 +324,7 @@ ObjectCreditcardclientApi apiInstance = new ObjectCreditcardclientApi();
 Integer pkiCreditcardclientID = null; // Integer | The unique ID of the Creditcardclient
 CreditcardclientPatchObjectV1Request creditcardclientPatchObjectV1Request = new CreditcardclientPatchObjectV1Request(); // CreditcardclientPatchObjectV1Request | 
 try {
-    CreditcardclientPatchObjectV1Response result = apiInstance.creditcardclientPatchObjectV1(pkiCreditcardclientID, creditcardclientPatchObjectV1Request);
+    CommonResponse result = apiInstance.creditcardclientPatchObjectV1(pkiCreditcardclientID, creditcardclientPatchObjectV1Request);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectCreditcardclientApi#creditcardclientPatchObjectV1");
@@ -342,7 +342,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreditcardclientPatchObjectV1Response**](CreditcardclientPatchObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

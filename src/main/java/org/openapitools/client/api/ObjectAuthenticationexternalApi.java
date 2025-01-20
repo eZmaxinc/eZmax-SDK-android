@@ -25,13 +25,11 @@ import com.android.volley.VolleyError;
 
 import org.openapitools.client.model.AuthenticationexternalCreateObjectV1Request;
 import org.openapitools.client.model.AuthenticationexternalCreateObjectV1Response;
-import org.openapitools.client.model.AuthenticationexternalDeleteObjectV1Response;
 import org.openapitools.client.model.AuthenticationexternalEditObjectV1Request;
-import org.openapitools.client.model.AuthenticationexternalEditObjectV1Response;
 import org.openapitools.client.model.AuthenticationexternalGetAutocompleteV2Response;
 import org.openapitools.client.model.AuthenticationexternalGetListV1Response;
 import org.openapitools.client.model.AuthenticationexternalGetObjectV2Response;
-import org.openapitools.client.model.AuthenticationexternalResetAuthorizationV1Response;
+import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseError;
 import java.io.File;
 import org.openapitools.client.model.HeaderAcceptLanguage;
@@ -198,9 +196,9 @@ public class ObjectAuthenticationexternalApi {
   * Delete an existing Authenticationexternal
   * 
    * @param pkiAuthenticationexternalID The unique ID of the Authenticationexternal
-   * @return AuthenticationexternalDeleteObjectV1Response
+   * @return CommonResponse
   */
-  public AuthenticationexternalDeleteObjectV1Response authenticationexternalDeleteObjectV1 (Integer pkiAuthenticationexternalID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CommonResponse authenticationexternalDeleteObjectV1 (Integer pkiAuthenticationexternalID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'pkiAuthenticationexternalID' is set
     if (pkiAuthenticationexternalID == null) {
@@ -235,7 +233,7 @@ public class ObjectAuthenticationexternalApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "DELETE", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (AuthenticationexternalDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", AuthenticationexternalDeleteObjectV1Response.class);
+         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
       } else {
          return null;
       }
@@ -261,7 +259,7 @@ public class ObjectAuthenticationexternalApi {
    * 
    * @param pkiAuthenticationexternalID The unique ID of the Authenticationexternal
   */
-  public void authenticationexternalDeleteObjectV1 (Integer pkiAuthenticationexternalID, final Response.Listener<AuthenticationexternalDeleteObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
+  public void authenticationexternalDeleteObjectV1 (Integer pkiAuthenticationexternalID, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'pkiAuthenticationexternalID' is set
@@ -306,7 +304,7 @@ public class ObjectAuthenticationexternalApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((AuthenticationexternalDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", AuthenticationexternalDeleteObjectV1Response.class));
+              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -326,9 +324,9 @@ public class ObjectAuthenticationexternalApi {
   * 
    * @param pkiAuthenticationexternalID The unique ID of the Authenticationexternal
    * @param authenticationexternalEditObjectV1Request 
-   * @return AuthenticationexternalEditObjectV1Response
+   * @return CommonResponse
   */
-  public AuthenticationexternalEditObjectV1Response authenticationexternalEditObjectV1 (Integer pkiAuthenticationexternalID, AuthenticationexternalEditObjectV1Request authenticationexternalEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CommonResponse authenticationexternalEditObjectV1 (Integer pkiAuthenticationexternalID, AuthenticationexternalEditObjectV1Request authenticationexternalEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = authenticationexternalEditObjectV1Request;
     // verify the required parameter 'pkiAuthenticationexternalID' is set
     if (pkiAuthenticationexternalID == null) {
@@ -369,7 +367,7 @@ public class ObjectAuthenticationexternalApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (AuthenticationexternalEditObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", AuthenticationexternalEditObjectV1Response.class);
+         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
       } else {
          return null;
       }
@@ -395,7 +393,7 @@ public class ObjectAuthenticationexternalApi {
    * 
    * @param pkiAuthenticationexternalID The unique ID of the Authenticationexternal   * @param authenticationexternalEditObjectV1Request 
   */
-  public void authenticationexternalEditObjectV1 (Integer pkiAuthenticationexternalID, AuthenticationexternalEditObjectV1Request authenticationexternalEditObjectV1Request, final Response.Listener<AuthenticationexternalEditObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
+  public void authenticationexternalEditObjectV1 (Integer pkiAuthenticationexternalID, AuthenticationexternalEditObjectV1Request authenticationexternalEditObjectV1Request, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = authenticationexternalEditObjectV1Request;
 
     // verify the required parameter 'pkiAuthenticationexternalID' is set
@@ -445,7 +443,7 @@ public class ObjectAuthenticationexternalApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((AuthenticationexternalEditObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", AuthenticationexternalEditObjectV1Response.class));
+              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -859,9 +857,9 @@ public class ObjectAuthenticationexternalApi {
   * 
    * @param pkiAuthenticationexternalID 
    * @param body 
-   * @return AuthenticationexternalResetAuthorizationV1Response
+   * @return CommonResponse
   */
-  public AuthenticationexternalResetAuthorizationV1Response authenticationexternalResetAuthorizationV1 (Integer pkiAuthenticationexternalID, Object body) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CommonResponse authenticationexternalResetAuthorizationV1 (Integer pkiAuthenticationexternalID, Object body) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = body;
     // verify the required parameter 'pkiAuthenticationexternalID' is set
     if (pkiAuthenticationexternalID == null) {
@@ -902,7 +900,7 @@ public class ObjectAuthenticationexternalApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (AuthenticationexternalResetAuthorizationV1Response) ApiInvoker.deserialize(localVarResponse, "", AuthenticationexternalResetAuthorizationV1Response.class);
+         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
       } else {
          return null;
       }
@@ -928,7 +926,7 @@ public class ObjectAuthenticationexternalApi {
    * 
    * @param pkiAuthenticationexternalID    * @param body 
   */
-  public void authenticationexternalResetAuthorizationV1 (Integer pkiAuthenticationexternalID, Object body, final Response.Listener<AuthenticationexternalResetAuthorizationV1Response> responseListener, final Response.ErrorListener errorListener) {
+  public void authenticationexternalResetAuthorizationV1 (Integer pkiAuthenticationexternalID, Object body, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = body;
 
     // verify the required parameter 'pkiAuthenticationexternalID' is set
@@ -978,7 +976,7 @@ public class ObjectAuthenticationexternalApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((AuthenticationexternalResetAuthorizationV1Response) ApiInvoker.deserialize(localVarResponse,  "", AuthenticationexternalResetAuthorizationV1Response.class));
+              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

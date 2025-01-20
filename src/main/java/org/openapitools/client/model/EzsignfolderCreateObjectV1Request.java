@@ -13,7 +13,6 @@
 package org.openapitools.client.model;
 
 import org.openapitools.client.model.EzsignfolderRequest;
-import org.openapitools.client.model.EzsignfolderRequestCompound;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -26,7 +25,7 @@ public class EzsignfolderCreateObjectV1Request {
   @SerializedName("objEzsignfolder")
   private EzsignfolderRequest objEzsignfolder = null;
   @SerializedName("objEzsignfolderCompound")
-  private EzsignfolderRequestCompound objEzsignfolderCompound = null;
+  private EzsignfolderRequest objEzsignfolderCompound = null;
 
   /**
    **/
@@ -39,12 +38,13 @@ public class EzsignfolderCreateObjectV1Request {
   }
 
   /**
+   * An Ezsignfolder Object and children to create a complete structure
    **/
-  @ApiModelProperty(value = "")
-  public EzsignfolderRequestCompound getObjEzsignfolderCompound() {
+  @ApiModelProperty(value = "An Ezsignfolder Object and children to create a complete structure")
+  public EzsignfolderRequest getObjEzsignfolderCompound() {
     return objEzsignfolderCompound;
   }
-  public void setObjEzsignfolderCompound(EzsignfolderRequestCompound objEzsignfolderCompound) {
+  public void setObjEzsignfolderCompound(EzsignfolderRequest objEzsignfolderCompound) {
     this.objEzsignfolderCompound = objEzsignfolderCompound;
   }
 

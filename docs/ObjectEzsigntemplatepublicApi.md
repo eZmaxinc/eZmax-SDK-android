@@ -110,7 +110,7 @@ Name | Type | Description  | Notes
 
 ## ezsigntemplatepublicEditObjectV1
 
-> EzsigntemplatepublicEditObjectV1Response ezsigntemplatepublicEditObjectV1(pkiEzsigntemplatepublicID, ezsigntemplatepublicEditObjectV1Request)
+> CommonResponse ezsigntemplatepublicEditObjectV1(pkiEzsigntemplatepublicID, ezsigntemplatepublicEditObjectV1Request)
 
 Edit an existing Ezsigntemplatepublic
 
@@ -126,7 +126,7 @@ ObjectEzsigntemplatepublicApi apiInstance = new ObjectEzsigntemplatepublicApi();
 Integer pkiEzsigntemplatepublicID = null; // Integer | The unique ID of the Ezsigntemplatepublic
 EzsigntemplatepublicEditObjectV1Request ezsigntemplatepublicEditObjectV1Request = new EzsigntemplatepublicEditObjectV1Request(); // EzsigntemplatepublicEditObjectV1Request | 
 try {
-    EzsigntemplatepublicEditObjectV1Response result = apiInstance.ezsigntemplatepublicEditObjectV1(pkiEzsigntemplatepublicID, ezsigntemplatepublicEditObjectV1Request);
+    CommonResponse result = apiInstance.ezsigntemplatepublicEditObjectV1(pkiEzsigntemplatepublicID, ezsigntemplatepublicEditObjectV1Request);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectEzsigntemplatepublicApi#ezsigntemplatepublicEditObjectV1");
@@ -144,7 +144,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsigntemplatepublicEditObjectV1Response**](EzsigntemplatepublicEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

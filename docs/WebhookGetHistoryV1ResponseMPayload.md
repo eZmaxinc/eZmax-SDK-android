@@ -6,7 +6,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjWebhooklog** | [**List&lt;CustomWebhooklogResponse&gt;**](CustomWebhooklogResponse.md) |  | 
+**aObjWebhooklog** | **List&lt;CustomWebhooklogResponse&gt;** |  | 
 
 
 

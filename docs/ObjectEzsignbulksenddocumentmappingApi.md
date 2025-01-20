@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 
 ## ezsignbulksenddocumentmappingDeleteObjectV1
 
-> EzsignbulksenddocumentmappingDeleteObjectV1Response ezsignbulksenddocumentmappingDeleteObjectV1(pkiEzsignbulksenddocumentmappingID)
+> CommonResponse ezsignbulksenddocumentmappingDeleteObjectV1(pkiEzsignbulksenddocumentmappingID)
 
 Delete an existing Ezsignbulksenddocumentmapping
 
@@ -73,7 +73,7 @@ Delete an existing Ezsignbulksenddocumentmapping
 ObjectEzsignbulksenddocumentmappingApi apiInstance = new ObjectEzsignbulksenddocumentmappingApi();
 Integer pkiEzsignbulksenddocumentmappingID = null; // Integer | 
 try {
-    EzsignbulksenddocumentmappingDeleteObjectV1Response result = apiInstance.ezsignbulksenddocumentmappingDeleteObjectV1(pkiEzsignbulksenddocumentmappingID);
+    CommonResponse result = apiInstance.ezsignbulksenddocumentmappingDeleteObjectV1(pkiEzsignbulksenddocumentmappingID);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectEzsignbulksenddocumentmappingApi#ezsignbulksenddocumentmappingDeleteObjectV1");
@@ -90,7 +90,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsignbulksenddocumentmappingDeleteObjectV1Response**](EzsignbulksenddocumentmappingDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

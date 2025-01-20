@@ -6,7 +6,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objPermission** | [**PermissionResponseCompound**](PermissionResponseCompound.md) |  | 
+**objPermission** | [**PermissionResponse**](PermissionResponse.md) | A Permission Object and children to create a complete structure | 
 
 
 

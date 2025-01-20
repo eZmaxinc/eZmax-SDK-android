@@ -12,7 +12,7 @@
 
 package org.openapitools.client.model;
 
-import org.openapitools.client.model.ApikeyResponseCompound;
+import org.openapitools.client.model.ApikeyResponse;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -23,15 +23,16 @@ import com.google.gson.annotations.SerializedName;
 public class ApikeyRegenerateV1ResponseMPayload {
   
   @SerializedName("objApikey")
-  private ApikeyResponseCompound objApikey = null;
+  private ApikeyResponse objApikey = null;
 
   /**
+   * An Apikey Object and children to create a complete structure
    **/
-  @ApiModelProperty(required = true, value = "")
-  public ApikeyResponseCompound getObjApikey() {
+  @ApiModelProperty(required = true, value = "An Apikey Object and children to create a complete structure")
+  public ApikeyResponse getObjApikey() {
     return objApikey;
   }
-  public void setObjApikey(ApikeyResponseCompound objApikey) {
+  public void setObjApikey(ApikeyResponse objApikey) {
     this.objApikey = objApikey;
   }
 
