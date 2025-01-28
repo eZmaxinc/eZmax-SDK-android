@@ -23,16 +23,18 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
-import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseError;
 import org.openapitools.client.model.CommonResponseErrorCreditcardValidation;
 import org.openapitools.client.model.CreditcardclientCreateObjectV1Request;
 import org.openapitools.client.model.CreditcardclientCreateObjectV1Response;
+import org.openapitools.client.model.CreditcardclientDeleteObjectV1Response;
 import org.openapitools.client.model.CreditcardclientEditObjectV1Request;
+import org.openapitools.client.model.CreditcardclientEditObjectV1Response;
 import org.openapitools.client.model.CreditcardclientGetAutocompleteV2Response;
 import org.openapitools.client.model.CreditcardclientGetListV1Response;
 import org.openapitools.client.model.CreditcardclientGetObjectV2Response;
 import org.openapitools.client.model.CreditcardclientPatchObjectV1Request;
+import org.openapitools.client.model.CreditcardclientPatchObjectV1Response;
 import java.io.File;
 import org.openapitools.client.model.HeaderAcceptLanguage;
 
@@ -198,9 +200,9 @@ public class ObjectCreditcardclientApi {
   * Delete an existing Creditcardclient
   * 
    * @param pkiCreditcardclientID The unique ID of the Creditcardclient
-   * @return CommonResponse
+   * @return CreditcardclientDeleteObjectV1Response
   */
-  public CommonResponse creditcardclientDeleteObjectV1 (Integer pkiCreditcardclientID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CreditcardclientDeleteObjectV1Response creditcardclientDeleteObjectV1 (Integer pkiCreditcardclientID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'pkiCreditcardclientID' is set
     if (pkiCreditcardclientID == null) {
@@ -235,7 +237,7 @@ public class ObjectCreditcardclientApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "DELETE", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
+         return (CreditcardclientDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", CreditcardclientDeleteObjectV1Response.class);
       } else {
          return null;
       }
@@ -261,7 +263,7 @@ public class ObjectCreditcardclientApi {
    * 
    * @param pkiCreditcardclientID The unique ID of the Creditcardclient
   */
-  public void creditcardclientDeleteObjectV1 (Integer pkiCreditcardclientID, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void creditcardclientDeleteObjectV1 (Integer pkiCreditcardclientID, final Response.Listener<CreditcardclientDeleteObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'pkiCreditcardclientID' is set
@@ -306,7 +308,7 @@ public class ObjectCreditcardclientApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
+              responseListener.onResponse((CreditcardclientDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", CreditcardclientDeleteObjectV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -326,9 +328,9 @@ public class ObjectCreditcardclientApi {
   * 
    * @param pkiCreditcardclientID The unique ID of the Creditcardclient
    * @param creditcardclientEditObjectV1Request 
-   * @return CommonResponse
+   * @return CreditcardclientEditObjectV1Response
   */
-  public CommonResponse creditcardclientEditObjectV1 (Integer pkiCreditcardclientID, CreditcardclientEditObjectV1Request creditcardclientEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CreditcardclientEditObjectV1Response creditcardclientEditObjectV1 (Integer pkiCreditcardclientID, CreditcardclientEditObjectV1Request creditcardclientEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = creditcardclientEditObjectV1Request;
     // verify the required parameter 'pkiCreditcardclientID' is set
     if (pkiCreditcardclientID == null) {
@@ -369,7 +371,7 @@ public class ObjectCreditcardclientApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
+         return (CreditcardclientEditObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", CreditcardclientEditObjectV1Response.class);
       } else {
          return null;
       }
@@ -395,7 +397,7 @@ public class ObjectCreditcardclientApi {
    * 
    * @param pkiCreditcardclientID The unique ID of the Creditcardclient   * @param creditcardclientEditObjectV1Request 
   */
-  public void creditcardclientEditObjectV1 (Integer pkiCreditcardclientID, CreditcardclientEditObjectV1Request creditcardclientEditObjectV1Request, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void creditcardclientEditObjectV1 (Integer pkiCreditcardclientID, CreditcardclientEditObjectV1Request creditcardclientEditObjectV1Request, final Response.Listener<CreditcardclientEditObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = creditcardclientEditObjectV1Request;
 
     // verify the required parameter 'pkiCreditcardclientID' is set
@@ -445,7 +447,7 @@ public class ObjectCreditcardclientApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
+              responseListener.onResponse((CreditcardclientEditObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", CreditcardclientEditObjectV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -859,9 +861,9 @@ public class ObjectCreditcardclientApi {
   * 
    * @param pkiCreditcardclientID The unique ID of the Creditcardclient
    * @param creditcardclientPatchObjectV1Request 
-   * @return CommonResponse
+   * @return CreditcardclientPatchObjectV1Response
   */
-  public CommonResponse creditcardclientPatchObjectV1 (Integer pkiCreditcardclientID, CreditcardclientPatchObjectV1Request creditcardclientPatchObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CreditcardclientPatchObjectV1Response creditcardclientPatchObjectV1 (Integer pkiCreditcardclientID, CreditcardclientPatchObjectV1Request creditcardclientPatchObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = creditcardclientPatchObjectV1Request;
     // verify the required parameter 'pkiCreditcardclientID' is set
     if (pkiCreditcardclientID == null) {
@@ -902,7 +904,7 @@ public class ObjectCreditcardclientApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PATCH", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
+         return (CreditcardclientPatchObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", CreditcardclientPatchObjectV1Response.class);
       } else {
          return null;
       }
@@ -928,7 +930,7 @@ public class ObjectCreditcardclientApi {
    * 
    * @param pkiCreditcardclientID The unique ID of the Creditcardclient   * @param creditcardclientPatchObjectV1Request 
   */
-  public void creditcardclientPatchObjectV1 (Integer pkiCreditcardclientID, CreditcardclientPatchObjectV1Request creditcardclientPatchObjectV1Request, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void creditcardclientPatchObjectV1 (Integer pkiCreditcardclientID, CreditcardclientPatchObjectV1Request creditcardclientPatchObjectV1Request, final Response.Listener<CreditcardclientPatchObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = creditcardclientPatchObjectV1Request;
 
     // verify the required parameter 'pkiCreditcardclientID' is set
@@ -978,7 +980,7 @@ public class ObjectCreditcardclientApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
+              responseListener.onResponse((CreditcardclientPatchObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", CreditcardclientPatchObjectV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 
 ## paymenttermEditObjectV1
 
-> CommonResponse paymenttermEditObjectV1(pkiPaymenttermID, paymenttermEditObjectV1Request)
+> PaymenttermEditObjectV1Response paymenttermEditObjectV1(pkiPaymenttermID, paymenttermEditObjectV1Request)
 
 Edit an existing Paymentterm
 
@@ -76,7 +76,7 @@ ObjectPaymenttermApi apiInstance = new ObjectPaymenttermApi();
 Integer pkiPaymenttermID = null; // Integer | 
 PaymenttermEditObjectV1Request paymenttermEditObjectV1Request = new PaymenttermEditObjectV1Request(); // PaymenttermEditObjectV1Request | 
 try {
-    CommonResponse result = apiInstance.paymenttermEditObjectV1(pkiPaymenttermID, paymenttermEditObjectV1Request);
+    PaymenttermEditObjectV1Response result = apiInstance.paymenttermEditObjectV1(pkiPaymenttermID, paymenttermEditObjectV1Request);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectPaymenttermApi#paymenttermEditObjectV1");
@@ -94,7 +94,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**PaymenttermEditObjectV1Response**](PaymenttermEditObjectV1Response.md)
 
 ### Authorization
 

@@ -23,15 +23,16 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
-import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseError;
 import org.openapitools.client.model.EzdoctemplatedocumentCreateObjectV1Request;
 import org.openapitools.client.model.EzdoctemplatedocumentCreateObjectV1Response;
 import org.openapitools.client.model.EzdoctemplatedocumentEditObjectV1Request;
+import org.openapitools.client.model.EzdoctemplatedocumentEditObjectV1Response;
 import org.openapitools.client.model.EzdoctemplatedocumentGetAutocompleteV2Response;
 import org.openapitools.client.model.EzdoctemplatedocumentGetListV1Response;
 import org.openapitools.client.model.EzdoctemplatedocumentGetObjectV2Response;
 import org.openapitools.client.model.EzdoctemplatedocumentPatchObjectV1Request;
+import org.openapitools.client.model.EzdoctemplatedocumentPatchObjectV1Response;
 import java.io.File;
 import org.openapitools.client.model.HeaderAcceptLanguage;
 
@@ -321,9 +322,9 @@ public class ObjectEzdoctemplatedocumentApi {
   * 
    * @param pkiEzdoctemplatedocumentID The unique ID of the Ezdoctemplatedocument
    * @param ezdoctemplatedocumentEditObjectV1Request 
-   * @return CommonResponse
+   * @return EzdoctemplatedocumentEditObjectV1Response
   */
-  public CommonResponse ezdoctemplatedocumentEditObjectV1 (Integer pkiEzdoctemplatedocumentID, EzdoctemplatedocumentEditObjectV1Request ezdoctemplatedocumentEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public EzdoctemplatedocumentEditObjectV1Response ezdoctemplatedocumentEditObjectV1 (Integer pkiEzdoctemplatedocumentID, EzdoctemplatedocumentEditObjectV1Request ezdoctemplatedocumentEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = ezdoctemplatedocumentEditObjectV1Request;
     // verify the required parameter 'pkiEzdoctemplatedocumentID' is set
     if (pkiEzdoctemplatedocumentID == null) {
@@ -364,7 +365,7 @@ public class ObjectEzdoctemplatedocumentApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
+         return (EzdoctemplatedocumentEditObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", EzdoctemplatedocumentEditObjectV1Response.class);
       } else {
          return null;
       }
@@ -390,7 +391,7 @@ public class ObjectEzdoctemplatedocumentApi {
    * 
    * @param pkiEzdoctemplatedocumentID The unique ID of the Ezdoctemplatedocument   * @param ezdoctemplatedocumentEditObjectV1Request 
   */
-  public void ezdoctemplatedocumentEditObjectV1 (Integer pkiEzdoctemplatedocumentID, EzdoctemplatedocumentEditObjectV1Request ezdoctemplatedocumentEditObjectV1Request, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void ezdoctemplatedocumentEditObjectV1 (Integer pkiEzdoctemplatedocumentID, EzdoctemplatedocumentEditObjectV1Request ezdoctemplatedocumentEditObjectV1Request, final Response.Listener<EzdoctemplatedocumentEditObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = ezdoctemplatedocumentEditObjectV1Request;
 
     // verify the required parameter 'pkiEzdoctemplatedocumentID' is set
@@ -440,7 +441,7 @@ public class ObjectEzdoctemplatedocumentApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
+              responseListener.onResponse((EzdoctemplatedocumentEditObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzdoctemplatedocumentEditObjectV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -870,9 +871,9 @@ public class ObjectEzdoctemplatedocumentApi {
   * 
    * @param pkiEzdoctemplatedocumentID The unique ID of the Ezdoctemplatedocument
    * @param ezdoctemplatedocumentPatchObjectV1Request 
-   * @return CommonResponse
+   * @return EzdoctemplatedocumentPatchObjectV1Response
   */
-  public CommonResponse ezdoctemplatedocumentPatchObjectV1 (Integer pkiEzdoctemplatedocumentID, EzdoctemplatedocumentPatchObjectV1Request ezdoctemplatedocumentPatchObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public EzdoctemplatedocumentPatchObjectV1Response ezdoctemplatedocumentPatchObjectV1 (Integer pkiEzdoctemplatedocumentID, EzdoctemplatedocumentPatchObjectV1Request ezdoctemplatedocumentPatchObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = ezdoctemplatedocumentPatchObjectV1Request;
     // verify the required parameter 'pkiEzdoctemplatedocumentID' is set
     if (pkiEzdoctemplatedocumentID == null) {
@@ -913,7 +914,7 @@ public class ObjectEzdoctemplatedocumentApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PATCH", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
+         return (EzdoctemplatedocumentPatchObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", EzdoctemplatedocumentPatchObjectV1Response.class);
       } else {
          return null;
       }
@@ -939,7 +940,7 @@ public class ObjectEzdoctemplatedocumentApi {
    * 
    * @param pkiEzdoctemplatedocumentID The unique ID of the Ezdoctemplatedocument   * @param ezdoctemplatedocumentPatchObjectV1Request 
   */
-  public void ezdoctemplatedocumentPatchObjectV1 (Integer pkiEzdoctemplatedocumentID, EzdoctemplatedocumentPatchObjectV1Request ezdoctemplatedocumentPatchObjectV1Request, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void ezdoctemplatedocumentPatchObjectV1 (Integer pkiEzdoctemplatedocumentID, EzdoctemplatedocumentPatchObjectV1Request ezdoctemplatedocumentPatchObjectV1Request, final Response.Listener<EzdoctemplatedocumentPatchObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = ezdoctemplatedocumentPatchObjectV1Request;
 
     // verify the required parameter 'pkiEzdoctemplatedocumentID' is set
@@ -989,7 +990,7 @@ public class ObjectEzdoctemplatedocumentApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
+              responseListener.onResponse((EzdoctemplatedocumentPatchObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzdoctemplatedocumentPatchObjectV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

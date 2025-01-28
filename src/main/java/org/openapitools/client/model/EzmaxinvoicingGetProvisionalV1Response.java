@@ -14,7 +14,7 @@ package org.openapitools.client.model;
 
 import org.openapitools.client.model.CommonResponseObjDebug;
 import org.openapitools.client.model.CommonResponseObjDebugPayload;
-import org.openapitools.client.model.EzmaxinvoicingResponseCompound;
+import org.openapitools.client.model.EzmaxinvoicingGetProvisionalV1ResponseMPayload;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -29,7 +29,7 @@ public class EzmaxinvoicingGetProvisionalV1Response {
   @SerializedName("objDebug")
   private CommonResponseObjDebug objDebug = null;
   @SerializedName("mPayload")
-  private EzmaxinvoicingResponseCompound mPayload = null;
+  private EzmaxinvoicingGetProvisionalV1ResponseMPayload mPayload = null;
 
   /**
    **/
@@ -52,13 +52,12 @@ public class EzmaxinvoicingGetProvisionalV1Response {
   }
 
   /**
-   * Payload for GET /1/object/ezmaxinvoicing/getProvisional
    **/
-  @ApiModelProperty(required = true, value = "Payload for GET /1/object/ezmaxinvoicing/getProvisional")
-  public EzmaxinvoicingResponseCompound getMPayload() {
+  @ApiModelProperty(required = true, value = "")
+  public EzmaxinvoicingGetProvisionalV1ResponseMPayload getMPayload() {
     return mPayload;
   }
-  public void setMPayload(EzmaxinvoicingResponseCompound mPayload) {
+  public void setMPayload(EzmaxinvoicingGetProvisionalV1ResponseMPayload mPayload) {
     this.mPayload = mPayload;
   }
 

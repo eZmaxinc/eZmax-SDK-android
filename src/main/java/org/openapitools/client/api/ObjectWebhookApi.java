@@ -23,23 +23,23 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
-import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseError;
 import org.openapitools.client.model.CommonResponseErrorTooManyRequests;
-import org.openapitools.client.model.CustomEWebhookEzsignevent;
-import org.openapitools.client.model.FieldEWebhookManagementevent;
-import org.openapitools.client.model.FieldEWebhookModule;
 import java.io.File;
 import org.openapitools.client.model.HeaderAcceptLanguage;
 import org.openapitools.client.model.WebhookCreateObjectV2Request;
 import org.openapitools.client.model.WebhookCreateObjectV2Response;
+import org.openapitools.client.model.WebhookDeleteObjectV1Response;
 import org.openapitools.client.model.WebhookEditObjectV1Request;
+import org.openapitools.client.model.WebhookEditObjectV1Response;
 import org.openapitools.client.model.WebhookGetHistoryV1Response;
 import org.openapitools.client.model.WebhookGetListV1Response;
 import org.openapitools.client.model.WebhookGetObjectV2Response;
 import org.openapitools.client.model.WebhookRegenerateApikeyV1Request;
 import org.openapitools.client.model.WebhookRegenerateApikeyV1Response;
 import org.openapitools.client.model.WebhookSendWebhookV1Request;
+import org.openapitools.client.model.WebhookSendWebhookV1Response;
+import org.openapitools.client.model.WebhookTestV1Response;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
@@ -203,9 +203,9 @@ public class ObjectWebhookApi {
   * Delete an existing Webhook
   * 
    * @param pkiWebhookID 
-   * @return CommonResponse
+   * @return WebhookDeleteObjectV1Response
   */
-  public CommonResponse webhookDeleteObjectV1 (Integer pkiWebhookID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public WebhookDeleteObjectV1Response webhookDeleteObjectV1 (Integer pkiWebhookID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'pkiWebhookID' is set
     if (pkiWebhookID == null) {
@@ -240,7 +240,7 @@ public class ObjectWebhookApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "DELETE", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
+         return (WebhookDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", WebhookDeleteObjectV1Response.class);
       } else {
          return null;
       }
@@ -266,7 +266,7 @@ public class ObjectWebhookApi {
    * 
    * @param pkiWebhookID 
   */
-  public void webhookDeleteObjectV1 (Integer pkiWebhookID, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void webhookDeleteObjectV1 (Integer pkiWebhookID, final Response.Listener<WebhookDeleteObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'pkiWebhookID' is set
@@ -311,7 +311,7 @@ public class ObjectWebhookApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
+              responseListener.onResponse((WebhookDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", WebhookDeleteObjectV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -331,9 +331,9 @@ public class ObjectWebhookApi {
   * 
    * @param pkiWebhookID 
    * @param webhookEditObjectV1Request 
-   * @return CommonResponse
+   * @return WebhookEditObjectV1Response
   */
-  public CommonResponse webhookEditObjectV1 (Integer pkiWebhookID, WebhookEditObjectV1Request webhookEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public WebhookEditObjectV1Response webhookEditObjectV1 (Integer pkiWebhookID, WebhookEditObjectV1Request webhookEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = webhookEditObjectV1Request;
     // verify the required parameter 'pkiWebhookID' is set
     if (pkiWebhookID == null) {
@@ -374,7 +374,7 @@ public class ObjectWebhookApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
+         return (WebhookEditObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", WebhookEditObjectV1Response.class);
       } else {
          return null;
       }
@@ -400,7 +400,7 @@ public class ObjectWebhookApi {
    * 
    * @param pkiWebhookID    * @param webhookEditObjectV1Request 
   */
-  public void webhookEditObjectV1 (Integer pkiWebhookID, WebhookEditObjectV1Request webhookEditObjectV1Request, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void webhookEditObjectV1 (Integer pkiWebhookID, WebhookEditObjectV1Request webhookEditObjectV1Request, final Response.Listener<WebhookEditObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = webhookEditObjectV1Request;
 
     // verify the required parameter 'pkiWebhookID' is set
@@ -450,7 +450,7 @@ public class ObjectWebhookApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
+              responseListener.onResponse((WebhookEditObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", WebhookEditObjectV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -1006,9 +1006,9 @@ public class ObjectWebhookApi {
   * Emit a Webhook event
   * 
    * @param webhookSendWebhookV1Request 
-   * @return CommonResponse
+   * @return WebhookSendWebhookV1Response
   */
-  public CommonResponse webhookSendWebhookV1 (WebhookSendWebhookV1Request webhookSendWebhookV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public WebhookSendWebhookV1Response webhookSendWebhookV1 (WebhookSendWebhookV1Request webhookSendWebhookV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = webhookSendWebhookV1Request;
     // verify the required parameter 'webhookSendWebhookV1Request' is set
     if (webhookSendWebhookV1Request == null) {
@@ -1044,7 +1044,7 @@ public class ObjectWebhookApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
+         return (WebhookSendWebhookV1Response) ApiInvoker.deserialize(localVarResponse, "", WebhookSendWebhookV1Response.class);
       } else {
          return null;
       }
@@ -1070,7 +1070,7 @@ public class ObjectWebhookApi {
    * 
    * @param webhookSendWebhookV1Request 
   */
-  public void webhookSendWebhookV1 (WebhookSendWebhookV1Request webhookSendWebhookV1Request, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void webhookSendWebhookV1 (WebhookSendWebhookV1Request webhookSendWebhookV1Request, final Response.Listener<WebhookSendWebhookV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = webhookSendWebhookV1Request;
 
     // verify the required parameter 'webhookSendWebhookV1Request' is set
@@ -1115,7 +1115,7 @@ public class ObjectWebhookApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
+              responseListener.onResponse((WebhookSendWebhookV1Response) ApiInvoker.deserialize(localVarResponse,  "", WebhookSendWebhookV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -1135,9 +1135,9 @@ public class ObjectWebhookApi {
   * 
    * @param pkiWebhookID 
    * @param body 
-   * @return CommonResponse
+   * @return WebhookTestV1Response
   */
-  public CommonResponse webhookTestV1 (Integer pkiWebhookID, Object body) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public WebhookTestV1Response webhookTestV1 (Integer pkiWebhookID, Object body) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = body;
     // verify the required parameter 'pkiWebhookID' is set
     if (pkiWebhookID == null) {
@@ -1178,7 +1178,7 @@ public class ObjectWebhookApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
+         return (WebhookTestV1Response) ApiInvoker.deserialize(localVarResponse, "", WebhookTestV1Response.class);
       } else {
          return null;
       }
@@ -1204,7 +1204,7 @@ public class ObjectWebhookApi {
    * 
    * @param pkiWebhookID    * @param body 
   */
-  public void webhookTestV1 (Integer pkiWebhookID, Object body, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void webhookTestV1 (Integer pkiWebhookID, Object body, final Response.Listener<WebhookTestV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = body;
 
     // verify the required parameter 'pkiWebhookID' is set
@@ -1254,7 +1254,7 @@ public class ObjectWebhookApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
+              responseListener.onResponse((WebhookTestV1Response) ApiInvoker.deserialize(localVarResponse,  "", WebhookTestV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

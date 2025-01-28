@@ -23,13 +23,13 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
-import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseError;
 import java.io.File;
 import org.openapitools.client.model.HeaderAcceptLanguage;
 import org.openapitools.client.model.VariableexpenseCreateObjectV1Request;
 import org.openapitools.client.model.VariableexpenseCreateObjectV1Response;
 import org.openapitools.client.model.VariableexpenseEditObjectV1Request;
+import org.openapitools.client.model.VariableexpenseEditObjectV1Response;
 import org.openapitools.client.model.VariableexpenseGetAutocompleteV2Response;
 import org.openapitools.client.model.VariableexpenseGetListV1Response;
 import org.openapitools.client.model.VariableexpenseGetObjectV2Response;
@@ -197,9 +197,9 @@ public class ObjectVariableexpenseApi {
   * 
    * @param pkiVariableexpenseID 
    * @param variableexpenseEditObjectV1Request 
-   * @return CommonResponse
+   * @return VariableexpenseEditObjectV1Response
   */
-  public CommonResponse variableexpenseEditObjectV1 (Integer pkiVariableexpenseID, VariableexpenseEditObjectV1Request variableexpenseEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public VariableexpenseEditObjectV1Response variableexpenseEditObjectV1 (Integer pkiVariableexpenseID, VariableexpenseEditObjectV1Request variableexpenseEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = variableexpenseEditObjectV1Request;
     // verify the required parameter 'pkiVariableexpenseID' is set
     if (pkiVariableexpenseID == null) {
@@ -240,7 +240,7 @@ public class ObjectVariableexpenseApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
+         return (VariableexpenseEditObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", VariableexpenseEditObjectV1Response.class);
       } else {
          return null;
       }
@@ -266,7 +266,7 @@ public class ObjectVariableexpenseApi {
    * 
    * @param pkiVariableexpenseID    * @param variableexpenseEditObjectV1Request 
   */
-  public void variableexpenseEditObjectV1 (Integer pkiVariableexpenseID, VariableexpenseEditObjectV1Request variableexpenseEditObjectV1Request, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void variableexpenseEditObjectV1 (Integer pkiVariableexpenseID, VariableexpenseEditObjectV1Request variableexpenseEditObjectV1Request, final Response.Listener<VariableexpenseEditObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = variableexpenseEditObjectV1Request;
 
     // verify the required parameter 'pkiVariableexpenseID' is set
@@ -316,7 +316,7 @@ public class ObjectVariableexpenseApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
+              responseListener.onResponse((VariableexpenseEditObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", VariableexpenseEditObjectV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

@@ -14,6 +14,7 @@ package org.openapitools.client.model;
 
 import java.util.*;
 import org.openapitools.client.model.CommonAudit;
+import org.openapitools.client.model.CustomDnsrecordResponse;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 

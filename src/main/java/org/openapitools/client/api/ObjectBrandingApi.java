@@ -26,10 +26,10 @@ import com.android.volley.VolleyError;
 import org.openapitools.client.model.BrandingCreateObjectV2Request;
 import org.openapitools.client.model.BrandingCreateObjectV2Response;
 import org.openapitools.client.model.BrandingEditObjectV2Request;
+import org.openapitools.client.model.BrandingEditObjectV2Response;
 import org.openapitools.client.model.BrandingGetAutocompleteV2Response;
 import org.openapitools.client.model.BrandingGetListV1Response;
 import org.openapitools.client.model.BrandingGetObjectV3Response;
-import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseError;
 import java.io.File;
 import org.openapitools.client.model.HeaderAcceptLanguage;
@@ -197,9 +197,9 @@ public class ObjectBrandingApi {
   * 
    * @param pkiBrandingID 
    * @param brandingEditObjectV2Request 
-   * @return CommonResponse
+   * @return BrandingEditObjectV2Response
   */
-  public CommonResponse brandingEditObjectV2 (Integer pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public BrandingEditObjectV2Response brandingEditObjectV2 (Integer pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = brandingEditObjectV2Request;
     // verify the required parameter 'pkiBrandingID' is set
     if (pkiBrandingID == null) {
@@ -240,7 +240,7 @@ public class ObjectBrandingApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
+         return (BrandingEditObjectV2Response) ApiInvoker.deserialize(localVarResponse, "", BrandingEditObjectV2Response.class);
       } else {
          return null;
       }
@@ -266,7 +266,7 @@ public class ObjectBrandingApi {
    * 
    * @param pkiBrandingID    * @param brandingEditObjectV2Request 
   */
-  public void brandingEditObjectV2 (Integer pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void brandingEditObjectV2 (Integer pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request, final Response.Listener<BrandingEditObjectV2Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = brandingEditObjectV2Request;
 
     // verify the required parameter 'pkiBrandingID' is set
@@ -316,7 +316,7 @@ public class ObjectBrandingApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
+              responseListener.onResponse((BrandingEditObjectV2Response) ApiInvoker.deserialize(localVarResponse,  "", BrandingEditObjectV2Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

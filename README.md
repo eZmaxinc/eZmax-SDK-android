@@ -112,6 +112,7 @@ Class | Method | HTTP request | Description
 *ObjectAuthenticationexternalApi* | [**authenticationexternalGetListV1**](docs/ObjectAuthenticationexternalApi.md#authenticationexternalGetListV1) | **GET** /1/object/authenticationexternal/getList | Retrieve Authenticationexternal list
 *ObjectAuthenticationexternalApi* | [**authenticationexternalGetObjectV2**](docs/ObjectAuthenticationexternalApi.md#authenticationexternalGetObjectV2) | **GET** /2/object/authenticationexternal/{pkiAuthenticationexternalID} | Retrieve an existing Authenticationexternal
 *ObjectAuthenticationexternalApi* | [**authenticationexternalResetAuthorizationV1**](docs/ObjectAuthenticationexternalApi.md#authenticationexternalResetAuthorizationV1) | **POST** /1/object/authenticationexternal/{pkiAuthenticationexternalID}/resetAuthorization | Reset the Authenticationexternal authorization
+*ObjectBankaccountApi* | [**bankaccountGetAutocompleteV2**](docs/ObjectBankaccountApi.md#bankaccountGetAutocompleteV2) | **GET** /2/object/bankaccount/getAutocomplete/{sSelector} | Retrieve Bankaccounts and IDs
 *ObjectBillingentityexternalApi* | [**billingentityexternalGenerateFederationTokenV1**](docs/ObjectBillingentityexternalApi.md#billingentityexternalGenerateFederationTokenV1) | **POST** /1/object/billingentityexternal/{pkiBillingentityexternalID}/generateFederationToken | Generate a federation token
 *ObjectBillingentityexternalApi* | [**billingentityexternalGetAutocompleteV2**](docs/ObjectBillingentityexternalApi.md#billingentityexternalGetAutocompleteV2) | **GET** /2/object/billingentityexternal/getAutocomplete/{sSelector} | Retrieve Billingentityexternals and IDs
 *ObjectBillingentityinternalApi* | [**billingentityinternalCreateObjectV1**](docs/ObjectBillingentityinternalApi.md#billingentityinternalCreateObjectV1) | **POST** /1/object/billingentityinternal | Create a new Billingentityinternal
@@ -145,6 +146,12 @@ Class | Method | HTTP request | Description
 *ObjectCreditcardclientApi* | [**creditcardclientGetListV1**](docs/ObjectCreditcardclientApi.md#creditcardclientGetListV1) | **GET** /1/object/creditcardclient/getList | Retrieve Creditcardclient list
 *ObjectCreditcardclientApi* | [**creditcardclientGetObjectV2**](docs/ObjectCreditcardclientApi.md#creditcardclientGetObjectV2) | **GET** /2/object/creditcardclient/{pkiCreditcardclientID} | Retrieve an existing Creditcardclient
 *ObjectCreditcardclientApi* | [**creditcardclientPatchObjectV1**](docs/ObjectCreditcardclientApi.md#creditcardclientPatchObjectV1) | **PATCH** /1/object/creditcardclient/{pkiCreditcardclientID} | Patch an existing Creditcardclient
+*ObjectCreditcardmerchantApi* | [**creditcardmerchantCreateObjectV1**](docs/ObjectCreditcardmerchantApi.md#creditcardmerchantCreateObjectV1) | **POST** /1/object/creditcardmerchant | Create a new Creditcardmerchant
+*ObjectCreditcardmerchantApi* | [**creditcardmerchantDeleteObjectV1**](docs/ObjectCreditcardmerchantApi.md#creditcardmerchantDeleteObjectV1) | **DELETE** /1/object/creditcardmerchant/{pkiCreditcardmerchantID} | Delete an existing Creditcardmerchant
+*ObjectCreditcardmerchantApi* | [**creditcardmerchantEditObjectV1**](docs/ObjectCreditcardmerchantApi.md#creditcardmerchantEditObjectV1) | **PUT** /1/object/creditcardmerchant/{pkiCreditcardmerchantID} | Edit an existing Creditcardmerchant
+*ObjectCreditcardmerchantApi* | [**creditcardmerchantGetAutocompleteV2**](docs/ObjectCreditcardmerchantApi.md#creditcardmerchantGetAutocompleteV2) | **GET** /2/object/creditcardmerchant/getAutocomplete/{sSelector} | Retrieve Creditcardmerchants and IDs
+*ObjectCreditcardmerchantApi* | [**creditcardmerchantGetListV1**](docs/ObjectCreditcardmerchantApi.md#creditcardmerchantGetListV1) | **GET** /1/object/creditcardmerchant/getList | Retrieve Creditcardmerchant list
+*ObjectCreditcardmerchantApi* | [**creditcardmerchantGetObjectV2**](docs/ObjectCreditcardmerchantApi.md#creditcardmerchantGetObjectV2) | **GET** /2/object/creditcardmerchant/{pkiCreditcardmerchantID} | Retrieve an existing Creditcardmerchant
 *ObjectCreditcardtypeApi* | [**creditcardtypeGetAutocompleteV2**](docs/ObjectCreditcardtypeApi.md#creditcardtypeGetAutocompleteV2) | **GET** /2/object/creditcardtype/getAutocomplete/{sSelector} | Retrieve Creditcardtypes and IDs
 *ObjectCustomerApi* | [**customerCreateObjectV1**](docs/ObjectCustomerApi.md#customerCreateObjectV1) | **POST** /1/object/customer | Create a new Customer
 *ObjectCustomerApi* | [**customerGetObjectV2**](docs/ObjectCustomerApi.md#customerGetObjectV2) | **GET** /2/object/customer/{pkiCustomerID} | Retrieve an existing Customer
@@ -618,6 +625,9 @@ Class | Method | HTTP request | Description
  - [AuthenticationexternalResetAuthorizationV1Response](docs/AuthenticationexternalResetAuthorizationV1Response.md)
  - [AuthenticationexternalResponse](docs/AuthenticationexternalResponse.md)
  - [AuthenticationexternalResponseCompound](docs/AuthenticationexternalResponseCompound.md)
+ - [BankaccountAutocompleteElementResponse](docs/BankaccountAutocompleteElementResponse.md)
+ - [BankaccountGetAutocompleteV2Response](docs/BankaccountGetAutocompleteV2Response.md)
+ - [BankaccountGetAutocompleteV2ResponseMPayload](docs/BankaccountGetAutocompleteV2ResponseMPayload.md)
  - [BillingentityexternalAutocompleteElementResponse](docs/BillingentityexternalAutocompleteElementResponse.md)
  - [BillingentityexternalGenerateFederationTokenV1Request](docs/BillingentityexternalGenerateFederationTokenV1Request.md)
  - [BillingentityexternalGenerateFederationTokenV1Response](docs/BillingentityexternalGenerateFederationTokenV1Response.md)
@@ -781,6 +791,24 @@ Class | Method | HTTP request | Description
  - [CreditcarddetailRequest](docs/CreditcarddetailRequest.md)
  - [CreditcarddetailResponse](docs/CreditcarddetailResponse.md)
  - [CreditcarddetailResponseCompound](docs/CreditcarddetailResponseCompound.md)
+ - [CreditcardmerchantAutocompleteElementResponse](docs/CreditcardmerchantAutocompleteElementResponse.md)
+ - [CreditcardmerchantCreateObjectV1Request](docs/CreditcardmerchantCreateObjectV1Request.md)
+ - [CreditcardmerchantCreateObjectV1Response](docs/CreditcardmerchantCreateObjectV1Response.md)
+ - [CreditcardmerchantCreateObjectV1ResponseMPayload](docs/CreditcardmerchantCreateObjectV1ResponseMPayload.md)
+ - [CreditcardmerchantDeleteObjectV1Response](docs/CreditcardmerchantDeleteObjectV1Response.md)
+ - [CreditcardmerchantEditObjectV1Request](docs/CreditcardmerchantEditObjectV1Request.md)
+ - [CreditcardmerchantEditObjectV1Response](docs/CreditcardmerchantEditObjectV1Response.md)
+ - [CreditcardmerchantGetAutocompleteV2Response](docs/CreditcardmerchantGetAutocompleteV2Response.md)
+ - [CreditcardmerchantGetAutocompleteV2ResponseMPayload](docs/CreditcardmerchantGetAutocompleteV2ResponseMPayload.md)
+ - [CreditcardmerchantGetListV1Response](docs/CreditcardmerchantGetListV1Response.md)
+ - [CreditcardmerchantGetListV1ResponseMPayload](docs/CreditcardmerchantGetListV1ResponseMPayload.md)
+ - [CreditcardmerchantGetObjectV2Response](docs/CreditcardmerchantGetObjectV2Response.md)
+ - [CreditcardmerchantGetObjectV2ResponseMPayload](docs/CreditcardmerchantGetObjectV2ResponseMPayload.md)
+ - [CreditcardmerchantListElement](docs/CreditcardmerchantListElement.md)
+ - [CreditcardmerchantRequest](docs/CreditcardmerchantRequest.md)
+ - [CreditcardmerchantRequestCompound](docs/CreditcardmerchantRequestCompound.md)
+ - [CreditcardmerchantResponse](docs/CreditcardmerchantResponse.md)
+ - [CreditcardmerchantResponseCompound](docs/CreditcardmerchantResponseCompound.md)
  - [CreditcardtypeAutocompleteElementResponse](docs/CreditcardtypeAutocompleteElementResponse.md)
  - [CreditcardtypeGetAutocompleteV2Response](docs/CreditcardtypeGetAutocompleteV2Response.md)
  - [CreditcardtypeGetAutocompleteV2ResponseMPayload](docs/CreditcardtypeGetAutocompleteV2ResponseMPayload.md)

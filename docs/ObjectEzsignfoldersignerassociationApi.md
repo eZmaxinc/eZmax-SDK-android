@@ -160,7 +160,7 @@ Name | Type | Description  | Notes
 
 ## ezsignfoldersignerassociationDeleteObjectV1
 
-> CommonResponse ezsignfoldersignerassociationDeleteObjectV1(pkiEzsignfoldersignerassociationID)
+> EzsignfoldersignerassociationDeleteObjectV1Response ezsignfoldersignerassociationDeleteObjectV1(pkiEzsignfoldersignerassociationID)
 
 Delete an existing Ezsignfoldersignerassociation
 
@@ -175,7 +175,7 @@ Delete an existing Ezsignfoldersignerassociation
 ObjectEzsignfoldersignerassociationApi apiInstance = new ObjectEzsignfoldersignerassociationApi();
 Integer pkiEzsignfoldersignerassociationID = null; // Integer | 
 try {
-    CommonResponse result = apiInstance.ezsignfoldersignerassociationDeleteObjectV1(pkiEzsignfoldersignerassociationID);
+    EzsignfoldersignerassociationDeleteObjectV1Response result = apiInstance.ezsignfoldersignerassociationDeleteObjectV1(pkiEzsignfoldersignerassociationID);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectEzsignfoldersignerassociationApi#ezsignfoldersignerassociationDeleteObjectV1");
@@ -192,7 +192,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsignfoldersignerassociationDeleteObjectV1Response**](EzsignfoldersignerassociationDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -206,7 +206,7 @@ Name | Type | Description  | Notes
 
 ## ezsignfoldersignerassociationEditObjectV1
 
-> CommonResponse ezsignfoldersignerassociationEditObjectV1(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationEditObjectV1Request)
+> EzsignfoldersignerassociationEditObjectV1Response ezsignfoldersignerassociationEditObjectV1(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationEditObjectV1Request)
 
 Edit an existing Ezsignfoldersignerassociation
 
@@ -222,7 +222,7 @@ ObjectEzsignfoldersignerassociationApi apiInstance = new ObjectEzsignfoldersigne
 Integer pkiEzsignfoldersignerassociationID = null; // Integer | 
 EzsignfoldersignerassociationEditObjectV1Request ezsignfoldersignerassociationEditObjectV1Request = new EzsignfoldersignerassociationEditObjectV1Request(); // EzsignfoldersignerassociationEditObjectV1Request | 
 try {
-    CommonResponse result = apiInstance.ezsignfoldersignerassociationEditObjectV1(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationEditObjectV1Request);
+    EzsignfoldersignerassociationEditObjectV1Response result = apiInstance.ezsignfoldersignerassociationEditObjectV1(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationEditObjectV1Request);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectEzsignfoldersignerassociationApi#ezsignfoldersignerassociationEditObjectV1");
@@ -240,7 +240,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsignfoldersignerassociationEditObjectV1Response**](EzsignfoldersignerassociationEditObjectV1Response.md)
 
 ### Authorization
 
@@ -254,7 +254,7 @@ Name | Type | Description  | Notes
 
 ## ezsignfoldersignerassociationForceDisconnectV1
 
-> CommonResponse ezsignfoldersignerassociationForceDisconnectV1(pkiEzsignfoldersignerassociationID, body)
+> EzsignfoldersignerassociationForceDisconnectV1Response ezsignfoldersignerassociationForceDisconnectV1(pkiEzsignfoldersignerassociationID, body)
 
 Disconnects the Ezsignfoldersignerassociation
 
@@ -270,7 +270,7 @@ ObjectEzsignfoldersignerassociationApi apiInstance = new ObjectEzsignfoldersigne
 Integer pkiEzsignfoldersignerassociationID = null; // Integer | 
 Object body = null; // Object | 
 try {
-    CommonResponse result = apiInstance.ezsignfoldersignerassociationForceDisconnectV1(pkiEzsignfoldersignerassociationID, body);
+    EzsignfoldersignerassociationForceDisconnectV1Response result = apiInstance.ezsignfoldersignerassociationForceDisconnectV1(pkiEzsignfoldersignerassociationID, body);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectEzsignfoldersignerassociationApi#ezsignfoldersignerassociationForceDisconnectV1");
@@ -288,7 +288,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsignfoldersignerassociationForceDisconnectV1Response**](EzsignfoldersignerassociationForceDisconnectV1Response.md)
 
 ### Authorization
 
@@ -440,7 +440,7 @@ Name | Type | Description  | Notes
 
 ## ezsignfoldersignerassociationPatchObjectV1
 
-> CommonResponse ezsignfoldersignerassociationPatchObjectV1(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationPatchObjectV1Request)
+> EzsignfoldersignerassociationPatchObjectV1Response ezsignfoldersignerassociationPatchObjectV1(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationPatchObjectV1Request)
 
 Patch an existing Ezsignfoldersignerassociation
 
@@ -454,7 +454,7 @@ ObjectEzsignfoldersignerassociationApi apiInstance = new ObjectEzsignfoldersigne
 Integer pkiEzsignfoldersignerassociationID = null; // Integer | 
 EzsignfoldersignerassociationPatchObjectV1Request ezsignfoldersignerassociationPatchObjectV1Request = new EzsignfoldersignerassociationPatchObjectV1Request(); // EzsignfoldersignerassociationPatchObjectV1Request | 
 try {
-    CommonResponse result = apiInstance.ezsignfoldersignerassociationPatchObjectV1(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationPatchObjectV1Request);
+    EzsignfoldersignerassociationPatchObjectV1Response result = apiInstance.ezsignfoldersignerassociationPatchObjectV1(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationPatchObjectV1Request);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectEzsignfoldersignerassociationApi#ezsignfoldersignerassociationPatchObjectV1");
@@ -472,7 +472,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsignfoldersignerassociationPatchObjectV1Response**](EzsignfoldersignerassociationPatchObjectV1Response.md)
 
 ### Authorization
 
@@ -486,7 +486,7 @@ Name | Type | Description  | Notes
 
 ## ezsignfoldersignerassociationReassignV1
 
-> CommonResponse ezsignfoldersignerassociationReassignV1(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationReassignV1Request)
+> EzsignfoldersignerassociationReassignV1Response ezsignfoldersignerassociationReassignV1(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationReassignV1Request)
 
 Reassign remaining unsigned signatures and forms
 
@@ -502,7 +502,7 @@ ObjectEzsignfoldersignerassociationApi apiInstance = new ObjectEzsignfoldersigne
 Integer pkiEzsignfoldersignerassociationID = null; // Integer | 
 EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request = new EzsignfoldersignerassociationReassignV1Request(); // EzsignfoldersignerassociationReassignV1Request | 
 try {
-    CommonResponse result = apiInstance.ezsignfoldersignerassociationReassignV1(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationReassignV1Request);
+    EzsignfoldersignerassociationReassignV1Response result = apiInstance.ezsignfoldersignerassociationReassignV1(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationReassignV1Request);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectEzsignfoldersignerassociationApi#ezsignfoldersignerassociationReassignV1");
@@ -520,7 +520,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsignfoldersignerassociationReassignV1Response**](EzsignfoldersignerassociationReassignV1Response.md)
 
 ### Authorization
 

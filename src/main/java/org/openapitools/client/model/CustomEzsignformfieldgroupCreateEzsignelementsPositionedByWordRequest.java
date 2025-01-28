@@ -14,10 +14,10 @@ package org.openapitools.client.model;
 
 import java.util.*;
 import org.openapitools.client.model.CustomCreateEzsignelementsPositionedByWordRequest;
-import org.openapitools.client.model.CustomDropdownElementRequest;
+import org.openapitools.client.model.CustomDropdownElementRequestCompound;
 import org.openapitools.client.model.EnumTextvalidation;
 import org.openapitools.client.model.EzsignformfieldRequestCompound;
-import org.openapitools.client.model.EzsignformfieldgroupsignerRequest;
+import org.openapitools.client.model.EzsignformfieldgroupsignerRequestCompound;
 import org.openapitools.client.model.FieldEEzsignformfieldgroupSignerrequirement;
 import org.openapitools.client.model.FieldEEzsignformfieldgroupTooltipposition;
 import org.openapitools.client.model.FieldEEzsignformfieldgroupType;

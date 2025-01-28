@@ -23,13 +23,13 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
-import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseError;
 import java.io.File;
 import org.openapitools.client.model.HeaderAcceptLanguage;
 import org.openapitools.client.model.PaymenttermCreateObjectV1Request;
 import org.openapitools.client.model.PaymenttermCreateObjectV1Response;
 import org.openapitools.client.model.PaymenttermEditObjectV1Request;
+import org.openapitools.client.model.PaymenttermEditObjectV1Response;
 import org.openapitools.client.model.PaymenttermGetAutocompleteV2Response;
 import org.openapitools.client.model.PaymenttermGetListV1Response;
 import org.openapitools.client.model.PaymenttermGetObjectV2Response;
@@ -197,9 +197,9 @@ public class ObjectPaymenttermApi {
   * 
    * @param pkiPaymenttermID 
    * @param paymenttermEditObjectV1Request 
-   * @return CommonResponse
+   * @return PaymenttermEditObjectV1Response
   */
-  public CommonResponse paymenttermEditObjectV1 (Integer pkiPaymenttermID, PaymenttermEditObjectV1Request paymenttermEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public PaymenttermEditObjectV1Response paymenttermEditObjectV1 (Integer pkiPaymenttermID, PaymenttermEditObjectV1Request paymenttermEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = paymenttermEditObjectV1Request;
     // verify the required parameter 'pkiPaymenttermID' is set
     if (pkiPaymenttermID == null) {
@@ -240,7 +240,7 @@ public class ObjectPaymenttermApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
+         return (PaymenttermEditObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", PaymenttermEditObjectV1Response.class);
       } else {
          return null;
       }
@@ -266,7 +266,7 @@ public class ObjectPaymenttermApi {
    * 
    * @param pkiPaymenttermID    * @param paymenttermEditObjectV1Request 
   */
-  public void paymenttermEditObjectV1 (Integer pkiPaymenttermID, PaymenttermEditObjectV1Request paymenttermEditObjectV1Request, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void paymenttermEditObjectV1 (Integer pkiPaymenttermID, PaymenttermEditObjectV1Request paymenttermEditObjectV1Request, final Response.Listener<PaymenttermEditObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = paymenttermEditObjectV1Request;
 
     // verify the required parameter 'pkiPaymenttermID' is set
@@ -316,7 +316,7 @@ public class ObjectPaymenttermApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
+              responseListener.onResponse((PaymenttermEditObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", PaymenttermEditObjectV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

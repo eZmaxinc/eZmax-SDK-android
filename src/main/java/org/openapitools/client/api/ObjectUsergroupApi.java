@@ -23,13 +23,13 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
-import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseError;
 import java.io.File;
 import org.openapitools.client.model.HeaderAcceptLanguage;
 import org.openapitools.client.model.UsergroupCreateObjectV1Request;
 import org.openapitools.client.model.UsergroupCreateObjectV1Response;
 import org.openapitools.client.model.UsergroupEditObjectV1Request;
+import org.openapitools.client.model.UsergroupEditObjectV1Response;
 import org.openapitools.client.model.UsergroupEditPermissionsV1Request;
 import org.openapitools.client.model.UsergroupEditPermissionsV1Response;
 import org.openapitools.client.model.UsergroupEditUsergroupdelegationsV1Request;
@@ -206,9 +206,9 @@ public class ObjectUsergroupApi {
   * 
    * @param pkiUsergroupID 
    * @param usergroupEditObjectV1Request 
-   * @return CommonResponse
+   * @return UsergroupEditObjectV1Response
   */
-  public CommonResponse usergroupEditObjectV1 (Integer pkiUsergroupID, UsergroupEditObjectV1Request usergroupEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public UsergroupEditObjectV1Response usergroupEditObjectV1 (Integer pkiUsergroupID, UsergroupEditObjectV1Request usergroupEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = usergroupEditObjectV1Request;
     // verify the required parameter 'pkiUsergroupID' is set
     if (pkiUsergroupID == null) {
@@ -249,7 +249,7 @@ public class ObjectUsergroupApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
+         return (UsergroupEditObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", UsergroupEditObjectV1Response.class);
       } else {
          return null;
       }
@@ -275,7 +275,7 @@ public class ObjectUsergroupApi {
    * 
    * @param pkiUsergroupID    * @param usergroupEditObjectV1Request 
   */
-  public void usergroupEditObjectV1 (Integer pkiUsergroupID, UsergroupEditObjectV1Request usergroupEditObjectV1Request, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void usergroupEditObjectV1 (Integer pkiUsergroupID, UsergroupEditObjectV1Request usergroupEditObjectV1Request, final Response.Listener<UsergroupEditObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = usergroupEditObjectV1Request;
 
     // verify the required parameter 'pkiUsergroupID' is set
@@ -325,7 +325,7 @@ public class ObjectUsergroupApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
+              responseListener.onResponse((UsergroupEditObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", UsergroupEditObjectV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

@@ -23,7 +23,6 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
-import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseError;
 import org.openapitools.client.model.EzsignsignatureCreateObjectV1Request;
 import org.openapitools.client.model.EzsignsignatureCreateObjectV1Response;
@@ -31,7 +30,9 @@ import org.openapitools.client.model.EzsignsignatureCreateObjectV2Request;
 import org.openapitools.client.model.EzsignsignatureCreateObjectV2Response;
 import org.openapitools.client.model.EzsignsignatureCreateObjectV3Request;
 import org.openapitools.client.model.EzsignsignatureCreateObjectV3Response;
+import org.openapitools.client.model.EzsignsignatureDeleteObjectV1Response;
 import org.openapitools.client.model.EzsignsignatureEditObjectV2Request;
+import org.openapitools.client.model.EzsignsignatureEditObjectV2Response;
 import org.openapitools.client.model.EzsignsignatureGetEzsignsignatureattachmentV1Response;
 import org.openapitools.client.model.EzsignsignatureGetEzsignsignaturesAutomaticV1Response;
 import org.openapitools.client.model.EzsignsignatureGetObjectV3Response;
@@ -457,9 +458,9 @@ public class ObjectEzsignsignatureApi {
   * Delete an existing Ezsignsignature
   * 
    * @param pkiEzsignsignatureID 
-   * @return CommonResponse
+   * @return EzsignsignatureDeleteObjectV1Response
   */
-  public CommonResponse ezsignsignatureDeleteObjectV1 (Integer pkiEzsignsignatureID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public EzsignsignatureDeleteObjectV1Response ezsignsignatureDeleteObjectV1 (Integer pkiEzsignsignatureID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'pkiEzsignsignatureID' is set
     if (pkiEzsignsignatureID == null) {
@@ -494,7 +495,7 @@ public class ObjectEzsignsignatureApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "DELETE", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
+         return (EzsignsignatureDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsignsignatureDeleteObjectV1Response.class);
       } else {
          return null;
       }
@@ -520,7 +521,7 @@ public class ObjectEzsignsignatureApi {
    * 
    * @param pkiEzsignsignatureID 
   */
-  public void ezsignsignatureDeleteObjectV1 (Integer pkiEzsignsignatureID, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void ezsignsignatureDeleteObjectV1 (Integer pkiEzsignsignatureID, final Response.Listener<EzsignsignatureDeleteObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'pkiEzsignsignatureID' is set
@@ -565,7 +566,7 @@ public class ObjectEzsignsignatureApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
+              responseListener.onResponse((EzsignsignatureDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsignsignatureDeleteObjectV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -585,9 +586,9 @@ public class ObjectEzsignsignatureApi {
   * 
    * @param pkiEzsignsignatureID 
    * @param ezsignsignatureEditObjectV2Request 
-   * @return CommonResponse
+   * @return EzsignsignatureEditObjectV2Response
   */
-  public CommonResponse ezsignsignatureEditObjectV2 (Integer pkiEzsignsignatureID, EzsignsignatureEditObjectV2Request ezsignsignatureEditObjectV2Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public EzsignsignatureEditObjectV2Response ezsignsignatureEditObjectV2 (Integer pkiEzsignsignatureID, EzsignsignatureEditObjectV2Request ezsignsignatureEditObjectV2Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = ezsignsignatureEditObjectV2Request;
     // verify the required parameter 'pkiEzsignsignatureID' is set
     if (pkiEzsignsignatureID == null) {
@@ -628,7 +629,7 @@ public class ObjectEzsignsignatureApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
+         return (EzsignsignatureEditObjectV2Response) ApiInvoker.deserialize(localVarResponse, "", EzsignsignatureEditObjectV2Response.class);
       } else {
          return null;
       }
@@ -654,7 +655,7 @@ public class ObjectEzsignsignatureApi {
    * 
    * @param pkiEzsignsignatureID    * @param ezsignsignatureEditObjectV2Request 
   */
-  public void ezsignsignatureEditObjectV2 (Integer pkiEzsignsignatureID, EzsignsignatureEditObjectV2Request ezsignsignatureEditObjectV2Request, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void ezsignsignatureEditObjectV2 (Integer pkiEzsignsignatureID, EzsignsignatureEditObjectV2Request ezsignsignatureEditObjectV2Request, final Response.Listener<EzsignsignatureEditObjectV2Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = ezsignsignatureEditObjectV2Request;
 
     // verify the required parameter 'pkiEzsignsignatureID' is set
@@ -704,7 +705,7 @@ public class ObjectEzsignsignatureApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
+              responseListener.onResponse((EzsignsignatureEditObjectV2Response) ApiInvoker.deserialize(localVarResponse,  "", EzsignsignatureEditObjectV2Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

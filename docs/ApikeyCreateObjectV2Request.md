@@ -6,7 +6,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjApikey** | [**List&lt;ApikeyRequestCompound&gt;**](ApikeyRequest.md) |  | 
+**aObjApikey** | [**List&lt;ApikeyRequestCompound&gt;**](ApikeyRequestCompound.md) |  | 
 
 
 

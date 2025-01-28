@@ -23,9 +23,9 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
-import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseError;
 import org.openapitools.client.model.SystemconfigurationEditObjectV1Request;
+import org.openapitools.client.model.SystemconfigurationEditObjectV1Response;
 import org.openapitools.client.model.SystemconfigurationGetObjectV2Response;
 
 import org.apache.http.HttpEntity;
@@ -63,9 +63,9 @@ public class ObjectSystemconfigurationApi {
   * 
    * @param pkiSystemconfigurationID The unique ID of the Systemconfiguration
    * @param systemconfigurationEditObjectV1Request 
-   * @return CommonResponse
+   * @return SystemconfigurationEditObjectV1Response
   */
-  public CommonResponse systemconfigurationEditObjectV1 (Integer pkiSystemconfigurationID, SystemconfigurationEditObjectV1Request systemconfigurationEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public SystemconfigurationEditObjectV1Response systemconfigurationEditObjectV1 (Integer pkiSystemconfigurationID, SystemconfigurationEditObjectV1Request systemconfigurationEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = systemconfigurationEditObjectV1Request;
     // verify the required parameter 'pkiSystemconfigurationID' is set
     if (pkiSystemconfigurationID == null) {
@@ -106,7 +106,7 @@ public class ObjectSystemconfigurationApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
+         return (SystemconfigurationEditObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", SystemconfigurationEditObjectV1Response.class);
       } else {
          return null;
       }
@@ -132,7 +132,7 @@ public class ObjectSystemconfigurationApi {
    * 
    * @param pkiSystemconfigurationID The unique ID of the Systemconfiguration   * @param systemconfigurationEditObjectV1Request 
   */
-  public void systemconfigurationEditObjectV1 (Integer pkiSystemconfigurationID, SystemconfigurationEditObjectV1Request systemconfigurationEditObjectV1Request, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void systemconfigurationEditObjectV1 (Integer pkiSystemconfigurationID, SystemconfigurationEditObjectV1Request systemconfigurationEditObjectV1Request, final Response.Listener<SystemconfigurationEditObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = systemconfigurationEditObjectV1Request;
 
     // verify the required parameter 'pkiSystemconfigurationID' is set
@@ -182,7 +182,7 @@ public class ObjectSystemconfigurationApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
+              responseListener.onResponse((SystemconfigurationEditObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", SystemconfigurationEditObjectV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

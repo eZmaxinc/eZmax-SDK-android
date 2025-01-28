@@ -23,10 +23,10 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
-import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseError;
 import org.openapitools.client.model.EzsignsignergroupmembershipCreateObjectV1Request;
 import org.openapitools.client.model.EzsignsignergroupmembershipCreateObjectV1Response;
+import org.openapitools.client.model.EzsignsignergroupmembershipDeleteObjectV1Response;
 import org.openapitools.client.model.EzsignsignergroupmembershipGetObjectV2Response;
 
 import org.apache.http.HttpEntity;
@@ -191,9 +191,9 @@ public class ObjectEzsignsignergroupmembershipApi {
   * Delete an existing Ezsignsignergroupmembership
   * 
    * @param pkiEzsignsignergroupmembershipID The unique ID of the Ezsignsignergroupmembership
-   * @return CommonResponse
+   * @return EzsignsignergroupmembershipDeleteObjectV1Response
   */
-  public CommonResponse ezsignsignergroupmembershipDeleteObjectV1 (Integer pkiEzsignsignergroupmembershipID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public EzsignsignergroupmembershipDeleteObjectV1Response ezsignsignergroupmembershipDeleteObjectV1 (Integer pkiEzsignsignergroupmembershipID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'pkiEzsignsignergroupmembershipID' is set
     if (pkiEzsignsignergroupmembershipID == null) {
@@ -228,7 +228,7 @@ public class ObjectEzsignsignergroupmembershipApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "DELETE", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
+         return (EzsignsignergroupmembershipDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsignsignergroupmembershipDeleteObjectV1Response.class);
       } else {
          return null;
       }
@@ -254,7 +254,7 @@ public class ObjectEzsignsignergroupmembershipApi {
    * 
    * @param pkiEzsignsignergroupmembershipID The unique ID of the Ezsignsignergroupmembership
   */
-  public void ezsignsignergroupmembershipDeleteObjectV1 (Integer pkiEzsignsignergroupmembershipID, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void ezsignsignergroupmembershipDeleteObjectV1 (Integer pkiEzsignsignergroupmembershipID, final Response.Listener<EzsignsignergroupmembershipDeleteObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'pkiEzsignsignergroupmembershipID' is set
@@ -299,7 +299,7 @@ public class ObjectEzsignsignergroupmembershipApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
+              responseListener.onResponse((EzsignsignergroupmembershipDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsignsignergroupmembershipDeleteObjectV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

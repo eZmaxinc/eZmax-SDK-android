@@ -23,13 +23,14 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
-import org.openapitools.client.model.CommonResponse;
 import org.openapitools.client.model.CommonResponseError;
 import org.openapitools.client.model.EzsigntemplateCopyV1Request;
 import org.openapitools.client.model.EzsigntemplateCopyV1Response;
 import org.openapitools.client.model.EzsigntemplateCreateObjectV3Request;
 import org.openapitools.client.model.EzsigntemplateCreateObjectV3Response;
+import org.openapitools.client.model.EzsigntemplateDeleteObjectV1Response;
 import org.openapitools.client.model.EzsigntemplateEditObjectV3Request;
+import org.openapitools.client.model.EzsigntemplateEditObjectV3Response;
 import org.openapitools.client.model.EzsigntemplateGetAutocompleteV2Response;
 import org.openapitools.client.model.EzsigntemplateGetListV1Response;
 import org.openapitools.client.model.EzsigntemplateGetObjectV3Response;
@@ -337,9 +338,9 @@ public class ObjectEzsigntemplateApi {
   * Delete an existing Ezsigntemplate
   * 
    * @param pkiEzsigntemplateID 
-   * @return CommonResponse
+   * @return EzsigntemplateDeleteObjectV1Response
   */
-  public CommonResponse ezsigntemplateDeleteObjectV1 (Integer pkiEzsigntemplateID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public EzsigntemplateDeleteObjectV1Response ezsigntemplateDeleteObjectV1 (Integer pkiEzsigntemplateID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'pkiEzsigntemplateID' is set
     if (pkiEzsigntemplateID == null) {
@@ -374,7 +375,7 @@ public class ObjectEzsigntemplateApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "DELETE", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
+         return (EzsigntemplateDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsigntemplateDeleteObjectV1Response.class);
       } else {
          return null;
       }
@@ -400,7 +401,7 @@ public class ObjectEzsigntemplateApi {
    * 
    * @param pkiEzsigntemplateID 
   */
-  public void ezsigntemplateDeleteObjectV1 (Integer pkiEzsigntemplateID, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void ezsigntemplateDeleteObjectV1 (Integer pkiEzsigntemplateID, final Response.Listener<EzsigntemplateDeleteObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'pkiEzsigntemplateID' is set
@@ -445,7 +446,7 @@ public class ObjectEzsigntemplateApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
+              responseListener.onResponse((EzsigntemplateDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsigntemplateDeleteObjectV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -465,9 +466,9 @@ public class ObjectEzsigntemplateApi {
   * 
    * @param pkiEzsigntemplateID 
    * @param ezsigntemplateEditObjectV3Request 
-   * @return CommonResponse
+   * @return EzsigntemplateEditObjectV3Response
   */
-  public CommonResponse ezsigntemplateEditObjectV3 (Integer pkiEzsigntemplateID, EzsigntemplateEditObjectV3Request ezsigntemplateEditObjectV3Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public EzsigntemplateEditObjectV3Response ezsigntemplateEditObjectV3 (Integer pkiEzsigntemplateID, EzsigntemplateEditObjectV3Request ezsigntemplateEditObjectV3Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = ezsigntemplateEditObjectV3Request;
     // verify the required parameter 'pkiEzsigntemplateID' is set
     if (pkiEzsigntemplateID == null) {
@@ -508,7 +509,7 @@ public class ObjectEzsigntemplateApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CommonResponse) ApiInvoker.deserialize(localVarResponse, "", CommonResponse.class);
+         return (EzsigntemplateEditObjectV3Response) ApiInvoker.deserialize(localVarResponse, "", EzsigntemplateEditObjectV3Response.class);
       } else {
          return null;
       }
@@ -534,7 +535,7 @@ public class ObjectEzsigntemplateApi {
    * 
    * @param pkiEzsigntemplateID    * @param ezsigntemplateEditObjectV3Request 
   */
-  public void ezsigntemplateEditObjectV3 (Integer pkiEzsigntemplateID, EzsigntemplateEditObjectV3Request ezsigntemplateEditObjectV3Request, final Response.Listener<CommonResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void ezsigntemplateEditObjectV3 (Integer pkiEzsigntemplateID, EzsigntemplateEditObjectV3Request ezsigntemplateEditObjectV3Request, final Response.Listener<EzsigntemplateEditObjectV3Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = ezsigntemplateEditObjectV3Request;
 
     // verify the required parameter 'pkiEzsigntemplateID' is set
@@ -584,7 +585,7 @@ public class ObjectEzsigntemplateApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CommonResponse) ApiInvoker.deserialize(localVarResponse,  "", CommonResponse.class));
+              responseListener.onResponse((EzsigntemplateEditObjectV3Response) ApiInvoker.deserialize(localVarResponse,  "", EzsigntemplateEditObjectV3Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

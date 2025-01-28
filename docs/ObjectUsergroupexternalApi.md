@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ## usergroupexternalDeleteObjectV1
 
-> CommonResponse usergroupexternalDeleteObjectV1(pkiUsergroupexternalID)
+> UsergroupexternalDeleteObjectV1Response usergroupexternalDeleteObjectV1(pkiUsergroupexternalID)
 
 Delete an existing Usergroupexternal
 
@@ -78,7 +78,7 @@ Delete an existing Usergroupexternal
 ObjectUsergroupexternalApi apiInstance = new ObjectUsergroupexternalApi();
 Integer pkiUsergroupexternalID = null; // Integer | The unique ID of the Usergroupexternal
 try {
-    CommonResponse result = apiInstance.usergroupexternalDeleteObjectV1(pkiUsergroupexternalID);
+    UsergroupexternalDeleteObjectV1Response result = apiInstance.usergroupexternalDeleteObjectV1(pkiUsergroupexternalID);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectUsergroupexternalApi#usergroupexternalDeleteObjectV1");
@@ -95,7 +95,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**UsergroupexternalDeleteObjectV1Response**](UsergroupexternalDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -109,7 +109,7 @@ Name | Type | Description  | Notes
 
 ## usergroupexternalEditObjectV1
 
-> CommonResponse usergroupexternalEditObjectV1(pkiUsergroupexternalID, usergroupexternalEditObjectV1Request)
+> UsergroupexternalEditObjectV1Response usergroupexternalEditObjectV1(pkiUsergroupexternalID, usergroupexternalEditObjectV1Request)
 
 Edit an existing Usergroupexternal
 
@@ -125,7 +125,7 @@ ObjectUsergroupexternalApi apiInstance = new ObjectUsergroupexternalApi();
 Integer pkiUsergroupexternalID = null; // Integer | The unique ID of the Usergroupexternal
 UsergroupexternalEditObjectV1Request usergroupexternalEditObjectV1Request = new UsergroupexternalEditObjectV1Request(); // UsergroupexternalEditObjectV1Request | 
 try {
-    CommonResponse result = apiInstance.usergroupexternalEditObjectV1(pkiUsergroupexternalID, usergroupexternalEditObjectV1Request);
+    UsergroupexternalEditObjectV1Response result = apiInstance.usergroupexternalEditObjectV1(pkiUsergroupexternalID, usergroupexternalEditObjectV1Request);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectUsergroupexternalApi#usergroupexternalEditObjectV1");
@@ -143,7 +143,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**UsergroupexternalEditObjectV1Response**](UsergroupexternalEditObjectV1Response.md)
 
 ### Authorization
 
