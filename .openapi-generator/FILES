@@ -1019,6 +1019,7 @@ docs/EzsigntemplatepublicCreateEzsignfolderV1ResponseMPayload.md
 docs/EzsigntemplatepublicCreateObjectV1Request.md
 docs/EzsigntemplatepublicCreateObjectV1Response.md
 docs/EzsigntemplatepublicCreateObjectV1ResponseMPayload.md
+docs/EzsigntemplatepublicDeleteObjectV1Response.md
 docs/EzsigntemplatepublicEditObjectV1Request.md
 docs/EzsigntemplatepublicEditObjectV1Response.md
 docs/EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request.md
@@ -2919,6 +2920,7 @@ src/main/java/org/openapitools/client/model/EzsigntemplatepublicCreateEzsignfold
 src/main/java/org/openapitools/client/model/EzsigntemplatepublicCreateObjectV1Request.java
 src/main/java/org/openapitools/client/model/EzsigntemplatepublicCreateObjectV1Response.java
 src/main/java/org/openapitools/client/model/EzsigntemplatepublicCreateObjectV1ResponseMPayload.java
+src/main/java/org/openapitools/client/model/EzsigntemplatepublicDeleteObjectV1Response.java
 src/main/java/org/openapitools/client/model/EzsigntemplatepublicEditObjectV1Request.java
 src/main/java/org/openapitools/client/model/EzsigntemplatepublicEditObjectV1Response.java
 src/main/java/org/openapitools/client/model/EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request.java

@@ -28,6 +28,7 @@ import org.openapitools.client.model.EzsigntemplatepublicCreateEzsignfolderV1Req
 import org.openapitools.client.model.EzsigntemplatepublicCreateEzsignfolderV1Response;
 import org.openapitools.client.model.EzsigntemplatepublicCreateObjectV1Request;
 import org.openapitools.client.model.EzsigntemplatepublicCreateObjectV1Response;
+import org.openapitools.client.model.EzsigntemplatepublicDeleteObjectV1Response;
 import org.openapitools.client.model.EzsigntemplatepublicEditObjectV1Request;
 import org.openapitools.client.model.EzsigntemplatepublicEditObjectV1Response;
 import org.openapitools.client.model.EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request;
@@ -312,6 +313,133 @@ public class ObjectEzsigntemplatepublicApi {
           public void onResponse(String localVarResponse) {
             try {
               responseListener.onResponse((EzsigntemplatepublicCreateObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsigntemplatepublicCreateObjectV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Delete an existing Ezsigntemplatepublic
+  * 
+   * @param pkiEzsigntemplatepublicID The unique ID of the Ezsigntemplatepublic
+   * @return EzsigntemplatepublicDeleteObjectV1Response
+  */
+  public EzsigntemplatepublicDeleteObjectV1Response ezsigntemplatepublicDeleteObjectV1 (Integer pkiEzsigntemplatepublicID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiEzsigntemplatepublicID' is set
+    if (pkiEzsigntemplatepublicID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsigntemplatepublicID' when calling ezsigntemplatepublicDeleteObjectV1",
+        new ApiException(400, "Missing the required parameter 'pkiEzsigntemplatepublicID' when calling ezsigntemplatepublicDeleteObjectV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/ezsigntemplatepublic/{pkiEzsigntemplatepublicID}".replaceAll("\\{" + "pkiEzsigntemplatepublicID" + "\\}", apiInvoker.escapeString(pkiEzsigntemplatepublicID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "DELETE", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (EzsigntemplatepublicDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsigntemplatepublicDeleteObjectV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Delete an existing Ezsigntemplatepublic
+   * 
+   * @param pkiEzsigntemplatepublicID The unique ID of the Ezsigntemplatepublic
+  */
+  public void ezsigntemplatepublicDeleteObjectV1 (Integer pkiEzsigntemplatepublicID, final Response.Listener<EzsigntemplatepublicDeleteObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiEzsigntemplatepublicID' is set
+    if (pkiEzsigntemplatepublicID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsigntemplatepublicID' when calling ezsigntemplatepublicDeleteObjectV1",
+        new ApiException(400, "Missing the required parameter 'pkiEzsigntemplatepublicID' when calling ezsigntemplatepublicDeleteObjectV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/ezsigntemplatepublic/{pkiEzsigntemplatepublicID}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiEzsigntemplatepublicID" + "\\}", apiInvoker.escapeString(pkiEzsigntemplatepublicID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "DELETE", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((EzsigntemplatepublicDeleteObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsigntemplatepublicDeleteObjectV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
