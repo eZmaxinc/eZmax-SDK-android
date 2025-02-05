@@ -1101,6 +1101,18 @@ public class JsonUtil {
       return new TypeToken<List<CreditcardtypeGetAutocompleteV2ResponseMPayload>>(){}.getType();
     }
     
+    if ("CurrencyAutocompleteElementResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CurrencyAutocompleteElementResponse>>(){}.getType();
+    }
+    
+    if ("CurrencyGetAutocompleteV2Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CurrencyGetAutocompleteV2Response>>(){}.getType();
+    }
+    
+    if ("CurrencyGetAutocompleteV2ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CurrencyGetAutocompleteV2ResponseMPayload>>(){}.getType();
+    }
+    
     if ("CustomApikey".equalsIgnoreCase(className)) {
       return new TypeToken<List<CustomApikey>>(){}.getType();
     }
@@ -7741,6 +7753,18 @@ public class JsonUtil {
     
     if ("CreditcardtypeGetAutocompleteV2ResponseMPayload".equalsIgnoreCase(className)) {
       return new TypeToken<CreditcardtypeGetAutocompleteV2ResponseMPayload>(){}.getType();
+    }
+    
+    if ("CurrencyAutocompleteElementResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<CurrencyAutocompleteElementResponse>(){}.getType();
+    }
+    
+    if ("CurrencyGetAutocompleteV2Response".equalsIgnoreCase(className)) {
+      return new TypeToken<CurrencyGetAutocompleteV2Response>(){}.getType();
+    }
+    
+    if ("CurrencyGetAutocompleteV2ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<CurrencyGetAutocompleteV2ResponseMPayload>(){}.getType();
     }
     
     if ("CustomApikey".equalsIgnoreCase(className)) {

@@ -263,6 +263,9 @@ docs/CreditcardmerchantResponseCompound.md
 docs/CreditcardtypeAutocompleteElementResponse.md
 docs/CreditcardtypeGetAutocompleteV2Response.md
 docs/CreditcardtypeGetAutocompleteV2ResponseMPayload.md
+docs/CurrencyAutocompleteElementResponse.md
+docs/CurrencyGetAutocompleteV2Response.md
+docs/CurrencyGetAutocompleteV2ResponseMPayload.md
 docs/CustomApikey.md
 docs/CustomApikeyfederation.md
 docs/CustomAttachmentResponse.md
@@ -1317,6 +1320,7 @@ docs/ObjectCountryApi.md
 docs/ObjectCreditcardclientApi.md
 docs/ObjectCreditcardmerchantApi.md
 docs/ObjectCreditcardtypeApi.md
+docs/ObjectCurrencyApi.md
 docs/ObjectCustomerApi.md
 docs/ObjectDepartmentApi.md
 docs/ObjectDiscussionApi.md
@@ -1815,6 +1819,7 @@ src/main/java/org/openapitools/client/api/ObjectCountryApi.java
 src/main/java/org/openapitools/client/api/ObjectCreditcardclientApi.java
 src/main/java/org/openapitools/client/api/ObjectCreditcardmerchantApi.java
 src/main/java/org/openapitools/client/api/ObjectCreditcardtypeApi.java
+src/main/java/org/openapitools/client/api/ObjectCurrencyApi.java
 src/main/java/org/openapitools/client/api/ObjectCustomerApi.java
 src/main/java/org/openapitools/client/api/ObjectDepartmentApi.java
 src/main/java/org/openapitools/client/api/ObjectDiscussionApi.java
@@ -2164,6 +2169,9 @@ src/main/java/org/openapitools/client/model/CreditcardmerchantResponseCompound.j
 src/main/java/org/openapitools/client/model/CreditcardtypeAutocompleteElementResponse.java
 src/main/java/org/openapitools/client/model/CreditcardtypeGetAutocompleteV2Response.java
 src/main/java/org/openapitools/client/model/CreditcardtypeGetAutocompleteV2ResponseMPayload.java
+src/main/java/org/openapitools/client/model/CurrencyAutocompleteElementResponse.java
+src/main/java/org/openapitools/client/model/CurrencyGetAutocompleteV2Response.java
+src/main/java/org/openapitools/client/model/CurrencyGetAutocompleteV2ResponseMPayload.java
 src/main/java/org/openapitools/client/model/CustomApikey.java
 src/main/java/org/openapitools/client/model/CustomApikeyfederation.java
 src/main/java/org/openapitools/client/model/CustomAttachmentResponse.java
