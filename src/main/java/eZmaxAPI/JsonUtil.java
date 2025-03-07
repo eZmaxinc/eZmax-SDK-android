@@ -1777,18 +1777,6 @@ public class JsonUtil {
       return new TypeToken<List<EzdoctemplatetypeGetAutocompleteV2ResponseMPayload>>(){}.getType();
     }
     
-    if ("EzmaxcasePatchObjectV1Request".equalsIgnoreCase(className)) {
-      return new TypeToken<List<EzmaxcasePatchObjectV1Request>>(){}.getType();
-    }
-    
-    if ("EzmaxcasePatchObjectV1Response".equalsIgnoreCase(className)) {
-      return new TypeToken<List<EzmaxcasePatchObjectV1Response>>(){}.getType();
-    }
-    
-    if ("EzmaxcaseRequestPatch".equalsIgnoreCase(className)) {
-      return new TypeToken<List<EzmaxcaseRequestPatch>>(){}.getType();
-    }
-    
     if ("EzmaxinvoicingAutocompleteElementResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<EzmaxinvoicingAutocompleteElementResponse>>(){}.getType();
     }
@@ -8597,18 +8585,6 @@ public class JsonUtil {
     
     if ("EzdoctemplatetypeGetAutocompleteV2ResponseMPayload".equalsIgnoreCase(className)) {
       return new TypeToken<EzdoctemplatetypeGetAutocompleteV2ResponseMPayload>(){}.getType();
-    }
-    
-    if ("EzmaxcasePatchObjectV1Request".equalsIgnoreCase(className)) {
-      return new TypeToken<EzmaxcasePatchObjectV1Request>(){}.getType();
-    }
-    
-    if ("EzmaxcasePatchObjectV1Response".equalsIgnoreCase(className)) {
-      return new TypeToken<EzmaxcasePatchObjectV1Response>(){}.getType();
-    }
-    
-    if ("EzmaxcaseRequestPatch".equalsIgnoreCase(className)) {
-      return new TypeToken<EzmaxcaseRequestPatch>(){}.getType();
     }
     
     if ("EzmaxinvoicingAutocompleteElementResponse".equalsIgnoreCase(className)) {
