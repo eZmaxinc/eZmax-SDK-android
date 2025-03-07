@@ -30,6 +30,8 @@ public class CommonReportsubsectionpart {
   private EReportsubsectionpartTypeEnum eReportsubsectionpartType = null;
   @SerializedName("a_objReportrow")
   private List<CommonReportrow> aObjReportrow = null;
+  @SerializedName("a_sVariableobjectProperty")
+  private List<String> aSVariableobjectProperty = null;
 
   /**
    * The type of the Reportsubsectionpart
@@ -52,6 +54,16 @@ public class CommonReportsubsectionpart {
     this.aObjReportrow = aObjReportrow;
   }
 
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public List<String> getASVariableobjectProperty() {
+    return aSVariableobjectProperty;
+  }
+  public void setASVariableobjectProperty(List<String> aSVariableobjectProperty) {
+    this.aSVariableobjectProperty = aSVariableobjectProperty;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -63,7 +75,8 @@ public class CommonReportsubsectionpart {
     }
     CommonReportsubsectionpart commonReportsubsectionpart = (CommonReportsubsectionpart) o;
     return (this.eReportsubsectionpartType == null ? commonReportsubsectionpart.eReportsubsectionpartType == null : this.eReportsubsectionpartType.equals(commonReportsubsectionpart.eReportsubsectionpartType)) &&
-        (this.aObjReportrow == null ? commonReportsubsectionpart.aObjReportrow == null : this.aObjReportrow.equals(commonReportsubsectionpart.aObjReportrow));
+        (this.aObjReportrow == null ? commonReportsubsectionpart.aObjReportrow == null : this.aObjReportrow.equals(commonReportsubsectionpart.aObjReportrow)) &&
+        (this.aSVariableobjectProperty == null ? commonReportsubsectionpart.aSVariableobjectProperty == null : this.aSVariableobjectProperty.equals(commonReportsubsectionpart.aSVariableobjectProperty));
   }
 
   @Override
@@ -71,6 +84,7 @@ public class CommonReportsubsectionpart {
     int result = 17;
     result = 31 * result + (this.eReportsubsectionpartType == null ? 0: this.eReportsubsectionpartType.hashCode());
     result = 31 * result + (this.aObjReportrow == null ? 0: this.aObjReportrow.hashCode());
+    result = 31 * result + (this.aSVariableobjectProperty == null ? 0: this.aSVariableobjectProperty.hashCode());
     return result;
   }
 
@@ -81,6 +95,7 @@ public class CommonReportsubsectionpart {
     
     sb.append("  eReportsubsectionpartType: ").append(eReportsubsectionpartType).append("\n");
     sb.append("  aObjReportrow: ").append(aObjReportrow).append("\n");
+    sb.append("  aSVariableobjectProperty: ").append(aSVariableobjectProperty).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

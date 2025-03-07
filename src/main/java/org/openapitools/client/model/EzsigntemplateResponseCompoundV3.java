@@ -14,6 +14,7 @@ package org.openapitools.client.model;
 
 import java.util.*;
 import org.openapitools.client.model.CommonAudit;
+import org.openapitools.client.model.CustomEzsignfoldertypeTemplateResponse;
 import org.openapitools.client.model.EzsigntemplatedocumentResponse;
 import org.openapitools.client.model.EzsigntemplatesignerResponseCompound;
 import org.openapitools.client.model.FieldEEzsigntemplateRecognition;
@@ -33,6 +34,8 @@ public class EzsigntemplateResponseCompoundV3 {
   private Integer fkiEzsigntemplatedocumentID = null;
   @SerializedName("fkiEzsignfoldertypeID")
   private Integer fkiEzsignfoldertypeID = null;
+  @SerializedName("objEzsignfoldertype")
+  private CustomEzsignfoldertypeTemplateResponse objEzsignfoldertype = null;
   @SerializedName("fkiLanguageID")
   private Integer fkiLanguageID = null;
   @SerializedName("fkiEzdoctemplatedocumentID")
@@ -101,6 +104,16 @@ public class EzsigntemplateResponseCompoundV3 {
   }
   public void setFkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
     this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public CustomEzsignfoldertypeTemplateResponse getObjEzsignfoldertype() {
+    return objEzsignfoldertype;
+  }
+  public void setObjEzsignfoldertype(CustomEzsignfoldertypeTemplateResponse objEzsignfoldertype) {
+    this.objEzsignfoldertype = objEzsignfoldertype;
   }
 
   /**
@@ -291,6 +304,7 @@ public class EzsigntemplateResponseCompoundV3 {
     return (this.pkiEzsigntemplateID == null ? ezsigntemplateResponseCompoundV3.pkiEzsigntemplateID == null : this.pkiEzsigntemplateID.equals(ezsigntemplateResponseCompoundV3.pkiEzsigntemplateID)) &&
         (this.fkiEzsigntemplatedocumentID == null ? ezsigntemplateResponseCompoundV3.fkiEzsigntemplatedocumentID == null : this.fkiEzsigntemplatedocumentID.equals(ezsigntemplateResponseCompoundV3.fkiEzsigntemplatedocumentID)) &&
         (this.fkiEzsignfoldertypeID == null ? ezsigntemplateResponseCompoundV3.fkiEzsignfoldertypeID == null : this.fkiEzsignfoldertypeID.equals(ezsigntemplateResponseCompoundV3.fkiEzsignfoldertypeID)) &&
+        (this.objEzsignfoldertype == null ? ezsigntemplateResponseCompoundV3.objEzsignfoldertype == null : this.objEzsignfoldertype.equals(ezsigntemplateResponseCompoundV3.objEzsignfoldertype)) &&
         (this.fkiLanguageID == null ? ezsigntemplateResponseCompoundV3.fkiLanguageID == null : this.fkiLanguageID.equals(ezsigntemplateResponseCompoundV3.fkiLanguageID)) &&
         (this.fkiEzdoctemplatedocumentID == null ? ezsigntemplateResponseCompoundV3.fkiEzdoctemplatedocumentID == null : this.fkiEzdoctemplatedocumentID.equals(ezsigntemplateResponseCompoundV3.fkiEzdoctemplatedocumentID)) &&
         (this.sEzdoctemplatedocumentNameX == null ? ezsigntemplateResponseCompoundV3.sEzdoctemplatedocumentNameX == null : this.sEzdoctemplatedocumentNameX.equals(ezsigntemplateResponseCompoundV3.sEzdoctemplatedocumentNameX)) &&
@@ -315,6 +329,7 @@ public class EzsigntemplateResponseCompoundV3 {
     result = 31 * result + (this.pkiEzsigntemplateID == null ? 0: this.pkiEzsigntemplateID.hashCode());
     result = 31 * result + (this.fkiEzsigntemplatedocumentID == null ? 0: this.fkiEzsigntemplatedocumentID.hashCode());
     result = 31 * result + (this.fkiEzsignfoldertypeID == null ? 0: this.fkiEzsignfoldertypeID.hashCode());
+    result = 31 * result + (this.objEzsignfoldertype == null ? 0: this.objEzsignfoldertype.hashCode());
     result = 31 * result + (this.fkiLanguageID == null ? 0: this.fkiLanguageID.hashCode());
     result = 31 * result + (this.fkiEzdoctemplatedocumentID == null ? 0: this.fkiEzdoctemplatedocumentID.hashCode());
     result = 31 * result + (this.sEzdoctemplatedocumentNameX == null ? 0: this.sEzdoctemplatedocumentNameX.hashCode());
@@ -342,6 +357,7 @@ public class EzsigntemplateResponseCompoundV3 {
     sb.append("  pkiEzsigntemplateID: ").append(pkiEzsigntemplateID).append("\n");
     sb.append("  fkiEzsigntemplatedocumentID: ").append(fkiEzsigntemplatedocumentID).append("\n");
     sb.append("  fkiEzsignfoldertypeID: ").append(fkiEzsignfoldertypeID).append("\n");
+    sb.append("  objEzsignfoldertype: ").append(objEzsignfoldertype).append("\n");
     sb.append("  fkiLanguageID: ").append(fkiLanguageID).append("\n");
     sb.append("  fkiEzdoctemplatedocumentID: ").append(fkiEzdoctemplatedocumentID).append("\n");
     sb.append("  sEzdoctemplatedocumentNameX: ").append(sEzdoctemplatedocumentNameX).append("\n");

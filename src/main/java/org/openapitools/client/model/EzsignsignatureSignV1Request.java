@@ -14,6 +14,7 @@ package org.openapitools.client.model;
 
 import java.util.*;
 import org.openapitools.client.model.CommonFile;
+import org.openapitools.client.model.CustomCreditcardRequest;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -40,6 +41,8 @@ public class EzsignsignatureSignV1Request {
   private String sSvg = null;
   @SerializedName("a_objFile")
   private List<CommonFile> aObjFile = null;
+  @SerializedName("objCreditcard")
+  private CustomCreditcardRequest objCreditcard = null;
   @SerializedName("bIsAutomatic")
   private Boolean bIsAutomatic = null;
 
@@ -123,6 +126,16 @@ public class EzsignsignatureSignV1Request {
   }
 
   /**
+   **/
+  @ApiModelProperty(value = "")
+  public CustomCreditcardRequest getObjCreditcard() {
+    return objCreditcard;
+  }
+  public void setObjCreditcard(CustomCreditcardRequest objCreditcard) {
+    this.objCreditcard = objCreditcard;
+  }
+
+  /**
    * Indicates if the Ezsignsignature was part of an automatic process or not.  This can only be true if eEzsignsignatureType is **Acknowledgement**, **City**, **Signature**, **Initials** or **Stamp**. 
    **/
   @ApiModelProperty(required = true, value = "Indicates if the Ezsignsignature was part of an automatic process or not.  This can only be true if eEzsignsignatureType is **Acknowledgement**, **City**, **Signature**, **Initials** or **Stamp**. ")
@@ -150,6 +163,7 @@ public class EzsignsignatureSignV1Request {
         (this.sAttachmentsRefusalReason == null ? ezsignsignatureSignV1Request.sAttachmentsRefusalReason == null : this.sAttachmentsRefusalReason.equals(ezsignsignatureSignV1Request.sAttachmentsRefusalReason)) &&
         (this.sSvg == null ? ezsignsignatureSignV1Request.sSvg == null : this.sSvg.equals(ezsignsignatureSignV1Request.sSvg)) &&
         (this.aObjFile == null ? ezsignsignatureSignV1Request.aObjFile == null : this.aObjFile.equals(ezsignsignatureSignV1Request.aObjFile)) &&
+        (this.objCreditcard == null ? ezsignsignatureSignV1Request.objCreditcard == null : this.objCreditcard.equals(ezsignsignatureSignV1Request.objCreditcard)) &&
         (this.bIsAutomatic == null ? ezsignsignatureSignV1Request.bIsAutomatic == null : this.bIsAutomatic.equals(ezsignsignatureSignV1Request.bIsAutomatic));
   }
 
@@ -163,6 +177,7 @@ public class EzsignsignatureSignV1Request {
     result = 31 * result + (this.sAttachmentsRefusalReason == null ? 0: this.sAttachmentsRefusalReason.hashCode());
     result = 31 * result + (this.sSvg == null ? 0: this.sSvg.hashCode());
     result = 31 * result + (this.aObjFile == null ? 0: this.aObjFile.hashCode());
+    result = 31 * result + (this.objCreditcard == null ? 0: this.objCreditcard.hashCode());
     result = 31 * result + (this.bIsAutomatic == null ? 0: this.bIsAutomatic.hashCode());
     return result;
   }
@@ -179,6 +194,7 @@ public class EzsignsignatureSignV1Request {
     sb.append("  sAttachmentsRefusalReason: ").append(sAttachmentsRefusalReason).append("\n");
     sb.append("  sSvg: ").append(sSvg).append("\n");
     sb.append("  aObjFile: ").append(aObjFile).append("\n");
+    sb.append("  objCreditcard: ").append(objCreditcard).append("\n");
     sb.append("  bIsAutomatic: ").append(bIsAutomatic).append("\n");
     sb.append("}\n");
     return sb.toString();

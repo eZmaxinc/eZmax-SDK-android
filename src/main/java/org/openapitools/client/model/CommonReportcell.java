@@ -25,6 +25,10 @@ public class CommonReportcell {
   private Integer iReportcellColumnspan = null;
   @SerializedName("iReportcellRowspan")
   private Integer iReportcellRowspan = null;
+  @SerializedName("sReportcellContent")
+  private String sReportcellContent = null;
+  @SerializedName("iReportcellColumn")
+  private Integer iReportcellColumn = null;
 
   /**
    * The number of Reportcolumns the Reportcell spans
@@ -48,6 +52,28 @@ public class CommonReportcell {
     this.iReportcellRowspan = iReportcellRowspan;
   }
 
+  /**
+   * The content of this Reportcell
+   **/
+  @ApiModelProperty(required = true, value = "The content of this Reportcell")
+  public String getSReportcellContent() {
+    return sReportcellContent;
+  }
+  public void setSReportcellContent(String sReportcellContent) {
+    this.sReportcellContent = sReportcellContent;
+  }
+
+  /**
+   * Position of the column where it is placed
+   **/
+  @ApiModelProperty(required = true, value = "Position of the column where it is placed")
+  public Integer getIReportcellColumn() {
+    return iReportcellColumn;
+  }
+  public void setIReportcellColumn(Integer iReportcellColumn) {
+    this.iReportcellColumn = iReportcellColumn;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -59,7 +85,9 @@ public class CommonReportcell {
     }
     CommonReportcell commonReportcell = (CommonReportcell) o;
     return (this.iReportcellColumnspan == null ? commonReportcell.iReportcellColumnspan == null : this.iReportcellColumnspan.equals(commonReportcell.iReportcellColumnspan)) &&
-        (this.iReportcellRowspan == null ? commonReportcell.iReportcellRowspan == null : this.iReportcellRowspan.equals(commonReportcell.iReportcellRowspan));
+        (this.iReportcellRowspan == null ? commonReportcell.iReportcellRowspan == null : this.iReportcellRowspan.equals(commonReportcell.iReportcellRowspan)) &&
+        (this.sReportcellContent == null ? commonReportcell.sReportcellContent == null : this.sReportcellContent.equals(commonReportcell.sReportcellContent)) &&
+        (this.iReportcellColumn == null ? commonReportcell.iReportcellColumn == null : this.iReportcellColumn.equals(commonReportcell.iReportcellColumn));
   }
 
   @Override
@@ -67,6 +95,8 @@ public class CommonReportcell {
     int result = 17;
     result = 31 * result + (this.iReportcellColumnspan == null ? 0: this.iReportcellColumnspan.hashCode());
     result = 31 * result + (this.iReportcellRowspan == null ? 0: this.iReportcellRowspan.hashCode());
+    result = 31 * result + (this.sReportcellContent == null ? 0: this.sReportcellContent.hashCode());
+    result = 31 * result + (this.iReportcellColumn == null ? 0: this.iReportcellColumn.hashCode());
     return result;
   }
 
@@ -77,6 +107,8 @@ public class CommonReportcell {
     
     sb.append("  iReportcellColumnspan: ").append(iReportcellColumnspan).append("\n");
     sb.append("  iReportcellRowspan: ").append(iReportcellRowspan).append("\n");
+    sb.append("  sReportcellContent: ").append(sReportcellContent).append("\n");
+    sb.append("  iReportcellColumn: ").append(iReportcellColumn).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

@@ -25,6 +25,10 @@ public class CommonReport {
   
   @SerializedName("a_objReportsection")
   private List<CommonReportsection> aObjReportsection = null;
+  @SerializedName("bReportPaginate")
+  private Boolean bReportPaginate = null;
+  @SerializedName("sReportTitle")
+  private String sReportTitle = null;
 
   /**
    **/
@@ -34,6 +38,28 @@ public class CommonReport {
   }
   public void setAObjReportsection(List<CommonReportsection> aObjReportsection) {
     this.aObjReportsection = aObjReportsection;
+  }
+
+  /**
+   * Whether we display pagination in the report
+   **/
+  @ApiModelProperty(value = "Whether we display pagination in the report")
+  public Boolean getBReportPaginate() {
+    return bReportPaginate;
+  }
+  public void setBReportPaginate(Boolean bReportPaginate) {
+    this.bReportPaginate = bReportPaginate;
+  }
+
+  /**
+   * The title of this Report
+   **/
+  @ApiModelProperty(value = "The title of this Report")
+  public String getSReportTitle() {
+    return sReportTitle;
+  }
+  public void setSReportTitle(String sReportTitle) {
+    this.sReportTitle = sReportTitle;
   }
 
 
@@ -46,13 +72,17 @@ public class CommonReport {
       return false;
     }
     CommonReport commonReport = (CommonReport) o;
-    return (this.aObjReportsection == null ? commonReport.aObjReportsection == null : this.aObjReportsection.equals(commonReport.aObjReportsection));
+    return (this.aObjReportsection == null ? commonReport.aObjReportsection == null : this.aObjReportsection.equals(commonReport.aObjReportsection)) &&
+        (this.bReportPaginate == null ? commonReport.bReportPaginate == null : this.bReportPaginate.equals(commonReport.bReportPaginate)) &&
+        (this.sReportTitle == null ? commonReport.sReportTitle == null : this.sReportTitle.equals(commonReport.sReportTitle));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
     result = 31 * result + (this.aObjReportsection == null ? 0: this.aObjReportsection.hashCode());
+    result = 31 * result + (this.bReportPaginate == null ? 0: this.bReportPaginate.hashCode());
+    result = 31 * result + (this.sReportTitle == null ? 0: this.sReportTitle.hashCode());
     return result;
   }
 
@@ -62,6 +92,8 @@ public class CommonReport {
     sb.append("class CommonReport {\n");
     
     sb.append("  aObjReportsection: ").append(aObjReportsection).append("\n");
+    sb.append("  bReportPaginate: ").append(bReportPaginate).append("\n");
+    sb.append("  sReportTitle: ").append(sReportTitle).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

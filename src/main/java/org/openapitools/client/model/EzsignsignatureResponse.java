@@ -40,6 +40,8 @@ public class EzsignsignatureResponse {
   private Integer fkiEzsignsigningreasonID = null;
   @SerializedName("fkiFontID")
   private Integer fkiFontID = null;
+  @SerializedName("sCurrencyDescriptionX")
+  private String sCurrencyDescriptionX = null;
   @SerializedName("sEzsignsigningreasonDescriptionX")
   private String sEzsignsigningreasonDescriptionX = null;
   @SerializedName("iEzsignpagePagenumber")
@@ -164,6 +166,17 @@ public class EzsignsignatureResponse {
   }
   public void setFkiFontID(Integer fkiFontID) {
     this.fkiFontID = fkiFontID;
+  }
+
+  /**
+   * The description of the Currency in the language of the requester
+   **/
+  @ApiModelProperty(value = "The description of the Currency in the language of the requester")
+  public String getSCurrencyDescriptionX() {
+    return sCurrencyDescriptionX;
+  }
+  public void setSCurrencyDescriptionX(String sCurrencyDescriptionX) {
+    this.sCurrencyDescriptionX = sCurrencyDescriptionX;
   }
 
   /**
@@ -531,6 +544,7 @@ public class EzsignsignatureResponse {
         (this.fkiEzsignfoldersignerassociationID == null ? ezsignsignatureResponse.fkiEzsignfoldersignerassociationID == null : this.fkiEzsignfoldersignerassociationID.equals(ezsignsignatureResponse.fkiEzsignfoldersignerassociationID)) &&
         (this.fkiEzsignsigningreasonID == null ? ezsignsignatureResponse.fkiEzsignsigningreasonID == null : this.fkiEzsignsigningreasonID.equals(ezsignsignatureResponse.fkiEzsignsigningreasonID)) &&
         (this.fkiFontID == null ? ezsignsignatureResponse.fkiFontID == null : this.fkiFontID.equals(ezsignsignatureResponse.fkiFontID)) &&
+        (this.sCurrencyDescriptionX == null ? ezsignsignatureResponse.sCurrencyDescriptionX == null : this.sCurrencyDescriptionX.equals(ezsignsignatureResponse.sCurrencyDescriptionX)) &&
         (this.sEzsignsigningreasonDescriptionX == null ? ezsignsignatureResponse.sEzsignsigningreasonDescriptionX == null : this.sEzsignsigningreasonDescriptionX.equals(ezsignsignatureResponse.sEzsignsigningreasonDescriptionX)) &&
         (this.iEzsignpagePagenumber == null ? ezsignsignatureResponse.iEzsignpagePagenumber == null : this.iEzsignpagePagenumber.equals(ezsignsignatureResponse.iEzsignpagePagenumber)) &&
         (this.iEzsignsignatureX == null ? ezsignsignatureResponse.iEzsignsignatureX == null : this.iEzsignsignatureX.equals(ezsignsignatureResponse.iEzsignsignatureX)) &&
@@ -573,6 +587,7 @@ public class EzsignsignatureResponse {
     result = 31 * result + (this.fkiEzsignfoldersignerassociationID == null ? 0: this.fkiEzsignfoldersignerassociationID.hashCode());
     result = 31 * result + (this.fkiEzsignsigningreasonID == null ? 0: this.fkiEzsignsigningreasonID.hashCode());
     result = 31 * result + (this.fkiFontID == null ? 0: this.fkiFontID.hashCode());
+    result = 31 * result + (this.sCurrencyDescriptionX == null ? 0: this.sCurrencyDescriptionX.hashCode());
     result = 31 * result + (this.sEzsignsigningreasonDescriptionX == null ? 0: this.sEzsignsigningreasonDescriptionX.hashCode());
     result = 31 * result + (this.iEzsignpagePagenumber == null ? 0: this.iEzsignpagePagenumber.hashCode());
     result = 31 * result + (this.iEzsignsignatureX == null ? 0: this.iEzsignsignatureX.hashCode());
@@ -618,6 +633,7 @@ public class EzsignsignatureResponse {
     sb.append("  fkiEzsignfoldersignerassociationID: ").append(fkiEzsignfoldersignerassociationID).append("\n");
     sb.append("  fkiEzsignsigningreasonID: ").append(fkiEzsignsigningreasonID).append("\n");
     sb.append("  fkiFontID: ").append(fkiFontID).append("\n");
+    sb.append("  sCurrencyDescriptionX: ").append(sCurrencyDescriptionX).append("\n");
     sb.append("  sEzsignsigningreasonDescriptionX: ").append(sEzsignsigningreasonDescriptionX).append("\n");
     sb.append("  iEzsignpagePagenumber: ").append(iEzsignpagePagenumber).append("\n");
     sb.append("  iEzsignsignatureX: ").append(iEzsignsignatureX).append("\n");

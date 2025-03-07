@@ -35,6 +35,8 @@ public class CommonReportsection {
   private Integer iReportsectionColumncount = null;
   @SerializedName("iReportsectionWidth")
   private Integer iReportsectionWidth = null;
+  @SerializedName("sReportsectionTitle")
+  private String sReportsectionTitle = null;
 
   /**
    **/
@@ -88,6 +90,17 @@ public class CommonReportsection {
     this.iReportsectionWidth = iReportsectionWidth;
   }
 
+  /**
+   * The title of this Reportsection
+   **/
+  @ApiModelProperty(value = "The title of this Reportsection")
+  public String getSReportsectionTitle() {
+    return sReportsectionTitle;
+  }
+  public void setSReportsectionTitle(String sReportsectionTitle) {
+    this.sReportsectionTitle = sReportsectionTitle;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -102,7 +115,8 @@ public class CommonReportsection {
         (this.aObjReportcolumn == null ? commonReportsection.aObjReportcolumn == null : this.aObjReportcolumn.equals(commonReportsection.aObjReportcolumn)) &&
         (this.eReportsectionHorizontalalignment == null ? commonReportsection.eReportsectionHorizontalalignment == null : this.eReportsectionHorizontalalignment.equals(commonReportsection.eReportsectionHorizontalalignment)) &&
         (this.iReportsectionColumncount == null ? commonReportsection.iReportsectionColumncount == null : this.iReportsectionColumncount.equals(commonReportsection.iReportsectionColumncount)) &&
-        (this.iReportsectionWidth == null ? commonReportsection.iReportsectionWidth == null : this.iReportsectionWidth.equals(commonReportsection.iReportsectionWidth));
+        (this.iReportsectionWidth == null ? commonReportsection.iReportsectionWidth == null : this.iReportsectionWidth.equals(commonReportsection.iReportsectionWidth)) &&
+        (this.sReportsectionTitle == null ? commonReportsection.sReportsectionTitle == null : this.sReportsectionTitle.equals(commonReportsection.sReportsectionTitle));
   }
 
   @Override
@@ -113,6 +127,7 @@ public class CommonReportsection {
     result = 31 * result + (this.eReportsectionHorizontalalignment == null ? 0: this.eReportsectionHorizontalalignment.hashCode());
     result = 31 * result + (this.iReportsectionColumncount == null ? 0: this.iReportsectionColumncount.hashCode());
     result = 31 * result + (this.iReportsectionWidth == null ? 0: this.iReportsectionWidth.hashCode());
+    result = 31 * result + (this.sReportsectionTitle == null ? 0: this.sReportsectionTitle.hashCode());
     return result;
   }
 
@@ -126,6 +141,7 @@ public class CommonReportsection {
     sb.append("  eReportsectionHorizontalalignment: ").append(eReportsectionHorizontalalignment).append("\n");
     sb.append("  iReportsectionColumncount: ").append(iReportsectionColumncount).append("\n");
     sb.append("  iReportsectionWidth: ").append(iReportsectionWidth).append("\n");
+    sb.append("  sReportsectionTitle: ").append(sReportsectionTitle).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

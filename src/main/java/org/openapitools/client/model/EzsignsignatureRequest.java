@@ -32,6 +32,8 @@ public class EzsignsignatureRequest {
   private Integer pkiEzsignsignatureID = null;
   @SerializedName("fkiEzsignfoldersignerassociationID")
   private Integer fkiEzsignfoldersignerassociationID = null;
+  @SerializedName("fkiPaymentgatewayID")
+  private Integer fkiPaymentgatewayID = null;
   @SerializedName("iEzsignpagePagenumber")
   private Integer iEzsignpagePagenumber = null;
   @SerializedName("iEzsignsignatureX")
@@ -105,6 +107,19 @@ public class EzsignsignatureRequest {
   }
   public void setFkiEzsignfoldersignerassociationID(Integer fkiEzsignfoldersignerassociationID) {
     this.fkiEzsignfoldersignerassociationID = fkiEzsignfoldersignerassociationID;
+  }
+
+  /**
+   * The unique ID of the Paymentgateway
+   * minimum: 0
+   * maximum: 255
+   **/
+  @ApiModelProperty(value = "The unique ID of the Paymentgateway")
+  public Integer getFkiPaymentgatewayID() {
+    return fkiPaymentgatewayID;
+  }
+  public void setFkiPaymentgatewayID(Integer fkiPaymentgatewayID) {
+    this.fkiPaymentgatewayID = fkiPaymentgatewayID;
   }
 
   /**
@@ -396,6 +411,7 @@ public class EzsignsignatureRequest {
     EzsignsignatureRequest ezsignsignatureRequest = (EzsignsignatureRequest) o;
     return (this.pkiEzsignsignatureID == null ? ezsignsignatureRequest.pkiEzsignsignatureID == null : this.pkiEzsignsignatureID.equals(ezsignsignatureRequest.pkiEzsignsignatureID)) &&
         (this.fkiEzsignfoldersignerassociationID == null ? ezsignsignatureRequest.fkiEzsignfoldersignerassociationID == null : this.fkiEzsignfoldersignerassociationID.equals(ezsignsignatureRequest.fkiEzsignfoldersignerassociationID)) &&
+        (this.fkiPaymentgatewayID == null ? ezsignsignatureRequest.fkiPaymentgatewayID == null : this.fkiPaymentgatewayID.equals(ezsignsignatureRequest.fkiPaymentgatewayID)) &&
         (this.iEzsignpagePagenumber == null ? ezsignsignatureRequest.iEzsignpagePagenumber == null : this.iEzsignpagePagenumber.equals(ezsignsignatureRequest.iEzsignpagePagenumber)) &&
         (this.iEzsignsignatureX == null ? ezsignsignatureRequest.iEzsignsignatureX == null : this.iEzsignsignatureX.equals(ezsignsignatureRequest.iEzsignsignatureX)) &&
         (this.iEzsignsignatureY == null ? ezsignsignatureRequest.iEzsignsignatureY == null : this.iEzsignsignatureY.equals(ezsignsignatureRequest.iEzsignsignatureY)) &&
@@ -428,6 +444,7 @@ public class EzsignsignatureRequest {
     int result = 17;
     result = 31 * result + (this.pkiEzsignsignatureID == null ? 0: this.pkiEzsignsignatureID.hashCode());
     result = 31 * result + (this.fkiEzsignfoldersignerassociationID == null ? 0: this.fkiEzsignfoldersignerassociationID.hashCode());
+    result = 31 * result + (this.fkiPaymentgatewayID == null ? 0: this.fkiPaymentgatewayID.hashCode());
     result = 31 * result + (this.iEzsignpagePagenumber == null ? 0: this.iEzsignpagePagenumber.hashCode());
     result = 31 * result + (this.iEzsignsignatureX == null ? 0: this.iEzsignsignatureX.hashCode());
     result = 31 * result + (this.iEzsignsignatureY == null ? 0: this.iEzsignsignatureY.hashCode());
@@ -463,6 +480,7 @@ public class EzsignsignatureRequest {
     
     sb.append("  pkiEzsignsignatureID: ").append(pkiEzsignsignatureID).append("\n");
     sb.append("  fkiEzsignfoldersignerassociationID: ").append(fkiEzsignfoldersignerassociationID).append("\n");
+    sb.append("  fkiPaymentgatewayID: ").append(fkiPaymentgatewayID).append("\n");
     sb.append("  iEzsignpagePagenumber: ").append(iEzsignpagePagenumber).append("\n");
     sb.append("  iEzsignsignatureX: ").append(iEzsignsignatureX).append("\n");
     sb.append("  iEzsignsignatureY: ").append(iEzsignsignatureY).append("\n");

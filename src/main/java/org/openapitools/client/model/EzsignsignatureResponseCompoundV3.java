@@ -18,6 +18,7 @@ import org.openapitools.client.model.CustomCreditcardtransactionResponse;
 import org.openapitools.client.model.EnumTextvalidation;
 import org.openapitools.client.model.EzsignelementdependencyResponseCompound;
 import org.openapitools.client.model.EzsignsignaturecustomdateResponseCompoundV2;
+import org.openapitools.client.model.EzsignsignaturepaymentdetailResponseCompound;
 import org.openapitools.client.model.FieldEEzsignsignatureAttachmentnamesource;
 import org.openapitools.client.model.FieldEEzsignsignatureConsultationtrigger;
 import org.openapitools.client.model.FieldEEzsignsignatureDependencyrequirement;
@@ -44,6 +45,8 @@ public class EzsignsignatureResponseCompoundV3 {
   private Integer fkiEzsignsigningreasonID = null;
   @SerializedName("fkiFontID")
   private Integer fkiFontID = null;
+  @SerializedName("sCurrencyDescriptionX")
+  private String sCurrencyDescriptionX = null;
   @SerializedName("sEzsignsigningreasonDescriptionX")
   private String sEzsignsigningreasonDescriptionX = null;
   @SerializedName("iEzsignpagePagenumber")
@@ -118,6 +121,8 @@ public class EzsignsignatureResponseCompoundV3 {
   private CustomCreditcardtransactionResponse objCreditcardtransaction = null;
   @SerializedName("a_objEzsignelementdependency")
   private List<EzsignelementdependencyResponseCompound> aObjEzsignelementdependency = null;
+  @SerializedName("a_objEzsignsignaturepaymentdetail")
+  private List<EzsignsignaturepaymentdetailResponseCompound> aObjEzsignsignaturepaymentdetail = null;
 
   /**
    * The unique ID of the Ezsignsignature
@@ -178,6 +183,17 @@ public class EzsignsignatureResponseCompoundV3 {
   }
   public void setFkiFontID(Integer fkiFontID) {
     this.fkiFontID = fkiFontID;
+  }
+
+  /**
+   * The description of the Currency in the language of the requester
+   **/
+  @ApiModelProperty(value = "The description of the Currency in the language of the requester")
+  public String getSCurrencyDescriptionX() {
+    return sCurrencyDescriptionX;
+  }
+  public void setSCurrencyDescriptionX(String sCurrencyDescriptionX) {
+    this.sCurrencyDescriptionX = sCurrencyDescriptionX;
   }
 
   /**
@@ -583,6 +599,16 @@ public class EzsignsignatureResponseCompoundV3 {
     this.aObjEzsignelementdependency = aObjEzsignelementdependency;
   }
 
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public List<EzsignsignaturepaymentdetailResponseCompound> getAObjEzsignsignaturepaymentdetail() {
+    return aObjEzsignsignaturepaymentdetail;
+  }
+  public void setAObjEzsignsignaturepaymentdetail(List<EzsignsignaturepaymentdetailResponseCompound> aObjEzsignsignaturepaymentdetail) {
+    this.aObjEzsignsignaturepaymentdetail = aObjEzsignsignaturepaymentdetail;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -598,6 +624,7 @@ public class EzsignsignatureResponseCompoundV3 {
         (this.fkiEzsignfoldersignerassociationID == null ? ezsignsignatureResponseCompoundV3.fkiEzsignfoldersignerassociationID == null : this.fkiEzsignfoldersignerassociationID.equals(ezsignsignatureResponseCompoundV3.fkiEzsignfoldersignerassociationID)) &&
         (this.fkiEzsignsigningreasonID == null ? ezsignsignatureResponseCompoundV3.fkiEzsignsigningreasonID == null : this.fkiEzsignsigningreasonID.equals(ezsignsignatureResponseCompoundV3.fkiEzsignsigningreasonID)) &&
         (this.fkiFontID == null ? ezsignsignatureResponseCompoundV3.fkiFontID == null : this.fkiFontID.equals(ezsignsignatureResponseCompoundV3.fkiFontID)) &&
+        (this.sCurrencyDescriptionX == null ? ezsignsignatureResponseCompoundV3.sCurrencyDescriptionX == null : this.sCurrencyDescriptionX.equals(ezsignsignatureResponseCompoundV3.sCurrencyDescriptionX)) &&
         (this.sEzsignsigningreasonDescriptionX == null ? ezsignsignatureResponseCompoundV3.sEzsignsigningreasonDescriptionX == null : this.sEzsignsigningreasonDescriptionX.equals(ezsignsignatureResponseCompoundV3.sEzsignsigningreasonDescriptionX)) &&
         (this.iEzsignpagePagenumber == null ? ezsignsignatureResponseCompoundV3.iEzsignpagePagenumber == null : this.iEzsignpagePagenumber.equals(ezsignsignatureResponseCompoundV3.iEzsignpagePagenumber)) &&
         (this.iEzsignsignatureX == null ? ezsignsignatureResponseCompoundV3.iEzsignsignatureX == null : this.iEzsignsignatureX.equals(ezsignsignatureResponseCompoundV3.iEzsignsignatureX)) &&
@@ -634,7 +661,8 @@ public class EzsignsignatureResponseCompoundV3 {
         (this.bEzsignsignatureCustomdate == null ? ezsignsignatureResponseCompoundV3.bEzsignsignatureCustomdate == null : this.bEzsignsignatureCustomdate.equals(ezsignsignatureResponseCompoundV3.bEzsignsignatureCustomdate)) &&
         (this.aObjEzsignsignaturecustomdate == null ? ezsignsignatureResponseCompoundV3.aObjEzsignsignaturecustomdate == null : this.aObjEzsignsignaturecustomdate.equals(ezsignsignatureResponseCompoundV3.aObjEzsignsignaturecustomdate)) &&
         (this.objCreditcardtransaction == null ? ezsignsignatureResponseCompoundV3.objCreditcardtransaction == null : this.objCreditcardtransaction.equals(ezsignsignatureResponseCompoundV3.objCreditcardtransaction)) &&
-        (this.aObjEzsignelementdependency == null ? ezsignsignatureResponseCompoundV3.aObjEzsignelementdependency == null : this.aObjEzsignelementdependency.equals(ezsignsignatureResponseCompoundV3.aObjEzsignelementdependency));
+        (this.aObjEzsignelementdependency == null ? ezsignsignatureResponseCompoundV3.aObjEzsignelementdependency == null : this.aObjEzsignelementdependency.equals(ezsignsignatureResponseCompoundV3.aObjEzsignelementdependency)) &&
+        (this.aObjEzsignsignaturepaymentdetail == null ? ezsignsignatureResponseCompoundV3.aObjEzsignsignaturepaymentdetail == null : this.aObjEzsignsignaturepaymentdetail.equals(ezsignsignatureResponseCompoundV3.aObjEzsignsignaturepaymentdetail));
   }
 
   @Override
@@ -645,6 +673,7 @@ public class EzsignsignatureResponseCompoundV3 {
     result = 31 * result + (this.fkiEzsignfoldersignerassociationID == null ? 0: this.fkiEzsignfoldersignerassociationID.hashCode());
     result = 31 * result + (this.fkiEzsignsigningreasonID == null ? 0: this.fkiEzsignsigningreasonID.hashCode());
     result = 31 * result + (this.fkiFontID == null ? 0: this.fkiFontID.hashCode());
+    result = 31 * result + (this.sCurrencyDescriptionX == null ? 0: this.sCurrencyDescriptionX.hashCode());
     result = 31 * result + (this.sEzsignsigningreasonDescriptionX == null ? 0: this.sEzsignsigningreasonDescriptionX.hashCode());
     result = 31 * result + (this.iEzsignpagePagenumber == null ? 0: this.iEzsignpagePagenumber.hashCode());
     result = 31 * result + (this.iEzsignsignatureX == null ? 0: this.iEzsignsignatureX.hashCode());
@@ -682,6 +711,7 @@ public class EzsignsignatureResponseCompoundV3 {
     result = 31 * result + (this.aObjEzsignsignaturecustomdate == null ? 0: this.aObjEzsignsignaturecustomdate.hashCode());
     result = 31 * result + (this.objCreditcardtransaction == null ? 0: this.objCreditcardtransaction.hashCode());
     result = 31 * result + (this.aObjEzsignelementdependency == null ? 0: this.aObjEzsignelementdependency.hashCode());
+    result = 31 * result + (this.aObjEzsignsignaturepaymentdetail == null ? 0: this.aObjEzsignsignaturepaymentdetail.hashCode());
     return result;
   }
 
@@ -695,6 +725,7 @@ public class EzsignsignatureResponseCompoundV3 {
     sb.append("  fkiEzsignfoldersignerassociationID: ").append(fkiEzsignfoldersignerassociationID).append("\n");
     sb.append("  fkiEzsignsigningreasonID: ").append(fkiEzsignsigningreasonID).append("\n");
     sb.append("  fkiFontID: ").append(fkiFontID).append("\n");
+    sb.append("  sCurrencyDescriptionX: ").append(sCurrencyDescriptionX).append("\n");
     sb.append("  sEzsignsigningreasonDescriptionX: ").append(sEzsignsigningreasonDescriptionX).append("\n");
     sb.append("  iEzsignpagePagenumber: ").append(iEzsignpagePagenumber).append("\n");
     sb.append("  iEzsignsignatureX: ").append(iEzsignsignatureX).append("\n");
@@ -732,6 +763,7 @@ public class EzsignsignatureResponseCompoundV3 {
     sb.append("  aObjEzsignsignaturecustomdate: ").append(aObjEzsignsignaturecustomdate).append("\n");
     sb.append("  objCreditcardtransaction: ").append(objCreditcardtransaction).append("\n");
     sb.append("  aObjEzsignelementdependency: ").append(aObjEzsignelementdependency).append("\n");
+    sb.append("  aObjEzsignsignaturepaymentdetail: ").append(aObjEzsignsignaturepaymentdetail).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

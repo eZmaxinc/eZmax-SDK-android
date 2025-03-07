@@ -36,6 +36,8 @@ public class CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest {
   private Integer pkiEzsignsignatureID = null;
   @SerializedName("fkiEzsignfoldersignerassociationID")
   private Integer fkiEzsignfoldersignerassociationID = null;
+  @SerializedName("fkiPaymentgatewayID")
+  private Integer fkiPaymentgatewayID = null;
   @SerializedName("iEzsignpagePagenumber")
   private Integer iEzsignpagePagenumber = null;
   @SerializedName("iEzsignsignatureX")
@@ -117,6 +119,19 @@ public class CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest {
   }
   public void setFkiEzsignfoldersignerassociationID(Integer fkiEzsignfoldersignerassociationID) {
     this.fkiEzsignfoldersignerassociationID = fkiEzsignfoldersignerassociationID;
+  }
+
+  /**
+   * The unique ID of the Paymentgateway
+   * minimum: 0
+   * maximum: 255
+   **/
+  @ApiModelProperty(value = "The unique ID of the Paymentgateway")
+  public Integer getFkiPaymentgatewayID() {
+    return fkiPaymentgatewayID;
+  }
+  public void setFkiPaymentgatewayID(Integer fkiPaymentgatewayID) {
+    this.fkiPaymentgatewayID = fkiPaymentgatewayID;
   }
 
   /**
@@ -450,6 +465,7 @@ public class CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest {
     CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest customEzsignsignatureCreateEzsignelementsPositionedByWordRequest = (CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest) o;
     return (this.pkiEzsignsignatureID == null ? customEzsignsignatureCreateEzsignelementsPositionedByWordRequest.pkiEzsignsignatureID == null : this.pkiEzsignsignatureID.equals(customEzsignsignatureCreateEzsignelementsPositionedByWordRequest.pkiEzsignsignatureID)) &&
         (this.fkiEzsignfoldersignerassociationID == null ? customEzsignsignatureCreateEzsignelementsPositionedByWordRequest.fkiEzsignfoldersignerassociationID == null : this.fkiEzsignfoldersignerassociationID.equals(customEzsignsignatureCreateEzsignelementsPositionedByWordRequest.fkiEzsignfoldersignerassociationID)) &&
+        (this.fkiPaymentgatewayID == null ? customEzsignsignatureCreateEzsignelementsPositionedByWordRequest.fkiPaymentgatewayID == null : this.fkiPaymentgatewayID.equals(customEzsignsignatureCreateEzsignelementsPositionedByWordRequest.fkiPaymentgatewayID)) &&
         (this.iEzsignpagePagenumber == null ? customEzsignsignatureCreateEzsignelementsPositionedByWordRequest.iEzsignpagePagenumber == null : this.iEzsignpagePagenumber.equals(customEzsignsignatureCreateEzsignelementsPositionedByWordRequest.iEzsignpagePagenumber)) &&
         (this.iEzsignsignatureX == null ? customEzsignsignatureCreateEzsignelementsPositionedByWordRequest.iEzsignsignatureX == null : this.iEzsignsignatureX.equals(customEzsignsignatureCreateEzsignelementsPositionedByWordRequest.iEzsignsignatureX)) &&
         (this.iEzsignsignatureY == null ? customEzsignsignatureCreateEzsignelementsPositionedByWordRequest.iEzsignsignatureY == null : this.iEzsignsignatureY.equals(customEzsignsignatureCreateEzsignelementsPositionedByWordRequest.iEzsignsignatureY)) &&
@@ -486,6 +502,7 @@ public class CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest {
     int result = 17;
     result = 31 * result + (this.pkiEzsignsignatureID == null ? 0: this.pkiEzsignsignatureID.hashCode());
     result = 31 * result + (this.fkiEzsignfoldersignerassociationID == null ? 0: this.fkiEzsignfoldersignerassociationID.hashCode());
+    result = 31 * result + (this.fkiPaymentgatewayID == null ? 0: this.fkiPaymentgatewayID.hashCode());
     result = 31 * result + (this.iEzsignpagePagenumber == null ? 0: this.iEzsignpagePagenumber.hashCode());
     result = 31 * result + (this.iEzsignsignatureX == null ? 0: this.iEzsignsignatureX.hashCode());
     result = 31 * result + (this.iEzsignsignatureY == null ? 0: this.iEzsignsignatureY.hashCode());
@@ -525,6 +542,7 @@ public class CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest {
     
     sb.append("  pkiEzsignsignatureID: ").append(pkiEzsignsignatureID).append("\n");
     sb.append("  fkiEzsignfoldersignerassociationID: ").append(fkiEzsignfoldersignerassociationID).append("\n");
+    sb.append("  fkiPaymentgatewayID: ").append(fkiPaymentgatewayID).append("\n");
     sb.append("  iEzsignpagePagenumber: ").append(iEzsignpagePagenumber).append("\n");
     sb.append("  iEzsignsignatureX: ").append(iEzsignsignatureX).append("\n");
     sb.append("  iEzsignsignatureY: ").append(iEzsignsignatureY).append("\n");

@@ -15,6 +15,7 @@ package org.openapitools.client.model;
 import java.util.*;
 import org.openapitools.client.model.CommonReport;
 import org.openapitools.client.model.CommonReportcellstyle;
+import org.openapitools.client.model.CommonReportgroupParameter;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -28,6 +29,10 @@ public class CommonReportgroup {
   private List<CommonReport> aObjReport = null;
   @SerializedName("a_objReportcellstyleCustom")
   private List<CommonReportcellstyle> aObjReportcellstyleCustom = null;
+  @SerializedName("a_objReportgroupParameter")
+  private List<CommonReportgroupParameter> aObjReportgroupParameter = null;
+  @SerializedName("sReportgroupFilename")
+  private String sReportgroupFilename = null;
 
   /**
    **/
@@ -49,6 +54,27 @@ public class CommonReportgroup {
     this.aObjReportcellstyleCustom = aObjReportcellstyleCustom;
   }
 
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public List<CommonReportgroupParameter> getAObjReportgroupParameter() {
+    return aObjReportgroupParameter;
+  }
+  public void setAObjReportgroupParameter(List<CommonReportgroupParameter> aObjReportgroupParameter) {
+    this.aObjReportgroupParameter = aObjReportgroupParameter;
+  }
+
+  /**
+   * The name of the file
+   **/
+  @ApiModelProperty(required = true, value = "The name of the file")
+  public String getSReportgroupFilename() {
+    return sReportgroupFilename;
+  }
+  public void setSReportgroupFilename(String sReportgroupFilename) {
+    this.sReportgroupFilename = sReportgroupFilename;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -60,7 +86,9 @@ public class CommonReportgroup {
     }
     CommonReportgroup commonReportgroup = (CommonReportgroup) o;
     return (this.aObjReport == null ? commonReportgroup.aObjReport == null : this.aObjReport.equals(commonReportgroup.aObjReport)) &&
-        (this.aObjReportcellstyleCustom == null ? commonReportgroup.aObjReportcellstyleCustom == null : this.aObjReportcellstyleCustom.equals(commonReportgroup.aObjReportcellstyleCustom));
+        (this.aObjReportcellstyleCustom == null ? commonReportgroup.aObjReportcellstyleCustom == null : this.aObjReportcellstyleCustom.equals(commonReportgroup.aObjReportcellstyleCustom)) &&
+        (this.aObjReportgroupParameter == null ? commonReportgroup.aObjReportgroupParameter == null : this.aObjReportgroupParameter.equals(commonReportgroup.aObjReportgroupParameter)) &&
+        (this.sReportgroupFilename == null ? commonReportgroup.sReportgroupFilename == null : this.sReportgroupFilename.equals(commonReportgroup.sReportgroupFilename));
   }
 
   @Override
@@ -68,6 +96,8 @@ public class CommonReportgroup {
     int result = 17;
     result = 31 * result + (this.aObjReport == null ? 0: this.aObjReport.hashCode());
     result = 31 * result + (this.aObjReportcellstyleCustom == null ? 0: this.aObjReportcellstyleCustom.hashCode());
+    result = 31 * result + (this.aObjReportgroupParameter == null ? 0: this.aObjReportgroupParameter.hashCode());
+    result = 31 * result + (this.sReportgroupFilename == null ? 0: this.sReportgroupFilename.hashCode());
     return result;
   }
 
@@ -78,6 +108,8 @@ public class CommonReportgroup {
     
     sb.append("  aObjReport: ").append(aObjReport).append("\n");
     sb.append("  aObjReportcellstyleCustom: ").append(aObjReportcellstyleCustom).append("\n");
+    sb.append("  aObjReportgroupParameter: ").append(aObjReportgroupParameter).append("\n");
+    sb.append("  sReportgroupFilename: ").append(sReportgroupFilename).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

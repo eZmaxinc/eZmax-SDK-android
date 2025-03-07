@@ -26,7 +26,9 @@ import com.android.volley.VolleyError;
 import org.openapitools.client.model.CommonResponseError;
 import org.openapitools.client.model.CustomerCreateObjectV1Request;
 import org.openapitools.client.model.CustomerCreateObjectV1Response;
+import org.openapitools.client.model.CustomerGetAutocompleteV2Response;
 import org.openapitools.client.model.CustomerGetObjectV2Response;
+import org.openapitools.client.model.HeaderAcceptLanguage;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
@@ -172,6 +174,142 @@ public class ObjectCustomerApi {
           public void onResponse(String localVarResponse) {
             try {
               responseListener.onResponse((CustomerCreateObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", CustomerCreateObjectV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Retrieve Customers and IDs
+  * Get the list of Customer to be used in a dropdown or autocomplete control.
+   * @param sSelector The type of Customers to return
+   * @param eFilterActive Specify which results we want to display.
+   * @param sQuery Allow to filter the returned results
+   * @param acceptLanguage 
+   * @return CustomerGetAutocompleteV2Response
+  */
+  public CustomerGetAutocompleteV2Response customerGetAutocompleteV2 (String sSelector, String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'sSelector' is set
+    if (sSelector == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'sSelector' when calling customerGetAutocompleteV2",
+        new ApiException(400, "Missing the required parameter 'sSelector' when calling customerGetAutocompleteV2"));
+    }
+
+    // create path and map variables
+    String path = "/2/object/customer/getAutocomplete/{sSelector}".replaceAll("\\{" + "sSelector" + "\\}", apiInvoker.escapeString(sSelector.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "eFilterActive", eFilterActive));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "sQuery", sQuery));
+    headerParams.put("Accept-Language", ApiInvoker.parameterToString(acceptLanguage));
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (CustomerGetAutocompleteV2Response) ApiInvoker.deserialize(localVarResponse, "", CustomerGetAutocompleteV2Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve Customers and IDs
+   * Get the list of Customer to be used in a dropdown or autocomplete control.
+   * @param sSelector The type of Customers to return   * @param eFilterActive Specify which results we want to display.   * @param sQuery Allow to filter the returned results   * @param acceptLanguage 
+  */
+  public void customerGetAutocompleteV2 (String sSelector, String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage, final Response.Listener<CustomerGetAutocompleteV2Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'sSelector' is set
+    if (sSelector == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'sSelector' when calling customerGetAutocompleteV2",
+        new ApiException(400, "Missing the required parameter 'sSelector' when calling customerGetAutocompleteV2"));
+    }
+
+    // create path and map variables
+    String path = "/2/object/customer/getAutocomplete/{sSelector}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "sSelector" + "\\}", apiInvoker.escapeString(sSelector.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "eFilterActive", eFilterActive));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "sQuery", sQuery));
+
+    headerParams.put("Accept-Language", ApiInvoker.parameterToString(acceptLanguage));
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((CustomerGetAutocompleteV2Response) ApiInvoker.deserialize(localVarResponse,  "", CustomerGetAutocompleteV2Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

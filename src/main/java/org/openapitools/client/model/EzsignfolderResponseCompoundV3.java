@@ -74,6 +74,10 @@ public class EzsignfolderResponseCompoundV3 {
   private FieldEEzsignfolderStep eEzsignfolderStep = null;
   @SerializedName("dtEzsignfolderClose")
   private String dtEzsignfolderClose = null;
+  @SerializedName("dtEzsignfolderArchive")
+  private String dtEzsignfolderArchive = null;
+  @SerializedName("dtEzsignfolderDispose")
+  private String dtEzsignfolderDispose = null;
   @SerializedName("tEzsignfolderMessage")
   private String tEzsignfolderMessage = null;
   @SerializedName("objAudit")
@@ -345,6 +349,28 @@ public class EzsignfolderResponseCompoundV3 {
   }
 
   /**
+   * The date and time at which the Ezsignfolder was archived.
+   **/
+  @ApiModelProperty(value = "The date and time at which the Ezsignfolder was archived.")
+  public String getDtEzsignfolderArchive() {
+    return dtEzsignfolderArchive;
+  }
+  public void setDtEzsignfolderArchive(String dtEzsignfolderArchive) {
+    this.dtEzsignfolderArchive = dtEzsignfolderArchive;
+  }
+
+  /**
+   * The date and time at which the Ezsignfolder was disposed.
+   **/
+  @ApiModelProperty(value = "The date and time at which the Ezsignfolder was disposed.")
+  public String getDtEzsignfolderDispose() {
+    return dtEzsignfolderDispose;
+  }
+  public void setDtEzsignfolderDispose(String dtEzsignfolderDispose) {
+    this.dtEzsignfolderDispose = dtEzsignfolderDispose;
+  }
+
+  /**
    * A custom text message that will be added to the email sent.
    **/
   @ApiModelProperty(value = "A custom text message that will be added to the email sent.")
@@ -429,6 +455,8 @@ public class EzsignfolderResponseCompoundV3 {
         (this.dtEzsignfolderScheduleddispose == null ? ezsignfolderResponseCompoundV3.dtEzsignfolderScheduleddispose == null : this.dtEzsignfolderScheduleddispose.equals(ezsignfolderResponseCompoundV3.dtEzsignfolderScheduleddispose)) &&
         (this.eEzsignfolderStep == null ? ezsignfolderResponseCompoundV3.eEzsignfolderStep == null : this.eEzsignfolderStep.equals(ezsignfolderResponseCompoundV3.eEzsignfolderStep)) &&
         (this.dtEzsignfolderClose == null ? ezsignfolderResponseCompoundV3.dtEzsignfolderClose == null : this.dtEzsignfolderClose.equals(ezsignfolderResponseCompoundV3.dtEzsignfolderClose)) &&
+        (this.dtEzsignfolderArchive == null ? ezsignfolderResponseCompoundV3.dtEzsignfolderArchive == null : this.dtEzsignfolderArchive.equals(ezsignfolderResponseCompoundV3.dtEzsignfolderArchive)) &&
+        (this.dtEzsignfolderDispose == null ? ezsignfolderResponseCompoundV3.dtEzsignfolderDispose == null : this.dtEzsignfolderDispose.equals(ezsignfolderResponseCompoundV3.dtEzsignfolderDispose)) &&
         (this.tEzsignfolderMessage == null ? ezsignfolderResponseCompoundV3.tEzsignfolderMessage == null : this.tEzsignfolderMessage.equals(ezsignfolderResponseCompoundV3.tEzsignfolderMessage)) &&
         (this.objAudit == null ? ezsignfolderResponseCompoundV3.objAudit == null : this.objAudit.equals(ezsignfolderResponseCompoundV3.objAudit)) &&
         (this.sEzsignfolderExternalid == null ? ezsignfolderResponseCompoundV3.sEzsignfolderExternalid == null : this.sEzsignfolderExternalid.equals(ezsignfolderResponseCompoundV3.sEzsignfolderExternalid)) &&
@@ -462,6 +490,8 @@ public class EzsignfolderResponseCompoundV3 {
     result = 31 * result + (this.dtEzsignfolderScheduleddispose == null ? 0: this.dtEzsignfolderScheduleddispose.hashCode());
     result = 31 * result + (this.eEzsignfolderStep == null ? 0: this.eEzsignfolderStep.hashCode());
     result = 31 * result + (this.dtEzsignfolderClose == null ? 0: this.dtEzsignfolderClose.hashCode());
+    result = 31 * result + (this.dtEzsignfolderArchive == null ? 0: this.dtEzsignfolderArchive.hashCode());
+    result = 31 * result + (this.dtEzsignfolderDispose == null ? 0: this.dtEzsignfolderDispose.hashCode());
     result = 31 * result + (this.tEzsignfolderMessage == null ? 0: this.tEzsignfolderMessage.hashCode());
     result = 31 * result + (this.objAudit == null ? 0: this.objAudit.hashCode());
     result = 31 * result + (this.sEzsignfolderExternalid == null ? 0: this.sEzsignfolderExternalid.hashCode());
@@ -498,6 +528,8 @@ public class EzsignfolderResponseCompoundV3 {
     sb.append("  dtEzsignfolderScheduleddispose: ").append(dtEzsignfolderScheduleddispose).append("\n");
     sb.append("  eEzsignfolderStep: ").append(eEzsignfolderStep).append("\n");
     sb.append("  dtEzsignfolderClose: ").append(dtEzsignfolderClose).append("\n");
+    sb.append("  dtEzsignfolderArchive: ").append(dtEzsignfolderArchive).append("\n");
+    sb.append("  dtEzsignfolderDispose: ").append(dtEzsignfolderDispose).append("\n");
     sb.append("  tEzsignfolderMessage: ").append(tEzsignfolderMessage).append("\n");
     sb.append("  objAudit: ").append(objAudit).append("\n");
     sb.append("  sEzsignfolderExternalid: ").append(sEzsignfolderExternalid).append("\n");

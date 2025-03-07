@@ -16,6 +16,7 @@ import java.util.*;
 import org.openapitools.client.model.EnumTextvalidation;
 import org.openapitools.client.model.EzsignelementdependencyRequestCompound;
 import org.openapitools.client.model.EzsignsignaturecustomdateRequestCompoundV2;
+import org.openapitools.client.model.EzsignsignaturepaymentdetailRequestCompound;
 import org.openapitools.client.model.FieldEEzsignsignatureAttachmentnamesource;
 import org.openapitools.client.model.FieldEEzsignsignatureConsultationtrigger;
 import org.openapitools.client.model.FieldEEzsignsignatureDependencyrequirement;
@@ -35,6 +36,8 @@ public class EzsignsignatureRequestCompoundV2 {
   private Integer pkiEzsignsignatureID = null;
   @SerializedName("fkiEzsignfoldersignerassociationID")
   private Integer fkiEzsignfoldersignerassociationID = null;
+  @SerializedName("fkiPaymentgatewayID")
+  private Integer fkiPaymentgatewayID = null;
   @SerializedName("iEzsignpagePagenumber")
   private Integer iEzsignpagePagenumber = null;
   @SerializedName("iEzsignsignatureX")
@@ -91,6 +94,8 @@ public class EzsignsignatureRequestCompoundV2 {
   private List<EzsignsignaturecustomdateRequestCompoundV2> aObjEzsignsignaturecustomdate = null;
   @SerializedName("a_objEzsignelementdependency")
   private List<EzsignelementdependencyRequestCompound> aObjEzsignelementdependency = null;
+  @SerializedName("a_objEzsignsignaturepaymentdetail")
+  private List<EzsignsignaturepaymentdetailRequestCompound> aObjEzsignsignaturepaymentdetail = null;
 
   /**
    * The unique ID of the Ezsignsignature
@@ -114,6 +119,19 @@ public class EzsignsignatureRequestCompoundV2 {
   }
   public void setFkiEzsignfoldersignerassociationID(Integer fkiEzsignfoldersignerassociationID) {
     this.fkiEzsignfoldersignerassociationID = fkiEzsignfoldersignerassociationID;
+  }
+
+  /**
+   * The unique ID of the Paymentgateway
+   * minimum: 0
+   * maximum: 255
+   **/
+  @ApiModelProperty(value = "The unique ID of the Paymentgateway")
+  public Integer getFkiPaymentgatewayID() {
+    return fkiPaymentgatewayID;
+  }
+  public void setFkiPaymentgatewayID(Integer fkiPaymentgatewayID) {
+    this.fkiPaymentgatewayID = fkiPaymentgatewayID;
   }
 
   /**
@@ -425,6 +443,16 @@ public class EzsignsignatureRequestCompoundV2 {
     this.aObjEzsignelementdependency = aObjEzsignelementdependency;
   }
 
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public List<EzsignsignaturepaymentdetailRequestCompound> getAObjEzsignsignaturepaymentdetail() {
+    return aObjEzsignsignaturepaymentdetail;
+  }
+  public void setAObjEzsignsignaturepaymentdetail(List<EzsignsignaturepaymentdetailRequestCompound> aObjEzsignsignaturepaymentdetail) {
+    this.aObjEzsignsignaturepaymentdetail = aObjEzsignsignaturepaymentdetail;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -437,6 +465,7 @@ public class EzsignsignatureRequestCompoundV2 {
     EzsignsignatureRequestCompoundV2 ezsignsignatureRequestCompoundV2 = (EzsignsignatureRequestCompoundV2) o;
     return (this.pkiEzsignsignatureID == null ? ezsignsignatureRequestCompoundV2.pkiEzsignsignatureID == null : this.pkiEzsignsignatureID.equals(ezsignsignatureRequestCompoundV2.pkiEzsignsignatureID)) &&
         (this.fkiEzsignfoldersignerassociationID == null ? ezsignsignatureRequestCompoundV2.fkiEzsignfoldersignerassociationID == null : this.fkiEzsignfoldersignerassociationID.equals(ezsignsignatureRequestCompoundV2.fkiEzsignfoldersignerassociationID)) &&
+        (this.fkiPaymentgatewayID == null ? ezsignsignatureRequestCompoundV2.fkiPaymentgatewayID == null : this.fkiPaymentgatewayID.equals(ezsignsignatureRequestCompoundV2.fkiPaymentgatewayID)) &&
         (this.iEzsignpagePagenumber == null ? ezsignsignatureRequestCompoundV2.iEzsignpagePagenumber == null : this.iEzsignpagePagenumber.equals(ezsignsignatureRequestCompoundV2.iEzsignpagePagenumber)) &&
         (this.iEzsignsignatureX == null ? ezsignsignatureRequestCompoundV2.iEzsignsignatureX == null : this.iEzsignsignatureX.equals(ezsignsignatureRequestCompoundV2.iEzsignsignatureX)) &&
         (this.iEzsignsignatureY == null ? ezsignsignatureRequestCompoundV2.iEzsignsignatureY == null : this.iEzsignsignatureY.equals(ezsignsignatureRequestCompoundV2.iEzsignsignatureY)) &&
@@ -464,7 +493,8 @@ public class EzsignsignatureRequestCompoundV2 {
         (this.eEzsignsignatureDependencyrequirement == null ? ezsignsignatureRequestCompoundV2.eEzsignsignatureDependencyrequirement == null : this.eEzsignsignatureDependencyrequirement.equals(ezsignsignatureRequestCompoundV2.eEzsignsignatureDependencyrequirement)) &&
         (this.bEzsignsignatureCustomdate == null ? ezsignsignatureRequestCompoundV2.bEzsignsignatureCustomdate == null : this.bEzsignsignatureCustomdate.equals(ezsignsignatureRequestCompoundV2.bEzsignsignatureCustomdate)) &&
         (this.aObjEzsignsignaturecustomdate == null ? ezsignsignatureRequestCompoundV2.aObjEzsignsignaturecustomdate == null : this.aObjEzsignsignaturecustomdate.equals(ezsignsignatureRequestCompoundV2.aObjEzsignsignaturecustomdate)) &&
-        (this.aObjEzsignelementdependency == null ? ezsignsignatureRequestCompoundV2.aObjEzsignelementdependency == null : this.aObjEzsignelementdependency.equals(ezsignsignatureRequestCompoundV2.aObjEzsignelementdependency));
+        (this.aObjEzsignelementdependency == null ? ezsignsignatureRequestCompoundV2.aObjEzsignelementdependency == null : this.aObjEzsignelementdependency.equals(ezsignsignatureRequestCompoundV2.aObjEzsignelementdependency)) &&
+        (this.aObjEzsignsignaturepaymentdetail == null ? ezsignsignatureRequestCompoundV2.aObjEzsignsignaturepaymentdetail == null : this.aObjEzsignsignaturepaymentdetail.equals(ezsignsignatureRequestCompoundV2.aObjEzsignsignaturepaymentdetail));
   }
 
   @Override
@@ -472,6 +502,7 @@ public class EzsignsignatureRequestCompoundV2 {
     int result = 17;
     result = 31 * result + (this.pkiEzsignsignatureID == null ? 0: this.pkiEzsignsignatureID.hashCode());
     result = 31 * result + (this.fkiEzsignfoldersignerassociationID == null ? 0: this.fkiEzsignfoldersignerassociationID.hashCode());
+    result = 31 * result + (this.fkiPaymentgatewayID == null ? 0: this.fkiPaymentgatewayID.hashCode());
     result = 31 * result + (this.iEzsignpagePagenumber == null ? 0: this.iEzsignpagePagenumber.hashCode());
     result = 31 * result + (this.iEzsignsignatureX == null ? 0: this.iEzsignsignatureX.hashCode());
     result = 31 * result + (this.iEzsignsignatureY == null ? 0: this.iEzsignsignatureY.hashCode());
@@ -500,6 +531,7 @@ public class EzsignsignatureRequestCompoundV2 {
     result = 31 * result + (this.bEzsignsignatureCustomdate == null ? 0: this.bEzsignsignatureCustomdate.hashCode());
     result = 31 * result + (this.aObjEzsignsignaturecustomdate == null ? 0: this.aObjEzsignsignaturecustomdate.hashCode());
     result = 31 * result + (this.aObjEzsignelementdependency == null ? 0: this.aObjEzsignelementdependency.hashCode());
+    result = 31 * result + (this.aObjEzsignsignaturepaymentdetail == null ? 0: this.aObjEzsignsignaturepaymentdetail.hashCode());
     return result;
   }
 
@@ -510,6 +542,7 @@ public class EzsignsignatureRequestCompoundV2 {
     
     sb.append("  pkiEzsignsignatureID: ").append(pkiEzsignsignatureID).append("\n");
     sb.append("  fkiEzsignfoldersignerassociationID: ").append(fkiEzsignfoldersignerassociationID).append("\n");
+    sb.append("  fkiPaymentgatewayID: ").append(fkiPaymentgatewayID).append("\n");
     sb.append("  iEzsignpagePagenumber: ").append(iEzsignpagePagenumber).append("\n");
     sb.append("  iEzsignsignatureX: ").append(iEzsignsignatureX).append("\n");
     sb.append("  iEzsignsignatureY: ").append(iEzsignsignatureY).append("\n");
@@ -538,6 +571,7 @@ public class EzsignsignatureRequestCompoundV2 {
     sb.append("  bEzsignsignatureCustomdate: ").append(bEzsignsignatureCustomdate).append("\n");
     sb.append("  aObjEzsignsignaturecustomdate: ").append(aObjEzsignsignaturecustomdate).append("\n");
     sb.append("  aObjEzsignelementdependency: ").append(aObjEzsignelementdependency).append("\n");
+    sb.append("  aObjEzsignsignaturepaymentdetail: ").append(aObjEzsignsignaturepaymentdetail).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

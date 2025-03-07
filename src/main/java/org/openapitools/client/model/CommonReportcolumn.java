@@ -13,6 +13,7 @@
 package org.openapitools.client.model;
 
 import org.openapitools.client.model.CommonReportcellstyle;
+import org.openapitools.client.model.EnumReportdataType;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -26,6 +27,8 @@ public class CommonReportcolumn {
   private CommonReportcellstyle objReportcellstyleDefault = null;
   @SerializedName("iReportcolumnWidth")
   private Integer iReportcolumnWidth = null;
+  @SerializedName("eReportcolumnType")
+  private EnumReportdataType eReportcolumnType = null;
 
   /**
    **/
@@ -48,6 +51,16 @@ public class CommonReportcolumn {
     this.iReportcolumnWidth = iReportcolumnWidth;
   }
 
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public EnumReportdataType getEReportcolumnType() {
+    return eReportcolumnType;
+  }
+  public void setEReportcolumnType(EnumReportdataType eReportcolumnType) {
+    this.eReportcolumnType = eReportcolumnType;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -59,7 +72,8 @@ public class CommonReportcolumn {
     }
     CommonReportcolumn commonReportcolumn = (CommonReportcolumn) o;
     return (this.objReportcellstyleDefault == null ? commonReportcolumn.objReportcellstyleDefault == null : this.objReportcellstyleDefault.equals(commonReportcolumn.objReportcellstyleDefault)) &&
-        (this.iReportcolumnWidth == null ? commonReportcolumn.iReportcolumnWidth == null : this.iReportcolumnWidth.equals(commonReportcolumn.iReportcolumnWidth));
+        (this.iReportcolumnWidth == null ? commonReportcolumn.iReportcolumnWidth == null : this.iReportcolumnWidth.equals(commonReportcolumn.iReportcolumnWidth)) &&
+        (this.eReportcolumnType == null ? commonReportcolumn.eReportcolumnType == null : this.eReportcolumnType.equals(commonReportcolumn.eReportcolumnType));
   }
 
   @Override
@@ -67,6 +81,7 @@ public class CommonReportcolumn {
     int result = 17;
     result = 31 * result + (this.objReportcellstyleDefault == null ? 0: this.objReportcellstyleDefault.hashCode());
     result = 31 * result + (this.iReportcolumnWidth == null ? 0: this.iReportcolumnWidth.hashCode());
+    result = 31 * result + (this.eReportcolumnType == null ? 0: this.eReportcolumnType.hashCode());
     return result;
   }
 
@@ -77,6 +92,7 @@ public class CommonReportcolumn {
     
     sb.append("  objReportcellstyleDefault: ").append(objReportcellstyleDefault).append("\n");
     sb.append("  iReportcolumnWidth: ").append(iReportcolumnWidth).append("\n");
+    sb.append("  eReportcolumnType: ").append(eReportcolumnType).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

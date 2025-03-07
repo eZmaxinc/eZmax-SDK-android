@@ -73,6 +73,8 @@ import org.openapitools.client.model.EzsigndocumentGetWordsPositionsV1Request;
 import org.openapitools.client.model.EzsigndocumentGetWordsPositionsV1Response;
 import org.openapitools.client.model.EzsigndocumentPatchObjectV1Request;
 import org.openapitools.client.model.EzsigndocumentPatchObjectV1Response;
+import org.openapitools.client.model.EzsigndocumentPrefillEzsignformV1Request;
+import org.openapitools.client.model.EzsigndocumentPrefillEzsignformV1Response;
 import org.openapitools.client.model.EzsigndocumentSubmitEzsignformV1Request;
 import org.openapitools.client.model.EzsigndocumentSubmitEzsignformV1Response;
 import org.openapitools.client.model.EzsigndocumentUnsendV1Response;
@@ -4341,6 +4343,145 @@ public class ObjectEzsigndocumentApi {
           public void onResponse(String localVarResponse) {
             try {
               responseListener.onResponse((EzsigndocumentPatchObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsigndocumentPatchObjectV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Prefill an Ezsignform
+  * Using this endpoint, you can prefill an Ezsignform.
+   * @param pkiEzsigndocumentID 
+   * @param ezsigndocumentPrefillEzsignformV1Request 
+   * @return EzsigndocumentPrefillEzsignformV1Response
+  */
+  public EzsigndocumentPrefillEzsignformV1Response ezsigndocumentPrefillEzsignformV1 (Integer pkiEzsigndocumentID, EzsigndocumentPrefillEzsignformV1Request ezsigndocumentPrefillEzsignformV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = ezsigndocumentPrefillEzsignformV1Request;
+    // verify the required parameter 'pkiEzsigndocumentID' is set
+    if (pkiEzsigndocumentID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsigndocumentID' when calling ezsigndocumentPrefillEzsignformV1",
+        new ApiException(400, "Missing the required parameter 'pkiEzsigndocumentID' when calling ezsigndocumentPrefillEzsignformV1"));
+    }
+    // verify the required parameter 'ezsigndocumentPrefillEzsignformV1Request' is set
+    if (ezsigndocumentPrefillEzsignformV1Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'ezsigndocumentPrefillEzsignformV1Request' when calling ezsigndocumentPrefillEzsignformV1",
+        new ApiException(400, "Missing the required parameter 'ezsigndocumentPrefillEzsignformV1Request' when calling ezsigndocumentPrefillEzsignformV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/prefillEzsignform".replaceAll("\\{" + "pkiEzsigndocumentID" + "\\}", apiInvoker.escapeString(pkiEzsigndocumentID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (EzsigndocumentPrefillEzsignformV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsigndocumentPrefillEzsignformV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Prefill an Ezsignform
+   * Using this endpoint, you can prefill an Ezsignform.
+   * @param pkiEzsigndocumentID    * @param ezsigndocumentPrefillEzsignformV1Request 
+  */
+  public void ezsigndocumentPrefillEzsignformV1 (Integer pkiEzsigndocumentID, EzsigndocumentPrefillEzsignformV1Request ezsigndocumentPrefillEzsignformV1Request, final Response.Listener<EzsigndocumentPrefillEzsignformV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = ezsigndocumentPrefillEzsignformV1Request;
+
+    // verify the required parameter 'pkiEzsigndocumentID' is set
+    if (pkiEzsigndocumentID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsigndocumentID' when calling ezsigndocumentPrefillEzsignformV1",
+        new ApiException(400, "Missing the required parameter 'pkiEzsigndocumentID' when calling ezsigndocumentPrefillEzsignformV1"));
+    }
+    // verify the required parameter 'ezsigndocumentPrefillEzsignformV1Request' is set
+    if (ezsigndocumentPrefillEzsignformV1Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'ezsigndocumentPrefillEzsignformV1Request' when calling ezsigndocumentPrefillEzsignformV1",
+        new ApiException(400, "Missing the required parameter 'ezsigndocumentPrefillEzsignformV1Request' when calling ezsigndocumentPrefillEzsignformV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/prefillEzsignform".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiEzsigndocumentID" + "\\}", apiInvoker.escapeString(pkiEzsigndocumentID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((EzsigndocumentPrefillEzsignformV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsigndocumentPrefillEzsignformV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

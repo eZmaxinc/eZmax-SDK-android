@@ -29,10 +29,12 @@ public class EzsigndocumentRequest {
   private Integer fkiEzsigntemplateID = null;
   @SerializedName("fkiEzsignfoldersignerassociationID")
   private Integer fkiEzsignfoldersignerassociationID = null;
+  @SerializedName("fkiEzsignimportdocumentID")
+  private Integer fkiEzsignimportdocumentID = null;
   @SerializedName("fkiLanguageID")
   private Integer fkiLanguageID = null;
   public enum EEzsigndocumentSourceEnum {
-     Base64,  Ezsigntemplate,  Url, 
+     Base64,  Ezsignimportdocument,  Ezsigntemplate,  Url, 
   };
   @SerializedName("eEzsigndocumentSource")
   private EEzsigndocumentSourceEnum eEzsigndocumentSource = null;
@@ -107,6 +109,19 @@ public class EzsigndocumentRequest {
   }
   public void setFkiEzsignfoldersignerassociationID(Integer fkiEzsignfoldersignerassociationID) {
     this.fkiEzsignfoldersignerassociationID = fkiEzsignfoldersignerassociationID;
+  }
+
+  /**
+   * The unique ID of the Ezsignimportdocument
+   * minimum: 0
+   * maximum: 16777215
+   **/
+  @ApiModelProperty(value = "The unique ID of the Ezsignimportdocument")
+  public Integer getFkiEzsignimportdocumentID() {
+    return fkiEzsignimportdocumentID;
+  }
+  public void setFkiEzsignimportdocumentID(Integer fkiEzsignimportdocumentID) {
+    this.fkiEzsignimportdocumentID = fkiEzsignimportdocumentID;
   }
 
   /**
@@ -246,6 +261,7 @@ public class EzsigndocumentRequest {
         (this.fkiEzsignfolderID == null ? ezsigndocumentRequest.fkiEzsignfolderID == null : this.fkiEzsignfolderID.equals(ezsigndocumentRequest.fkiEzsignfolderID)) &&
         (this.fkiEzsigntemplateID == null ? ezsigndocumentRequest.fkiEzsigntemplateID == null : this.fkiEzsigntemplateID.equals(ezsigndocumentRequest.fkiEzsigntemplateID)) &&
         (this.fkiEzsignfoldersignerassociationID == null ? ezsigndocumentRequest.fkiEzsignfoldersignerassociationID == null : this.fkiEzsignfoldersignerassociationID.equals(ezsigndocumentRequest.fkiEzsignfoldersignerassociationID)) &&
+        (this.fkiEzsignimportdocumentID == null ? ezsigndocumentRequest.fkiEzsignimportdocumentID == null : this.fkiEzsignimportdocumentID.equals(ezsigndocumentRequest.fkiEzsignimportdocumentID)) &&
         (this.fkiLanguageID == null ? ezsigndocumentRequest.fkiLanguageID == null : this.fkiLanguageID.equals(ezsigndocumentRequest.fkiLanguageID)) &&
         (this.eEzsigndocumentSource == null ? ezsigndocumentRequest.eEzsigndocumentSource == null : this.eEzsigndocumentSource.equals(ezsigndocumentRequest.eEzsigndocumentSource)) &&
         (this.eEzsigndocumentFormat == null ? ezsigndocumentRequest.eEzsigndocumentFormat == null : this.eEzsigndocumentFormat.equals(ezsigndocumentRequest.eEzsigndocumentFormat)) &&
@@ -266,6 +282,7 @@ public class EzsigndocumentRequest {
     result = 31 * result + (this.fkiEzsignfolderID == null ? 0: this.fkiEzsignfolderID.hashCode());
     result = 31 * result + (this.fkiEzsigntemplateID == null ? 0: this.fkiEzsigntemplateID.hashCode());
     result = 31 * result + (this.fkiEzsignfoldersignerassociationID == null ? 0: this.fkiEzsignfoldersignerassociationID.hashCode());
+    result = 31 * result + (this.fkiEzsignimportdocumentID == null ? 0: this.fkiEzsignimportdocumentID.hashCode());
     result = 31 * result + (this.fkiLanguageID == null ? 0: this.fkiLanguageID.hashCode());
     result = 31 * result + (this.eEzsigndocumentSource == null ? 0: this.eEzsigndocumentSource.hashCode());
     result = 31 * result + (this.eEzsigndocumentFormat == null ? 0: this.eEzsigndocumentFormat.hashCode());
@@ -289,6 +306,7 @@ public class EzsigndocumentRequest {
     sb.append("  fkiEzsignfolderID: ").append(fkiEzsignfolderID).append("\n");
     sb.append("  fkiEzsigntemplateID: ").append(fkiEzsigntemplateID).append("\n");
     sb.append("  fkiEzsignfoldersignerassociationID: ").append(fkiEzsignfoldersignerassociationID).append("\n");
+    sb.append("  fkiEzsignimportdocumentID: ").append(fkiEzsignimportdocumentID).append("\n");
     sb.append("  fkiLanguageID: ").append(fkiLanguageID).append("\n");
     sb.append("  eEzsigndocumentSource: ").append(eEzsigndocumentSource).append("\n");
     sb.append("  eEzsigndocumentFormat: ").append(eEzsigndocumentFormat).append("\n");

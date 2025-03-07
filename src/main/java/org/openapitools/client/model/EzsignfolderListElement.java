@@ -63,6 +63,12 @@ public class EzsignfolderListElement {
   private String dEzsignfolderFormcompletedpercentage = null;
   @SerializedName("dEzsignfolderSignaturecompletedpercentage")
   private String dEzsignfolderSignaturecompletedpercentage = null;
+  @SerializedName("dtEzsignfolderClose")
+  private String dtEzsignfolderClose = null;
+  @SerializedName("dtEzsignfolderArchive")
+  private String dtEzsignfolderArchive = null;
+  @SerializedName("dtEzsignfolderDispose")
+  private String dtEzsignfolderDispose = null;
   @SerializedName("bEzsignfolderSigner")
   private Boolean bEzsignfolderSigner = null;
 
@@ -288,6 +294,39 @@ public class EzsignfolderListElement {
   }
 
   /**
+   * The date and time at which the Ezsignfolder was closed. Either by applying the last signature or by completing it prematurely.
+   **/
+  @ApiModelProperty(value = "The date and time at which the Ezsignfolder was closed. Either by applying the last signature or by completing it prematurely.")
+  public String getDtEzsignfolderClose() {
+    return dtEzsignfolderClose;
+  }
+  public void setDtEzsignfolderClose(String dtEzsignfolderClose) {
+    this.dtEzsignfolderClose = dtEzsignfolderClose;
+  }
+
+  /**
+   * The date and time at which the Ezsignfolder was archived.
+   **/
+  @ApiModelProperty(value = "The date and time at which the Ezsignfolder was archived.")
+  public String getDtEzsignfolderArchive() {
+    return dtEzsignfolderArchive;
+  }
+  public void setDtEzsignfolderArchive(String dtEzsignfolderArchive) {
+    this.dtEzsignfolderArchive = dtEzsignfolderArchive;
+  }
+
+  /**
+   * The date and time at which the Ezsignfolder was disposed.
+   **/
+  @ApiModelProperty(value = "The date and time at which the Ezsignfolder was disposed.")
+  public String getDtEzsignfolderDispose() {
+    return dtEzsignfolderDispose;
+  }
+  public void setDtEzsignfolderDispose(String dtEzsignfolderDispose) {
+    this.dtEzsignfolderDispose = dtEzsignfolderDispose;
+  }
+
+  /**
    * Whether the Ezsignfolder has an Ezsignsignatures that need to be signed or an Ezsignformfieldgroups that need to be filled by the current user
    **/
   @ApiModelProperty(value = "Whether the Ezsignfolder has an Ezsignsignatures that need to be signed or an Ezsignformfieldgroups that need to be filled by the current user")
@@ -328,6 +367,9 @@ public class EzsignfolderListElement {
         (this.dEzsignfolderCompletedpercentage == null ? ezsignfolderListElement.dEzsignfolderCompletedpercentage == null : this.dEzsignfolderCompletedpercentage.equals(ezsignfolderListElement.dEzsignfolderCompletedpercentage)) &&
         (this.dEzsignfolderFormcompletedpercentage == null ? ezsignfolderListElement.dEzsignfolderFormcompletedpercentage == null : this.dEzsignfolderFormcompletedpercentage.equals(ezsignfolderListElement.dEzsignfolderFormcompletedpercentage)) &&
         (this.dEzsignfolderSignaturecompletedpercentage == null ? ezsignfolderListElement.dEzsignfolderSignaturecompletedpercentage == null : this.dEzsignfolderSignaturecompletedpercentage.equals(ezsignfolderListElement.dEzsignfolderSignaturecompletedpercentage)) &&
+        (this.dtEzsignfolderClose == null ? ezsignfolderListElement.dtEzsignfolderClose == null : this.dtEzsignfolderClose.equals(ezsignfolderListElement.dtEzsignfolderClose)) &&
+        (this.dtEzsignfolderArchive == null ? ezsignfolderListElement.dtEzsignfolderArchive == null : this.dtEzsignfolderArchive.equals(ezsignfolderListElement.dtEzsignfolderArchive)) &&
+        (this.dtEzsignfolderDispose == null ? ezsignfolderListElement.dtEzsignfolderDispose == null : this.dtEzsignfolderDispose.equals(ezsignfolderListElement.dtEzsignfolderDispose)) &&
         (this.bEzsignfolderSigner == null ? ezsignfolderListElement.bEzsignfolderSigner == null : this.bEzsignfolderSigner.equals(ezsignfolderListElement.bEzsignfolderSigner));
   }
 
@@ -354,6 +396,9 @@ public class EzsignfolderListElement {
     result = 31 * result + (this.dEzsignfolderCompletedpercentage == null ? 0: this.dEzsignfolderCompletedpercentage.hashCode());
     result = 31 * result + (this.dEzsignfolderFormcompletedpercentage == null ? 0: this.dEzsignfolderFormcompletedpercentage.hashCode());
     result = 31 * result + (this.dEzsignfolderSignaturecompletedpercentage == null ? 0: this.dEzsignfolderSignaturecompletedpercentage.hashCode());
+    result = 31 * result + (this.dtEzsignfolderClose == null ? 0: this.dtEzsignfolderClose.hashCode());
+    result = 31 * result + (this.dtEzsignfolderArchive == null ? 0: this.dtEzsignfolderArchive.hashCode());
+    result = 31 * result + (this.dtEzsignfolderDispose == null ? 0: this.dtEzsignfolderDispose.hashCode());
     result = 31 * result + (this.bEzsignfolderSigner == null ? 0: this.bEzsignfolderSigner.hashCode());
     return result;
   }
@@ -383,6 +428,9 @@ public class EzsignfolderListElement {
     sb.append("  dEzsignfolderCompletedpercentage: ").append(dEzsignfolderCompletedpercentage).append("\n");
     sb.append("  dEzsignfolderFormcompletedpercentage: ").append(dEzsignfolderFormcompletedpercentage).append("\n");
     sb.append("  dEzsignfolderSignaturecompletedpercentage: ").append(dEzsignfolderSignaturecompletedpercentage).append("\n");
+    sb.append("  dtEzsignfolderClose: ").append(dtEzsignfolderClose).append("\n");
+    sb.append("  dtEzsignfolderArchive: ").append(dtEzsignfolderArchive).append("\n");
+    sb.append("  dtEzsignfolderDispose: ").append(dtEzsignfolderDispose).append("\n");
     sb.append("  bEzsignfolderSigner: ").append(bEzsignfolderSigner).append("\n");
     sb.append("}\n");
     return sb.toString();

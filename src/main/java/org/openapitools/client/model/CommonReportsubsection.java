@@ -28,6 +28,8 @@ public class CommonReportsubsection {
   private CommonReportsubsectionpart objReportsubsectionpartBody = null;
   @SerializedName("objReportsubsectionpartFooter")
   private CommonReportsubsectionpart objReportsubsectionpartFooter = null;
+  @SerializedName("sReportsubsectionTitle")
+  private String sReportsubsectionTitle = null;
 
   /**
    **/
@@ -59,6 +61,17 @@ public class CommonReportsubsection {
     this.objReportsubsectionpartFooter = objReportsubsectionpartFooter;
   }
 
+  /**
+   * The title of this Reportsubsection
+   **/
+  @ApiModelProperty(value = "The title of this Reportsubsection")
+  public String getSReportsubsectionTitle() {
+    return sReportsubsectionTitle;
+  }
+  public void setSReportsubsectionTitle(String sReportsubsectionTitle) {
+    this.sReportsubsectionTitle = sReportsubsectionTitle;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -71,7 +84,8 @@ public class CommonReportsubsection {
     CommonReportsubsection commonReportsubsection = (CommonReportsubsection) o;
     return (this.objReportsubsectionpartHeader == null ? commonReportsubsection.objReportsubsectionpartHeader == null : this.objReportsubsectionpartHeader.equals(commonReportsubsection.objReportsubsectionpartHeader)) &&
         (this.objReportsubsectionpartBody == null ? commonReportsubsection.objReportsubsectionpartBody == null : this.objReportsubsectionpartBody.equals(commonReportsubsection.objReportsubsectionpartBody)) &&
-        (this.objReportsubsectionpartFooter == null ? commonReportsubsection.objReportsubsectionpartFooter == null : this.objReportsubsectionpartFooter.equals(commonReportsubsection.objReportsubsectionpartFooter));
+        (this.objReportsubsectionpartFooter == null ? commonReportsubsection.objReportsubsectionpartFooter == null : this.objReportsubsectionpartFooter.equals(commonReportsubsection.objReportsubsectionpartFooter)) &&
+        (this.sReportsubsectionTitle == null ? commonReportsubsection.sReportsubsectionTitle == null : this.sReportsubsectionTitle.equals(commonReportsubsection.sReportsubsectionTitle));
   }
 
   @Override
@@ -80,6 +94,7 @@ public class CommonReportsubsection {
     result = 31 * result + (this.objReportsubsectionpartHeader == null ? 0: this.objReportsubsectionpartHeader.hashCode());
     result = 31 * result + (this.objReportsubsectionpartBody == null ? 0: this.objReportsubsectionpartBody.hashCode());
     result = 31 * result + (this.objReportsubsectionpartFooter == null ? 0: this.objReportsubsectionpartFooter.hashCode());
+    result = 31 * result + (this.sReportsubsectionTitle == null ? 0: this.sReportsubsectionTitle.hashCode());
     return result;
   }
 
@@ -91,6 +106,7 @@ public class CommonReportsubsection {
     sb.append("  objReportsubsectionpartHeader: ").append(objReportsubsectionpartHeader).append("\n");
     sb.append("  objReportsubsectionpartBody: ").append(objReportsubsectionpartBody).append("\n");
     sb.append("  objReportsubsectionpartFooter: ").append(objReportsubsectionpartFooter).append("\n");
+    sb.append("  sReportsubsectionTitle: ").append(sReportsubsectionTitle).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

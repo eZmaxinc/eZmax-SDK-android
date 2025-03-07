@@ -13,7 +13,9 @@
 package org.openapitools.client.model;
 
 import java.util.*;
+import java.util.Map;
 import org.openapitools.client.model.CommonReportcell;
+import org.openapitools.client.model.OasAnyTypeNotMapped;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -25,6 +27,8 @@ public class CommonReportrow {
   
   @SerializedName("a_objReportcell")
   private List<CommonReportcell> aObjReportcell = null;
+  @SerializedName("objVariableobject")
+  private Map<String, OasAnyTypeNotMapped> objVariableobject = null;
   @SerializedName("iReportrowHeight")
   private Integer iReportrowHeight = null;
 
@@ -36,6 +40,17 @@ public class CommonReportrow {
   }
   public void setAObjReportcell(List<CommonReportcell> aObjReportcell) {
     this.aObjReportcell = aObjReportcell;
+  }
+
+  /**
+   * A Variable object without predefined property names
+   **/
+  @ApiModelProperty(required = true, value = "A Variable object without predefined property names")
+  public Map<String, OasAnyTypeNotMapped> getObjVariableobject() {
+    return objVariableobject;
+  }
+  public void setObjVariableobject(Map<String, OasAnyTypeNotMapped> objVariableobject) {
+    this.objVariableobject = objVariableobject;
   }
 
   /**
@@ -60,6 +75,7 @@ public class CommonReportrow {
     }
     CommonReportrow commonReportrow = (CommonReportrow) o;
     return (this.aObjReportcell == null ? commonReportrow.aObjReportcell == null : this.aObjReportcell.equals(commonReportrow.aObjReportcell)) &&
+        (this.objVariableobject == null ? commonReportrow.objVariableobject == null : this.objVariableobject.equals(commonReportrow.objVariableobject)) &&
         (this.iReportrowHeight == null ? commonReportrow.iReportrowHeight == null : this.iReportrowHeight.equals(commonReportrow.iReportrowHeight));
   }
 
@@ -67,6 +83,7 @@ public class CommonReportrow {
   public int hashCode() {
     int result = 17;
     result = 31 * result + (this.aObjReportcell == null ? 0: this.aObjReportcell.hashCode());
+    result = 31 * result + (this.objVariableobject == null ? 0: this.objVariableobject.hashCode());
     result = 31 * result + (this.iReportrowHeight == null ? 0: this.iReportrowHeight.hashCode());
     return result;
   }
@@ -77,6 +94,7 @@ public class CommonReportrow {
     sb.append("class CommonReportrow {\n");
     
     sb.append("  aObjReportcell: ").append(aObjReportcell).append("\n");
+    sb.append("  objVariableobject: ").append(objVariableobject).append("\n");
     sb.append("  iReportrowHeight: ").append(iReportrowHeight).append("\n");
     sb.append("}\n");
     return sb.toString();

@@ -19,6 +19,7 @@ import org.openapitools.client.model.CustomTimezoneWithCodeResponse;
 import org.openapitools.client.model.EnumTextvalidation;
 import org.openapitools.client.model.EzsignelementdependencyResponseCompound;
 import org.openapitools.client.model.EzsignsignaturecustomdateResponseCompound;
+import org.openapitools.client.model.EzsignsignaturepaymentdetailRequestCompound;
 import org.openapitools.client.model.FieldEEzsignsignatureAttachmentnamesource;
 import org.openapitools.client.model.FieldEEzsignsignatureConsultationtrigger;
 import org.openapitools.client.model.FieldEEzsignsignatureDependencyrequirement;
@@ -45,6 +46,8 @@ public class EzsignsignatureResponseCompound {
   private Integer fkiEzsignsigningreasonID = null;
   @SerializedName("fkiFontID")
   private Integer fkiFontID = null;
+  @SerializedName("sCurrencyDescriptionX")
+  private String sCurrencyDescriptionX = null;
   @SerializedName("sEzsignsigningreasonDescriptionX")
   private String sEzsignsigningreasonDescriptionX = null;
   @SerializedName("iEzsignpagePagenumber")
@@ -123,6 +126,8 @@ public class EzsignsignatureResponseCompound {
   private List<EzsignelementdependencyResponseCompound> aObjEzsignelementdependency = null;
   @SerializedName("objTimezone")
   private CustomTimezoneWithCodeResponse objTimezone = null;
+  @SerializedName("a_objEzsignsignaturepaymentdetail")
+  private List<EzsignsignaturepaymentdetailRequestCompound> aObjEzsignsignaturepaymentdetail = null;
 
   /**
    * The unique ID of the Ezsignsignature
@@ -183,6 +188,17 @@ public class EzsignsignatureResponseCompound {
   }
   public void setFkiFontID(Integer fkiFontID) {
     this.fkiFontID = fkiFontID;
+  }
+
+  /**
+   * The description of the Currency in the language of the requester
+   **/
+  @ApiModelProperty(value = "The description of the Currency in the language of the requester")
+  public String getSCurrencyDescriptionX() {
+    return sCurrencyDescriptionX;
+  }
+  public void setSCurrencyDescriptionX(String sCurrencyDescriptionX) {
+    this.sCurrencyDescriptionX = sCurrencyDescriptionX;
   }
 
   /**
@@ -609,6 +625,16 @@ public class EzsignsignatureResponseCompound {
     this.objTimezone = objTimezone;
   }
 
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public List<EzsignsignaturepaymentdetailRequestCompound> getAObjEzsignsignaturepaymentdetail() {
+    return aObjEzsignsignaturepaymentdetail;
+  }
+  public void setAObjEzsignsignaturepaymentdetail(List<EzsignsignaturepaymentdetailRequestCompound> aObjEzsignsignaturepaymentdetail) {
+    this.aObjEzsignsignaturepaymentdetail = aObjEzsignsignaturepaymentdetail;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -624,6 +650,7 @@ public class EzsignsignatureResponseCompound {
         (this.fkiEzsignfoldersignerassociationID == null ? ezsignsignatureResponseCompound.fkiEzsignfoldersignerassociationID == null : this.fkiEzsignfoldersignerassociationID.equals(ezsignsignatureResponseCompound.fkiEzsignfoldersignerassociationID)) &&
         (this.fkiEzsignsigningreasonID == null ? ezsignsignatureResponseCompound.fkiEzsignsigningreasonID == null : this.fkiEzsignsigningreasonID.equals(ezsignsignatureResponseCompound.fkiEzsignsigningreasonID)) &&
         (this.fkiFontID == null ? ezsignsignatureResponseCompound.fkiFontID == null : this.fkiFontID.equals(ezsignsignatureResponseCompound.fkiFontID)) &&
+        (this.sCurrencyDescriptionX == null ? ezsignsignatureResponseCompound.sCurrencyDescriptionX == null : this.sCurrencyDescriptionX.equals(ezsignsignatureResponseCompound.sCurrencyDescriptionX)) &&
         (this.sEzsignsigningreasonDescriptionX == null ? ezsignsignatureResponseCompound.sEzsignsigningreasonDescriptionX == null : this.sEzsignsigningreasonDescriptionX.equals(ezsignsignatureResponseCompound.sEzsignsigningreasonDescriptionX)) &&
         (this.iEzsignpagePagenumber == null ? ezsignsignatureResponseCompound.iEzsignpagePagenumber == null : this.iEzsignpagePagenumber.equals(ezsignsignatureResponseCompound.iEzsignpagePagenumber)) &&
         (this.iEzsignsignatureX == null ? ezsignsignatureResponseCompound.iEzsignsignatureX == null : this.iEzsignsignatureX.equals(ezsignsignatureResponseCompound.iEzsignsignatureX)) &&
@@ -662,7 +689,8 @@ public class EzsignsignatureResponseCompound {
         (this.aObjEzsignsignaturecustomdate == null ? ezsignsignatureResponseCompound.aObjEzsignsignaturecustomdate == null : this.aObjEzsignsignaturecustomdate.equals(ezsignsignatureResponseCompound.aObjEzsignsignaturecustomdate)) &&
         (this.objCreditcardtransaction == null ? ezsignsignatureResponseCompound.objCreditcardtransaction == null : this.objCreditcardtransaction.equals(ezsignsignatureResponseCompound.objCreditcardtransaction)) &&
         (this.aObjEzsignelementdependency == null ? ezsignsignatureResponseCompound.aObjEzsignelementdependency == null : this.aObjEzsignelementdependency.equals(ezsignsignatureResponseCompound.aObjEzsignelementdependency)) &&
-        (this.objTimezone == null ? ezsignsignatureResponseCompound.objTimezone == null : this.objTimezone.equals(ezsignsignatureResponseCompound.objTimezone));
+        (this.objTimezone == null ? ezsignsignatureResponseCompound.objTimezone == null : this.objTimezone.equals(ezsignsignatureResponseCompound.objTimezone)) &&
+        (this.aObjEzsignsignaturepaymentdetail == null ? ezsignsignatureResponseCompound.aObjEzsignsignaturepaymentdetail == null : this.aObjEzsignsignaturepaymentdetail.equals(ezsignsignatureResponseCompound.aObjEzsignsignaturepaymentdetail));
   }
 
   @Override
@@ -673,6 +701,7 @@ public class EzsignsignatureResponseCompound {
     result = 31 * result + (this.fkiEzsignfoldersignerassociationID == null ? 0: this.fkiEzsignfoldersignerassociationID.hashCode());
     result = 31 * result + (this.fkiEzsignsigningreasonID == null ? 0: this.fkiEzsignsigningreasonID.hashCode());
     result = 31 * result + (this.fkiFontID == null ? 0: this.fkiFontID.hashCode());
+    result = 31 * result + (this.sCurrencyDescriptionX == null ? 0: this.sCurrencyDescriptionX.hashCode());
     result = 31 * result + (this.sEzsignsigningreasonDescriptionX == null ? 0: this.sEzsignsigningreasonDescriptionX.hashCode());
     result = 31 * result + (this.iEzsignpagePagenumber == null ? 0: this.iEzsignpagePagenumber.hashCode());
     result = 31 * result + (this.iEzsignsignatureX == null ? 0: this.iEzsignsignatureX.hashCode());
@@ -712,6 +741,7 @@ public class EzsignsignatureResponseCompound {
     result = 31 * result + (this.objCreditcardtransaction == null ? 0: this.objCreditcardtransaction.hashCode());
     result = 31 * result + (this.aObjEzsignelementdependency == null ? 0: this.aObjEzsignelementdependency.hashCode());
     result = 31 * result + (this.objTimezone == null ? 0: this.objTimezone.hashCode());
+    result = 31 * result + (this.aObjEzsignsignaturepaymentdetail == null ? 0: this.aObjEzsignsignaturepaymentdetail.hashCode());
     return result;
   }
 
@@ -725,6 +755,7 @@ public class EzsignsignatureResponseCompound {
     sb.append("  fkiEzsignfoldersignerassociationID: ").append(fkiEzsignfoldersignerassociationID).append("\n");
     sb.append("  fkiEzsignsigningreasonID: ").append(fkiEzsignsigningreasonID).append("\n");
     sb.append("  fkiFontID: ").append(fkiFontID).append("\n");
+    sb.append("  sCurrencyDescriptionX: ").append(sCurrencyDescriptionX).append("\n");
     sb.append("  sEzsignsigningreasonDescriptionX: ").append(sEzsignsigningreasonDescriptionX).append("\n");
     sb.append("  iEzsignpagePagenumber: ").append(iEzsignpagePagenumber).append("\n");
     sb.append("  iEzsignsignatureX: ").append(iEzsignsignatureX).append("\n");
@@ -764,6 +795,7 @@ public class EzsignsignatureResponseCompound {
     sb.append("  objCreditcardtransaction: ").append(objCreditcardtransaction).append("\n");
     sb.append("  aObjEzsignelementdependency: ").append(aObjEzsignelementdependency).append("\n");
     sb.append("  objTimezone: ").append(objTimezone).append("\n");
+    sb.append("  aObjEzsignsignaturepaymentdetail: ").append(aObjEzsignsignaturepaymentdetail).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

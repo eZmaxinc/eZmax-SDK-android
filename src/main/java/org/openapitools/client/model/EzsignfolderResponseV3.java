@@ -73,6 +73,10 @@ public class EzsignfolderResponseV3 {
   private FieldEEzsignfolderStep eEzsignfolderStep = null;
   @SerializedName("dtEzsignfolderClose")
   private String dtEzsignfolderClose = null;
+  @SerializedName("dtEzsignfolderArchive")
+  private String dtEzsignfolderArchive = null;
+  @SerializedName("dtEzsignfolderDispose")
+  private String dtEzsignfolderDispose = null;
   @SerializedName("tEzsignfolderMessage")
   private String tEzsignfolderMessage = null;
   @SerializedName("objAudit")
@@ -342,6 +346,28 @@ public class EzsignfolderResponseV3 {
   }
 
   /**
+   * The date and time at which the Ezsignfolder was archived.
+   **/
+  @ApiModelProperty(value = "The date and time at which the Ezsignfolder was archived.")
+  public String getDtEzsignfolderArchive() {
+    return dtEzsignfolderArchive;
+  }
+  public void setDtEzsignfolderArchive(String dtEzsignfolderArchive) {
+    this.dtEzsignfolderArchive = dtEzsignfolderArchive;
+  }
+
+  /**
+   * The date and time at which the Ezsignfolder was disposed.
+   **/
+  @ApiModelProperty(value = "The date and time at which the Ezsignfolder was disposed.")
+  public String getDtEzsignfolderDispose() {
+    return dtEzsignfolderDispose;
+  }
+  public void setDtEzsignfolderDispose(String dtEzsignfolderDispose) {
+    this.dtEzsignfolderDispose = dtEzsignfolderDispose;
+  }
+
+  /**
    * A custom text message that will be added to the email sent.
    **/
   @ApiModelProperty(value = "A custom text message that will be added to the email sent.")
@@ -416,6 +442,8 @@ public class EzsignfolderResponseV3 {
         (this.dtEzsignfolderScheduleddispose == null ? ezsignfolderResponseV3.dtEzsignfolderScheduleddispose == null : this.dtEzsignfolderScheduleddispose.equals(ezsignfolderResponseV3.dtEzsignfolderScheduleddispose)) &&
         (this.eEzsignfolderStep == null ? ezsignfolderResponseV3.eEzsignfolderStep == null : this.eEzsignfolderStep.equals(ezsignfolderResponseV3.eEzsignfolderStep)) &&
         (this.dtEzsignfolderClose == null ? ezsignfolderResponseV3.dtEzsignfolderClose == null : this.dtEzsignfolderClose.equals(ezsignfolderResponseV3.dtEzsignfolderClose)) &&
+        (this.dtEzsignfolderArchive == null ? ezsignfolderResponseV3.dtEzsignfolderArchive == null : this.dtEzsignfolderArchive.equals(ezsignfolderResponseV3.dtEzsignfolderArchive)) &&
+        (this.dtEzsignfolderDispose == null ? ezsignfolderResponseV3.dtEzsignfolderDispose == null : this.dtEzsignfolderDispose.equals(ezsignfolderResponseV3.dtEzsignfolderDispose)) &&
         (this.tEzsignfolderMessage == null ? ezsignfolderResponseV3.tEzsignfolderMessage == null : this.tEzsignfolderMessage.equals(ezsignfolderResponseV3.tEzsignfolderMessage)) &&
         (this.objAudit == null ? ezsignfolderResponseV3.objAudit == null : this.objAudit.equals(ezsignfolderResponseV3.objAudit)) &&
         (this.sEzsignfolderExternalid == null ? ezsignfolderResponseV3.sEzsignfolderExternalid == null : this.sEzsignfolderExternalid.equals(ezsignfolderResponseV3.sEzsignfolderExternalid)) &&
@@ -448,6 +476,8 @@ public class EzsignfolderResponseV3 {
     result = 31 * result + (this.dtEzsignfolderScheduleddispose == null ? 0: this.dtEzsignfolderScheduleddispose.hashCode());
     result = 31 * result + (this.eEzsignfolderStep == null ? 0: this.eEzsignfolderStep.hashCode());
     result = 31 * result + (this.dtEzsignfolderClose == null ? 0: this.dtEzsignfolderClose.hashCode());
+    result = 31 * result + (this.dtEzsignfolderArchive == null ? 0: this.dtEzsignfolderArchive.hashCode());
+    result = 31 * result + (this.dtEzsignfolderDispose == null ? 0: this.dtEzsignfolderDispose.hashCode());
     result = 31 * result + (this.tEzsignfolderMessage == null ? 0: this.tEzsignfolderMessage.hashCode());
     result = 31 * result + (this.objAudit == null ? 0: this.objAudit.hashCode());
     result = 31 * result + (this.sEzsignfolderExternalid == null ? 0: this.sEzsignfolderExternalid.hashCode());
@@ -483,6 +513,8 @@ public class EzsignfolderResponseV3 {
     sb.append("  dtEzsignfolderScheduleddispose: ").append(dtEzsignfolderScheduleddispose).append("\n");
     sb.append("  eEzsignfolderStep: ").append(eEzsignfolderStep).append("\n");
     sb.append("  dtEzsignfolderClose: ").append(dtEzsignfolderClose).append("\n");
+    sb.append("  dtEzsignfolderArchive: ").append(dtEzsignfolderArchive).append("\n");
+    sb.append("  dtEzsignfolderDispose: ").append(dtEzsignfolderDispose).append("\n");
     sb.append("  tEzsignfolderMessage: ").append(tEzsignfolderMessage).append("\n");
     sb.append("  objAudit: ").append(objAudit).append("\n");
     sb.append("  sEzsignfolderExternalid: ").append(sEzsignfolderExternalid).append("\n");

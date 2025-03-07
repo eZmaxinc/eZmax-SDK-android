@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **eReportsectionHorizontalalignment** | [**EnumHorizontalalignment**](EnumHorizontalalignment.md) |  | 
 **iReportsectionColumncount** | **Integer** | The number of Reportcolumns in the Reportsection | 
 **iReportsectionWidth** | **Integer** | The combined width of all the Reportcolumns in the Reportsection | 
+**sReportsectionTitle** | **String** | The title of this Reportsection |  [optional]
 
 
 

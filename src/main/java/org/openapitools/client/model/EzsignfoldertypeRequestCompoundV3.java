@@ -114,8 +114,6 @@ public class EzsignfoldertypeRequestCompoundV3 {
   private Boolean bEzsignfoldertypeSendattachmentezsignsigner = null;
   @SerializedName("bEzsignfoldertypeSendproofezsignsigner")
   private Boolean bEzsignfoldertypeSendproofezsignsigner = null;
-  @SerializedName("bEzsignfoldertypeSendattachmentreceivecopy")
-  private Boolean bEzsignfoldertypeSendattachmentreceivecopy = null;
   @SerializedName("bEzsignfoldertypeSendattachmentuser")
   private Boolean bEzsignfoldertypeSendattachmentuser = null;
   @SerializedName("bEzsignfoldertypeSendproofuser")
@@ -635,17 +633,6 @@ public class EzsignfoldertypeRequestCompoundV3 {
   }
 
   /**
-   * Whether we send the Ezsigndocument in the email to Ezsignsigner or User when bEzsignfoldersignerassociationReceivecopy = 1
-   **/
-  @ApiModelProperty(value = "Whether we send the Ezsigndocument in the email to Ezsignsigner or User when bEzsignfoldersignerassociationReceivecopy = 1")
-  public Boolean getBEzsignfoldertypeSendattachmentreceivecopy() {
-    return bEzsignfoldertypeSendattachmentreceivecopy;
-  }
-  public void setBEzsignfoldertypeSendattachmentreceivecopy(Boolean bEzsignfoldertypeSendattachmentreceivecopy) {
-    this.bEzsignfoldertypeSendattachmentreceivecopy = bEzsignfoldertypeSendattachmentreceivecopy;
-  }
-
-  /**
    * Whether we send the Ezsigndocument in the email to User
    **/
   @ApiModelProperty(value = "Whether we send the Ezsigndocument in the email to User")
@@ -914,7 +901,6 @@ public class EzsignfoldertypeRequestCompoundV3 {
         (this.bEzsignfoldertypeSendsignedtouser == null ? ezsignfoldertypeRequestCompoundV3.bEzsignfoldertypeSendsignedtouser == null : this.bEzsignfoldertypeSendsignedtouser.equals(ezsignfoldertypeRequestCompoundV3.bEzsignfoldertypeSendsignedtouser)) &&
         (this.bEzsignfoldertypeSendattachmentezsignsigner == null ? ezsignfoldertypeRequestCompoundV3.bEzsignfoldertypeSendattachmentezsignsigner == null : this.bEzsignfoldertypeSendattachmentezsignsigner.equals(ezsignfoldertypeRequestCompoundV3.bEzsignfoldertypeSendattachmentezsignsigner)) &&
         (this.bEzsignfoldertypeSendproofezsignsigner == null ? ezsignfoldertypeRequestCompoundV3.bEzsignfoldertypeSendproofezsignsigner == null : this.bEzsignfoldertypeSendproofezsignsigner.equals(ezsignfoldertypeRequestCompoundV3.bEzsignfoldertypeSendproofezsignsigner)) &&
-        (this.bEzsignfoldertypeSendattachmentreceivecopy == null ? ezsignfoldertypeRequestCompoundV3.bEzsignfoldertypeSendattachmentreceivecopy == null : this.bEzsignfoldertypeSendattachmentreceivecopy.equals(ezsignfoldertypeRequestCompoundV3.bEzsignfoldertypeSendattachmentreceivecopy)) &&
         (this.bEzsignfoldertypeSendattachmentuser == null ? ezsignfoldertypeRequestCompoundV3.bEzsignfoldertypeSendattachmentuser == null : this.bEzsignfoldertypeSendattachmentuser.equals(ezsignfoldertypeRequestCompoundV3.bEzsignfoldertypeSendattachmentuser)) &&
         (this.bEzsignfoldertypeSendproofuser == null ? ezsignfoldertypeRequestCompoundV3.bEzsignfoldertypeSendproofuser == null : this.bEzsignfoldertypeSendproofuser.equals(ezsignfoldertypeRequestCompoundV3.bEzsignfoldertypeSendproofuser)) &&
         (this.bEzsignfoldertypeSendproofemail == null ? ezsignfoldertypeRequestCompoundV3.bEzsignfoldertypeSendproofemail == null : this.bEzsignfoldertypeSendproofemail.equals(ezsignfoldertypeRequestCompoundV3.bEzsignfoldertypeSendproofemail)) &&
@@ -982,7 +968,6 @@ public class EzsignfoldertypeRequestCompoundV3 {
     result = 31 * result + (this.bEzsignfoldertypeSendsignedtouser == null ? 0: this.bEzsignfoldertypeSendsignedtouser.hashCode());
     result = 31 * result + (this.bEzsignfoldertypeSendattachmentezsignsigner == null ? 0: this.bEzsignfoldertypeSendattachmentezsignsigner.hashCode());
     result = 31 * result + (this.bEzsignfoldertypeSendproofezsignsigner == null ? 0: this.bEzsignfoldertypeSendproofezsignsigner.hashCode());
-    result = 31 * result + (this.bEzsignfoldertypeSendattachmentreceivecopy == null ? 0: this.bEzsignfoldertypeSendattachmentreceivecopy.hashCode());
     result = 31 * result + (this.bEzsignfoldertypeSendattachmentuser == null ? 0: this.bEzsignfoldertypeSendattachmentuser.hashCode());
     result = 31 * result + (this.bEzsignfoldertypeSendproofuser == null ? 0: this.bEzsignfoldertypeSendproofuser.hashCode());
     result = 31 * result + (this.bEzsignfoldertypeSendproofemail == null ? 0: this.bEzsignfoldertypeSendproofemail.hashCode());
@@ -1053,7 +1038,6 @@ public class EzsignfoldertypeRequestCompoundV3 {
     sb.append("  bEzsignfoldertypeSendsignedtouser: ").append(bEzsignfoldertypeSendsignedtouser).append("\n");
     sb.append("  bEzsignfoldertypeSendattachmentezsignsigner: ").append(bEzsignfoldertypeSendattachmentezsignsigner).append("\n");
     sb.append("  bEzsignfoldertypeSendproofezsignsigner: ").append(bEzsignfoldertypeSendproofezsignsigner).append("\n");
-    sb.append("  bEzsignfoldertypeSendattachmentreceivecopy: ").append(bEzsignfoldertypeSendattachmentreceivecopy).append("\n");
     sb.append("  bEzsignfoldertypeSendattachmentuser: ").append(bEzsignfoldertypeSendattachmentuser).append("\n");
     sb.append("  bEzsignfoldertypeSendproofuser: ").append(bEzsignfoldertypeSendproofuser).append("\n");
     sb.append("  bEzsignfoldertypeSendproofemail: ").append(bEzsignfoldertypeSendproofemail).append("\n");

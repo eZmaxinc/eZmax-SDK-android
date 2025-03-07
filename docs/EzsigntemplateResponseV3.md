@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **pkiEzsigntemplateID** | **Integer** | The unique ID of the Ezsigntemplate | 
 **fkiEzsigntemplatedocumentID** | **Integer** | The unique ID of the Ezsigntemplatedocument |  [optional]
 **fkiEzsignfoldertypeID** | **Integer** | The unique ID of the Ezsignfoldertype. |  [optional]
+**objEzsignfoldertype** | [**CustomEzsignfoldertypeTemplateResponse**](CustomEzsignfoldertypeTemplateResponse.md) |  |  [optional]
 **fkiLanguageID** | **Integer** | The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| | 
 **fkiEzdoctemplatedocumentID** | **Integer** | The unique ID of the Ezdoctemplatedocument |  [optional]
 **sEzdoctemplatedocumentNameX** | **String** | The name of the Ezdoctemplatedocument in the language of the requester |  [optional]
