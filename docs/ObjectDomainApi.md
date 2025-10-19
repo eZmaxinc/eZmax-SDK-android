@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**domainCreateObjectV1**](ObjectDomainApi.md#domainCreateObjectV1) | **POST** /1/object/domain | Create a new Domain
 [**domainDeleteObjectV1**](ObjectDomainApi.md#domainDeleteObjectV1) | **DELETE** /1/object/domain/{pkiDomainID} | Delete an existing Domain
+[**domainGetAutocompleteV2**](ObjectDomainApi.md#domainGetAutocompleteV2) | **GET** /2/object/domain/getAutocomplete/{sSelector} | Retrieve Domain and IDs
 [**domainGetListV1**](ObjectDomainApi.md#domainGetListV1) | **GET** /1/object/domain/getList | Retrieve Domain list
 [**domainGetObjectV2**](ObjectDomainApi.md#domainGetObjectV2) | **GET** /2/object/domain/{pkiDomainID} | Retrieve an existing Domain
 
@@ -92,6 +93,58 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**DomainDeleteObjectV1Response**](DomainDeleteObjectV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## domainGetAutocompleteV2
+
+> DomainGetAutocompleteV2Response domainGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+
+Retrieve Domain and IDs
+
+Get the list of Domains to be used in a dropdown or autocomplete control.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectDomainApi;
+
+ObjectDomainApi apiInstance = new ObjectDomainApi();
+String sSelector = null; // String | The type of Domain to return
+String eFilterActive = Active; // String | Specify which results we want to display.
+String sQuery = null; // String | Allow to filter the returned results
+HeaderAcceptLanguage acceptLanguage = null; // HeaderAcceptLanguage | 
+try {
+    DomainGetAutocompleteV2Response result = apiInstance.domainGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectDomainApi#domainGetAutocompleteV2");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sSelector** | **String**| The type of Domain to return | [default to null] [enum: All, ValidEmail]
+ **eFilterActive** | **String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive]
+ **sQuery** | **String**| Allow to filter the returned results | [optional] [default to null]
+ **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [default to null] [enum: *, en, fr]
+
+### Return type
+
+[**DomainGetAutocompleteV2Response**](DomainGetAutocompleteV2Response.md)
 
 ### Authorization
 

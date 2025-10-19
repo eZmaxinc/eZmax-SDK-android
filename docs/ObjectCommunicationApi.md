@@ -4,7 +4,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**communicationGetCommunicationBodyV1**](ObjectCommunicationApi.md#communicationGetCommunicationBodyV1) | **GET** /1/object/communication/{pkiCommunicationID}/getCommunicationBody | Retrieve the communication body.
+[**communicationGetCommunicationBodyV1**](ObjectCommunicationApi.md#communicationGetCommunicationBodyV1) | **GET** /1/object/communication/{pkiCommunicationID}/getCommunicationBody | Retrieve the communication body
 [**communicationSendV1**](ObjectCommunicationApi.md#communicationSendV1) | **POST** /1/object/communication/send | Send a new Communication
 
 
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 > communicationGetCommunicationBodyV1(pkiCommunicationID)
 
-Retrieve the communication body.
+Retrieve the communication body
 
 This endpoint returns the communication body.
 

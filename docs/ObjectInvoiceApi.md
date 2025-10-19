@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**invoiceGetCommunicationListV1**](ObjectInvoiceApi.md#invoiceGetCommunicationListV1) | **GET** /1/object/invoice/{pkiInvoiceID}/getCommunicationList | Retrieve Communication list
 [**invoiceGetCommunicationrecipientsV1**](ObjectInvoiceApi.md#invoiceGetCommunicationrecipientsV1) | **GET** /1/object/invoice/{pkiInvoiceID}/getCommunicationrecipients | Retrieve Invoice&#39;s Communicationrecipient
 [**invoiceGetCommunicationsendersV1**](ObjectInvoiceApi.md#invoiceGetCommunicationsendersV1) | **GET** /1/object/invoice/{pkiInvoiceID}/getCommunicationsenders | Retrieve Invoice&#39;s Communicationsender
+[**invoiceImportIntoEDMV1**](ObjectInvoiceApi.md#invoiceImportIntoEDMV1) | **POST** /1/object/invoice/{pkiInvoiceID}/importIntoEDM | Import attachments into the Invoice
 
 
 
@@ -239,5 +240,53 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## invoiceImportIntoEDMV1
+
+> InvoiceImportIntoEDMV1Response invoiceImportIntoEDMV1(pkiInvoiceID, invoiceImportIntoEDMV1Request)
+
+Import attachments into the Invoice
+
+
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectInvoiceApi;
+
+ObjectInvoiceApi apiInstance = new ObjectInvoiceApi();
+Integer pkiInvoiceID = null; // Integer | 
+InvoiceImportIntoEDMV1Request invoiceImportIntoEDMV1Request = new InvoiceImportIntoEDMV1Request(); // InvoiceImportIntoEDMV1Request | 
+try {
+    InvoiceImportIntoEDMV1Response result = apiInstance.invoiceImportIntoEDMV1(pkiInvoiceID, invoiceImportIntoEDMV1Request);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectInvoiceApi#invoiceImportIntoEDMV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiInvoiceID** | **Integer**|  | [default to null]
+ **invoiceImportIntoEDMV1Request** | [**InvoiceImportIntoEDMV1Request**](InvoiceImportIntoEDMV1Request.md)|  |
+
+### Return type
+
+[**InvoiceImportIntoEDMV1Response**](InvoiceImportIntoEDMV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
 - **Accept**: application/json
 

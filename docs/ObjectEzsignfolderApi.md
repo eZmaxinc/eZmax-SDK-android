@@ -15,6 +15,7 @@ Method | HTTP request | Description
 [**ezsignfolderEditObjectV3**](ObjectEzsignfolderApi.md#ezsignfolderEditObjectV3) | **PUT** /3/object/ezsignfolder/{pkiEzsignfolderID} | Edit an existing Ezsignfolder
 [**ezsignfolderEndPrematurelyV1**](ObjectEzsignfolderApi.md#ezsignfolderEndPrematurelyV1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/endPrematurely | End prematurely
 [**ezsignfolderGetActionableElementsV1**](ObjectEzsignfolderApi.md#ezsignfolderGetActionableElementsV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements | Retrieve actionable elements for the Ezsignfolder
+[**ezsignfolderGetActionableElementsV2**](ObjectEzsignfolderApi.md#ezsignfolderGetActionableElementsV2) | **GET** /2/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements | Retrieve actionable elements for the Ezsignfolder
 [**ezsignfolderGetAttachmentCountV1**](ObjectEzsignfolderApi.md#ezsignfolderGetAttachmentCountV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getAttachmentCount | Retrieve Attachment count
 [**ezsignfolderGetAttachmentsV1**](ObjectEzsignfolderApi.md#ezsignfolderGetAttachmentsV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getAttachments | Retrieve Ezsignfolder&#39;s Attachments
 [**ezsignfolderGetCommunicationCountV1**](ObjectEzsignfolderApi.md#ezsignfolderGetCommunicationCountV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationCount | Retrieve Communication count
@@ -22,6 +23,7 @@ Method | HTTP request | Description
 [**ezsignfolderGetCommunicationrecipientsV1**](ObjectEzsignfolderApi.md#ezsignfolderGetCommunicationrecipientsV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationrecipients | Retrieve Ezsignfolder&#39;s Communicationrecipient
 [**ezsignfolderGetCommunicationsendersV1**](ObjectEzsignfolderApi.md#ezsignfolderGetCommunicationsendersV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationsenders | Retrieve Ezsignfolder&#39;s Communicationsender
 [**ezsignfolderGetEzsigndocumentsV1**](ObjectEzsignfolderApi.md#ezsignfolderGetEzsigndocumentsV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments | Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments
+[**ezsignfolderGetEzsigndocumentsV2**](ObjectEzsignfolderApi.md#ezsignfolderGetEzsigndocumentsV2) | **GET** /2/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments | Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments
 [**ezsignfolderGetEzsignfoldersignerassociationsV1**](ObjectEzsignfolderApi.md#ezsignfolderGetEzsignfoldersignerassociationsV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociations | Retrieve an existing Ezsignfolder&#39;s Ezsignfoldersignerassociations
 [**ezsignfolderGetEzsignsignaturesAutomaticV1**](ObjectEzsignfolderApi.md#ezsignfolderGetEzsignsignaturesAutomaticV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignsignaturesAutomatic | Retrieve an existing Ezsignfolder&#39;s automatic Ezsignsignatures
 [**ezsignfolderGetFormsDataV1**](ObjectEzsignfolderApi.md#ezsignfolderGetFormsDataV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData | Retrieve an existing Ezsignfolder&#39;s forms data
@@ -30,7 +32,8 @@ Method | HTTP request | Description
 [**ezsignfolderGetObjectV2**](ObjectEzsignfolderApi.md#ezsignfolderGetObjectV2) | **GET** /2/object/ezsignfolder/{pkiEzsignfolderID} | Retrieve an existing Ezsignfolder
 [**ezsignfolderGetObjectV3**](ObjectEzsignfolderApi.md#ezsignfolderGetObjectV3) | **GET** /3/object/ezsignfolder/{pkiEzsignfolderID} | Retrieve an existing Ezsignfolder
 [**ezsignfolderImportEzsignfoldersignerassociationsV1**](ObjectEzsignfolderApi.md#ezsignfolderImportEzsignfoldersignerassociationsV1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsignfoldersignerassociations | Import an existing Ezsignfoldersignerassociation into this Ezsignfolder
-[**ezsignfolderImportEzsigntemplatepackageV1**](ObjectEzsignfolderApi.md#ezsignfolderImportEzsigntemplatepackageV1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage | Import an Ezsigntemplatepackage in the Ezsignfolder.
+[**ezsignfolderImportEzsigntemplatepackageV1**](ObjectEzsignfolderApi.md#ezsignfolderImportEzsigntemplatepackageV1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage | Import an Ezsigntemplatepackage in the Ezsignfolder
+[**ezsignfolderImportEzsigntemplatepackageV2**](ObjectEzsignfolderApi.md#ezsignfolderImportEzsigntemplatepackageV2) | **POST** /2/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage | Import an Ezsigntemplatepackage in the Ezsignfolder
 [**ezsignfolderReorderV1**](ObjectEzsignfolderApi.md#ezsignfolderReorderV1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/reorder | Reorder Ezsigndocuments in the Ezsignfolder
 [**ezsignfolderReorderV2**](ObjectEzsignfolderApi.md#ezsignfolderReorderV2) | **POST** /2/object/ezsignfolder/{pkiEzsignfolderID}/reorder | Reorder Ezsigndocuments in the Ezsignfolder
 [**ezsignfolderSendV1**](ObjectEzsignfolderApi.md#ezsignfolderSendV1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/send | Send the Ezsignfolder to the signatories for signature
@@ -130,7 +133,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/zip, application/json
+- **Accept**: application/zip, application/pdf, application/json
 
 
 ## ezsignfolderCreateObjectV1
@@ -511,7 +514,7 @@ Name | Type | Description  | Notes
 
 Retrieve actionable elements for the Ezsignfolder
 
-Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process.    Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
 
 ### Example
 
@@ -540,6 +543,52 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsignfolderGetActionableElementsV1Response**](EzsignfolderGetActionableElementsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## ezsignfolderGetActionableElementsV2
+
+> EzsignfolderGetActionableElementsV2Response ezsignfolderGetActionableElementsV2(pkiEzsignfolderID)
+
+Retrieve actionable elements for the Ezsignfolder
+
+Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectEzsignfolderApi;
+
+ObjectEzsignfolderApi apiInstance = new ObjectEzsignfolderApi();
+Integer pkiEzsignfolderID = null; // Integer | 
+try {
+    EzsignfolderGetActionableElementsV2Response result = apiInstance.ezsignfolderGetActionableElementsV2(pkiEzsignfolderID);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectEzsignfolderApi#ezsignfolderGetActionableElementsV2");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignfolderID** | **Integer**|  | [default to null]
+
+### Return type
+
+[**EzsignfolderGetActionableElementsV2Response**](EzsignfolderGetActionableElementsV2Response.md)
 
 ### Authorization
 
@@ -833,7 +882,7 @@ Name | Type | Description  | Notes
 
 Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments
 
-
+Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
 
 ### Example
 
@@ -862,6 +911,52 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsignfolderGetEzsigndocumentsV1Response**](EzsignfolderGetEzsigndocumentsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## ezsignfolderGetEzsigndocumentsV2
+
+> EzsignfolderGetEzsigndocumentsV2Response ezsignfolderGetEzsigndocumentsV2(pkiEzsignfolderID)
+
+Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments
+
+
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectEzsignfolderApi;
+
+ObjectEzsignfolderApi apiInstance = new ObjectEzsignfolderApi();
+Integer pkiEzsignfolderID = null; // Integer | 
+try {
+    EzsignfolderGetEzsigndocumentsV2Response result = apiInstance.ezsignfolderGetEzsigndocumentsV2(pkiEzsignfolderID);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectEzsignfolderApi#ezsignfolderGetEzsigndocumentsV2");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignfolderID** | **Integer**|  | [default to null]
+
+### Return type
+
+[**EzsignfolderGetEzsigndocumentsV2Response**](EzsignfolderGetEzsigndocumentsV2Response.md)
 
 ### Authorization
 
@@ -1045,7 +1140,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **eOrderBy** | **String**| Specify how you want the results to be sorted | [optional] [default to null] [enum: pkiEzsignfolderID_ASC, pkiEzsignfolderID_DESC, sEzsignfolderDescription_ASC, sEzsignfolderDescription_DESC, dtCreatedDate_ASC, dtCreatedDate_DESC, fkiEzsignfoldertypeID_ASC, fkiEzsignfoldertypeID_DESC, sEzsignfoldertypeNameX_ASC, sEzsignfoldertypeNameX_DESC, eEzsignfolderStep_ASC, eEzsignfolderStep_DESC, dtEzsignfolderSentdate_ASC, dtEzsignfolderSentdate_DESC, dtEzsignfolderDuedate_ASC, dtEzsignfolderDuedate_DESC, iEzsigndocument_ASC, iEzsigndocument_DESC, iEzsigndocumentEdm_ASC, iEzsigndocumentEdm_DESC, iEzsignsignature_ASC, iEzsignsignature_DESC, iEzsignsignatureSigned_ASC, iEzsignsignatureSigned_DESC, iEzsignformfieldgroup_ASC, iEzsignformfieldgroup_DESC, iEzsignformfieldgroupCompleted_ASC, iEzsignformfieldgroupCompleted_DESC, dEzsignfolderCompletedpercentage_ASC, dEzsignfolderCompletedpercentage_DESC, dEzsignfolderFormcompletedpercentage_ASC, dEzsignfolderFormcompletedpercentage_DESC, dEzsignfolderSignaturecompletedpercentage_ASC, dEzsignfolderSignaturecompletedpercentagee_DESC]
+ **eOrderBy** | **String**| Specify how you want the results to be sorted | [optional] [default to null] [enum: pkiEzsignfolderID_ASC, pkiEzsignfolderID_DESC, sEzsignfolderDescription_ASC, sEzsignfolderDescription_DESC, dtCreatedDate_ASC, dtCreatedDate_DESC, fkiEzsignfoldertypeID_ASC, fkiEzsignfoldertypeID_DESC, sEzsignfoldertypeNameX_ASC, sEzsignfoldertypeNameX_DESC, eEzsignfolderStep_ASC, eEzsignfolderStep_DESC, eEzsignfolderCompletion_ASC, eEzsignfolderCompletion_DESC, dtEzsignfolderSentdate_ASC, dtEzsignfolderSentdate_DESC, dtEzsignfolderDuedate_ASC, dtEzsignfolderDuedate_DESC, iEzsigndocument_ASC, iEzsigndocument_DESC, iEzsigndocumentEdm_ASC, iEzsigndocumentEdm_DESC, iEzsignsignature_ASC, iEzsignsignature_DESC, iEzsignsignatureSigned_ASC, iEzsignsignatureSigned_DESC, iEzsignformfieldgroup_ASC, iEzsignformfieldgroup_DESC, iEzsignformfieldgroupCompleted_ASC, iEzsignformfieldgroupCompleted_DESC, dEzsignfolderCompletedpercentage_ASC, dEzsignfolderCompletedpercentage_DESC, dEzsignfolderFormcompletedpercentage_ASC, dEzsignfolderFormcompletedpercentage_DESC, dEzsignfolderSignaturecompletedpercentage_ASC, dEzsignfolderSignaturecompletedpercentagee_DESC]
  **iRowMax** | **Integer**|  | [optional] [default to null]
  **iRowOffset** | **Integer**|  | [optional] [default to 0]
  **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [default to null] [enum: *, en, fr]
@@ -1253,9 +1348,9 @@ Name | Type | Description  | Notes
 
 > EzsignfolderImportEzsigntemplatepackageV1Response ezsignfolderImportEzsigntemplatepackageV1(pkiEzsignfolderID, ezsignfolderImportEzsigntemplatepackageV1Request)
 
-Import an Ezsigntemplatepackage in the Ezsignfolder.
+Import an Ezsigntemplatepackage in the Ezsignfolder
 
-This endpoint imports all of the Ezsigntemplates from the Ezsigntemplatepackage into the Ezsignfolder as Ezsigndocuments.  This allows to automatically apply all the Ezsigntemplateformfieldgroups and Ezsigntemplatesignatures on the newly created Ezsigndocuments in a single step.
+This endpoint imports all of the Ezsigntemplates from the Ezsigntemplatepackage into the Ezsignfolder as Ezsigndocuments.  This allows to automatically apply all the Ezsigntemplateformfieldgroups and Ezsigntemplatesignatures on the newly created Ezsigndocuments in a single step.  Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
 
 ### Example
 
@@ -1286,6 +1381,54 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsignfolderImportEzsigntemplatepackageV1Response**](EzsignfolderImportEzsigntemplatepackageV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## ezsignfolderImportEzsigntemplatepackageV2
+
+> EzsignfolderImportEzsigntemplatepackageV2Response ezsignfolderImportEzsigntemplatepackageV2(pkiEzsignfolderID, ezsignfolderImportEzsigntemplatepackageV2Request)
+
+Import an Ezsigntemplatepackage in the Ezsignfolder
+
+This endpoint imports all of the Ezsigntemplates from the Ezsigntemplatepackage into the Ezsignfolder as Ezsigndocuments.  This allows to automatically apply all the Ezsigntemplateformfieldgroups and Ezsigntemplatesignatures on the newly created Ezsigndocuments in a single step.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectEzsignfolderApi;
+
+ObjectEzsignfolderApi apiInstance = new ObjectEzsignfolderApi();
+Integer pkiEzsignfolderID = null; // Integer | 
+EzsignfolderImportEzsigntemplatepackageV2Request ezsignfolderImportEzsigntemplatepackageV2Request = new EzsignfolderImportEzsigntemplatepackageV2Request(); // EzsignfolderImportEzsigntemplatepackageV2Request | 
+try {
+    EzsignfolderImportEzsigntemplatepackageV2Response result = apiInstance.ezsignfolderImportEzsigntemplatepackageV2(pkiEzsignfolderID, ezsignfolderImportEzsigntemplatepackageV2Request);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectEzsignfolderApi#ezsignfolderImportEzsigntemplatepackageV2");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignfolderID** | **Integer**|  | [default to null]
+ **ezsignfolderImportEzsigntemplatepackageV2Request** | [**EzsignfolderImportEzsigntemplatepackageV2Request**](EzsignfolderImportEzsigntemplatepackageV2Request.md)|  |
+
+### Return type
+
+[**EzsignfolderImportEzsigntemplatepackageV2Response**](EzsignfolderImportEzsigntemplatepackageV2Response.md)
 
 ### Authorization
 

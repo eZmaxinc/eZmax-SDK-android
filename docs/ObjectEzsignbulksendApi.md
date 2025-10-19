@@ -6,14 +6,18 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ezsignbulksendCreateEzsignbulksendtransmissionV2**](ObjectEzsignbulksendApi.md#ezsignbulksendCreateEzsignbulksendtransmissionV2) | **POST** /2/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission | Create a new Ezsignbulksendtransmission in the Ezsignbulksend
 [**ezsignbulksendCreateObjectV1**](ObjectEzsignbulksendApi.md#ezsignbulksendCreateObjectV1) | **POST** /1/object/ezsignbulksend | Create a new Ezsignbulksend
+[**ezsignbulksendCreateObjectV2**](ObjectEzsignbulksendApi.md#ezsignbulksendCreateObjectV2) | **POST** /2/object/ezsignbulksend | Create a new Ezsignbulksend
 [**ezsignbulksendDeleteObjectV1**](ObjectEzsignbulksendApi.md#ezsignbulksendDeleteObjectV1) | **DELETE** /1/object/ezsignbulksend/{pkiEzsignbulksendID} | Delete an existing Ezsignbulksend
 [**ezsignbulksendEditObjectV1**](ObjectEzsignbulksendApi.md#ezsignbulksendEditObjectV1) | **PUT** /1/object/ezsignbulksend/{pkiEzsignbulksendID} | Edit an existing Ezsignbulksend
+[**ezsignbulksendEditObjectV2**](ObjectEzsignbulksendApi.md#ezsignbulksendEditObjectV2) | **PUT** /2/object/ezsignbulksend/{pkiEzsignbulksendID} | Edit an existing Ezsignbulksend
+[**ezsignbulksendGetBatchFileV1**](ObjectEzsignbulksendApi.md#ezsignbulksendGetBatchFileV1) | **GET** /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getBatchFile | Retrieve file to download documents in batch
 [**ezsignbulksendGetCsvTemplateV1**](ObjectEzsignbulksendApi.md#ezsignbulksendGetCsvTemplateV1) | **GET** /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getCsvTemplate | Retrieve an existing Ezsignbulksend&#39;s empty Csv template
 [**ezsignbulksendGetEzsignbulksendtransmissionsV1**](ObjectEzsignbulksendApi.md#ezsignbulksendGetEzsignbulksendtransmissionsV1) | **GET** /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getEzsignbulksendtransmissions | Retrieve an existing Ezsignbulksend&#39;s Ezsignbulksendtransmissions
 [**ezsignbulksendGetEzsignsignaturesAutomaticV1**](ObjectEzsignbulksendApi.md#ezsignbulksendGetEzsignsignaturesAutomaticV1) | **GET** /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getEzsignsignaturesAutomatic | Retrieve an existing Ezsignbulksend&#39;s automatic Ezsignsignatures
 [**ezsignbulksendGetFormsDataV1**](ObjectEzsignbulksendApi.md#ezsignbulksendGetFormsDataV1) | **GET** /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getFormsData | Retrieve an existing Ezsignbulksend&#39;s forms data
 [**ezsignbulksendGetListV1**](ObjectEzsignbulksendApi.md#ezsignbulksendGetListV1) | **GET** /1/object/ezsignbulksend/getList | Retrieve Ezsignbulksend list
 [**ezsignbulksendGetObjectV2**](ObjectEzsignbulksendApi.md#ezsignbulksendGetObjectV2) | **GET** /2/object/ezsignbulksend/{pkiEzsignbulksendID} | Retrieve an existing Ezsignbulksend
+[**ezsignbulksendGetObjectV3**](ObjectEzsignbulksendApi.md#ezsignbulksendGetObjectV3) | **GET** /3/object/ezsignbulksend/{pkiEzsignbulksendID} | Retrieve an existing Ezsignbulksend
 [**ezsignbulksendReorderV1**](ObjectEzsignbulksendApi.md#ezsignbulksendReorderV1) | **POST** /1/object/ezsignbulksend/{pkiEzsignbulksendID}/reorder | Reorder Ezsignbulksenddocumentmappings in the Ezsignbulksend
 
 
@@ -99,6 +103,52 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsignbulksendCreateObjectV1Response**](EzsignbulksendCreateObjectV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## ezsignbulksendCreateObjectV2
+
+> EzsignbulksendCreateObjectV2Response ezsignbulksendCreateObjectV2(ezsignbulksendCreateObjectV2Request)
+
+Create a new Ezsignbulksend
+
+The endpoint allows to create one or many elements at once.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectEzsignbulksendApi;
+
+ObjectEzsignbulksendApi apiInstance = new ObjectEzsignbulksendApi();
+EzsignbulksendCreateObjectV2Request ezsignbulksendCreateObjectV2Request = new EzsignbulksendCreateObjectV2Request(); // EzsignbulksendCreateObjectV2Request | 
+try {
+    EzsignbulksendCreateObjectV2Response result = apiInstance.ezsignbulksendCreateObjectV2(ezsignbulksendCreateObjectV2Request);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectEzsignbulksendApi#ezsignbulksendCreateObjectV2");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ezsignbulksendCreateObjectV2Request** | [**EzsignbulksendCreateObjectV2Request**](EzsignbulksendCreateObjectV2Request.md)|  |
+
+### Return type
+
+[**EzsignbulksendCreateObjectV2Response**](EzsignbulksendCreateObjectV2Response.md)
 
 ### Authorization
 
@@ -202,6 +252,106 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json
 - **Accept**: application/json
+
+
+## ezsignbulksendEditObjectV2
+
+> EzsignbulksendEditObjectV2Response ezsignbulksendEditObjectV2(pkiEzsignbulksendID, ezsignbulksendEditObjectV2Request)
+
+Edit an existing Ezsignbulksend
+
+
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectEzsignbulksendApi;
+
+ObjectEzsignbulksendApi apiInstance = new ObjectEzsignbulksendApi();
+Integer pkiEzsignbulksendID = null; // Integer | 
+EzsignbulksendEditObjectV2Request ezsignbulksendEditObjectV2Request = new EzsignbulksendEditObjectV2Request(); // EzsignbulksendEditObjectV2Request | 
+try {
+    EzsignbulksendEditObjectV2Response result = apiInstance.ezsignbulksendEditObjectV2(pkiEzsignbulksendID, ezsignbulksendEditObjectV2Request);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectEzsignbulksendApi#ezsignbulksendEditObjectV2");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignbulksendID** | **Integer**|  | [default to null]
+ **ezsignbulksendEditObjectV2Request** | [**EzsignbulksendEditObjectV2Request**](EzsignbulksendEditObjectV2Request.md)|  |
+
+### Return type
+
+[**EzsignbulksendEditObjectV2Response**](EzsignbulksendEditObjectV2Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## ezsignbulksendGetBatchFileV1
+
+> File ezsignbulksendGetBatchFileV1(pkiEzsignbulksendID, bIncludeSigned, bIncludeAttachment, bIncludeProofdocument, bIncludeProof)
+
+Retrieve file to download documents in batch
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectEzsignbulksendApi;
+
+ObjectEzsignbulksendApi apiInstance = new ObjectEzsignbulksendApi();
+Integer pkiEzsignbulksendID = null; // Integer | 
+Boolean bIncludeSigned = null; // Boolean | Include final document once all signatures were applied
+Boolean bIncludeAttachment = null; // Boolean | Include attached files in signatures
+Boolean bIncludeProofdocument = null; // Boolean | Include the evidence report
+Boolean bIncludeProof = null; // Boolean | include the complete evidence archive including all of the above and more
+try {
+    File result = apiInstance.ezsignbulksendGetBatchFileV1(pkiEzsignbulksendID, bIncludeSigned, bIncludeAttachment, bIncludeProofdocument, bIncludeProof);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectEzsignbulksendApi#ezsignbulksendGetBatchFileV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignbulksendID** | **Integer**|  | [default to null]
+ **bIncludeSigned** | **Boolean**| Include final document once all signatures were applied | [optional] [default to null]
+ **bIncludeAttachment** | **Boolean**| Include attached files in signatures | [optional] [default to null]
+ **bIncludeProofdocument** | **Boolean**| Include the evidence report | [optional] [default to null]
+ **bIncludeProof** | **Boolean**| include the complete evidence archive including all of the above and more | [optional] [default to null]
+
+### Return type
+
+[**File**](File.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/xml, application/json
 
 
 ## ezsignbulksendGetCsvTemplateV1
@@ -479,6 +629,52 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsignbulksendGetObjectV2Response**](EzsignbulksendGetObjectV2Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## ezsignbulksendGetObjectV3
+
+> EzsignbulksendGetObjectV3Response ezsignbulksendGetObjectV3(pkiEzsignbulksendID)
+
+Retrieve an existing Ezsignbulksend
+
+
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectEzsignbulksendApi;
+
+ObjectEzsignbulksendApi apiInstance = new ObjectEzsignbulksendApi();
+Integer pkiEzsignbulksendID = null; // Integer | 
+try {
+    EzsignbulksendGetObjectV3Response result = apiInstance.ezsignbulksendGetObjectV3(pkiEzsignbulksendID);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectEzsignbulksendApi#ezsignbulksendGetObjectV3");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignbulksendID** | **Integer**|  | [default to null]
+
+### Return type
+
+[**EzsignbulksendGetObjectV3Response**](EzsignbulksendGetObjectV3Response.md)
 
 ### Authorization
 

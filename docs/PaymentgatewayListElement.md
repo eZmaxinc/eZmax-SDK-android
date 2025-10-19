@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **fkiCreditcardmerchantID** | **Integer** | The unique ID of the Creditcardmerchant | 
 **ePaymentgatewayProcessor** | [**FieldEPaymentgatewayProcessor**](FieldEPaymentgatewayProcessor.md) |  | 
 **sPaymentgatewayDescriptionX** | **String** | The description of the Paymentgateway in the language of the requester | 
+**bPaymentgatewayIsactive** | **Boolean** | Whether the Paymentgateway is active or not | 
 
 
 

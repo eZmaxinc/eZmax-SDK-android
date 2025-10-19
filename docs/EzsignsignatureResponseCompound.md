@@ -11,7 +11,10 @@ Name | Type | Description | Notes
 **fkiEzsignfoldersignerassociationID** | **Integer** | The unique ID of the Ezsignfoldersignerassociation | 
 **fkiEzsignsigningreasonID** | **Integer** | The unique ID of the Ezsignsigningreason |  [optional]
 **fkiFontID** | **Integer** | The unique ID of the Font |  [optional]
+**fkiPaymentgatewayID** | **Integer** | The unique ID of the Paymentgateway |  [optional]
 **sCurrencyDescriptionX** | **String** | The description of the Currency in the language of the requester |  [optional]
+**dEzsignsignatureCreditcardamount** | **String** | The amount of the Creditcard signature |  [optional]
+**sEzsignsignatureCreditcardamountdescription** | **String** | The description of the Creditcard signature |  [optional]
 **sEzsignsigningreasonDescriptionX** | **String** | The description of the Ezsignsigningreason in the language of the requester |  [optional]
 **iEzsignpagePagenumber** | **Integer** | The page number in the Ezsigndocument | 
 **iEzsignsignatureX** | **Integer** | The X coordinate (Horizontal) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate. | 
@@ -51,7 +54,7 @@ Name | Type | Description | Notes
 **objCreditcardtransaction** | [**CustomCreditcardtransactionResponse**](CustomCreditcardtransactionResponse.md) |  |  [optional]
 **aObjEzsignelementdependency** | [**List&lt;EzsignelementdependencyResponseCompound&gt;**](EzsignelementdependencyResponseCompound.md) |  |  [optional]
 **objTimezone** | [**CustomTimezoneWithCodeResponse**](CustomTimezoneWithCodeResponse.md) |  |  [optional]
-**aObjEzsignsignaturepaymentdetail** | [**List&lt;EzsignsignaturepaymentdetailRequestCompound&gt;**](EzsignsignaturepaymentdetailRequestCompound.md) |  |  [optional]
+**aObjEzsignsignaturepaymentdetail** | [**List&lt;EzsignsignaturepaymentdetailResponseCompound&gt;**](EzsignsignaturepaymentdetailResponseCompound.md) |  |  [optional]
 
 
 

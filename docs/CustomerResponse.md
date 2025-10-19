@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **fkiCompanyID** | **Integer** | The unique ID of the Company | 
 **fkiCustomergroupID** | **Integer** | The unique ID of the Customergroup | 
 **sCustomerName** | **String** | The name of the Customer | 
+**sCustomerNote** | **String** | A note for the Customer |  [optional]
 **fkiContactinformationsID** | **Integer** | The unique ID of the Contactinformations | 
 **fkiContactcontainerID** | **Integer** | The unique ID of the Contactcontainer | 
 **fkiImageID** | **Integer** | The unique ID of the Image | 

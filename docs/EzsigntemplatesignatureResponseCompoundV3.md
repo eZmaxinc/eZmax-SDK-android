@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **fkiEzsigntemplatedocumentID** | **Integer** | The unique ID of the Ezsigntemplatedocument | 
 **fkiEzsigntemplatesignerID** | **Integer** | The unique ID of the Ezsigntemplatesigner | 
 **fkiEzsigntemplatesignerIDValidation** | **Integer** | The unique ID of the Ezsigntemplatesigner |  [optional]
+**fkiPaymentgatewayID** | **Integer** | The unique ID of the Paymentgateway |  [optional]
 **bEzsigntemplatesignatureHandwritten** | **Boolean** | Whether the Ezsigntemplatesignature must be handwritten or not when eEzsigntemplatesignatureType &#x3D; Signature. |  [optional]
 **bEzsigntemplatesignatureReason** | **Boolean** | Whether the Ezsigntemplatesignature must include a reason or not when eEzsigntemplatesignatureType &#x3D; Signature. |  [optional]
 **eEzsigntemplatesignaturePositioning** | [**FieldEEzsigntemplatesignaturePositioning**](FieldEEzsigntemplatesignaturePositioning.md) |  |  [optional]
@@ -38,9 +39,12 @@ Name | Type | Description | Notes
 **iEzsigntemplatesignaturePositioningoffsetx** | **Integer** | The offset X  This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates** |  [optional]
 **iEzsigntemplatesignaturePositioningoffsety** | **Integer** | The offset Y  This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates** |  [optional]
 **eEzsigntemplatesignaturePositioningoccurence** | [**FieldEEzsigntemplatesignaturePositioningoccurence**](FieldEEzsigntemplatesignaturePositioningoccurence.md) |  |  [optional]
+**sEzsigntemplatesignatureCreditcardamountdescription** | **String** | The description of the Creditcard signature |  [optional]
+**dEzsigntemplatesignatureCreditcardamount** | **String** | The amount of the Creditcard signature |  [optional]
 **bEzsigntemplatesignatureCustomdate** | **Boolean** | Whether the Ezsigntemplatesignature has a custom date format or not. (Only possible when eEzsigntemplatesignatureType is **Name** or **Handwritten**) |  [optional]
 **aObjEzsigntemplatesignaturecustomdate** | [**List&lt;EzsigntemplatesignaturecustomdateResponseCompoundV2&gt;**](EzsigntemplatesignaturecustomdateResponseCompoundV2.md) | An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsigntemplatesignatureCustomdate is true.  Use an empty array if you don&#39;t want to have a date at all. |  [optional]
 **aObjEzsigntemplateelementdependency** | [**List&lt;EzsigntemplateelementdependencyResponseCompound&gt;**](EzsigntemplateelementdependencyResponseCompound.md) |  |  [optional]
+**aObjEzsigntemplatesignaturepaymentdetail** | [**List&lt;EzsigntemplatesignaturepaymentdetailResponseCompound&gt;**](EzsigntemplatesignaturepaymentdetailResponseCompound.md) |  |  [optional]
 
 
 

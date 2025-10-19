@@ -4,11 +4,64 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**ezsignbulksendtransmissionGetBatchFileV1**](ObjectEzsignbulksendtransmissionApi.md#ezsignbulksendtransmissionGetBatchFileV1) | **GET** /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getBatchFile | Retrieve file to download documents in batch
 [**ezsignbulksendtransmissionGetCsvErrorsV1**](ObjectEzsignbulksendtransmissionApi.md#ezsignbulksendtransmissionGetCsvErrorsV1) | **GET** /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getCsvErrors | Retrieve an existing Ezsignbulksendtransmission&#39;s Csv containing errors
 [**ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1**](ObjectEzsignbulksendtransmissionApi.md#ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1) | **GET** /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getEzsignsignaturesAutomatic | Retrieve an existing Ezsignbulksendtransmission&#39;s automatic Ezsignsignatures
 [**ezsignbulksendtransmissionGetFormsDataV1**](ObjectEzsignbulksendtransmissionApi.md#ezsignbulksendtransmissionGetFormsDataV1) | **GET** /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getFormsData | Retrieve an existing Ezsignbulksendtransmission&#39;s forms data
 [**ezsignbulksendtransmissionGetObjectV2**](ObjectEzsignbulksendtransmissionApi.md#ezsignbulksendtransmissionGetObjectV2) | **GET** /2/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID} | Retrieve an existing Ezsignbulksendtransmission
 
+
+
+## ezsignbulksendtransmissionGetBatchFileV1
+
+> File ezsignbulksendtransmissionGetBatchFileV1(pkiEzsignbulksendtransmissionID, bIncludeSigned, bIncludeAttachment, bIncludeProofdocument, bIncludeProof)
+
+Retrieve file to download documents in batch
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectEzsignbulksendtransmissionApi;
+
+ObjectEzsignbulksendtransmissionApi apiInstance = new ObjectEzsignbulksendtransmissionApi();
+Integer pkiEzsignbulksendtransmissionID = null; // Integer | 
+Boolean bIncludeSigned = null; // Boolean | Include final document once all signatures were applied
+Boolean bIncludeAttachment = null; // Boolean | Include attached files in signatures
+Boolean bIncludeProofdocument = null; // Boolean | Include the evidence report
+Boolean bIncludeProof = null; // Boolean | include the complete evidence archive including all of the above and more
+try {
+    File result = apiInstance.ezsignbulksendtransmissionGetBatchFileV1(pkiEzsignbulksendtransmissionID, bIncludeSigned, bIncludeAttachment, bIncludeProofdocument, bIncludeProof);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectEzsignbulksendtransmissionApi#ezsignbulksendtransmissionGetBatchFileV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignbulksendtransmissionID** | **Integer**|  | [default to null]
+ **bIncludeSigned** | **Boolean**| Include final document once all signatures were applied | [optional] [default to null]
+ **bIncludeAttachment** | **Boolean**| Include attached files in signatures | [optional] [default to null]
+ **bIncludeProofdocument** | **Boolean**| Include the evidence report | [optional] [default to null]
+ **bIncludeProof** | **Boolean**| include the complete evidence archive including all of the above and more | [optional] [default to null]
+
+### Return type
+
+[**File**](File.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/xml, application/json
 
 
 ## ezsignbulksendtransmissionGetCsvErrorsV1

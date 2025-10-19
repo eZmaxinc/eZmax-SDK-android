@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**tranqcontractGetCommunicationListV1**](ObjectTranqcontractApi.md#tranqcontractGetCommunicationListV1) | **GET** /1/object/tranqcontract/{pkiTranqcontractID}/getCommunicationList | Retrieve Communication list
 [**tranqcontractGetCommunicationrecipientsV1**](ObjectTranqcontractApi.md#tranqcontractGetCommunicationrecipientsV1) | **GET** /1/object/tranqcontract/{pkiTranqcontractID}/getCommunicationrecipients | Retrieve Tranqcontract&#39;s Communicationrecipient
 [**tranqcontractGetCommunicationsendersV1**](ObjectTranqcontractApi.md#tranqcontractGetCommunicationsendersV1) | **GET** /1/object/tranqcontract/{pkiTranqcontractID}/getCommunicationsenders | Retrieve Tranqcontract&#39;s Communicationsender
+[**tranqcontractImportIntoEDMV1**](ObjectTranqcontractApi.md#tranqcontractImportIntoEDMV1) | **POST** /1/object/tranqcontract/{pkiTranqcontractID}/importIntoEDM | Import attachments into the Tranqcontract
 
 
 
@@ -192,5 +193,53 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## tranqcontractImportIntoEDMV1
+
+> TranqcontractImportIntoEDMV1Response tranqcontractImportIntoEDMV1(pkiTranqcontractID, tranqcontractImportIntoEDMV1Request)
+
+Import attachments into the Tranqcontract
+
+
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectTranqcontractApi;
+
+ObjectTranqcontractApi apiInstance = new ObjectTranqcontractApi();
+Integer pkiTranqcontractID = null; // Integer | 
+TranqcontractImportIntoEDMV1Request tranqcontractImportIntoEDMV1Request = new TranqcontractImportIntoEDMV1Request(); // TranqcontractImportIntoEDMV1Request | 
+try {
+    TranqcontractImportIntoEDMV1Response result = apiInstance.tranqcontractImportIntoEDMV1(pkiTranqcontractID, tranqcontractImportIntoEDMV1Request);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectTranqcontractApi#tranqcontractImportIntoEDMV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiTranqcontractID** | **Integer**|  | [default to null]
+ **tranqcontractImportIntoEDMV1Request** | [**TranqcontractImportIntoEDMV1Request**](TranqcontractImportIntoEDMV1Request.md)|  |
+
+### Return type
+
+[**TranqcontractImportIntoEDMV1Response**](TranqcontractImportIntoEDMV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
 - **Accept**: application/json
 

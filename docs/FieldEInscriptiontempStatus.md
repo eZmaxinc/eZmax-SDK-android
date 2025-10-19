@@ -1,0 +1,10 @@
+
+
+# FieldEInscriptiontempStatus
+
+## Enum
+
+
+
+
+
