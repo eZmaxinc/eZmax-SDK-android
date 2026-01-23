@@ -43,7 +43,6 @@ import org.openapitools.client.model.EzsigntemplatedocumentFlattenV1Response;
 import org.openapitools.client.model.EzsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1Response;
 import org.openapitools.client.model.EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1Response;
 import org.openapitools.client.model.EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response;
-import org.openapitools.client.model.EzsigntemplatedocumentGetEzsigntemplatesignaturesV1Response;
 import org.openapitools.client.model.EzsigntemplatedocumentGetEzsigntemplatesignaturesV2Response;
 import org.openapitools.client.model.EzsigntemplatedocumentGetObjectV2Response;
 import org.openapitools.client.model.EzsigntemplatedocumentGetWordsPositionsV1Request;
@@ -198,6 +197,129 @@ public class ObjectEzsigntemplatedocumentApi {
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Retrieve an existing Ezsigntemplatedocument&#39;s original file
+  * 
+   * @param pkiEzsigntemplatedocumentID 
+   * @return void
+  */
+  public void ezsigntemplatedocumentDownloadV1 (Integer pkiEzsigntemplatedocumentID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiEzsigntemplatedocumentID' is set
+    if (pkiEzsigntemplatedocumentID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsigntemplatedocumentID' when calling ezsigntemplatedocumentDownloadV1",
+        new ApiException(400, "Missing the required parameter 'pkiEzsigntemplatedocumentID' when calling ezsigntemplatedocumentDownloadV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/download".replaceAll("\\{" + "pkiEzsigntemplatedocumentID" + "\\}", apiInvoker.escapeString(pkiEzsigntemplatedocumentID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return ;
+      } else {
+         return ;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve an existing Ezsigntemplatedocument&#39;s original file
+   * 
+   * @param pkiEzsigntemplatedocumentID 
+  */
+  public void ezsigntemplatedocumentDownloadV1 (Integer pkiEzsigntemplatedocumentID, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiEzsigntemplatedocumentID' is set
+    if (pkiEzsigntemplatedocumentID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsigntemplatedocumentID' when calling ezsigntemplatedocumentDownloadV1",
+        new ApiException(400, "Missing the required parameter 'pkiEzsigntemplatedocumentID' when calling ezsigntemplatedocumentDownloadV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/download".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiEzsigntemplatedocumentID" + "\\}", apiInvoker.escapeString(pkiEzsigntemplatedocumentID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+              responseListener.onResponse(localVarResponse);
           }
       }, new Response.ErrorListener() {
           @Override
@@ -1549,133 +1671,6 @@ public class ObjectEzsigntemplatedocumentApi {
           public void onResponse(String localVarResponse) {
             try {
               responseListener.onResponse((EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response.class));
-            } catch (ApiException exception) {
-               errorListener.onErrorResponse(new VolleyError(exception));
-            }
-          }
-      }, new Response.ErrorListener() {
-          @Override
-          public void onErrorResponse(VolleyError error) {
-            errorListener.onErrorResponse(error);
-          }
-      });
-    } catch (ApiException ex) {
-      errorListener.onErrorResponse(new VolleyError(ex));
-    }
-  }
-  /**
-  * Retrieve an existing Ezsigntemplatedocument&#39;s Ezsigntemplatesignatures
-  * Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
-   * @param pkiEzsigntemplatedocumentID 
-   * @return EzsigntemplatedocumentGetEzsigntemplatesignaturesV1Response
-  */
-  public EzsigntemplatedocumentGetEzsigntemplatesignaturesV1Response ezsigntemplatedocumentGetEzsigntemplatesignaturesV1 (Integer pkiEzsigntemplatedocumentID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
-    Object postBody = null;
-    // verify the required parameter 'pkiEzsigntemplatedocumentID' is set
-    if (pkiEzsigntemplatedocumentID == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsigntemplatedocumentID' when calling ezsigntemplatedocumentGetEzsigntemplatesignaturesV1",
-        new ApiException(400, "Missing the required parameter 'pkiEzsigntemplatedocumentID' when calling ezsigntemplatedocumentGetEzsigntemplatesignaturesV1"));
-    }
-
-    // create path and map variables
-    String path = "/1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplatesignatures".replaceAll("\\{" + "pkiEzsigntemplatedocumentID" + "\\}", apiInvoker.escapeString(pkiEzsigntemplatedocumentID.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-    String[] contentTypes = {
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
-      HttpEntity httpEntity = localVarBuilder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-    }
-
-    String[] authNames = new String[] { "Authorization" };
-
-    try {
-      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
-      if (localVarResponse != null) {
-         return (EzsigntemplatedocumentGetEzsigntemplatesignaturesV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsigntemplatedocumentGetEzsigntemplatesignaturesV1Response.class);
-      } else {
-         return null;
-      }
-    } catch (ApiException ex) {
-       throw ex;
-    } catch (InterruptedException ex) {
-       throw ex;
-    } catch (ExecutionException ex) {
-      if (ex.getCause() instanceof VolleyError) {
-        VolleyError volleyError = (VolleyError)ex.getCause();
-        if (volleyError.networkResponse != null) {
-          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
-        }
-      }
-      throw ex;
-    } catch (TimeoutException ex) {
-      throw ex;
-    }
-  }
-
-      /**
-   * Retrieve an existing Ezsigntemplatedocument&#39;s Ezsigntemplatesignatures
-   * Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
-   * @param pkiEzsigntemplatedocumentID 
-  */
-  public void ezsigntemplatedocumentGetEzsigntemplatesignaturesV1 (Integer pkiEzsigntemplatedocumentID, final Response.Listener<EzsigntemplatedocumentGetEzsigntemplatesignaturesV1Response> responseListener, final Response.ErrorListener errorListener) {
-    Object postBody = null;
-
-    // verify the required parameter 'pkiEzsigntemplatedocumentID' is set
-    if (pkiEzsigntemplatedocumentID == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsigntemplatedocumentID' when calling ezsigntemplatedocumentGetEzsigntemplatesignaturesV1",
-        new ApiException(400, "Missing the required parameter 'pkiEzsigntemplatedocumentID' when calling ezsigntemplatedocumentGetEzsigntemplatesignaturesV1"));
-    }
-
-    // create path and map variables
-    String path = "/1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplatesignatures".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiEzsigntemplatedocumentID" + "\\}", apiInvoker.escapeString(pkiEzsigntemplatedocumentID.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-
-
-    String[] contentTypes = {
-      
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = localVarBuilder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-          }
-
-    String[] authNames = new String[] { "Authorization" };
-
-    try {
-      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
-        new Response.Listener<String>() {
-          @Override
-          public void onResponse(String localVarResponse) {
-            try {
-              responseListener.onResponse((EzsigntemplatedocumentGetEzsigntemplatesignaturesV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsigntemplatedocumentGetEzsigntemplatesignaturesV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

@@ -217,7 +217,7 @@ public class EzsigndocumentRequest {
   /**
    * The maximum date and time at which the Ezsigndocument can be signed.
    **/
-  @ApiModelProperty(required = true, value = "The maximum date and time at which the Ezsigndocument can be signed.")
+  @ApiModelProperty(value = "The maximum date and time at which the Ezsigndocument can be signed.")
   public String getDtEzsigndocumentDuedate() {
     return dtEzsigndocumentDuedate;
   }

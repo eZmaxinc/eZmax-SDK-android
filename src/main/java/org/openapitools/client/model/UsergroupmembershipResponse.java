@@ -39,6 +39,8 @@ public class UsergroupmembershipResponse {
   private String sEmailAddress = null;
   @SerializedName("sUsergroupNameX")
   private String sUsergroupNameX = null;
+  @SerializedName("bUserIsactive")
+  private Boolean bUserIsactive = null;
   @SerializedName("sUsergroupexternalName")
   private String sUsergroupexternalName = null;
 
@@ -149,6 +151,17 @@ public class UsergroupmembershipResponse {
   }
 
   /**
+   * Whether the User is active or not
+   **/
+  @ApiModelProperty(value = "Whether the User is active or not")
+  public Boolean getBUserIsactive() {
+    return bUserIsactive;
+  }
+  public void setBUserIsactive(Boolean bUserIsactive) {
+    this.bUserIsactive = bUserIsactive;
+  }
+
+  /**
    * The name of the Usergroupexternal
    **/
   @ApiModelProperty(value = "The name of the Usergroupexternal")
@@ -178,6 +191,7 @@ public class UsergroupmembershipResponse {
         (this.sUserLoginname == null ? usergroupmembershipResponse.sUserLoginname == null : this.sUserLoginname.equals(usergroupmembershipResponse.sUserLoginname)) &&
         (this.sEmailAddress == null ? usergroupmembershipResponse.sEmailAddress == null : this.sEmailAddress.equals(usergroupmembershipResponse.sEmailAddress)) &&
         (this.sUsergroupNameX == null ? usergroupmembershipResponse.sUsergroupNameX == null : this.sUsergroupNameX.equals(usergroupmembershipResponse.sUsergroupNameX)) &&
+        (this.bUserIsactive == null ? usergroupmembershipResponse.bUserIsactive == null : this.bUserIsactive.equals(usergroupmembershipResponse.bUserIsactive)) &&
         (this.sUsergroupexternalName == null ? usergroupmembershipResponse.sUsergroupexternalName == null : this.sUsergroupexternalName.equals(usergroupmembershipResponse.sUsergroupexternalName));
   }
 
@@ -193,6 +207,7 @@ public class UsergroupmembershipResponse {
     result = 31 * result + (this.sUserLoginname == null ? 0: this.sUserLoginname.hashCode());
     result = 31 * result + (this.sEmailAddress == null ? 0: this.sEmailAddress.hashCode());
     result = 31 * result + (this.sUsergroupNameX == null ? 0: this.sUsergroupNameX.hashCode());
+    result = 31 * result + (this.bUserIsactive == null ? 0: this.bUserIsactive.hashCode());
     result = 31 * result + (this.sUsergroupexternalName == null ? 0: this.sUsergroupexternalName.hashCode());
     return result;
   }
@@ -211,6 +226,7 @@ public class UsergroupmembershipResponse {
     sb.append("  sUserLoginname: ").append(sUserLoginname).append("\n");
     sb.append("  sEmailAddress: ").append(sEmailAddress).append("\n");
     sb.append("  sUsergroupNameX: ").append(sUsergroupNameX).append("\n");
+    sb.append("  bUserIsactive: ").append(bUserIsactive).append("\n");
     sb.append("  sUsergroupexternalName: ").append(sUsergroupexternalName).append("\n");
     sb.append("}\n");
     return sb.toString();

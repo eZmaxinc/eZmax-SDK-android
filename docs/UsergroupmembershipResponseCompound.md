@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **sUserLoginname** | **String** | The login name of the User. |  [optional]
 **sEmailAddress** | **String** | The email address. |  [optional]
 **sUsergroupNameX** | **String** | The Name of the Usergroup in the language of the requester | 
+**bUserIsactive** | **Boolean** | Whether the User is active or not |  [optional]
 **sUsergroupexternalName** | **String** | The name of the Usergroupexternal |  [optional]
 
 

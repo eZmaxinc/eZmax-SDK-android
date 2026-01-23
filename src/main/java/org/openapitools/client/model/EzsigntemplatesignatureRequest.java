@@ -19,6 +19,8 @@ import org.openapitools.client.model.FieldEEzsigntemplatesignatureDependencyrequ
 import org.openapitools.client.model.FieldEEzsigntemplatesignatureFont;
 import org.openapitools.client.model.FieldEEzsigntemplatesignaturePositioning;
 import org.openapitools.client.model.FieldEEzsigntemplatesignaturePositioningoccurence;
+import org.openapitools.client.model.FieldEEzsigntemplatesignatureSignaturepad;
+import org.openapitools.client.model.FieldEEzsigntemplatesignatureSignaturepadrequired;
 import org.openapitools.client.model.FieldEEzsigntemplatesignatureTooltipposition;
 import org.openapitools.client.model.FieldEEzsigntemplatesignatureType;
 import io.swagger.annotations.*;
@@ -60,6 +62,10 @@ public class EzsigntemplatesignatureRequest {
   private Integer iEzsigntemplatesignatureStep = null;
   @SerializedName("eEzsigntemplatesignatureType")
   private FieldEEzsigntemplatesignatureType eEzsigntemplatesignatureType = null;
+  @SerializedName("eEzsigntemplatesignatureSignaturepad")
+  private FieldEEzsigntemplatesignatureSignaturepad eEzsigntemplatesignatureSignaturepad = null;
+  @SerializedName("eEzsigntemplatesignatureSignaturepadrequired")
+  private FieldEEzsigntemplatesignatureSignaturepadrequired eEzsigntemplatesignatureSignaturepadrequired = null;
   @SerializedName("eEzsigntemplatesignatureConsultationtrigger")
   private FieldEEzsigntemplatesignatureConsultationtrigger eEzsigntemplatesignatureConsultationtrigger = null;
   @SerializedName("tEzsigntemplatesignatureTooltip")
@@ -274,6 +280,26 @@ public class EzsigntemplatesignatureRequest {
   }
   public void setEEzsigntemplatesignatureType(FieldEEzsigntemplatesignatureType eEzsigntemplatesignatureType) {
     this.eEzsigntemplatesignatureType = eEzsigntemplatesignatureType;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public FieldEEzsigntemplatesignatureSignaturepad getEEzsigntemplatesignatureSignaturepad() {
+    return eEzsigntemplatesignatureSignaturepad;
+  }
+  public void setEEzsigntemplatesignatureSignaturepad(FieldEEzsigntemplatesignatureSignaturepad eEzsigntemplatesignatureSignaturepad) {
+    this.eEzsigntemplatesignatureSignaturepad = eEzsigntemplatesignatureSignaturepad;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public FieldEEzsigntemplatesignatureSignaturepadrequired getEEzsigntemplatesignatureSignaturepadrequired() {
+    return eEzsigntemplatesignatureSignaturepadrequired;
+  }
+  public void setEEzsigntemplatesignatureSignaturepadrequired(FieldEEzsigntemplatesignatureSignaturepadrequired eEzsigntemplatesignatureSignaturepadrequired) {
+    this.eEzsigntemplatesignatureSignaturepadrequired = eEzsigntemplatesignatureSignaturepadrequired;
   }
 
   /**
@@ -516,6 +542,8 @@ public class EzsigntemplatesignatureRequest {
         (this.iEzsigntemplatesignatureHeight == null ? ezsigntemplatesignatureRequest.iEzsigntemplatesignatureHeight == null : this.iEzsigntemplatesignatureHeight.equals(ezsigntemplatesignatureRequest.iEzsigntemplatesignatureHeight)) &&
         (this.iEzsigntemplatesignatureStep == null ? ezsigntemplatesignatureRequest.iEzsigntemplatesignatureStep == null : this.iEzsigntemplatesignatureStep.equals(ezsigntemplatesignatureRequest.iEzsigntemplatesignatureStep)) &&
         (this.eEzsigntemplatesignatureType == null ? ezsigntemplatesignatureRequest.eEzsigntemplatesignatureType == null : this.eEzsigntemplatesignatureType.equals(ezsigntemplatesignatureRequest.eEzsigntemplatesignatureType)) &&
+        (this.eEzsigntemplatesignatureSignaturepad == null ? ezsigntemplatesignatureRequest.eEzsigntemplatesignatureSignaturepad == null : this.eEzsigntemplatesignatureSignaturepad.equals(ezsigntemplatesignatureRequest.eEzsigntemplatesignatureSignaturepad)) &&
+        (this.eEzsigntemplatesignatureSignaturepadrequired == null ? ezsigntemplatesignatureRequest.eEzsigntemplatesignatureSignaturepadrequired == null : this.eEzsigntemplatesignatureSignaturepadrequired.equals(ezsigntemplatesignatureRequest.eEzsigntemplatesignatureSignaturepadrequired)) &&
         (this.eEzsigntemplatesignatureConsultationtrigger == null ? ezsigntemplatesignatureRequest.eEzsigntemplatesignatureConsultationtrigger == null : this.eEzsigntemplatesignatureConsultationtrigger.equals(ezsigntemplatesignatureRequest.eEzsigntemplatesignatureConsultationtrigger)) &&
         (this.tEzsigntemplatesignatureTooltip == null ? ezsigntemplatesignatureRequest.tEzsigntemplatesignatureTooltip == null : this.tEzsigntemplatesignatureTooltip.equals(ezsigntemplatesignatureRequest.tEzsigntemplatesignatureTooltip)) &&
         (this.eEzsigntemplatesignatureTooltipposition == null ? ezsigntemplatesignatureRequest.eEzsigntemplatesignatureTooltipposition == null : this.eEzsigntemplatesignatureTooltipposition.equals(ezsigntemplatesignatureRequest.eEzsigntemplatesignatureTooltipposition)) &&
@@ -556,6 +584,8 @@ public class EzsigntemplatesignatureRequest {
     result = 31 * result + (this.iEzsigntemplatesignatureHeight == null ? 0: this.iEzsigntemplatesignatureHeight.hashCode());
     result = 31 * result + (this.iEzsigntemplatesignatureStep == null ? 0: this.iEzsigntemplatesignatureStep.hashCode());
     result = 31 * result + (this.eEzsigntemplatesignatureType == null ? 0: this.eEzsigntemplatesignatureType.hashCode());
+    result = 31 * result + (this.eEzsigntemplatesignatureSignaturepad == null ? 0: this.eEzsigntemplatesignatureSignaturepad.hashCode());
+    result = 31 * result + (this.eEzsigntemplatesignatureSignaturepadrequired == null ? 0: this.eEzsigntemplatesignatureSignaturepadrequired.hashCode());
     result = 31 * result + (this.eEzsigntemplatesignatureConsultationtrigger == null ? 0: this.eEzsigntemplatesignatureConsultationtrigger.hashCode());
     result = 31 * result + (this.tEzsigntemplatesignatureTooltip == null ? 0: this.tEzsigntemplatesignatureTooltip.hashCode());
     result = 31 * result + (this.eEzsigntemplatesignatureTooltipposition == null ? 0: this.eEzsigntemplatesignatureTooltipposition.hashCode());
@@ -599,6 +629,8 @@ public class EzsigntemplatesignatureRequest {
     sb.append("  iEzsigntemplatesignatureHeight: ").append(iEzsigntemplatesignatureHeight).append("\n");
     sb.append("  iEzsigntemplatesignatureStep: ").append(iEzsigntemplatesignatureStep).append("\n");
     sb.append("  eEzsigntemplatesignatureType: ").append(eEzsigntemplatesignatureType).append("\n");
+    sb.append("  eEzsigntemplatesignatureSignaturepad: ").append(eEzsigntemplatesignatureSignaturepad).append("\n");
+    sb.append("  eEzsigntemplatesignatureSignaturepadrequired: ").append(eEzsigntemplatesignatureSignaturepadrequired).append("\n");
     sb.append("  eEzsigntemplatesignatureConsultationtrigger: ").append(eEzsigntemplatesignatureConsultationtrigger).append("\n");
     sb.append("  tEzsigntemplatesignatureTooltip: ").append(tEzsigntemplatesignatureTooltip).append("\n");
     sb.append("  eEzsigntemplatesignatureTooltipposition: ").append(eEzsigntemplatesignatureTooltipposition).append("\n");

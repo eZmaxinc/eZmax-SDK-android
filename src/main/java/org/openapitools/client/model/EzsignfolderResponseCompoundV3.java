@@ -18,6 +18,7 @@ import org.openapitools.client.model.CustomEzsignfoldertypeResponse;
 import org.openapitools.client.model.CustomTimezoneWithCodeResponse;
 import org.openapitools.client.model.FieldEEzsignfolderCompletion;
 import org.openapitools.client.model.FieldEEzsignfolderDocumentdependency;
+import org.openapitools.client.model.FieldEEzsignfolderMessageorder;
 import org.openapitools.client.model.FieldEEzsignfolderStep;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
@@ -80,6 +81,8 @@ public class EzsignfolderResponseCompoundV3 {
   private String dtEzsignfolderDispose = null;
   @SerializedName("tEzsignfolderMessage")
   private String tEzsignfolderMessage = null;
+  @SerializedName("eEzsignfolderMessageorder")
+  private FieldEEzsignfolderMessageorder eEzsignfolderMessageorder = null;
   @SerializedName("objAudit")
   private CommonAudit objAudit = null;
   @SerializedName("sEzsignfolderExternalid")
@@ -384,6 +387,16 @@ public class EzsignfolderResponseCompoundV3 {
   /**
    **/
   @ApiModelProperty(value = "")
+  public FieldEEzsignfolderMessageorder getEEzsignfolderMessageorder() {
+    return eEzsignfolderMessageorder;
+  }
+  public void setEEzsignfolderMessageorder(FieldEEzsignfolderMessageorder eEzsignfolderMessageorder) {
+    this.eEzsignfolderMessageorder = eEzsignfolderMessageorder;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
   public CommonAudit getObjAudit() {
     return objAudit;
   }
@@ -458,6 +471,7 @@ public class EzsignfolderResponseCompoundV3 {
         (this.dtEzsignfolderArchive == null ? ezsignfolderResponseCompoundV3.dtEzsignfolderArchive == null : this.dtEzsignfolderArchive.equals(ezsignfolderResponseCompoundV3.dtEzsignfolderArchive)) &&
         (this.dtEzsignfolderDispose == null ? ezsignfolderResponseCompoundV3.dtEzsignfolderDispose == null : this.dtEzsignfolderDispose.equals(ezsignfolderResponseCompoundV3.dtEzsignfolderDispose)) &&
         (this.tEzsignfolderMessage == null ? ezsignfolderResponseCompoundV3.tEzsignfolderMessage == null : this.tEzsignfolderMessage.equals(ezsignfolderResponseCompoundV3.tEzsignfolderMessage)) &&
+        (this.eEzsignfolderMessageorder == null ? ezsignfolderResponseCompoundV3.eEzsignfolderMessageorder == null : this.eEzsignfolderMessageorder.equals(ezsignfolderResponseCompoundV3.eEzsignfolderMessageorder)) &&
         (this.objAudit == null ? ezsignfolderResponseCompoundV3.objAudit == null : this.objAudit.equals(ezsignfolderResponseCompoundV3.objAudit)) &&
         (this.sEzsignfolderExternalid == null ? ezsignfolderResponseCompoundV3.sEzsignfolderExternalid == null : this.sEzsignfolderExternalid.equals(ezsignfolderResponseCompoundV3.sEzsignfolderExternalid)) &&
         (this.eEzsignfolderAccess == null ? ezsignfolderResponseCompoundV3.eEzsignfolderAccess == null : this.eEzsignfolderAccess.equals(ezsignfolderResponseCompoundV3.eEzsignfolderAccess)) &&
@@ -493,6 +507,7 @@ public class EzsignfolderResponseCompoundV3 {
     result = 31 * result + (this.dtEzsignfolderArchive == null ? 0: this.dtEzsignfolderArchive.hashCode());
     result = 31 * result + (this.dtEzsignfolderDispose == null ? 0: this.dtEzsignfolderDispose.hashCode());
     result = 31 * result + (this.tEzsignfolderMessage == null ? 0: this.tEzsignfolderMessage.hashCode());
+    result = 31 * result + (this.eEzsignfolderMessageorder == null ? 0: this.eEzsignfolderMessageorder.hashCode());
     result = 31 * result + (this.objAudit == null ? 0: this.objAudit.hashCode());
     result = 31 * result + (this.sEzsignfolderExternalid == null ? 0: this.sEzsignfolderExternalid.hashCode());
     result = 31 * result + (this.eEzsignfolderAccess == null ? 0: this.eEzsignfolderAccess.hashCode());
@@ -531,6 +546,7 @@ public class EzsignfolderResponseCompoundV3 {
     sb.append("  dtEzsignfolderArchive: ").append(dtEzsignfolderArchive).append("\n");
     sb.append("  dtEzsignfolderDispose: ").append(dtEzsignfolderDispose).append("\n");
     sb.append("  tEzsignfolderMessage: ").append(tEzsignfolderMessage).append("\n");
+    sb.append("  eEzsignfolderMessageorder: ").append(eEzsignfolderMessageorder).append("\n");
     sb.append("  objAudit: ").append(objAudit).append("\n");
     sb.append("  sEzsignfolderExternalid: ").append(sEzsignfolderExternalid).append("\n");
     sb.append("  eEzsignfolderAccess: ").append(eEzsignfolderAccess).append("\n");

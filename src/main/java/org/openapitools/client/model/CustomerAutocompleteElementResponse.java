@@ -27,6 +27,8 @@ public class CustomerAutocompleteElementResponse {
   private Integer fkiDepartmentID = null;
   @SerializedName("sCustomerName")
   private String sCustomerName = null;
+  @SerializedName("sCustomerCode")
+  private String sCustomerCode = null;
   @SerializedName("bCustomerIsactive")
   private Boolean bCustomerIsactive = null;
 
@@ -66,6 +68,17 @@ public class CustomerAutocompleteElementResponse {
   }
 
   /**
+   * The code of the Customer
+   **/
+  @ApiModelProperty(required = true, value = "The code of the Customer")
+  public String getSCustomerCode() {
+    return sCustomerCode;
+  }
+  public void setSCustomerCode(String sCustomerCode) {
+    this.sCustomerCode = sCustomerCode;
+  }
+
+  /**
    * Whether the customer is active or not
    **/
   @ApiModelProperty(required = true, value = "Whether the customer is active or not")
@@ -89,6 +102,7 @@ public class CustomerAutocompleteElementResponse {
     return (this.pkiCustomerID == null ? customerAutocompleteElementResponse.pkiCustomerID == null : this.pkiCustomerID.equals(customerAutocompleteElementResponse.pkiCustomerID)) &&
         (this.fkiDepartmentID == null ? customerAutocompleteElementResponse.fkiDepartmentID == null : this.fkiDepartmentID.equals(customerAutocompleteElementResponse.fkiDepartmentID)) &&
         (this.sCustomerName == null ? customerAutocompleteElementResponse.sCustomerName == null : this.sCustomerName.equals(customerAutocompleteElementResponse.sCustomerName)) &&
+        (this.sCustomerCode == null ? customerAutocompleteElementResponse.sCustomerCode == null : this.sCustomerCode.equals(customerAutocompleteElementResponse.sCustomerCode)) &&
         (this.bCustomerIsactive == null ? customerAutocompleteElementResponse.bCustomerIsactive == null : this.bCustomerIsactive.equals(customerAutocompleteElementResponse.bCustomerIsactive));
   }
 
@@ -98,6 +112,7 @@ public class CustomerAutocompleteElementResponse {
     result = 31 * result + (this.pkiCustomerID == null ? 0: this.pkiCustomerID.hashCode());
     result = 31 * result + (this.fkiDepartmentID == null ? 0: this.fkiDepartmentID.hashCode());
     result = 31 * result + (this.sCustomerName == null ? 0: this.sCustomerName.hashCode());
+    result = 31 * result + (this.sCustomerCode == null ? 0: this.sCustomerCode.hashCode());
     result = 31 * result + (this.bCustomerIsactive == null ? 0: this.bCustomerIsactive.hashCode());
     return result;
   }
@@ -110,6 +125,7 @@ public class CustomerAutocompleteElementResponse {
     sb.append("  pkiCustomerID: ").append(pkiCustomerID).append("\n");
     sb.append("  fkiDepartmentID: ").append(fkiDepartmentID).append("\n");
     sb.append("  sCustomerName: ").append(sCustomerName).append("\n");
+    sb.append("  sCustomerCode: ").append(sCustomerCode).append("\n");
     sb.append("  bCustomerIsactive: ").append(bCustomerIsactive).append("\n");
     sb.append("}\n");
     return sb.toString();

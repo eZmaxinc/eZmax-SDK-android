@@ -49,6 +49,8 @@ import org.openapitools.client.model.EzsigndocumentEditEzsignannotationsV1Reques
 import org.openapitools.client.model.EzsigndocumentEditEzsignannotationsV1Response;
 import org.openapitools.client.model.EzsigndocumentEditEzsignformfieldgroupsV1Request;
 import org.openapitools.client.model.EzsigndocumentEditEzsignformfieldgroupsV1Response;
+import org.openapitools.client.model.EzsigndocumentEditEzsignformfieldgroupsV2Request;
+import org.openapitools.client.model.EzsigndocumentEditEzsignformfieldgroupsV2Response;
 import org.openapitools.client.model.EzsigndocumentEditEzsignsignaturesV1Request;
 import org.openapitools.client.model.EzsigndocumentEditEzsignsignaturesV1Response;
 import org.openapitools.client.model.EzsigndocumentEditEzsignsignaturesV2Request;
@@ -61,6 +63,7 @@ import org.openapitools.client.model.EzsigndocumentExtractTextV1Response;
 import org.openapitools.client.model.EzsigndocumentFlattenV1Response;
 import org.openapitools.client.model.EzsigndocumentGetActionableElementsV1Response;
 import org.openapitools.client.model.EzsigndocumentGetActionableElementsV2Response;
+import org.openapitools.client.model.EzsigndocumentGetActionableElementsV3Response;
 import org.openapitools.client.model.EzsigndocumentGetAttachmentsV1Response;
 import org.openapitools.client.model.EzsigndocumentGetCompletedElementsV1Response;
 import org.openapitools.client.model.EzsigndocumentGetCompletedElementsV2Response;
@@ -1743,6 +1746,145 @@ public class ObjectEzsigndocumentApi {
     }
   }
   /**
+  * Edit multiple Ezsignformfieldgroups
+  * Using this endpoint, you can edit multiple Ezsignformfieldgroups at the same time.
+   * @param pkiEzsigndocumentID 
+   * @param ezsigndocumentEditEzsignformfieldgroupsV2Request 
+   * @return EzsigndocumentEditEzsignformfieldgroupsV2Response
+  */
+  public EzsigndocumentEditEzsignformfieldgroupsV2Response ezsigndocumentEditEzsignformfieldgroupsV2 (Integer pkiEzsigndocumentID, EzsigndocumentEditEzsignformfieldgroupsV2Request ezsigndocumentEditEzsignformfieldgroupsV2Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = ezsigndocumentEditEzsignformfieldgroupsV2Request;
+    // verify the required parameter 'pkiEzsigndocumentID' is set
+    if (pkiEzsigndocumentID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsigndocumentID' when calling ezsigndocumentEditEzsignformfieldgroupsV2",
+        new ApiException(400, "Missing the required parameter 'pkiEzsigndocumentID' when calling ezsigndocumentEditEzsignformfieldgroupsV2"));
+    }
+    // verify the required parameter 'ezsigndocumentEditEzsignformfieldgroupsV2Request' is set
+    if (ezsigndocumentEditEzsignformfieldgroupsV2Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'ezsigndocumentEditEzsignformfieldgroupsV2Request' when calling ezsigndocumentEditEzsignformfieldgroupsV2",
+        new ApiException(400, "Missing the required parameter 'ezsigndocumentEditEzsignformfieldgroupsV2Request' when calling ezsigndocumentEditEzsignformfieldgroupsV2"));
+    }
+
+    // create path and map variables
+    String path = "/2/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignformfieldgroups".replaceAll("\\{" + "pkiEzsigndocumentID" + "\\}", apiInvoker.escapeString(pkiEzsigndocumentID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (EzsigndocumentEditEzsignformfieldgroupsV2Response) ApiInvoker.deserialize(localVarResponse, "", EzsigndocumentEditEzsignformfieldgroupsV2Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Edit multiple Ezsignformfieldgroups
+   * Using this endpoint, you can edit multiple Ezsignformfieldgroups at the same time.
+   * @param pkiEzsigndocumentID    * @param ezsigndocumentEditEzsignformfieldgroupsV2Request 
+  */
+  public void ezsigndocumentEditEzsignformfieldgroupsV2 (Integer pkiEzsigndocumentID, EzsigndocumentEditEzsignformfieldgroupsV2Request ezsigndocumentEditEzsignformfieldgroupsV2Request, final Response.Listener<EzsigndocumentEditEzsignformfieldgroupsV2Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = ezsigndocumentEditEzsignformfieldgroupsV2Request;
+
+    // verify the required parameter 'pkiEzsigndocumentID' is set
+    if (pkiEzsigndocumentID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsigndocumentID' when calling ezsigndocumentEditEzsignformfieldgroupsV2",
+        new ApiException(400, "Missing the required parameter 'pkiEzsigndocumentID' when calling ezsigndocumentEditEzsignformfieldgroupsV2"));
+    }
+    // verify the required parameter 'ezsigndocumentEditEzsignformfieldgroupsV2Request' is set
+    if (ezsigndocumentEditEzsignformfieldgroupsV2Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'ezsigndocumentEditEzsignformfieldgroupsV2Request' when calling ezsigndocumentEditEzsignformfieldgroupsV2",
+        new ApiException(400, "Missing the required parameter 'ezsigndocumentEditEzsignformfieldgroupsV2Request' when calling ezsigndocumentEditEzsignformfieldgroupsV2"));
+    }
+
+    // create path and map variables
+    String path = "/2/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignformfieldgroups".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiEzsigndocumentID" + "\\}", apiInvoker.escapeString(pkiEzsigndocumentID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((EzsigndocumentEditEzsignformfieldgroupsV2Response) ApiInvoker.deserialize(localVarResponse,  "", EzsigndocumentEditEzsignformfieldgroupsV2Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
   * Edit multiple Ezsignsignatures
   * Using this endpoint, you can edit multiple Ezsignsignatures at the same time.  Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
    * @param pkiEzsigndocumentID 
@@ -2816,6 +2958,133 @@ public class ObjectEzsigndocumentApi {
           public void onResponse(String localVarResponse) {
             try {
               responseListener.onResponse((EzsigndocumentGetActionableElementsV2Response) ApiInvoker.deserialize(localVarResponse,  "", EzsigndocumentGetActionableElementsV2Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Retrieve actionable elements for the Ezsigndocument
+  * Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+   * @param pkiEzsigndocumentID 
+   * @return EzsigndocumentGetActionableElementsV3Response
+  */
+  public EzsigndocumentGetActionableElementsV3Response ezsigndocumentGetActionableElementsV3 (Integer pkiEzsigndocumentID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiEzsigndocumentID' is set
+    if (pkiEzsigndocumentID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsigndocumentID' when calling ezsigndocumentGetActionableElementsV3",
+        new ApiException(400, "Missing the required parameter 'pkiEzsigndocumentID' when calling ezsigndocumentGetActionableElementsV3"));
+    }
+
+    // create path and map variables
+    String path = "/3/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElements".replaceAll("\\{" + "pkiEzsigndocumentID" + "\\}", apiInvoker.escapeString(pkiEzsigndocumentID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (EzsigndocumentGetActionableElementsV3Response) ApiInvoker.deserialize(localVarResponse, "", EzsigndocumentGetActionableElementsV3Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve actionable elements for the Ezsigndocument
+   * Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+   * @param pkiEzsigndocumentID 
+  */
+  public void ezsigndocumentGetActionableElementsV3 (Integer pkiEzsigndocumentID, final Response.Listener<EzsigndocumentGetActionableElementsV3Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiEzsigndocumentID' is set
+    if (pkiEzsigndocumentID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsigndocumentID' when calling ezsigndocumentGetActionableElementsV3",
+        new ApiException(400, "Missing the required parameter 'pkiEzsigndocumentID' when calling ezsigndocumentGetActionableElementsV3"));
+    }
+
+    // create path and map variables
+    String path = "/3/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElements".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiEzsigndocumentID" + "\\}", apiInvoker.escapeString(pkiEzsigndocumentID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((EzsigndocumentGetActionableElementsV3Response) ApiInvoker.deserialize(localVarResponse,  "", EzsigndocumentGetActionableElementsV3Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

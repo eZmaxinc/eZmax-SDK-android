@@ -35,6 +35,8 @@ public class UsergroupdelegationResponseCompound {
   private String sUserLoginname = null;
   @SerializedName("sEmailAddress")
   private String sEmailAddress = null;
+  @SerializedName("bUserIsactive")
+  private Boolean bUserIsactive = null;
   @SerializedName("sUsergroupNameX")
   private String sUsergroupNameX = null;
 
@@ -121,6 +123,17 @@ public class UsergroupdelegationResponseCompound {
   }
 
   /**
+   * Whether the User is active or not
+   **/
+  @ApiModelProperty(required = true, value = "Whether the User is active or not")
+  public Boolean getBUserIsactive() {
+    return bUserIsactive;
+  }
+  public void setBUserIsactive(Boolean bUserIsactive) {
+    this.bUserIsactive = bUserIsactive;
+  }
+
+  /**
    * The Name of the Usergroup in the language of the requester
    **/
   @ApiModelProperty(required = true, value = "The Name of the Usergroup in the language of the requester")
@@ -148,6 +161,7 @@ public class UsergroupdelegationResponseCompound {
         (this.sUserLastname == null ? usergroupdelegationResponseCompound.sUserLastname == null : this.sUserLastname.equals(usergroupdelegationResponseCompound.sUserLastname)) &&
         (this.sUserLoginname == null ? usergroupdelegationResponseCompound.sUserLoginname == null : this.sUserLoginname.equals(usergroupdelegationResponseCompound.sUserLoginname)) &&
         (this.sEmailAddress == null ? usergroupdelegationResponseCompound.sEmailAddress == null : this.sEmailAddress.equals(usergroupdelegationResponseCompound.sEmailAddress)) &&
+        (this.bUserIsactive == null ? usergroupdelegationResponseCompound.bUserIsactive == null : this.bUserIsactive.equals(usergroupdelegationResponseCompound.bUserIsactive)) &&
         (this.sUsergroupNameX == null ? usergroupdelegationResponseCompound.sUsergroupNameX == null : this.sUsergroupNameX.equals(usergroupdelegationResponseCompound.sUsergroupNameX));
   }
 
@@ -161,6 +175,7 @@ public class UsergroupdelegationResponseCompound {
     result = 31 * result + (this.sUserLastname == null ? 0: this.sUserLastname.hashCode());
     result = 31 * result + (this.sUserLoginname == null ? 0: this.sUserLoginname.hashCode());
     result = 31 * result + (this.sEmailAddress == null ? 0: this.sEmailAddress.hashCode());
+    result = 31 * result + (this.bUserIsactive == null ? 0: this.bUserIsactive.hashCode());
     result = 31 * result + (this.sUsergroupNameX == null ? 0: this.sUsergroupNameX.hashCode());
     return result;
   }
@@ -177,6 +192,7 @@ public class UsergroupdelegationResponseCompound {
     sb.append("  sUserLastname: ").append(sUserLastname).append("\n");
     sb.append("  sUserLoginname: ").append(sUserLoginname).append("\n");
     sb.append("  sEmailAddress: ").append(sEmailAddress).append("\n");
+    sb.append("  bUserIsactive: ").append(bUserIsactive).append("\n");
     sb.append("  sUsergroupNameX: ").append(sUsergroupNameX).append("\n");
     sb.append("}\n");
     return sb.toString();

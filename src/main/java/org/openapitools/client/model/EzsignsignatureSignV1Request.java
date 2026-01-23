@@ -28,6 +28,8 @@ public class EzsignsignatureSignV1Request {
   private Integer fkiEzsignsigningreasonID = null;
   @SerializedName("fkiFontID")
   private Integer fkiFontID = null;
+  @SerializedName("dEzsignsignatureCreditcardamount")
+  private String dEzsignsignatureCreditcardamount = null;
   @SerializedName("sValue")
   private String sValue = null;
   public enum EAttachmentsConfirmationDecisionEnum {
@@ -69,6 +71,17 @@ public class EzsignsignatureSignV1Request {
   }
   public void setFkiFontID(Integer fkiFontID) {
     this.fkiFontID = fkiFontID;
+  }
+
+  /**
+   * The amount of the Creditcard signature
+   **/
+  @ApiModelProperty(value = "The amount of the Creditcard signature")
+  public String getDEzsignsignatureCreditcardamount() {
+    return dEzsignsignatureCreditcardamount;
+  }
+  public void setDEzsignsignatureCreditcardamount(String dEzsignsignatureCreditcardamount) {
+    this.dEzsignsignatureCreditcardamount = dEzsignsignatureCreditcardamount;
   }
 
   /**
@@ -158,6 +171,7 @@ public class EzsignsignatureSignV1Request {
     EzsignsignatureSignV1Request ezsignsignatureSignV1Request = (EzsignsignatureSignV1Request) o;
     return (this.fkiEzsignsigningreasonID == null ? ezsignsignatureSignV1Request.fkiEzsignsigningreasonID == null : this.fkiEzsignsigningreasonID.equals(ezsignsignatureSignV1Request.fkiEzsignsigningreasonID)) &&
         (this.fkiFontID == null ? ezsignsignatureSignV1Request.fkiFontID == null : this.fkiFontID.equals(ezsignsignatureSignV1Request.fkiFontID)) &&
+        (this.dEzsignsignatureCreditcardamount == null ? ezsignsignatureSignV1Request.dEzsignsignatureCreditcardamount == null : this.dEzsignsignatureCreditcardamount.equals(ezsignsignatureSignV1Request.dEzsignsignatureCreditcardamount)) &&
         (this.sValue == null ? ezsignsignatureSignV1Request.sValue == null : this.sValue.equals(ezsignsignatureSignV1Request.sValue)) &&
         (this.eAttachmentsConfirmationDecision == null ? ezsignsignatureSignV1Request.eAttachmentsConfirmationDecision == null : this.eAttachmentsConfirmationDecision.equals(ezsignsignatureSignV1Request.eAttachmentsConfirmationDecision)) &&
         (this.sAttachmentsRefusalReason == null ? ezsignsignatureSignV1Request.sAttachmentsRefusalReason == null : this.sAttachmentsRefusalReason.equals(ezsignsignatureSignV1Request.sAttachmentsRefusalReason)) &&
@@ -172,6 +186,7 @@ public class EzsignsignatureSignV1Request {
     int result = 17;
     result = 31 * result + (this.fkiEzsignsigningreasonID == null ? 0: this.fkiEzsignsigningreasonID.hashCode());
     result = 31 * result + (this.fkiFontID == null ? 0: this.fkiFontID.hashCode());
+    result = 31 * result + (this.dEzsignsignatureCreditcardamount == null ? 0: this.dEzsignsignatureCreditcardamount.hashCode());
     result = 31 * result + (this.sValue == null ? 0: this.sValue.hashCode());
     result = 31 * result + (this.eAttachmentsConfirmationDecision == null ? 0: this.eAttachmentsConfirmationDecision.hashCode());
     result = 31 * result + (this.sAttachmentsRefusalReason == null ? 0: this.sAttachmentsRefusalReason.hashCode());
@@ -189,6 +204,7 @@ public class EzsignsignatureSignV1Request {
     
     sb.append("  fkiEzsignsigningreasonID: ").append(fkiEzsignsigningreasonID).append("\n");
     sb.append("  fkiFontID: ").append(fkiFontID).append("\n");
+    sb.append("  dEzsignsignatureCreditcardamount: ").append(dEzsignsignatureCreditcardamount).append("\n");
     sb.append("  sValue: ").append(sValue).append("\n");
     sb.append("  eAttachmentsConfirmationDecision: ").append(eAttachmentsConfirmationDecision).append("\n");
     sb.append("  sAttachmentsRefusalReason: ").append(sAttachmentsRefusalReason).append("\n");

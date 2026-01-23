@@ -33,6 +33,10 @@ public class SystemconfigurationResponseCompound {
   private Integer fkiSystemconfigurationtypeID = null;
   @SerializedName("fkiBrandingID")
   private Integer fkiBrandingID = null;
+  @SerializedName("fkiTimezoneIDDefault")
+  private Integer fkiTimezoneIDDefault = null;
+  @SerializedName("sTimezoneNameDefault")
+  private String sTimezoneNameDefault = null;
   @SerializedName("sSystemconfigurationtypeDescriptionX")
   private String sSystemconfigurationtypeDescriptionX = null;
   @SerializedName("eSystemconfigurationNewexternaluseraction")
@@ -61,6 +65,8 @@ public class SystemconfigurationResponseCompound {
   private String dtSystemconfigurationReadonlyexpirationend = null;
   @SerializedName("objBranding")
   private CustomBrandingResponse objBranding = null;
+  @SerializedName("iSystemconfigurationEzsignreminderhoursend")
+  private Integer iSystemconfigurationEzsignreminderhoursend = null;
 
   /**
    * The unique ID of the Systemconfiguration
@@ -97,6 +103,29 @@ public class SystemconfigurationResponseCompound {
   }
   public void setFkiBrandingID(Integer fkiBrandingID) {
     this.fkiBrandingID = fkiBrandingID;
+  }
+
+  /**
+   * The unique ID of the Timezone
+   * minimum: 0
+   **/
+  @ApiModelProperty(required = true, value = "The unique ID of the Timezone")
+  public Integer getFkiTimezoneIDDefault() {
+    return fkiTimezoneIDDefault;
+  }
+  public void setFkiTimezoneIDDefault(Integer fkiTimezoneIDDefault) {
+    this.fkiTimezoneIDDefault = fkiTimezoneIDDefault;
+  }
+
+  /**
+   * The description of the Timezone
+   **/
+  @ApiModelProperty(required = true, value = "The description of the Timezone")
+  public String getSTimezoneNameDefault() {
+    return sTimezoneNameDefault;
+  }
+  public void setSTimezoneNameDefault(String sTimezoneNameDefault) {
+    this.sTimezoneNameDefault = sTimezoneNameDefault;
   }
 
   /**
@@ -247,6 +276,19 @@ public class SystemconfigurationResponseCompound {
     this.objBranding = objBranding;
   }
 
+  /**
+   * The hour we will send the eZsign reminders
+   * minimum: 0
+   * maximum: 23
+   **/
+  @ApiModelProperty(value = "The hour we will send the eZsign reminders")
+  public Integer getISystemconfigurationEzsignreminderhoursend() {
+    return iSystemconfigurationEzsignreminderhoursend;
+  }
+  public void setISystemconfigurationEzsignreminderhoursend(Integer iSystemconfigurationEzsignreminderhoursend) {
+    this.iSystemconfigurationEzsignreminderhoursend = iSystemconfigurationEzsignreminderhoursend;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -260,6 +302,8 @@ public class SystemconfigurationResponseCompound {
     return (this.pkiSystemconfigurationID == null ? systemconfigurationResponseCompound.pkiSystemconfigurationID == null : this.pkiSystemconfigurationID.equals(systemconfigurationResponseCompound.pkiSystemconfigurationID)) &&
         (this.fkiSystemconfigurationtypeID == null ? systemconfigurationResponseCompound.fkiSystemconfigurationtypeID == null : this.fkiSystemconfigurationtypeID.equals(systemconfigurationResponseCompound.fkiSystemconfigurationtypeID)) &&
         (this.fkiBrandingID == null ? systemconfigurationResponseCompound.fkiBrandingID == null : this.fkiBrandingID.equals(systemconfigurationResponseCompound.fkiBrandingID)) &&
+        (this.fkiTimezoneIDDefault == null ? systemconfigurationResponseCompound.fkiTimezoneIDDefault == null : this.fkiTimezoneIDDefault.equals(systemconfigurationResponseCompound.fkiTimezoneIDDefault)) &&
+        (this.sTimezoneNameDefault == null ? systemconfigurationResponseCompound.sTimezoneNameDefault == null : this.sTimezoneNameDefault.equals(systemconfigurationResponseCompound.sTimezoneNameDefault)) &&
         (this.sSystemconfigurationtypeDescriptionX == null ? systemconfigurationResponseCompound.sSystemconfigurationtypeDescriptionX == null : this.sSystemconfigurationtypeDescriptionX.equals(systemconfigurationResponseCompound.sSystemconfigurationtypeDescriptionX)) &&
         (this.eSystemconfigurationNewexternaluseraction == null ? systemconfigurationResponseCompound.eSystemconfigurationNewexternaluseraction == null : this.eSystemconfigurationNewexternaluseraction.equals(systemconfigurationResponseCompound.eSystemconfigurationNewexternaluseraction)) &&
         (this.eSystemconfigurationLanguage1 == null ? systemconfigurationResponseCompound.eSystemconfigurationLanguage1 == null : this.eSystemconfigurationLanguage1.equals(systemconfigurationResponseCompound.eSystemconfigurationLanguage1)) &&
@@ -273,7 +317,8 @@ public class SystemconfigurationResponseCompound {
         (this.bSystemconfigurationSspr == null ? systemconfigurationResponseCompound.bSystemconfigurationSspr == null : this.bSystemconfigurationSspr.equals(systemconfigurationResponseCompound.bSystemconfigurationSspr)) &&
         (this.dtSystemconfigurationReadonlyexpirationstart == null ? systemconfigurationResponseCompound.dtSystemconfigurationReadonlyexpirationstart == null : this.dtSystemconfigurationReadonlyexpirationstart.equals(systemconfigurationResponseCompound.dtSystemconfigurationReadonlyexpirationstart)) &&
         (this.dtSystemconfigurationReadonlyexpirationend == null ? systemconfigurationResponseCompound.dtSystemconfigurationReadonlyexpirationend == null : this.dtSystemconfigurationReadonlyexpirationend.equals(systemconfigurationResponseCompound.dtSystemconfigurationReadonlyexpirationend)) &&
-        (this.objBranding == null ? systemconfigurationResponseCompound.objBranding == null : this.objBranding.equals(systemconfigurationResponseCompound.objBranding));
+        (this.objBranding == null ? systemconfigurationResponseCompound.objBranding == null : this.objBranding.equals(systemconfigurationResponseCompound.objBranding)) &&
+        (this.iSystemconfigurationEzsignreminderhoursend == null ? systemconfigurationResponseCompound.iSystemconfigurationEzsignreminderhoursend == null : this.iSystemconfigurationEzsignreminderhoursend.equals(systemconfigurationResponseCompound.iSystemconfigurationEzsignreminderhoursend));
   }
 
   @Override
@@ -282,6 +327,8 @@ public class SystemconfigurationResponseCompound {
     result = 31 * result + (this.pkiSystemconfigurationID == null ? 0: this.pkiSystemconfigurationID.hashCode());
     result = 31 * result + (this.fkiSystemconfigurationtypeID == null ? 0: this.fkiSystemconfigurationtypeID.hashCode());
     result = 31 * result + (this.fkiBrandingID == null ? 0: this.fkiBrandingID.hashCode());
+    result = 31 * result + (this.fkiTimezoneIDDefault == null ? 0: this.fkiTimezoneIDDefault.hashCode());
+    result = 31 * result + (this.sTimezoneNameDefault == null ? 0: this.sTimezoneNameDefault.hashCode());
     result = 31 * result + (this.sSystemconfigurationtypeDescriptionX == null ? 0: this.sSystemconfigurationtypeDescriptionX.hashCode());
     result = 31 * result + (this.eSystemconfigurationNewexternaluseraction == null ? 0: this.eSystemconfigurationNewexternaluseraction.hashCode());
     result = 31 * result + (this.eSystemconfigurationLanguage1 == null ? 0: this.eSystemconfigurationLanguage1.hashCode());
@@ -296,6 +343,7 @@ public class SystemconfigurationResponseCompound {
     result = 31 * result + (this.dtSystemconfigurationReadonlyexpirationstart == null ? 0: this.dtSystemconfigurationReadonlyexpirationstart.hashCode());
     result = 31 * result + (this.dtSystemconfigurationReadonlyexpirationend == null ? 0: this.dtSystemconfigurationReadonlyexpirationend.hashCode());
     result = 31 * result + (this.objBranding == null ? 0: this.objBranding.hashCode());
+    result = 31 * result + (this.iSystemconfigurationEzsignreminderhoursend == null ? 0: this.iSystemconfigurationEzsignreminderhoursend.hashCode());
     return result;
   }
 
@@ -307,6 +355,8 @@ public class SystemconfigurationResponseCompound {
     sb.append("  pkiSystemconfigurationID: ").append(pkiSystemconfigurationID).append("\n");
     sb.append("  fkiSystemconfigurationtypeID: ").append(fkiSystemconfigurationtypeID).append("\n");
     sb.append("  fkiBrandingID: ").append(fkiBrandingID).append("\n");
+    sb.append("  fkiTimezoneIDDefault: ").append(fkiTimezoneIDDefault).append("\n");
+    sb.append("  sTimezoneNameDefault: ").append(sTimezoneNameDefault).append("\n");
     sb.append("  sSystemconfigurationtypeDescriptionX: ").append(sSystemconfigurationtypeDescriptionX).append("\n");
     sb.append("  eSystemconfigurationNewexternaluseraction: ").append(eSystemconfigurationNewexternaluseraction).append("\n");
     sb.append("  eSystemconfigurationLanguage1: ").append(eSystemconfigurationLanguage1).append("\n");
@@ -321,6 +371,7 @@ public class SystemconfigurationResponseCompound {
     sb.append("  dtSystemconfigurationReadonlyexpirationstart: ").append(dtSystemconfigurationReadonlyexpirationstart).append("\n");
     sb.append("  dtSystemconfigurationReadonlyexpirationend: ").append(dtSystemconfigurationReadonlyexpirationend).append("\n");
     sb.append("  objBranding: ").append(objBranding).append("\n");
+    sb.append("  iSystemconfigurationEzsignreminderhoursend: ").append(iSystemconfigurationEzsignreminderhoursend).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

@@ -4,7 +4,6 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ezsignfoldersignerassociationCreateEmbeddedUrlV1**](ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationCreateEmbeddedUrlV1) | **POST** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/createEmbeddedUrl | Creates an Url to allow embedded signing
 [**ezsignfoldersignerassociationCreateEmbeddedUrlV2**](ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationCreateEmbeddedUrlV2) | **POST** /2/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/createEmbeddedUrl | Creates an Url to allow embedded signing
 [**ezsignfoldersignerassociationCreateObjectV1**](ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationCreateObjectV1) | **POST** /1/object/ezsignfoldersignerassociation | Create a new Ezsignfoldersignerassociation
 [**ezsignfoldersignerassociationCreateObjectV2**](ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationCreateObjectV2) | **POST** /2/object/ezsignfoldersignerassociation | Create a new Ezsignfoldersignerassociation
@@ -19,61 +18,13 @@ Method | HTTP request | Description
 
 
 
-## ezsignfoldersignerassociationCreateEmbeddedUrlV1
-
-> EzsignfoldersignerassociationCreateEmbeddedUrlV1Response ezsignfoldersignerassociationCreateEmbeddedUrlV1(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationCreateEmbeddedUrlV1Request)
-
-Creates an Url to allow embedded signing
-
-This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.
-
-### Example
-
-```java
-// Import classes:
-//import org.openapitools.client.api.ObjectEzsignfoldersignerassociationApi;
-
-ObjectEzsignfoldersignerassociationApi apiInstance = new ObjectEzsignfoldersignerassociationApi();
-Integer pkiEzsignfoldersignerassociationID = null; // Integer | 
-EzsignfoldersignerassociationCreateEmbeddedUrlV1Request ezsignfoldersignerassociationCreateEmbeddedUrlV1Request = new EzsignfoldersignerassociationCreateEmbeddedUrlV1Request(); // EzsignfoldersignerassociationCreateEmbeddedUrlV1Request | 
-try {
-    EzsignfoldersignerassociationCreateEmbeddedUrlV1Response result = apiInstance.ezsignfoldersignerassociationCreateEmbeddedUrlV1(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationCreateEmbeddedUrlV1Request);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling ObjectEzsignfoldersignerassociationApi#ezsignfoldersignerassociationCreateEmbeddedUrlV1");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiEzsignfoldersignerassociationID** | **Integer**|  | [default to null]
- **ezsignfoldersignerassociationCreateEmbeddedUrlV1Request** | [**EzsignfoldersignerassociationCreateEmbeddedUrlV1Request**](EzsignfoldersignerassociationCreateEmbeddedUrlV1Request.md)|  |
-
-### Return type
-
-[**EzsignfoldersignerassociationCreateEmbeddedUrlV1Response**](EzsignfoldersignerassociationCreateEmbeddedUrlV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-
 ## ezsignfoldersignerassociationCreateEmbeddedUrlV2
 
 > EzsignfoldersignerassociationCreateEmbeddedUrlV2Response ezsignfoldersignerassociationCreateEmbeddedUrlV2(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationCreateEmbeddedUrlV2Request)
 
 Creates an Url to allow embedded signing
 
-This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.
+This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.  ### Iframe Communication (postMessage)  If the signing page is embedded in an &#x60;iframe&#x60;, the application sends events to the parent window via &#x60;window.postMessage&#x60;.  The message structure is defined as follows:  &#x60;&#x60;&#x60;json {   \&quot;source\&quot;: \&quot;ezsign\&quot;,   \&quot;type\&quot;: \&quot;eEzsignEvent\&quot;,   \&quot;payload\&quot;: \&quot;CompletedEzsignfolder\&quot; } &#x60;&#x60;&#x60;  * **source**: Always &#x60;&#39;ezsign&#39;&#x60;. * **type**: Always &#x60;&#39;eEzsignEvent&#39;&#x60;. * **payload**: Corresponds to the **eEzsignEvent** values listed in the table above (e.g., &#x60;SessionTimeout&#x60;, &#x60;CompletedStep&#x60;, etc.).  #### Example listener  &#x60;&#x60;&#x60;javascript window.addEventListener(&#39;message&#39;, (event) &#x3D;&gt; {     const { source, type, payload } &#x3D; event.data;         if (source &#x3D;&#x3D;&#x3D; &#39;ezsign&#39; &amp;&amp; type &#x3D;&#x3D;&#x3D; &#39;eEzsignEvent&#39;) {         console.log(&#39;Event received:&#39;, payload);     } }); &#x60;&#x60;&#x60; 
 
 ### Example
 

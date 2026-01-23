@@ -74,7 +74,7 @@ public class ActivesessionListElement {
    * minimum: 1
    * maximum: 65535
    **/
-  @ApiModelProperty(required = true, value = "The unique ID of the Computer")
+  @ApiModelProperty(value = "The unique ID of the Computer")
   public Integer getFkiComputerID() {
     return fkiComputerID;
   }
@@ -143,7 +143,7 @@ public class ActivesessionListElement {
   /**
    * The description of the Computer
    **/
-  @ApiModelProperty(required = true, value = "The description of the Computer")
+  @ApiModelProperty(value = "The description of the Computer")
   public String getSComputerDescription() {
     return sComputerDescription;
   }

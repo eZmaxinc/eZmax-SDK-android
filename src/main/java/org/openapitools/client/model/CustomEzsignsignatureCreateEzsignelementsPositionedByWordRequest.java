@@ -22,6 +22,8 @@ import org.openapitools.client.model.FieldEEzsignsignatureAttachmentnamesource;
 import org.openapitools.client.model.FieldEEzsignsignatureConsultationtrigger;
 import org.openapitools.client.model.FieldEEzsignsignatureDependencyrequirement;
 import org.openapitools.client.model.FieldEEzsignsignatureFont;
+import org.openapitools.client.model.FieldEEzsignsignatureSignaturepad;
+import org.openapitools.client.model.FieldEEzsignsignatureSignaturepadrequired;
 import org.openapitools.client.model.FieldEEzsignsignatureTooltipposition;
 import org.openapitools.client.model.FieldEEzsignsignatureType;
 import io.swagger.annotations.*;
@@ -53,6 +55,10 @@ public class CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest {
   private Integer iEzsignsignatureStep = null;
   @SerializedName("eEzsignsignatureType")
   private FieldEEzsignsignatureType eEzsignsignatureType = null;
+  @SerializedName("eEzsignsignatureSignaturepad")
+  private FieldEEzsignsignatureSignaturepad eEzsignsignatureSignaturepad = null;
+  @SerializedName("eEzsignsignatureSignaturepadrequired")
+  private FieldEEzsignsignatureSignaturepadrequired eEzsignsignatureSignaturepadrequired = null;
   @SerializedName("fkiEzsigndocumentID")
   private Integer fkiEzsigndocumentID = null;
   @SerializedName("tEzsignsignatureTooltip")
@@ -93,6 +99,8 @@ public class CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest {
   private String sEzsignsignatureCreditcardamountdescription = null;
   @SerializedName("dEzsignsignatureCreditcardamount")
   private String dEzsignsignatureCreditcardamount = null;
+  @SerializedName("bEzsignsignatureCreditcardcustomamount")
+  private Boolean bEzsignsignatureCreditcardcustomamount = null;
   @SerializedName("bEzsignsignatureCustomdate")
   private Boolean bEzsignsignatureCustomdate = null;
   @SerializedName("a_objEzsignsignaturecustomdate")
@@ -220,6 +228,26 @@ public class CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest {
   }
   public void setEEzsignsignatureType(FieldEEzsignsignatureType eEzsignsignatureType) {
     this.eEzsignsignatureType = eEzsignsignatureType;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public FieldEEzsignsignatureSignaturepad getEEzsignsignatureSignaturepad() {
+    return eEzsignsignatureSignaturepad;
+  }
+  public void setEEzsignsignatureSignaturepad(FieldEEzsignsignatureSignaturepad eEzsignsignatureSignaturepad) {
+    this.eEzsignsignatureSignaturepad = eEzsignsignatureSignaturepad;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public FieldEEzsignsignatureSignaturepadrequired getEEzsignsignatureSignaturepadrequired() {
+    return eEzsignsignatureSignaturepadrequired;
+  }
+  public void setEEzsignsignatureSignaturepadrequired(FieldEEzsignsignatureSignaturepadrequired eEzsignsignatureSignaturepadrequired) {
+    this.eEzsignsignatureSignaturepadrequired = eEzsignsignatureSignaturepadrequired;
   }
 
   /**
@@ -441,6 +469,17 @@ public class CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest {
   }
 
   /**
+   * Whether we can enter a custom amount while signing an Ezsignsignature 'Creditcard' or not
+   **/
+  @ApiModelProperty(value = "Whether we can enter a custom amount while signing an Ezsignsignature 'Creditcard' or not")
+  public Boolean getBEzsignsignatureCreditcardcustomamount() {
+    return bEzsignsignatureCreditcardcustomamount;
+  }
+  public void setBEzsignsignatureCreditcardcustomamount(Boolean bEzsignsignatureCreditcardcustomamount) {
+    this.bEzsignsignatureCreditcardcustomamount = bEzsignsignatureCreditcardcustomamount;
+  }
+
+  /**
    * Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**)
    **/
   @ApiModelProperty(value = "Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**)")
@@ -512,6 +551,8 @@ public class CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest {
         (this.iEzsignsignatureHeight == null ? customEzsignsignatureCreateEzsignelementsPositionedByWordRequest.iEzsignsignatureHeight == null : this.iEzsignsignatureHeight.equals(customEzsignsignatureCreateEzsignelementsPositionedByWordRequest.iEzsignsignatureHeight)) &&
         (this.iEzsignsignatureStep == null ? customEzsignsignatureCreateEzsignelementsPositionedByWordRequest.iEzsignsignatureStep == null : this.iEzsignsignatureStep.equals(customEzsignsignatureCreateEzsignelementsPositionedByWordRequest.iEzsignsignatureStep)) &&
         (this.eEzsignsignatureType == null ? customEzsignsignatureCreateEzsignelementsPositionedByWordRequest.eEzsignsignatureType == null : this.eEzsignsignatureType.equals(customEzsignsignatureCreateEzsignelementsPositionedByWordRequest.eEzsignsignatureType)) &&
+        (this.eEzsignsignatureSignaturepad == null ? customEzsignsignatureCreateEzsignelementsPositionedByWordRequest.eEzsignsignatureSignaturepad == null : this.eEzsignsignatureSignaturepad.equals(customEzsignsignatureCreateEzsignelementsPositionedByWordRequest.eEzsignsignatureSignaturepad)) &&
+        (this.eEzsignsignatureSignaturepadrequired == null ? customEzsignsignatureCreateEzsignelementsPositionedByWordRequest.eEzsignsignatureSignaturepadrequired == null : this.eEzsignsignatureSignaturepadrequired.equals(customEzsignsignatureCreateEzsignelementsPositionedByWordRequest.eEzsignsignatureSignaturepadrequired)) &&
         (this.fkiEzsigndocumentID == null ? customEzsignsignatureCreateEzsignelementsPositionedByWordRequest.fkiEzsigndocumentID == null : this.fkiEzsigndocumentID.equals(customEzsignsignatureCreateEzsignelementsPositionedByWordRequest.fkiEzsigndocumentID)) &&
         (this.tEzsignsignatureTooltip == null ? customEzsignsignatureCreateEzsignelementsPositionedByWordRequest.tEzsignsignatureTooltip == null : this.tEzsignsignatureTooltip.equals(customEzsignsignatureCreateEzsignelementsPositionedByWordRequest.tEzsignsignatureTooltip)) &&
         (this.eEzsignsignatureTooltipposition == null ? customEzsignsignatureCreateEzsignelementsPositionedByWordRequest.eEzsignsignatureTooltipposition == null : this.eEzsignsignatureTooltipposition.equals(customEzsignsignatureCreateEzsignelementsPositionedByWordRequest.eEzsignsignatureTooltipposition)) &&
@@ -532,6 +573,7 @@ public class CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest {
         (this.eEzsignsignatureDependencyrequirement == null ? customEzsignsignatureCreateEzsignelementsPositionedByWordRequest.eEzsignsignatureDependencyrequirement == null : this.eEzsignsignatureDependencyrequirement.equals(customEzsignsignatureCreateEzsignelementsPositionedByWordRequest.eEzsignsignatureDependencyrequirement)) &&
         (this.sEzsignsignatureCreditcardamountdescription == null ? customEzsignsignatureCreateEzsignelementsPositionedByWordRequest.sEzsignsignatureCreditcardamountdescription == null : this.sEzsignsignatureCreditcardamountdescription.equals(customEzsignsignatureCreateEzsignelementsPositionedByWordRequest.sEzsignsignatureCreditcardamountdescription)) &&
         (this.dEzsignsignatureCreditcardamount == null ? customEzsignsignatureCreateEzsignelementsPositionedByWordRequest.dEzsignsignatureCreditcardamount == null : this.dEzsignsignatureCreditcardamount.equals(customEzsignsignatureCreateEzsignelementsPositionedByWordRequest.dEzsignsignatureCreditcardamount)) &&
+        (this.bEzsignsignatureCreditcardcustomamount == null ? customEzsignsignatureCreateEzsignelementsPositionedByWordRequest.bEzsignsignatureCreditcardcustomamount == null : this.bEzsignsignatureCreditcardcustomamount.equals(customEzsignsignatureCreateEzsignelementsPositionedByWordRequest.bEzsignsignatureCreditcardcustomamount)) &&
         (this.bEzsignsignatureCustomdate == null ? customEzsignsignatureCreateEzsignelementsPositionedByWordRequest.bEzsignsignatureCustomdate == null : this.bEzsignsignatureCustomdate.equals(customEzsignsignatureCreateEzsignelementsPositionedByWordRequest.bEzsignsignatureCustomdate)) &&
         (this.aObjEzsignsignaturecustomdate == null ? customEzsignsignatureCreateEzsignelementsPositionedByWordRequest.aObjEzsignsignaturecustomdate == null : this.aObjEzsignsignaturecustomdate.equals(customEzsignsignatureCreateEzsignelementsPositionedByWordRequest.aObjEzsignsignaturecustomdate)) &&
         (this.aObjEzsignelementdependency == null ? customEzsignsignatureCreateEzsignelementsPositionedByWordRequest.aObjEzsignelementdependency == null : this.aObjEzsignelementdependency.equals(customEzsignsignatureCreateEzsignelementsPositionedByWordRequest.aObjEzsignelementdependency)) &&
@@ -552,6 +594,8 @@ public class CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest {
     result = 31 * result + (this.iEzsignsignatureHeight == null ? 0: this.iEzsignsignatureHeight.hashCode());
     result = 31 * result + (this.iEzsignsignatureStep == null ? 0: this.iEzsignsignatureStep.hashCode());
     result = 31 * result + (this.eEzsignsignatureType == null ? 0: this.eEzsignsignatureType.hashCode());
+    result = 31 * result + (this.eEzsignsignatureSignaturepad == null ? 0: this.eEzsignsignatureSignaturepad.hashCode());
+    result = 31 * result + (this.eEzsignsignatureSignaturepadrequired == null ? 0: this.eEzsignsignatureSignaturepadrequired.hashCode());
     result = 31 * result + (this.fkiEzsigndocumentID == null ? 0: this.fkiEzsigndocumentID.hashCode());
     result = 31 * result + (this.tEzsignsignatureTooltip == null ? 0: this.tEzsignsignatureTooltip.hashCode());
     result = 31 * result + (this.eEzsignsignatureTooltipposition == null ? 0: this.eEzsignsignatureTooltipposition.hashCode());
@@ -572,6 +616,7 @@ public class CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest {
     result = 31 * result + (this.eEzsignsignatureDependencyrequirement == null ? 0: this.eEzsignsignatureDependencyrequirement.hashCode());
     result = 31 * result + (this.sEzsignsignatureCreditcardamountdescription == null ? 0: this.sEzsignsignatureCreditcardamountdescription.hashCode());
     result = 31 * result + (this.dEzsignsignatureCreditcardamount == null ? 0: this.dEzsignsignatureCreditcardamount.hashCode());
+    result = 31 * result + (this.bEzsignsignatureCreditcardcustomamount == null ? 0: this.bEzsignsignatureCreditcardcustomamount.hashCode());
     result = 31 * result + (this.bEzsignsignatureCustomdate == null ? 0: this.bEzsignsignatureCustomdate.hashCode());
     result = 31 * result + (this.aObjEzsignsignaturecustomdate == null ? 0: this.aObjEzsignsignaturecustomdate.hashCode());
     result = 31 * result + (this.aObjEzsignelementdependency == null ? 0: this.aObjEzsignelementdependency.hashCode());
@@ -595,6 +640,8 @@ public class CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest {
     sb.append("  iEzsignsignatureHeight: ").append(iEzsignsignatureHeight).append("\n");
     sb.append("  iEzsignsignatureStep: ").append(iEzsignsignatureStep).append("\n");
     sb.append("  eEzsignsignatureType: ").append(eEzsignsignatureType).append("\n");
+    sb.append("  eEzsignsignatureSignaturepad: ").append(eEzsignsignatureSignaturepad).append("\n");
+    sb.append("  eEzsignsignatureSignaturepadrequired: ").append(eEzsignsignatureSignaturepadrequired).append("\n");
     sb.append("  fkiEzsigndocumentID: ").append(fkiEzsigndocumentID).append("\n");
     sb.append("  tEzsignsignatureTooltip: ").append(tEzsignsignatureTooltip).append("\n");
     sb.append("  eEzsignsignatureTooltipposition: ").append(eEzsignsignatureTooltipposition).append("\n");
@@ -615,6 +662,7 @@ public class CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest {
     sb.append("  eEzsignsignatureDependencyrequirement: ").append(eEzsignsignatureDependencyrequirement).append("\n");
     sb.append("  sEzsignsignatureCreditcardamountdescription: ").append(sEzsignsignatureCreditcardamountdescription).append("\n");
     sb.append("  dEzsignsignatureCreditcardamount: ").append(dEzsignsignatureCreditcardamount).append("\n");
+    sb.append("  bEzsignsignatureCreditcardcustomamount: ").append(bEzsignsignatureCreditcardcustomamount).append("\n");
     sb.append("  bEzsignsignatureCustomdate: ").append(bEzsignsignatureCustomdate).append("\n");
     sb.append("  aObjEzsignsignaturecustomdate: ").append(aObjEzsignsignaturecustomdate).append("\n");
     sb.append("  aObjEzsignelementdependency: ").append(aObjEzsignelementdependency).append("\n");

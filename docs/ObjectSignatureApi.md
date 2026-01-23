@@ -7,7 +7,6 @@ Method | HTTP request | Description
 [**signatureCreateObjectV1**](ObjectSignatureApi.md#signatureCreateObjectV1) | **POST** /1/object/signature | Create a new Signature
 [**signatureDeleteObjectV1**](ObjectSignatureApi.md#signatureDeleteObjectV1) | **DELETE** /1/object/signature/{pkiSignatureID} | Delete an existing Signature
 [**signatureEditObjectV1**](ObjectSignatureApi.md#signatureEditObjectV1) | **PUT** /1/object/signature/{pkiSignatureID} | Edit an existing Signature
-[**signatureGetObjectV2**](ObjectSignatureApi.md#signatureGetObjectV2) | **GET** /2/object/signature/{pkiSignatureID} | Retrieve an existing Signature
 [**signatureGetObjectV3**](ObjectSignatureApi.md#signatureGetObjectV3) | **GET** /3/object/signature/{pkiSignatureID} | Retrieve an existing Signature
 [**signatureGetSVGInitialsV1**](ObjectSignatureApi.md#signatureGetSVGInitialsV1) | **GET** /1/object/signature/{pkiSignatureID}/getSVGInitials | Retrieve an existing Signature initial SVG
 [**signatureGetSVGSignatureV1**](ObjectSignatureApi.md#signatureGetSVGSignatureV1) | **GET** /1/object/signature/{pkiSignatureID}/getSVGSignature | Retrieve an existing Signature SVG
@@ -151,52 +150,6 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/json
-
-
-## signatureGetObjectV2
-
-> SignatureGetObjectV2Response signatureGetObjectV2(pkiSignatureID)
-
-Retrieve an existing Signature
-
-
-
-### Example
-
-```java
-// Import classes:
-//import org.openapitools.client.api.ObjectSignatureApi;
-
-ObjectSignatureApi apiInstance = new ObjectSignatureApi();
-Integer pkiSignatureID = null; // Integer | The unique ID of the Signature
-try {
-    SignatureGetObjectV2Response result = apiInstance.signatureGetObjectV2(pkiSignatureID);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling ObjectSignatureApi#signatureGetObjectV2");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiSignatureID** | **Integer**| The unique ID of the Signature | [default to null]
-
-### Return type
-
-[**SignatureGetObjectV2Response**](SignatureGetObjectV2Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
 - **Accept**: application/json
 
 

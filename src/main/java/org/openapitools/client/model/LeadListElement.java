@@ -36,6 +36,8 @@ public class LeadListElement {
   private Boolean bLeadIsactive = null;
   @SerializedName("sLeadCode")
   private String sLeadCode = null;
+  @SerializedName("sLeadContacts")
+  private String sLeadContacts = null;
 
   /**
    * The unique ID of the Lead
@@ -117,6 +119,17 @@ public class LeadListElement {
     this.sLeadCode = sLeadCode;
   }
 
+  /**
+   * The contacts' name of the Lead
+   **/
+  @ApiModelProperty(value = "The contacts' name of the Lead")
+  public String getSLeadContacts() {
+    return sLeadContacts;
+  }
+  public void setSLeadContacts(String sLeadContacts) {
+    this.sLeadContacts = sLeadContacts;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -133,7 +146,8 @@ public class LeadListElement {
         (this.eLeadStatus == null ? leadListElement.eLeadStatus == null : this.eLeadStatus.equals(leadListElement.eLeadStatus)) &&
         (this.dtLeadExpiration == null ? leadListElement.dtLeadExpiration == null : this.dtLeadExpiration.equals(leadListElement.dtLeadExpiration)) &&
         (this.bLeadIsactive == null ? leadListElement.bLeadIsactive == null : this.bLeadIsactive.equals(leadListElement.bLeadIsactive)) &&
-        (this.sLeadCode == null ? leadListElement.sLeadCode == null : this.sLeadCode.equals(leadListElement.sLeadCode));
+        (this.sLeadCode == null ? leadListElement.sLeadCode == null : this.sLeadCode.equals(leadListElement.sLeadCode)) &&
+        (this.sLeadContacts == null ? leadListElement.sLeadContacts == null : this.sLeadContacts.equals(leadListElement.sLeadContacts));
   }
 
   @Override
@@ -146,6 +160,7 @@ public class LeadListElement {
     result = 31 * result + (this.dtLeadExpiration == null ? 0: this.dtLeadExpiration.hashCode());
     result = 31 * result + (this.bLeadIsactive == null ? 0: this.bLeadIsactive.hashCode());
     result = 31 * result + (this.sLeadCode == null ? 0: this.sLeadCode.hashCode());
+    result = 31 * result + (this.sLeadContacts == null ? 0: this.sLeadContacts.hashCode());
     return result;
   }
 
@@ -161,6 +176,7 @@ public class LeadListElement {
     sb.append("  dtLeadExpiration: ").append(dtLeadExpiration).append("\n");
     sb.append("  bLeadIsactive: ").append(bLeadIsactive).append("\n");
     sb.append("  sLeadCode: ").append(sLeadCode).append("\n");
+    sb.append("  sLeadContacts: ").append(sLeadContacts).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

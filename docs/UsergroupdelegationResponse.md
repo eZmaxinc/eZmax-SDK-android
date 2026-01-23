@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **sUserLastname** | **String** | The last name of the user | 
 **sUserLoginname** | **String** | The login name of the User. | 
 **sEmailAddress** | **String** | The email address. |  [optional]
+**bUserIsactive** | **Boolean** | Whether the User is active or not | 
 **sUsergroupNameX** | **String** | The Name of the Usergroup in the language of the requester | 
 
 

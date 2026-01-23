@@ -24,8 +24,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
 import org.openapitools.client.model.CommonResponseError;
-import org.openapitools.client.model.SystemconfigurationEditObjectV1Request;
-import org.openapitools.client.model.SystemconfigurationEditObjectV1Response;
+import org.openapitools.client.model.SystemconfigurationEditObjectV2Request;
+import org.openapitools.client.model.SystemconfigurationEditObjectV2Response;
 import org.openapitools.client.model.SystemconfigurationGetObjectV2Response;
 
 import org.apache.http.HttpEntity;
@@ -62,24 +62,24 @@ public class ObjectSystemconfigurationApi {
   * Edit an existing Systemconfiguration
   * 
    * @param pkiSystemconfigurationID The unique ID of the Systemconfiguration
-   * @param systemconfigurationEditObjectV1Request 
-   * @return SystemconfigurationEditObjectV1Response
+   * @param systemconfigurationEditObjectV2Request 
+   * @return SystemconfigurationEditObjectV2Response
   */
-  public SystemconfigurationEditObjectV1Response systemconfigurationEditObjectV1 (Integer pkiSystemconfigurationID, SystemconfigurationEditObjectV1Request systemconfigurationEditObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
-    Object postBody = systemconfigurationEditObjectV1Request;
+  public SystemconfigurationEditObjectV2Response systemconfigurationEditObjectV2 (Integer pkiSystemconfigurationID, SystemconfigurationEditObjectV2Request systemconfigurationEditObjectV2Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = systemconfigurationEditObjectV2Request;
     // verify the required parameter 'pkiSystemconfigurationID' is set
     if (pkiSystemconfigurationID == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'pkiSystemconfigurationID' when calling systemconfigurationEditObjectV1",
-        new ApiException(400, "Missing the required parameter 'pkiSystemconfigurationID' when calling systemconfigurationEditObjectV1"));
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiSystemconfigurationID' when calling systemconfigurationEditObjectV2",
+        new ApiException(400, "Missing the required parameter 'pkiSystemconfigurationID' when calling systemconfigurationEditObjectV2"));
     }
-    // verify the required parameter 'systemconfigurationEditObjectV1Request' is set
-    if (systemconfigurationEditObjectV1Request == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'systemconfigurationEditObjectV1Request' when calling systemconfigurationEditObjectV1",
-        new ApiException(400, "Missing the required parameter 'systemconfigurationEditObjectV1Request' when calling systemconfigurationEditObjectV1"));
+    // verify the required parameter 'systemconfigurationEditObjectV2Request' is set
+    if (systemconfigurationEditObjectV2Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'systemconfigurationEditObjectV2Request' when calling systemconfigurationEditObjectV2",
+        new ApiException(400, "Missing the required parameter 'systemconfigurationEditObjectV2Request' when calling systemconfigurationEditObjectV2"));
     }
 
     // create path and map variables
-    String path = "/1/object/systemconfiguration/{pkiSystemconfigurationID}".replaceAll("\\{" + "pkiSystemconfigurationID" + "\\}", apiInvoker.escapeString(pkiSystemconfigurationID.toString()));
+    String path = "/2/object/systemconfiguration/{pkiSystemconfigurationID}".replaceAll("\\{" + "pkiSystemconfigurationID" + "\\}", apiInvoker.escapeString(pkiSystemconfigurationID.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -106,7 +106,7 @@ public class ObjectSystemconfigurationApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (SystemconfigurationEditObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", SystemconfigurationEditObjectV1Response.class);
+         return (SystemconfigurationEditObjectV2Response) ApiInvoker.deserialize(localVarResponse, "", SystemconfigurationEditObjectV2Response.class);
       } else {
          return null;
       }
@@ -130,24 +130,24 @@ public class ObjectSystemconfigurationApi {
       /**
    * Edit an existing Systemconfiguration
    * 
-   * @param pkiSystemconfigurationID The unique ID of the Systemconfiguration   * @param systemconfigurationEditObjectV1Request 
+   * @param pkiSystemconfigurationID The unique ID of the Systemconfiguration   * @param systemconfigurationEditObjectV2Request 
   */
-  public void systemconfigurationEditObjectV1 (Integer pkiSystemconfigurationID, SystemconfigurationEditObjectV1Request systemconfigurationEditObjectV1Request, final Response.Listener<SystemconfigurationEditObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
-    Object postBody = systemconfigurationEditObjectV1Request;
+  public void systemconfigurationEditObjectV2 (Integer pkiSystemconfigurationID, SystemconfigurationEditObjectV2Request systemconfigurationEditObjectV2Request, final Response.Listener<SystemconfigurationEditObjectV2Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = systemconfigurationEditObjectV2Request;
 
     // verify the required parameter 'pkiSystemconfigurationID' is set
     if (pkiSystemconfigurationID == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'pkiSystemconfigurationID' when calling systemconfigurationEditObjectV1",
-        new ApiException(400, "Missing the required parameter 'pkiSystemconfigurationID' when calling systemconfigurationEditObjectV1"));
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiSystemconfigurationID' when calling systemconfigurationEditObjectV2",
+        new ApiException(400, "Missing the required parameter 'pkiSystemconfigurationID' when calling systemconfigurationEditObjectV2"));
     }
-    // verify the required parameter 'systemconfigurationEditObjectV1Request' is set
-    if (systemconfigurationEditObjectV1Request == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'systemconfigurationEditObjectV1Request' when calling systemconfigurationEditObjectV1",
-        new ApiException(400, "Missing the required parameter 'systemconfigurationEditObjectV1Request' when calling systemconfigurationEditObjectV1"));
+    // verify the required parameter 'systemconfigurationEditObjectV2Request' is set
+    if (systemconfigurationEditObjectV2Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'systemconfigurationEditObjectV2Request' when calling systemconfigurationEditObjectV2",
+        new ApiException(400, "Missing the required parameter 'systemconfigurationEditObjectV2Request' when calling systemconfigurationEditObjectV2"));
     }
 
     // create path and map variables
-    String path = "/1/object/systemconfiguration/{pkiSystemconfigurationID}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiSystemconfigurationID" + "\\}", apiInvoker.escapeString(pkiSystemconfigurationID.toString()));
+    String path = "/2/object/systemconfiguration/{pkiSystemconfigurationID}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiSystemconfigurationID" + "\\}", apiInvoker.escapeString(pkiSystemconfigurationID.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -182,7 +182,7 @@ public class ObjectSystemconfigurationApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((SystemconfigurationEditObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", SystemconfigurationEditObjectV1Response.class));
+              responseListener.onResponse((SystemconfigurationEditObjectV2Response) ApiInvoker.deserialize(localVarResponse,  "", SystemconfigurationEditObjectV2Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

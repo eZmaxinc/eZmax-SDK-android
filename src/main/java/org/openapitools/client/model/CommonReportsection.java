@@ -30,6 +30,8 @@ public class CommonReportsection {
   private EnumHorizontalalignment eReportsectionHorizontalalignment = null;
   @SerializedName("sReportsectionTitle")
   private String sReportsectionTitle = null;
+  @SerializedName("sReportsectionTabname")
+  private String sReportsectionTabname = null;
 
   /**
    **/
@@ -62,6 +64,17 @@ public class CommonReportsection {
     this.sReportsectionTitle = sReportsectionTitle;
   }
 
+  /**
+   * The name of tab in excel version
+   **/
+  @ApiModelProperty(value = "The name of tab in excel version")
+  public String getSReportsectionTabname() {
+    return sReportsectionTabname;
+  }
+  public void setSReportsectionTabname(String sReportsectionTabname) {
+    this.sReportsectionTabname = sReportsectionTabname;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -74,7 +87,8 @@ public class CommonReportsection {
     CommonReportsection commonReportsection = (CommonReportsection) o;
     return (this.aObjReportsubsection == null ? commonReportsection.aObjReportsubsection == null : this.aObjReportsubsection.equals(commonReportsection.aObjReportsubsection)) &&
         (this.eReportsectionHorizontalalignment == null ? commonReportsection.eReportsectionHorizontalalignment == null : this.eReportsectionHorizontalalignment.equals(commonReportsection.eReportsectionHorizontalalignment)) &&
-        (this.sReportsectionTitle == null ? commonReportsection.sReportsectionTitle == null : this.sReportsectionTitle.equals(commonReportsection.sReportsectionTitle));
+        (this.sReportsectionTitle == null ? commonReportsection.sReportsectionTitle == null : this.sReportsectionTitle.equals(commonReportsection.sReportsectionTitle)) &&
+        (this.sReportsectionTabname == null ? commonReportsection.sReportsectionTabname == null : this.sReportsectionTabname.equals(commonReportsection.sReportsectionTabname));
   }
 
   @Override
@@ -83,6 +97,7 @@ public class CommonReportsection {
     result = 31 * result + (this.aObjReportsubsection == null ? 0: this.aObjReportsubsection.hashCode());
     result = 31 * result + (this.eReportsectionHorizontalalignment == null ? 0: this.eReportsectionHorizontalalignment.hashCode());
     result = 31 * result + (this.sReportsectionTitle == null ? 0: this.sReportsectionTitle.hashCode());
+    result = 31 * result + (this.sReportsectionTabname == null ? 0: this.sReportsectionTabname.hashCode());
     return result;
   }
 
@@ -94,6 +109,7 @@ public class CommonReportsection {
     sb.append("  aObjReportsubsection: ").append(aObjReportsubsection).append("\n");
     sb.append("  eReportsectionHorizontalalignment: ").append(eReportsectionHorizontalalignment).append("\n");
     sb.append("  sReportsectionTitle: ").append(sReportsectionTitle).append("\n");
+    sb.append("  sReportsectionTabname: ").append(sReportsectionTabname).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

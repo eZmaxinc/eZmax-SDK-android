@@ -27,6 +27,8 @@ public class UsergroupListElement {
   private String sUsergroupNameX = null;
   @SerializedName("iCountUser")
   private Integer iCountUser = null;
+  @SerializedName("iCountInactiveuser")
+  private Integer iCountInactiveuser = null;
 
   /**
    * The unique ID of the Usergroup
@@ -65,6 +67,19 @@ public class UsergroupListElement {
     this.iCountUser = iCountUser;
   }
 
+  /**
+   * Number of inactive users in group
+   * minimum: 0
+   * maximum: 16777215
+   **/
+  @ApiModelProperty(required = true, value = "Number of inactive users in group")
+  public Integer getICountInactiveuser() {
+    return iCountInactiveuser;
+  }
+  public void setICountInactiveuser(Integer iCountInactiveuser) {
+    this.iCountInactiveuser = iCountInactiveuser;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -77,7 +92,8 @@ public class UsergroupListElement {
     UsergroupListElement usergroupListElement = (UsergroupListElement) o;
     return (this.pkiUsergroupID == null ? usergroupListElement.pkiUsergroupID == null : this.pkiUsergroupID.equals(usergroupListElement.pkiUsergroupID)) &&
         (this.sUsergroupNameX == null ? usergroupListElement.sUsergroupNameX == null : this.sUsergroupNameX.equals(usergroupListElement.sUsergroupNameX)) &&
-        (this.iCountUser == null ? usergroupListElement.iCountUser == null : this.iCountUser.equals(usergroupListElement.iCountUser));
+        (this.iCountUser == null ? usergroupListElement.iCountUser == null : this.iCountUser.equals(usergroupListElement.iCountUser)) &&
+        (this.iCountInactiveuser == null ? usergroupListElement.iCountInactiveuser == null : this.iCountInactiveuser.equals(usergroupListElement.iCountInactiveuser));
   }
 
   @Override
@@ -86,6 +102,7 @@ public class UsergroupListElement {
     result = 31 * result + (this.pkiUsergroupID == null ? 0: this.pkiUsergroupID.hashCode());
     result = 31 * result + (this.sUsergroupNameX == null ? 0: this.sUsergroupNameX.hashCode());
     result = 31 * result + (this.iCountUser == null ? 0: this.iCountUser.hashCode());
+    result = 31 * result + (this.iCountInactiveuser == null ? 0: this.iCountInactiveuser.hashCode());
     return result;
   }
 
@@ -97,6 +114,7 @@ public class UsergroupListElement {
     sb.append("  pkiUsergroupID: ").append(pkiUsergroupID).append("\n");
     sb.append("  sUsergroupNameX: ").append(sUsergroupNameX).append("\n");
     sb.append("  iCountUser: ").append(iCountUser).append("\n");
+    sb.append("  iCountInactiveuser: ").append(iCountInactiveuser).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

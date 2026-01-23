@@ -29,6 +29,8 @@ public class CreditcardclientListElement {
   private Integer fkiCreditcardtypeID = null;
   @SerializedName("bCreditcardclientrelationIsdefault")
   private Boolean bCreditcardclientrelationIsdefault = null;
+  @SerializedName("bCreditcardclientLegacy")
+  private Boolean bCreditcardclientLegacy = null;
   @SerializedName("sCreditcardclientDescription")
   private String sCreditcardclientDescription = null;
   @SerializedName("bCreditcardclientAllowedcompanypayment")
@@ -90,6 +92,17 @@ public class CreditcardclientListElement {
   }
   public void setBCreditcardclientrelationIsdefault(Boolean bCreditcardclientrelationIsdefault) {
     this.bCreditcardclientrelationIsdefault = bCreditcardclientrelationIsdefault;
+  }
+
+  /**
+   * Whether the Creditcardclient is legacy or not
+   **/
+  @ApiModelProperty(required = true, value = "Whether the Creditcardclient is legacy or not")
+  public Boolean getBCreditcardclientLegacy() {
+    return bCreditcardclientLegacy;
+  }
+  public void setBCreditcardclientLegacy(Boolean bCreditcardclientLegacy) {
+    this.bCreditcardclientLegacy = bCreditcardclientLegacy;
   }
 
   /**
@@ -178,6 +191,7 @@ public class CreditcardclientListElement {
         (this.fkiCreditcarddetailID == null ? creditcardclientListElement.fkiCreditcarddetailID == null : this.fkiCreditcarddetailID.equals(creditcardclientListElement.fkiCreditcarddetailID)) &&
         (this.fkiCreditcardtypeID == null ? creditcardclientListElement.fkiCreditcardtypeID == null : this.fkiCreditcardtypeID.equals(creditcardclientListElement.fkiCreditcardtypeID)) &&
         (this.bCreditcardclientrelationIsdefault == null ? creditcardclientListElement.bCreditcardclientrelationIsdefault == null : this.bCreditcardclientrelationIsdefault.equals(creditcardclientListElement.bCreditcardclientrelationIsdefault)) &&
+        (this.bCreditcardclientLegacy == null ? creditcardclientListElement.bCreditcardclientLegacy == null : this.bCreditcardclientLegacy.equals(creditcardclientListElement.bCreditcardclientLegacy)) &&
         (this.sCreditcardclientDescription == null ? creditcardclientListElement.sCreditcardclientDescription == null : this.sCreditcardclientDescription.equals(creditcardclientListElement.sCreditcardclientDescription)) &&
         (this.bCreditcardclientAllowedcompanypayment == null ? creditcardclientListElement.bCreditcardclientAllowedcompanypayment == null : this.bCreditcardclientAllowedcompanypayment.equals(creditcardclientListElement.bCreditcardclientAllowedcompanypayment)) &&
         (this.bCreditcardclientAllowedtranquillit == null ? creditcardclientListElement.bCreditcardclientAllowedtranquillit == null : this.bCreditcardclientAllowedtranquillit.equals(creditcardclientListElement.bCreditcardclientAllowedtranquillit)) &&
@@ -193,6 +207,7 @@ public class CreditcardclientListElement {
     result = 31 * result + (this.fkiCreditcarddetailID == null ? 0: this.fkiCreditcarddetailID.hashCode());
     result = 31 * result + (this.fkiCreditcardtypeID == null ? 0: this.fkiCreditcardtypeID.hashCode());
     result = 31 * result + (this.bCreditcardclientrelationIsdefault == null ? 0: this.bCreditcardclientrelationIsdefault.hashCode());
+    result = 31 * result + (this.bCreditcardclientLegacy == null ? 0: this.bCreditcardclientLegacy.hashCode());
     result = 31 * result + (this.sCreditcardclientDescription == null ? 0: this.sCreditcardclientDescription.hashCode());
     result = 31 * result + (this.bCreditcardclientAllowedcompanypayment == null ? 0: this.bCreditcardclientAllowedcompanypayment.hashCode());
     result = 31 * result + (this.bCreditcardclientAllowedtranquillit == null ? 0: this.bCreditcardclientAllowedtranquillit.hashCode());
@@ -211,6 +226,7 @@ public class CreditcardclientListElement {
     sb.append("  fkiCreditcarddetailID: ").append(fkiCreditcarddetailID).append("\n");
     sb.append("  fkiCreditcardtypeID: ").append(fkiCreditcardtypeID).append("\n");
     sb.append("  bCreditcardclientrelationIsdefault: ").append(bCreditcardclientrelationIsdefault).append("\n");
+    sb.append("  bCreditcardclientLegacy: ").append(bCreditcardclientLegacy).append("\n");
     sb.append("  sCreditcardclientDescription: ").append(sCreditcardclientDescription).append("\n");
     sb.append("  bCreditcardclientAllowedcompanypayment: ").append(bCreditcardclientAllowedcompanypayment).append("\n");
     sb.append("  bCreditcardclientAllowedtranquillit: ").append(bCreditcardclientAllowedtranquillit).append("\n");

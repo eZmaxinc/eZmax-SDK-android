@@ -24,14 +24,10 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
 import org.openapitools.client.model.CommonResponseError;
-import org.openapitools.client.model.CustomerCreateObjectV1Request;
-import org.openapitools.client.model.CustomerCreateObjectV1Response;
 import org.openapitools.client.model.CustomerGetAutocompleteV2Response;
-import org.openapitools.client.model.CustomerGetListV1Response;
 import org.openapitools.client.model.CustomerGetObjectV2Response;
 import org.openapitools.client.model.CustomerImportIntoEDMV1Request;
 import org.openapitools.client.model.CustomerImportIntoEDMV1Response;
-import java.io.File;
 import org.openapitools.client.model.HeaderAcceptLanguage;
 
 import org.apache.http.HttpEntity;
@@ -64,134 +60,6 @@ public class ObjectCustomerApi {
     return basePath;
   }
 
-  /**
-  * Create a new Customer
-  * The endpoint allows to create one or many elements at once.
-   * @param customerCreateObjectV1Request 
-   * @return CustomerCreateObjectV1Response
-  */
-  public CustomerCreateObjectV1Response customerCreateObjectV1 (CustomerCreateObjectV1Request customerCreateObjectV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
-    Object postBody = customerCreateObjectV1Request;
-    // verify the required parameter 'customerCreateObjectV1Request' is set
-    if (customerCreateObjectV1Request == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'customerCreateObjectV1Request' when calling customerCreateObjectV1",
-        new ApiException(400, "Missing the required parameter 'customerCreateObjectV1Request' when calling customerCreateObjectV1"));
-    }
-
-    // create path and map variables
-    String path = "/1/object/customer";
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
-      HttpEntity httpEntity = localVarBuilder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-    }
-
-    String[] authNames = new String[] { "Authorization" };
-
-    try {
-      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
-      if (localVarResponse != null) {
-         return (CustomerCreateObjectV1Response) ApiInvoker.deserialize(localVarResponse, "", CustomerCreateObjectV1Response.class);
-      } else {
-         return null;
-      }
-    } catch (ApiException ex) {
-       throw ex;
-    } catch (InterruptedException ex) {
-       throw ex;
-    } catch (ExecutionException ex) {
-      if (ex.getCause() instanceof VolleyError) {
-        VolleyError volleyError = (VolleyError)ex.getCause();
-        if (volleyError.networkResponse != null) {
-          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
-        }
-      }
-      throw ex;
-    } catch (TimeoutException ex) {
-      throw ex;
-    }
-  }
-
-      /**
-   * Create a new Customer
-   * The endpoint allows to create one or many elements at once.
-   * @param customerCreateObjectV1Request 
-  */
-  public void customerCreateObjectV1 (CustomerCreateObjectV1Request customerCreateObjectV1Request, final Response.Listener<CustomerCreateObjectV1Response> responseListener, final Response.ErrorListener errorListener) {
-    Object postBody = customerCreateObjectV1Request;
-
-    // verify the required parameter 'customerCreateObjectV1Request' is set
-    if (customerCreateObjectV1Request == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'customerCreateObjectV1Request' when calling customerCreateObjectV1",
-        new ApiException(400, "Missing the required parameter 'customerCreateObjectV1Request' when calling customerCreateObjectV1"));
-    }
-
-    // create path and map variables
-    String path = "/1/object/customer".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = localVarBuilder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-          }
-
-    String[] authNames = new String[] { "Authorization" };
-
-    try {
-      apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames,
-        new Response.Listener<String>() {
-          @Override
-          public void onResponse(String localVarResponse) {
-            try {
-              responseListener.onResponse((CustomerCreateObjectV1Response) ApiInvoker.deserialize(localVarResponse,  "", CustomerCreateObjectV1Response.class));
-            } catch (ApiException exception) {
-               errorListener.onErrorResponse(new VolleyError(exception));
-            }
-          }
-      }, new Response.ErrorListener() {
-          @Override
-          public void onErrorResponse(VolleyError error) {
-            errorListener.onErrorResponse(error);
-          }
-      });
-    } catch (ApiException ex) {
-      errorListener.onErrorResponse(new VolleyError(ex));
-    }
-  }
   /**
   * Retrieve Customers and IDs
   * Get the list of Customer to be used in a dropdown or autocomplete control.
@@ -314,137 +182,6 @@ public class ObjectCustomerApi {
           public void onResponse(String localVarResponse) {
             try {
               responseListener.onResponse((CustomerGetAutocompleteV2Response) ApiInvoker.deserialize(localVarResponse,  "", CustomerGetAutocompleteV2Response.class));
-            } catch (ApiException exception) {
-               errorListener.onErrorResponse(new VolleyError(exception));
-            }
-          }
-      }, new Response.ErrorListener() {
-          @Override
-          public void onErrorResponse(VolleyError error) {
-            errorListener.onErrorResponse(error);
-          }
-      });
-    } catch (ApiException ex) {
-      errorListener.onErrorResponse(new VolleyError(ex));
-    }
-  }
-  /**
-  * Retrieve Customer list
-  * 
-   * @param eOrderBy Specify how you want the results to be sorted
-   * @param iRowMax 
-   * @param iRowOffset 
-   * @param acceptLanguage 
-   * @param sFilter 
-   * @return CustomerGetListV1Response
-  */
-  public CustomerGetListV1Response customerGetListV1 (String eOrderBy, Integer iRowMax, Integer iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
-    Object postBody = null;
-
-    // create path and map variables
-    String path = "/1/object/customer/getList";
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "eOrderBy", eOrderBy));
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "iRowMax", iRowMax));
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "iRowOffset", iRowOffset));
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "sFilter", sFilter));
-    headerParams.put("Accept-Language", ApiInvoker.parameterToString(acceptLanguage));
-    String[] contentTypes = {
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
-      HttpEntity httpEntity = localVarBuilder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-    }
-
-    String[] authNames = new String[] { "Authorization" };
-
-    try {
-      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
-      if (localVarResponse != null) {
-         return (CustomerGetListV1Response) ApiInvoker.deserialize(localVarResponse, "", CustomerGetListV1Response.class);
-      } else {
-         return null;
-      }
-    } catch (ApiException ex) {
-       throw ex;
-    } catch (InterruptedException ex) {
-       throw ex;
-    } catch (ExecutionException ex) {
-      if (ex.getCause() instanceof VolleyError) {
-        VolleyError volleyError = (VolleyError)ex.getCause();
-        if (volleyError.networkResponse != null) {
-          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
-        }
-      }
-      throw ex;
-    } catch (TimeoutException ex) {
-      throw ex;
-    }
-  }
-
-      /**
-   * Retrieve Customer list
-   * 
-   * @param eOrderBy Specify how you want the results to be sorted   * @param iRowMax    * @param iRowOffset    * @param acceptLanguage    * @param sFilter 
-  */
-  public void customerGetListV1 (String eOrderBy, Integer iRowMax, Integer iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter, final Response.Listener<CustomerGetListV1Response> responseListener, final Response.ErrorListener errorListener) {
-    Object postBody = null;
-
-
-    // create path and map variables
-    String path = "/1/object/customer/getList".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "eOrderBy", eOrderBy));
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "iRowMax", iRowMax));
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "iRowOffset", iRowOffset));
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "sFilter", sFilter));
-
-    headerParams.put("Accept-Language", ApiInvoker.parameterToString(acceptLanguage));
-
-    String[] contentTypes = {
-      
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = localVarBuilder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-          }
-
-    String[] authNames = new String[] { "Authorization" };
-
-    try {
-      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
-        new Response.Listener<String>() {
-          @Override
-          public void onResponse(String localVarResponse) {
-            try {
-              responseListener.onResponse((CustomerGetListV1Response) ApiInvoker.deserialize(localVarResponse,  "", CustomerGetListV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -587,7 +324,7 @@ public class ObjectCustomerApi {
     }
   }
   /**
-  * Import attachments into the Buyercontract
+  * Import attachments into the Customer
   * 
    * @param pkiCustomerID 
    * @param customerImportIntoEDMV1Request 
@@ -656,7 +393,7 @@ public class ObjectCustomerApi {
   }
 
       /**
-   * Import attachments into the Buyercontract
+   * Import attachments into the Customer
    * 
    * @param pkiCustomerID    * @param customerImportIntoEDMV1Request 
   */
