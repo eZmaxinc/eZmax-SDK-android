@@ -92,7 +92,7 @@ Name | Type | Description  | Notes
 
 ## ezsignfolderBatchDownloadV1
 
-> File ezsignfolderBatchDownloadV1(pkiEzsignfolderID, ezsignfolderBatchDownloadV1Request, accept)
+> File ezsignfolderBatchDownloadV1(pkiEzsignfolderID, ezsignfolderBatchDownloadV1Request)
 
 Download multiples files from an Ezsignfolder
 
@@ -105,9 +105,8 @@ Download multiples files from an Ezsignfolder
 ObjectEzsignfolderApi apiInstance = new ObjectEzsignfolderApi();
 Integer pkiEzsignfolderID = null; // Integer | 
 EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request = new EzsignfolderBatchDownloadV1Request(); // EzsignfolderBatchDownloadV1Request | 
-String accept = null; // String | Test csharp
 try {
-    File result = apiInstance.ezsignfolderBatchDownloadV1(pkiEzsignfolderID, ezsignfolderBatchDownloadV1Request, accept);
+    File result = apiInstance.ezsignfolderBatchDownloadV1(pkiEzsignfolderID, ezsignfolderBatchDownloadV1Request);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectEzsignfolderApi#ezsignfolderBatchDownloadV1");
@@ -122,7 +121,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiEzsignfolderID** | **Integer**|  | [default to null]
  **ezsignfolderBatchDownloadV1Request** | [**EzsignfolderBatchDownloadV1Request**](EzsignfolderBatchDownloadV1Request.md)|  |
- **accept** | **String**| Test csharp | [optional] [default to null] [enum: application/json, application/zip, application/pdf]
 
 ### Return type
 

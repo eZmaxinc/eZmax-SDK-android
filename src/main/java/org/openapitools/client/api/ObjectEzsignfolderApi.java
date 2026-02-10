@@ -248,10 +248,9 @@ public class ObjectEzsignfolderApi {
   * 
    * @param pkiEzsignfolderID 
    * @param ezsignfolderBatchDownloadV1Request 
-   * @param accept Test csharp
    * @return File
   */
-  public File ezsignfolderBatchDownloadV1 (Integer pkiEzsignfolderID, EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request, String accept) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public File ezsignfolderBatchDownloadV1 (Integer pkiEzsignfolderID, EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = ezsignfolderBatchDownloadV1Request;
     // verify the required parameter 'pkiEzsignfolderID' is set
     if (pkiEzsignfolderID == null) {
@@ -273,7 +272,6 @@ public class ObjectEzsignfolderApi {
     Map<String, String> headerParams = new HashMap<String, String>();
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
-    headerParams.put("Accept", ApiInvoker.parameterToString(accept));
     String[] contentTypes = {
       "application/json"
     };
@@ -317,9 +315,9 @@ public class ObjectEzsignfolderApi {
       /**
    * Download multiples files from an Ezsignfolder
    * 
-   * @param pkiEzsignfolderID    * @param ezsignfolderBatchDownloadV1Request    * @param accept Test csharp
+   * @param pkiEzsignfolderID    * @param ezsignfolderBatchDownloadV1Request 
   */
-  public void ezsignfolderBatchDownloadV1 (Integer pkiEzsignfolderID, EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request, String accept, final Response.Listener<File> responseListener, final Response.ErrorListener errorListener) {
+  public void ezsignfolderBatchDownloadV1 (Integer pkiEzsignfolderID, EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request, final Response.Listener<File> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = ezsignfolderBatchDownloadV1Request;
 
     // verify the required parameter 'pkiEzsignfolderID' is set
@@ -344,7 +342,6 @@ public class ObjectEzsignfolderApi {
     Map<String, String> formParams = new HashMap<String, String>();
 
 
-    headerParams.put("Accept", ApiInvoker.parameterToString(accept));
 
     String[] contentTypes = {
       "application/json"
