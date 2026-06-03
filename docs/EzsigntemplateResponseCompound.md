@@ -23,6 +23,7 @@ Name | Type | Description | Notes
 **eEzsigntemplateType** | [**FieldEEzsigntemplateType**](FieldEEzsigntemplateType.md) |  |  [optional]
 **objEzsigntemplatedocument** | [**EzsigntemplatedocumentResponse**](EzsigntemplatedocumentResponse.md) |  |  [optional]
 **aObjEzsigntemplatesigner** | [**List&lt;EzsigntemplatesignerResponseCompound&gt;**](EzsigntemplatesignerResponseCompound.md) |  | 
+**aObjEzsigntemplateannotation** | [**List&lt;EzsigntemplateannotationResponseCompound&gt;**](EzsigntemplateannotationResponseCompound.md) |  |  [optional]
 
 
 

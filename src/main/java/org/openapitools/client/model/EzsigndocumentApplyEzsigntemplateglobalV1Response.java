@@ -20,9 +20,9 @@ import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Response for POST /2/object/ezsigndocument/{pkiEzsigndocument}/applyEzsigntemplate
+ * Response for POST /1/object/ezsigndocument/{pkiEzsigndocument}/applyEzsigntemplateglobal
  **/
-@ApiModel(description = "Response for POST /2/object/ezsigndocument/{pkiEzsigndocument}/applyEzsigntemplate")
+@ApiModel(description = "Response for POST /1/object/ezsigndocument/{pkiEzsigndocument}/applyEzsigntemplateglobal")
 public class EzsigndocumentApplyEzsigntemplateglobalV1Response {
   
   @SerializedName("objDebugPayload")

@@ -38,6 +38,8 @@ public class UserResponseCompound {
   private Integer fkiAssistantID = null;
   @SerializedName("fkiEmployeeID")
   private Integer fkiEmployeeID = null;
+  @SerializedName("fkiEzmaxpartnerID")
+  private Integer fkiEzmaxpartnerID = null;
   @SerializedName("fkiCompanyIDDefault")
   private Integer fkiCompanyIDDefault = null;
   @SerializedName("sCompanyNameX")
@@ -94,6 +96,8 @@ public class UserResponseCompound {
   private String dtUserEzsignprepaidexpiration = null;
   @SerializedName("bUserIsactive")
   private Boolean bUserIsactive = null;
+  @SerializedName("bUserSuspended")
+  private Boolean bUserSuspended = null;
   @SerializedName("bUserValidatebyadministration")
   private Boolean bUserValidatebyadministration = null;
   @SerializedName("bUserValidatebydirector")
@@ -102,6 +106,8 @@ public class UserResponseCompound {
   private Boolean bUserAttachmentautoverified = null;
   @SerializedName("bUserChangepassword")
   private Boolean bUserChangepassword = null;
+  @SerializedName("bUserEzsigntemplaterolegrouping")
+  private Boolean bUserEzsigntemplaterolegrouping = null;
   @SerializedName("objAudit")
   private CommonAudit objAudit = null;
 
@@ -163,6 +169,18 @@ public class UserResponseCompound {
   }
   public void setFkiEmployeeID(Integer fkiEmployeeID) {
     this.fkiEmployeeID = fkiEmployeeID;
+  }
+
+  /**
+   * The unique ID of the Ezmaxpartner
+   * minimum: 1
+   **/
+  @ApiModelProperty(value = "The unique ID of the Ezmaxpartner")
+  public Integer getFkiEzmaxpartnerID() {
+    return fkiEzmaxpartnerID;
+  }
+  public void setFkiEzmaxpartnerID(Integer fkiEzmaxpartnerID) {
+    this.fkiEzmaxpartnerID = fkiEzmaxpartnerID;
   }
 
   /**
@@ -313,10 +331,10 @@ public class UserResponseCompound {
   }
 
   /**
-   * The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father's middle name| |15|Your mother's maiden name| |16|Name of your eldest child| |17|Your spouse's middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat's name| |22|Date of Birth (YYYY-MM-DD)| |22|Secret Code| |22|Your reference code|
+   * The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father's middle name| |15|Your mother's maiden name| |16|Name of your eldest child| |17|Your spouse's middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat's name| |22|Date of Birth (YYYY-MM-DD)| |23|Secret Code| |24|Your reference code| |25|What are the last 4 digits of your SIN| |26|What is your postal code| |27|What is your employee number| |28|What is your manager’s first name| |29|What is your file number| |30|What is your client/member number| |31|What is your license number| |32|What are the last 4 digits of your phone number| |33|What is your student number|
    * minimum: 0
    **/
-  @ApiModelProperty(value = "The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father's middle name| |15|Your mother's maiden name| |16|Name of your eldest child| |17|Your spouse's middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat's name| |22|Date of Birth (YYYY-MM-DD)| |22|Secret Code| |22|Your reference code|")
+  @ApiModelProperty(value = "The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father's middle name| |15|Your mother's maiden name| |16|Name of your eldest child| |17|Your spouse's middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat's name| |22|Date of Birth (YYYY-MM-DD)| |23|Secret Code| |24|Your reference code| |25|What are the last 4 digits of your SIN| |26|What is your postal code| |27|What is your employee number| |28|What is your manager’s first name| |29|What is your file number| |30|What is your client/member number| |31|What is your license number| |32|What are the last 4 digits of your phone number| |33|What is your student number|")
   public Integer getFkiSecretquestionID() {
     return fkiSecretquestionID;
   }
@@ -476,6 +494,17 @@ public class UserResponseCompound {
   }
 
   /**
+   * Whether the User is suspended or not
+   **/
+  @ApiModelProperty(value = "Whether the User is suspended or not")
+  public Boolean getBUserSuspended() {
+    return bUserSuspended;
+  }
+  public void setBUserSuspended(Boolean bUserSuspended) {
+    this.bUserSuspended = bUserSuspended;
+  }
+
+  /**
    * Whether if the transactions in which the User is implicated must be validated by administrative personnel or not
    **/
   @ApiModelProperty(value = "Whether if the transactions in which the User is implicated must be validated by administrative personnel or not")
@@ -520,6 +549,17 @@ public class UserResponseCompound {
   }
 
   /**
+   * Whether we group or not the Ezsigntemplate roles
+   **/
+  @ApiModelProperty(value = "Whether we group or not the Ezsigntemplate roles")
+  public Boolean getBUserEzsigntemplaterolegrouping() {
+    return bUserEzsigntemplaterolegrouping;
+  }
+  public void setBUserEzsigntemplaterolegrouping(Boolean bUserEzsigntemplaterolegrouping) {
+    this.bUserEzsigntemplaterolegrouping = bUserEzsigntemplaterolegrouping;
+  }
+
+  /**
    **/
   @ApiModelProperty(required = true, value = "")
   public CommonAudit getObjAudit() {
@@ -544,6 +584,7 @@ public class UserResponseCompound {
         (this.fkiBrokerID == null ? userResponseCompound.fkiBrokerID == null : this.fkiBrokerID.equals(userResponseCompound.fkiBrokerID)) &&
         (this.fkiAssistantID == null ? userResponseCompound.fkiAssistantID == null : this.fkiAssistantID.equals(userResponseCompound.fkiAssistantID)) &&
         (this.fkiEmployeeID == null ? userResponseCompound.fkiEmployeeID == null : this.fkiEmployeeID.equals(userResponseCompound.fkiEmployeeID)) &&
+        (this.fkiEzmaxpartnerID == null ? userResponseCompound.fkiEzmaxpartnerID == null : this.fkiEzmaxpartnerID.equals(userResponseCompound.fkiEzmaxpartnerID)) &&
         (this.fkiCompanyIDDefault == null ? userResponseCompound.fkiCompanyIDDefault == null : this.fkiCompanyIDDefault.equals(userResponseCompound.fkiCompanyIDDefault)) &&
         (this.sCompanyNameX == null ? userResponseCompound.sCompanyNameX == null : this.sCompanyNameX.equals(userResponseCompound.sCompanyNameX)) &&
         (this.fkiDepartmentIDDefault == null ? userResponseCompound.fkiDepartmentIDDefault == null : this.fkiDepartmentIDDefault.equals(userResponseCompound.fkiDepartmentIDDefault)) &&
@@ -572,10 +613,12 @@ public class UserResponseCompound {
         (this.dtUserPasswordchanged == null ? userResponseCompound.dtUserPasswordchanged == null : this.dtUserPasswordchanged.equals(userResponseCompound.dtUserPasswordchanged)) &&
         (this.dtUserEzsignprepaidexpiration == null ? userResponseCompound.dtUserEzsignprepaidexpiration == null : this.dtUserEzsignprepaidexpiration.equals(userResponseCompound.dtUserEzsignprepaidexpiration)) &&
         (this.bUserIsactive == null ? userResponseCompound.bUserIsactive == null : this.bUserIsactive.equals(userResponseCompound.bUserIsactive)) &&
+        (this.bUserSuspended == null ? userResponseCompound.bUserSuspended == null : this.bUserSuspended.equals(userResponseCompound.bUserSuspended)) &&
         (this.bUserValidatebyadministration == null ? userResponseCompound.bUserValidatebyadministration == null : this.bUserValidatebyadministration.equals(userResponseCompound.bUserValidatebyadministration)) &&
         (this.bUserValidatebydirector == null ? userResponseCompound.bUserValidatebydirector == null : this.bUserValidatebydirector.equals(userResponseCompound.bUserValidatebydirector)) &&
         (this.bUserAttachmentautoverified == null ? userResponseCompound.bUserAttachmentautoverified == null : this.bUserAttachmentautoverified.equals(userResponseCompound.bUserAttachmentautoverified)) &&
         (this.bUserChangepassword == null ? userResponseCompound.bUserChangepassword == null : this.bUserChangepassword.equals(userResponseCompound.bUserChangepassword)) &&
+        (this.bUserEzsigntemplaterolegrouping == null ? userResponseCompound.bUserEzsigntemplaterolegrouping == null : this.bUserEzsigntemplaterolegrouping.equals(userResponseCompound.bUserEzsigntemplaterolegrouping)) &&
         (this.objAudit == null ? userResponseCompound.objAudit == null : this.objAudit.equals(userResponseCompound.objAudit));
   }
 
@@ -587,6 +630,7 @@ public class UserResponseCompound {
     result = 31 * result + (this.fkiBrokerID == null ? 0: this.fkiBrokerID.hashCode());
     result = 31 * result + (this.fkiAssistantID == null ? 0: this.fkiAssistantID.hashCode());
     result = 31 * result + (this.fkiEmployeeID == null ? 0: this.fkiEmployeeID.hashCode());
+    result = 31 * result + (this.fkiEzmaxpartnerID == null ? 0: this.fkiEzmaxpartnerID.hashCode());
     result = 31 * result + (this.fkiCompanyIDDefault == null ? 0: this.fkiCompanyIDDefault.hashCode());
     result = 31 * result + (this.sCompanyNameX == null ? 0: this.sCompanyNameX.hashCode());
     result = 31 * result + (this.fkiDepartmentIDDefault == null ? 0: this.fkiDepartmentIDDefault.hashCode());
@@ -615,10 +659,12 @@ public class UserResponseCompound {
     result = 31 * result + (this.dtUserPasswordchanged == null ? 0: this.dtUserPasswordchanged.hashCode());
     result = 31 * result + (this.dtUserEzsignprepaidexpiration == null ? 0: this.dtUserEzsignprepaidexpiration.hashCode());
     result = 31 * result + (this.bUserIsactive == null ? 0: this.bUserIsactive.hashCode());
+    result = 31 * result + (this.bUserSuspended == null ? 0: this.bUserSuspended.hashCode());
     result = 31 * result + (this.bUserValidatebyadministration == null ? 0: this.bUserValidatebyadministration.hashCode());
     result = 31 * result + (this.bUserValidatebydirector == null ? 0: this.bUserValidatebydirector.hashCode());
     result = 31 * result + (this.bUserAttachmentautoverified == null ? 0: this.bUserAttachmentautoverified.hashCode());
     result = 31 * result + (this.bUserChangepassword == null ? 0: this.bUserChangepassword.hashCode());
+    result = 31 * result + (this.bUserEzsigntemplaterolegrouping == null ? 0: this.bUserEzsigntemplaterolegrouping.hashCode());
     result = 31 * result + (this.objAudit == null ? 0: this.objAudit.hashCode());
     return result;
   }
@@ -633,6 +679,7 @@ public class UserResponseCompound {
     sb.append("  fkiBrokerID: ").append(fkiBrokerID).append("\n");
     sb.append("  fkiAssistantID: ").append(fkiAssistantID).append("\n");
     sb.append("  fkiEmployeeID: ").append(fkiEmployeeID).append("\n");
+    sb.append("  fkiEzmaxpartnerID: ").append(fkiEzmaxpartnerID).append("\n");
     sb.append("  fkiCompanyIDDefault: ").append(fkiCompanyIDDefault).append("\n");
     sb.append("  sCompanyNameX: ").append(sCompanyNameX).append("\n");
     sb.append("  fkiDepartmentIDDefault: ").append(fkiDepartmentIDDefault).append("\n");
@@ -661,10 +708,12 @@ public class UserResponseCompound {
     sb.append("  dtUserPasswordchanged: ").append(dtUserPasswordchanged).append("\n");
     sb.append("  dtUserEzsignprepaidexpiration: ").append(dtUserEzsignprepaidexpiration).append("\n");
     sb.append("  bUserIsactive: ").append(bUserIsactive).append("\n");
+    sb.append("  bUserSuspended: ").append(bUserSuspended).append("\n");
     sb.append("  bUserValidatebyadministration: ").append(bUserValidatebyadministration).append("\n");
     sb.append("  bUserValidatebydirector: ").append(bUserValidatebydirector).append("\n");
     sb.append("  bUserAttachmentautoverified: ").append(bUserAttachmentautoverified).append("\n");
     sb.append("  bUserChangepassword: ").append(bUserChangepassword).append("\n");
+    sb.append("  bUserEzsigntemplaterolegrouping: ").append(bUserEzsigntemplaterolegrouping).append("\n");
     sb.append("  objAudit: ").append(objAudit).append("\n");
     sb.append("}\n");
     return sb.toString();

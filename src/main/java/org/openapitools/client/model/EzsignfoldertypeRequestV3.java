@@ -109,6 +109,14 @@ public class EzsignfoldertypeRequestV3 {
   private Boolean bEzsignfoldertypeReassignuser = null;
   @SerializedName("bEzsignfoldertypeReassigngroup")
   private Boolean bEzsignfoldertypeReassigngroup = null;
+  @SerializedName("bEzsignfoldertypeSenddocumentmergetoemail")
+  private Boolean bEzsignfoldertypeSenddocumentmergetoemail = null;
+  @SerializedName("bEzsignfoldertypeSenddocumentmergetoezsignsigner")
+  private Boolean bEzsignfoldertypeSenddocumentmergetoezsignsigner = null;
+  @SerializedName("bEzsignfoldertypeSenddocumentmergetoreceivealldocument")
+  private Boolean bEzsignfoldertypeSenddocumentmergetoreceivealldocument = null;
+  @SerializedName("bEzsignfoldertypeSenddocumentmergetouser")
+  private Boolean bEzsignfoldertypeSenddocumentmergetouser = null;
   @SerializedName("bEzsignfoldertypeSendsignedtoezsignsigner")
   private Boolean bEzsignfoldertypeSendsignedtoezsignsigner = null;
   @SerializedName("bEzsignfoldertypeSendsignedtouser")
@@ -422,11 +430,11 @@ public class EzsignfoldertypeRequestV3 {
   }
 
   /**
-   * The number of days before the the first reminder sending
+   * The number of days before the first reminder sending
    * minimum: 0
    * maximum: 255
    **/
-  @ApiModelProperty(value = "The number of days before the the first reminder sending")
+  @ApiModelProperty(value = "The number of days before the first reminder sending")
   public Integer getIEzsignfoldertypeSendreminderfirstdays() {
     return iEzsignfoldertypeSendreminderfirstdays;
   }
@@ -605,6 +613,50 @@ public class EzsignfoldertypeRequestV3 {
   }
   public void setBEzsignfoldertypeReassigngroup(Boolean bEzsignfoldertypeReassigngroup) {
     this.bEzsignfoldertypeReassigngroup = bEzsignfoldertypeReassigngroup;
+  }
+
+  /**
+   * Whether we send the merged documents in the email to external recipient
+   **/
+  @ApiModelProperty(value = "Whether we send the merged documents in the email to external recipient")
+  public Boolean getBEzsignfoldertypeSenddocumentmergetoemail() {
+    return bEzsignfoldertypeSenddocumentmergetoemail;
+  }
+  public void setBEzsignfoldertypeSenddocumentmergetoemail(Boolean bEzsignfoldertypeSenddocumentmergetoemail) {
+    this.bEzsignfoldertypeSenddocumentmergetoemail = bEzsignfoldertypeSenddocumentmergetoemail;
+  }
+
+  /**
+   * Whether we send the merged documents in the email to Ezsignsigner
+   **/
+  @ApiModelProperty(value = "Whether we send the merged documents in the email to Ezsignsigner")
+  public Boolean getBEzsignfoldertypeSenddocumentmergetoezsignsigner() {
+    return bEzsignfoldertypeSenddocumentmergetoezsignsigner;
+  }
+  public void setBEzsignfoldertypeSenddocumentmergetoezsignsigner(Boolean bEzsignfoldertypeSenddocumentmergetoezsignsigner) {
+    this.bEzsignfoldertypeSenddocumentmergetoezsignsigner = bEzsignfoldertypeSenddocumentmergetoezsignsigner;
+  }
+
+  /**
+   * Whether we send the merged documents in the email to user and Ezsignsigner who receive all documents.
+   **/
+  @ApiModelProperty(value = "Whether we send the merged documents in the email to user and Ezsignsigner who receive all documents.")
+  public Boolean getBEzsignfoldertypeSenddocumentmergetoreceivealldocument() {
+    return bEzsignfoldertypeSenddocumentmergetoreceivealldocument;
+  }
+  public void setBEzsignfoldertypeSenddocumentmergetoreceivealldocument(Boolean bEzsignfoldertypeSenddocumentmergetoreceivealldocument) {
+    this.bEzsignfoldertypeSenddocumentmergetoreceivealldocument = bEzsignfoldertypeSenddocumentmergetoreceivealldocument;
+  }
+
+  /**
+   * Whether we send the merged documents in the email to User
+   **/
+  @ApiModelProperty(value = "Whether we send the merged documents in the email to User")
+  public Boolean getBEzsignfoldertypeSenddocumentmergetouser() {
+    return bEzsignfoldertypeSenddocumentmergetouser;
+  }
+  public void setBEzsignfoldertypeSenddocumentmergetouser(Boolean bEzsignfoldertypeSenddocumentmergetouser) {
+    this.bEzsignfoldertypeSenddocumentmergetouser = bEzsignfoldertypeSenddocumentmergetouser;
   }
 
   /**
@@ -952,6 +1004,10 @@ public class EzsignfoldertypeRequestV3 {
         (this.bEzsignfoldertypeReassignezsignsigner == null ? ezsignfoldertypeRequestV3.bEzsignfoldertypeReassignezsignsigner == null : this.bEzsignfoldertypeReassignezsignsigner.equals(ezsignfoldertypeRequestV3.bEzsignfoldertypeReassignezsignsigner)) &&
         (this.bEzsignfoldertypeReassignuser == null ? ezsignfoldertypeRequestV3.bEzsignfoldertypeReassignuser == null : this.bEzsignfoldertypeReassignuser.equals(ezsignfoldertypeRequestV3.bEzsignfoldertypeReassignuser)) &&
         (this.bEzsignfoldertypeReassigngroup == null ? ezsignfoldertypeRequestV3.bEzsignfoldertypeReassigngroup == null : this.bEzsignfoldertypeReassigngroup.equals(ezsignfoldertypeRequestV3.bEzsignfoldertypeReassigngroup)) &&
+        (this.bEzsignfoldertypeSenddocumentmergetoemail == null ? ezsignfoldertypeRequestV3.bEzsignfoldertypeSenddocumentmergetoemail == null : this.bEzsignfoldertypeSenddocumentmergetoemail.equals(ezsignfoldertypeRequestV3.bEzsignfoldertypeSenddocumentmergetoemail)) &&
+        (this.bEzsignfoldertypeSenddocumentmergetoezsignsigner == null ? ezsignfoldertypeRequestV3.bEzsignfoldertypeSenddocumentmergetoezsignsigner == null : this.bEzsignfoldertypeSenddocumentmergetoezsignsigner.equals(ezsignfoldertypeRequestV3.bEzsignfoldertypeSenddocumentmergetoezsignsigner)) &&
+        (this.bEzsignfoldertypeSenddocumentmergetoreceivealldocument == null ? ezsignfoldertypeRequestV3.bEzsignfoldertypeSenddocumentmergetoreceivealldocument == null : this.bEzsignfoldertypeSenddocumentmergetoreceivealldocument.equals(ezsignfoldertypeRequestV3.bEzsignfoldertypeSenddocumentmergetoreceivealldocument)) &&
+        (this.bEzsignfoldertypeSenddocumentmergetouser == null ? ezsignfoldertypeRequestV3.bEzsignfoldertypeSenddocumentmergetouser == null : this.bEzsignfoldertypeSenddocumentmergetouser.equals(ezsignfoldertypeRequestV3.bEzsignfoldertypeSenddocumentmergetouser)) &&
         (this.bEzsignfoldertypeSendsignedtoezsignsigner == null ? ezsignfoldertypeRequestV3.bEzsignfoldertypeSendsignedtoezsignsigner == null : this.bEzsignfoldertypeSendsignedtoezsignsigner.equals(ezsignfoldertypeRequestV3.bEzsignfoldertypeSendsignedtoezsignsigner)) &&
         (this.bEzsignfoldertypeSendsignedtouser == null ? ezsignfoldertypeRequestV3.bEzsignfoldertypeSendsignedtouser == null : this.bEzsignfoldertypeSendsignedtouser.equals(ezsignfoldertypeRequestV3.bEzsignfoldertypeSendsignedtouser)) &&
         (this.bEzsignfoldertypeSendattachmentezsignsigner == null ? ezsignfoldertypeRequestV3.bEzsignfoldertypeSendattachmentezsignsigner == null : this.bEzsignfoldertypeSendattachmentezsignsigner.equals(ezsignfoldertypeRequestV3.bEzsignfoldertypeSendattachmentezsignsigner)) &&
@@ -1023,6 +1079,10 @@ public class EzsignfoldertypeRequestV3 {
     result = 31 * result + (this.bEzsignfoldertypeReassignezsignsigner == null ? 0: this.bEzsignfoldertypeReassignezsignsigner.hashCode());
     result = 31 * result + (this.bEzsignfoldertypeReassignuser == null ? 0: this.bEzsignfoldertypeReassignuser.hashCode());
     result = 31 * result + (this.bEzsignfoldertypeReassigngroup == null ? 0: this.bEzsignfoldertypeReassigngroup.hashCode());
+    result = 31 * result + (this.bEzsignfoldertypeSenddocumentmergetoemail == null ? 0: this.bEzsignfoldertypeSenddocumentmergetoemail.hashCode());
+    result = 31 * result + (this.bEzsignfoldertypeSenddocumentmergetoezsignsigner == null ? 0: this.bEzsignfoldertypeSenddocumentmergetoezsignsigner.hashCode());
+    result = 31 * result + (this.bEzsignfoldertypeSenddocumentmergetoreceivealldocument == null ? 0: this.bEzsignfoldertypeSenddocumentmergetoreceivealldocument.hashCode());
+    result = 31 * result + (this.bEzsignfoldertypeSenddocumentmergetouser == null ? 0: this.bEzsignfoldertypeSenddocumentmergetouser.hashCode());
     result = 31 * result + (this.bEzsignfoldertypeSendsignedtoezsignsigner == null ? 0: this.bEzsignfoldertypeSendsignedtoezsignsigner.hashCode());
     result = 31 * result + (this.bEzsignfoldertypeSendsignedtouser == null ? 0: this.bEzsignfoldertypeSendsignedtouser.hashCode());
     result = 31 * result + (this.bEzsignfoldertypeSendattachmentezsignsigner == null ? 0: this.bEzsignfoldertypeSendattachmentezsignsigner.hashCode());
@@ -1097,6 +1157,10 @@ public class EzsignfoldertypeRequestV3 {
     sb.append("  bEzsignfoldertypeReassignezsignsigner: ").append(bEzsignfoldertypeReassignezsignsigner).append("\n");
     sb.append("  bEzsignfoldertypeReassignuser: ").append(bEzsignfoldertypeReassignuser).append("\n");
     sb.append("  bEzsignfoldertypeReassigngroup: ").append(bEzsignfoldertypeReassigngroup).append("\n");
+    sb.append("  bEzsignfoldertypeSenddocumentmergetoemail: ").append(bEzsignfoldertypeSenddocumentmergetoemail).append("\n");
+    sb.append("  bEzsignfoldertypeSenddocumentmergetoezsignsigner: ").append(bEzsignfoldertypeSenddocumentmergetoezsignsigner).append("\n");
+    sb.append("  bEzsignfoldertypeSenddocumentmergetoreceivealldocument: ").append(bEzsignfoldertypeSenddocumentmergetoreceivealldocument).append("\n");
+    sb.append("  bEzsignfoldertypeSenddocumentmergetouser: ").append(bEzsignfoldertypeSenddocumentmergetouser).append("\n");
     sb.append("  bEzsignfoldertypeSendsignedtoezsignsigner: ").append(bEzsignfoldertypeSendsignedtoezsignsigner).append("\n");
     sb.append("  bEzsignfoldertypeSendsignedtouser: ").append(bEzsignfoldertypeSendsignedtouser).append("\n");
     sb.append("  bEzsignfoldertypeSendattachmentezsignsigner: ").append(bEzsignfoldertypeSendattachmentezsignsigner).append("\n");

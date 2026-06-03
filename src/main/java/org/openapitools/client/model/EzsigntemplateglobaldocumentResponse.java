@@ -12,6 +12,7 @@
 
 package org.openapitools.client.model;
 
+import org.openapitools.client.model.FieldEEzsigntemplateglobaldocumentAcceptationtype;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -25,6 +26,8 @@ public class EzsigntemplateglobaldocumentResponse {
   private Integer pkiEzsigntemplateglobaldocumentID = null;
   @SerializedName("sEzsigntemplateglobaldocumentName")
   private String sEzsigntemplateglobaldocumentName = null;
+  @SerializedName("eEzsigntemplateglobaldocumentAcceptationtype")
+  private FieldEEzsigntemplateglobaldocumentAcceptationtype eEzsigntemplateglobaldocumentAcceptationtype = null;
   @SerializedName("iEzsigntemplateglobaldocumentPagetotal")
   private Integer iEzsigntemplateglobaldocumentPagetotal = null;
   @SerializedName("iEzsigntemplateglobaldocumentSignaturetotal")
@@ -51,6 +54,16 @@ public class EzsigntemplateglobaldocumentResponse {
   }
   public void setSEzsigntemplateglobaldocumentName(String sEzsigntemplateglobaldocumentName) {
     this.sEzsigntemplateglobaldocumentName = sEzsigntemplateglobaldocumentName;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public FieldEEzsigntemplateglobaldocumentAcceptationtype getEEzsigntemplateglobaldocumentAcceptationtype() {
+    return eEzsigntemplateglobaldocumentAcceptationtype;
+  }
+  public void setEEzsigntemplateglobaldocumentAcceptationtype(FieldEEzsigntemplateglobaldocumentAcceptationtype eEzsigntemplateglobaldocumentAcceptationtype) {
+    this.eEzsigntemplateglobaldocumentAcceptationtype = eEzsigntemplateglobaldocumentAcceptationtype;
   }
 
   /**
@@ -88,6 +101,7 @@ public class EzsigntemplateglobaldocumentResponse {
     EzsigntemplateglobaldocumentResponse ezsigntemplateglobaldocumentResponse = (EzsigntemplateglobaldocumentResponse) o;
     return (this.pkiEzsigntemplateglobaldocumentID == null ? ezsigntemplateglobaldocumentResponse.pkiEzsigntemplateglobaldocumentID == null : this.pkiEzsigntemplateglobaldocumentID.equals(ezsigntemplateglobaldocumentResponse.pkiEzsigntemplateglobaldocumentID)) &&
         (this.sEzsigntemplateglobaldocumentName == null ? ezsigntemplateglobaldocumentResponse.sEzsigntemplateglobaldocumentName == null : this.sEzsigntemplateglobaldocumentName.equals(ezsigntemplateglobaldocumentResponse.sEzsigntemplateglobaldocumentName)) &&
+        (this.eEzsigntemplateglobaldocumentAcceptationtype == null ? ezsigntemplateglobaldocumentResponse.eEzsigntemplateglobaldocumentAcceptationtype == null : this.eEzsigntemplateglobaldocumentAcceptationtype.equals(ezsigntemplateglobaldocumentResponse.eEzsigntemplateglobaldocumentAcceptationtype)) &&
         (this.iEzsigntemplateglobaldocumentPagetotal == null ? ezsigntemplateglobaldocumentResponse.iEzsigntemplateglobaldocumentPagetotal == null : this.iEzsigntemplateglobaldocumentPagetotal.equals(ezsigntemplateglobaldocumentResponse.iEzsigntemplateglobaldocumentPagetotal)) &&
         (this.iEzsigntemplateglobaldocumentSignaturetotal == null ? ezsigntemplateglobaldocumentResponse.iEzsigntemplateglobaldocumentSignaturetotal == null : this.iEzsigntemplateglobaldocumentSignaturetotal.equals(ezsigntemplateglobaldocumentResponse.iEzsigntemplateglobaldocumentSignaturetotal));
   }
@@ -97,6 +111,7 @@ public class EzsigntemplateglobaldocumentResponse {
     int result = 17;
     result = 31 * result + (this.pkiEzsigntemplateglobaldocumentID == null ? 0: this.pkiEzsigntemplateglobaldocumentID.hashCode());
     result = 31 * result + (this.sEzsigntemplateglobaldocumentName == null ? 0: this.sEzsigntemplateglobaldocumentName.hashCode());
+    result = 31 * result + (this.eEzsigntemplateglobaldocumentAcceptationtype == null ? 0: this.eEzsigntemplateglobaldocumentAcceptationtype.hashCode());
     result = 31 * result + (this.iEzsigntemplateglobaldocumentPagetotal == null ? 0: this.iEzsigntemplateglobaldocumentPagetotal.hashCode());
     result = 31 * result + (this.iEzsigntemplateglobaldocumentSignaturetotal == null ? 0: this.iEzsigntemplateglobaldocumentSignaturetotal.hashCode());
     return result;
@@ -109,6 +124,7 @@ public class EzsigntemplateglobaldocumentResponse {
     
     sb.append("  pkiEzsigntemplateglobaldocumentID: ").append(pkiEzsigntemplateglobaldocumentID).append("\n");
     sb.append("  sEzsigntemplateglobaldocumentName: ").append(sEzsigntemplateglobaldocumentName).append("\n");
+    sb.append("  eEzsigntemplateglobaldocumentAcceptationtype: ").append(eEzsigntemplateglobaldocumentAcceptationtype).append("\n");
     sb.append("  iEzsigntemplateglobaldocumentPagetotal: ").append(iEzsigntemplateglobaldocumentPagetotal).append("\n");
     sb.append("  iEzsigntemplateglobaldocumentSignaturetotal: ").append(iEzsigntemplateglobaldocumentSignaturetotal).append("\n");
     sb.append("}\n");

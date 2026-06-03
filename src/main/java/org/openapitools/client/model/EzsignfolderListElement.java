@@ -13,6 +13,7 @@
 package org.openapitools.client.model;
 
 import org.openapitools.client.model.FieldEEzsignfolderCompletion;
+import org.openapitools.client.model.FieldEEzsignfolderSource;
 import org.openapitools.client.model.FieldEEzsignfolderStep;
 import org.openapitools.client.model.FieldEEzsignfoldertypePrivacylevel;
 import io.swagger.annotations.*;
@@ -28,6 +29,20 @@ public class EzsignfolderListElement {
   private Integer pkiEzsignfolderID = null;
   @SerializedName("fkiEzsignfoldertypeID")
   private Integer fkiEzsignfoldertypeID = null;
+  @SerializedName("fkiEzsignbulksendID")
+  private Integer fkiEzsignbulksendID = null;
+  @SerializedName("sEzsignbulksendDescription")
+  private String sEzsignbulksendDescription = null;
+  @SerializedName("fkiEzsignbulksendtransmissionID")
+  private Integer fkiEzsignbulksendtransmissionID = null;
+  @SerializedName("sEzsignbulksendtransmissionDescription")
+  private String sEzsignbulksendtransmissionDescription = null;
+  @SerializedName("fkiEzsigntemplatepublicID")
+  private Integer fkiEzsigntemplatepublicID = null;
+  @SerializedName("sEzsigntemplatepublicDescription")
+  private String sEzsigntemplatepublicDescription = null;
+  @SerializedName("eEzsignfolderSource")
+  private FieldEEzsignfolderSource eEzsignfolderSource = null;
   @SerializedName("eEzsignfoldertypePrivacylevel")
   private FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel = null;
   @SerializedName("sEzsignfoldertypeNameX")
@@ -74,6 +89,8 @@ public class EzsignfolderListElement {
   private String dtEzsignfolderDispose = null;
   @SerializedName("bEzsignfolderSigner")
   private Boolean bEzsignfolderSigner = null;
+  @SerializedName("bEzsignfolderIsmyown")
+  private Boolean bEzsignfolderIsmyown = null;
 
   /**
    * The unique ID of the Ezsignfolder
@@ -98,6 +115,86 @@ public class EzsignfolderListElement {
   }
   public void setFkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
     this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
+  }
+
+  /**
+   * The unique ID of the Ezsignbulksend
+   * minimum: 0
+   **/
+  @ApiModelProperty(value = "The unique ID of the Ezsignbulksend")
+  public Integer getFkiEzsignbulksendID() {
+    return fkiEzsignbulksendID;
+  }
+  public void setFkiEzsignbulksendID(Integer fkiEzsignbulksendID) {
+    this.fkiEzsignbulksendID = fkiEzsignbulksendID;
+  }
+
+  /**
+   * The description of the Ezsignbulksend
+   **/
+  @ApiModelProperty(value = "The description of the Ezsignbulksend")
+  public String getSEzsignbulksendDescription() {
+    return sEzsignbulksendDescription;
+  }
+  public void setSEzsignbulksendDescription(String sEzsignbulksendDescription) {
+    this.sEzsignbulksendDescription = sEzsignbulksendDescription;
+  }
+
+  /**
+   * The unique ID of the Ezsignbulksendtransmission
+   * minimum: 0
+   **/
+  @ApiModelProperty(value = "The unique ID of the Ezsignbulksendtransmission")
+  public Integer getFkiEzsignbulksendtransmissionID() {
+    return fkiEzsignbulksendtransmissionID;
+  }
+  public void setFkiEzsignbulksendtransmissionID(Integer fkiEzsignbulksendtransmissionID) {
+    this.fkiEzsignbulksendtransmissionID = fkiEzsignbulksendtransmissionID;
+  }
+
+  /**
+   * The description of the Ezsignbulksendtransmission
+   **/
+  @ApiModelProperty(value = "The description of the Ezsignbulksendtransmission")
+  public String getSEzsignbulksendtransmissionDescription() {
+    return sEzsignbulksendtransmissionDescription;
+  }
+  public void setSEzsignbulksendtransmissionDescription(String sEzsignbulksendtransmissionDescription) {
+    this.sEzsignbulksendtransmissionDescription = sEzsignbulksendtransmissionDescription;
+  }
+
+  /**
+   * The unique ID of the Ezsigntemplatepublic
+   * minimum: 0
+   * maximum: 65535
+   **/
+  @ApiModelProperty(value = "The unique ID of the Ezsigntemplatepublic")
+  public Integer getFkiEzsigntemplatepublicID() {
+    return fkiEzsigntemplatepublicID;
+  }
+  public void setFkiEzsigntemplatepublicID(Integer fkiEzsigntemplatepublicID) {
+    this.fkiEzsigntemplatepublicID = fkiEzsigntemplatepublicID;
+  }
+
+  /**
+   * The description of the Ezsigntemplatepublic
+   **/
+  @ApiModelProperty(value = "The description of the Ezsigntemplatepublic")
+  public String getSEzsigntemplatepublicDescription() {
+    return sEzsigntemplatepublicDescription;
+  }
+  public void setSEzsigntemplatepublicDescription(String sEzsigntemplatepublicDescription) {
+    this.sEzsigntemplatepublicDescription = sEzsigntemplatepublicDescription;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public FieldEEzsignfolderSource getEEzsignfolderSource() {
+    return eEzsignfolderSource;
+  }
+  public void setEEzsignfolderSource(FieldEEzsignfolderSource eEzsignfolderSource) {
+    this.eEzsignfolderSource = eEzsignfolderSource;
   }
 
   /**
@@ -350,6 +447,17 @@ public class EzsignfolderListElement {
     this.bEzsignfolderSigner = bEzsignfolderSigner;
   }
 
+  /**
+   * Whether the Ezsignfolder is my own or not
+   **/
+  @ApiModelProperty(value = "Whether the Ezsignfolder is my own or not")
+  public Boolean getBEzsignfolderIsmyown() {
+    return bEzsignfolderIsmyown;
+  }
+  public void setBEzsignfolderIsmyown(Boolean bEzsignfolderIsmyown) {
+    this.bEzsignfolderIsmyown = bEzsignfolderIsmyown;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -362,6 +470,13 @@ public class EzsignfolderListElement {
     EzsignfolderListElement ezsignfolderListElement = (EzsignfolderListElement) o;
     return (this.pkiEzsignfolderID == null ? ezsignfolderListElement.pkiEzsignfolderID == null : this.pkiEzsignfolderID.equals(ezsignfolderListElement.pkiEzsignfolderID)) &&
         (this.fkiEzsignfoldertypeID == null ? ezsignfolderListElement.fkiEzsignfoldertypeID == null : this.fkiEzsignfoldertypeID.equals(ezsignfolderListElement.fkiEzsignfoldertypeID)) &&
+        (this.fkiEzsignbulksendID == null ? ezsignfolderListElement.fkiEzsignbulksendID == null : this.fkiEzsignbulksendID.equals(ezsignfolderListElement.fkiEzsignbulksendID)) &&
+        (this.sEzsignbulksendDescription == null ? ezsignfolderListElement.sEzsignbulksendDescription == null : this.sEzsignbulksendDescription.equals(ezsignfolderListElement.sEzsignbulksendDescription)) &&
+        (this.fkiEzsignbulksendtransmissionID == null ? ezsignfolderListElement.fkiEzsignbulksendtransmissionID == null : this.fkiEzsignbulksendtransmissionID.equals(ezsignfolderListElement.fkiEzsignbulksendtransmissionID)) &&
+        (this.sEzsignbulksendtransmissionDescription == null ? ezsignfolderListElement.sEzsignbulksendtransmissionDescription == null : this.sEzsignbulksendtransmissionDescription.equals(ezsignfolderListElement.sEzsignbulksendtransmissionDescription)) &&
+        (this.fkiEzsigntemplatepublicID == null ? ezsignfolderListElement.fkiEzsigntemplatepublicID == null : this.fkiEzsigntemplatepublicID.equals(ezsignfolderListElement.fkiEzsigntemplatepublicID)) &&
+        (this.sEzsigntemplatepublicDescription == null ? ezsignfolderListElement.sEzsigntemplatepublicDescription == null : this.sEzsigntemplatepublicDescription.equals(ezsignfolderListElement.sEzsigntemplatepublicDescription)) &&
+        (this.eEzsignfolderSource == null ? ezsignfolderListElement.eEzsignfolderSource == null : this.eEzsignfolderSource.equals(ezsignfolderListElement.eEzsignfolderSource)) &&
         (this.eEzsignfoldertypePrivacylevel == null ? ezsignfolderListElement.eEzsignfoldertypePrivacylevel == null : this.eEzsignfoldertypePrivacylevel.equals(ezsignfolderListElement.eEzsignfoldertypePrivacylevel)) &&
         (this.sEzsignfoldertypeNameX == null ? ezsignfolderListElement.sEzsignfoldertypeNameX == null : this.sEzsignfoldertypeNameX.equals(ezsignfolderListElement.sEzsignfoldertypeNameX)) &&
         (this.sEzsignfolderDescription == null ? ezsignfolderListElement.sEzsignfolderDescription == null : this.sEzsignfolderDescription.equals(ezsignfolderListElement.sEzsignfolderDescription)) &&
@@ -384,7 +499,8 @@ public class EzsignfolderListElement {
         (this.dtEzsignfolderClose == null ? ezsignfolderListElement.dtEzsignfolderClose == null : this.dtEzsignfolderClose.equals(ezsignfolderListElement.dtEzsignfolderClose)) &&
         (this.dtEzsignfolderArchive == null ? ezsignfolderListElement.dtEzsignfolderArchive == null : this.dtEzsignfolderArchive.equals(ezsignfolderListElement.dtEzsignfolderArchive)) &&
         (this.dtEzsignfolderDispose == null ? ezsignfolderListElement.dtEzsignfolderDispose == null : this.dtEzsignfolderDispose.equals(ezsignfolderListElement.dtEzsignfolderDispose)) &&
-        (this.bEzsignfolderSigner == null ? ezsignfolderListElement.bEzsignfolderSigner == null : this.bEzsignfolderSigner.equals(ezsignfolderListElement.bEzsignfolderSigner));
+        (this.bEzsignfolderSigner == null ? ezsignfolderListElement.bEzsignfolderSigner == null : this.bEzsignfolderSigner.equals(ezsignfolderListElement.bEzsignfolderSigner)) &&
+        (this.bEzsignfolderIsmyown == null ? ezsignfolderListElement.bEzsignfolderIsmyown == null : this.bEzsignfolderIsmyown.equals(ezsignfolderListElement.bEzsignfolderIsmyown));
   }
 
   @Override
@@ -392,6 +508,13 @@ public class EzsignfolderListElement {
     int result = 17;
     result = 31 * result + (this.pkiEzsignfolderID == null ? 0: this.pkiEzsignfolderID.hashCode());
     result = 31 * result + (this.fkiEzsignfoldertypeID == null ? 0: this.fkiEzsignfoldertypeID.hashCode());
+    result = 31 * result + (this.fkiEzsignbulksendID == null ? 0: this.fkiEzsignbulksendID.hashCode());
+    result = 31 * result + (this.sEzsignbulksendDescription == null ? 0: this.sEzsignbulksendDescription.hashCode());
+    result = 31 * result + (this.fkiEzsignbulksendtransmissionID == null ? 0: this.fkiEzsignbulksendtransmissionID.hashCode());
+    result = 31 * result + (this.sEzsignbulksendtransmissionDescription == null ? 0: this.sEzsignbulksendtransmissionDescription.hashCode());
+    result = 31 * result + (this.fkiEzsigntemplatepublicID == null ? 0: this.fkiEzsigntemplatepublicID.hashCode());
+    result = 31 * result + (this.sEzsigntemplatepublicDescription == null ? 0: this.sEzsigntemplatepublicDescription.hashCode());
+    result = 31 * result + (this.eEzsignfolderSource == null ? 0: this.eEzsignfolderSource.hashCode());
     result = 31 * result + (this.eEzsignfoldertypePrivacylevel == null ? 0: this.eEzsignfoldertypePrivacylevel.hashCode());
     result = 31 * result + (this.sEzsignfoldertypeNameX == null ? 0: this.sEzsignfoldertypeNameX.hashCode());
     result = 31 * result + (this.sEzsignfolderDescription == null ? 0: this.sEzsignfolderDescription.hashCode());
@@ -415,6 +538,7 @@ public class EzsignfolderListElement {
     result = 31 * result + (this.dtEzsignfolderArchive == null ? 0: this.dtEzsignfolderArchive.hashCode());
     result = 31 * result + (this.dtEzsignfolderDispose == null ? 0: this.dtEzsignfolderDispose.hashCode());
     result = 31 * result + (this.bEzsignfolderSigner == null ? 0: this.bEzsignfolderSigner.hashCode());
+    result = 31 * result + (this.bEzsignfolderIsmyown == null ? 0: this.bEzsignfolderIsmyown.hashCode());
     return result;
   }
 
@@ -425,6 +549,13 @@ public class EzsignfolderListElement {
     
     sb.append("  pkiEzsignfolderID: ").append(pkiEzsignfolderID).append("\n");
     sb.append("  fkiEzsignfoldertypeID: ").append(fkiEzsignfoldertypeID).append("\n");
+    sb.append("  fkiEzsignbulksendID: ").append(fkiEzsignbulksendID).append("\n");
+    sb.append("  sEzsignbulksendDescription: ").append(sEzsignbulksendDescription).append("\n");
+    sb.append("  fkiEzsignbulksendtransmissionID: ").append(fkiEzsignbulksendtransmissionID).append("\n");
+    sb.append("  sEzsignbulksendtransmissionDescription: ").append(sEzsignbulksendtransmissionDescription).append("\n");
+    sb.append("  fkiEzsigntemplatepublicID: ").append(fkiEzsigntemplatepublicID).append("\n");
+    sb.append("  sEzsigntemplatepublicDescription: ").append(sEzsigntemplatepublicDescription).append("\n");
+    sb.append("  eEzsignfolderSource: ").append(eEzsignfolderSource).append("\n");
     sb.append("  eEzsignfoldertypePrivacylevel: ").append(eEzsignfoldertypePrivacylevel).append("\n");
     sb.append("  sEzsignfoldertypeNameX: ").append(sEzsignfoldertypeNameX).append("\n");
     sb.append("  sEzsignfolderDescription: ").append(sEzsignfolderDescription).append("\n");
@@ -448,6 +579,7 @@ public class EzsignfolderListElement {
     sb.append("  dtEzsignfolderArchive: ").append(dtEzsignfolderArchive).append("\n");
     sb.append("  dtEzsignfolderDispose: ").append(dtEzsignfolderDispose).append("\n");
     sb.append("  bEzsignfolderSigner: ").append(bEzsignfolderSigner).append("\n");
+    sb.append("  bEzsignfolderIsmyown: ").append(bEzsignfolderIsmyown).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

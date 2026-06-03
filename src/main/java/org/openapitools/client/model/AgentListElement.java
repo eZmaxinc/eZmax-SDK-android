@@ -55,6 +55,16 @@ public class AgentListElement {
   private String dtAgentHiredate = null;
   @SerializedName("dtAgentLeavedate")
   private String dtAgentLeavedate = null;
+  @SerializedName("dtAgentContractdate")
+  private String dtAgentContractdate = null;
+  @SerializedName("dtAgentTransferdate")
+  private String dtAgentTransferdate = null;
+  @SerializedName("dtAgentSenioritydate")
+  private String dtAgentSenioritydate = null;
+  @SerializedName("dtAgentSickleavestart")
+  private String dtAgentSickleavestart = null;
+  @SerializedName("dtAgentSickleaveend")
+  private String dtAgentSickleaveend = null;
   @SerializedName("bAgentTranquillit")
   private Boolean bAgentTranquillit = null;
   @SerializedName("bAgentResidentiallicense")
@@ -89,8 +99,12 @@ public class AgentListElement {
   private String sAddressCity = null;
   @SerializedName("sAddressZip")
   private String sAddressZip = null;
+  @SerializedName("fkiProvinceID")
+  private Integer fkiProvinceID = null;
   @SerializedName("sProvinceNameX")
   private String sProvinceNameX = null;
+  @SerializedName("fkiCountryID")
+  private Integer fkiCountryID = null;
   @SerializedName("sCountryNameX")
   private String sCountryNameX = null;
 
@@ -295,6 +309,61 @@ public class AgentListElement {
   }
 
   /**
+   * The contract date of the Agent
+   **/
+  @ApiModelProperty(value = "The contract date of the Agent")
+  public String getDtAgentContractdate() {
+    return dtAgentContractdate;
+  }
+  public void setDtAgentContractdate(String dtAgentContractdate) {
+    this.dtAgentContractdate = dtAgentContractdate;
+  }
+
+  /**
+   * The transfer date of the Agent
+   **/
+  @ApiModelProperty(value = "The transfer date of the Agent")
+  public String getDtAgentTransferdate() {
+    return dtAgentTransferdate;
+  }
+  public void setDtAgentTransferdate(String dtAgentTransferdate) {
+    this.dtAgentTransferdate = dtAgentTransferdate;
+  }
+
+  /**
+   * The seniority date of the Agent
+   **/
+  @ApiModelProperty(value = "The seniority date of the Agent")
+  public String getDtAgentSenioritydate() {
+    return dtAgentSenioritydate;
+  }
+  public void setDtAgentSenioritydate(String dtAgentSenioritydate) {
+    this.dtAgentSenioritydate = dtAgentSenioritydate;
+  }
+
+  /**
+   * The sick leave start date of the Agent
+   **/
+  @ApiModelProperty(value = "The sick leave start date of the Agent")
+  public String getDtAgentSickleavestart() {
+    return dtAgentSickleavestart;
+  }
+  public void setDtAgentSickleavestart(String dtAgentSickleavestart) {
+    this.dtAgentSickleavestart = dtAgentSickleavestart;
+  }
+
+  /**
+   * The sick leave end date of the Agent
+   **/
+  @ApiModelProperty(value = "The sick leave end date of the Agent")
+  public String getDtAgentSickleaveend() {
+    return dtAgentSickleaveend;
+  }
+  public void setDtAgentSickleaveend(String dtAgentSickleaveend) {
+    this.dtAgentSickleaveend = dtAgentSickleaveend;
+  }
+
+  /**
    * Whether if it's an tranquillit
    **/
   @ApiModelProperty(required = true, value = "Whether if it's an tranquillit")
@@ -482,6 +551,18 @@ public class AgentListElement {
   }
 
   /**
+   * The unique ID of the Province.  Here are some common values (Complete list must be retrieved from API):  |Value|Description| |-|-| |1|(Canada) Alberta |2|(Canada) British Columbia| |3|(Canada) Manitoba| |3|(Canada) Manitoba| |4|(Canada) New Brunswick| |5|(Canada) Newfoundland| |6|(Canada) Northwest Territories| |7|(Canada) Nova Scotia| |8|(Canada) Nunavut| |9|(Canada) Ontario| |10|(Canada) Prince Edward Island| |11|(Canada) Quebec| |12|(Canada) Saskatchewan| |13|(Canada) Yukon| |14|(United-States) Alabama| |15|(United-States) Alaska| |16|(United-States) Arizona| |17|(United-States) Arkansas| |18|(United-States) California| |19|(United-States) Colorado| |20|(United-States) Connecticut| |21|(United-States) Delaware| |22|(United-States) District of Columbia| |23|(United-States) Florida| |24|(United-States) Georgia| |25|(United-States) Hawaii| |26|(United-States) Idaho| |27|(United-States) Illinois| |28|(United-States) Indiana| |29|(United-States) Iowa| |30|(United-States) Kansas| |31|(United-States) Kentucky| |32|(United-States) Louisiane| |33|(United-States) Maine| |34|(United-States) Maryland| |35|(United-States) Massachusetts| |36|(United-States) Michigan| |37|(United-States) Minnesota| |38|(United-States) Mississippi| |39|(United-States) Missouri| |40|(United-States) Montana| |41|(United-States) Nebraska| |42|(United-States) Nevada| |43|(United-States) New Hampshire| |44|(United-States) New Jersey| |45|(United-States) New Mexico| |46|(United-States) New York| |47|(United-States) North Carolina| |48|(United-States) North Dakota| |49|(United-States) Ohio| |50|(United-States) Oklahoma| |51|(United-States) Oregon| |52|(United-States) Pennsylvania| |53|(United-States) Rhode Island| |54|(United-States) South Carolina| |55|(United-States) South Dakota| |56|(United-States) Tennessee| |57|(United-States) Texas| |58|(United-States) Utah| |60|(United-States) Vermont| |59|(United-States) Virginia| |61|(United-States) Washington| |62|(United-States) West Virginia| |63|(United-States) Wisconsin| |64|(United-States) Wyoming|
+   * minimum: 0
+   **/
+  @ApiModelProperty(value = "The unique ID of the Province.  Here are some common values (Complete list must be retrieved from API):  |Value|Description| |-|-| |1|(Canada) Alberta |2|(Canada) British Columbia| |3|(Canada) Manitoba| |3|(Canada) Manitoba| |4|(Canada) New Brunswick| |5|(Canada) Newfoundland| |6|(Canada) Northwest Territories| |7|(Canada) Nova Scotia| |8|(Canada) Nunavut| |9|(Canada) Ontario| |10|(Canada) Prince Edward Island| |11|(Canada) Quebec| |12|(Canada) Saskatchewan| |13|(Canada) Yukon| |14|(United-States) Alabama| |15|(United-States) Alaska| |16|(United-States) Arizona| |17|(United-States) Arkansas| |18|(United-States) California| |19|(United-States) Colorado| |20|(United-States) Connecticut| |21|(United-States) Delaware| |22|(United-States) District of Columbia| |23|(United-States) Florida| |24|(United-States) Georgia| |25|(United-States) Hawaii| |26|(United-States) Idaho| |27|(United-States) Illinois| |28|(United-States) Indiana| |29|(United-States) Iowa| |30|(United-States) Kansas| |31|(United-States) Kentucky| |32|(United-States) Louisiane| |33|(United-States) Maine| |34|(United-States) Maryland| |35|(United-States) Massachusetts| |36|(United-States) Michigan| |37|(United-States) Minnesota| |38|(United-States) Mississippi| |39|(United-States) Missouri| |40|(United-States) Montana| |41|(United-States) Nebraska| |42|(United-States) Nevada| |43|(United-States) New Hampshire| |44|(United-States) New Jersey| |45|(United-States) New Mexico| |46|(United-States) New York| |47|(United-States) North Carolina| |48|(United-States) North Dakota| |49|(United-States) Ohio| |50|(United-States) Oklahoma| |51|(United-States) Oregon| |52|(United-States) Pennsylvania| |53|(United-States) Rhode Island| |54|(United-States) South Carolina| |55|(United-States) South Dakota| |56|(United-States) Tennessee| |57|(United-States) Texas| |58|(United-States) Utah| |60|(United-States) Vermont| |59|(United-States) Virginia| |61|(United-States) Washington| |62|(United-States) West Virginia| |63|(United-States) Wisconsin| |64|(United-States) Wyoming|")
+  public Integer getFkiProvinceID() {
+    return fkiProvinceID;
+  }
+  public void setFkiProvinceID(Integer fkiProvinceID) {
+    this.fkiProvinceID = fkiProvinceID;
+  }
+
+  /**
    * The name of the Province in the language of the requester
    **/
   @ApiModelProperty(value = "The name of the Province in the language of the requester")
@@ -490,6 +571,18 @@ public class AgentListElement {
   }
   public void setSProvinceNameX(String sProvinceNameX) {
     this.sProvinceNameX = sProvinceNameX;
+  }
+
+  /**
+   * The unique ID of the Country.  Here are some common values (Complete list must be retrieved from API):  |Value|Description| |-|-| |1|Canada| |2|United-States|
+   * minimum: 0
+   **/
+  @ApiModelProperty(value = "The unique ID of the Country.  Here are some common values (Complete list must be retrieved from API):  |Value|Description| |-|-| |1|Canada| |2|United-States|")
+  public Integer getFkiCountryID() {
+    return fkiCountryID;
+  }
+  public void setFkiCountryID(Integer fkiCountryID) {
+    this.fkiCountryID = fkiCountryID;
   }
 
   /**
@@ -530,6 +623,11 @@ public class AgentListElement {
         (this.sAgentRealestateassociationlicense == null ? agentListElement.sAgentRealestateassociationlicense == null : this.sAgentRealestateassociationlicense.equals(agentListElement.sAgentRealestateassociationlicense)) &&
         (this.dtAgentHiredate == null ? agentListElement.dtAgentHiredate == null : this.dtAgentHiredate.equals(agentListElement.dtAgentHiredate)) &&
         (this.dtAgentLeavedate == null ? agentListElement.dtAgentLeavedate == null : this.dtAgentLeavedate.equals(agentListElement.dtAgentLeavedate)) &&
+        (this.dtAgentContractdate == null ? agentListElement.dtAgentContractdate == null : this.dtAgentContractdate.equals(agentListElement.dtAgentContractdate)) &&
+        (this.dtAgentTransferdate == null ? agentListElement.dtAgentTransferdate == null : this.dtAgentTransferdate.equals(agentListElement.dtAgentTransferdate)) &&
+        (this.dtAgentSenioritydate == null ? agentListElement.dtAgentSenioritydate == null : this.dtAgentSenioritydate.equals(agentListElement.dtAgentSenioritydate)) &&
+        (this.dtAgentSickleavestart == null ? agentListElement.dtAgentSickleavestart == null : this.dtAgentSickleavestart.equals(agentListElement.dtAgentSickleavestart)) &&
+        (this.dtAgentSickleaveend == null ? agentListElement.dtAgentSickleaveend == null : this.dtAgentSickleaveend.equals(agentListElement.dtAgentSickleaveend)) &&
         (this.bAgentTranquillit == null ? agentListElement.bAgentTranquillit == null : this.bAgentTranquillit.equals(agentListElement.bAgentTranquillit)) &&
         (this.bAgentResidentiallicense == null ? agentListElement.bAgentResidentiallicense == null : this.bAgentResidentiallicense.equals(agentListElement.bAgentResidentiallicense)) &&
         (this.bAgentCommerciallicense == null ? agentListElement.bAgentCommerciallicense == null : this.bAgentCommerciallicense.equals(agentListElement.bAgentCommerciallicense)) &&
@@ -547,7 +645,9 @@ public class AgentListElement {
         (this.sAddressSuite == null ? agentListElement.sAddressSuite == null : this.sAddressSuite.equals(agentListElement.sAddressSuite)) &&
         (this.sAddressCity == null ? agentListElement.sAddressCity == null : this.sAddressCity.equals(agentListElement.sAddressCity)) &&
         (this.sAddressZip == null ? agentListElement.sAddressZip == null : this.sAddressZip.equals(agentListElement.sAddressZip)) &&
+        (this.fkiProvinceID == null ? agentListElement.fkiProvinceID == null : this.fkiProvinceID.equals(agentListElement.fkiProvinceID)) &&
         (this.sProvinceNameX == null ? agentListElement.sProvinceNameX == null : this.sProvinceNameX.equals(agentListElement.sProvinceNameX)) &&
+        (this.fkiCountryID == null ? agentListElement.fkiCountryID == null : this.fkiCountryID.equals(agentListElement.fkiCountryID)) &&
         (this.sCountryNameX == null ? agentListElement.sCountryNameX == null : this.sCountryNameX.equals(agentListElement.sCountryNameX));
   }
 
@@ -571,6 +671,11 @@ public class AgentListElement {
     result = 31 * result + (this.sAgentRealestateassociationlicense == null ? 0: this.sAgentRealestateassociationlicense.hashCode());
     result = 31 * result + (this.dtAgentHiredate == null ? 0: this.dtAgentHiredate.hashCode());
     result = 31 * result + (this.dtAgentLeavedate == null ? 0: this.dtAgentLeavedate.hashCode());
+    result = 31 * result + (this.dtAgentContractdate == null ? 0: this.dtAgentContractdate.hashCode());
+    result = 31 * result + (this.dtAgentTransferdate == null ? 0: this.dtAgentTransferdate.hashCode());
+    result = 31 * result + (this.dtAgentSenioritydate == null ? 0: this.dtAgentSenioritydate.hashCode());
+    result = 31 * result + (this.dtAgentSickleavestart == null ? 0: this.dtAgentSickleavestart.hashCode());
+    result = 31 * result + (this.dtAgentSickleaveend == null ? 0: this.dtAgentSickleaveend.hashCode());
     result = 31 * result + (this.bAgentTranquillit == null ? 0: this.bAgentTranquillit.hashCode());
     result = 31 * result + (this.bAgentResidentiallicense == null ? 0: this.bAgentResidentiallicense.hashCode());
     result = 31 * result + (this.bAgentCommerciallicense == null ? 0: this.bAgentCommerciallicense.hashCode());
@@ -588,7 +693,9 @@ public class AgentListElement {
     result = 31 * result + (this.sAddressSuite == null ? 0: this.sAddressSuite.hashCode());
     result = 31 * result + (this.sAddressCity == null ? 0: this.sAddressCity.hashCode());
     result = 31 * result + (this.sAddressZip == null ? 0: this.sAddressZip.hashCode());
+    result = 31 * result + (this.fkiProvinceID == null ? 0: this.fkiProvinceID.hashCode());
     result = 31 * result + (this.sProvinceNameX == null ? 0: this.sProvinceNameX.hashCode());
+    result = 31 * result + (this.fkiCountryID == null ? 0: this.fkiCountryID.hashCode());
     result = 31 * result + (this.sCountryNameX == null ? 0: this.sCountryNameX.hashCode());
     return result;
   }
@@ -615,6 +722,11 @@ public class AgentListElement {
     sb.append("  sAgentRealestateassociationlicense: ").append(sAgentRealestateassociationlicense).append("\n");
     sb.append("  dtAgentHiredate: ").append(dtAgentHiredate).append("\n");
     sb.append("  dtAgentLeavedate: ").append(dtAgentLeavedate).append("\n");
+    sb.append("  dtAgentContractdate: ").append(dtAgentContractdate).append("\n");
+    sb.append("  dtAgentTransferdate: ").append(dtAgentTransferdate).append("\n");
+    sb.append("  dtAgentSenioritydate: ").append(dtAgentSenioritydate).append("\n");
+    sb.append("  dtAgentSickleavestart: ").append(dtAgentSickleavestart).append("\n");
+    sb.append("  dtAgentSickleaveend: ").append(dtAgentSickleaveend).append("\n");
     sb.append("  bAgentTranquillit: ").append(bAgentTranquillit).append("\n");
     sb.append("  bAgentResidentiallicense: ").append(bAgentResidentiallicense).append("\n");
     sb.append("  bAgentCommerciallicense: ").append(bAgentCommerciallicense).append("\n");
@@ -632,7 +744,9 @@ public class AgentListElement {
     sb.append("  sAddressSuite: ").append(sAddressSuite).append("\n");
     sb.append("  sAddressCity: ").append(sAddressCity).append("\n");
     sb.append("  sAddressZip: ").append(sAddressZip).append("\n");
+    sb.append("  fkiProvinceID: ").append(fkiProvinceID).append("\n");
     sb.append("  sProvinceNameX: ").append(sProvinceNameX).append("\n");
+    sb.append("  fkiCountryID: ").append(fkiCountryID).append("\n");
     sb.append("  sCountryNameX: ").append(sCountryNameX).append("\n");
     sb.append("}\n");
     return sb.toString();

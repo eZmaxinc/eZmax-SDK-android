@@ -6,7 +6,9 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ezsigndocumentApplyEzsigntemplateV1**](ObjectEzsigndocumentApi.md#ezsigndocumentApplyEzsigntemplateV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate | Apply an Ezsigntemplate to the Ezsigndocument
 [**ezsigndocumentApplyEzsigntemplateV2**](ObjectEzsigndocumentApi.md#ezsigndocumentApplyEzsigntemplateV2) | **POST** /2/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplate | Apply an Ezsigntemplate to the Ezsigndocument
+[**ezsigndocumentApplyEzsigntemplateV3**](ObjectEzsigndocumentApi.md#ezsigndocumentApplyEzsigntemplateV3) | **POST** /3/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplate | Apply an Ezsigntemplate to the Ezsigndocument
 [**ezsigndocumentApplyEzsigntemplateglobalV1**](ObjectEzsigndocumentApi.md#ezsigndocumentApplyEzsigntemplateglobalV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplateglobal | Apply an Ezsigntemplateglobal to the Ezsigndocument
+[**ezsigndocumentApplyEzsigntemplateglobalV2**](ObjectEzsigndocumentApi.md#ezsigndocumentApplyEzsigntemplateglobalV2) | **POST** /2/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplateglobal | Apply an Ezsigntemplateglobal to the Ezsigndocument
 [**ezsigndocumentCreateEzsignelementsPositionedByWordV1**](ObjectEzsigndocumentApi.md#ezsigndocumentCreateEzsignelementsPositionedByWordV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/createEzsignelementsPositionedByWord | Create multiple Ezsignsignatures/Ezsignformfieldgroups
 [**ezsigndocumentCreateEzsignelementsPositionedByWordV2**](ObjectEzsigndocumentApi.md#ezsigndocumentCreateEzsignelementsPositionedByWordV2) | **POST** /2/object/ezsigndocument/{pkiEzsigndocumentID}/createEzsignelementsPositionedByWord | Create multiple Ezsignsignatures/Ezsignformfieldgroups
 [**ezsigndocumentCreateObjectV1**](ObjectEzsigndocumentApi.md#ezsigndocumentCreateObjectV1) | **POST** /1/object/ezsigndocument | Create a new Ezsigndocument
@@ -146,6 +148,54 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
+## ezsigndocumentApplyEzsigntemplateV3
+
+> EzsigndocumentApplyEzsigntemplateV3Response ezsigndocumentApplyEzsigntemplateV3(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateV3Request)
+
+Apply an Ezsigntemplate to the Ezsigndocument
+
+This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectEzsigndocumentApi;
+
+ObjectEzsigndocumentApi apiInstance = new ObjectEzsigndocumentApi();
+Integer pkiEzsigndocumentID = null; // Integer | 
+EzsigndocumentApplyEzsigntemplateV3Request ezsigndocumentApplyEzsigntemplateV3Request = new EzsigndocumentApplyEzsigntemplateV3Request(); // EzsigndocumentApplyEzsigntemplateV3Request | 
+try {
+    EzsigndocumentApplyEzsigntemplateV3Response result = apiInstance.ezsigndocumentApplyEzsigntemplateV3(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateV3Request);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectEzsigndocumentApi#ezsigndocumentApplyEzsigntemplateV3");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsigndocumentID** | **Integer**|  | [default to null]
+ **ezsigndocumentApplyEzsigntemplateV3Request** | [**EzsigndocumentApplyEzsigntemplateV3Request**](EzsigndocumentApplyEzsigntemplateV3Request.md)|  |
+
+### Return type
+
+[**EzsigndocumentApplyEzsigntemplateV3Response**](EzsigndocumentApplyEzsigntemplateV3Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
 ## ezsigndocumentApplyEzsigntemplateglobalV1
 
 > EzsigndocumentApplyEzsigntemplateglobalV1Response ezsigndocumentApplyEzsigntemplateglobalV1(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateglobalV1Request)
@@ -183,6 +233,54 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsigndocumentApplyEzsigntemplateglobalV1Response**](EzsigndocumentApplyEzsigntemplateglobalV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## ezsigndocumentApplyEzsigntemplateglobalV2
+
+> EzsigndocumentApplyEzsigntemplateglobalV2Response ezsigndocumentApplyEzsigntemplateglobalV2(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateglobalV2Request)
+
+Apply an Ezsigntemplateglobal to the Ezsigndocument
+
+This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectEzsigndocumentApi;
+
+ObjectEzsigndocumentApi apiInstance = new ObjectEzsigndocumentApi();
+Integer pkiEzsigndocumentID = null; // Integer | 
+EzsigndocumentApplyEzsigntemplateglobalV2Request ezsigndocumentApplyEzsigntemplateglobalV2Request = new EzsigndocumentApplyEzsigntemplateglobalV2Request(); // EzsigndocumentApplyEzsigntemplateglobalV2Request | 
+try {
+    EzsigndocumentApplyEzsigntemplateglobalV2Response result = apiInstance.ezsigndocumentApplyEzsigntemplateglobalV2(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateglobalV2Request);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectEzsigndocumentApi#ezsigndocumentApplyEzsigntemplateglobalV2");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsigndocumentID** | **Integer**|  | [default to null]
+ **ezsigndocumentApplyEzsigntemplateglobalV2Request** | [**EzsigndocumentApplyEzsigntemplateglobalV2Request**](EzsigndocumentApplyEzsigntemplateglobalV2Request.md)|  |
+
+### Return type
+
+[**EzsigndocumentApplyEzsigntemplateglobalV2Response**](EzsigndocumentApplyEzsigntemplateglobalV2Response.md)
 
 ### Authorization
 

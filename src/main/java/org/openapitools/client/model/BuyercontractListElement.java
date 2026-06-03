@@ -37,6 +37,8 @@ public class BuyercontractListElement {
   private String dBuyercontractMaximumprice = null;
   @SerializedName("eBuyercontractType")
   private FieldEBuyercontractType eBuyercontractType = null;
+  @SerializedName("sBuyercontractContract")
+  private String sBuyercontractContract = null;
   @SerializedName("dtBuyercontractDate")
   private String dtBuyercontractDate = null;
   @SerializedName("dtBuyercontractExpirationdate")
@@ -128,6 +130,17 @@ public class BuyercontractListElement {
   }
 
   /**
+   * The number of the Buyercontract
+   **/
+  @ApiModelProperty(value = "The number of the Buyercontract")
+  public String getSBuyercontractContract() {
+    return sBuyercontractContract;
+  }
+  public void setSBuyercontractContract(String sBuyercontractContract) {
+    this.sBuyercontractContract = sBuyercontractContract;
+  }
+
+  /**
    * The date of the Buyercontract
    **/
   @ApiModelProperty(required = true, value = "The date of the Buyercontract")
@@ -199,6 +212,7 @@ public class BuyercontractListElement {
         (this.dBuyercontractMinimumprice == null ? buyercontractListElement.dBuyercontractMinimumprice == null : this.dBuyercontractMinimumprice.equals(buyercontractListElement.dBuyercontractMinimumprice)) &&
         (this.dBuyercontractMaximumprice == null ? buyercontractListElement.dBuyercontractMaximumprice == null : this.dBuyercontractMaximumprice.equals(buyercontractListElement.dBuyercontractMaximumprice)) &&
         (this.eBuyercontractType == null ? buyercontractListElement.eBuyercontractType == null : this.eBuyercontractType.equals(buyercontractListElement.eBuyercontractType)) &&
+        (this.sBuyercontractContract == null ? buyercontractListElement.sBuyercontractContract == null : this.sBuyercontractContract.equals(buyercontractListElement.sBuyercontractContract)) &&
         (this.dtBuyercontractDate == null ? buyercontractListElement.dtBuyercontractDate == null : this.dtBuyercontractDate.equals(buyercontractListElement.dtBuyercontractDate)) &&
         (this.dtBuyercontractExpirationdate == null ? buyercontractListElement.dtBuyercontractExpirationdate == null : this.dtBuyercontractExpirationdate.equals(buyercontractListElement.dtBuyercontractExpirationdate)) &&
         (this.bBuyercontractIsactive == null ? buyercontractListElement.bBuyercontractIsactive == null : this.bBuyercontractIsactive.equals(buyercontractListElement.bBuyercontractIsactive)) &&
@@ -216,6 +230,7 @@ public class BuyercontractListElement {
     result = 31 * result + (this.dBuyercontractMinimumprice == null ? 0: this.dBuyercontractMinimumprice.hashCode());
     result = 31 * result + (this.dBuyercontractMaximumprice == null ? 0: this.dBuyercontractMaximumprice.hashCode());
     result = 31 * result + (this.eBuyercontractType == null ? 0: this.eBuyercontractType.hashCode());
+    result = 31 * result + (this.sBuyercontractContract == null ? 0: this.sBuyercontractContract.hashCode());
     result = 31 * result + (this.dtBuyercontractDate == null ? 0: this.dtBuyercontractDate.hashCode());
     result = 31 * result + (this.dtBuyercontractExpirationdate == null ? 0: this.dtBuyercontractExpirationdate.hashCode());
     result = 31 * result + (this.bBuyercontractIsactive == null ? 0: this.bBuyercontractIsactive.hashCode());
@@ -236,6 +251,7 @@ public class BuyercontractListElement {
     sb.append("  dBuyercontractMinimumprice: ").append(dBuyercontractMinimumprice).append("\n");
     sb.append("  dBuyercontractMaximumprice: ").append(dBuyercontractMaximumprice).append("\n");
     sb.append("  eBuyercontractType: ").append(eBuyercontractType).append("\n");
+    sb.append("  sBuyercontractContract: ").append(sBuyercontractContract).append("\n");
     sb.append("  dtBuyercontractDate: ").append(dtBuyercontractDate).append("\n");
     sb.append("  dtBuyercontractExpirationdate: ").append(dtBuyercontractExpirationdate).append("\n");
     sb.append("  bBuyercontractIsactive: ").append(bBuyercontractIsactive).append("\n");

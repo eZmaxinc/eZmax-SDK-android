@@ -139,11 +139,11 @@ public class EzsignfolderRequestCompoundV3 {
   }
 
   /**
-   * The number of days before the the first reminder sending
+   * The number of days before the first reminder sending
    * minimum: 0
    * maximum: 255
    **/
-  @ApiModelProperty(required = true, value = "The number of days before the the first reminder sending")
+  @ApiModelProperty(required = true, value = "The number of days before the first reminder sending")
   public Integer getIEzsignfolderSendreminderfirstdays() {
     return iEzsignfolderSendreminderfirstdays;
   }

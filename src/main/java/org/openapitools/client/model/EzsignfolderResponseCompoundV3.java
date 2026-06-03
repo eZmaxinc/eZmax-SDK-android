@@ -73,6 +73,8 @@ public class EzsignfolderResponseCompoundV3 {
   private String dtEzsignfolderScheduleddispose = null;
   @SerializedName("eEzsignfolderStep")
   private FieldEEzsignfolderStep eEzsignfolderStep = null;
+  @SerializedName("iEzsignfolderStepcurrent")
+  private Integer iEzsignfolderStepcurrent = null;
   @SerializedName("dtEzsignfolderClose")
   private String dtEzsignfolderClose = null;
   @SerializedName("dtEzsignfolderArchive")
@@ -250,11 +252,11 @@ public class EzsignfolderResponseCompoundV3 {
   }
 
   /**
-   * The number of days before the the first reminder sending
+   * The number of days before the first reminder sending
    * minimum: 0
    * maximum: 255
    **/
-  @ApiModelProperty(value = "The number of days before the the first reminder sending")
+  @ApiModelProperty(value = "The number of days before the first reminder sending")
   public Integer getIEzsignfolderSendreminderfirstdays() {
     return iEzsignfolderSendreminderfirstdays;
   }
@@ -338,6 +340,19 @@ public class EzsignfolderResponseCompoundV3 {
   }
   public void setEEzsignfolderStep(FieldEEzsignfolderStep eEzsignfolderStep) {
     this.eEzsignfolderStep = eEzsignfolderStep;
+  }
+
+  /**
+   * The current step of the ezsignfolder when eEzsignfolderCompletion = 'PerEzsignfolderStepSync'
+   * minimum: 0
+   * maximum: 255
+   **/
+  @ApiModelProperty(value = "The current step of the ezsignfolder when eEzsignfolderCompletion = 'PerEzsignfolderStepSync'")
+  public Integer getIEzsignfolderStepcurrent() {
+    return iEzsignfolderStepcurrent;
+  }
+  public void setIEzsignfolderStepcurrent(Integer iEzsignfolderStepcurrent) {
+    this.iEzsignfolderStepcurrent = iEzsignfolderStepcurrent;
   }
 
   /**
@@ -467,6 +482,7 @@ public class EzsignfolderResponseCompoundV3 {
         (this.dtEzsignfolderScheduledarchive == null ? ezsignfolderResponseCompoundV3.dtEzsignfolderScheduledarchive == null : this.dtEzsignfolderScheduledarchive.equals(ezsignfolderResponseCompoundV3.dtEzsignfolderScheduledarchive)) &&
         (this.dtEzsignfolderScheduleddispose == null ? ezsignfolderResponseCompoundV3.dtEzsignfolderScheduleddispose == null : this.dtEzsignfolderScheduleddispose.equals(ezsignfolderResponseCompoundV3.dtEzsignfolderScheduleddispose)) &&
         (this.eEzsignfolderStep == null ? ezsignfolderResponseCompoundV3.eEzsignfolderStep == null : this.eEzsignfolderStep.equals(ezsignfolderResponseCompoundV3.eEzsignfolderStep)) &&
+        (this.iEzsignfolderStepcurrent == null ? ezsignfolderResponseCompoundV3.iEzsignfolderStepcurrent == null : this.iEzsignfolderStepcurrent.equals(ezsignfolderResponseCompoundV3.iEzsignfolderStepcurrent)) &&
         (this.dtEzsignfolderClose == null ? ezsignfolderResponseCompoundV3.dtEzsignfolderClose == null : this.dtEzsignfolderClose.equals(ezsignfolderResponseCompoundV3.dtEzsignfolderClose)) &&
         (this.dtEzsignfolderArchive == null ? ezsignfolderResponseCompoundV3.dtEzsignfolderArchive == null : this.dtEzsignfolderArchive.equals(ezsignfolderResponseCompoundV3.dtEzsignfolderArchive)) &&
         (this.dtEzsignfolderDispose == null ? ezsignfolderResponseCompoundV3.dtEzsignfolderDispose == null : this.dtEzsignfolderDispose.equals(ezsignfolderResponseCompoundV3.dtEzsignfolderDispose)) &&
@@ -503,6 +519,7 @@ public class EzsignfolderResponseCompoundV3 {
     result = 31 * result + (this.dtEzsignfolderScheduledarchive == null ? 0: this.dtEzsignfolderScheduledarchive.hashCode());
     result = 31 * result + (this.dtEzsignfolderScheduleddispose == null ? 0: this.dtEzsignfolderScheduleddispose.hashCode());
     result = 31 * result + (this.eEzsignfolderStep == null ? 0: this.eEzsignfolderStep.hashCode());
+    result = 31 * result + (this.iEzsignfolderStepcurrent == null ? 0: this.iEzsignfolderStepcurrent.hashCode());
     result = 31 * result + (this.dtEzsignfolderClose == null ? 0: this.dtEzsignfolderClose.hashCode());
     result = 31 * result + (this.dtEzsignfolderArchive == null ? 0: this.dtEzsignfolderArchive.hashCode());
     result = 31 * result + (this.dtEzsignfolderDispose == null ? 0: this.dtEzsignfolderDispose.hashCode());
@@ -542,6 +559,7 @@ public class EzsignfolderResponseCompoundV3 {
     sb.append("  dtEzsignfolderScheduledarchive: ").append(dtEzsignfolderScheduledarchive).append("\n");
     sb.append("  dtEzsignfolderScheduleddispose: ").append(dtEzsignfolderScheduleddispose).append("\n");
     sb.append("  eEzsignfolderStep: ").append(eEzsignfolderStep).append("\n");
+    sb.append("  iEzsignfolderStepcurrent: ").append(iEzsignfolderStepcurrent).append("\n");
     sb.append("  dtEzsignfolderClose: ").append(dtEzsignfolderClose).append("\n");
     sb.append("  dtEzsignfolderArchive: ").append(dtEzsignfolderArchive).append("\n");
     sb.append("  dtEzsignfolderDispose: ").append(dtEzsignfolderDispose).append("\n");

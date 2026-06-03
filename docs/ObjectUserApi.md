@@ -13,12 +13,14 @@ Method | HTTP request | Description
 [**userGetAutocompleteV2**](ObjectUserApi.md#userGetAutocompleteV2) | **GET** /2/object/user/getAutocomplete/{sSelector} | Retrieve Users and IDs
 [**userGetColleaguesV2**](ObjectUserApi.md#userGetColleaguesV2) | **GET** /2/object/user/{pkiUserID}/getColleagues | Retrieve an existing User&#39;s Colleagues
 [**userGetEffectivePermissionsV1**](ObjectUserApi.md#userGetEffectivePermissionsV1) | **GET** /1/object/user/{pkiUserID}/getEffectivePermissions | Retrieve an existing User&#39;s Effective Permissions
+[**userGetEzmaxcustomeruserV1**](ObjectUserApi.md#userGetEzmaxcustomeruserV1) | **GET** /1/object/user/{pkiUserID}/getEzmaxcustomeruser | Returns the Ezmaxcustomeruser for the User
 [**userGetListV1**](ObjectUserApi.md#userGetListV1) | **GET** /1/object/user/getList | Retrieve User list
 [**userGetObjectV2**](ObjectUserApi.md#userGetObjectV2) | **GET** /2/object/user/{pkiUserID} | Retrieve an existing User
 [**userGetPermissionsV1**](ObjectUserApi.md#userGetPermissionsV1) | **GET** /1/object/user/{pkiUserID}/getPermissions | Retrieve an existing User&#39;s Permissions
 [**userGetSubnetsV1**](ObjectUserApi.md#userGetSubnetsV1) | **GET** /1/object/user/{pkiUserID}/getSubnets | Retrieve an existing User&#39;s Subnets
 [**userGetUsergroupexternalsV1**](ObjectUserApi.md#userGetUsergroupexternalsV1) | **GET** /1/object/user/{pkiUserID}/getUsergroupexternals | Get User&#39;s Usergroupexternals
 [**userGetUsergroupsV1**](ObjectUserApi.md#userGetUsergroupsV1) | **GET** /1/object/user/{pkiUserID}/getUsergroups | Get User&#39;s Usergroups
+[**userImpersonateV1**](ObjectUserApi.md#userImpersonateV1) | **POST** /1/object/user/{pkiUserID}/impersonate | Impersonate the user
 [**userSendPasswordResetV1**](ObjectUserApi.md#userSendPasswordResetV1) | **POST** /1/object/user/{pkiUserID}/sendPasswordReset | Send password reset
 
 
@@ -336,7 +338,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sSelector** | **String**| The type of Users to return | [default to null] [enum: AgentBrokerAssistant, AgentBrokerEmployeeEzsignUserNormal, AgentBrokerEmployeeNormalBuiltIn, AgentBrokerEzsignuserNormal, ClonableUsers, EzsignuserBuiltIn, Ezsignuser, Normal, UsergroupDelegated]
+ **sSelector** | **String**| The type of Users to return | [default to null] [enum: AgentBrokerAssistant, AgentBrokerEmployeeEzsignUserNormalWithoutEzmaxpartner, AgentBrokerEmployeeEzsignUserNormal, AgentBrokerEmployeeNormalBuiltIn, AgentBrokerEzsignuserNormal, ClonableUsers, EzsignuserBuiltIn, Ezsignuser, Normal, UsergroupDelegated]
  **eFilterActive** | **String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive]
  **sQuery** | **String**| Allow to filter the returned results | [optional] [default to null]
  **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [default to null] [enum: *, en, fr]
@@ -445,6 +447,52 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
+## userGetEzmaxcustomeruserV1
+
+> UserGetEzmaxcustomeruserV1Response userGetEzmaxcustomeruserV1(pkiUserID)
+
+Returns the Ezmaxcustomeruser for the User
+
+Returns the Ezmaxcustomeruser for the User
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectUserApi;
+
+ObjectUserApi apiInstance = new ObjectUserApi();
+Integer pkiUserID = null; // Integer | 
+try {
+    UserGetEzmaxcustomeruserV1Response result = apiInstance.userGetEzmaxcustomeruserV1(pkiUserID);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectUserApi#userGetEzmaxcustomeruserV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiUserID** | **Integer**|  | [default to null]
+
+### Return type
+
+[**UserGetEzmaxcustomeruserV1Response**](UserGetEzmaxcustomeruserV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
 ## userGetListV1
 
 > UserGetListV1Response userGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
@@ -479,7 +527,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **eOrderBy** | **String**| Specify how you want the results to be sorted | [optional] [default to null] [enum: pkiUserID_ASC, pkiUserID_DESC, sUserFirstname_ASC, sUserFirstname_DESC, sUserLastname_ASC, sUserLastname_DESC, sUserLoginname_ASC, sUserLoginname_DESC, bUserIsactive_ASC, bUserIsactive_DESC, eUserType_ASC, eUserType_DESC, eUserOrigin_ASC, eUserOrigin_DESC, eUserEzsignaccess_ASC, eUserEzsignaccess_DESC, dtUserEzsignprepaidexpiration_ASC, dtUserEzsignprepaidexpiration_DESC, sEmailAddress_ASC, sEmailAddress_DESC]
+ **eOrderBy** | **String**| Specify how you want the results to be sorted | [optional] [default to null] [enum: pkiUserID_ASC, pkiUserID_DESC, sUserFirstname_ASC, sUserFirstname_DESC, sUserLastname_ASC, sUserLastname_DESC, sUserLoginname_ASC, sUserLoginname_DESC, bUserIsactive_ASC, bUserIsactive_DESC, eUserType_ASC, eUserType_DESC, eUserOrigin_ASC, eUserOrigin_DESC, eUserEzsignaccess_ASC, eUserEzsignaccess_DESC, dtUserEzsignprepaidexpiration_ASC, dtUserEzsignprepaidexpiration_DESC, sEmailAddress_ASC, sEmailAddress_DESC, bUserSuspended_ASC, bUserSuspended_DESC]
  **iRowMax** | **Integer**|  | [optional] [default to null]
  **iRowOffset** | **Integer**|  | [optional] [default to 0]
  **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [default to null] [enum: *, en, fr]
@@ -718,6 +766,54 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## userImpersonateV1
+
+> UserImpersonateV1Response userImpersonateV1(pkiUserID, userImpersonateV1Request)
+
+Impersonate the user
+
+Using this endpoint, you can impersonate the user.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectUserApi;
+
+ObjectUserApi apiInstance = new ObjectUserApi();
+Integer pkiUserID = null; // Integer | 
+UserImpersonateV1Request userImpersonateV1Request = new UserImpersonateV1Request(); // UserImpersonateV1Request | 
+try {
+    UserImpersonateV1Response result = apiInstance.userImpersonateV1(pkiUserID, userImpersonateV1Request);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectUserApi#userImpersonateV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiUserID** | **Integer**|  | [default to null]
+ **userImpersonateV1Request** | [**UserImpersonateV1Request**](UserImpersonateV1Request.md)|  |
+
+### Return type
+
+[**UserImpersonateV1Response**](UserImpersonateV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 

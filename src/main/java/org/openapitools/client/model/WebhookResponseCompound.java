@@ -71,7 +71,7 @@ public class WebhookResponseCompound {
   /**
    * The unique ID of the Webhook
    **/
-  @ApiModelProperty(required = true, value = "The unique ID of the Webhook")
+  @ApiModelProperty(value = "The unique ID of the Webhook")
   public Integer getPkiWebhookID() {
     return pkiWebhookID;
   }
@@ -247,7 +247,7 @@ public class WebhookResponseCompound {
 
   /**
    **/
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(value = "")
   public CommonAudit getObjAudit() {
     return objAudit;
   }

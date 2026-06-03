@@ -31,9 +31,9 @@ public class RealestateboardAutocompleteElementResponse {
   private Boolean bRealestateboardIsactive = null;
 
   /**
-   * The unique ID of the Activesession
+   * The unique ID of the Realestateboard
    **/
-  @ApiModelProperty(required = true, value = "The unique ID of the Activesession")
+  @ApiModelProperty(required = true, value = "The unique ID of the Realestateboard")
   public Integer getPkiRealestateboardID() {
     return pkiRealestateboardID;
   }

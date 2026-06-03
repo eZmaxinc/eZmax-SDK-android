@@ -72,6 +72,8 @@ public class EzsignfolderResponseV3 {
   private String dtEzsignfolderScheduleddispose = null;
   @SerializedName("eEzsignfolderStep")
   private FieldEEzsignfolderStep eEzsignfolderStep = null;
+  @SerializedName("iEzsignfolderStepcurrent")
+  private Integer iEzsignfolderStepcurrent = null;
   @SerializedName("dtEzsignfolderClose")
   private String dtEzsignfolderClose = null;
   @SerializedName("dtEzsignfolderArchive")
@@ -247,11 +249,11 @@ public class EzsignfolderResponseV3 {
   }
 
   /**
-   * The number of days before the the first reminder sending
+   * The number of days before the first reminder sending
    * minimum: 0
    * maximum: 255
    **/
-  @ApiModelProperty(value = "The number of days before the the first reminder sending")
+  @ApiModelProperty(value = "The number of days before the first reminder sending")
   public Integer getIEzsignfolderSendreminderfirstdays() {
     return iEzsignfolderSendreminderfirstdays;
   }
@@ -335,6 +337,19 @@ public class EzsignfolderResponseV3 {
   }
   public void setEEzsignfolderStep(FieldEEzsignfolderStep eEzsignfolderStep) {
     this.eEzsignfolderStep = eEzsignfolderStep;
+  }
+
+  /**
+   * The current step of the ezsignfolder when eEzsignfolderCompletion = 'PerEzsignfolderStepSync'
+   * minimum: 0
+   * maximum: 255
+   **/
+  @ApiModelProperty(value = "The current step of the ezsignfolder when eEzsignfolderCompletion = 'PerEzsignfolderStepSync'")
+  public Integer getIEzsignfolderStepcurrent() {
+    return iEzsignfolderStepcurrent;
+  }
+  public void setIEzsignfolderStepcurrent(Integer iEzsignfolderStepcurrent) {
+    this.iEzsignfolderStepcurrent = iEzsignfolderStepcurrent;
   }
 
   /**
@@ -454,6 +469,7 @@ public class EzsignfolderResponseV3 {
         (this.dtEzsignfolderScheduledarchive == null ? ezsignfolderResponseV3.dtEzsignfolderScheduledarchive == null : this.dtEzsignfolderScheduledarchive.equals(ezsignfolderResponseV3.dtEzsignfolderScheduledarchive)) &&
         (this.dtEzsignfolderScheduleddispose == null ? ezsignfolderResponseV3.dtEzsignfolderScheduleddispose == null : this.dtEzsignfolderScheduleddispose.equals(ezsignfolderResponseV3.dtEzsignfolderScheduleddispose)) &&
         (this.eEzsignfolderStep == null ? ezsignfolderResponseV3.eEzsignfolderStep == null : this.eEzsignfolderStep.equals(ezsignfolderResponseV3.eEzsignfolderStep)) &&
+        (this.iEzsignfolderStepcurrent == null ? ezsignfolderResponseV3.iEzsignfolderStepcurrent == null : this.iEzsignfolderStepcurrent.equals(ezsignfolderResponseV3.iEzsignfolderStepcurrent)) &&
         (this.dtEzsignfolderClose == null ? ezsignfolderResponseV3.dtEzsignfolderClose == null : this.dtEzsignfolderClose.equals(ezsignfolderResponseV3.dtEzsignfolderClose)) &&
         (this.dtEzsignfolderArchive == null ? ezsignfolderResponseV3.dtEzsignfolderArchive == null : this.dtEzsignfolderArchive.equals(ezsignfolderResponseV3.dtEzsignfolderArchive)) &&
         (this.dtEzsignfolderDispose == null ? ezsignfolderResponseV3.dtEzsignfolderDispose == null : this.dtEzsignfolderDispose.equals(ezsignfolderResponseV3.dtEzsignfolderDispose)) &&
@@ -489,6 +505,7 @@ public class EzsignfolderResponseV3 {
     result = 31 * result + (this.dtEzsignfolderScheduledarchive == null ? 0: this.dtEzsignfolderScheduledarchive.hashCode());
     result = 31 * result + (this.dtEzsignfolderScheduleddispose == null ? 0: this.dtEzsignfolderScheduleddispose.hashCode());
     result = 31 * result + (this.eEzsignfolderStep == null ? 0: this.eEzsignfolderStep.hashCode());
+    result = 31 * result + (this.iEzsignfolderStepcurrent == null ? 0: this.iEzsignfolderStepcurrent.hashCode());
     result = 31 * result + (this.dtEzsignfolderClose == null ? 0: this.dtEzsignfolderClose.hashCode());
     result = 31 * result + (this.dtEzsignfolderArchive == null ? 0: this.dtEzsignfolderArchive.hashCode());
     result = 31 * result + (this.dtEzsignfolderDispose == null ? 0: this.dtEzsignfolderDispose.hashCode());
@@ -527,6 +544,7 @@ public class EzsignfolderResponseV3 {
     sb.append("  dtEzsignfolderScheduledarchive: ").append(dtEzsignfolderScheduledarchive).append("\n");
     sb.append("  dtEzsignfolderScheduleddispose: ").append(dtEzsignfolderScheduleddispose).append("\n");
     sb.append("  eEzsignfolderStep: ").append(eEzsignfolderStep).append("\n");
+    sb.append("  iEzsignfolderStepcurrent: ").append(iEzsignfolderStepcurrent).append("\n");
     sb.append("  dtEzsignfolderClose: ").append(dtEzsignfolderClose).append("\n");
     sb.append("  dtEzsignfolderArchive: ").append(dtEzsignfolderArchive).append("\n");
     sb.append("  dtEzsignfolderDispose: ").append(dtEzsignfolderDispose).append("\n");

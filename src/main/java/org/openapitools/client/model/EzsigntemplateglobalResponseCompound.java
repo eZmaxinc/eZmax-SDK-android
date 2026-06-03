@@ -13,6 +13,7 @@
 package org.openapitools.client.model;
 
 import java.util.*;
+import org.openapitools.client.model.EzsigntemplateglobalannotationResponseCompound;
 import org.openapitools.client.model.EzsigntemplateglobaldocumentResponse;
 import org.openapitools.client.model.EzsigntemplateglobalsignerResponseCompound;
 import org.openapitools.client.model.FieldEEzsigntemplateglobalModule;
@@ -50,6 +51,8 @@ public class EzsigntemplateglobalResponseCompound {
   private EzsigntemplateglobaldocumentResponse objEzsigntemplateglobaldocument = null;
   @SerializedName("a_objEzsigntemplateglobalsigner")
   private List<EzsigntemplateglobalsignerResponseCompound> aObjEzsigntemplateglobalsigner = null;
+  @SerializedName("a_objEzsigntemplateglobalannotation")
+  private List<EzsigntemplateglobalannotationResponseCompound> aObjEzsigntemplateglobalannotation = null;
 
   /**
    * The unique ID of the Ezsigntemplateglobal
@@ -184,6 +187,16 @@ public class EzsigntemplateglobalResponseCompound {
     this.aObjEzsigntemplateglobalsigner = aObjEzsigntemplateglobalsigner;
   }
 
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public List<EzsigntemplateglobalannotationResponseCompound> getAObjEzsigntemplateglobalannotation() {
+    return aObjEzsigntemplateglobalannotation;
+  }
+  public void setAObjEzsigntemplateglobalannotation(List<EzsigntemplateglobalannotationResponseCompound> aObjEzsigntemplateglobalannotation) {
+    this.aObjEzsigntemplateglobalannotation = aObjEzsigntemplateglobalannotation;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -205,7 +218,8 @@ public class EzsigntemplateglobalResponseCompound {
         (this.sEzsigntemplateglobalCode == null ? ezsigntemplateglobalResponseCompound.sEzsigntemplateglobalCode == null : this.sEzsigntemplateglobalCode.equals(ezsigntemplateglobalResponseCompound.sEzsigntemplateglobalCode)) &&
         (this.sEzsigntemplateglobalDescription == null ? ezsigntemplateglobalResponseCompound.sEzsigntemplateglobalDescription == null : this.sEzsigntemplateglobalDescription.equals(ezsigntemplateglobalResponseCompound.sEzsigntemplateglobalDescription)) &&
         (this.objEzsigntemplateglobaldocument == null ? ezsigntemplateglobalResponseCompound.objEzsigntemplateglobaldocument == null : this.objEzsigntemplateglobaldocument.equals(ezsigntemplateglobalResponseCompound.objEzsigntemplateglobaldocument)) &&
-        (this.aObjEzsigntemplateglobalsigner == null ? ezsigntemplateglobalResponseCompound.aObjEzsigntemplateglobalsigner == null : this.aObjEzsigntemplateglobalsigner.equals(ezsigntemplateglobalResponseCompound.aObjEzsigntemplateglobalsigner));
+        (this.aObjEzsigntemplateglobalsigner == null ? ezsigntemplateglobalResponseCompound.aObjEzsigntemplateglobalsigner == null : this.aObjEzsigntemplateglobalsigner.equals(ezsigntemplateglobalResponseCompound.aObjEzsigntemplateglobalsigner)) &&
+        (this.aObjEzsigntemplateglobalannotation == null ? ezsigntemplateglobalResponseCompound.aObjEzsigntemplateglobalannotation == null : this.aObjEzsigntemplateglobalannotation.equals(ezsigntemplateglobalResponseCompound.aObjEzsigntemplateglobalannotation));
   }
 
   @Override
@@ -223,6 +237,7 @@ public class EzsigntemplateglobalResponseCompound {
     result = 31 * result + (this.sEzsigntemplateglobalDescription == null ? 0: this.sEzsigntemplateglobalDescription.hashCode());
     result = 31 * result + (this.objEzsigntemplateglobaldocument == null ? 0: this.objEzsigntemplateglobaldocument.hashCode());
     result = 31 * result + (this.aObjEzsigntemplateglobalsigner == null ? 0: this.aObjEzsigntemplateglobalsigner.hashCode());
+    result = 31 * result + (this.aObjEzsigntemplateglobalannotation == null ? 0: this.aObjEzsigntemplateglobalannotation.hashCode());
     return result;
   }
 
@@ -243,6 +258,7 @@ public class EzsigntemplateglobalResponseCompound {
     sb.append("  sEzsigntemplateglobalDescription: ").append(sEzsigntemplateglobalDescription).append("\n");
     sb.append("  objEzsigntemplateglobaldocument: ").append(objEzsigntemplateglobaldocument).append("\n");
     sb.append("  aObjEzsigntemplateglobalsigner: ").append(aObjEzsigntemplateglobalsigner).append("\n");
+    sb.append("  aObjEzsigntemplateglobalannotation: ").append(aObjEzsigntemplateglobalannotation).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

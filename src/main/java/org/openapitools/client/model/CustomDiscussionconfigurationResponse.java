@@ -44,9 +44,9 @@ public class CustomDiscussionconfigurationResponse {
   }
 
   /**
-   * If the the creation of the Discussion is allowed or not
+   * If the creation of the Discussion is allowed or not
    **/
-  @ApiModelProperty(required = true, value = "If the the creation of the Discussion is allowed or not")
+  @ApiModelProperty(required = true, value = "If the creation of the Discussion is allowed or not")
   public Boolean getBDiscussionconfigurationCreateallowed() {
     return bDiscussionconfigurationCreateallowed;
   }
@@ -55,9 +55,9 @@ public class CustomDiscussionconfigurationResponse {
   }
 
   /**
-   * If the the destruction of the Discussion is allowed or not
+   * If the destruction of the Discussion is allowed or not
    **/
-  @ApiModelProperty(required = true, value = "If the the destruction of the Discussion is allowed or not")
+  @ApiModelProperty(required = true, value = "If the destruction of the Discussion is allowed or not")
   public Boolean getBDiscussionconfigurationDeleteallowed() {
     return bDiscussionconfigurationDeleteallowed;
   }
@@ -66,9 +66,9 @@ public class CustomDiscussionconfigurationResponse {
   }
 
   /**
-   * If the the destruction of the Discussionmessage is allowed or not
+   * If the destruction of the Discussionmessage is allowed or not
    **/
-  @ApiModelProperty(required = true, value = "If the the destruction of the Discussionmessage is allowed or not")
+  @ApiModelProperty(required = true, value = "If the destruction of the Discussionmessage is allowed or not")
   public Boolean getBDiscussionconfigurationDeletediscussionmessageallowed() {
     return bDiscussionconfigurationDeletediscussionmessageallowed;
   }
@@ -77,9 +77,9 @@ public class CustomDiscussionconfigurationResponse {
   }
 
   /**
-   * If the the creation of the Discussionmessage is allowed or not
+   * If the creation of the Discussionmessage is allowed or not
    **/
-  @ApiModelProperty(required = true, value = "If the the creation of the Discussionmessage is allowed or not")
+  @ApiModelProperty(required = true, value = "If the creation of the Discussionmessage is allowed or not")
   public Boolean getBDiscussionconfigurationEditdiscussionmessageallowed() {
     return bDiscussionconfigurationEditdiscussionmessageallowed;
   }

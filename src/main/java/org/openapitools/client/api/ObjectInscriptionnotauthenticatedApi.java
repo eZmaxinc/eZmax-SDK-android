@@ -26,10 +26,13 @@ import com.android.volley.VolleyError;
 import org.openapitools.client.model.CommonResponseError;
 import java.io.File;
 import org.openapitools.client.model.HeaderAcceptLanguage;
+import org.openapitools.client.model.InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request;
+import org.openapitools.client.model.InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Response;
 import org.openapitools.client.model.InscriptionnotauthenticatedGetCommunicationCountV1Response;
 import org.openapitools.client.model.InscriptionnotauthenticatedGetCommunicationListV1Response;
 import org.openapitools.client.model.InscriptionnotauthenticatedGetCommunicationrecipientsV1Response;
 import org.openapitools.client.model.InscriptionnotauthenticatedGetCommunicationsendersV1Response;
+import org.openapitools.client.model.InscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1Response;
 import org.openapitools.client.model.InscriptionnotauthenticatedGetListV1Response;
 import org.openapitools.client.model.InscriptionnotauthenticatedImportIntoEDMV1Request;
 import org.openapitools.client.model.InscriptionnotauthenticatedImportIntoEDMV1Response;
@@ -64,6 +67,145 @@ public class ObjectInscriptionnotauthenticatedApi {
     return basePath;
   }
 
+  /**
+  * Fills the Inscriptionnotauthenticatedcondition in the Inscriptionnotauthenticated
+  * 
+   * @param pkiInscriptionnotauthenticatedID 
+   * @param inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request 
+   * @return InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Response
+  */
+  public InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Response inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1 (Integer pkiInscriptionnotauthenticatedID, InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request;
+    // verify the required parameter 'pkiInscriptionnotauthenticatedID' is set
+    if (pkiInscriptionnotauthenticatedID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiInscriptionnotauthenticatedID' when calling inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1",
+        new ApiException(400, "Missing the required parameter 'pkiInscriptionnotauthenticatedID' when calling inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1"));
+    }
+    // verify the required parameter 'inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request' is set
+    if (inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request' when calling inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1",
+        new ApiException(400, "Missing the required parameter 'inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request' when calling inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/fillInscriptionnotauthenticatedcondition".replaceAll("\\{" + "pkiInscriptionnotauthenticatedID" + "\\}", apiInvoker.escapeString(pkiInscriptionnotauthenticatedID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Response) ApiInvoker.deserialize(localVarResponse, "", InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Fills the Inscriptionnotauthenticatedcondition in the Inscriptionnotauthenticated
+   * 
+   * @param pkiInscriptionnotauthenticatedID    * @param inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request 
+  */
+  public void inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1 (Integer pkiInscriptionnotauthenticatedID, InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request, final Response.Listener<InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request;
+
+    // verify the required parameter 'pkiInscriptionnotauthenticatedID' is set
+    if (pkiInscriptionnotauthenticatedID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiInscriptionnotauthenticatedID' when calling inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1",
+        new ApiException(400, "Missing the required parameter 'pkiInscriptionnotauthenticatedID' when calling inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1"));
+    }
+    // verify the required parameter 'inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request' is set
+    if (inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request' when calling inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1",
+        new ApiException(400, "Missing the required parameter 'inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request' when calling inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/fillInscriptionnotauthenticatedcondition".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiInscriptionnotauthenticatedID" + "\\}", apiInvoker.escapeString(pkiInscriptionnotauthenticatedID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Response) ApiInvoker.deserialize(localVarResponse,  "", InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
   /**
   * Retrieve Communication count
   * 
@@ -558,6 +700,133 @@ public class ObjectInscriptionnotauthenticatedApi {
           public void onResponse(String localVarResponse) {
             try {
               responseListener.onResponse((InscriptionnotauthenticatedGetCommunicationsendersV1Response) ApiInvoker.deserialize(localVarResponse,  "", InscriptionnotauthenticatedGetCommunicationsendersV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Retrieve Inscriptionnotauthenticated conditions
+  * 
+   * @param pkiInscriptionnotauthenticatedID 
+   * @return InscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1Response
+  */
+  public InscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1Response inscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1 (Integer pkiInscriptionnotauthenticatedID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiInscriptionnotauthenticatedID' is set
+    if (pkiInscriptionnotauthenticatedID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiInscriptionnotauthenticatedID' when calling inscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1",
+        new ApiException(400, "Missing the required parameter 'pkiInscriptionnotauthenticatedID' when calling inscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getInscriptionnotauthenticatedconditions".replaceAll("\\{" + "pkiInscriptionnotauthenticatedID" + "\\}", apiInvoker.escapeString(pkiInscriptionnotauthenticatedID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (InscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1Response) ApiInvoker.deserialize(localVarResponse, "", InscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve Inscriptionnotauthenticated conditions
+   * 
+   * @param pkiInscriptionnotauthenticatedID 
+  */
+  public void inscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1 (Integer pkiInscriptionnotauthenticatedID, final Response.Listener<InscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiInscriptionnotauthenticatedID' is set
+    if (pkiInscriptionnotauthenticatedID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiInscriptionnotauthenticatedID' when calling inscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1",
+        new ApiException(400, "Missing the required parameter 'pkiInscriptionnotauthenticatedID' when calling inscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getInscriptionnotauthenticatedconditions".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiInscriptionnotauthenticatedID" + "\\}", apiInvoker.escapeString(pkiInscriptionnotauthenticatedID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((InscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1Response) ApiInvoker.deserialize(localVarResponse,  "", InscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

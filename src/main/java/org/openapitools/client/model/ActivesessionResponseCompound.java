@@ -84,6 +84,8 @@ public class ActivesessionResponseCompound {
   private FieldEUserEzsignprepaid eUserEzsignprepaid = null;
   @SerializedName("bUserEzsigntrial")
   private Boolean bUserEzsigntrial = null;
+  @SerializedName("bUserEzsigntemplaterolegrouping")
+  private Boolean bUserEzsigntemplaterolegrouping = null;
   @SerializedName("dtUserEzsignprepaidexpiration")
   private String dtUserEzsignprepaidexpiration = null;
   @SerializedName("dtUserNpsrequest")
@@ -98,6 +100,8 @@ public class ActivesessionResponseCompound {
   private ActivesessionResponseCompoundApikey objApikey = null;
   @SerializedName("a_eModuleInternalname")
   private List<String> aEModuleInternalname = null;
+  @SerializedName("bActivesessionMaillinglistrequest")
+  private Boolean bActivesessionMaillinglistrequest = null;
 
   /**
    **/
@@ -372,6 +376,17 @@ public class ActivesessionResponseCompound {
   }
 
   /**
+   * Whether we group or not the Ezsigntemplate roles
+   **/
+  @ApiModelProperty(value = "Whether we group or not the Ezsigntemplate roles")
+  public Boolean getBUserEzsigntemplaterolegrouping() {
+    return bUserEzsigntemplaterolegrouping;
+  }
+  public void setBUserEzsigntemplaterolegrouping(Boolean bUserEzsigntemplaterolegrouping) {
+    this.bUserEzsigntemplaterolegrouping = bUserEzsigntemplaterolegrouping;
+  }
+
+  /**
    * The eZsign prepaid expiration date
    **/
   @ApiModelProperty(value = "The eZsign prepaid expiration date")
@@ -445,6 +460,17 @@ public class ActivesessionResponseCompound {
     this.aEModuleInternalname = aEModuleInternalname;
   }
 
+  /**
+   * If you need to ask which mailing lists this user wants to subscribe to
+   **/
+  @ApiModelProperty(value = "If you need to ask which mailing lists this user wants to subscribe to")
+  public Boolean getBActivesessionMaillinglistrequest() {
+    return bActivesessionMaillinglistrequest;
+  }
+  public void setBActivesessionMaillinglistrequest(Boolean bActivesessionMaillinglistrequest) {
+    this.bActivesessionMaillinglistrequest = bActivesessionMaillinglistrequest;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -480,13 +506,15 @@ public class ActivesessionResponseCompound {
         (this.eUserEzsignaccess == null ? activesessionResponseCompound.eUserEzsignaccess == null : this.eUserEzsignaccess.equals(activesessionResponseCompound.eUserEzsignaccess)) &&
         (this.eUserEzsignprepaid == null ? activesessionResponseCompound.eUserEzsignprepaid == null : this.eUserEzsignprepaid.equals(activesessionResponseCompound.eUserEzsignprepaid)) &&
         (this.bUserEzsigntrial == null ? activesessionResponseCompound.bUserEzsigntrial == null : this.bUserEzsigntrial.equals(activesessionResponseCompound.bUserEzsigntrial)) &&
+        (this.bUserEzsigntemplaterolegrouping == null ? activesessionResponseCompound.bUserEzsigntemplaterolegrouping == null : this.bUserEzsigntemplaterolegrouping.equals(activesessionResponseCompound.bUserEzsigntemplaterolegrouping)) &&
         (this.dtUserEzsignprepaidexpiration == null ? activesessionResponseCompound.dtUserEzsignprepaidexpiration == null : this.dtUserEzsignprepaidexpiration.equals(activesessionResponseCompound.dtUserEzsignprepaidexpiration)) &&
         (this.dtUserNpsrequest == null ? activesessionResponseCompound.dtUserNpsrequest == null : this.dtUserNpsrequest.equals(activesessionResponseCompound.dtUserNpsrequest)) &&
         (this.aPkiPermissionID == null ? activesessionResponseCompound.aPkiPermissionID == null : this.aPkiPermissionID.equals(activesessionResponseCompound.aPkiPermissionID)) &&
         (this.objUserReal == null ? activesessionResponseCompound.objUserReal == null : this.objUserReal.equals(activesessionResponseCompound.objUserReal)) &&
         (this.objUserCloned == null ? activesessionResponseCompound.objUserCloned == null : this.objUserCloned.equals(activesessionResponseCompound.objUserCloned)) &&
         (this.objApikey == null ? activesessionResponseCompound.objApikey == null : this.objApikey.equals(activesessionResponseCompound.objApikey)) &&
-        (this.aEModuleInternalname == null ? activesessionResponseCompound.aEModuleInternalname == null : this.aEModuleInternalname.equals(activesessionResponseCompound.aEModuleInternalname));
+        (this.aEModuleInternalname == null ? activesessionResponseCompound.aEModuleInternalname == null : this.aEModuleInternalname.equals(activesessionResponseCompound.aEModuleInternalname)) &&
+        (this.bActivesessionMaillinglistrequest == null ? activesessionResponseCompound.bActivesessionMaillinglistrequest == null : this.bActivesessionMaillinglistrequest.equals(activesessionResponseCompound.bActivesessionMaillinglistrequest));
   }
 
   @Override
@@ -517,6 +545,7 @@ public class ActivesessionResponseCompound {
     result = 31 * result + (this.eUserEzsignaccess == null ? 0: this.eUserEzsignaccess.hashCode());
     result = 31 * result + (this.eUserEzsignprepaid == null ? 0: this.eUserEzsignprepaid.hashCode());
     result = 31 * result + (this.bUserEzsigntrial == null ? 0: this.bUserEzsigntrial.hashCode());
+    result = 31 * result + (this.bUserEzsigntemplaterolegrouping == null ? 0: this.bUserEzsigntemplaterolegrouping.hashCode());
     result = 31 * result + (this.dtUserEzsignprepaidexpiration == null ? 0: this.dtUserEzsignprepaidexpiration.hashCode());
     result = 31 * result + (this.dtUserNpsrequest == null ? 0: this.dtUserNpsrequest.hashCode());
     result = 31 * result + (this.aPkiPermissionID == null ? 0: this.aPkiPermissionID.hashCode());
@@ -524,6 +553,7 @@ public class ActivesessionResponseCompound {
     result = 31 * result + (this.objUserCloned == null ? 0: this.objUserCloned.hashCode());
     result = 31 * result + (this.objApikey == null ? 0: this.objApikey.hashCode());
     result = 31 * result + (this.aEModuleInternalname == null ? 0: this.aEModuleInternalname.hashCode());
+    result = 31 * result + (this.bActivesessionMaillinglistrequest == null ? 0: this.bActivesessionMaillinglistrequest.hashCode());
     return result;
   }
 
@@ -557,6 +587,7 @@ public class ActivesessionResponseCompound {
     sb.append("  eUserEzsignaccess: ").append(eUserEzsignaccess).append("\n");
     sb.append("  eUserEzsignprepaid: ").append(eUserEzsignprepaid).append("\n");
     sb.append("  bUserEzsigntrial: ").append(bUserEzsigntrial).append("\n");
+    sb.append("  bUserEzsigntemplaterolegrouping: ").append(bUserEzsigntemplaterolegrouping).append("\n");
     sb.append("  dtUserEzsignprepaidexpiration: ").append(dtUserEzsignprepaidexpiration).append("\n");
     sb.append("  dtUserNpsrequest: ").append(dtUserNpsrequest).append("\n");
     sb.append("  aPkiPermissionID: ").append(aPkiPermissionID).append("\n");
@@ -564,6 +595,7 @@ public class ActivesessionResponseCompound {
     sb.append("  objUserCloned: ").append(objUserCloned).append("\n");
     sb.append("  objApikey: ").append(objApikey).append("\n");
     sb.append("  aEModuleInternalname: ").append(aEModuleInternalname).append("\n");
+    sb.append("  bActivesessionMaillinglistrequest: ").append(bActivesessionMaillinglistrequest).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

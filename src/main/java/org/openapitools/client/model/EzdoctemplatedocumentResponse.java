@@ -105,7 +105,7 @@ public class EzdoctemplatedocumentResponse {
    * minimum: 0
    * maximum: 255
    **/
-  @ApiModelProperty(required = true, value = "The unique ID of the Ezdoctemplatefieldtypecategory")
+  @ApiModelProperty(value = "The unique ID of the Ezdoctemplatefieldtypecategory")
   public Integer getFkiEzdoctemplatefieldtypecategoryID() {
     return fkiEzdoctemplatefieldtypecategoryID;
   }
@@ -169,7 +169,7 @@ public class EzdoctemplatedocumentResponse {
   /**
    * The description of the Ezdoctemplatefieldtypecategory in the language of the requester
    **/
-  @ApiModelProperty(required = true, value = "The description of the Ezdoctemplatefieldtypecategory in the language of the requester")
+  @ApiModelProperty(value = "The description of the Ezdoctemplatefieldtypecategory in the language of the requester")
   public String getSEzdoctemplatefieldtypecategoryDescriptionX() {
     return sEzdoctemplatefieldtypecategoryDescriptionX;
   }

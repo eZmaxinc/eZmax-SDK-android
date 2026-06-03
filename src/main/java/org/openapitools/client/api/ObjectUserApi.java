@@ -40,12 +40,15 @@ import org.openapitools.client.model.UserGetApikeysV1Response;
 import org.openapitools.client.model.UserGetAutocompleteV2Response;
 import org.openapitools.client.model.UserGetColleaguesV2Response;
 import org.openapitools.client.model.UserGetEffectivePermissionsV1Response;
+import org.openapitools.client.model.UserGetEzmaxcustomeruserV1Response;
 import org.openapitools.client.model.UserGetListV1Response;
 import org.openapitools.client.model.UserGetObjectV2Response;
 import org.openapitools.client.model.UserGetPermissionsV1Response;
 import org.openapitools.client.model.UserGetSubnetsV1Response;
 import org.openapitools.client.model.UserGetUsergroupexternalsV1Response;
 import org.openapitools.client.model.UserGetUsergroupsV1Response;
+import org.openapitools.client.model.UserImpersonateV1Request;
+import org.openapitools.client.model.UserImpersonateV1Response;
 import org.openapitools.client.model.UserSendPasswordResetV1Response;
 
 import org.apache.http.HttpEntity;
@@ -1269,6 +1272,133 @@ public class ObjectUserApi {
     }
   }
   /**
+  * Returns the Ezmaxcustomeruser for the User
+  * Returns the Ezmaxcustomeruser for the User
+   * @param pkiUserID 
+   * @return UserGetEzmaxcustomeruserV1Response
+  */
+  public UserGetEzmaxcustomeruserV1Response userGetEzmaxcustomeruserV1 (Integer pkiUserID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiUserID' is set
+    if (pkiUserID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiUserID' when calling userGetEzmaxcustomeruserV1",
+        new ApiException(400, "Missing the required parameter 'pkiUserID' when calling userGetEzmaxcustomeruserV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/user/{pkiUserID}/getEzmaxcustomeruser".replaceAll("\\{" + "pkiUserID" + "\\}", apiInvoker.escapeString(pkiUserID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (UserGetEzmaxcustomeruserV1Response) ApiInvoker.deserialize(localVarResponse, "", UserGetEzmaxcustomeruserV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Returns the Ezmaxcustomeruser for the User
+   * Returns the Ezmaxcustomeruser for the User
+   * @param pkiUserID 
+  */
+  public void userGetEzmaxcustomeruserV1 (Integer pkiUserID, final Response.Listener<UserGetEzmaxcustomeruserV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiUserID' is set
+    if (pkiUserID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiUserID' when calling userGetEzmaxcustomeruserV1",
+        new ApiException(400, "Missing the required parameter 'pkiUserID' when calling userGetEzmaxcustomeruserV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/user/{pkiUserID}/getEzmaxcustomeruser".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiUserID" + "\\}", apiInvoker.escapeString(pkiUserID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((UserGetEzmaxcustomeruserV1Response) ApiInvoker.deserialize(localVarResponse,  "", UserGetEzmaxcustomeruserV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
   * Retrieve User list
   * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eUserType | AgentBroker&lt;br&gt;Assistant&lt;br&gt;Employee&lt;br&gt;EzsignUser&lt;br&gt;Normal | | eUserOrigin | BuiltIn&lt;br&gt;External | | eUserEzsignaccess | No&lt;br&gt;PaidByOffice&lt;br&gt;PerDocument&lt;br&gt;Prepaid |
    * @param eOrderBy Specify how you want the results to be sorted
@@ -2020,6 +2150,145 @@ public class ObjectUserApi {
           public void onResponse(String localVarResponse) {
             try {
               responseListener.onResponse((UserGetUsergroupsV1Response) ApiInvoker.deserialize(localVarResponse,  "", UserGetUsergroupsV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Impersonate the user
+  * Using this endpoint, you can impersonate the user.
+   * @param pkiUserID 
+   * @param userImpersonateV1Request 
+   * @return UserImpersonateV1Response
+  */
+  public UserImpersonateV1Response userImpersonateV1 (Integer pkiUserID, UserImpersonateV1Request userImpersonateV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = userImpersonateV1Request;
+    // verify the required parameter 'pkiUserID' is set
+    if (pkiUserID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiUserID' when calling userImpersonateV1",
+        new ApiException(400, "Missing the required parameter 'pkiUserID' when calling userImpersonateV1"));
+    }
+    // verify the required parameter 'userImpersonateV1Request' is set
+    if (userImpersonateV1Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'userImpersonateV1Request' when calling userImpersonateV1",
+        new ApiException(400, "Missing the required parameter 'userImpersonateV1Request' when calling userImpersonateV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/user/{pkiUserID}/impersonate".replaceAll("\\{" + "pkiUserID" + "\\}", apiInvoker.escapeString(pkiUserID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (UserImpersonateV1Response) ApiInvoker.deserialize(localVarResponse, "", UserImpersonateV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Impersonate the user
+   * Using this endpoint, you can impersonate the user.
+   * @param pkiUserID    * @param userImpersonateV1Request 
+  */
+  public void userImpersonateV1 (Integer pkiUserID, UserImpersonateV1Request userImpersonateV1Request, final Response.Listener<UserImpersonateV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = userImpersonateV1Request;
+
+    // verify the required parameter 'pkiUserID' is set
+    if (pkiUserID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiUserID' when calling userImpersonateV1",
+        new ApiException(400, "Missing the required parameter 'pkiUserID' when calling userImpersonateV1"));
+    }
+    // verify the required parameter 'userImpersonateV1Request' is set
+    if (userImpersonateV1Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'userImpersonateV1Request' when calling userImpersonateV1",
+        new ApiException(400, "Missing the required parameter 'userImpersonateV1Request' when calling userImpersonateV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/user/{pkiUserID}/impersonate".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiUserID" + "\\}", apiInvoker.escapeString(pkiUserID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((UserImpersonateV1Response) ApiInvoker.deserialize(localVarResponse,  "", UserImpersonateV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

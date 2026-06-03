@@ -58,7 +58,7 @@ public class CreditcardmerchantListElement {
    * minimum: 0
    * maximum: 255
    **/
-  @ApiModelProperty(required = true, value = "The unique ID of the Bankaccount")
+  @ApiModelProperty(value = "The unique ID of the Bankaccount")
   public Integer getFkiBankaccountID() {
     return fkiBankaccountID;
   }

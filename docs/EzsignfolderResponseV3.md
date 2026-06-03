@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 **sEzsignfolderDescription** | **String** | The description of the Ezsignfolder | 
 **tEzsignfolderNote** | **String** | Note about the Ezsignfolder |  [optional]
 **bEzsignfolderIsdisposable** | **Boolean** | If the Ezsigndocument can be disposed |  [optional]
-**iEzsignfolderSendreminderfirstdays** | **Integer** | The number of days before the the first reminder sending |  [optional]
+**iEzsignfolderSendreminderfirstdays** | **Integer** | The number of days before the first reminder sending |  [optional]
 **iEzsignfolderSendreminderotherdays** | **Integer** | The number of days after the first reminder sending |  [optional]
 **dtEzsignfolderDelayedsenddate** | **String** | The date and time at which the Ezsignfolder will be sent in the future. |  [optional]
 **dtEzsignfolderDuedate** | **String** | The maximum date and time at which the Ezsignfolder can be signed. |  [optional]
@@ -28,6 +28,7 @@ Name | Type | Description | Notes
 **dtEzsignfolderScheduledarchive** | **String** | The scheduled date and time at which the Ezsignfolder should be archived. |  [optional]
 **dtEzsignfolderScheduleddispose** | **String** | The scheduled date at which the Ezsignfolder should be Disposed. |  [optional]
 **eEzsignfolderStep** | [**FieldEEzsignfolderStep**](FieldEEzsignfolderStep.md) |  |  [optional]
+**iEzsignfolderStepcurrent** | **Integer** | The current step of the ezsignfolder when eEzsignfolderCompletion &#x3D; &#39;PerEzsignfolderStepSync&#39; |  [optional]
 **dtEzsignfolderClose** | **String** | The date and time at which the Ezsignfolder was closed. Either by applying the last signature or by completing it prematurely. |  [optional]
 **dtEzsignfolderArchive** | **String** | The date and time at which the Ezsignfolder was archived. |  [optional]
 **dtEzsignfolderDispose** | **String** | The date and time at which the Ezsignfolder was disposed. |  [optional]

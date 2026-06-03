@@ -15,6 +15,7 @@ package org.openapitools.client.model;
 import org.openapitools.client.model.FieldEEzsigntemplateannotationHorizontalalignment;
 import org.openapitools.client.model.FieldEEzsigntemplateannotationType;
 import org.openapitools.client.model.FieldEEzsigntemplateannotationVerticalalignment;
+import org.openapitools.client.model.TextstylestaticRequestCompound;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -26,10 +27,10 @@ public class EzsigntemplateannotationResponse {
   
   @SerializedName("pkiEzsigntemplateannotationID")
   private Integer pkiEzsigntemplateannotationID = null;
-  @SerializedName("fkiEzsigntemplatedocumentpageID")
-  private Integer fkiEzsigntemplatedocumentpageID = null;
   @SerializedName("fkiTextstylestaticID")
   private Integer fkiTextstylestaticID = null;
+  @SerializedName("objTextstylestatic")
+  private TextstylestaticRequestCompound objTextstylestatic = null;
   @SerializedName("eEzsigntemplateannotationHorizontalalignment")
   private FieldEEzsigntemplateannotationHorizontalalignment eEzsigntemplateannotationHorizontalalignment = null;
   @SerializedName("eEzsigntemplateannotationVerticalalignment")
@@ -44,12 +45,14 @@ public class EzsigntemplateannotationResponse {
   private Integer iEzsigntemplateannotationWidth = null;
   @SerializedName("iEzsigntemplateannotationHeight")
   private Integer iEzsigntemplateannotationHeight = null;
+  @SerializedName("iEzsigntemplatedocumentpagePagenumber")
+  private Integer iEzsigntemplatedocumentpagePagenumber = null;
   @SerializedName("sEzsigntemplateannotationDescription")
   private String sEzsigntemplateannotationDescription = null;
   @SerializedName("sEzsigntemplateannotationDefaulttext")
   private String sEzsigntemplateannotationDefaulttext = null;
-  @SerializedName("sEzsigntemplateannotationnDropdownvalues")
-  private String sEzsigntemplateannotationnDropdownvalues = null;
+  @SerializedName("sEzsigntemplateannotationDropdownvalues")
+  private String sEzsigntemplateannotationDropdownvalues = null;
 
   /**
    * The unique ID of the Ezsigntemplateannotation
@@ -65,27 +68,25 @@ public class EzsigntemplateannotationResponse {
   }
 
   /**
-   * The unique ID of the Ezsigntemplatedocumentpage
-   * minimum: 0
-   **/
-  @ApiModelProperty(required = true, value = "The unique ID of the Ezsigntemplatedocumentpage")
-  public Integer getFkiEzsigntemplatedocumentpageID() {
-    return fkiEzsigntemplatedocumentpageID;
-  }
-  public void setFkiEzsigntemplatedocumentpageID(Integer fkiEzsigntemplatedocumentpageID) {
-    this.fkiEzsigntemplatedocumentpageID = fkiEzsigntemplatedocumentpageID;
-  }
-
-  /**
    * The unique ID of the Textstylestatic
    * minimum: 0
    **/
-  @ApiModelProperty(required = true, value = "The unique ID of the Textstylestatic")
+  @ApiModelProperty(value = "The unique ID of the Textstylestatic")
   public Integer getFkiTextstylestaticID() {
     return fkiTextstylestaticID;
   }
   public void setFkiTextstylestaticID(Integer fkiTextstylestaticID) {
     this.fkiTextstylestaticID = fkiTextstylestaticID;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public TextstylestaticRequestCompound getObjTextstylestatic() {
+    return objTextstylestatic;
+  }
+  public void setObjTextstylestatic(TextstylestaticRequestCompound objTextstylestatic) {
+    this.objTextstylestatic = objTextstylestatic;
   }
 
   /**
@@ -171,6 +172,18 @@ public class EzsigntemplateannotationResponse {
   }
 
   /**
+   * The page number in the Ezsigntemplatedocument
+   * minimum: 1
+   **/
+  @ApiModelProperty(required = true, value = "The page number in the Ezsigntemplatedocument")
+  public Integer getIEzsigntemplatedocumentpagePagenumber() {
+    return iEzsigntemplatedocumentpagePagenumber;
+  }
+  public void setIEzsigntemplatedocumentpagePagenumber(Integer iEzsigntemplatedocumentpagePagenumber) {
+    this.iEzsigntemplatedocumentpagePagenumber = iEzsigntemplatedocumentpagePagenumber;
+  }
+
+  /**
    * The description of the Ezsigntemplateannotation
    **/
   @ApiModelProperty(required = true, value = "The description of the Ezsigntemplateannotation")
@@ -196,11 +209,11 @@ public class EzsigntemplateannotationResponse {
    * The ndropdownvalues of the Ezsigntemplateannotation
    **/
   @ApiModelProperty(required = true, value = "The ndropdownvalues of the Ezsigntemplateannotation")
-  public String getSEzsigntemplateannotationnDropdownvalues() {
-    return sEzsigntemplateannotationnDropdownvalues;
+  public String getSEzsigntemplateannotationDropdownvalues() {
+    return sEzsigntemplateannotationDropdownvalues;
   }
-  public void setSEzsigntemplateannotationnDropdownvalues(String sEzsigntemplateannotationnDropdownvalues) {
-    this.sEzsigntemplateannotationnDropdownvalues = sEzsigntemplateannotationnDropdownvalues;
+  public void setSEzsigntemplateannotationDropdownvalues(String sEzsigntemplateannotationDropdownvalues) {
+    this.sEzsigntemplateannotationDropdownvalues = sEzsigntemplateannotationDropdownvalues;
   }
 
 
@@ -214,8 +227,8 @@ public class EzsigntemplateannotationResponse {
     }
     EzsigntemplateannotationResponse ezsigntemplateannotationResponse = (EzsigntemplateannotationResponse) o;
     return (this.pkiEzsigntemplateannotationID == null ? ezsigntemplateannotationResponse.pkiEzsigntemplateannotationID == null : this.pkiEzsigntemplateannotationID.equals(ezsigntemplateannotationResponse.pkiEzsigntemplateannotationID)) &&
-        (this.fkiEzsigntemplatedocumentpageID == null ? ezsigntemplateannotationResponse.fkiEzsigntemplatedocumentpageID == null : this.fkiEzsigntemplatedocumentpageID.equals(ezsigntemplateannotationResponse.fkiEzsigntemplatedocumentpageID)) &&
         (this.fkiTextstylestaticID == null ? ezsigntemplateannotationResponse.fkiTextstylestaticID == null : this.fkiTextstylestaticID.equals(ezsigntemplateannotationResponse.fkiTextstylestaticID)) &&
+        (this.objTextstylestatic == null ? ezsigntemplateannotationResponse.objTextstylestatic == null : this.objTextstylestatic.equals(ezsigntemplateannotationResponse.objTextstylestatic)) &&
         (this.eEzsigntemplateannotationHorizontalalignment == null ? ezsigntemplateannotationResponse.eEzsigntemplateannotationHorizontalalignment == null : this.eEzsigntemplateannotationHorizontalalignment.equals(ezsigntemplateannotationResponse.eEzsigntemplateannotationHorizontalalignment)) &&
         (this.eEzsigntemplateannotationVerticalalignment == null ? ezsigntemplateannotationResponse.eEzsigntemplateannotationVerticalalignment == null : this.eEzsigntemplateannotationVerticalalignment.equals(ezsigntemplateannotationResponse.eEzsigntemplateannotationVerticalalignment)) &&
         (this.eEzsigntemplateannotationType == null ? ezsigntemplateannotationResponse.eEzsigntemplateannotationType == null : this.eEzsigntemplateannotationType.equals(ezsigntemplateannotationResponse.eEzsigntemplateannotationType)) &&
@@ -223,17 +236,18 @@ public class EzsigntemplateannotationResponse {
         (this.iEzsigntemplateannotationY == null ? ezsigntemplateannotationResponse.iEzsigntemplateannotationY == null : this.iEzsigntemplateannotationY.equals(ezsigntemplateannotationResponse.iEzsigntemplateannotationY)) &&
         (this.iEzsigntemplateannotationWidth == null ? ezsigntemplateannotationResponse.iEzsigntemplateannotationWidth == null : this.iEzsigntemplateannotationWidth.equals(ezsigntemplateannotationResponse.iEzsigntemplateannotationWidth)) &&
         (this.iEzsigntemplateannotationHeight == null ? ezsigntemplateannotationResponse.iEzsigntemplateannotationHeight == null : this.iEzsigntemplateannotationHeight.equals(ezsigntemplateannotationResponse.iEzsigntemplateannotationHeight)) &&
+        (this.iEzsigntemplatedocumentpagePagenumber == null ? ezsigntemplateannotationResponse.iEzsigntemplatedocumentpagePagenumber == null : this.iEzsigntemplatedocumentpagePagenumber.equals(ezsigntemplateannotationResponse.iEzsigntemplatedocumentpagePagenumber)) &&
         (this.sEzsigntemplateannotationDescription == null ? ezsigntemplateannotationResponse.sEzsigntemplateannotationDescription == null : this.sEzsigntemplateannotationDescription.equals(ezsigntemplateannotationResponse.sEzsigntemplateannotationDescription)) &&
         (this.sEzsigntemplateannotationDefaulttext == null ? ezsigntemplateannotationResponse.sEzsigntemplateannotationDefaulttext == null : this.sEzsigntemplateannotationDefaulttext.equals(ezsigntemplateannotationResponse.sEzsigntemplateannotationDefaulttext)) &&
-        (this.sEzsigntemplateannotationnDropdownvalues == null ? ezsigntemplateannotationResponse.sEzsigntemplateannotationnDropdownvalues == null : this.sEzsigntemplateannotationnDropdownvalues.equals(ezsigntemplateannotationResponse.sEzsigntemplateannotationnDropdownvalues));
+        (this.sEzsigntemplateannotationDropdownvalues == null ? ezsigntemplateannotationResponse.sEzsigntemplateannotationDropdownvalues == null : this.sEzsigntemplateannotationDropdownvalues.equals(ezsigntemplateannotationResponse.sEzsigntemplateannotationDropdownvalues));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
     result = 31 * result + (this.pkiEzsigntemplateannotationID == null ? 0: this.pkiEzsigntemplateannotationID.hashCode());
-    result = 31 * result + (this.fkiEzsigntemplatedocumentpageID == null ? 0: this.fkiEzsigntemplatedocumentpageID.hashCode());
     result = 31 * result + (this.fkiTextstylestaticID == null ? 0: this.fkiTextstylestaticID.hashCode());
+    result = 31 * result + (this.objTextstylestatic == null ? 0: this.objTextstylestatic.hashCode());
     result = 31 * result + (this.eEzsigntemplateannotationHorizontalalignment == null ? 0: this.eEzsigntemplateannotationHorizontalalignment.hashCode());
     result = 31 * result + (this.eEzsigntemplateannotationVerticalalignment == null ? 0: this.eEzsigntemplateannotationVerticalalignment.hashCode());
     result = 31 * result + (this.eEzsigntemplateannotationType == null ? 0: this.eEzsigntemplateannotationType.hashCode());
@@ -241,9 +255,10 @@ public class EzsigntemplateannotationResponse {
     result = 31 * result + (this.iEzsigntemplateannotationY == null ? 0: this.iEzsigntemplateannotationY.hashCode());
     result = 31 * result + (this.iEzsigntemplateannotationWidth == null ? 0: this.iEzsigntemplateannotationWidth.hashCode());
     result = 31 * result + (this.iEzsigntemplateannotationHeight == null ? 0: this.iEzsigntemplateannotationHeight.hashCode());
+    result = 31 * result + (this.iEzsigntemplatedocumentpagePagenumber == null ? 0: this.iEzsigntemplatedocumentpagePagenumber.hashCode());
     result = 31 * result + (this.sEzsigntemplateannotationDescription == null ? 0: this.sEzsigntemplateannotationDescription.hashCode());
     result = 31 * result + (this.sEzsigntemplateannotationDefaulttext == null ? 0: this.sEzsigntemplateannotationDefaulttext.hashCode());
-    result = 31 * result + (this.sEzsigntemplateannotationnDropdownvalues == null ? 0: this.sEzsigntemplateannotationnDropdownvalues.hashCode());
+    result = 31 * result + (this.sEzsigntemplateannotationDropdownvalues == null ? 0: this.sEzsigntemplateannotationDropdownvalues.hashCode());
     return result;
   }
 
@@ -253,8 +268,8 @@ public class EzsigntemplateannotationResponse {
     sb.append("class EzsigntemplateannotationResponse {\n");
     
     sb.append("  pkiEzsigntemplateannotationID: ").append(pkiEzsigntemplateannotationID).append("\n");
-    sb.append("  fkiEzsigntemplatedocumentpageID: ").append(fkiEzsigntemplatedocumentpageID).append("\n");
     sb.append("  fkiTextstylestaticID: ").append(fkiTextstylestaticID).append("\n");
+    sb.append("  objTextstylestatic: ").append(objTextstylestatic).append("\n");
     sb.append("  eEzsigntemplateannotationHorizontalalignment: ").append(eEzsigntemplateannotationHorizontalalignment).append("\n");
     sb.append("  eEzsigntemplateannotationVerticalalignment: ").append(eEzsigntemplateannotationVerticalalignment).append("\n");
     sb.append("  eEzsigntemplateannotationType: ").append(eEzsigntemplateannotationType).append("\n");
@@ -262,9 +277,10 @@ public class EzsigntemplateannotationResponse {
     sb.append("  iEzsigntemplateannotationY: ").append(iEzsigntemplateannotationY).append("\n");
     sb.append("  iEzsigntemplateannotationWidth: ").append(iEzsigntemplateannotationWidth).append("\n");
     sb.append("  iEzsigntemplateannotationHeight: ").append(iEzsigntemplateannotationHeight).append("\n");
+    sb.append("  iEzsigntemplatedocumentpagePagenumber: ").append(iEzsigntemplatedocumentpagePagenumber).append("\n");
     sb.append("  sEzsigntemplateannotationDescription: ").append(sEzsigntemplateannotationDescription).append("\n");
     sb.append("  sEzsigntemplateannotationDefaulttext: ").append(sEzsigntemplateannotationDefaulttext).append("\n");
-    sb.append("  sEzsigntemplateannotationnDropdownvalues: ").append(sEzsigntemplateannotationnDropdownvalues).append("\n");
+    sb.append("  sEzsigntemplateannotationDropdownvalues: ").append(sEzsigntemplateannotationDropdownvalues).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

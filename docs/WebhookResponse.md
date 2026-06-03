@@ -6,7 +6,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**pkiWebhookID** | **Integer** | The unique ID of the Webhook | 
+**pkiWebhookID** | **Integer** | The unique ID of the Webhook |  [optional]
 **fkiAuthenticationexternalID** | **Integer** | The unique ID of the Authenticationexternal |  [optional]
 **sWebhookDescription** | **String** | The description of the Webhook | 
 **fkiEzsignfoldertypeID** | **Integer** | The unique ID of the Ezsignfoldertype. |  [optional]
@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 **bWebhookIssigned** | **Boolean** | Whether the requests will be signed or not | 
 **bWebhookSkipsslvalidation** | **Boolean** | Wheter the server&#39;s SSL certificate should be validated or not. Not recommended to skip for production use | 
 **sAuthenticationexternalDescription** | **String** | The description of the Authenticationexternal |  [optional]
-**objAudit** | [**CommonAudit**](CommonAudit.md) |  | 
+**objAudit** | [**CommonAudit**](CommonAudit.md) |  |  [optional]
 
 
 

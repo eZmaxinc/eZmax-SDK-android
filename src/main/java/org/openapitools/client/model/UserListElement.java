@@ -34,6 +34,8 @@ public class UserListElement {
   private String sUserLoginname = null;
   @SerializedName("bUserIsactive")
   private Boolean bUserIsactive = null;
+  @SerializedName("bUserSuspended")
+  private Boolean bUserSuspended = null;
   @SerializedName("eUserType")
   private FieldEUserType eUserType = null;
   @SerializedName("eUserOrigin")
@@ -101,6 +103,17 @@ public class UserListElement {
   }
   public void setBUserIsactive(Boolean bUserIsactive) {
     this.bUserIsactive = bUserIsactive;
+  }
+
+  /**
+   * Whether the User is suspended or not
+   **/
+  @ApiModelProperty(value = "Whether the User is suspended or not")
+  public Boolean getBUserSuspended() {
+    return bUserSuspended;
+  }
+  public void setBUserSuspended(Boolean bUserSuspended) {
+    this.bUserSuspended = bUserSuspended;
   }
 
   /**
@@ -181,6 +194,7 @@ public class UserListElement {
         (this.sUserLastname == null ? userListElement.sUserLastname == null : this.sUserLastname.equals(userListElement.sUserLastname)) &&
         (this.sUserLoginname == null ? userListElement.sUserLoginname == null : this.sUserLoginname.equals(userListElement.sUserLoginname)) &&
         (this.bUserIsactive == null ? userListElement.bUserIsactive == null : this.bUserIsactive.equals(userListElement.bUserIsactive)) &&
+        (this.bUserSuspended == null ? userListElement.bUserSuspended == null : this.bUserSuspended.equals(userListElement.bUserSuspended)) &&
         (this.eUserType == null ? userListElement.eUserType == null : this.eUserType.equals(userListElement.eUserType)) &&
         (this.eUserOrigin == null ? userListElement.eUserOrigin == null : this.eUserOrigin.equals(userListElement.eUserOrigin)) &&
         (this.eUserEzsignaccess == null ? userListElement.eUserEzsignaccess == null : this.eUserEzsignaccess.equals(userListElement.eUserEzsignaccess)) &&
@@ -197,6 +211,7 @@ public class UserListElement {
     result = 31 * result + (this.sUserLastname == null ? 0: this.sUserLastname.hashCode());
     result = 31 * result + (this.sUserLoginname == null ? 0: this.sUserLoginname.hashCode());
     result = 31 * result + (this.bUserIsactive == null ? 0: this.bUserIsactive.hashCode());
+    result = 31 * result + (this.bUserSuspended == null ? 0: this.bUserSuspended.hashCode());
     result = 31 * result + (this.eUserType == null ? 0: this.eUserType.hashCode());
     result = 31 * result + (this.eUserOrigin == null ? 0: this.eUserOrigin.hashCode());
     result = 31 * result + (this.eUserEzsignaccess == null ? 0: this.eUserEzsignaccess.hashCode());
@@ -216,6 +231,7 @@ public class UserListElement {
     sb.append("  sUserLastname: ").append(sUserLastname).append("\n");
     sb.append("  sUserLoginname: ").append(sUserLoginname).append("\n");
     sb.append("  bUserIsactive: ").append(bUserIsactive).append("\n");
+    sb.append("  bUserSuspended: ").append(bUserSuspended).append("\n");
     sb.append("  eUserType: ").append(eUserType).append("\n");
     sb.append("  eUserOrigin: ").append(eUserOrigin).append("\n");
     sb.append("  eUserEzsignaccess: ").append(eUserEzsignaccess).append("\n");

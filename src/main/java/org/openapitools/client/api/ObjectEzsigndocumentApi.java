@@ -30,8 +30,12 @@ import org.openapitools.client.model.EzsigndocumentApplyEzsigntemplateV1Request;
 import org.openapitools.client.model.EzsigndocumentApplyEzsigntemplateV1Response;
 import org.openapitools.client.model.EzsigndocumentApplyEzsigntemplateV2Request;
 import org.openapitools.client.model.EzsigndocumentApplyEzsigntemplateV2Response;
+import org.openapitools.client.model.EzsigndocumentApplyEzsigntemplateV3Request;
+import org.openapitools.client.model.EzsigndocumentApplyEzsigntemplateV3Response;
 import org.openapitools.client.model.EzsigndocumentApplyEzsigntemplateglobalV1Request;
 import org.openapitools.client.model.EzsigndocumentApplyEzsigntemplateglobalV1Response;
+import org.openapitools.client.model.EzsigndocumentApplyEzsigntemplateglobalV2Request;
+import org.openapitools.client.model.EzsigndocumentApplyEzsigntemplateglobalV2Response;
 import org.openapitools.client.model.EzsigndocumentCreateEzsignelementsPositionedByWordV1Request;
 import org.openapitools.client.model.EzsigndocumentCreateEzsignelementsPositionedByWordV1Response;
 import org.openapitools.client.model.EzsigndocumentCreateEzsignelementsPositionedByWordV2Request;
@@ -401,6 +405,145 @@ public class ObjectEzsigndocumentApi {
     }
   }
   /**
+  * Apply an Ezsigntemplate to the Ezsigndocument
+  * This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+   * @param pkiEzsigndocumentID 
+   * @param ezsigndocumentApplyEzsigntemplateV3Request 
+   * @return EzsigndocumentApplyEzsigntemplateV3Response
+  */
+  public EzsigndocumentApplyEzsigntemplateV3Response ezsigndocumentApplyEzsigntemplateV3 (Integer pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV3Request ezsigndocumentApplyEzsigntemplateV3Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = ezsigndocumentApplyEzsigntemplateV3Request;
+    // verify the required parameter 'pkiEzsigndocumentID' is set
+    if (pkiEzsigndocumentID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsigndocumentID' when calling ezsigndocumentApplyEzsigntemplateV3",
+        new ApiException(400, "Missing the required parameter 'pkiEzsigndocumentID' when calling ezsigndocumentApplyEzsigntemplateV3"));
+    }
+    // verify the required parameter 'ezsigndocumentApplyEzsigntemplateV3Request' is set
+    if (ezsigndocumentApplyEzsigntemplateV3Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'ezsigndocumentApplyEzsigntemplateV3Request' when calling ezsigndocumentApplyEzsigntemplateV3",
+        new ApiException(400, "Missing the required parameter 'ezsigndocumentApplyEzsigntemplateV3Request' when calling ezsigndocumentApplyEzsigntemplateV3"));
+    }
+
+    // create path and map variables
+    String path = "/3/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplate".replaceAll("\\{" + "pkiEzsigndocumentID" + "\\}", apiInvoker.escapeString(pkiEzsigndocumentID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (EzsigndocumentApplyEzsigntemplateV3Response) ApiInvoker.deserialize(localVarResponse, "", EzsigndocumentApplyEzsigntemplateV3Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Apply an Ezsigntemplate to the Ezsigndocument
+   * This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+   * @param pkiEzsigndocumentID    * @param ezsigndocumentApplyEzsigntemplateV3Request 
+  */
+  public void ezsigndocumentApplyEzsigntemplateV3 (Integer pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV3Request ezsigndocumentApplyEzsigntemplateV3Request, final Response.Listener<EzsigndocumentApplyEzsigntemplateV3Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = ezsigndocumentApplyEzsigntemplateV3Request;
+
+    // verify the required parameter 'pkiEzsigndocumentID' is set
+    if (pkiEzsigndocumentID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsigndocumentID' when calling ezsigndocumentApplyEzsigntemplateV3",
+        new ApiException(400, "Missing the required parameter 'pkiEzsigndocumentID' when calling ezsigndocumentApplyEzsigntemplateV3"));
+    }
+    // verify the required parameter 'ezsigndocumentApplyEzsigntemplateV3Request' is set
+    if (ezsigndocumentApplyEzsigntemplateV3Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'ezsigndocumentApplyEzsigntemplateV3Request' when calling ezsigndocumentApplyEzsigntemplateV3",
+        new ApiException(400, "Missing the required parameter 'ezsigndocumentApplyEzsigntemplateV3Request' when calling ezsigndocumentApplyEzsigntemplateV3"));
+    }
+
+    // create path and map variables
+    String path = "/3/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplate".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiEzsigndocumentID" + "\\}", apiInvoker.escapeString(pkiEzsigndocumentID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((EzsigndocumentApplyEzsigntemplateV3Response) ApiInvoker.deserialize(localVarResponse,  "", EzsigndocumentApplyEzsigntemplateV3Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
   * Apply an Ezsigntemplateglobal to the Ezsigndocument
   * This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
    * @param pkiEzsigndocumentID 
@@ -525,6 +668,145 @@ public class ObjectEzsigndocumentApi {
           public void onResponse(String localVarResponse) {
             try {
               responseListener.onResponse((EzsigndocumentApplyEzsigntemplateglobalV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsigndocumentApplyEzsigntemplateglobalV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Apply an Ezsigntemplateglobal to the Ezsigndocument
+  * This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+   * @param pkiEzsigndocumentID 
+   * @param ezsigndocumentApplyEzsigntemplateglobalV2Request 
+   * @return EzsigndocumentApplyEzsigntemplateglobalV2Response
+  */
+  public EzsigndocumentApplyEzsigntemplateglobalV2Response ezsigndocumentApplyEzsigntemplateglobalV2 (Integer pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateglobalV2Request ezsigndocumentApplyEzsigntemplateglobalV2Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = ezsigndocumentApplyEzsigntemplateglobalV2Request;
+    // verify the required parameter 'pkiEzsigndocumentID' is set
+    if (pkiEzsigndocumentID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsigndocumentID' when calling ezsigndocumentApplyEzsigntemplateglobalV2",
+        new ApiException(400, "Missing the required parameter 'pkiEzsigndocumentID' when calling ezsigndocumentApplyEzsigntemplateglobalV2"));
+    }
+    // verify the required parameter 'ezsigndocumentApplyEzsigntemplateglobalV2Request' is set
+    if (ezsigndocumentApplyEzsigntemplateglobalV2Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'ezsigndocumentApplyEzsigntemplateglobalV2Request' when calling ezsigndocumentApplyEzsigntemplateglobalV2",
+        new ApiException(400, "Missing the required parameter 'ezsigndocumentApplyEzsigntemplateglobalV2Request' when calling ezsigndocumentApplyEzsigntemplateglobalV2"));
+    }
+
+    // create path and map variables
+    String path = "/2/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplateglobal".replaceAll("\\{" + "pkiEzsigndocumentID" + "\\}", apiInvoker.escapeString(pkiEzsigndocumentID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (EzsigndocumentApplyEzsigntemplateglobalV2Response) ApiInvoker.deserialize(localVarResponse, "", EzsigndocumentApplyEzsigntemplateglobalV2Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Apply an Ezsigntemplateglobal to the Ezsigndocument
+   * This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+   * @param pkiEzsigndocumentID    * @param ezsigndocumentApplyEzsigntemplateglobalV2Request 
+  */
+  public void ezsigndocumentApplyEzsigntemplateglobalV2 (Integer pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateglobalV2Request ezsigndocumentApplyEzsigntemplateglobalV2Request, final Response.Listener<EzsigndocumentApplyEzsigntemplateglobalV2Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = ezsigndocumentApplyEzsigntemplateglobalV2Request;
+
+    // verify the required parameter 'pkiEzsigndocumentID' is set
+    if (pkiEzsigndocumentID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsigndocumentID' when calling ezsigndocumentApplyEzsigntemplateglobalV2",
+        new ApiException(400, "Missing the required parameter 'pkiEzsigndocumentID' when calling ezsigndocumentApplyEzsigntemplateglobalV2"));
+    }
+    // verify the required parameter 'ezsigndocumentApplyEzsigntemplateglobalV2Request' is set
+    if (ezsigndocumentApplyEzsigntemplateglobalV2Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'ezsigndocumentApplyEzsigntemplateglobalV2Request' when calling ezsigndocumentApplyEzsigntemplateglobalV2",
+        new ApiException(400, "Missing the required parameter 'ezsigndocumentApplyEzsigntemplateglobalV2Request' when calling ezsigndocumentApplyEzsigntemplateglobalV2"));
+    }
+
+    // create path and map variables
+    String path = "/2/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplateglobal".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiEzsigndocumentID" + "\\}", apiInvoker.escapeString(pkiEzsigndocumentID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((EzsigndocumentApplyEzsigntemplateglobalV2Response) ApiInvoker.deserialize(localVarResponse,  "", EzsigndocumentApplyEzsigntemplateglobalV2Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

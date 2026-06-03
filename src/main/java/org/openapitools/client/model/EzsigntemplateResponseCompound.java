@@ -14,6 +14,7 @@ package org.openapitools.client.model;
 
 import java.util.*;
 import org.openapitools.client.model.CommonAudit;
+import org.openapitools.client.model.EzsigntemplateannotationResponseCompound;
 import org.openapitools.client.model.EzsigntemplatedocumentResponse;
 import org.openapitools.client.model.EzsigntemplatesignerResponseCompound;
 import org.openapitools.client.model.FieldEEzsigntemplateType;
@@ -60,6 +61,8 @@ public class EzsigntemplateResponseCompound {
   private EzsigntemplatedocumentResponse objEzsigntemplatedocument = null;
   @SerializedName("a_objEzsigntemplatesigner")
   private List<EzsigntemplatesignerResponseCompound> aObjEzsigntemplatesigner = null;
+  @SerializedName("a_objEzsigntemplateannotation")
+  private List<EzsigntemplateannotationResponseCompound> aObjEzsigntemplateannotation = null;
 
   /**
    * The unique ID of the Ezsigntemplate
@@ -252,6 +255,16 @@ public class EzsigntemplateResponseCompound {
     this.aObjEzsigntemplatesigner = aObjEzsigntemplatesigner;
   }
 
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public List<EzsigntemplateannotationResponseCompound> getAObjEzsigntemplateannotation() {
+    return aObjEzsigntemplateannotation;
+  }
+  public void setAObjEzsigntemplateannotation(List<EzsigntemplateannotationResponseCompound> aObjEzsigntemplateannotation) {
+    this.aObjEzsigntemplateannotation = aObjEzsigntemplateannotation;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -278,7 +291,8 @@ public class EzsigntemplateResponseCompound {
         (this.bEzsigntemplateEditallowed == null ? ezsigntemplateResponseCompound.bEzsigntemplateEditallowed == null : this.bEzsigntemplateEditallowed.equals(ezsigntemplateResponseCompound.bEzsigntemplateEditallowed)) &&
         (this.eEzsigntemplateType == null ? ezsigntemplateResponseCompound.eEzsigntemplateType == null : this.eEzsigntemplateType.equals(ezsigntemplateResponseCompound.eEzsigntemplateType)) &&
         (this.objEzsigntemplatedocument == null ? ezsigntemplateResponseCompound.objEzsigntemplatedocument == null : this.objEzsigntemplatedocument.equals(ezsigntemplateResponseCompound.objEzsigntemplatedocument)) &&
-        (this.aObjEzsigntemplatesigner == null ? ezsigntemplateResponseCompound.aObjEzsigntemplatesigner == null : this.aObjEzsigntemplatesigner.equals(ezsigntemplateResponseCompound.aObjEzsigntemplatesigner));
+        (this.aObjEzsigntemplatesigner == null ? ezsigntemplateResponseCompound.aObjEzsigntemplatesigner == null : this.aObjEzsigntemplatesigner.equals(ezsigntemplateResponseCompound.aObjEzsigntemplatesigner)) &&
+        (this.aObjEzsigntemplateannotation == null ? ezsigntemplateResponseCompound.aObjEzsigntemplateannotation == null : this.aObjEzsigntemplateannotation.equals(ezsigntemplateResponseCompound.aObjEzsigntemplateannotation));
   }
 
   @Override
@@ -301,6 +315,7 @@ public class EzsigntemplateResponseCompound {
     result = 31 * result + (this.eEzsigntemplateType == null ? 0: this.eEzsigntemplateType.hashCode());
     result = 31 * result + (this.objEzsigntemplatedocument == null ? 0: this.objEzsigntemplatedocument.hashCode());
     result = 31 * result + (this.aObjEzsigntemplatesigner == null ? 0: this.aObjEzsigntemplatesigner.hashCode());
+    result = 31 * result + (this.aObjEzsigntemplateannotation == null ? 0: this.aObjEzsigntemplateannotation.hashCode());
     return result;
   }
 
@@ -326,6 +341,7 @@ public class EzsigntemplateResponseCompound {
     sb.append("  eEzsigntemplateType: ").append(eEzsigntemplateType).append("\n");
     sb.append("  objEzsigntemplatedocument: ").append(objEzsigntemplatedocument).append("\n");
     sb.append("  aObjEzsigntemplatesigner: ").append(aObjEzsigntemplatesigner).append("\n");
+    sb.append("  aObjEzsigntemplateannotation: ").append(aObjEzsigntemplateannotation).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

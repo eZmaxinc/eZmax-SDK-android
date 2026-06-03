@@ -97,7 +97,7 @@ public class EzdoctemplatedocumentRequest {
    * minimum: 0
    * maximum: 255
    **/
-  @ApiModelProperty(required = true, value = "The unique ID of the Ezdoctemplatefieldtypecategory")
+  @ApiModelProperty(value = "The unique ID of the Ezdoctemplatefieldtypecategory")
   public Integer getFkiEzdoctemplatefieldtypecategoryID() {
     return fkiEzdoctemplatefieldtypecategoryID;
   }

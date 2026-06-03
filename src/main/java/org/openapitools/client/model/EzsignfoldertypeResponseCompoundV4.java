@@ -21,6 +21,7 @@ import org.openapitools.client.model.FieldEEzsignfoldertypeDocumentmerge;
 import org.openapitools.client.model.FieldEEzsignfoldertypePdfanoncompliantaction;
 import org.openapitools.client.model.FieldEEzsignfoldertypePdfarequirement;
 import org.openapitools.client.model.FieldEEzsignfoldertypePrivacylevel;
+import org.openapitools.client.model.FieldEEzsignfoldertypeSignaturedatedisplay;
 import org.openapitools.client.model.FieldEEzsignfoldertypeSigneraccess;
 import org.openapitools.client.model.MultilingualEzsignfoldertypeName;
 import org.openapitools.client.model.UsergroupResponse;
@@ -52,6 +53,10 @@ public class EzsignfoldertypeResponseCompoundV4 {
   private Integer fkiFontIDSignature = null;
   @SerializedName("fkiPdfalevelIDConvert")
   private Integer fkiPdfalevelIDConvert = null;
+  @SerializedName("eEzsignfoldertypeSignaturedatedisplay")
+  private FieldEEzsignfoldertypeSignaturedatedisplay eEzsignfoldertypeSignaturedatedisplay = null;
+  @SerializedName("sEzsignfoldertypeSignaturedatecustomformat")
+  private String sEzsignfoldertypeSignaturedatecustomformat = null;
   @SerializedName("eEzsignfoldertypeDocumentdependency")
   private FieldEEzsignfoldertypeDocumentdependency eEzsignfoldertypeDocumentdependency = null;
   @SerializedName("sBrandingDescriptionX")
@@ -108,6 +113,14 @@ public class EzsignfoldertypeResponseCompoundV4 {
   private Boolean bEzsignfoldertypeReassignuser = null;
   @SerializedName("bEzsignfoldertypeReassigngroup")
   private Boolean bEzsignfoldertypeReassigngroup = null;
+  @SerializedName("bEzsignfoldertypeSenddocumentmergetoemail")
+  private Boolean bEzsignfoldertypeSenddocumentmergetoemail = null;
+  @SerializedName("bEzsignfoldertypeSenddocumentmergetoezsignsigner")
+  private Boolean bEzsignfoldertypeSenddocumentmergetoezsignsigner = null;
+  @SerializedName("bEzsignfoldertypeSenddocumentmergetoreceivealldocument")
+  private Boolean bEzsignfoldertypeSenddocumentmergetoreceivealldocument = null;
+  @SerializedName("bEzsignfoldertypeSenddocumentmergetouser")
+  private Boolean bEzsignfoldertypeSenddocumentmergetouser = null;
   @SerializedName("bEzsignfoldertypeSendsignedtoezsignsigner")
   private Boolean bEzsignfoldertypeSendsignedtoezsignsigner = null;
   @SerializedName("bEzsignfoldertypeSendsignedtouser")
@@ -290,6 +303,27 @@ public class EzsignfoldertypeResponseCompoundV4 {
 
   /**
    **/
+  @ApiModelProperty(required = true, value = "")
+  public FieldEEzsignfoldertypeSignaturedatedisplay getEEzsignfoldertypeSignaturedatedisplay() {
+    return eEzsignfoldertypeSignaturedatedisplay;
+  }
+  public void setEEzsignfoldertypeSignaturedatedisplay(FieldEEzsignfoldertypeSignaturedatedisplay eEzsignfoldertypeSignaturedatedisplay) {
+    this.eEzsignfoldertypeSignaturedatedisplay = eEzsignfoldertypeSignaturedatedisplay;
+  }
+
+  /**
+   * The custom date format to use  You can use the codes below and they will be replaced at signature time. Text values like month and day names will be rendered in the proper language. Other text will be left as-is.  The codes examples below are based on the following datetime: Thursday, January 6, 2022 at 08:07:09 EST  For example, the format \"Signature date: {MM}/{DD}/{YYYY} {hh}:{mm}\" would become \"Signature date: 01/06/2022 08:07\"  **Year**  | Code | Example | | - | - | | {YYYY} | 2022 | | {YY} | 22 |  **Month**  | Code | Example | | - | - | | {MonthCapitalize} | Janvier | | {Month} | janvier | | {MM} | 01 | | {M} | 1 |  **Day**  | Code | Example | | - | - | | {DayCapitalize} | Jeudi | | {Day} | jeudi | | {DD} | 06 | | {D} | 6 |  **Hour**  | Code | Example | | - | - | | {hh} | 08 |  **Minute**  | Code | Example | | - | - | | {mm} | 07 |  **Second**  | Code | Example | | - | - | | {ss} | 09 |        **Timezone**  | Code | Example | | - | - | | {Z} | EST |       **Time**  | Code | Example | | - | - | | {Time} | 08:07:09 |   | {TimeZ} | 08:07:09 EST |     **Date**  | Code | Example | | - | - | | {Date} | 2022-01-06 |   | {DateText} | 1er Janvier 2022 |  **Full**  | Code | Example | | - | - | | {DateTime} | 2022-01-06 08:07:09 |   | {DateTimeZ} | 2022-01-06 08:07:09 EST | 
+   **/
+  @ApiModelProperty(value = "The custom date format to use  You can use the codes below and they will be replaced at signature time. Text values like month and day names will be rendered in the proper language. Other text will be left as-is.  The codes examples below are based on the following datetime: Thursday, January 6, 2022 at 08:07:09 EST  For example, the format \"Signature date: {MM}/{DD}/{YYYY} {hh}:{mm}\" would become \"Signature date: 01/06/2022 08:07\"  **Year**  | Code | Example | | - | - | | {YYYY} | 2022 | | {YY} | 22 |  **Month**  | Code | Example | | - | - | | {MonthCapitalize} | Janvier | | {Month} | janvier | | {MM} | 01 | | {M} | 1 |  **Day**  | Code | Example | | - | - | | {DayCapitalize} | Jeudi | | {Day} | jeudi | | {DD} | 06 | | {D} | 6 |  **Hour**  | Code | Example | | - | - | | {hh} | 08 |  **Minute**  | Code | Example | | - | - | | {mm} | 07 |  **Second**  | Code | Example | | - | - | | {ss} | 09 |        **Timezone**  | Code | Example | | - | - | | {Z} | EST |       **Time**  | Code | Example | | - | - | | {Time} | 08:07:09 |   | {TimeZ} | 08:07:09 EST |     **Date**  | Code | Example | | - | - | | {Date} | 2022-01-06 |   | {DateText} | 1er Janvier 2022 |  **Full**  | Code | Example | | - | - | | {DateTime} | 2022-01-06 08:07:09 |   | {DateTimeZ} | 2022-01-06 08:07:09 EST | ")
+  public String getSEzsignfoldertypeSignaturedatecustomformat() {
+    return sEzsignfoldertypeSignaturedatecustomformat;
+  }
+  public void setSEzsignfoldertypeSignaturedatecustomformat(String sEzsignfoldertypeSignaturedatecustomformat) {
+    this.sEzsignfoldertypeSignaturedatecustomformat = sEzsignfoldertypeSignaturedatecustomformat;
+  }
+
+  /**
+   **/
   @ApiModelProperty(value = "")
   public FieldEEzsignfoldertypeDocumentdependency getEEzsignfoldertypeDocumentdependency() {
     return eEzsignfoldertypeDocumentdependency;
@@ -420,11 +454,11 @@ public class EzsignfoldertypeResponseCompoundV4 {
   }
 
   /**
-   * The number of days before the the first reminder sending
+   * The number of days before the first reminder sending
    * minimum: 0
    * maximum: 255
    **/
-  @ApiModelProperty(value = "The number of days before the the first reminder sending")
+  @ApiModelProperty(value = "The number of days before the first reminder sending")
   public Integer getIEzsignfoldertypeSendreminderfirstdays() {
     return iEzsignfoldertypeSendreminderfirstdays;
   }
@@ -603,6 +637,50 @@ public class EzsignfoldertypeResponseCompoundV4 {
   }
   public void setBEzsignfoldertypeReassigngroup(Boolean bEzsignfoldertypeReassigngroup) {
     this.bEzsignfoldertypeReassigngroup = bEzsignfoldertypeReassigngroup;
+  }
+
+  /**
+   * Whether we send the merged documents in the email to external recipient
+   **/
+  @ApiModelProperty(value = "Whether we send the merged documents in the email to external recipient")
+  public Boolean getBEzsignfoldertypeSenddocumentmergetoemail() {
+    return bEzsignfoldertypeSenddocumentmergetoemail;
+  }
+  public void setBEzsignfoldertypeSenddocumentmergetoemail(Boolean bEzsignfoldertypeSenddocumentmergetoemail) {
+    this.bEzsignfoldertypeSenddocumentmergetoemail = bEzsignfoldertypeSenddocumentmergetoemail;
+  }
+
+  /**
+   * Whether we send the merged documents in the email to Ezsignsigner
+   **/
+  @ApiModelProperty(value = "Whether we send the merged documents in the email to Ezsignsigner")
+  public Boolean getBEzsignfoldertypeSenddocumentmergetoezsignsigner() {
+    return bEzsignfoldertypeSenddocumentmergetoezsignsigner;
+  }
+  public void setBEzsignfoldertypeSenddocumentmergetoezsignsigner(Boolean bEzsignfoldertypeSenddocumentmergetoezsignsigner) {
+    this.bEzsignfoldertypeSenddocumentmergetoezsignsigner = bEzsignfoldertypeSenddocumentmergetoezsignsigner;
+  }
+
+  /**
+   * Whether we send the merged documents in the email to user and Ezsignsigner who receive all documents.
+   **/
+  @ApiModelProperty(value = "Whether we send the merged documents in the email to user and Ezsignsigner who receive all documents.")
+  public Boolean getBEzsignfoldertypeSenddocumentmergetoreceivealldocument() {
+    return bEzsignfoldertypeSenddocumentmergetoreceivealldocument;
+  }
+  public void setBEzsignfoldertypeSenddocumentmergetoreceivealldocument(Boolean bEzsignfoldertypeSenddocumentmergetoreceivealldocument) {
+    this.bEzsignfoldertypeSenddocumentmergetoreceivealldocument = bEzsignfoldertypeSenddocumentmergetoreceivealldocument;
+  }
+
+  /**
+   * Whether we send the merged documents in the email to User
+   **/
+  @ApiModelProperty(value = "Whether we send the merged documents in the email to User")
+  public Boolean getBEzsignfoldertypeSenddocumentmergetouser() {
+    return bEzsignfoldertypeSenddocumentmergetouser;
+  }
+  public void setBEzsignfoldertypeSenddocumentmergetouser(Boolean bEzsignfoldertypeSenddocumentmergetouser) {
+    this.bEzsignfoldertypeSenddocumentmergetouser = bEzsignfoldertypeSenddocumentmergetouser;
   }
 
   /**
@@ -1000,6 +1078,8 @@ public class EzsignfoldertypeResponseCompoundV4 {
         (this.fkiFontIDFormfield == null ? ezsignfoldertypeResponseCompoundV4.fkiFontIDFormfield == null : this.fkiFontIDFormfield.equals(ezsignfoldertypeResponseCompoundV4.fkiFontIDFormfield)) &&
         (this.fkiFontIDSignature == null ? ezsignfoldertypeResponseCompoundV4.fkiFontIDSignature == null : this.fkiFontIDSignature.equals(ezsignfoldertypeResponseCompoundV4.fkiFontIDSignature)) &&
         (this.fkiPdfalevelIDConvert == null ? ezsignfoldertypeResponseCompoundV4.fkiPdfalevelIDConvert == null : this.fkiPdfalevelIDConvert.equals(ezsignfoldertypeResponseCompoundV4.fkiPdfalevelIDConvert)) &&
+        (this.eEzsignfoldertypeSignaturedatedisplay == null ? ezsignfoldertypeResponseCompoundV4.eEzsignfoldertypeSignaturedatedisplay == null : this.eEzsignfoldertypeSignaturedatedisplay.equals(ezsignfoldertypeResponseCompoundV4.eEzsignfoldertypeSignaturedatedisplay)) &&
+        (this.sEzsignfoldertypeSignaturedatecustomformat == null ? ezsignfoldertypeResponseCompoundV4.sEzsignfoldertypeSignaturedatecustomformat == null : this.sEzsignfoldertypeSignaturedatecustomformat.equals(ezsignfoldertypeResponseCompoundV4.sEzsignfoldertypeSignaturedatecustomformat)) &&
         (this.eEzsignfoldertypeDocumentdependency == null ? ezsignfoldertypeResponseCompoundV4.eEzsignfoldertypeDocumentdependency == null : this.eEzsignfoldertypeDocumentdependency.equals(ezsignfoldertypeResponseCompoundV4.eEzsignfoldertypeDocumentdependency)) &&
         (this.sBrandingDescriptionX == null ? ezsignfoldertypeResponseCompoundV4.sBrandingDescriptionX == null : this.sBrandingDescriptionX.equals(ezsignfoldertypeResponseCompoundV4.sBrandingDescriptionX)) &&
         (this.sBillingentityinternalDescriptionX == null ? ezsignfoldertypeResponseCompoundV4.sBillingentityinternalDescriptionX == null : this.sBillingentityinternalDescriptionX.equals(ezsignfoldertypeResponseCompoundV4.sBillingentityinternalDescriptionX)) &&
@@ -1028,6 +1108,10 @@ public class EzsignfoldertypeResponseCompoundV4 {
         (this.bEzsignfoldertypeReassignezsignsigner == null ? ezsignfoldertypeResponseCompoundV4.bEzsignfoldertypeReassignezsignsigner == null : this.bEzsignfoldertypeReassignezsignsigner.equals(ezsignfoldertypeResponseCompoundV4.bEzsignfoldertypeReassignezsignsigner)) &&
         (this.bEzsignfoldertypeReassignuser == null ? ezsignfoldertypeResponseCompoundV4.bEzsignfoldertypeReassignuser == null : this.bEzsignfoldertypeReassignuser.equals(ezsignfoldertypeResponseCompoundV4.bEzsignfoldertypeReassignuser)) &&
         (this.bEzsignfoldertypeReassigngroup == null ? ezsignfoldertypeResponseCompoundV4.bEzsignfoldertypeReassigngroup == null : this.bEzsignfoldertypeReassigngroup.equals(ezsignfoldertypeResponseCompoundV4.bEzsignfoldertypeReassigngroup)) &&
+        (this.bEzsignfoldertypeSenddocumentmergetoemail == null ? ezsignfoldertypeResponseCompoundV4.bEzsignfoldertypeSenddocumentmergetoemail == null : this.bEzsignfoldertypeSenddocumentmergetoemail.equals(ezsignfoldertypeResponseCompoundV4.bEzsignfoldertypeSenddocumentmergetoemail)) &&
+        (this.bEzsignfoldertypeSenddocumentmergetoezsignsigner == null ? ezsignfoldertypeResponseCompoundV4.bEzsignfoldertypeSenddocumentmergetoezsignsigner == null : this.bEzsignfoldertypeSenddocumentmergetoezsignsigner.equals(ezsignfoldertypeResponseCompoundV4.bEzsignfoldertypeSenddocumentmergetoezsignsigner)) &&
+        (this.bEzsignfoldertypeSenddocumentmergetoreceivealldocument == null ? ezsignfoldertypeResponseCompoundV4.bEzsignfoldertypeSenddocumentmergetoreceivealldocument == null : this.bEzsignfoldertypeSenddocumentmergetoreceivealldocument.equals(ezsignfoldertypeResponseCompoundV4.bEzsignfoldertypeSenddocumentmergetoreceivealldocument)) &&
+        (this.bEzsignfoldertypeSenddocumentmergetouser == null ? ezsignfoldertypeResponseCompoundV4.bEzsignfoldertypeSenddocumentmergetouser == null : this.bEzsignfoldertypeSenddocumentmergetouser.equals(ezsignfoldertypeResponseCompoundV4.bEzsignfoldertypeSenddocumentmergetouser)) &&
         (this.bEzsignfoldertypeSendsignedtoezsignsigner == null ? ezsignfoldertypeResponseCompoundV4.bEzsignfoldertypeSendsignedtoezsignsigner == null : this.bEzsignfoldertypeSendsignedtoezsignsigner.equals(ezsignfoldertypeResponseCompoundV4.bEzsignfoldertypeSendsignedtoezsignsigner)) &&
         (this.bEzsignfoldertypeSendsignedtouser == null ? ezsignfoldertypeResponseCompoundV4.bEzsignfoldertypeSendsignedtouser == null : this.bEzsignfoldertypeSendsignedtouser.equals(ezsignfoldertypeResponseCompoundV4.bEzsignfoldertypeSendsignedtouser)) &&
         (this.bEzsignfoldertypeSendattachmentezsignsigner == null ? ezsignfoldertypeResponseCompoundV4.bEzsignfoldertypeSendattachmentezsignsigner == null : this.bEzsignfoldertypeSendattachmentezsignsigner.equals(ezsignfoldertypeResponseCompoundV4.bEzsignfoldertypeSendattachmentezsignsigner)) &&
@@ -1077,6 +1161,8 @@ public class EzsignfoldertypeResponseCompoundV4 {
     result = 31 * result + (this.fkiFontIDFormfield == null ? 0: this.fkiFontIDFormfield.hashCode());
     result = 31 * result + (this.fkiFontIDSignature == null ? 0: this.fkiFontIDSignature.hashCode());
     result = 31 * result + (this.fkiPdfalevelIDConvert == null ? 0: this.fkiPdfalevelIDConvert.hashCode());
+    result = 31 * result + (this.eEzsignfoldertypeSignaturedatedisplay == null ? 0: this.eEzsignfoldertypeSignaturedatedisplay.hashCode());
+    result = 31 * result + (this.sEzsignfoldertypeSignaturedatecustomformat == null ? 0: this.sEzsignfoldertypeSignaturedatecustomformat.hashCode());
     result = 31 * result + (this.eEzsignfoldertypeDocumentdependency == null ? 0: this.eEzsignfoldertypeDocumentdependency.hashCode());
     result = 31 * result + (this.sBrandingDescriptionX == null ? 0: this.sBrandingDescriptionX.hashCode());
     result = 31 * result + (this.sBillingentityinternalDescriptionX == null ? 0: this.sBillingentityinternalDescriptionX.hashCode());
@@ -1105,6 +1191,10 @@ public class EzsignfoldertypeResponseCompoundV4 {
     result = 31 * result + (this.bEzsignfoldertypeReassignezsignsigner == null ? 0: this.bEzsignfoldertypeReassignezsignsigner.hashCode());
     result = 31 * result + (this.bEzsignfoldertypeReassignuser == null ? 0: this.bEzsignfoldertypeReassignuser.hashCode());
     result = 31 * result + (this.bEzsignfoldertypeReassigngroup == null ? 0: this.bEzsignfoldertypeReassigngroup.hashCode());
+    result = 31 * result + (this.bEzsignfoldertypeSenddocumentmergetoemail == null ? 0: this.bEzsignfoldertypeSenddocumentmergetoemail.hashCode());
+    result = 31 * result + (this.bEzsignfoldertypeSenddocumentmergetoezsignsigner == null ? 0: this.bEzsignfoldertypeSenddocumentmergetoezsignsigner.hashCode());
+    result = 31 * result + (this.bEzsignfoldertypeSenddocumentmergetoreceivealldocument == null ? 0: this.bEzsignfoldertypeSenddocumentmergetoreceivealldocument.hashCode());
+    result = 31 * result + (this.bEzsignfoldertypeSenddocumentmergetouser == null ? 0: this.bEzsignfoldertypeSenddocumentmergetouser.hashCode());
     result = 31 * result + (this.bEzsignfoldertypeSendsignedtoezsignsigner == null ? 0: this.bEzsignfoldertypeSendsignedtoezsignsigner.hashCode());
     result = 31 * result + (this.bEzsignfoldertypeSendsignedtouser == null ? 0: this.bEzsignfoldertypeSendsignedtouser.hashCode());
     result = 31 * result + (this.bEzsignfoldertypeSendattachmentezsignsigner == null ? 0: this.bEzsignfoldertypeSendattachmentezsignsigner.hashCode());
@@ -1157,6 +1247,8 @@ public class EzsignfoldertypeResponseCompoundV4 {
     sb.append("  fkiFontIDFormfield: ").append(fkiFontIDFormfield).append("\n");
     sb.append("  fkiFontIDSignature: ").append(fkiFontIDSignature).append("\n");
     sb.append("  fkiPdfalevelIDConvert: ").append(fkiPdfalevelIDConvert).append("\n");
+    sb.append("  eEzsignfoldertypeSignaturedatedisplay: ").append(eEzsignfoldertypeSignaturedatedisplay).append("\n");
+    sb.append("  sEzsignfoldertypeSignaturedatecustomformat: ").append(sEzsignfoldertypeSignaturedatecustomformat).append("\n");
     sb.append("  eEzsignfoldertypeDocumentdependency: ").append(eEzsignfoldertypeDocumentdependency).append("\n");
     sb.append("  sBrandingDescriptionX: ").append(sBrandingDescriptionX).append("\n");
     sb.append("  sBillingentityinternalDescriptionX: ").append(sBillingentityinternalDescriptionX).append("\n");
@@ -1185,6 +1277,10 @@ public class EzsignfoldertypeResponseCompoundV4 {
     sb.append("  bEzsignfoldertypeReassignezsignsigner: ").append(bEzsignfoldertypeReassignezsignsigner).append("\n");
     sb.append("  bEzsignfoldertypeReassignuser: ").append(bEzsignfoldertypeReassignuser).append("\n");
     sb.append("  bEzsignfoldertypeReassigngroup: ").append(bEzsignfoldertypeReassigngroup).append("\n");
+    sb.append("  bEzsignfoldertypeSenddocumentmergetoemail: ").append(bEzsignfoldertypeSenddocumentmergetoemail).append("\n");
+    sb.append("  bEzsignfoldertypeSenddocumentmergetoezsignsigner: ").append(bEzsignfoldertypeSenddocumentmergetoezsignsigner).append("\n");
+    sb.append("  bEzsignfoldertypeSenddocumentmergetoreceivealldocument: ").append(bEzsignfoldertypeSenddocumentmergetoreceivealldocument).append("\n");
+    sb.append("  bEzsignfoldertypeSenddocumentmergetouser: ").append(bEzsignfoldertypeSenddocumentmergetouser).append("\n");
     sb.append("  bEzsignfoldertypeSendsignedtoezsignsigner: ").append(bEzsignfoldertypeSendsignedtoezsignsigner).append("\n");
     sb.append("  bEzsignfoldertypeSendsignedtouser: ").append(bEzsignfoldertypeSendsignedtouser).append("\n");
     sb.append("  bEzsignfoldertypeSendattachmentezsignsigner: ").append(bEzsignfoldertypeSendattachmentezsignsigner).append("\n");

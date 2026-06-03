@@ -76,11 +76,13 @@ public class CustomWebhookResponse {
   };
   @SerializedName("eWebhookEmittype")
   private EWebhookEmittypeEnum eWebhookEmittype = null;
+  @SerializedName("fkiEzmaxpartnerproductstagewebhookID")
+  private Integer fkiEzmaxpartnerproductstagewebhookID = null;
 
   /**
    * The unique ID of the Webhook
    **/
-  @ApiModelProperty(required = true, value = "The unique ID of the Webhook")
+  @ApiModelProperty(value = "The unique ID of the Webhook")
   public Integer getPkiWebhookID() {
     return pkiWebhookID;
   }
@@ -256,7 +258,7 @@ public class CustomWebhookResponse {
 
   /**
    **/
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(value = "")
   public CommonAudit getObjAudit() {
     return objAudit;
   }
@@ -329,6 +331,19 @@ public class CustomWebhookResponse {
     this.eWebhookEmittype = eWebhookEmittype;
   }
 
+  /**
+   * The unique ID of the Ezmaxpartnerproductstagewebhook
+   * minimum: 0
+   * maximum: 65535
+   **/
+  @ApiModelProperty(value = "The unique ID of the Ezmaxpartnerproductstagewebhook")
+  public Integer getFkiEzmaxpartnerproductstagewebhookID() {
+    return fkiEzmaxpartnerproductstagewebhookID;
+  }
+  public void setFkiEzmaxpartnerproductstagewebhookID(Integer fkiEzmaxpartnerproductstagewebhookID) {
+    this.fkiEzmaxpartnerproductstagewebhookID = fkiEzmaxpartnerproductstagewebhookID;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -361,7 +376,8 @@ public class CustomWebhookResponse {
         (this.aObjWebhookheader == null ? customWebhookResponse.aObjWebhookheader == null : this.aObjWebhookheader.equals(customWebhookResponse.aObjWebhookheader)) &&
         (this.pksCustomerCode == null ? customWebhookResponse.pksCustomerCode == null : this.pksCustomerCode.equals(customWebhookResponse.pksCustomerCode)) &&
         (this.bWebhookTest == null ? customWebhookResponse.bWebhookTest == null : this.bWebhookTest.equals(customWebhookResponse.bWebhookTest)) &&
-        (this.eWebhookEmittype == null ? customWebhookResponse.eWebhookEmittype == null : this.eWebhookEmittype.equals(customWebhookResponse.eWebhookEmittype));
+        (this.eWebhookEmittype == null ? customWebhookResponse.eWebhookEmittype == null : this.eWebhookEmittype.equals(customWebhookResponse.eWebhookEmittype)) &&
+        (this.fkiEzmaxpartnerproductstagewebhookID == null ? customWebhookResponse.fkiEzmaxpartnerproductstagewebhookID == null : this.fkiEzmaxpartnerproductstagewebhookID.equals(customWebhookResponse.fkiEzmaxpartnerproductstagewebhookID));
   }
 
   @Override
@@ -390,6 +406,7 @@ public class CustomWebhookResponse {
     result = 31 * result + (this.pksCustomerCode == null ? 0: this.pksCustomerCode.hashCode());
     result = 31 * result + (this.bWebhookTest == null ? 0: this.bWebhookTest.hashCode());
     result = 31 * result + (this.eWebhookEmittype == null ? 0: this.eWebhookEmittype.hashCode());
+    result = 31 * result + (this.fkiEzmaxpartnerproductstagewebhookID == null ? 0: this.fkiEzmaxpartnerproductstagewebhookID.hashCode());
     return result;
   }
 
@@ -421,6 +438,7 @@ public class CustomWebhookResponse {
     sb.append("  pksCustomerCode: ").append(pksCustomerCode).append("\n");
     sb.append("  bWebhookTest: ").append(bWebhookTest).append("\n");
     sb.append("  eWebhookEmittype: ").append(eWebhookEmittype).append("\n");
+    sb.append("  fkiEzmaxpartnerproductstagewebhookID: ").append(fkiEzmaxpartnerproductstagewebhookID).append("\n");
     sb.append("}\n");
     return sb.toString();
   }
