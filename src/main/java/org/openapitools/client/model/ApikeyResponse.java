@@ -28,6 +28,8 @@ public class ApikeyResponse {
   private Integer pkiApikeyID = null;
   @SerializedName("fkiUserID")
   private Integer fkiUserID = null;
+  @SerializedName("fkiEzmaxpartnerproductstageID")
+  private Integer fkiEzmaxpartnerproductstageID = null;
   @SerializedName("objApikeyDescription")
   private MultilingualApikeyDescription objApikeyDescription = null;
   @SerializedName("objContactName")
@@ -65,6 +67,19 @@ public class ApikeyResponse {
   }
   public void setFkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
+  }
+
+  /**
+   * The unique ID of the Ezmaxpartnerproductstage
+   * minimum: 0
+   * maximum: 255
+   **/
+  @ApiModelProperty(value = "The unique ID of the Ezmaxpartnerproductstage")
+  public Integer getFkiEzmaxpartnerproductstageID() {
+    return fkiEzmaxpartnerproductstageID;
+  }
+  public void setFkiEzmaxpartnerproductstageID(Integer fkiEzmaxpartnerproductstageID) {
+    this.fkiEzmaxpartnerproductstageID = fkiEzmaxpartnerproductstageID;
   }
 
   /**
@@ -153,6 +168,7 @@ public class ApikeyResponse {
     ApikeyResponse apikeyResponse = (ApikeyResponse) o;
     return (this.pkiApikeyID == null ? apikeyResponse.pkiApikeyID == null : this.pkiApikeyID.equals(apikeyResponse.pkiApikeyID)) &&
         (this.fkiUserID == null ? apikeyResponse.fkiUserID == null : this.fkiUserID.equals(apikeyResponse.fkiUserID)) &&
+        (this.fkiEzmaxpartnerproductstageID == null ? apikeyResponse.fkiEzmaxpartnerproductstageID == null : this.fkiEzmaxpartnerproductstageID.equals(apikeyResponse.fkiEzmaxpartnerproductstageID)) &&
         (this.objApikeyDescription == null ? apikeyResponse.objApikeyDescription == null : this.objApikeyDescription.equals(apikeyResponse.objApikeyDescription)) &&
         (this.objContactName == null ? apikeyResponse.objContactName == null : this.objContactName.equals(apikeyResponse.objContactName)) &&
         (this.sApikeyApikey == null ? apikeyResponse.sApikeyApikey == null : this.sApikeyApikey.equals(apikeyResponse.sApikeyApikey)) &&
@@ -167,6 +183,7 @@ public class ApikeyResponse {
     int result = 17;
     result = 31 * result + (this.pkiApikeyID == null ? 0: this.pkiApikeyID.hashCode());
     result = 31 * result + (this.fkiUserID == null ? 0: this.fkiUserID.hashCode());
+    result = 31 * result + (this.fkiEzmaxpartnerproductstageID == null ? 0: this.fkiEzmaxpartnerproductstageID.hashCode());
     result = 31 * result + (this.objApikeyDescription == null ? 0: this.objApikeyDescription.hashCode());
     result = 31 * result + (this.objContactName == null ? 0: this.objContactName.hashCode());
     result = 31 * result + (this.sApikeyApikey == null ? 0: this.sApikeyApikey.hashCode());
@@ -184,6 +201,7 @@ public class ApikeyResponse {
     
     sb.append("  pkiApikeyID: ").append(pkiApikeyID).append("\n");
     sb.append("  fkiUserID: ").append(fkiUserID).append("\n");
+    sb.append("  fkiEzmaxpartnerproductstageID: ").append(fkiEzmaxpartnerproductstageID).append("\n");
     sb.append("  objApikeyDescription: ").append(objApikeyDescription).append("\n");
     sb.append("  objContactName: ").append(objContactName).append("\n");
     sb.append("  sApikeyApikey: ").append(sApikeyApikey).append("\n");

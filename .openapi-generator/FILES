@@ -1823,10 +1823,7 @@ docs/ScimServiceProviderConfig.md
 docs/ScimServiceProviderConfigApi.md
 docs/ScimServiceProviderConfigBulk.md
 docs/ScimServiceProviderConfigChangePassword.md
-docs/ScimServiceProviderConfigEtag.md
 docs/ScimServiceProviderConfigFilter.md
-docs/ScimServiceProviderConfigPatch.md
-docs/ScimServiceProviderConfigSort.md
 docs/ScimUser.md
 docs/ScimUserList.md
 docs/ScimUsersApi.md
@@ -3978,10 +3975,7 @@ src/main/java/org/openapitools/client/model/ScimGroupMember.java
 src/main/java/org/openapitools/client/model/ScimServiceProviderConfig.java
 src/main/java/org/openapitools/client/model/ScimServiceProviderConfigBulk.java
 src/main/java/org/openapitools/client/model/ScimServiceProviderConfigChangePassword.java
-src/main/java/org/openapitools/client/model/ScimServiceProviderConfigEtag.java
 src/main/java/org/openapitools/client/model/ScimServiceProviderConfigFilter.java
-src/main/java/org/openapitools/client/model/ScimServiceProviderConfigPatch.java
-src/main/java/org/openapitools/client/model/ScimServiceProviderConfigSort.java
 src/main/java/org/openapitools/client/model/ScimUser.java
 src/main/java/org/openapitools/client/model/ScimUserList.java
 src/main/java/org/openapitools/client/model/SecretquestionAutocompleteElementResponse.java

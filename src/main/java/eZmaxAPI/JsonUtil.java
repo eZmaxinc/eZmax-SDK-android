@@ -6789,20 +6789,8 @@ public class JsonUtil {
       return new TypeToken<List<ScimServiceProviderConfigChangePassword>>(){}.getType();
     }
     
-    if ("ScimServiceProviderConfigEtag".equalsIgnoreCase(className)) {
-      return new TypeToken<List<ScimServiceProviderConfigEtag>>(){}.getType();
-    }
-    
     if ("ScimServiceProviderConfigFilter".equalsIgnoreCase(className)) {
       return new TypeToken<List<ScimServiceProviderConfigFilter>>(){}.getType();
-    }
-    
-    if ("ScimServiceProviderConfigPatch".equalsIgnoreCase(className)) {
-      return new TypeToken<List<ScimServiceProviderConfigPatch>>(){}.getType();
-    }
-    
-    if ("ScimServiceProviderConfigSort".equalsIgnoreCase(className)) {
-      return new TypeToken<List<ScimServiceProviderConfigSort>>(){}.getType();
     }
     
     if ("ScimUser".equalsIgnoreCase(className)) {
@@ -14775,20 +14763,8 @@ public class JsonUtil {
       return new TypeToken<ScimServiceProviderConfigChangePassword>(){}.getType();
     }
     
-    if ("ScimServiceProviderConfigEtag".equalsIgnoreCase(className)) {
-      return new TypeToken<ScimServiceProviderConfigEtag>(){}.getType();
-    }
-    
     if ("ScimServiceProviderConfigFilter".equalsIgnoreCase(className)) {
       return new TypeToken<ScimServiceProviderConfigFilter>(){}.getType();
-    }
-    
-    if ("ScimServiceProviderConfigPatch".equalsIgnoreCase(className)) {
-      return new TypeToken<ScimServiceProviderConfigPatch>(){}.getType();
-    }
-    
-    if ("ScimServiceProviderConfigSort".equalsIgnoreCase(className)) {
-      return new TypeToken<ScimServiceProviderConfigSort>(){}.getType();
     }
     
     if ("ScimUser".equalsIgnoreCase(className)) {

@@ -16,10 +16,7 @@ import java.util.*;
 import org.openapitools.client.model.ScimAuthenticationScheme;
 import org.openapitools.client.model.ScimServiceProviderConfigBulk;
 import org.openapitools.client.model.ScimServiceProviderConfigChangePassword;
-import org.openapitools.client.model.ScimServiceProviderConfigEtag;
 import org.openapitools.client.model.ScimServiceProviderConfigFilter;
-import org.openapitools.client.model.ScimServiceProviderConfigPatch;
-import org.openapitools.client.model.ScimServiceProviderConfigSort;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -35,13 +32,13 @@ public class ScimServiceProviderConfig {
   @SerializedName("documentationUri")
   private String documentationUri = null;
   @SerializedName("etag")
-  private ScimServiceProviderConfigEtag etag = null;
+  private ScimServiceProviderConfigChangePassword etag = null;
   @SerializedName("filter")
   private ScimServiceProviderConfigFilter filter = null;
   @SerializedName("patch")
-  private ScimServiceProviderConfigPatch patch = null;
+  private ScimServiceProviderConfigChangePassword patch = null;
   @SerializedName("sort")
-  private ScimServiceProviderConfigSort sort = null;
+  private ScimServiceProviderConfigChangePassword sort = null;
 
   /**
    * A multi-valued complex type that specifies supported authentication scheme properties.
@@ -88,10 +85,10 @@ public class ScimServiceProviderConfig {
   /**
    **/
   @ApiModelProperty(required = true, value = "")
-  public ScimServiceProviderConfigEtag getEtag() {
+  public ScimServiceProviderConfigChangePassword getEtag() {
     return etag;
   }
-  public void setEtag(ScimServiceProviderConfigEtag etag) {
+  public void setEtag(ScimServiceProviderConfigChangePassword etag) {
     this.etag = etag;
   }
 
@@ -108,20 +105,20 @@ public class ScimServiceProviderConfig {
   /**
    **/
   @ApiModelProperty(required = true, value = "")
-  public ScimServiceProviderConfigPatch getPatch() {
+  public ScimServiceProviderConfigChangePassword getPatch() {
     return patch;
   }
-  public void setPatch(ScimServiceProviderConfigPatch patch) {
+  public void setPatch(ScimServiceProviderConfigChangePassword patch) {
     this.patch = patch;
   }
 
   /**
    **/
   @ApiModelProperty(required = true, value = "")
-  public ScimServiceProviderConfigSort getSort() {
+  public ScimServiceProviderConfigChangePassword getSort() {
     return sort;
   }
-  public void setSort(ScimServiceProviderConfigSort sort) {
+  public void setSort(ScimServiceProviderConfigChangePassword sort) {
     this.sort = sort;
   }
 
