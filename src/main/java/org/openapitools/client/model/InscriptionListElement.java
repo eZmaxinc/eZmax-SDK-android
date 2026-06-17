@@ -28,6 +28,10 @@ public class InscriptionListElement {
   private Integer pkiInscriptionnotauthenticatedID = null;
   @SerializedName("fkiInscriptiontypeID")
   private Integer fkiInscriptiontypeID = null;
+  @SerializedName("fkiBuyercontractID")
+  private Integer fkiBuyercontractID = null;
+  @SerializedName("sBuyercontractContract")
+  private String sBuyercontractContract = null;
   @SerializedName("sInscriptiontypeNameX")
   private String sInscriptiontypeNameX = null;
   @SerializedName("eInscriptionStep")
@@ -36,6 +40,8 @@ public class InscriptionListElement {
   private String sInscriptionCivicend = null;
   @SerializedName("sInscriptionMLS")
   private String sInscriptionMLS = null;
+  @SerializedName("sInscriptionContract")
+  private String sInscriptionContract = null;
   @SerializedName("dInscriptionSaleprice")
   private String dInscriptionSaleprice = null;
   @SerializedName("dInscriptionRentprice")
@@ -123,6 +129,30 @@ public class InscriptionListElement {
   }
 
   /**
+   * The unique ID of the Buyercontract
+   * minimum: 1
+   * maximum: 65535
+   **/
+  @ApiModelProperty(value = "The unique ID of the Buyercontract")
+  public Integer getFkiBuyercontractID() {
+    return fkiBuyercontractID;
+  }
+  public void setFkiBuyercontractID(Integer fkiBuyercontractID) {
+    this.fkiBuyercontractID = fkiBuyercontractID;
+  }
+
+  /**
+   * The number of the Buyercontract
+   **/
+  @ApiModelProperty(value = "The number of the Buyercontract")
+  public String getSBuyercontractContract() {
+    return sBuyercontractContract;
+  }
+  public void setSBuyercontractContract(String sBuyercontractContract) {
+    this.sBuyercontractContract = sBuyercontractContract;
+  }
+
+  /**
    * The name of the Inscriptiontype in the language of the requester
    **/
   @ApiModelProperty(required = true, value = "The name of the Inscriptiontype in the language of the requester")
@@ -163,6 +193,17 @@ public class InscriptionListElement {
   }
   public void setSInscriptionMLS(String sInscriptionMLS) {
     this.sInscriptionMLS = sInscriptionMLS;
+  }
+
+  /**
+   * The sale contract number
+   **/
+  @ApiModelProperty(value = "The sale contract number")
+  public String getSInscriptionContract() {
+    return sInscriptionContract;
+  }
+  public void setSInscriptionContract(String sInscriptionContract) {
+    this.sInscriptionContract = sInscriptionContract;
   }
 
   /**
@@ -444,10 +485,13 @@ public class InscriptionListElement {
     return (this.pkiInscriptionID == null ? inscriptionListElement.pkiInscriptionID == null : this.pkiInscriptionID.equals(inscriptionListElement.pkiInscriptionID)) &&
         (this.pkiInscriptionnotauthenticatedID == null ? inscriptionListElement.pkiInscriptionnotauthenticatedID == null : this.pkiInscriptionnotauthenticatedID.equals(inscriptionListElement.pkiInscriptionnotauthenticatedID)) &&
         (this.fkiInscriptiontypeID == null ? inscriptionListElement.fkiInscriptiontypeID == null : this.fkiInscriptiontypeID.equals(inscriptionListElement.fkiInscriptiontypeID)) &&
+        (this.fkiBuyercontractID == null ? inscriptionListElement.fkiBuyercontractID == null : this.fkiBuyercontractID.equals(inscriptionListElement.fkiBuyercontractID)) &&
+        (this.sBuyercontractContract == null ? inscriptionListElement.sBuyercontractContract == null : this.sBuyercontractContract.equals(inscriptionListElement.sBuyercontractContract)) &&
         (this.sInscriptiontypeNameX == null ? inscriptionListElement.sInscriptiontypeNameX == null : this.sInscriptiontypeNameX.equals(inscriptionListElement.sInscriptiontypeNameX)) &&
         (this.eInscriptionStep == null ? inscriptionListElement.eInscriptionStep == null : this.eInscriptionStep.equals(inscriptionListElement.eInscriptionStep)) &&
         (this.sInscriptionCivicend == null ? inscriptionListElement.sInscriptionCivicend == null : this.sInscriptionCivicend.equals(inscriptionListElement.sInscriptionCivicend)) &&
         (this.sInscriptionMLS == null ? inscriptionListElement.sInscriptionMLS == null : this.sInscriptionMLS.equals(inscriptionListElement.sInscriptionMLS)) &&
+        (this.sInscriptionContract == null ? inscriptionListElement.sInscriptionContract == null : this.sInscriptionContract.equals(inscriptionListElement.sInscriptionContract)) &&
         (this.dInscriptionSaleprice == null ? inscriptionListElement.dInscriptionSaleprice == null : this.dInscriptionSaleprice.equals(inscriptionListElement.dInscriptionSaleprice)) &&
         (this.dInscriptionRentprice == null ? inscriptionListElement.dInscriptionRentprice == null : this.dInscriptionRentprice.equals(inscriptionListElement.dInscriptionRentprice)) &&
         (this.dtInscriptionDate == null ? inscriptionListElement.dtInscriptionDate == null : this.dtInscriptionDate.equals(inscriptionListElement.dtInscriptionDate)) &&
@@ -480,10 +524,13 @@ public class InscriptionListElement {
     result = 31 * result + (this.pkiInscriptionID == null ? 0: this.pkiInscriptionID.hashCode());
     result = 31 * result + (this.pkiInscriptionnotauthenticatedID == null ? 0: this.pkiInscriptionnotauthenticatedID.hashCode());
     result = 31 * result + (this.fkiInscriptiontypeID == null ? 0: this.fkiInscriptiontypeID.hashCode());
+    result = 31 * result + (this.fkiBuyercontractID == null ? 0: this.fkiBuyercontractID.hashCode());
+    result = 31 * result + (this.sBuyercontractContract == null ? 0: this.sBuyercontractContract.hashCode());
     result = 31 * result + (this.sInscriptiontypeNameX == null ? 0: this.sInscriptiontypeNameX.hashCode());
     result = 31 * result + (this.eInscriptionStep == null ? 0: this.eInscriptionStep.hashCode());
     result = 31 * result + (this.sInscriptionCivicend == null ? 0: this.sInscriptionCivicend.hashCode());
     result = 31 * result + (this.sInscriptionMLS == null ? 0: this.sInscriptionMLS.hashCode());
+    result = 31 * result + (this.sInscriptionContract == null ? 0: this.sInscriptionContract.hashCode());
     result = 31 * result + (this.dInscriptionSaleprice == null ? 0: this.dInscriptionSaleprice.hashCode());
     result = 31 * result + (this.dInscriptionRentprice == null ? 0: this.dInscriptionRentprice.hashCode());
     result = 31 * result + (this.dtInscriptionDate == null ? 0: this.dtInscriptionDate.hashCode());
@@ -519,10 +566,13 @@ public class InscriptionListElement {
     sb.append("  pkiInscriptionID: ").append(pkiInscriptionID).append("\n");
     sb.append("  pkiInscriptionnotauthenticatedID: ").append(pkiInscriptionnotauthenticatedID).append("\n");
     sb.append("  fkiInscriptiontypeID: ").append(fkiInscriptiontypeID).append("\n");
+    sb.append("  fkiBuyercontractID: ").append(fkiBuyercontractID).append("\n");
+    sb.append("  sBuyercontractContract: ").append(sBuyercontractContract).append("\n");
     sb.append("  sInscriptiontypeNameX: ").append(sInscriptiontypeNameX).append("\n");
     sb.append("  eInscriptionStep: ").append(eInscriptionStep).append("\n");
     sb.append("  sInscriptionCivicend: ").append(sInscriptionCivicend).append("\n");
     sb.append("  sInscriptionMLS: ").append(sInscriptionMLS).append("\n");
+    sb.append("  sInscriptionContract: ").append(sInscriptionContract).append("\n");
     sb.append("  dInscriptionSaleprice: ").append(dInscriptionSaleprice).append("\n");
     sb.append("  dInscriptionRentprice: ").append(dInscriptionRentprice).append("\n");
     sb.append("  dtInscriptionDate: ").append(dtInscriptionDate).append("\n");

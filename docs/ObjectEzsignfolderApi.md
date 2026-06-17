@@ -15,6 +15,7 @@ Method | HTTP request | Description
 [**ezsignfolderDuplicateV1**](ObjectEzsignfolderApi.md#ezsignfolderDuplicateV1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/duplicate | Duplicate the Ezsignfolder
 [**ezsignfolderEditObjectV3**](ObjectEzsignfolderApi.md#ezsignfolderEditObjectV3) | **PUT** /3/object/ezsignfolder/{pkiEzsignfolderID} | Edit an existing Ezsignfolder
 [**ezsignfolderEndPrematurelyV1**](ObjectEzsignfolderApi.md#ezsignfolderEndPrematurelyV1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/endPrematurely | End prematurely
+[**ezsignfolderGetActionableElementsForSignerV1**](ObjectEzsignfolderApi.md#ezsignfolderGetActionableElementsForSignerV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElementsForSigner | Retrieve actionable elements of a user for the Ezsignfolder
 [**ezsignfolderGetActionableElementsV1**](ObjectEzsignfolderApi.md#ezsignfolderGetActionableElementsV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements | Retrieve actionable elements for the Ezsignfolder
 [**ezsignfolderGetActionableElementsV2**](ObjectEzsignfolderApi.md#ezsignfolderGetActionableElementsV2) | **GET** /2/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements | Retrieve actionable elements for the Ezsignfolder
 [**ezsignfolderGetActionableElementsV3**](ObjectEzsignfolderApi.md#ezsignfolderGetActionableElementsV3) | **GET** /3/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements | Retrieve actionable elements for the Ezsignfolder
@@ -558,6 +559,58 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## ezsignfolderGetActionableElementsForSignerV1
+
+> EzsignfolderGetActionableElementsForSignerV1Response ezsignfolderGetActionableElementsForSignerV1(pkiEzsignfolderID, eSignerType, fkiEzsignsignerID, fkiUserID)
+
+Retrieve actionable elements of a user for the Ezsignfolder
+
+Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by an user at the current step in the process
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectEzsignfolderApi;
+
+ObjectEzsignfolderApi apiInstance = new ObjectEzsignfolderApi();
+Integer pkiEzsignfolderID = null; // Integer | 
+String eSignerType = null; // String | 
+Integer fkiEzsignsignerID = null; // Integer | 
+Integer fkiUserID = null; // Integer | 
+try {
+    EzsignfolderGetActionableElementsForSignerV1Response result = apiInstance.ezsignfolderGetActionableElementsForSignerV1(pkiEzsignfolderID, eSignerType, fkiEzsignsignerID, fkiUserID);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectEzsignfolderApi#ezsignfolderGetActionableElementsForSignerV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignfolderID** | **Integer**|  | [default to null]
+ **eSignerType** | **String**|  | [default to null] [enum: Ezsignsigner, User]
+ **fkiEzsignsignerID** | **Integer**|  | [optional] [default to null]
+ **fkiUserID** | **Integer**|  | [optional] [default to null]
+
+### Return type
+
+[**EzsignfolderGetActionableElementsForSignerV1Response**](EzsignfolderGetActionableElementsForSignerV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: application/json
 
 

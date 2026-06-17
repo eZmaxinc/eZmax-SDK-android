@@ -9,10 +9,13 @@ Name | Type | Description | Notes
 **pkiInscriptionID** | **Integer** | The unique ID of the Inscription. | 
 **pkiInscriptionnotauthenticatedID** | **Integer** | The unique ID of the Inscriptionnotauthenticated. |  [optional]
 **fkiInscriptiontypeID** | **Integer** | The unique ID of the Inscriptiontype | 
+**fkiBuyercontractID** | **Integer** | The unique ID of the Buyercontract |  [optional]
+**sBuyercontractContract** | **String** | The number of the Buyercontract |  [optional]
 **sInscriptiontypeNameX** | **String** | The name of the Inscriptiontype in the language of the requester | 
 **eInscriptionStep** | [**FieldEInscriptionStep**](FieldEInscriptionStep.md) |  | 
 **sInscriptionCivicend** | **String** | The civicend of the Inscription | 
 **sInscriptionMLS** | **String** | The mls of the Inscription |  [optional]
+**sInscriptionContract** | **String** | The sale contract number |  [optional]
 **dInscriptionSaleprice** | **String** | The saleprice of the Inscription | 
 **dInscriptionRentprice** | **String** | The rentprice of the Inscription | 
 **dtInscriptionDate** | **String** | The date of the Inscription |  [optional]

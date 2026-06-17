@@ -1349,6 +1349,10 @@ public class JsonUtil {
       return new TypeToken<List<CustomEzmaxpartnerListElement>>(){}.getType();
     }
     
+    if ("CustomEzmaxpartnerproductSubscribe".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CustomEzmaxpartnerproductSubscribe>>(){}.getType();
+    }
+    
     if ("CustomEzmaxpricingResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<CustomEzmaxpricingResponse>>(){}.getType();
     }
@@ -1715,6 +1719,14 @@ public class JsonUtil {
     
     if ("DiscussionmessageResponseCompound".equalsIgnoreCase(className)) {
       return new TypeToken<List<DiscussionmessageResponseCompound>>(){}.getType();
+    }
+    
+    if ("DocumentationSubscribeV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<DocumentationSubscribeV1Request>>(){}.getType();
+    }
+    
+    if ("DocumentationSubscribeV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<DocumentationSubscribeV1Response>>(){}.getType();
     }
     
     if ("DomainAutocompleteElementResponse".equalsIgnoreCase(className)) {
@@ -2749,6 +2761,14 @@ public class JsonUtil {
       return new TypeToken<List<EzsigndocumentFlattenV1Response>>(){}.getType();
     }
     
+    if ("EzsigndocumentGetActionableElementsForSignerV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EzsigndocumentGetActionableElementsForSignerV1Response>>(){}.getType();
+    }
+    
+    if ("EzsigndocumentGetActionableElementsForSignerV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EzsigndocumentGetActionableElementsForSignerV1ResponseMPayload>>(){}.getType();
+    }
+    
     if ("EzsigndocumentGetActionableElementsV1Response".equalsIgnoreCase(className)) {
       return new TypeToken<List<EzsigndocumentGetActionableElementsV1Response>>(){}.getType();
     }
@@ -3083,6 +3103,14 @@ public class JsonUtil {
     
     if ("EzsignfolderEndPrematurelyV1Response".equalsIgnoreCase(className)) {
       return new TypeToken<List<EzsignfolderEndPrematurelyV1Response>>(){}.getType();
+    }
+    
+    if ("EzsignfolderGetActionableElementsForSignerV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EzsignfolderGetActionableElementsForSignerV1Response>>(){}.getType();
+    }
+    
+    if ("EzsignfolderGetActionableElementsForSignerV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EzsignfolderGetActionableElementsForSignerV1ResponseMPayload>>(){}.getType();
     }
     
     if ("EzsignfolderGetActionableElementsV1Response".equalsIgnoreCase(className)) {
@@ -7849,6 +7877,14 @@ public class JsonUtil {
       return new TypeToken<List<WebhookEditObjectV1Response>>(){}.getType();
     }
     
+    if ("WebhookEzmaxpartnerproductSubscribe".equalsIgnoreCase(className)) {
+      return new TypeToken<List<WebhookEzmaxpartnerproductSubscribe>>(){}.getType();
+    }
+    
+    if ("WebhookEzmaxpartnerproductUnsubscribe".equalsIgnoreCase(className)) {
+      return new TypeToken<List<WebhookEzmaxpartnerproductUnsubscribe>>(){}.getType();
+    }
+    
     if ("WebhookEzsignDocumentCompleted".equalsIgnoreCase(className)) {
       return new TypeToken<List<WebhookEzsignDocumentCompleted>>(){}.getType();
     }
@@ -9323,6 +9359,10 @@ public class JsonUtil {
       return new TypeToken<CustomEzmaxpartnerListElement>(){}.getType();
     }
     
+    if ("CustomEzmaxpartnerproductSubscribe".equalsIgnoreCase(className)) {
+      return new TypeToken<CustomEzmaxpartnerproductSubscribe>(){}.getType();
+    }
+    
     if ("CustomEzmaxpricingResponse".equalsIgnoreCase(className)) {
       return new TypeToken<CustomEzmaxpricingResponse>(){}.getType();
     }
@@ -9689,6 +9729,14 @@ public class JsonUtil {
     
     if ("DiscussionmessageResponseCompound".equalsIgnoreCase(className)) {
       return new TypeToken<DiscussionmessageResponseCompound>(){}.getType();
+    }
+    
+    if ("DocumentationSubscribeV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<DocumentationSubscribeV1Request>(){}.getType();
+    }
+    
+    if ("DocumentationSubscribeV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<DocumentationSubscribeV1Response>(){}.getType();
     }
     
     if ("DomainAutocompleteElementResponse".equalsIgnoreCase(className)) {
@@ -10723,6 +10771,14 @@ public class JsonUtil {
       return new TypeToken<EzsigndocumentFlattenV1Response>(){}.getType();
     }
     
+    if ("EzsigndocumentGetActionableElementsForSignerV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<EzsigndocumentGetActionableElementsForSignerV1Response>(){}.getType();
+    }
+    
+    if ("EzsigndocumentGetActionableElementsForSignerV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<EzsigndocumentGetActionableElementsForSignerV1ResponseMPayload>(){}.getType();
+    }
+    
     if ("EzsigndocumentGetActionableElementsV1Response".equalsIgnoreCase(className)) {
       return new TypeToken<EzsigndocumentGetActionableElementsV1Response>(){}.getType();
     }
@@ -11057,6 +11113,14 @@ public class JsonUtil {
     
     if ("EzsignfolderEndPrematurelyV1Response".equalsIgnoreCase(className)) {
       return new TypeToken<EzsignfolderEndPrematurelyV1Response>(){}.getType();
+    }
+    
+    if ("EzsignfolderGetActionableElementsForSignerV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<EzsignfolderGetActionableElementsForSignerV1Response>(){}.getType();
+    }
+    
+    if ("EzsignfolderGetActionableElementsForSignerV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<EzsignfolderGetActionableElementsForSignerV1ResponseMPayload>(){}.getType();
     }
     
     if ("EzsignfolderGetActionableElementsV1Response".equalsIgnoreCase(className)) {
@@ -15821,6 +15885,14 @@ public class JsonUtil {
     
     if ("WebhookEditObjectV1Response".equalsIgnoreCase(className)) {
       return new TypeToken<WebhookEditObjectV1Response>(){}.getType();
+    }
+    
+    if ("WebhookEzmaxpartnerproductSubscribe".equalsIgnoreCase(className)) {
+      return new TypeToken<WebhookEzmaxpartnerproductSubscribe>(){}.getType();
+    }
+    
+    if ("WebhookEzmaxpartnerproductUnsubscribe".equalsIgnoreCase(className)) {
+      return new TypeToken<WebhookEzmaxpartnerproductUnsubscribe>(){}.getType();
     }
     
     if ("WebhookEzsignDocumentCompleted".equalsIgnoreCase(className)) {

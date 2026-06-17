@@ -325,6 +325,7 @@ docs/CustomEzmaxcustomeruserResponse.md
 docs/CustomEzmaxinvoicingEzsigndocumentResponse.md
 docs/CustomEzmaxinvoicingEzsignfolderResponse.md
 docs/CustomEzmaxpartnerListElement.md
+docs/CustomEzmaxpartnerproductSubscribe.md
 docs/CustomEzmaxpricingResponse.md
 docs/CustomEzsigndocumentDuplicateRequest.md
 docs/CustomEzsigndocumentEzsignsignaturesAutomaticResponse.md
@@ -417,6 +418,9 @@ docs/DiscussionmessageRequestCompound.md
 docs/DiscussionmessageRequestPatch.md
 docs/DiscussionmessageResponse.md
 docs/DiscussionmessageResponseCompound.md
+docs/DocumentationEzmaxpartnerApi.md
+docs/DocumentationSubscribeV1Request.md
+docs/DocumentationSubscribeV1Response.md
 docs/DomainAutocompleteElementResponse.md
 docs/DomainCreateObjectV1Request.md
 docs/DomainCreateObjectV1Response.md
@@ -675,6 +679,8 @@ docs/EzsigndocumentExtractTextV1Request.md
 docs/EzsigndocumentExtractTextV1Response.md
 docs/EzsigndocumentExtractTextV1ResponseMPayload.md
 docs/EzsigndocumentFlattenV1Response.md
+docs/EzsigndocumentGetActionableElementsForSignerV1Response.md
+docs/EzsigndocumentGetActionableElementsForSignerV1ResponseMPayload.md
 docs/EzsigndocumentGetActionableElementsV1Response.md
 docs/EzsigndocumentGetActionableElementsV1ResponseMPayload.md
 docs/EzsigndocumentGetActionableElementsV2Response.md
@@ -759,6 +765,8 @@ docs/EzsignfolderDuplicateV1ResponseMPayload.md
 docs/EzsignfolderEditObjectV3Request.md
 docs/EzsignfolderEditObjectV3Response.md
 docs/EzsignfolderEndPrematurelyV1Response.md
+docs/EzsignfolderGetActionableElementsForSignerV1Response.md
+docs/EzsignfolderGetActionableElementsForSignerV1ResponseMPayload.md
 docs/EzsignfolderGetActionableElementsV1Response.md
 docs/EzsignfolderGetActionableElementsV1ResponseMPayload.md
 docs/EzsignfolderGetActionableElementsV2Response.md
@@ -2089,6 +2097,8 @@ docs/WebhookCreateObjectV2ResponseMPayload.md
 docs/WebhookDeleteObjectV1Response.md
 docs/WebhookEditObjectV1Request.md
 docs/WebhookEditObjectV1Response.md
+docs/WebhookEzmaxpartnerproductSubscribe.md
+docs/WebhookEzmaxpartnerproductUnsubscribe.md
 docs/WebhookEzsignDocumentCompleted.md
 docs/WebhookEzsignDocumentFormCompleted.md
 docs/WebhookEzsignDocumentUnsent.md
@@ -2153,6 +2163,7 @@ src/main/java/eZmaxAPI/request/GetRequest.java
 src/main/java/eZmaxAPI/request/PatchRequest.java
 src/main/java/eZmaxAPI/request/PostRequest.java
 src/main/java/eZmaxAPI/request/PutRequest.java
+src/main/java/org/openapitools/client/api/DocumentationEzmaxpartnerApi.java
 src/main/java/org/openapitools/client/api/GlobalCustomerApi.java
 src/main/java/org/openapitools/client/api/GlobalEzmaxclientApi.java
 src/main/java/org/openapitools/client/api/GlobalEzmaxcustomerApi.java
@@ -2615,6 +2626,7 @@ src/main/java/org/openapitools/client/model/CustomEzmaxcustomeruserResponse.java
 src/main/java/org/openapitools/client/model/CustomEzmaxinvoicingEzsigndocumentResponse.java
 src/main/java/org/openapitools/client/model/CustomEzmaxinvoicingEzsignfolderResponse.java
 src/main/java/org/openapitools/client/model/CustomEzmaxpartnerListElement.java
+src/main/java/org/openapitools/client/model/CustomEzmaxpartnerproductSubscribe.java
 src/main/java/org/openapitools/client/model/CustomEzmaxpricingResponse.java
 src/main/java/org/openapitools/client/model/CustomEzsigndocumentDuplicateRequest.java
 src/main/java/org/openapitools/client/model/CustomEzsigndocumentEzsignsignaturesAutomaticResponse.java
@@ -2707,6 +2719,8 @@ src/main/java/org/openapitools/client/model/DiscussionmessageRequestCompound.jav
 src/main/java/org/openapitools/client/model/DiscussionmessageRequestPatch.java
 src/main/java/org/openapitools/client/model/DiscussionmessageResponse.java
 src/main/java/org/openapitools/client/model/DiscussionmessageResponseCompound.java
+src/main/java/org/openapitools/client/model/DocumentationSubscribeV1Request.java
+src/main/java/org/openapitools/client/model/DocumentationSubscribeV1Response.java
 src/main/java/org/openapitools/client/model/DomainAutocompleteElementResponse.java
 src/main/java/org/openapitools/client/model/DomainCreateObjectV1Request.java
 src/main/java/org/openapitools/client/model/DomainCreateObjectV1Response.java
@@ -2965,6 +2979,8 @@ src/main/java/org/openapitools/client/model/EzsigndocumentExtractTextV1Request.j
 src/main/java/org/openapitools/client/model/EzsigndocumentExtractTextV1Response.java
 src/main/java/org/openapitools/client/model/EzsigndocumentExtractTextV1ResponseMPayload.java
 src/main/java/org/openapitools/client/model/EzsigndocumentFlattenV1Response.java
+src/main/java/org/openapitools/client/model/EzsigndocumentGetActionableElementsForSignerV1Response.java
+src/main/java/org/openapitools/client/model/EzsigndocumentGetActionableElementsForSignerV1ResponseMPayload.java
 src/main/java/org/openapitools/client/model/EzsigndocumentGetActionableElementsV1Response.java
 src/main/java/org/openapitools/client/model/EzsigndocumentGetActionableElementsV1ResponseMPayload.java
 src/main/java/org/openapitools/client/model/EzsigndocumentGetActionableElementsV2Response.java
@@ -3049,6 +3065,8 @@ src/main/java/org/openapitools/client/model/EzsignfolderDuplicateV1ResponseMPayl
 src/main/java/org/openapitools/client/model/EzsignfolderEditObjectV3Request.java
 src/main/java/org/openapitools/client/model/EzsignfolderEditObjectV3Response.java
 src/main/java/org/openapitools/client/model/EzsignfolderEndPrematurelyV1Response.java
+src/main/java/org/openapitools/client/model/EzsignfolderGetActionableElementsForSignerV1Response.java
+src/main/java/org/openapitools/client/model/EzsignfolderGetActionableElementsForSignerV1ResponseMPayload.java
 src/main/java/org/openapitools/client/model/EzsignfolderGetActionableElementsV1Response.java
 src/main/java/org/openapitools/client/model/EzsignfolderGetActionableElementsV1ResponseMPayload.java
 src/main/java/org/openapitools/client/model/EzsignfolderGetActionableElementsV2Response.java
@@ -4240,6 +4258,8 @@ src/main/java/org/openapitools/client/model/WebhookCreateObjectV2ResponseMPayloa
 src/main/java/org/openapitools/client/model/WebhookDeleteObjectV1Response.java
 src/main/java/org/openapitools/client/model/WebhookEditObjectV1Request.java
 src/main/java/org/openapitools/client/model/WebhookEditObjectV1Response.java
+src/main/java/org/openapitools/client/model/WebhookEzmaxpartnerproductSubscribe.java
+src/main/java/org/openapitools/client/model/WebhookEzmaxpartnerproductUnsubscribe.java
 src/main/java/org/openapitools/client/model/WebhookEzsignDocumentCompleted.java
 src/main/java/org/openapitools/client/model/WebhookEzsignDocumentFormCompleted.java
 src/main/java/org/openapitools/client/model/WebhookEzsignDocumentUnsent.java

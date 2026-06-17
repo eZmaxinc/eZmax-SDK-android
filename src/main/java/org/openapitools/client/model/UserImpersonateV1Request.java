@@ -21,22 +21,8 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Request for POST /1/object/user/{pkiUserID}/impersonate")
 public class UserImpersonateV1Request {
   
-  @SerializedName("fkiUserID")
-  private Integer fkiUserID = null;
   @SerializedName("iExpirationMinutes")
   private Integer iExpirationMinutes = null;
-
-  /**
-   * The unique ID of the User
-   * minimum: 0
-   **/
-  @ApiModelProperty(required = true, value = "The unique ID of the User")
-  public Integer getFkiUserID() {
-    return fkiUserID;
-  }
-  public void setFkiUserID(Integer fkiUserID) {
-    this.fkiUserID = fkiUserID;
-  }
 
   /**
    * The number of minute before key is no longer active
@@ -61,14 +47,12 @@ public class UserImpersonateV1Request {
       return false;
     }
     UserImpersonateV1Request userImpersonateV1Request = (UserImpersonateV1Request) o;
-    return (this.fkiUserID == null ? userImpersonateV1Request.fkiUserID == null : this.fkiUserID.equals(userImpersonateV1Request.fkiUserID)) &&
-        (this.iExpirationMinutes == null ? userImpersonateV1Request.iExpirationMinutes == null : this.iExpirationMinutes.equals(userImpersonateV1Request.iExpirationMinutes));
+    return (this.iExpirationMinutes == null ? userImpersonateV1Request.iExpirationMinutes == null : this.iExpirationMinutes.equals(userImpersonateV1Request.iExpirationMinutes));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.fkiUserID == null ? 0: this.fkiUserID.hashCode());
     result = 31 * result + (this.iExpirationMinutes == null ? 0: this.iExpirationMinutes.hashCode());
     return result;
   }
@@ -78,7 +62,6 @@ public class UserImpersonateV1Request {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserImpersonateV1Request {\n");
     
-    sb.append("  fkiUserID: ").append(fkiUserID).append("\n");
     sb.append("  iExpirationMinutes: ").append(iExpirationMinutes).append("\n");
     sb.append("}\n");
     return sb.toString();

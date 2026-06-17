@@ -41,6 +41,7 @@ import org.openapitools.client.model.EzsignfolderDuplicateV1Response;
 import org.openapitools.client.model.EzsignfolderEditObjectV3Request;
 import org.openapitools.client.model.EzsignfolderEditObjectV3Response;
 import org.openapitools.client.model.EzsignfolderEndPrematurelyV1Response;
+import org.openapitools.client.model.EzsignfolderGetActionableElementsForSignerV1Response;
 import org.openapitools.client.model.EzsignfolderGetActionableElementsV1Response;
 import org.openapitools.client.model.EzsignfolderGetActionableElementsV2Response;
 import org.openapitools.client.model.EzsignfolderGetActionableElementsV3Response;
@@ -1570,6 +1571,152 @@ public class ObjectEzsignfolderApi {
           public void onResponse(String localVarResponse) {
             try {
               responseListener.onResponse((EzsignfolderEndPrematurelyV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsignfolderEndPrematurelyV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Retrieve actionable elements of a user for the Ezsignfolder
+  * Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by an user at the current step in the process
+   * @param pkiEzsignfolderID 
+   * @param eSignerType 
+   * @param fkiEzsignsignerID 
+   * @param fkiUserID 
+   * @return EzsignfolderGetActionableElementsForSignerV1Response
+  */
+  public EzsignfolderGetActionableElementsForSignerV1Response ezsignfolderGetActionableElementsForSignerV1 (Integer pkiEzsignfolderID, String eSignerType, Integer fkiEzsignsignerID, Integer fkiUserID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiEzsignfolderID' is set
+    if (pkiEzsignfolderID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsignfolderID' when calling ezsignfolderGetActionableElementsForSignerV1",
+        new ApiException(400, "Missing the required parameter 'pkiEzsignfolderID' when calling ezsignfolderGetActionableElementsForSignerV1"));
+    }
+    // verify the required parameter 'eSignerType' is set
+    if (eSignerType == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'eSignerType' when calling ezsignfolderGetActionableElementsForSignerV1",
+        new ApiException(400, "Missing the required parameter 'eSignerType' when calling ezsignfolderGetActionableElementsForSignerV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElementsForSigner".replaceAll("\\{" + "pkiEzsignfolderID" + "\\}", apiInvoker.escapeString(pkiEzsignfolderID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "eSignerType", eSignerType));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "fkiEzsignsignerID", fkiEzsignsignerID));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "fkiUserID", fkiUserID));
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (EzsignfolderGetActionableElementsForSignerV1Response) ApiInvoker.deserialize(localVarResponse, "", EzsignfolderGetActionableElementsForSignerV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve actionable elements of a user for the Ezsignfolder
+   * Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by an user at the current step in the process
+   * @param pkiEzsignfolderID    * @param eSignerType    * @param fkiEzsignsignerID    * @param fkiUserID 
+  */
+  public void ezsignfolderGetActionableElementsForSignerV1 (Integer pkiEzsignfolderID, String eSignerType, Integer fkiEzsignsignerID, Integer fkiUserID, final Response.Listener<EzsignfolderGetActionableElementsForSignerV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiEzsignfolderID' is set
+    if (pkiEzsignfolderID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiEzsignfolderID' when calling ezsignfolderGetActionableElementsForSignerV1",
+        new ApiException(400, "Missing the required parameter 'pkiEzsignfolderID' when calling ezsignfolderGetActionableElementsForSignerV1"));
+    }
+    // verify the required parameter 'eSignerType' is set
+    if (eSignerType == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'eSignerType' when calling ezsignfolderGetActionableElementsForSignerV1",
+        new ApiException(400, "Missing the required parameter 'eSignerType' when calling ezsignfolderGetActionableElementsForSignerV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElementsForSigner".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiEzsignfolderID" + "\\}", apiInvoker.escapeString(pkiEzsignfolderID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "eSignerType", eSignerType));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "fkiEzsignsignerID", fkiEzsignsignerID));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "fkiUserID", fkiUserID));
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((EzsignfolderGetActionableElementsForSignerV1Response) ApiInvoker.deserialize(localVarResponse,  "", EzsignfolderGetActionableElementsForSignerV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
