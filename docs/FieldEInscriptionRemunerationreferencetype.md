@@ -1,0 +1,10 @@
+
+
+# FieldEInscriptionRemunerationreferencetype
+
+## Enum
+
+
+
+
+

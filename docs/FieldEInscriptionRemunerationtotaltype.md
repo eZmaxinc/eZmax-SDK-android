@@ -1,0 +1,10 @@
+
+
+# FieldEInscriptionRemunerationtotaltype
+
+## Enum
+
+
+
+
+

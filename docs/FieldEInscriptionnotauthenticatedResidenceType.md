@@ -1,0 +1,10 @@
+
+
+# FieldEInscriptionnotauthenticatedResidenceType
+
+## Enum
+
+
+
+
+

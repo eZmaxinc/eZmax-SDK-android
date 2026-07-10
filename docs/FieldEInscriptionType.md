@@ -1,0 +1,10 @@
+
+
+# FieldEInscriptionType
+
+## Enum
+
+
+
+
+

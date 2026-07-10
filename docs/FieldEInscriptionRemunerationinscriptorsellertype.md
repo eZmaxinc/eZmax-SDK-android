@@ -1,0 +1,10 @@
+
+
+# FieldEInscriptionRemunerationinscriptorsellertype
+
+## Enum
+
+
+
+
+

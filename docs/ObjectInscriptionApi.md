@@ -9,7 +9,9 @@ Method | HTTP request | Description
 [**inscriptionGetCommunicationListV1**](ObjectInscriptionApi.md#inscriptionGetCommunicationListV1) | **GET** /1/object/inscription/{pkiInscriptionID}/getCommunicationList | Retrieve Communication list
 [**inscriptionGetCommunicationrecipientsV1**](ObjectInscriptionApi.md#inscriptionGetCommunicationrecipientsV1) | **GET** /1/object/inscription/{pkiInscriptionID}/getCommunicationrecipients | Retrieve Inscription&#39;s Communicationrecipient
 [**inscriptionGetCommunicationsendersV1**](ObjectInscriptionApi.md#inscriptionGetCommunicationsendersV1) | **GET** /1/object/inscription/{pkiInscriptionID}/getCommunicationsenders | Retrieve Inscription&#39;s Communicationsender
+[**inscriptionGetInscriptionnotauthenticatedsV1**](ObjectInscriptionApi.md#inscriptionGetInscriptionnotauthenticatedsV1) | **GET** /1/object/inscription/{pkiInscriptionID}/getInscriptionnotauthenticateds | Retrieve Inscriptionnotauthenticated list
 [**inscriptionGetListV1**](ObjectInscriptionApi.md#inscriptionGetListV1) | **GET** /1/object/inscription/getList | Retrieve Inscription list
+[**inscriptionGetObjectV2**](ObjectInscriptionApi.md#inscriptionGetObjectV2) | **GET** /2/object/inscription/{pkiInscriptionID} | Retrieve an existing Inscription
 [**inscriptionImportIntoEDMV1**](ObjectInscriptionApi.md#inscriptionImportIntoEDMV1) | **POST** /1/object/inscription/{pkiInscriptionID}/importIntoEDM | Import attachments into the Inscription
 [**inscriptionPrepareFilesTransferV1**](ObjectInscriptionApi.md#inscriptionPrepareFilesTransferV1) | **POST** /1/object/inscription/{pkiInscriptionID}/prepareFilesTransfer | Prepares file transfer into EDM
 
@@ -245,6 +247,50 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
+## inscriptionGetInscriptionnotauthenticatedsV1
+
+> InscriptionGetInscriptionnotauthenticatedsV1Response inscriptionGetInscriptionnotauthenticatedsV1(pkiInscriptionID)
+
+Retrieve Inscriptionnotauthenticated list
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectInscriptionApi;
+
+ObjectInscriptionApi apiInstance = new ObjectInscriptionApi();
+Integer pkiInscriptionID = null; // Integer | 
+try {
+    InscriptionGetInscriptionnotauthenticatedsV1Response result = apiInstance.inscriptionGetInscriptionnotauthenticatedsV1(pkiInscriptionID);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectInscriptionApi#inscriptionGetInscriptionnotauthenticatedsV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiInscriptionID** | **Integer**|  | [default to null]
+
+### Return type
+
+[**InscriptionGetInscriptionnotauthenticatedsV1Response**](InscriptionGetInscriptionnotauthenticatedsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
 ## inscriptionGetListV1
 
 > InscriptionGetListV1Response inscriptionGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
@@ -297,6 +343,52 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: Not defined
 - **Accept**: application/json, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+
+
+## inscriptionGetObjectV2
+
+> InscriptionGetObjectV2Response inscriptionGetObjectV2(pkiInscriptionID)
+
+Retrieve an existing Inscription
+
+
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectInscriptionApi;
+
+ObjectInscriptionApi apiInstance = new ObjectInscriptionApi();
+Integer pkiInscriptionID = null; // Integer | The unique ID of the Inscription
+try {
+    InscriptionGetObjectV2Response result = apiInstance.inscriptionGetObjectV2(pkiInscriptionID);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectInscriptionApi#inscriptionGetObjectV2");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiInscriptionID** | **Integer**| The unique ID of the Inscription | [default to null]
+
+### Return type
+
+[**InscriptionGetObjectV2Response**](InscriptionGetObjectV2Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
 ## inscriptionImportIntoEDMV1
