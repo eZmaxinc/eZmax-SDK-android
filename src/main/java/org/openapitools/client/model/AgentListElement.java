@@ -12,6 +12,7 @@
 
 package org.openapitools.client.model;
 
+import org.openapitools.client.model.FieldEAgentSchedule;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -65,6 +66,8 @@ public class AgentListElement {
   private String dtAgentSickleavestart = null;
   @SerializedName("dtAgentSickleaveend")
   private String dtAgentSickleaveend = null;
+  @SerializedName("eAgentSchedule")
+  private FieldEAgentSchedule eAgentSchedule = null;
   @SerializedName("bAgentTranquillit")
   private Boolean bAgentTranquillit = null;
   @SerializedName("bAgentResidentiallicense")
@@ -364,6 +367,16 @@ public class AgentListElement {
   }
 
   /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public FieldEAgentSchedule getEAgentSchedule() {
+    return eAgentSchedule;
+  }
+  public void setEAgentSchedule(FieldEAgentSchedule eAgentSchedule) {
+    this.eAgentSchedule = eAgentSchedule;
+  }
+
+  /**
    * Whether if it's an tranquillit
    **/
   @ApiModelProperty(required = true, value = "Whether if it's an tranquillit")
@@ -628,6 +641,7 @@ public class AgentListElement {
         (this.dtAgentSenioritydate == null ? agentListElement.dtAgentSenioritydate == null : this.dtAgentSenioritydate.equals(agentListElement.dtAgentSenioritydate)) &&
         (this.dtAgentSickleavestart == null ? agentListElement.dtAgentSickleavestart == null : this.dtAgentSickleavestart.equals(agentListElement.dtAgentSickleavestart)) &&
         (this.dtAgentSickleaveend == null ? agentListElement.dtAgentSickleaveend == null : this.dtAgentSickleaveend.equals(agentListElement.dtAgentSickleaveend)) &&
+        (this.eAgentSchedule == null ? agentListElement.eAgentSchedule == null : this.eAgentSchedule.equals(agentListElement.eAgentSchedule)) &&
         (this.bAgentTranquillit == null ? agentListElement.bAgentTranquillit == null : this.bAgentTranquillit.equals(agentListElement.bAgentTranquillit)) &&
         (this.bAgentResidentiallicense == null ? agentListElement.bAgentResidentiallicense == null : this.bAgentResidentiallicense.equals(agentListElement.bAgentResidentiallicense)) &&
         (this.bAgentCommerciallicense == null ? agentListElement.bAgentCommerciallicense == null : this.bAgentCommerciallicense.equals(agentListElement.bAgentCommerciallicense)) &&
@@ -676,6 +690,7 @@ public class AgentListElement {
     result = 31 * result + (this.dtAgentSenioritydate == null ? 0: this.dtAgentSenioritydate.hashCode());
     result = 31 * result + (this.dtAgentSickleavestart == null ? 0: this.dtAgentSickleavestart.hashCode());
     result = 31 * result + (this.dtAgentSickleaveend == null ? 0: this.dtAgentSickleaveend.hashCode());
+    result = 31 * result + (this.eAgentSchedule == null ? 0: this.eAgentSchedule.hashCode());
     result = 31 * result + (this.bAgentTranquillit == null ? 0: this.bAgentTranquillit.hashCode());
     result = 31 * result + (this.bAgentResidentiallicense == null ? 0: this.bAgentResidentiallicense.hashCode());
     result = 31 * result + (this.bAgentCommerciallicense == null ? 0: this.bAgentCommerciallicense.hashCode());
@@ -727,6 +742,7 @@ public class AgentListElement {
     sb.append("  dtAgentSenioritydate: ").append(dtAgentSenioritydate).append("\n");
     sb.append("  dtAgentSickleavestart: ").append(dtAgentSickleavestart).append("\n");
     sb.append("  dtAgentSickleaveend: ").append(dtAgentSickleaveend).append("\n");
+    sb.append("  eAgentSchedule: ").append(eAgentSchedule).append("\n");
     sb.append("  bAgentTranquillit: ").append(bAgentTranquillit).append("\n");
     sb.append("  bAgentResidentiallicense: ").append(bAgentResidentiallicense).append("\n");
     sb.append("  bAgentCommerciallicense: ").append(bAgentCommerciallicense).append("\n");

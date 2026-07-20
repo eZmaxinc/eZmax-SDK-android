@@ -16,6 +16,7 @@ import java.util.*;
 import org.openapitools.client.model.FieldEWebhookEzsignevent;
 import org.openapitools.client.model.FieldEWebhookManagementevent;
 import org.openapitools.client.model.FieldEWebhookModule;
+import org.openapitools.client.model.FieldEWebhookRealestateevent;
 import org.openapitools.client.model.WebhookheaderRequestCompound;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
@@ -40,6 +41,8 @@ public class WebhookRequestCompound {
   private FieldEWebhookEzsignevent eWebhookEzsignevent = null;
   @SerializedName("eWebhookManagementevent")
   private FieldEWebhookManagementevent eWebhookManagementevent = null;
+  @SerializedName("eWebhookRealestateevent")
+  private FieldEWebhookRealestateevent eWebhookRealestateevent = null;
   @SerializedName("sWebhookUrl")
   private String sWebhookUrl = null;
   @SerializedName("sWebhookEmailfailed")
@@ -132,6 +135,16 @@ public class WebhookRequestCompound {
   }
 
   /**
+   **/
+  @ApiModelProperty(value = "")
+  public FieldEWebhookRealestateevent getEWebhookRealestateevent() {
+    return eWebhookRealestateevent;
+  }
+  public void setEWebhookRealestateevent(FieldEWebhookRealestateevent eWebhookRealestateevent) {
+    this.eWebhookRealestateevent = eWebhookRealestateevent;
+  }
+
+  /**
    * The URL of the Webhook callback
    **/
   @ApiModelProperty(required = true, value = "The URL of the Webhook callback")
@@ -213,6 +226,7 @@ public class WebhookRequestCompound {
         (this.eWebhookModule == null ? webhookRequestCompound.eWebhookModule == null : this.eWebhookModule.equals(webhookRequestCompound.eWebhookModule)) &&
         (this.eWebhookEzsignevent == null ? webhookRequestCompound.eWebhookEzsignevent == null : this.eWebhookEzsignevent.equals(webhookRequestCompound.eWebhookEzsignevent)) &&
         (this.eWebhookManagementevent == null ? webhookRequestCompound.eWebhookManagementevent == null : this.eWebhookManagementevent.equals(webhookRequestCompound.eWebhookManagementevent)) &&
+        (this.eWebhookRealestateevent == null ? webhookRequestCompound.eWebhookRealestateevent == null : this.eWebhookRealestateevent.equals(webhookRequestCompound.eWebhookRealestateevent)) &&
         (this.sWebhookUrl == null ? webhookRequestCompound.sWebhookUrl == null : this.sWebhookUrl.equals(webhookRequestCompound.sWebhookUrl)) &&
         (this.sWebhookEmailfailed == null ? webhookRequestCompound.sWebhookEmailfailed == null : this.sWebhookEmailfailed.equals(webhookRequestCompound.sWebhookEmailfailed)) &&
         (this.bWebhookIsactive == null ? webhookRequestCompound.bWebhookIsactive == null : this.bWebhookIsactive.equals(webhookRequestCompound.bWebhookIsactive)) &&
@@ -231,6 +245,7 @@ public class WebhookRequestCompound {
     result = 31 * result + (this.eWebhookModule == null ? 0: this.eWebhookModule.hashCode());
     result = 31 * result + (this.eWebhookEzsignevent == null ? 0: this.eWebhookEzsignevent.hashCode());
     result = 31 * result + (this.eWebhookManagementevent == null ? 0: this.eWebhookManagementevent.hashCode());
+    result = 31 * result + (this.eWebhookRealestateevent == null ? 0: this.eWebhookRealestateevent.hashCode());
     result = 31 * result + (this.sWebhookUrl == null ? 0: this.sWebhookUrl.hashCode());
     result = 31 * result + (this.sWebhookEmailfailed == null ? 0: this.sWebhookEmailfailed.hashCode());
     result = 31 * result + (this.bWebhookIsactive == null ? 0: this.bWebhookIsactive.hashCode());
@@ -252,6 +267,7 @@ public class WebhookRequestCompound {
     sb.append("  eWebhookModule: ").append(eWebhookModule).append("\n");
     sb.append("  eWebhookEzsignevent: ").append(eWebhookEzsignevent).append("\n");
     sb.append("  eWebhookManagementevent: ").append(eWebhookManagementevent).append("\n");
+    sb.append("  eWebhookRealestateevent: ").append(eWebhookRealestateevent).append("\n");
     sb.append("  sWebhookUrl: ").append(sWebhookUrl).append("\n");
     sb.append("  sWebhookEmailfailed: ").append(sWebhookEmailfailed).append("\n");
     sb.append("  bWebhookIsactive: ").append(bWebhookIsactive).append("\n");

@@ -419,7 +419,6 @@ docs/DiscussionmessageRequestCompound.md
 docs/DiscussionmessageRequestPatch.md
 docs/DiscussionmessageResponse.md
 docs/DiscussionmessageResponseCompound.md
-docs/DocumentationEzmaxpartnerApi.md
 docs/DocumentationSubscribeV1Request.md
 docs/DocumentationSubscribeV1Response.md
 docs/DomainAutocompleteElementResponse.md
@@ -468,6 +467,7 @@ docs/EnumHorizontalalignment.md
 docs/EnumReportdataType.md
 docs/EnumTextvalidation.md
 docs/EnumVerticalalignment.md
+docs/ExternalEzmaxpartnerApi.md
 docs/ExternalbrokerImportIntoEDMV1Request.md
 docs/ExternalbrokerImportIntoEDMV1Response.md
 docs/ExternalbrokerImportIntoEDMV1ResponseMPayload.md
@@ -1309,6 +1309,7 @@ docs/FieldEActivesessionOrigin.md
 docs/FieldEActivesessionRealestateinprogress.md
 docs/FieldEActivesessionUsertype.md
 docs/FieldEActivesessionWeekdaystart.md
+docs/FieldEAgentSchedule.md
 docs/FieldEAttachmentDocumenttype.md
 docs/FieldEAttachmentPrivacy.md
 docs/FieldEAttachmentType.md
@@ -1450,6 +1451,7 @@ docs/FieldEWebhookEzmaxpartnerevent.md
 docs/FieldEWebhookEzsignevent.md
 docs/FieldEWebhookManagementevent.md
 docs/FieldEWebhookModule.md
+docs/FieldEWebhookRealestateevent.md
 docs/FieldEtInscriptionnotauthenticatedMortgagetype.md
 docs/FieldPksEzmaxclientOs.md
 docs/FontAutocompleteElementResponse.md
@@ -1867,7 +1869,10 @@ docs/ScimServiceProviderConfig.md
 docs/ScimServiceProviderConfigApi.md
 docs/ScimServiceProviderConfigBulk.md
 docs/ScimServiceProviderConfigChangePassword.md
+docs/ScimServiceProviderConfigEtag.md
 docs/ScimServiceProviderConfigFilter.md
+docs/ScimServiceProviderConfigPatch.md
+docs/ScimServiceProviderConfigSort.md
 docs/ScimUser.md
 docs/ScimUserList.md
 docs/ScimUsersApi.md
@@ -2152,6 +2157,10 @@ docs/WebhookGetListV1ResponseMPayload.md
 docs/WebhookGetObjectV2Response.md
 docs/WebhookGetObjectV2ResponseMPayload.md
 docs/WebhookListElement.md
+docs/WebhookRealestateInscriptionCreated.md
+docs/WebhookRealestateInscriptionModified.md
+docs/WebhookRealestateInscriptionnotauthenticatedCreated.md
+docs/WebhookRealestateInscriptionnotauthenticatedModified.md
 docs/WebhookRegenerateApikeyV1Request.md
 docs/WebhookRegenerateApikeyV1Response.md
 docs/WebhookRegenerateApikeyV1ResponseMPayload.md
@@ -2199,7 +2208,7 @@ src/main/java/eZmaxAPI/request/GetRequest.java
 src/main/java/eZmaxAPI/request/PatchRequest.java
 src/main/java/eZmaxAPI/request/PostRequest.java
 src/main/java/eZmaxAPI/request/PutRequest.java
-src/main/java/org/openapitools/client/api/DocumentationEzmaxpartnerApi.java
+src/main/java/org/openapitools/client/api/ExternalEzmaxpartnerApi.java
 src/main/java/org/openapitools/client/api/GlobalCustomerApi.java
 src/main/java/org/openapitools/client/api/GlobalEzmaxclientApi.java
 src/main/java/org/openapitools/client/api/GlobalEzmaxcustomerApi.java
@@ -3645,6 +3654,7 @@ src/main/java/org/openapitools/client/model/FieldEActivesessionOrigin.java
 src/main/java/org/openapitools/client/model/FieldEActivesessionRealestateinprogress.java
 src/main/java/org/openapitools/client/model/FieldEActivesessionUsertype.java
 src/main/java/org/openapitools/client/model/FieldEActivesessionWeekdaystart.java
+src/main/java/org/openapitools/client/model/FieldEAgentSchedule.java
 src/main/java/org/openapitools/client/model/FieldEAttachmentDocumenttype.java
 src/main/java/org/openapitools/client/model/FieldEAttachmentPrivacy.java
 src/main/java/org/openapitools/client/model/FieldEAttachmentType.java
@@ -3786,6 +3796,7 @@ src/main/java/org/openapitools/client/model/FieldEWebhookEzmaxpartnerevent.java
 src/main/java/org/openapitools/client/model/FieldEWebhookEzsignevent.java
 src/main/java/org/openapitools/client/model/FieldEWebhookManagementevent.java
 src/main/java/org/openapitools/client/model/FieldEWebhookModule.java
+src/main/java/org/openapitools/client/model/FieldEWebhookRealestateevent.java
 src/main/java/org/openapitools/client/model/FieldEtInscriptionnotauthenticatedMortgagetype.java
 src/main/java/org/openapitools/client/model/FieldPksEzmaxclientOs.java
 src/main/java/org/openapitools/client/model/FontAutocompleteElementResponse.java
@@ -4065,7 +4076,10 @@ src/main/java/org/openapitools/client/model/ScimGroupMember.java
 src/main/java/org/openapitools/client/model/ScimServiceProviderConfig.java
 src/main/java/org/openapitools/client/model/ScimServiceProviderConfigBulk.java
 src/main/java/org/openapitools/client/model/ScimServiceProviderConfigChangePassword.java
+src/main/java/org/openapitools/client/model/ScimServiceProviderConfigEtag.java
 src/main/java/org/openapitools/client/model/ScimServiceProviderConfigFilter.java
+src/main/java/org/openapitools/client/model/ScimServiceProviderConfigPatch.java
+src/main/java/org/openapitools/client/model/ScimServiceProviderConfigSort.java
 src/main/java/org/openapitools/client/model/ScimUser.java
 src/main/java/org/openapitools/client/model/ScimUserList.java
 src/main/java/org/openapitools/client/model/SecretquestionAutocompleteElementResponse.java
@@ -4349,6 +4363,10 @@ src/main/java/org/openapitools/client/model/WebhookGetListV1ResponseMPayload.jav
 src/main/java/org/openapitools/client/model/WebhookGetObjectV2Response.java
 src/main/java/org/openapitools/client/model/WebhookGetObjectV2ResponseMPayload.java
 src/main/java/org/openapitools/client/model/WebhookListElement.java
+src/main/java/org/openapitools/client/model/WebhookRealestateInscriptionCreated.java
+src/main/java/org/openapitools/client/model/WebhookRealestateInscriptionModified.java
+src/main/java/org/openapitools/client/model/WebhookRealestateInscriptionnotauthenticatedCreated.java
+src/main/java/org/openapitools/client/model/WebhookRealestateInscriptionnotauthenticatedModified.java
 src/main/java/org/openapitools/client/model/WebhookRegenerateApikeyV1Request.java
 src/main/java/org/openapitools/client/model/WebhookRegenerateApikeyV1Response.java
 src/main/java/org/openapitools/client/model/WebhookRegenerateApikeyV1ResponseMPayload.java

@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **eWebhookModule** | [**FieldEWebhookModule**](FieldEWebhookModule.md) |  | 
 **eWebhookEzsignevent** | [**CustomEWebhookEzsignevent**](CustomEWebhookEzsignevent.md) |  |  [optional]
 **eWebhookManagementevent** | [**FieldEWebhookManagementevent**](FieldEWebhookManagementevent.md) |  |  [optional]
+**eWebhookRealestateevent** | [**FieldEWebhookRealestateevent**](FieldEWebhookRealestateevent.md) |  |  [optional]
 **fkiEzsignfolderID** | **Integer** | The unique ID of the Ezsignfolder |  [optional]
 **fkiEzsigndocumentID** | **Integer** | The unique ID of the Ezsigndocument |  [optional]
 **fkiEzsignsignerID** | **Integer** | The unique ID of the Ezsignsigner |  [optional]

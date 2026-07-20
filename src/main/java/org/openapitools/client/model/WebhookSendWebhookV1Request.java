@@ -15,6 +15,7 @@ package org.openapitools.client.model;
 import org.openapitools.client.model.CustomEWebhookEzsignevent;
 import org.openapitools.client.model.FieldEWebhookManagementevent;
 import org.openapitools.client.model.FieldEWebhookModule;
+import org.openapitools.client.model.FieldEWebhookRealestateevent;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -30,6 +31,8 @@ public class WebhookSendWebhookV1Request {
   private CustomEWebhookEzsignevent eWebhookEzsignevent = null;
   @SerializedName("eWebhookManagementevent")
   private FieldEWebhookManagementevent eWebhookManagementevent = null;
+  @SerializedName("eWebhookRealestateevent")
+  private FieldEWebhookRealestateevent eWebhookRealestateevent = null;
   @SerializedName("fkiEzsignfolderID")
   private Integer fkiEzsignfolderID = null;
   @SerializedName("fkiEzsigndocumentID")
@@ -69,6 +72,16 @@ public class WebhookSendWebhookV1Request {
   }
   public void setEWebhookManagementevent(FieldEWebhookManagementevent eWebhookManagementevent) {
     this.eWebhookManagementevent = eWebhookManagementevent;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public FieldEWebhookRealestateevent getEWebhookRealestateevent() {
+    return eWebhookRealestateevent;
+  }
+  public void setEWebhookRealestateevent(FieldEWebhookRealestateevent eWebhookRealestateevent) {
+    this.eWebhookRealestateevent = eWebhookRealestateevent;
   }
 
   /**
@@ -145,6 +158,7 @@ public class WebhookSendWebhookV1Request {
     return (this.eWebhookModule == null ? webhookSendWebhookV1Request.eWebhookModule == null : this.eWebhookModule.equals(webhookSendWebhookV1Request.eWebhookModule)) &&
         (this.eWebhookEzsignevent == null ? webhookSendWebhookV1Request.eWebhookEzsignevent == null : this.eWebhookEzsignevent.equals(webhookSendWebhookV1Request.eWebhookEzsignevent)) &&
         (this.eWebhookManagementevent == null ? webhookSendWebhookV1Request.eWebhookManagementevent == null : this.eWebhookManagementevent.equals(webhookSendWebhookV1Request.eWebhookManagementevent)) &&
+        (this.eWebhookRealestateevent == null ? webhookSendWebhookV1Request.eWebhookRealestateevent == null : this.eWebhookRealestateevent.equals(webhookSendWebhookV1Request.eWebhookRealestateevent)) &&
         (this.fkiEzsignfolderID == null ? webhookSendWebhookV1Request.fkiEzsignfolderID == null : this.fkiEzsignfolderID.equals(webhookSendWebhookV1Request.fkiEzsignfolderID)) &&
         (this.fkiEzsigndocumentID == null ? webhookSendWebhookV1Request.fkiEzsigndocumentID == null : this.fkiEzsigndocumentID.equals(webhookSendWebhookV1Request.fkiEzsigndocumentID)) &&
         (this.fkiEzsignsignerID == null ? webhookSendWebhookV1Request.fkiEzsignsignerID == null : this.fkiEzsignsignerID.equals(webhookSendWebhookV1Request.fkiEzsignsignerID)) &&
@@ -158,6 +172,7 @@ public class WebhookSendWebhookV1Request {
     result = 31 * result + (this.eWebhookModule == null ? 0: this.eWebhookModule.hashCode());
     result = 31 * result + (this.eWebhookEzsignevent == null ? 0: this.eWebhookEzsignevent.hashCode());
     result = 31 * result + (this.eWebhookManagementevent == null ? 0: this.eWebhookManagementevent.hashCode());
+    result = 31 * result + (this.eWebhookRealestateevent == null ? 0: this.eWebhookRealestateevent.hashCode());
     result = 31 * result + (this.fkiEzsignfolderID == null ? 0: this.fkiEzsignfolderID.hashCode());
     result = 31 * result + (this.fkiEzsigndocumentID == null ? 0: this.fkiEzsigndocumentID.hashCode());
     result = 31 * result + (this.fkiEzsignsignerID == null ? 0: this.fkiEzsignsignerID.hashCode());
@@ -174,6 +189,7 @@ public class WebhookSendWebhookV1Request {
     sb.append("  eWebhookModule: ").append(eWebhookModule).append("\n");
     sb.append("  eWebhookEzsignevent: ").append(eWebhookEzsignevent).append("\n");
     sb.append("  eWebhookManagementevent: ").append(eWebhookManagementevent).append("\n");
+    sb.append("  eWebhookRealestateevent: ").append(eWebhookRealestateevent).append("\n");
     sb.append("  fkiEzsignfolderID: ").append(fkiEzsignfolderID).append("\n");
     sb.append("  fkiEzsigndocumentID: ").append(fkiEzsigndocumentID).append("\n");
     sb.append("  fkiEzsignsignerID: ").append(fkiEzsignsignerID).append("\n");

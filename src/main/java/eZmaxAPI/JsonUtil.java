@@ -5281,6 +5281,10 @@ public class JsonUtil {
       return new TypeToken<List<FieldEActivesessionWeekdaystart>>(){}.getType();
     }
     
+    if ("FieldEAgentSchedule".equalsIgnoreCase(className)) {
+      return new TypeToken<List<FieldEAgentSchedule>>(){}.getType();
+    }
+    
     if ("FieldEAttachmentDocumenttype".equalsIgnoreCase(className)) {
       return new TypeToken<List<FieldEAttachmentDocumenttype>>(){}.getType();
     }
@@ -5843,6 +5847,10 @@ public class JsonUtil {
     
     if ("FieldEWebhookModule".equalsIgnoreCase(className)) {
       return new TypeToken<List<FieldEWebhookModule>>(){}.getType();
+    }
+    
+    if ("FieldEWebhookRealestateevent".equalsIgnoreCase(className)) {
+      return new TypeToken<List<FieldEWebhookRealestateevent>>(){}.getType();
     }
     
     if ("FieldEtInscriptionnotauthenticatedMortgagetype".equalsIgnoreCase(className)) {
@@ -6961,8 +6969,20 @@ public class JsonUtil {
       return new TypeToken<List<ScimServiceProviderConfigChangePassword>>(){}.getType();
     }
     
+    if ("ScimServiceProviderConfigEtag".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ScimServiceProviderConfigEtag>>(){}.getType();
+    }
+    
     if ("ScimServiceProviderConfigFilter".equalsIgnoreCase(className)) {
       return new TypeToken<List<ScimServiceProviderConfigFilter>>(){}.getType();
+    }
+    
+    if ("ScimServiceProviderConfigPatch".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ScimServiceProviderConfigPatch>>(){}.getType();
+    }
+    
+    if ("ScimServiceProviderConfigSort".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ScimServiceProviderConfigSort>>(){}.getType();
     }
     
     if ("ScimUser".equalsIgnoreCase(className)) {
@@ -8095,6 +8115,22 @@ public class JsonUtil {
     
     if ("WebhookListElement".equalsIgnoreCase(className)) {
       return new TypeToken<List<WebhookListElement>>(){}.getType();
+    }
+    
+    if ("WebhookRealestateInscriptionCreated".equalsIgnoreCase(className)) {
+      return new TypeToken<List<WebhookRealestateInscriptionCreated>>(){}.getType();
+    }
+    
+    if ("WebhookRealestateInscriptionModified".equalsIgnoreCase(className)) {
+      return new TypeToken<List<WebhookRealestateInscriptionModified>>(){}.getType();
+    }
+    
+    if ("WebhookRealestateInscriptionnotauthenticatedCreated".equalsIgnoreCase(className)) {
+      return new TypeToken<List<WebhookRealestateInscriptionnotauthenticatedCreated>>(){}.getType();
+    }
+    
+    if ("WebhookRealestateInscriptionnotauthenticatedModified".equalsIgnoreCase(className)) {
+      return new TypeToken<List<WebhookRealestateInscriptionnotauthenticatedModified>>(){}.getType();
     }
     
     if ("WebhookRegenerateApikeyV1Request".equalsIgnoreCase(className)) {
@@ -13435,6 +13471,10 @@ public class JsonUtil {
       return new TypeToken<FieldEActivesessionWeekdaystart>(){}.getType();
     }
     
+    if ("FieldEAgentSchedule".equalsIgnoreCase(className)) {
+      return new TypeToken<FieldEAgentSchedule>(){}.getType();
+    }
+    
     if ("FieldEAttachmentDocumenttype".equalsIgnoreCase(className)) {
       return new TypeToken<FieldEAttachmentDocumenttype>(){}.getType();
     }
@@ -13997,6 +14037,10 @@ public class JsonUtil {
     
     if ("FieldEWebhookModule".equalsIgnoreCase(className)) {
       return new TypeToken<FieldEWebhookModule>(){}.getType();
+    }
+    
+    if ("FieldEWebhookRealestateevent".equalsIgnoreCase(className)) {
+      return new TypeToken<FieldEWebhookRealestateevent>(){}.getType();
     }
     
     if ("FieldEtInscriptionnotauthenticatedMortgagetype".equalsIgnoreCase(className)) {
@@ -15115,8 +15159,20 @@ public class JsonUtil {
       return new TypeToken<ScimServiceProviderConfigChangePassword>(){}.getType();
     }
     
+    if ("ScimServiceProviderConfigEtag".equalsIgnoreCase(className)) {
+      return new TypeToken<ScimServiceProviderConfigEtag>(){}.getType();
+    }
+    
     if ("ScimServiceProviderConfigFilter".equalsIgnoreCase(className)) {
       return new TypeToken<ScimServiceProviderConfigFilter>(){}.getType();
+    }
+    
+    if ("ScimServiceProviderConfigPatch".equalsIgnoreCase(className)) {
+      return new TypeToken<ScimServiceProviderConfigPatch>(){}.getType();
+    }
+    
+    if ("ScimServiceProviderConfigSort".equalsIgnoreCase(className)) {
+      return new TypeToken<ScimServiceProviderConfigSort>(){}.getType();
     }
     
     if ("ScimUser".equalsIgnoreCase(className)) {
@@ -16249,6 +16305,22 @@ public class JsonUtil {
     
     if ("WebhookListElement".equalsIgnoreCase(className)) {
       return new TypeToken<WebhookListElement>(){}.getType();
+    }
+    
+    if ("WebhookRealestateInscriptionCreated".equalsIgnoreCase(className)) {
+      return new TypeToken<WebhookRealestateInscriptionCreated>(){}.getType();
+    }
+    
+    if ("WebhookRealestateInscriptionModified".equalsIgnoreCase(className)) {
+      return new TypeToken<WebhookRealestateInscriptionModified>(){}.getType();
+    }
+    
+    if ("WebhookRealestateInscriptionnotauthenticatedCreated".equalsIgnoreCase(className)) {
+      return new TypeToken<WebhookRealestateInscriptionnotauthenticatedCreated>(){}.getType();
+    }
+    
+    if ("WebhookRealestateInscriptionnotauthenticatedModified".equalsIgnoreCase(className)) {
+      return new TypeToken<WebhookRealestateInscriptionnotauthenticatedModified>(){}.getType();
     }
     
     if ("WebhookRegenerateApikeyV1Request".equalsIgnoreCase(className)) {

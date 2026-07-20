@@ -15,6 +15,7 @@ package org.openapitools.client.model;
 import org.openapitools.client.model.FieldEWebhookEzsignevent;
 import org.openapitools.client.model.FieldEWebhookManagementevent;
 import org.openapitools.client.model.FieldEWebhookModule;
+import org.openapitools.client.model.FieldEWebhookRealestateevent;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -38,6 +39,8 @@ public class WebhookRequest {
   private FieldEWebhookEzsignevent eWebhookEzsignevent = null;
   @SerializedName("eWebhookManagementevent")
   private FieldEWebhookManagementevent eWebhookManagementevent = null;
+  @SerializedName("eWebhookRealestateevent")
+  private FieldEWebhookRealestateevent eWebhookRealestateevent = null;
   @SerializedName("sWebhookUrl")
   private String sWebhookUrl = null;
   @SerializedName("sWebhookEmailfailed")
@@ -128,6 +131,16 @@ public class WebhookRequest {
   }
 
   /**
+   **/
+  @ApiModelProperty(value = "")
+  public FieldEWebhookRealestateevent getEWebhookRealestateevent() {
+    return eWebhookRealestateevent;
+  }
+  public void setEWebhookRealestateevent(FieldEWebhookRealestateevent eWebhookRealestateevent) {
+    this.eWebhookRealestateevent = eWebhookRealestateevent;
+  }
+
+  /**
    * The URL of the Webhook callback
    **/
   @ApiModelProperty(required = true, value = "The URL of the Webhook callback")
@@ -199,6 +212,7 @@ public class WebhookRequest {
         (this.eWebhookModule == null ? webhookRequest.eWebhookModule == null : this.eWebhookModule.equals(webhookRequest.eWebhookModule)) &&
         (this.eWebhookEzsignevent == null ? webhookRequest.eWebhookEzsignevent == null : this.eWebhookEzsignevent.equals(webhookRequest.eWebhookEzsignevent)) &&
         (this.eWebhookManagementevent == null ? webhookRequest.eWebhookManagementevent == null : this.eWebhookManagementevent.equals(webhookRequest.eWebhookManagementevent)) &&
+        (this.eWebhookRealestateevent == null ? webhookRequest.eWebhookRealestateevent == null : this.eWebhookRealestateevent.equals(webhookRequest.eWebhookRealestateevent)) &&
         (this.sWebhookUrl == null ? webhookRequest.sWebhookUrl == null : this.sWebhookUrl.equals(webhookRequest.sWebhookUrl)) &&
         (this.sWebhookEmailfailed == null ? webhookRequest.sWebhookEmailfailed == null : this.sWebhookEmailfailed.equals(webhookRequest.sWebhookEmailfailed)) &&
         (this.bWebhookIsactive == null ? webhookRequest.bWebhookIsactive == null : this.bWebhookIsactive.equals(webhookRequest.bWebhookIsactive)) &&
@@ -216,6 +230,7 @@ public class WebhookRequest {
     result = 31 * result + (this.eWebhookModule == null ? 0: this.eWebhookModule.hashCode());
     result = 31 * result + (this.eWebhookEzsignevent == null ? 0: this.eWebhookEzsignevent.hashCode());
     result = 31 * result + (this.eWebhookManagementevent == null ? 0: this.eWebhookManagementevent.hashCode());
+    result = 31 * result + (this.eWebhookRealestateevent == null ? 0: this.eWebhookRealestateevent.hashCode());
     result = 31 * result + (this.sWebhookUrl == null ? 0: this.sWebhookUrl.hashCode());
     result = 31 * result + (this.sWebhookEmailfailed == null ? 0: this.sWebhookEmailfailed.hashCode());
     result = 31 * result + (this.bWebhookIsactive == null ? 0: this.bWebhookIsactive.hashCode());
@@ -236,6 +251,7 @@ public class WebhookRequest {
     sb.append("  eWebhookModule: ").append(eWebhookModule).append("\n");
     sb.append("  eWebhookEzsignevent: ").append(eWebhookEzsignevent).append("\n");
     sb.append("  eWebhookManagementevent: ").append(eWebhookManagementevent).append("\n");
+    sb.append("  eWebhookRealestateevent: ").append(eWebhookRealestateevent).append("\n");
     sb.append("  sWebhookUrl: ").append(sWebhookUrl).append("\n");
     sb.append("  sWebhookEmailfailed: ").append(sWebhookEmailfailed).append("\n");
     sb.append("  bWebhookIsactive: ").append(bWebhookIsactive).append("\n");

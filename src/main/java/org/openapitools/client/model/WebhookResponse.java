@@ -17,6 +17,7 @@ import org.openapitools.client.model.FieldEWebhookEzmaxpartnerevent;
 import org.openapitools.client.model.FieldEWebhookEzsignevent;
 import org.openapitools.client.model.FieldEWebhookManagementevent;
 import org.openapitools.client.model.FieldEWebhookModule;
+import org.openapitools.client.model.FieldEWebhookRealestateevent;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -44,6 +45,8 @@ public class WebhookResponse {
   private FieldEWebhookEzsignevent eWebhookEzsignevent = null;
   @SerializedName("eWebhookManagementevent")
   private FieldEWebhookManagementevent eWebhookManagementevent = null;
+  @SerializedName("eWebhookRealestateevent")
+  private FieldEWebhookRealestateevent eWebhookRealestateevent = null;
   @SerializedName("sWebhookUrl")
   private String sWebhookUrl = null;
   @SerializedName("sWebhookEmailfailed")
@@ -163,6 +166,16 @@ public class WebhookResponse {
   }
 
   /**
+   **/
+  @ApiModelProperty(value = "")
+  public FieldEWebhookRealestateevent getEWebhookRealestateevent() {
+    return eWebhookRealestateevent;
+  }
+  public void setEWebhookRealestateevent(FieldEWebhookRealestateevent eWebhookRealestateevent) {
+    this.eWebhookRealestateevent = eWebhookRealestateevent;
+  }
+
+  /**
    * The URL of the Webhook callback
    **/
   @ApiModelProperty(required = true, value = "The URL of the Webhook callback")
@@ -279,6 +292,7 @@ public class WebhookResponse {
         (this.eWebhookEzmaxpartnerevent == null ? webhookResponse.eWebhookEzmaxpartnerevent == null : this.eWebhookEzmaxpartnerevent.equals(webhookResponse.eWebhookEzmaxpartnerevent)) &&
         (this.eWebhookEzsignevent == null ? webhookResponse.eWebhookEzsignevent == null : this.eWebhookEzsignevent.equals(webhookResponse.eWebhookEzsignevent)) &&
         (this.eWebhookManagementevent == null ? webhookResponse.eWebhookManagementevent == null : this.eWebhookManagementevent.equals(webhookResponse.eWebhookManagementevent)) &&
+        (this.eWebhookRealestateevent == null ? webhookResponse.eWebhookRealestateevent == null : this.eWebhookRealestateevent.equals(webhookResponse.eWebhookRealestateevent)) &&
         (this.sWebhookUrl == null ? webhookResponse.sWebhookUrl == null : this.sWebhookUrl.equals(webhookResponse.sWebhookUrl)) &&
         (this.sWebhookEmailfailed == null ? webhookResponse.sWebhookEmailfailed == null : this.sWebhookEmailfailed.equals(webhookResponse.sWebhookEmailfailed)) &&
         (this.sWebhookApikey == null ? webhookResponse.sWebhookApikey == null : this.sWebhookApikey.equals(webhookResponse.sWebhookApikey)) &&
@@ -302,6 +316,7 @@ public class WebhookResponse {
     result = 31 * result + (this.eWebhookEzmaxpartnerevent == null ? 0: this.eWebhookEzmaxpartnerevent.hashCode());
     result = 31 * result + (this.eWebhookEzsignevent == null ? 0: this.eWebhookEzsignevent.hashCode());
     result = 31 * result + (this.eWebhookManagementevent == null ? 0: this.eWebhookManagementevent.hashCode());
+    result = 31 * result + (this.eWebhookRealestateevent == null ? 0: this.eWebhookRealestateevent.hashCode());
     result = 31 * result + (this.sWebhookUrl == null ? 0: this.sWebhookUrl.hashCode());
     result = 31 * result + (this.sWebhookEmailfailed == null ? 0: this.sWebhookEmailfailed.hashCode());
     result = 31 * result + (this.sWebhookApikey == null ? 0: this.sWebhookApikey.hashCode());
@@ -328,6 +343,7 @@ public class WebhookResponse {
     sb.append("  eWebhookEzmaxpartnerevent: ").append(eWebhookEzmaxpartnerevent).append("\n");
     sb.append("  eWebhookEzsignevent: ").append(eWebhookEzsignevent).append("\n");
     sb.append("  eWebhookManagementevent: ").append(eWebhookManagementevent).append("\n");
+    sb.append("  eWebhookRealestateevent: ").append(eWebhookRealestateevent).append("\n");
     sb.append("  sWebhookUrl: ").append(sWebhookUrl).append("\n");
     sb.append("  sWebhookEmailfailed: ").append(sWebhookEmailfailed).append("\n");
     sb.append("  sWebhookApikey: ").append(sWebhookApikey).append("\n");

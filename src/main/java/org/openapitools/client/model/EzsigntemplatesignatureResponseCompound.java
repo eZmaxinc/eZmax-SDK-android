@@ -50,6 +50,8 @@ public class EzsigntemplatesignatureResponseCompound {
   private Boolean bEzsigntemplatesignatureHandwritten = null;
   @SerializedName("bEzsigntemplatesignatureReason")
   private Boolean bEzsigntemplatesignatureReason = null;
+  @SerializedName("bEzsigntemplatesignatureCreditcardcustomamount")
+  private Boolean bEzsigntemplatesignatureCreditcardcustomamount = null;
   @SerializedName("eEzsigntemplatesignaturePositioning")
   private FieldEEzsigntemplatesignaturePositioning eEzsigntemplatesignaturePositioning = null;
   @SerializedName("iEzsigntemplatedocumentpagePagenumber")
@@ -200,6 +202,17 @@ public class EzsigntemplatesignatureResponseCompound {
   }
   public void setBEzsigntemplatesignatureReason(Boolean bEzsigntemplatesignatureReason) {
     this.bEzsigntemplatesignatureReason = bEzsigntemplatesignatureReason;
+  }
+
+  /**
+   * Whether we can enter a custom amount while signing an Ezsigntemplatesignature 'Creditcard' or not
+   **/
+  @ApiModelProperty(value = "Whether we can enter a custom amount while signing an Ezsigntemplatesignature 'Creditcard' or not")
+  public Boolean getBEzsigntemplatesignatureCreditcardcustomamount() {
+    return bEzsigntemplatesignatureCreditcardcustomamount;
+  }
+  public void setBEzsigntemplatesignatureCreditcardcustomamount(Boolean bEzsigntemplatesignatureCreditcardcustomamount) {
+    this.bEzsigntemplatesignatureCreditcardcustomamount = bEzsigntemplatesignatureCreditcardcustomamount;
   }
 
   /**
@@ -588,6 +601,7 @@ public class EzsigntemplatesignatureResponseCompound {
         (this.fkiPaymentgatewayID == null ? ezsigntemplatesignatureResponseCompound.fkiPaymentgatewayID == null : this.fkiPaymentgatewayID.equals(ezsigntemplatesignatureResponseCompound.fkiPaymentgatewayID)) &&
         (this.bEzsigntemplatesignatureHandwritten == null ? ezsigntemplatesignatureResponseCompound.bEzsigntemplatesignatureHandwritten == null : this.bEzsigntemplatesignatureHandwritten.equals(ezsigntemplatesignatureResponseCompound.bEzsigntemplatesignatureHandwritten)) &&
         (this.bEzsigntemplatesignatureReason == null ? ezsigntemplatesignatureResponseCompound.bEzsigntemplatesignatureReason == null : this.bEzsigntemplatesignatureReason.equals(ezsigntemplatesignatureResponseCompound.bEzsigntemplatesignatureReason)) &&
+        (this.bEzsigntemplatesignatureCreditcardcustomamount == null ? ezsigntemplatesignatureResponseCompound.bEzsigntemplatesignatureCreditcardcustomamount == null : this.bEzsigntemplatesignatureCreditcardcustomamount.equals(ezsigntemplatesignatureResponseCompound.bEzsigntemplatesignatureCreditcardcustomamount)) &&
         (this.eEzsigntemplatesignaturePositioning == null ? ezsigntemplatesignatureResponseCompound.eEzsigntemplatesignaturePositioning == null : this.eEzsigntemplatesignaturePositioning.equals(ezsigntemplatesignatureResponseCompound.eEzsigntemplatesignaturePositioning)) &&
         (this.iEzsigntemplatedocumentpagePagenumber == null ? ezsigntemplatesignatureResponseCompound.iEzsigntemplatedocumentpagePagenumber == null : this.iEzsigntemplatedocumentpagePagenumber.equals(ezsigntemplatesignatureResponseCompound.iEzsigntemplatedocumentpagePagenumber)) &&
         (this.iEzsigntemplatesignatureX == null ? ezsigntemplatesignatureResponseCompound.iEzsigntemplatesignatureX == null : this.iEzsigntemplatesignatureX.equals(ezsigntemplatesignatureResponseCompound.iEzsigntemplatesignatureX)) &&
@@ -634,6 +648,7 @@ public class EzsigntemplatesignatureResponseCompound {
     result = 31 * result + (this.fkiPaymentgatewayID == null ? 0: this.fkiPaymentgatewayID.hashCode());
     result = 31 * result + (this.bEzsigntemplatesignatureHandwritten == null ? 0: this.bEzsigntemplatesignatureHandwritten.hashCode());
     result = 31 * result + (this.bEzsigntemplatesignatureReason == null ? 0: this.bEzsigntemplatesignatureReason.hashCode());
+    result = 31 * result + (this.bEzsigntemplatesignatureCreditcardcustomamount == null ? 0: this.bEzsigntemplatesignatureCreditcardcustomamount.hashCode());
     result = 31 * result + (this.eEzsigntemplatesignaturePositioning == null ? 0: this.eEzsigntemplatesignaturePositioning.hashCode());
     result = 31 * result + (this.iEzsigntemplatedocumentpagePagenumber == null ? 0: this.iEzsigntemplatedocumentpagePagenumber.hashCode());
     result = 31 * result + (this.iEzsigntemplatesignatureX == null ? 0: this.iEzsigntemplatesignatureX.hashCode());
@@ -683,6 +698,7 @@ public class EzsigntemplatesignatureResponseCompound {
     sb.append("  fkiPaymentgatewayID: ").append(fkiPaymentgatewayID).append("\n");
     sb.append("  bEzsigntemplatesignatureHandwritten: ").append(bEzsigntemplatesignatureHandwritten).append("\n");
     sb.append("  bEzsigntemplatesignatureReason: ").append(bEzsigntemplatesignatureReason).append("\n");
+    sb.append("  bEzsigntemplatesignatureCreditcardcustomamount: ").append(bEzsigntemplatesignatureCreditcardcustomamount).append("\n");
     sb.append("  eEzsigntemplatesignaturePositioning: ").append(eEzsigntemplatesignaturePositioning).append("\n");
     sb.append("  iEzsigntemplatedocumentpagePagenumber: ").append(iEzsigntemplatedocumentpagePagenumber).append("\n");
     sb.append("  iEzsigntemplatesignatureX: ").append(iEzsigntemplatesignatureX).append("\n");

@@ -9,10 +9,15 @@ Name | Type | Description | Notes
 **pkiInscriptionID** | **Integer** | The unique ID of the Inscription. | 
 **pkiInscriptionnotauthenticatedID** | **Integer** | The unique ID of the Inscriptionnotauthenticated. |  [optional]
 **fkiInscriptiontypeID** | **Integer** | The unique ID of the Inscriptiontype | 
+**sInscriptiontypeNameX** | **String** | The name of the Inscriptiontype in the language of the requester | 
+**fkiInscriptionbuildingtypeID** | **Integer** | The unique ID of the Inscriptionbuildingtype | 
+**sInscriptionbuildingtypeNameX** | **String** | The name of the Inscriptionbuildingtype in the language of the requester | 
+**fkiInscriptioncategoryID** | **Integer** | The unique ID of the Inscriptioncategory | 
+**sInscriptioncategoryNameX** | **String** | The name of the Inscriptioncategory in the language of the requester | 
 **fkiBuyercontractID** | **Integer** | The unique ID of the Buyercontract |  [optional]
 **sBuyercontractContract** | **String** | The number of the Buyercontract |  [optional]
-**sInscriptiontypeNameX** | **String** | The name of the Inscriptiontype in the language of the requester | 
 **eInscriptionStep** | [**FieldEInscriptionStep**](FieldEInscriptionStep.md) |  | 
+**eInscriptionType** | [**FieldEInscriptionType**](FieldEInscriptionType.md) |  | 
 **sInscriptionCivicend** | **String** | The civicend of the Inscription | 
 **sInscriptionMLS** | **String** | The mls of the Inscription |  [optional]
 **sInscriptionContract** | **String** | The sale contract number |  [optional]
@@ -39,6 +44,7 @@ Name | Type | Description | Notes
 **fkiCountryID** | **Integer** | The unique ID of the Country.  Here are some common values (Complete list must be retrieved from API):  |Value|Description| |-|-| |1|Canada| |2|United-States| |  [optional]
 **sCountryNameX** | **String** | The name of the Country in the language of the requester |  [optional]
 **iInscriptionnotauthenticatedCanceled** | **Integer** | The numbre of inscriptionnotauthenticated was canceled in this Inscription | 
+**iInscriptionUnit** | **Integer** | The unit of the Inscription | 
 **bAllowedCopyintoinscriptionedm** | **Boolean** | Whether we are allowed to copy into the Inscription EDM | 
 
 

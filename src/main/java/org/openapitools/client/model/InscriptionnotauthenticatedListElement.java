@@ -13,6 +13,7 @@
 package org.openapitools.client.model;
 
 import org.openapitools.client.model.FieldEInscriptionStep;
+import org.openapitools.client.model.FieldEInscriptionType;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -28,14 +29,24 @@ public class InscriptionnotauthenticatedListElement {
   private Integer pkiInscriptionnotauthenticatedID = null;
   @SerializedName("fkiInscriptiontypeID")
   private Integer fkiInscriptiontypeID = null;
+  @SerializedName("sInscriptiontypeNameX")
+  private String sInscriptiontypeNameX = null;
+  @SerializedName("fkiInscriptionbuildingtypeID")
+  private Integer fkiInscriptionbuildingtypeID = null;
+  @SerializedName("sInscriptionbuildingtypeNameX")
+  private String sInscriptionbuildingtypeNameX = null;
+  @SerializedName("fkiInscriptioncategoryID")
+  private Integer fkiInscriptioncategoryID = null;
+  @SerializedName("sInscriptioncategoryNameX")
+  private String sInscriptioncategoryNameX = null;
   @SerializedName("fkiBuyercontractID")
   private Integer fkiBuyercontractID = null;
   @SerializedName("sBuyercontractContract")
   private String sBuyercontractContract = null;
-  @SerializedName("sInscriptiontypeNameX")
-  private String sInscriptiontypeNameX = null;
   @SerializedName("eInscriptionStep")
   private FieldEInscriptionStep eInscriptionStep = null;
+  @SerializedName("eInscriptionType")
+  private FieldEInscriptionType eInscriptionType = null;
   @SerializedName("sInscriptionCivicend")
   private String sInscriptionCivicend = null;
   @SerializedName("sInscriptionMLS")
@@ -90,6 +101,8 @@ public class InscriptionnotauthenticatedListElement {
   private String sCountryNameX = null;
   @SerializedName("sInscriptionnotauthenticatedOffertopurchasenumber")
   private String sInscriptionnotauthenticatedOffertopurchasenumber = null;
+  @SerializedName("iInscriptionUnit")
+  private Integer iInscriptionUnit = null;
 
   /**
    * The unique ID of the Inscription.
@@ -129,6 +142,65 @@ public class InscriptionnotauthenticatedListElement {
   }
 
   /**
+   * The name of the Inscriptiontype in the language of the requester
+   **/
+  @ApiModelProperty(required = true, value = "The name of the Inscriptiontype in the language of the requester")
+  public String getSInscriptiontypeNameX() {
+    return sInscriptiontypeNameX;
+  }
+  public void setSInscriptiontypeNameX(String sInscriptiontypeNameX) {
+    this.sInscriptiontypeNameX = sInscriptiontypeNameX;
+  }
+
+  /**
+   * The unique ID of the Inscriptionbuildingtype
+   * minimum: 0
+   * maximum: 255
+   **/
+  @ApiModelProperty(required = true, value = "The unique ID of the Inscriptionbuildingtype")
+  public Integer getFkiInscriptionbuildingtypeID() {
+    return fkiInscriptionbuildingtypeID;
+  }
+  public void setFkiInscriptionbuildingtypeID(Integer fkiInscriptionbuildingtypeID) {
+    this.fkiInscriptionbuildingtypeID = fkiInscriptionbuildingtypeID;
+  }
+
+  /**
+   * The name of the Inscriptionbuildingtype in the language of the requester
+   **/
+  @ApiModelProperty(required = true, value = "The name of the Inscriptionbuildingtype in the language of the requester")
+  public String getSInscriptionbuildingtypeNameX() {
+    return sInscriptionbuildingtypeNameX;
+  }
+  public void setSInscriptionbuildingtypeNameX(String sInscriptionbuildingtypeNameX) {
+    this.sInscriptionbuildingtypeNameX = sInscriptionbuildingtypeNameX;
+  }
+
+  /**
+   * The unique ID of the Inscriptioncategory
+   * minimum: 0
+   * maximum: 255
+   **/
+  @ApiModelProperty(required = true, value = "The unique ID of the Inscriptioncategory")
+  public Integer getFkiInscriptioncategoryID() {
+    return fkiInscriptioncategoryID;
+  }
+  public void setFkiInscriptioncategoryID(Integer fkiInscriptioncategoryID) {
+    this.fkiInscriptioncategoryID = fkiInscriptioncategoryID;
+  }
+
+  /**
+   * The name of the Inscriptioncategory in the language of the requester
+   **/
+  @ApiModelProperty(required = true, value = "The name of the Inscriptioncategory in the language of the requester")
+  public String getSInscriptioncategoryNameX() {
+    return sInscriptioncategoryNameX;
+  }
+  public void setSInscriptioncategoryNameX(String sInscriptioncategoryNameX) {
+    this.sInscriptioncategoryNameX = sInscriptioncategoryNameX;
+  }
+
+  /**
    * The unique ID of the Buyercontract
    * minimum: 1
    * maximum: 65535
@@ -153,17 +225,6 @@ public class InscriptionnotauthenticatedListElement {
   }
 
   /**
-   * The name of the Inscriptiontype in the language of the requester
-   **/
-  @ApiModelProperty(required = true, value = "The name of the Inscriptiontype in the language of the requester")
-  public String getSInscriptiontypeNameX() {
-    return sInscriptiontypeNameX;
-  }
-  public void setSInscriptiontypeNameX(String sInscriptiontypeNameX) {
-    this.sInscriptiontypeNameX = sInscriptiontypeNameX;
-  }
-
-  /**
    **/
   @ApiModelProperty(required = true, value = "")
   public FieldEInscriptionStep getEInscriptionStep() {
@@ -171,6 +232,16 @@ public class InscriptionnotauthenticatedListElement {
   }
   public void setEInscriptionStep(FieldEInscriptionStep eInscriptionStep) {
     this.eInscriptionStep = eInscriptionStep;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public FieldEInscriptionType getEInscriptionType() {
+    return eInscriptionType;
+  }
+  public void setEInscriptionType(FieldEInscriptionType eInscriptionType) {
+    this.eInscriptionType = eInscriptionType;
   }
 
   /**
@@ -472,6 +543,19 @@ public class InscriptionnotauthenticatedListElement {
     this.sInscriptionnotauthenticatedOffertopurchasenumber = sInscriptionnotauthenticatedOffertopurchasenumber;
   }
 
+  /**
+   * The unit of the Inscription
+   * minimum: 0
+   * maximum: 255
+   **/
+  @ApiModelProperty(required = true, value = "The unit of the Inscription")
+  public Integer getIInscriptionUnit() {
+    return iInscriptionUnit;
+  }
+  public void setIInscriptionUnit(Integer iInscriptionUnit) {
+    this.iInscriptionUnit = iInscriptionUnit;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -485,10 +569,15 @@ public class InscriptionnotauthenticatedListElement {
     return (this.pkiInscriptionID == null ? inscriptionnotauthenticatedListElement.pkiInscriptionID == null : this.pkiInscriptionID.equals(inscriptionnotauthenticatedListElement.pkiInscriptionID)) &&
         (this.pkiInscriptionnotauthenticatedID == null ? inscriptionnotauthenticatedListElement.pkiInscriptionnotauthenticatedID == null : this.pkiInscriptionnotauthenticatedID.equals(inscriptionnotauthenticatedListElement.pkiInscriptionnotauthenticatedID)) &&
         (this.fkiInscriptiontypeID == null ? inscriptionnotauthenticatedListElement.fkiInscriptiontypeID == null : this.fkiInscriptiontypeID.equals(inscriptionnotauthenticatedListElement.fkiInscriptiontypeID)) &&
+        (this.sInscriptiontypeNameX == null ? inscriptionnotauthenticatedListElement.sInscriptiontypeNameX == null : this.sInscriptiontypeNameX.equals(inscriptionnotauthenticatedListElement.sInscriptiontypeNameX)) &&
+        (this.fkiInscriptionbuildingtypeID == null ? inscriptionnotauthenticatedListElement.fkiInscriptionbuildingtypeID == null : this.fkiInscriptionbuildingtypeID.equals(inscriptionnotauthenticatedListElement.fkiInscriptionbuildingtypeID)) &&
+        (this.sInscriptionbuildingtypeNameX == null ? inscriptionnotauthenticatedListElement.sInscriptionbuildingtypeNameX == null : this.sInscriptionbuildingtypeNameX.equals(inscriptionnotauthenticatedListElement.sInscriptionbuildingtypeNameX)) &&
+        (this.fkiInscriptioncategoryID == null ? inscriptionnotauthenticatedListElement.fkiInscriptioncategoryID == null : this.fkiInscriptioncategoryID.equals(inscriptionnotauthenticatedListElement.fkiInscriptioncategoryID)) &&
+        (this.sInscriptioncategoryNameX == null ? inscriptionnotauthenticatedListElement.sInscriptioncategoryNameX == null : this.sInscriptioncategoryNameX.equals(inscriptionnotauthenticatedListElement.sInscriptioncategoryNameX)) &&
         (this.fkiBuyercontractID == null ? inscriptionnotauthenticatedListElement.fkiBuyercontractID == null : this.fkiBuyercontractID.equals(inscriptionnotauthenticatedListElement.fkiBuyercontractID)) &&
         (this.sBuyercontractContract == null ? inscriptionnotauthenticatedListElement.sBuyercontractContract == null : this.sBuyercontractContract.equals(inscriptionnotauthenticatedListElement.sBuyercontractContract)) &&
-        (this.sInscriptiontypeNameX == null ? inscriptionnotauthenticatedListElement.sInscriptiontypeNameX == null : this.sInscriptiontypeNameX.equals(inscriptionnotauthenticatedListElement.sInscriptiontypeNameX)) &&
         (this.eInscriptionStep == null ? inscriptionnotauthenticatedListElement.eInscriptionStep == null : this.eInscriptionStep.equals(inscriptionnotauthenticatedListElement.eInscriptionStep)) &&
+        (this.eInscriptionType == null ? inscriptionnotauthenticatedListElement.eInscriptionType == null : this.eInscriptionType.equals(inscriptionnotauthenticatedListElement.eInscriptionType)) &&
         (this.sInscriptionCivicend == null ? inscriptionnotauthenticatedListElement.sInscriptionCivicend == null : this.sInscriptionCivicend.equals(inscriptionnotauthenticatedListElement.sInscriptionCivicend)) &&
         (this.sInscriptionMLS == null ? inscriptionnotauthenticatedListElement.sInscriptionMLS == null : this.sInscriptionMLS.equals(inscriptionnotauthenticatedListElement.sInscriptionMLS)) &&
         (this.sInscriptionContract == null ? inscriptionnotauthenticatedListElement.sInscriptionContract == null : this.sInscriptionContract.equals(inscriptionnotauthenticatedListElement.sInscriptionContract)) &&
@@ -515,7 +604,8 @@ public class InscriptionnotauthenticatedListElement {
         (this.sProvinceNameX == null ? inscriptionnotauthenticatedListElement.sProvinceNameX == null : this.sProvinceNameX.equals(inscriptionnotauthenticatedListElement.sProvinceNameX)) &&
         (this.fkiCountryID == null ? inscriptionnotauthenticatedListElement.fkiCountryID == null : this.fkiCountryID.equals(inscriptionnotauthenticatedListElement.fkiCountryID)) &&
         (this.sCountryNameX == null ? inscriptionnotauthenticatedListElement.sCountryNameX == null : this.sCountryNameX.equals(inscriptionnotauthenticatedListElement.sCountryNameX)) &&
-        (this.sInscriptionnotauthenticatedOffertopurchasenumber == null ? inscriptionnotauthenticatedListElement.sInscriptionnotauthenticatedOffertopurchasenumber == null : this.sInscriptionnotauthenticatedOffertopurchasenumber.equals(inscriptionnotauthenticatedListElement.sInscriptionnotauthenticatedOffertopurchasenumber));
+        (this.sInscriptionnotauthenticatedOffertopurchasenumber == null ? inscriptionnotauthenticatedListElement.sInscriptionnotauthenticatedOffertopurchasenumber == null : this.sInscriptionnotauthenticatedOffertopurchasenumber.equals(inscriptionnotauthenticatedListElement.sInscriptionnotauthenticatedOffertopurchasenumber)) &&
+        (this.iInscriptionUnit == null ? inscriptionnotauthenticatedListElement.iInscriptionUnit == null : this.iInscriptionUnit.equals(inscriptionnotauthenticatedListElement.iInscriptionUnit));
   }
 
   @Override
@@ -524,10 +614,15 @@ public class InscriptionnotauthenticatedListElement {
     result = 31 * result + (this.pkiInscriptionID == null ? 0: this.pkiInscriptionID.hashCode());
     result = 31 * result + (this.pkiInscriptionnotauthenticatedID == null ? 0: this.pkiInscriptionnotauthenticatedID.hashCode());
     result = 31 * result + (this.fkiInscriptiontypeID == null ? 0: this.fkiInscriptiontypeID.hashCode());
+    result = 31 * result + (this.sInscriptiontypeNameX == null ? 0: this.sInscriptiontypeNameX.hashCode());
+    result = 31 * result + (this.fkiInscriptionbuildingtypeID == null ? 0: this.fkiInscriptionbuildingtypeID.hashCode());
+    result = 31 * result + (this.sInscriptionbuildingtypeNameX == null ? 0: this.sInscriptionbuildingtypeNameX.hashCode());
+    result = 31 * result + (this.fkiInscriptioncategoryID == null ? 0: this.fkiInscriptioncategoryID.hashCode());
+    result = 31 * result + (this.sInscriptioncategoryNameX == null ? 0: this.sInscriptioncategoryNameX.hashCode());
     result = 31 * result + (this.fkiBuyercontractID == null ? 0: this.fkiBuyercontractID.hashCode());
     result = 31 * result + (this.sBuyercontractContract == null ? 0: this.sBuyercontractContract.hashCode());
-    result = 31 * result + (this.sInscriptiontypeNameX == null ? 0: this.sInscriptiontypeNameX.hashCode());
     result = 31 * result + (this.eInscriptionStep == null ? 0: this.eInscriptionStep.hashCode());
+    result = 31 * result + (this.eInscriptionType == null ? 0: this.eInscriptionType.hashCode());
     result = 31 * result + (this.sInscriptionCivicend == null ? 0: this.sInscriptionCivicend.hashCode());
     result = 31 * result + (this.sInscriptionMLS == null ? 0: this.sInscriptionMLS.hashCode());
     result = 31 * result + (this.sInscriptionContract == null ? 0: this.sInscriptionContract.hashCode());
@@ -555,6 +650,7 @@ public class InscriptionnotauthenticatedListElement {
     result = 31 * result + (this.fkiCountryID == null ? 0: this.fkiCountryID.hashCode());
     result = 31 * result + (this.sCountryNameX == null ? 0: this.sCountryNameX.hashCode());
     result = 31 * result + (this.sInscriptionnotauthenticatedOffertopurchasenumber == null ? 0: this.sInscriptionnotauthenticatedOffertopurchasenumber.hashCode());
+    result = 31 * result + (this.iInscriptionUnit == null ? 0: this.iInscriptionUnit.hashCode());
     return result;
   }
 
@@ -566,10 +662,15 @@ public class InscriptionnotauthenticatedListElement {
     sb.append("  pkiInscriptionID: ").append(pkiInscriptionID).append("\n");
     sb.append("  pkiInscriptionnotauthenticatedID: ").append(pkiInscriptionnotauthenticatedID).append("\n");
     sb.append("  fkiInscriptiontypeID: ").append(fkiInscriptiontypeID).append("\n");
+    sb.append("  sInscriptiontypeNameX: ").append(sInscriptiontypeNameX).append("\n");
+    sb.append("  fkiInscriptionbuildingtypeID: ").append(fkiInscriptionbuildingtypeID).append("\n");
+    sb.append("  sInscriptionbuildingtypeNameX: ").append(sInscriptionbuildingtypeNameX).append("\n");
+    sb.append("  fkiInscriptioncategoryID: ").append(fkiInscriptioncategoryID).append("\n");
+    sb.append("  sInscriptioncategoryNameX: ").append(sInscriptioncategoryNameX).append("\n");
     sb.append("  fkiBuyercontractID: ").append(fkiBuyercontractID).append("\n");
     sb.append("  sBuyercontractContract: ").append(sBuyercontractContract).append("\n");
-    sb.append("  sInscriptiontypeNameX: ").append(sInscriptiontypeNameX).append("\n");
     sb.append("  eInscriptionStep: ").append(eInscriptionStep).append("\n");
+    sb.append("  eInscriptionType: ").append(eInscriptionType).append("\n");
     sb.append("  sInscriptionCivicend: ").append(sInscriptionCivicend).append("\n");
     sb.append("  sInscriptionMLS: ").append(sInscriptionMLS).append("\n");
     sb.append("  sInscriptionContract: ").append(sInscriptionContract).append("\n");
@@ -597,6 +698,7 @@ public class InscriptionnotauthenticatedListElement {
     sb.append("  fkiCountryID: ").append(fkiCountryID).append("\n");
     sb.append("  sCountryNameX: ").append(sCountryNameX).append("\n");
     sb.append("  sInscriptionnotauthenticatedOffertopurchasenumber: ").append(sInscriptionnotauthenticatedOffertopurchasenumber).append("\n");
+    sb.append("  iInscriptionUnit: ").append(iInscriptionUnit).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

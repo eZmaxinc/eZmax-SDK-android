@@ -18,6 +18,7 @@ import org.openapitools.client.model.FieldEWebhookEzmaxpartnerevent;
 import org.openapitools.client.model.FieldEWebhookEzsignevent;
 import org.openapitools.client.model.FieldEWebhookManagementevent;
 import org.openapitools.client.model.FieldEWebhookModule;
+import org.openapitools.client.model.FieldEWebhookRealestateevent;
 import org.openapitools.client.model.WebhookheaderResponseCompound;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
@@ -46,6 +47,8 @@ public class CustomWebhookResponse {
   private FieldEWebhookEzsignevent eWebhookEzsignevent = null;
   @SerializedName("eWebhookManagementevent")
   private FieldEWebhookManagementevent eWebhookManagementevent = null;
+  @SerializedName("eWebhookRealestateevent")
+  private FieldEWebhookRealestateevent eWebhookRealestateevent = null;
   @SerializedName("sWebhookUrl")
   private String sWebhookUrl = null;
   @SerializedName("sWebhookEmailfailed")
@@ -179,6 +182,16 @@ public class CustomWebhookResponse {
   }
   public void setEWebhookManagementevent(FieldEWebhookManagementevent eWebhookManagementevent) {
     this.eWebhookManagementevent = eWebhookManagementevent;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public FieldEWebhookRealestateevent getEWebhookRealestateevent() {
+    return eWebhookRealestateevent;
+  }
+  public void setEWebhookRealestateevent(FieldEWebhookRealestateevent eWebhookRealestateevent) {
+    this.eWebhookRealestateevent = eWebhookRealestateevent;
   }
 
   /**
@@ -376,6 +389,7 @@ public class CustomWebhookResponse {
         (this.eWebhookEzmaxpartnerevent == null ? customWebhookResponse.eWebhookEzmaxpartnerevent == null : this.eWebhookEzmaxpartnerevent.equals(customWebhookResponse.eWebhookEzmaxpartnerevent)) &&
         (this.eWebhookEzsignevent == null ? customWebhookResponse.eWebhookEzsignevent == null : this.eWebhookEzsignevent.equals(customWebhookResponse.eWebhookEzsignevent)) &&
         (this.eWebhookManagementevent == null ? customWebhookResponse.eWebhookManagementevent == null : this.eWebhookManagementevent.equals(customWebhookResponse.eWebhookManagementevent)) &&
+        (this.eWebhookRealestateevent == null ? customWebhookResponse.eWebhookRealestateevent == null : this.eWebhookRealestateevent.equals(customWebhookResponse.eWebhookRealestateevent)) &&
         (this.sWebhookUrl == null ? customWebhookResponse.sWebhookUrl == null : this.sWebhookUrl.equals(customWebhookResponse.sWebhookUrl)) &&
         (this.sWebhookEmailfailed == null ? customWebhookResponse.sWebhookEmailfailed == null : this.sWebhookEmailfailed.equals(customWebhookResponse.sWebhookEmailfailed)) &&
         (this.sWebhookApikey == null ? customWebhookResponse.sWebhookApikey == null : this.sWebhookApikey.equals(customWebhookResponse.sWebhookApikey)) &&
@@ -406,6 +420,7 @@ public class CustomWebhookResponse {
     result = 31 * result + (this.eWebhookEzmaxpartnerevent == null ? 0: this.eWebhookEzmaxpartnerevent.hashCode());
     result = 31 * result + (this.eWebhookEzsignevent == null ? 0: this.eWebhookEzsignevent.hashCode());
     result = 31 * result + (this.eWebhookManagementevent == null ? 0: this.eWebhookManagementevent.hashCode());
+    result = 31 * result + (this.eWebhookRealestateevent == null ? 0: this.eWebhookRealestateevent.hashCode());
     result = 31 * result + (this.sWebhookUrl == null ? 0: this.sWebhookUrl.hashCode());
     result = 31 * result + (this.sWebhookEmailfailed == null ? 0: this.sWebhookEmailfailed.hashCode());
     result = 31 * result + (this.sWebhookApikey == null ? 0: this.sWebhookApikey.hashCode());
@@ -439,6 +454,7 @@ public class CustomWebhookResponse {
     sb.append("  eWebhookEzmaxpartnerevent: ").append(eWebhookEzmaxpartnerevent).append("\n");
     sb.append("  eWebhookEzsignevent: ").append(eWebhookEzsignevent).append("\n");
     sb.append("  eWebhookManagementevent: ").append(eWebhookManagementevent).append("\n");
+    sb.append("  eWebhookRealestateevent: ").append(eWebhookRealestateevent).append("\n");
     sb.append("  sWebhookUrl: ").append(sWebhookUrl).append("\n");
     sb.append("  sWebhookEmailfailed: ").append(sWebhookEmailfailed).append("\n");
     sb.append("  sWebhookApikey: ").append(sWebhookApikey).append("\n");

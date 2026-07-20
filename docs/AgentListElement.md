@@ -28,6 +28,7 @@ Name | Type | Description | Notes
 **dtAgentSenioritydate** | **String** | The seniority date of the Agent |  [optional]
 **dtAgentSickleavestart** | **String** | The sick leave start date of the Agent |  [optional]
 **dtAgentSickleaveend** | **String** | The sick leave end date of the Agent |  [optional]
+**eAgentSchedule** | [**FieldEAgentSchedule**](FieldEAgentSchedule.md) |  | 
 **bAgentTranquillit** | **Boolean** | Whether if it&#39;s an tranquillit | 
 **bAgentResidentiallicense** | **Boolean** | Whether if it&#39;s an residentiallicense | 
 **bAgentCommerciallicense** | **Boolean** | Whether if it&#39;s an commerciallicense | 

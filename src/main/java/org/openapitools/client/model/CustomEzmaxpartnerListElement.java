@@ -12,6 +12,7 @@
 
 package org.openapitools.client.model;
 
+import org.openapitools.client.model.MultilingualEzmaxpartnerLogourl;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -35,6 +36,8 @@ public class CustomEzmaxpartnerListElement {
   private String sEzmaxpartnerPhoneE164X = null;
   @SerializedName("sEzmaxpartnerUrlX")
   private String sEzmaxpartnerUrlX = null;
+  @SerializedName("objEzmaxpartnerLogourl")
+  private MultilingualEzmaxpartnerLogourl objEzmaxpartnerLogourl = null;
 
   /**
    * The unique ID of the Ezmaxpartner
@@ -114,6 +117,16 @@ public class CustomEzmaxpartnerListElement {
     this.sEzmaxpartnerUrlX = sEzmaxpartnerUrlX;
   }
 
+  /**
+   **/
+  @ApiModelProperty(required = true, value = "")
+  public MultilingualEzmaxpartnerLogourl getObjEzmaxpartnerLogourl() {
+    return objEzmaxpartnerLogourl;
+  }
+  public void setObjEzmaxpartnerLogourl(MultilingualEzmaxpartnerLogourl objEzmaxpartnerLogourl) {
+    this.objEzmaxpartnerLogourl = objEzmaxpartnerLogourl;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -130,7 +143,8 @@ public class CustomEzmaxpartnerListElement {
         (this.sEzmaxpartnerShortdescriptionX == null ? customEzmaxpartnerListElement.sEzmaxpartnerShortdescriptionX == null : this.sEzmaxpartnerShortdescriptionX.equals(customEzmaxpartnerListElement.sEzmaxpartnerShortdescriptionX)) &&
         (this.sEzmaxpartnerNameX == null ? customEzmaxpartnerListElement.sEzmaxpartnerNameX == null : this.sEzmaxpartnerNameX.equals(customEzmaxpartnerListElement.sEzmaxpartnerNameX)) &&
         (this.sEzmaxpartnerPhoneE164X == null ? customEzmaxpartnerListElement.sEzmaxpartnerPhoneE164X == null : this.sEzmaxpartnerPhoneE164X.equals(customEzmaxpartnerListElement.sEzmaxpartnerPhoneE164X)) &&
-        (this.sEzmaxpartnerUrlX == null ? customEzmaxpartnerListElement.sEzmaxpartnerUrlX == null : this.sEzmaxpartnerUrlX.equals(customEzmaxpartnerListElement.sEzmaxpartnerUrlX));
+        (this.sEzmaxpartnerUrlX == null ? customEzmaxpartnerListElement.sEzmaxpartnerUrlX == null : this.sEzmaxpartnerUrlX.equals(customEzmaxpartnerListElement.sEzmaxpartnerUrlX)) &&
+        (this.objEzmaxpartnerLogourl == null ? customEzmaxpartnerListElement.objEzmaxpartnerLogourl == null : this.objEzmaxpartnerLogourl.equals(customEzmaxpartnerListElement.objEzmaxpartnerLogourl));
   }
 
   @Override
@@ -143,6 +157,7 @@ public class CustomEzmaxpartnerListElement {
     result = 31 * result + (this.sEzmaxpartnerNameX == null ? 0: this.sEzmaxpartnerNameX.hashCode());
     result = 31 * result + (this.sEzmaxpartnerPhoneE164X == null ? 0: this.sEzmaxpartnerPhoneE164X.hashCode());
     result = 31 * result + (this.sEzmaxpartnerUrlX == null ? 0: this.sEzmaxpartnerUrlX.hashCode());
+    result = 31 * result + (this.objEzmaxpartnerLogourl == null ? 0: this.objEzmaxpartnerLogourl.hashCode());
     return result;
   }
 
@@ -158,6 +173,7 @@ public class CustomEzmaxpartnerListElement {
     sb.append("  sEzmaxpartnerNameX: ").append(sEzmaxpartnerNameX).append("\n");
     sb.append("  sEzmaxpartnerPhoneE164X: ").append(sEzmaxpartnerPhoneE164X).append("\n");
     sb.append("  sEzmaxpartnerUrlX: ").append(sEzmaxpartnerUrlX).append("\n");
+    sb.append("  objEzmaxpartnerLogourl: ").append(objEzmaxpartnerLogourl).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

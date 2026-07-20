@@ -36,7 +36,7 @@ import java.util.Map;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeoutException;
 
-public class DocumentationEzmaxpartnerApi {
+public class ExternalEzmaxpartnerApi {
   String basePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
@@ -62,16 +62,16 @@ public class DocumentationEzmaxpartnerApi {
    * @param documentationSubscribeV1Request 
    * @return DocumentationSubscribeV1Response
   */
-  public DocumentationSubscribeV1Response documentationSubscribeV1 (DocumentationSubscribeV1Request documentationSubscribeV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public DocumentationSubscribeV1Response externalpartnerSubscribeV1 (DocumentationSubscribeV1Request documentationSubscribeV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = documentationSubscribeV1Request;
     // verify the required parameter 'documentationSubscribeV1Request' is set
     if (documentationSubscribeV1Request == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'documentationSubscribeV1Request' when calling documentationSubscribeV1",
-        new ApiException(400, "Missing the required parameter 'documentationSubscribeV1Request' when calling documentationSubscribeV1"));
+      VolleyError error = new VolleyError("Missing the required parameter 'documentationSubscribeV1Request' when calling externalpartnerSubscribeV1",
+        new ApiException(400, "Missing the required parameter 'documentationSubscribeV1Request' when calling externalpartnerSubscribeV1"));
     }
 
     // create path and map variables
-    String path = "/1/documentation/subscribe";
+    String path = "/1/external/ezmaxpartner/subscribe";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -124,17 +124,17 @@ public class DocumentationEzmaxpartnerApi {
    * Subscribe to an Ezmaxparnerproductstage
    * @param documentationSubscribeV1Request 
   */
-  public void documentationSubscribeV1 (DocumentationSubscribeV1Request documentationSubscribeV1Request, final Response.Listener<DocumentationSubscribeV1Response> responseListener, final Response.ErrorListener errorListener) {
+  public void externalpartnerSubscribeV1 (DocumentationSubscribeV1Request documentationSubscribeV1Request, final Response.Listener<DocumentationSubscribeV1Response> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = documentationSubscribeV1Request;
 
     // verify the required parameter 'documentationSubscribeV1Request' is set
     if (documentationSubscribeV1Request == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'documentationSubscribeV1Request' when calling documentationSubscribeV1",
-        new ApiException(400, "Missing the required parameter 'documentationSubscribeV1Request' when calling documentationSubscribeV1"));
+      VolleyError error = new VolleyError("Missing the required parameter 'documentationSubscribeV1Request' when calling externalpartnerSubscribeV1",
+        new ApiException(400, "Missing the required parameter 'documentationSubscribeV1Request' when calling externalpartnerSubscribeV1"));
     }
 
     // create path and map variables
-    String path = "/1/documentation/subscribe".replaceAll("\\{format\\}","json");
+    String path = "/1/external/ezmaxpartner/subscribe".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
