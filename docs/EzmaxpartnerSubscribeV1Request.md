@@ -1,6 +1,6 @@
 
 
-# DocumentationSubscribeV1Request
+# EzmaxpartnerSubscribeV1Request
 
 ## Properties
 

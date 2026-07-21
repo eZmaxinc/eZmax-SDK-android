@@ -19,7 +19,7 @@ import com.google.gson.annotations.SerializedName;
  * Request for POST /1/module/ezmaxmaillinglist/subscribe
  **/
 @ApiModel(description = "Request for POST /1/module/ezmaxmaillinglist/subscribe")
-public class DocumentationSubscribeV1Response {
+public class EzmaxpartnerSubscribeV1Response {
   
   @SerializedName("sExternalID")
   private String sExternalID = null;
@@ -44,8 +44,8 @@ public class DocumentationSubscribeV1Response {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    DocumentationSubscribeV1Response documentationSubscribeV1Response = (DocumentationSubscribeV1Response) o;
-    return (this.sExternalID == null ? documentationSubscribeV1Response.sExternalID == null : this.sExternalID.equals(documentationSubscribeV1Response.sExternalID));
+    EzmaxpartnerSubscribeV1Response ezmaxpartnerSubscribeV1Response = (EzmaxpartnerSubscribeV1Response) o;
+    return (this.sExternalID == null ? ezmaxpartnerSubscribeV1Response.sExternalID == null : this.sExternalID.equals(ezmaxpartnerSubscribeV1Response.sExternalID));
   }
 
   @Override
@@ -58,7 +58,7 @@ public class DocumentationSubscribeV1Response {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class DocumentationSubscribeV1Response {\n");
+    sb.append("class EzmaxpartnerSubscribeV1Response {\n");
     
     sb.append("  sExternalID: ").append(sExternalID).append("\n");
     sb.append("}\n");

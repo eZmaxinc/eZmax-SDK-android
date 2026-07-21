@@ -31,6 +31,8 @@ public class WebhookEzmaxpartnerproductUnsubscribe {
   private List<AttemptResponseCompound> aObjAttempt = null;
   @SerializedName("objEzmaxpartnerproduct")
   private CustomEzmaxpartnerproductSubscribe objEzmaxpartnerproduct = null;
+  @SerializedName("sExternalID")
+  private String sExternalID = null;
 
   /**
    **/
@@ -63,6 +65,16 @@ public class WebhookEzmaxpartnerproductUnsubscribe {
     this.objEzmaxpartnerproduct = objEzmaxpartnerproduct;
   }
 
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public String getSExternalID() {
+    return sExternalID;
+  }
+  public void setSExternalID(String sExternalID) {
+    this.sExternalID = sExternalID;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -75,7 +87,8 @@ public class WebhookEzmaxpartnerproductUnsubscribe {
     WebhookEzmaxpartnerproductUnsubscribe webhookEzmaxpartnerproductUnsubscribe = (WebhookEzmaxpartnerproductUnsubscribe) o;
     return (this.objWebhook == null ? webhookEzmaxpartnerproductUnsubscribe.objWebhook == null : this.objWebhook.equals(webhookEzmaxpartnerproductUnsubscribe.objWebhook)) &&
         (this.aObjAttempt == null ? webhookEzmaxpartnerproductUnsubscribe.aObjAttempt == null : this.aObjAttempt.equals(webhookEzmaxpartnerproductUnsubscribe.aObjAttempt)) &&
-        (this.objEzmaxpartnerproduct == null ? webhookEzmaxpartnerproductUnsubscribe.objEzmaxpartnerproduct == null : this.objEzmaxpartnerproduct.equals(webhookEzmaxpartnerproductUnsubscribe.objEzmaxpartnerproduct));
+        (this.objEzmaxpartnerproduct == null ? webhookEzmaxpartnerproductUnsubscribe.objEzmaxpartnerproduct == null : this.objEzmaxpartnerproduct.equals(webhookEzmaxpartnerproductUnsubscribe.objEzmaxpartnerproduct)) &&
+        (this.sExternalID == null ? webhookEzmaxpartnerproductUnsubscribe.sExternalID == null : this.sExternalID.equals(webhookEzmaxpartnerproductUnsubscribe.sExternalID));
   }
 
   @Override
@@ -84,6 +97,7 @@ public class WebhookEzmaxpartnerproductUnsubscribe {
     result = 31 * result + (this.objWebhook == null ? 0: this.objWebhook.hashCode());
     result = 31 * result + (this.aObjAttempt == null ? 0: this.aObjAttempt.hashCode());
     result = 31 * result + (this.objEzmaxpartnerproduct == null ? 0: this.objEzmaxpartnerproduct.hashCode());
+    result = 31 * result + (this.sExternalID == null ? 0: this.sExternalID.hashCode());
     return result;
   }
 
@@ -95,6 +109,7 @@ public class WebhookEzmaxpartnerproductUnsubscribe {
     sb.append("  objWebhook: ").append(objWebhook).append("\n");
     sb.append("  aObjAttempt: ").append(aObjAttempt).append("\n");
     sb.append("  objEzmaxpartnerproduct: ").append(objEzmaxpartnerproduct).append("\n");
+    sb.append("  sExternalID: ").append(sExternalID).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

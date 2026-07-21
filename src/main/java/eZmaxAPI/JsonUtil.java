@@ -1725,14 +1725,6 @@ public class JsonUtil {
       return new TypeToken<List<DiscussionmessageResponseCompound>>(){}.getType();
     }
     
-    if ("DocumentationSubscribeV1Request".equalsIgnoreCase(className)) {
-      return new TypeToken<List<DocumentationSubscribeV1Request>>(){}.getType();
-    }
-    
-    if ("DocumentationSubscribeV1Response".equalsIgnoreCase(className)) {
-      return new TypeToken<List<DocumentationSubscribeV1Response>>(){}.getType();
-    }
-    
     if ("DomainAutocompleteElementResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<DomainAutocompleteElementResponse>>(){}.getType();
     }
@@ -2207,6 +2199,14 @@ public class JsonUtil {
     
     if ("EzmaxpartnerResponseCompound".equalsIgnoreCase(className)) {
       return new TypeToken<List<EzmaxpartnerResponseCompound>>(){}.getType();
+    }
+    
+    if ("EzmaxpartnerSubscribeV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EzmaxpartnerSubscribeV1Request>>(){}.getType();
+    }
+    
+    if ("EzmaxpartnerSubscribeV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EzmaxpartnerSubscribeV1Response>>(){}.getType();
     }
     
     if ("EzmaxproductAutocompleteElementResponse".equalsIgnoreCase(className)) {
@@ -9915,14 +9915,6 @@ public class JsonUtil {
       return new TypeToken<DiscussionmessageResponseCompound>(){}.getType();
     }
     
-    if ("DocumentationSubscribeV1Request".equalsIgnoreCase(className)) {
-      return new TypeToken<DocumentationSubscribeV1Request>(){}.getType();
-    }
-    
-    if ("DocumentationSubscribeV1Response".equalsIgnoreCase(className)) {
-      return new TypeToken<DocumentationSubscribeV1Response>(){}.getType();
-    }
-    
     if ("DomainAutocompleteElementResponse".equalsIgnoreCase(className)) {
       return new TypeToken<DomainAutocompleteElementResponse>(){}.getType();
     }
@@ -10397,6 +10389,14 @@ public class JsonUtil {
     
     if ("EzmaxpartnerResponseCompound".equalsIgnoreCase(className)) {
       return new TypeToken<EzmaxpartnerResponseCompound>(){}.getType();
+    }
+    
+    if ("EzmaxpartnerSubscribeV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<EzmaxpartnerSubscribeV1Request>(){}.getType();
+    }
+    
+    if ("EzmaxpartnerSubscribeV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<EzmaxpartnerSubscribeV1Response>(){}.getType();
     }
     
     if ("EzmaxproductAutocompleteElementResponse".equalsIgnoreCase(className)) {

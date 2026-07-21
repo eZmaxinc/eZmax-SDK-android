@@ -419,8 +419,6 @@ docs/DiscussionmessageRequestCompound.md
 docs/DiscussionmessageRequestPatch.md
 docs/DiscussionmessageResponse.md
 docs/DiscussionmessageResponseCompound.md
-docs/DocumentationSubscribeV1Request.md
-docs/DocumentationSubscribeV1Response.md
 docs/DomainAutocompleteElementResponse.md
 docs/DomainCreateObjectV1Request.md
 docs/DomainCreateObjectV1Response.md
@@ -541,6 +539,8 @@ docs/EzmaxpartnerGetObjectV2Response.md
 docs/EzmaxpartnerGetObjectV2ResponseMPayload.md
 docs/EzmaxpartnerResponse.md
 docs/EzmaxpartnerResponseCompound.md
+docs/EzmaxpartnerSubscribeV1Request.md
+docs/EzmaxpartnerSubscribeV1Response.md
 docs/EzmaxproductAutocompleteElementResponse.md
 docs/EzmaxproductGetAutocompleteV2Response.md
 docs/EzmaxproductGetAutocompleteV2ResponseMPayload.md
@@ -2765,8 +2765,6 @@ src/main/java/org/openapitools/client/model/DiscussionmessageRequestCompound.jav
 src/main/java/org/openapitools/client/model/DiscussionmessageRequestPatch.java
 src/main/java/org/openapitools/client/model/DiscussionmessageResponse.java
 src/main/java/org/openapitools/client/model/DiscussionmessageResponseCompound.java
-src/main/java/org/openapitools/client/model/DocumentationSubscribeV1Request.java
-src/main/java/org/openapitools/client/model/DocumentationSubscribeV1Response.java
 src/main/java/org/openapitools/client/model/DomainAutocompleteElementResponse.java
 src/main/java/org/openapitools/client/model/DomainCreateObjectV1Request.java
 src/main/java/org/openapitools/client/model/DomainCreateObjectV1Response.java
@@ -2886,6 +2884,8 @@ src/main/java/org/openapitools/client/model/EzmaxpartnerGetObjectV2Response.java
 src/main/java/org/openapitools/client/model/EzmaxpartnerGetObjectV2ResponseMPayload.java
 src/main/java/org/openapitools/client/model/EzmaxpartnerResponse.java
 src/main/java/org/openapitools/client/model/EzmaxpartnerResponseCompound.java
+src/main/java/org/openapitools/client/model/EzmaxpartnerSubscribeV1Request.java
+src/main/java/org/openapitools/client/model/EzmaxpartnerSubscribeV1Response.java
 src/main/java/org/openapitools/client/model/EzmaxproductAutocompleteElementResponse.java
 src/main/java/org/openapitools/client/model/EzmaxproductGetAutocompleteV2Response.java
 src/main/java/org/openapitools/client/model/EzmaxproductGetAutocompleteV2ResponseMPayload.java

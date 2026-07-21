@@ -22,7 +22,7 @@ import com.google.gson.annotations.SerializedName;
  * Request for POST /1/webhookdocumentation/subscribe
  **/
 @ApiModel(description = "Request for POST /1/webhookdocumentation/subscribe")
-public class DocumentationSubscribeV1Request {
+public class EzmaxpartnerSubscribeV1Request {
   
   @SerializedName("pksEzmaxcustomerCode")
   private String pksEzmaxcustomerCode = null;
@@ -339,30 +339,30 @@ public class DocumentationSubscribeV1Request {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    DocumentationSubscribeV1Request documentationSubscribeV1Request = (DocumentationSubscribeV1Request) o;
-    return (this.pksEzmaxcustomerCode == null ? documentationSubscribeV1Request.pksEzmaxcustomerCode == null : this.pksEzmaxcustomerCode.equals(documentationSubscribeV1Request.pksEzmaxcustomerCode)) &&
-        (this.sInfrastructureenvironmenttypeDescription == null ? documentationSubscribeV1Request.sInfrastructureenvironmenttypeDescription == null : this.sInfrastructureenvironmenttypeDescription.equals(documentationSubscribeV1Request.sInfrastructureenvironmenttypeDescription)) &&
-        (this.sCompanyName1 == null ? documentationSubscribeV1Request.sCompanyName1 == null : this.sCompanyName1.equals(documentationSubscribeV1Request.sCompanyName1)) &&
-        (this.sCompanyName2 == null ? documentationSubscribeV1Request.sCompanyName2 == null : this.sCompanyName2.equals(documentationSubscribeV1Request.sCompanyName2)) &&
-        (this.fkiSystemconfigurationtypeID == null ? documentationSubscribeV1Request.fkiSystemconfigurationtypeID == null : this.fkiSystemconfigurationtypeID.equals(documentationSubscribeV1Request.fkiSystemconfigurationtypeID)) &&
-        (this.sSystemconfigurationtypeDescription1 == null ? documentationSubscribeV1Request.sSystemconfigurationtypeDescription1 == null : this.sSystemconfigurationtypeDescription1.equals(documentationSubscribeV1Request.sSystemconfigurationtypeDescription1)) &&
-        (this.sSystemconfigurationtypeDescription2 == null ? documentationSubscribeV1Request.sSystemconfigurationtypeDescription2 == null : this.sSystemconfigurationtypeDescription2.equals(documentationSubscribeV1Request.sSystemconfigurationtypeDescription2)) &&
-        (this.fkiEzmaxpartnerID == null ? documentationSubscribeV1Request.fkiEzmaxpartnerID == null : this.fkiEzmaxpartnerID.equals(documentationSubscribeV1Request.fkiEzmaxpartnerID)) &&
-        (this.sEzmaxpartnerName1 == null ? documentationSubscribeV1Request.sEzmaxpartnerName1 == null : this.sEzmaxpartnerName1.equals(documentationSubscribeV1Request.sEzmaxpartnerName1)) &&
-        (this.sEzmaxpartnerName2 == null ? documentationSubscribeV1Request.sEzmaxpartnerName2 == null : this.sEzmaxpartnerName2.equals(documentationSubscribeV1Request.sEzmaxpartnerName2)) &&
-        (this.fkiEzmaxpartnerproductID == null ? documentationSubscribeV1Request.fkiEzmaxpartnerproductID == null : this.fkiEzmaxpartnerproductID.equals(documentationSubscribeV1Request.fkiEzmaxpartnerproductID)) &&
-        (this.sEzmaxpartnerproductName1 == null ? documentationSubscribeV1Request.sEzmaxpartnerproductName1 == null : this.sEzmaxpartnerproductName1.equals(documentationSubscribeV1Request.sEzmaxpartnerproductName1)) &&
-        (this.sEzmaxpartnerproductName2 == null ? documentationSubscribeV1Request.sEzmaxpartnerproductName2 == null : this.sEzmaxpartnerproductName2.equals(documentationSubscribeV1Request.sEzmaxpartnerproductName2)) &&
-        (this.fkiEzmaxpartnerproductstageID == null ? documentationSubscribeV1Request.fkiEzmaxpartnerproductstageID == null : this.fkiEzmaxpartnerproductstageID.equals(documentationSubscribeV1Request.fkiEzmaxpartnerproductstageID)) &&
-        (this.sEzmaxpartnerproductstageCode == null ? documentationSubscribeV1Request.sEzmaxpartnerproductstageCode == null : this.sEzmaxpartnerproductstageCode.equals(documentationSubscribeV1Request.sEzmaxpartnerproductstageCode)) &&
-        (this.sUserLoginName == null ? documentationSubscribeV1Request.sUserLoginName == null : this.sUserLoginName.equals(documentationSubscribeV1Request.sUserLoginName)) &&
-        (this.sUserFirstName == null ? documentationSubscribeV1Request.sUserFirstName == null : this.sUserFirstName.equals(documentationSubscribeV1Request.sUserFirstName)) &&
-        (this.sUserLastName == null ? documentationSubscribeV1Request.sUserLastName == null : this.sUserLastName.equals(documentationSubscribeV1Request.sUserLastName)) &&
-        (this.fkiUserID == null ? documentationSubscribeV1Request.fkiUserID == null : this.fkiUserID.equals(documentationSubscribeV1Request.fkiUserID)) &&
-        (this.fkiLanguageID == null ? documentationSubscribeV1Request.fkiLanguageID == null : this.fkiLanguageID.equals(documentationSubscribeV1Request.fkiLanguageID)) &&
-        (this.objAddress == null ? documentationSubscribeV1Request.objAddress == null : this.objAddress.equals(documentationSubscribeV1Request.objAddress)) &&
-        (this.objphone == null ? documentationSubscribeV1Request.objphone == null : this.objphone.equals(documentationSubscribeV1Request.objphone)) &&
-        (this.objEmail == null ? documentationSubscribeV1Request.objEmail == null : this.objEmail.equals(documentationSubscribeV1Request.objEmail));
+    EzmaxpartnerSubscribeV1Request ezmaxpartnerSubscribeV1Request = (EzmaxpartnerSubscribeV1Request) o;
+    return (this.pksEzmaxcustomerCode == null ? ezmaxpartnerSubscribeV1Request.pksEzmaxcustomerCode == null : this.pksEzmaxcustomerCode.equals(ezmaxpartnerSubscribeV1Request.pksEzmaxcustomerCode)) &&
+        (this.sInfrastructureenvironmenttypeDescription == null ? ezmaxpartnerSubscribeV1Request.sInfrastructureenvironmenttypeDescription == null : this.sInfrastructureenvironmenttypeDescription.equals(ezmaxpartnerSubscribeV1Request.sInfrastructureenvironmenttypeDescription)) &&
+        (this.sCompanyName1 == null ? ezmaxpartnerSubscribeV1Request.sCompanyName1 == null : this.sCompanyName1.equals(ezmaxpartnerSubscribeV1Request.sCompanyName1)) &&
+        (this.sCompanyName2 == null ? ezmaxpartnerSubscribeV1Request.sCompanyName2 == null : this.sCompanyName2.equals(ezmaxpartnerSubscribeV1Request.sCompanyName2)) &&
+        (this.fkiSystemconfigurationtypeID == null ? ezmaxpartnerSubscribeV1Request.fkiSystemconfigurationtypeID == null : this.fkiSystemconfigurationtypeID.equals(ezmaxpartnerSubscribeV1Request.fkiSystemconfigurationtypeID)) &&
+        (this.sSystemconfigurationtypeDescription1 == null ? ezmaxpartnerSubscribeV1Request.sSystemconfigurationtypeDescription1 == null : this.sSystemconfigurationtypeDescription1.equals(ezmaxpartnerSubscribeV1Request.sSystemconfigurationtypeDescription1)) &&
+        (this.sSystemconfigurationtypeDescription2 == null ? ezmaxpartnerSubscribeV1Request.sSystemconfigurationtypeDescription2 == null : this.sSystemconfigurationtypeDescription2.equals(ezmaxpartnerSubscribeV1Request.sSystemconfigurationtypeDescription2)) &&
+        (this.fkiEzmaxpartnerID == null ? ezmaxpartnerSubscribeV1Request.fkiEzmaxpartnerID == null : this.fkiEzmaxpartnerID.equals(ezmaxpartnerSubscribeV1Request.fkiEzmaxpartnerID)) &&
+        (this.sEzmaxpartnerName1 == null ? ezmaxpartnerSubscribeV1Request.sEzmaxpartnerName1 == null : this.sEzmaxpartnerName1.equals(ezmaxpartnerSubscribeV1Request.sEzmaxpartnerName1)) &&
+        (this.sEzmaxpartnerName2 == null ? ezmaxpartnerSubscribeV1Request.sEzmaxpartnerName2 == null : this.sEzmaxpartnerName2.equals(ezmaxpartnerSubscribeV1Request.sEzmaxpartnerName2)) &&
+        (this.fkiEzmaxpartnerproductID == null ? ezmaxpartnerSubscribeV1Request.fkiEzmaxpartnerproductID == null : this.fkiEzmaxpartnerproductID.equals(ezmaxpartnerSubscribeV1Request.fkiEzmaxpartnerproductID)) &&
+        (this.sEzmaxpartnerproductName1 == null ? ezmaxpartnerSubscribeV1Request.sEzmaxpartnerproductName1 == null : this.sEzmaxpartnerproductName1.equals(ezmaxpartnerSubscribeV1Request.sEzmaxpartnerproductName1)) &&
+        (this.sEzmaxpartnerproductName2 == null ? ezmaxpartnerSubscribeV1Request.sEzmaxpartnerproductName2 == null : this.sEzmaxpartnerproductName2.equals(ezmaxpartnerSubscribeV1Request.sEzmaxpartnerproductName2)) &&
+        (this.fkiEzmaxpartnerproductstageID == null ? ezmaxpartnerSubscribeV1Request.fkiEzmaxpartnerproductstageID == null : this.fkiEzmaxpartnerproductstageID.equals(ezmaxpartnerSubscribeV1Request.fkiEzmaxpartnerproductstageID)) &&
+        (this.sEzmaxpartnerproductstageCode == null ? ezmaxpartnerSubscribeV1Request.sEzmaxpartnerproductstageCode == null : this.sEzmaxpartnerproductstageCode.equals(ezmaxpartnerSubscribeV1Request.sEzmaxpartnerproductstageCode)) &&
+        (this.sUserLoginName == null ? ezmaxpartnerSubscribeV1Request.sUserLoginName == null : this.sUserLoginName.equals(ezmaxpartnerSubscribeV1Request.sUserLoginName)) &&
+        (this.sUserFirstName == null ? ezmaxpartnerSubscribeV1Request.sUserFirstName == null : this.sUserFirstName.equals(ezmaxpartnerSubscribeV1Request.sUserFirstName)) &&
+        (this.sUserLastName == null ? ezmaxpartnerSubscribeV1Request.sUserLastName == null : this.sUserLastName.equals(ezmaxpartnerSubscribeV1Request.sUserLastName)) &&
+        (this.fkiUserID == null ? ezmaxpartnerSubscribeV1Request.fkiUserID == null : this.fkiUserID.equals(ezmaxpartnerSubscribeV1Request.fkiUserID)) &&
+        (this.fkiLanguageID == null ? ezmaxpartnerSubscribeV1Request.fkiLanguageID == null : this.fkiLanguageID.equals(ezmaxpartnerSubscribeV1Request.fkiLanguageID)) &&
+        (this.objAddress == null ? ezmaxpartnerSubscribeV1Request.objAddress == null : this.objAddress.equals(ezmaxpartnerSubscribeV1Request.objAddress)) &&
+        (this.objphone == null ? ezmaxpartnerSubscribeV1Request.objphone == null : this.objphone.equals(ezmaxpartnerSubscribeV1Request.objphone)) &&
+        (this.objEmail == null ? ezmaxpartnerSubscribeV1Request.objEmail == null : this.objEmail.equals(ezmaxpartnerSubscribeV1Request.objEmail));
   }
 
   @Override
@@ -397,7 +397,7 @@ public class DocumentationSubscribeV1Request {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class DocumentationSubscribeV1Request {\n");
+    sb.append("class EzmaxpartnerSubscribeV1Request {\n");
     
     sb.append("  pksEzmaxcustomerCode: ").append(pksEzmaxcustomerCode).append("\n");
     sb.append("  sInfrastructureenvironmenttypeDescription: ").append(sInfrastructureenvironmenttypeDescription).append("\n");
