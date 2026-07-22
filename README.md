@@ -476,7 +476,7 @@ Class | Method | HTTP request | Description
 *ObjectInscriptionApi* | [**inscriptionGetCommunicationListV1**](docs/ObjectInscriptionApi.md#inscriptionGetCommunicationListV1) | **GET** /1/object/inscription/{pkiInscriptionID}/getCommunicationList | Retrieve Communication list
 *ObjectInscriptionApi* | [**inscriptionGetCommunicationrecipientsV1**](docs/ObjectInscriptionApi.md#inscriptionGetCommunicationrecipientsV1) | **GET** /1/object/inscription/{pkiInscriptionID}/getCommunicationrecipients | Retrieve Inscription&#39;s Communicationrecipient
 *ObjectInscriptionApi* | [**inscriptionGetCommunicationsendersV1**](docs/ObjectInscriptionApi.md#inscriptionGetCommunicationsendersV1) | **GET** /1/object/inscription/{pkiInscriptionID}/getCommunicationsenders | Retrieve Inscription&#39;s Communicationsender
-*ObjectInscriptionApi* | [**inscriptionGetInscriptionnotauthenticatedsV1**](docs/ObjectInscriptionApi.md#inscriptionGetInscriptionnotauthenticatedsV1) | **GET** /1/object/inscription/{pkiInscriptionID}/getInscriptionnotauthenticateds | Retrieve Inscriptionnotauthenticated list
+*ObjectInscriptionApi* | [**inscriptionGetInscriptionnotauthenticatedsV1**](docs/ObjectInscriptionApi.md#inscriptionGetInscriptionnotauthenticatedsV1) | **GET** /1/object/inscription/{pkiInscriptionID}/getInscriptionnotauthenticateds | Retrieve Inscription&#39;s Inscriptionnotauthenticated
 *ObjectInscriptionApi* | [**inscriptionGetListV1**](docs/ObjectInscriptionApi.md#inscriptionGetListV1) | **GET** /1/object/inscription/getList | Retrieve Inscription list
 *ObjectInscriptionApi* | [**inscriptionGetObjectV2**](docs/ObjectInscriptionApi.md#inscriptionGetObjectV2) | **GET** /2/object/inscription/{pkiInscriptionID} | Retrieve an existing Inscription
 *ObjectInscriptionApi* | [**inscriptionImportIntoEDMV1**](docs/ObjectInscriptionApi.md#inscriptionImportIntoEDMV1) | **POST** /1/object/inscription/{pkiInscriptionID}/importIntoEDM | Import attachments into the Inscription
@@ -2146,6 +2146,7 @@ Class | Method | HTTP request | Description
  - [InscriptionGetCommunicationsendersV1Response](docs/InscriptionGetCommunicationsendersV1Response.md)
  - [InscriptionGetCommunicationsendersV1ResponseMPayload](docs/InscriptionGetCommunicationsendersV1ResponseMPayload.md)
  - [InscriptionGetInscriptionnotauthenticatedsV1Response](docs/InscriptionGetInscriptionnotauthenticatedsV1Response.md)
+ - [InscriptionGetInscriptionnotauthenticatedsV1ResponseMPayload](docs/InscriptionGetInscriptionnotauthenticatedsV1ResponseMPayload.md)
  - [InscriptionGetListV1Response](docs/InscriptionGetListV1Response.md)
  - [InscriptionGetListV1ResponseMPayload](docs/InscriptionGetListV1ResponseMPayload.md)
  - [InscriptionGetObjectV2Response](docs/InscriptionGetObjectV2Response.md)
