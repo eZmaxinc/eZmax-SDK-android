@@ -6,7 +6,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**sExternalID** | **String** |  | 
+**sExternalID** | **String** |  |  [optional]
 
 
 

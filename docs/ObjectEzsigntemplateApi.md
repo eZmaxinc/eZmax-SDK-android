@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**ezsigntemplateGetAutocompleteV2**](ObjectEzsigntemplateApi.md#ezsigntemplateGetAutocompleteV2) | **GET** /2/object/ezsigntemplate/getAutocomplete/{sSelector} | Retrieve Ezsigntemplates and IDs
 [**ezsigntemplateGetListV1**](ObjectEzsigntemplateApi.md#ezsigntemplateGetListV1) | **GET** /1/object/ezsigntemplate/getList | Retrieve Ezsigntemplate list
 [**ezsigntemplateGetObjectV3**](ObjectEzsigntemplateApi.md#ezsigntemplateGetObjectV3) | **GET** /3/object/ezsigntemplate/{pkiEzsigntemplateID} | Retrieve an existing Ezsigntemplate
+[**ezsigntemplateGetObjectV4**](ObjectEzsigntemplateApi.md#ezsigntemplateGetObjectV4) | **GET** /4/object/ezsigntemplate/{pkiEzsigntemplateID} | Retrieve an existing Ezsigntemplate
 
 
 
@@ -345,6 +346,52 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsigntemplateGetObjectV3Response**](EzsigntemplateGetObjectV3Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## ezsigntemplateGetObjectV4
+
+> EzsigntemplateGetObjectV4Response ezsigntemplateGetObjectV4(pkiEzsigntemplateID)
+
+Retrieve an existing Ezsigntemplate
+
+
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectEzsigntemplateApi;
+
+ObjectEzsigntemplateApi apiInstance = new ObjectEzsigntemplateApi();
+Integer pkiEzsigntemplateID = null; // Integer | 
+try {
+    EzsigntemplateGetObjectV4Response result = apiInstance.ezsigntemplateGetObjectV4(pkiEzsigntemplateID);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectEzsigntemplateApi#ezsigntemplateGetObjectV4");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsigntemplateID** | **Integer**|  | [default to null]
+
+### Return type
+
+[**EzsigntemplateGetObjectV4Response**](EzsigntemplateGetObjectV4Response.md)
 
 ### Authorization
 

@@ -17,6 +17,7 @@ Method | HTTP request | Description
 [**ezsignbulksendGetListV1**](ObjectEzsignbulksendApi.md#ezsignbulksendGetListV1) | **GET** /1/object/ezsignbulksend/getList | Retrieve Ezsignbulksend list
 [**ezsignbulksendGetObjectV2**](ObjectEzsignbulksendApi.md#ezsignbulksendGetObjectV2) | **GET** /2/object/ezsignbulksend/{pkiEzsignbulksendID} | Retrieve an existing Ezsignbulksend
 [**ezsignbulksendGetObjectV3**](ObjectEzsignbulksendApi.md#ezsignbulksendGetObjectV3) | **GET** /3/object/ezsignbulksend/{pkiEzsignbulksendID} | Retrieve an existing Ezsignbulksend
+[**ezsignbulksendGetObjectV4**](ObjectEzsignbulksendApi.md#ezsignbulksendGetObjectV4) | **GET** /4/object/ezsignbulksend/{pkiEzsignbulksendID} | Retrieve an existing Ezsignbulksend
 [**ezsignbulksendReorderV1**](ObjectEzsignbulksendApi.md#ezsignbulksendReorderV1) | **POST** /1/object/ezsignbulksend/{pkiEzsignbulksendID}/reorder | Reorder Ezsignbulksenddocumentmappings in the Ezsignbulksend
 
 
@@ -626,6 +627,52 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsignbulksendGetObjectV3Response**](EzsignbulksendGetObjectV3Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## ezsignbulksendGetObjectV4
+
+> EzsignbulksendGetObjectV4Response ezsignbulksendGetObjectV4(pkiEzsignbulksendID)
+
+Retrieve an existing Ezsignbulksend
+
+
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectEzsignbulksendApi;
+
+ObjectEzsignbulksendApi apiInstance = new ObjectEzsignbulksendApi();
+Integer pkiEzsignbulksendID = null; // Integer | 
+try {
+    EzsignbulksendGetObjectV4Response result = apiInstance.ezsignbulksendGetObjectV4(pkiEzsignbulksendID);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectEzsignbulksendApi#ezsignbulksendGetObjectV4");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignbulksendID** | **Integer**|  | [default to null]
+
+### Return type
+
+[**EzsignbulksendGetObjectV4Response**](EzsignbulksendGetObjectV4Response.md)
 
 ### Authorization
 

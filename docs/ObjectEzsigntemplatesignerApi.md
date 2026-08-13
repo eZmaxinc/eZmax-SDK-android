@@ -5,9 +5,12 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ezsigntemplatesignerCreateObjectV1**](ObjectEzsigntemplatesignerApi.md#ezsigntemplatesignerCreateObjectV1) | **POST** /1/object/ezsigntemplatesigner | Create a new Ezsigntemplatesigner
+[**ezsigntemplatesignerCreateObjectV2**](ObjectEzsigntemplatesignerApi.md#ezsigntemplatesignerCreateObjectV2) | **POST** /2/object/ezsigntemplatesigner | Create a new Ezsigntemplatesigner
 [**ezsigntemplatesignerDeleteObjectV1**](ObjectEzsigntemplatesignerApi.md#ezsigntemplatesignerDeleteObjectV1) | **DELETE** /1/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID} | Delete an existing Ezsigntemplatesigner
 [**ezsigntemplatesignerEditObjectV1**](ObjectEzsigntemplatesignerApi.md#ezsigntemplatesignerEditObjectV1) | **PUT** /1/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID} | Edit an existing Ezsigntemplatesigner
+[**ezsigntemplatesignerEditObjectV2**](ObjectEzsigntemplatesignerApi.md#ezsigntemplatesignerEditObjectV2) | **PUT** /2/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID} | Edit an existing Ezsigntemplatesigner
 [**ezsigntemplatesignerGetObjectV2**](ObjectEzsigntemplatesignerApi.md#ezsigntemplatesignerGetObjectV2) | **GET** /2/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID} | Retrieve an existing Ezsigntemplatesigner
+[**ezsigntemplatesignerGetObjectV3**](ObjectEzsigntemplatesignerApi.md#ezsigntemplatesignerGetObjectV3) | **GET** /3/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID} | Retrieve an existing Ezsigntemplatesigner
 
 
 
@@ -46,6 +49,52 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsigntemplatesignerCreateObjectV1Response**](EzsigntemplatesignerCreateObjectV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## ezsigntemplatesignerCreateObjectV2
+
+> EzsigntemplatesignerCreateObjectV2Response ezsigntemplatesignerCreateObjectV2(ezsigntemplatesignerCreateObjectV2Request)
+
+Create a new Ezsigntemplatesigner
+
+The endpoint allows to create one or many elements at once.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectEzsigntemplatesignerApi;
+
+ObjectEzsigntemplatesignerApi apiInstance = new ObjectEzsigntemplatesignerApi();
+EzsigntemplatesignerCreateObjectV2Request ezsigntemplatesignerCreateObjectV2Request = new EzsigntemplatesignerCreateObjectV2Request(); // EzsigntemplatesignerCreateObjectV2Request | 
+try {
+    EzsigntemplatesignerCreateObjectV2Response result = apiInstance.ezsigntemplatesignerCreateObjectV2(ezsigntemplatesignerCreateObjectV2Request);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectEzsigntemplatesignerApi#ezsigntemplatesignerCreateObjectV2");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ezsigntemplatesignerCreateObjectV2Request** | [**EzsigntemplatesignerCreateObjectV2Request**](EzsigntemplatesignerCreateObjectV2Request.md)|  |
+
+### Return type
+
+[**EzsigntemplatesignerCreateObjectV2Response**](EzsigntemplatesignerCreateObjectV2Response.md)
 
 ### Authorization
 
@@ -151,6 +200,54 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
+## ezsigntemplatesignerEditObjectV2
+
+> EzsigntemplatesignerEditObjectV2Response ezsigntemplatesignerEditObjectV2(pkiEzsigntemplatesignerID, ezsigntemplatesignerEditObjectV2Request)
+
+Edit an existing Ezsigntemplatesigner
+
+
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectEzsigntemplatesignerApi;
+
+ObjectEzsigntemplatesignerApi apiInstance = new ObjectEzsigntemplatesignerApi();
+Integer pkiEzsigntemplatesignerID = null; // Integer | 
+EzsigntemplatesignerEditObjectV2Request ezsigntemplatesignerEditObjectV2Request = new EzsigntemplatesignerEditObjectV2Request(); // EzsigntemplatesignerEditObjectV2Request | 
+try {
+    EzsigntemplatesignerEditObjectV2Response result = apiInstance.ezsigntemplatesignerEditObjectV2(pkiEzsigntemplatesignerID, ezsigntemplatesignerEditObjectV2Request);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectEzsigntemplatesignerApi#ezsigntemplatesignerEditObjectV2");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsigntemplatesignerID** | **Integer**|  | [default to null]
+ **ezsigntemplatesignerEditObjectV2Request** | [**EzsigntemplatesignerEditObjectV2Request**](EzsigntemplatesignerEditObjectV2Request.md)|  |
+
+### Return type
+
+[**EzsigntemplatesignerEditObjectV2Response**](EzsigntemplatesignerEditObjectV2Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
 ## ezsigntemplatesignerGetObjectV2
 
 > EzsigntemplatesignerGetObjectV2Response ezsigntemplatesignerGetObjectV2(pkiEzsigntemplatesignerID)
@@ -186,6 +283,52 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsigntemplatesignerGetObjectV2Response**](EzsigntemplatesignerGetObjectV2Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## ezsigntemplatesignerGetObjectV3
+
+> EzsigntemplatesignerGetObjectV3Response ezsigntemplatesignerGetObjectV3(pkiEzsigntemplatesignerID)
+
+Retrieve an existing Ezsigntemplatesigner
+
+
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectEzsigntemplatesignerApi;
+
+ObjectEzsigntemplatesignerApi apiInstance = new ObjectEzsigntemplatesignerApi();
+Integer pkiEzsigntemplatesignerID = null; // Integer | 
+try {
+    EzsigntemplatesignerGetObjectV3Response result = apiInstance.ezsigntemplatesignerGetObjectV3(pkiEzsigntemplatesignerID);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectEzsigntemplatesignerApi#ezsigntemplatesignerGetObjectV3");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsigntemplatesignerID** | **Integer**|  | [default to null]
+
+### Return type
+
+[**EzsigntemplatesignerGetObjectV3Response**](EzsigntemplatesignerGetObjectV3Response.md)
 
 ### Authorization
 
