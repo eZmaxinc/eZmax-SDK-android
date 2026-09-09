@@ -4,6 +4,8 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**buyercontractBatchDownloadV1**](ObjectBuyercontractApi.md#buyercontractBatchDownloadV1) | **POST** /1/object/buyercontract/{pkiBuyercontractID}/batchDownload | Download multiples attachments from a Buyercontract
+[**buyercontractGetAttachmentsV1**](ObjectBuyercontractApi.md#buyercontractGetAttachmentsV1) | **GET** /1/object/buyercontract/{pkiBuyercontractID}/getAttachments | Retrieve Buyercontract&#39;s attachments
 [**buyercontractGetCommunicationCountV1**](ObjectBuyercontractApi.md#buyercontractGetCommunicationCountV1) | **GET** /1/object/buyercontract/{pkiBuyercontractID}/getCommunicationCount | Retrieve Communication count
 [**buyercontractGetCommunicationListV1**](ObjectBuyercontractApi.md#buyercontractGetCommunicationListV1) | **GET** /1/object/buyercontract/{pkiBuyercontractID}/getCommunicationList | Retrieve Communication list
 [**buyercontractGetCommunicationrecipientsV1**](ObjectBuyercontractApi.md#buyercontractGetCommunicationrecipientsV1) | **GET** /1/object/buyercontract/{pkiBuyercontractID}/getCommunicationrecipients | Retrieve Buyercontract&#39;s Communicationrecipient
@@ -11,6 +13,96 @@ Method | HTTP request | Description
 [**buyercontractGetListV1**](ObjectBuyercontractApi.md#buyercontractGetListV1) | **GET** /1/object/buyercontract/getList | Retrieve Buyercontract list
 [**buyercontractImportIntoEDMV1**](ObjectBuyercontractApi.md#buyercontractImportIntoEDMV1) | **POST** /1/object/buyercontract/{pkiBuyercontractID}/importIntoEDM | Import attachments into the Buyercontract
 
+
+
+## buyercontractBatchDownloadV1
+
+> File buyercontractBatchDownloadV1(pkiBuyercontractID, buyercontractBatchDownloadV1Request)
+
+Download multiples attachments from a Buyercontract
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectBuyercontractApi;
+
+ObjectBuyercontractApi apiInstance = new ObjectBuyercontractApi();
+Integer pkiBuyercontractID = null; // Integer | 
+BuyercontractBatchDownloadV1Request buyercontractBatchDownloadV1Request = new BuyercontractBatchDownloadV1Request(); // BuyercontractBatchDownloadV1Request | 
+try {
+    File result = apiInstance.buyercontractBatchDownloadV1(pkiBuyercontractID, buyercontractBatchDownloadV1Request);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectBuyercontractApi#buyercontractBatchDownloadV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiBuyercontractID** | **Integer**|  | [default to null]
+ **buyercontractBatchDownloadV1Request** | [**BuyercontractBatchDownloadV1Request**](BuyercontractBatchDownloadV1Request.md)|  |
+
+### Return type
+
+[**File**](File.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/zip, text/xml, application/json
+
+
+## buyercontractGetAttachmentsV1
+
+> BuyercontractGetAttachmentsV1Response buyercontractGetAttachmentsV1(pkiBuyercontractID)
+
+Retrieve Buyercontract&#39;s attachments
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectBuyercontractApi;
+
+ObjectBuyercontractApi apiInstance = new ObjectBuyercontractApi();
+Integer pkiBuyercontractID = null; // Integer | 
+try {
+    BuyercontractGetAttachmentsV1Response result = apiInstance.buyercontractGetAttachmentsV1(pkiBuyercontractID);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectBuyercontractApi#buyercontractGetAttachmentsV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiBuyercontractID** | **Integer**|  | [default to null]
+
+### Return type
+
+[**BuyercontractGetAttachmentsV1Response**](BuyercontractGetAttachmentsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
 ## buyercontractGetCommunicationCountV1

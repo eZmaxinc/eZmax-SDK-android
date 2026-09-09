@@ -4,6 +4,8 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**otherincomeBatchDownloadV1**](ObjectOtherincomeApi.md#otherincomeBatchDownloadV1) | **POST** /1/object/otherincome/{pkiOtherincomeID}/batchDownload | Download multiples attachments from a Otherincome
+[**otherincomeGetAttachmentsV1**](ObjectOtherincomeApi.md#otherincomeGetAttachmentsV1) | **GET** /1/object/otherincome/{pkiOtherincomeID}/getAttachments | Retrieve Otherincome&#39;s attachments
 [**otherincomeGetCommunicationCountV1**](ObjectOtherincomeApi.md#otherincomeGetCommunicationCountV1) | **GET** /1/object/otherincome/{pkiOtherincomeID}/getCommunicationCount | Retrieve Communication count
 [**otherincomeGetCommunicationListV1**](ObjectOtherincomeApi.md#otherincomeGetCommunicationListV1) | **GET** /1/object/otherincome/{pkiOtherincomeID}/getCommunicationList | Retrieve Communication list
 [**otherincomeGetCommunicationrecipientsV1**](ObjectOtherincomeApi.md#otherincomeGetCommunicationrecipientsV1) | **GET** /1/object/otherincome/{pkiOtherincomeID}/getCommunicationrecipients | Retrieve Otherincome&#39;s Communicationrecipient
@@ -11,6 +13,96 @@ Method | HTTP request | Description
 [**otherincomeGetListV1**](ObjectOtherincomeApi.md#otherincomeGetListV1) | **GET** /1/object/otherincome/getList | Retrieve Otherincome list
 [**otherincomeImportIntoEDMV1**](ObjectOtherincomeApi.md#otherincomeImportIntoEDMV1) | **POST** /1/object/otherincome/{pkiOtherincomeID}/importIntoEDM | Import attachments into the Otherincome
 
+
+
+## otherincomeBatchDownloadV1
+
+> File otherincomeBatchDownloadV1(pkiOtherincomeID, otherincomeBatchDownloadV1Request)
+
+Download multiples attachments from a Otherincome
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectOtherincomeApi;
+
+ObjectOtherincomeApi apiInstance = new ObjectOtherincomeApi();
+Integer pkiOtherincomeID = null; // Integer | 
+OtherincomeBatchDownloadV1Request otherincomeBatchDownloadV1Request = new OtherincomeBatchDownloadV1Request(); // OtherincomeBatchDownloadV1Request | 
+try {
+    File result = apiInstance.otherincomeBatchDownloadV1(pkiOtherincomeID, otherincomeBatchDownloadV1Request);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectOtherincomeApi#otherincomeBatchDownloadV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiOtherincomeID** | **Integer**|  | [default to null]
+ **otherincomeBatchDownloadV1Request** | [**OtherincomeBatchDownloadV1Request**](OtherincomeBatchDownloadV1Request.md)|  |
+
+### Return type
+
+[**File**](File.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/zip, text/xml, application/json
+
+
+## otherincomeGetAttachmentsV1
+
+> OtherincomeGetAttachmentsV1Response otherincomeGetAttachmentsV1(pkiOtherincomeID)
+
+Retrieve Otherincome&#39;s attachments
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectOtherincomeApi;
+
+ObjectOtherincomeApi apiInstance = new ObjectOtherincomeApi();
+Integer pkiOtherincomeID = null; // Integer | 
+try {
+    OtherincomeGetAttachmentsV1Response result = apiInstance.otherincomeGetAttachmentsV1(pkiOtherincomeID);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectOtherincomeApi#otherincomeGetAttachmentsV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiOtherincomeID** | **Integer**|  | [default to null]
+
+### Return type
+
+[**OtherincomeGetAttachmentsV1Response**](OtherincomeGetAttachmentsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
 ## otherincomeGetCommunicationCountV1

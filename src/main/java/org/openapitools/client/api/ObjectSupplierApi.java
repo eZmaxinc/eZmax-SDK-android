@@ -26,6 +26,8 @@ import com.android.volley.VolleyError;
 import org.openapitools.client.model.CommonResponseError;
 import java.io.File;
 import org.openapitools.client.model.HeaderAcceptLanguage;
+import org.openapitools.client.model.SupplierBatchDownloadV1Request;
+import org.openapitools.client.model.SupplierGetAttachmentsV1Response;
 import org.openapitools.client.model.SupplierGetListV1Response;
 import org.openapitools.client.model.SupplierImportIntoEDMV1Request;
 import org.openapitools.client.model.SupplierImportIntoEDMV1Response;
@@ -60,6 +62,272 @@ public class ObjectSupplierApi {
     return basePath;
   }
 
+  /**
+  * Download multiples attachments from a Supplier
+  * 
+   * @param pkiSupplierID 
+   * @param supplierBatchDownloadV1Request 
+   * @return File
+  */
+  public File supplierBatchDownloadV1 (Integer pkiSupplierID, SupplierBatchDownloadV1Request supplierBatchDownloadV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = supplierBatchDownloadV1Request;
+    // verify the required parameter 'pkiSupplierID' is set
+    if (pkiSupplierID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiSupplierID' when calling supplierBatchDownloadV1",
+        new ApiException(400, "Missing the required parameter 'pkiSupplierID' when calling supplierBatchDownloadV1"));
+    }
+    // verify the required parameter 'supplierBatchDownloadV1Request' is set
+    if (supplierBatchDownloadV1Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'supplierBatchDownloadV1Request' when calling supplierBatchDownloadV1",
+        new ApiException(400, "Missing the required parameter 'supplierBatchDownloadV1Request' when calling supplierBatchDownloadV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/supplier/{pkiSupplierID}/batchDownload".replaceAll("\\{" + "pkiSupplierID" + "\\}", apiInvoker.escapeString(pkiSupplierID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (File) ApiInvoker.deserialize(localVarResponse, "", File.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Download multiples attachments from a Supplier
+   * 
+   * @param pkiSupplierID    * @param supplierBatchDownloadV1Request 
+  */
+  public void supplierBatchDownloadV1 (Integer pkiSupplierID, SupplierBatchDownloadV1Request supplierBatchDownloadV1Request, final Response.Listener<File> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = supplierBatchDownloadV1Request;
+
+    // verify the required parameter 'pkiSupplierID' is set
+    if (pkiSupplierID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiSupplierID' when calling supplierBatchDownloadV1",
+        new ApiException(400, "Missing the required parameter 'pkiSupplierID' when calling supplierBatchDownloadV1"));
+    }
+    // verify the required parameter 'supplierBatchDownloadV1Request' is set
+    if (supplierBatchDownloadV1Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'supplierBatchDownloadV1Request' when calling supplierBatchDownloadV1",
+        new ApiException(400, "Missing the required parameter 'supplierBatchDownloadV1Request' when calling supplierBatchDownloadV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/supplier/{pkiSupplierID}/batchDownload".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiSupplierID" + "\\}", apiInvoker.escapeString(pkiSupplierID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((File) ApiInvoker.deserialize(localVarResponse,  "", File.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Retrieve Supplier&#39;s attachments
+  * 
+   * @param pkiSupplierID 
+   * @return SupplierGetAttachmentsV1Response
+  */
+  public SupplierGetAttachmentsV1Response supplierGetAttachmentsV1 (Integer pkiSupplierID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiSupplierID' is set
+    if (pkiSupplierID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiSupplierID' when calling supplierGetAttachmentsV1",
+        new ApiException(400, "Missing the required parameter 'pkiSupplierID' when calling supplierGetAttachmentsV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/supplier/{pkiSupplierID}/getAttachments".replaceAll("\\{" + "pkiSupplierID" + "\\}", apiInvoker.escapeString(pkiSupplierID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (SupplierGetAttachmentsV1Response) ApiInvoker.deserialize(localVarResponse, "", SupplierGetAttachmentsV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve Supplier&#39;s attachments
+   * 
+   * @param pkiSupplierID 
+  */
+  public void supplierGetAttachmentsV1 (Integer pkiSupplierID, final Response.Listener<SupplierGetAttachmentsV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiSupplierID' is set
+    if (pkiSupplierID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiSupplierID' when calling supplierGetAttachmentsV1",
+        new ApiException(400, "Missing the required parameter 'pkiSupplierID' when calling supplierGetAttachmentsV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/supplier/{pkiSupplierID}/getAttachments".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiSupplierID" + "\\}", apiInvoker.escapeString(pkiSupplierID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((SupplierGetAttachmentsV1Response) ApiInvoker.deserialize(localVarResponse,  "", SupplierGetAttachmentsV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
   /**
   * Retrieve Supplier list
   * 

@@ -4,6 +4,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**inscriptionBatchDownloadV1**](ObjectInscriptionApi.md#inscriptionBatchDownloadV1) | **POST** /1/object/inscription/{pkiInscriptionID}/batchDownload | Download multiples attachments from an Inscription
 [**inscriptionGetAttachmentsV1**](ObjectInscriptionApi.md#inscriptionGetAttachmentsV1) | **GET** /1/object/inscription/{pkiInscriptionID}/getAttachments | Retrieve Inscription&#39;s Attachments
 [**inscriptionGetCommunicationCountV1**](ObjectInscriptionApi.md#inscriptionGetCommunicationCountV1) | **GET** /1/object/inscription/{pkiInscriptionID}/getCommunicationCount | Retrieve Communication count
 [**inscriptionGetCommunicationListV1**](ObjectInscriptionApi.md#inscriptionGetCommunicationListV1) | **GET** /1/object/inscription/{pkiInscriptionID}/getCommunicationList | Retrieve Communication list
@@ -15,6 +16,52 @@ Method | HTTP request | Description
 [**inscriptionImportIntoEDMV1**](ObjectInscriptionApi.md#inscriptionImportIntoEDMV1) | **POST** /1/object/inscription/{pkiInscriptionID}/importIntoEDM | Import attachments into the Inscription
 [**inscriptionPrepareFilesTransferV1**](ObjectInscriptionApi.md#inscriptionPrepareFilesTransferV1) | **POST** /1/object/inscription/{pkiInscriptionID}/prepareFilesTransfer | Prepares file transfer into EDM
 
+
+
+## inscriptionBatchDownloadV1
+
+> File inscriptionBatchDownloadV1(pkiInscriptionID, inscriptionBatchDownloadV1Request)
+
+Download multiples attachments from an Inscription
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectInscriptionApi;
+
+ObjectInscriptionApi apiInstance = new ObjectInscriptionApi();
+Integer pkiInscriptionID = null; // Integer | 
+InscriptionBatchDownloadV1Request inscriptionBatchDownloadV1Request = new InscriptionBatchDownloadV1Request(); // InscriptionBatchDownloadV1Request | 
+try {
+    File result = apiInstance.inscriptionBatchDownloadV1(pkiInscriptionID, inscriptionBatchDownloadV1Request);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectInscriptionApi#inscriptionBatchDownloadV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiInscriptionID** | **Integer**|  | [default to null]
+ **inscriptionBatchDownloadV1Request** | [**InscriptionBatchDownloadV1Request**](InscriptionBatchDownloadV1Request.md)|  |
+
+### Return type
+
+[**File**](File.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/zip, text/xml, application/json
 
 
 ## inscriptionGetAttachmentsV1

@@ -4,9 +4,101 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**leadBatchDownloadV1**](ObjectLeadApi.md#leadBatchDownloadV1) | **POST** /1/object/lead/{pkiLeadID}/batchDownload | Download multiples attachments from a Lead
+[**leadGetAttachmentsV1**](ObjectLeadApi.md#leadGetAttachmentsV1) | **GET** /1/object/lead/{pkiLeadID}/getAttachments | Retrieve Lead&#39;s attachments
 [**leadGetListV1**](ObjectLeadApi.md#leadGetListV1) | **GET** /1/object/lead/getList | Retrieve Lead list
 [**leadImportIntoEDMV1**](ObjectLeadApi.md#leadImportIntoEDMV1) | **POST** /1/object/lead/{pkiLeadID}/importIntoEDM | Import attachments into the Lead
 
+
+
+## leadBatchDownloadV1
+
+> File leadBatchDownloadV1(pkiLeadID, leadBatchDownloadV1Request)
+
+Download multiples attachments from a Lead
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectLeadApi;
+
+ObjectLeadApi apiInstance = new ObjectLeadApi();
+Integer pkiLeadID = null; // Integer | 
+LeadBatchDownloadV1Request leadBatchDownloadV1Request = new LeadBatchDownloadV1Request(); // LeadBatchDownloadV1Request | 
+try {
+    File result = apiInstance.leadBatchDownloadV1(pkiLeadID, leadBatchDownloadV1Request);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectLeadApi#leadBatchDownloadV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiLeadID** | **Integer**|  | [default to null]
+ **leadBatchDownloadV1Request** | [**LeadBatchDownloadV1Request**](LeadBatchDownloadV1Request.md)|  |
+
+### Return type
+
+[**File**](File.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/zip, text/xml, application/json
+
+
+## leadGetAttachmentsV1
+
+> LeadGetAttachmentsV1Response leadGetAttachmentsV1(pkiLeadID)
+
+Retrieve Lead&#39;s attachments
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectLeadApi;
+
+ObjectLeadApi apiInstance = new ObjectLeadApi();
+Integer pkiLeadID = null; // Integer | 
+try {
+    LeadGetAttachmentsV1Response result = apiInstance.leadGetAttachmentsV1(pkiLeadID);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectLeadApi#leadGetAttachmentsV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiLeadID** | **Integer**|  | [default to null]
+
+### Return type
+
+[**LeadGetAttachmentsV1Response**](LeadGetAttachmentsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
 ## leadGetListV1

@@ -24,6 +24,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
 import org.openapitools.client.model.AttachmentGetAttachmentlogsV1Response;
+import org.openapitools.client.model.AttachmentRenameV1Request;
+import org.openapitools.client.model.AttachmentRenameV1Response;
 import org.openapitools.client.model.CommonResponseError;
 
 import org.apache.http.HttpEntity;
@@ -292,6 +294,145 @@ public class ObjectAttachmentApi {
           public void onResponse(String localVarResponse) {
             try {
               responseListener.onResponse((AttachmentGetAttachmentlogsV1Response) ApiInvoker.deserialize(localVarResponse,  "", AttachmentGetAttachmentlogsV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Rename an Attachment
+  * The endpoint allows to change the attachment&#39;s file name and category.
+   * @param pkiAttachmentID 
+   * @param attachmentRenameV1Request 
+   * @return AttachmentRenameV1Response
+  */
+  public AttachmentRenameV1Response attachmentRenameV1 (Integer pkiAttachmentID, AttachmentRenameV1Request attachmentRenameV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = attachmentRenameV1Request;
+    // verify the required parameter 'pkiAttachmentID' is set
+    if (pkiAttachmentID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiAttachmentID' when calling attachmentRenameV1",
+        new ApiException(400, "Missing the required parameter 'pkiAttachmentID' when calling attachmentRenameV1"));
+    }
+    // verify the required parameter 'attachmentRenameV1Request' is set
+    if (attachmentRenameV1Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'attachmentRenameV1Request' when calling attachmentRenameV1",
+        new ApiException(400, "Missing the required parameter 'attachmentRenameV1Request' when calling attachmentRenameV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/attachment/{pkiAttachmentID}/rename".replaceAll("\\{" + "pkiAttachmentID" + "\\}", apiInvoker.escapeString(pkiAttachmentID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (AttachmentRenameV1Response) ApiInvoker.deserialize(localVarResponse, "", AttachmentRenameV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Rename an Attachment
+   * The endpoint allows to change the attachment&#39;s file name and category.
+   * @param pkiAttachmentID    * @param attachmentRenameV1Request 
+  */
+  public void attachmentRenameV1 (Integer pkiAttachmentID, AttachmentRenameV1Request attachmentRenameV1Request, final Response.Listener<AttachmentRenameV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = attachmentRenameV1Request;
+
+    // verify the required parameter 'pkiAttachmentID' is set
+    if (pkiAttachmentID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiAttachmentID' when calling attachmentRenameV1",
+        new ApiException(400, "Missing the required parameter 'pkiAttachmentID' when calling attachmentRenameV1"));
+    }
+    // verify the required parameter 'attachmentRenameV1Request' is set
+    if (attachmentRenameV1Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'attachmentRenameV1Request' when calling attachmentRenameV1",
+        new ApiException(400, "Missing the required parameter 'attachmentRenameV1Request' when calling attachmentRenameV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/attachment/{pkiAttachmentID}/rename".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiAttachmentID" + "\\}", apiInvoker.escapeString(pkiAttachmentID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((AttachmentRenameV1Response) ApiInvoker.deserialize(localVarResponse,  "", AttachmentRenameV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

@@ -94,6 +94,15 @@ Class | Method | HTTP request | Description
 *ObjectActivesessionApi* | [**activesessionGetCurrentV1**](docs/ObjectActivesessionApi.md#activesessionGetCurrentV1) | **GET** /1/object/activesession/getCurrent | Get Current Activesession
 *ObjectActivesessionApi* | [**activesessionGetCurrentV2**](docs/ObjectActivesessionApi.md#activesessionGetCurrentV2) | **GET** /2/object/activesession/getCurrent | Get Current Activesession
 *ObjectActivesessionApi* | [**activesessionGetListV1**](docs/ObjectActivesessionApi.md#activesessionGetListV1) | **GET** /1/object/activesession/getList | Retrieve Activesession list
+*ObjectAdjustmentApi* | [**adjustmentBatchDownloadV1**](docs/ObjectAdjustmentApi.md#adjustmentBatchDownloadV1) | **POST** /1/object/adjustment/{pkiAdjustmentID}/batchDownload | Download multiples attachments from an Adjustment
+*ObjectAdjustmentApi* | [**adjustmentGetAttachmentsV1**](docs/ObjectAdjustmentApi.md#adjustmentGetAttachmentsV1) | **GET** /1/object/adjustment/{pkiAdjustmentID}/getAttachments | Retrieve Adjustment&#39;s attachments
+*ObjectAdjustmentApi* | [**adjustmentGetCommunicationCountV1**](docs/ObjectAdjustmentApi.md#adjustmentGetCommunicationCountV1) | **GET** /1/object/adjustment/{pkiAdjustmentID}/getCommunicationCount | Retrieve Communication count
+*ObjectAdjustmentApi* | [**adjustmentGetCommunicationListV1**](docs/ObjectAdjustmentApi.md#adjustmentGetCommunicationListV1) | **GET** /1/object/adjustment/{pkiAdjustmentID}/getCommunicationList | Retrieve Communication list
+*ObjectAdjustmentApi* | [**adjustmentGetCommunicationrecipientsV1**](docs/ObjectAdjustmentApi.md#adjustmentGetCommunicationrecipientsV1) | **GET** /1/object/adjustment/{pkiAdjustmentID}/getCommunicationrecipients | Retrieve Communication recipients
+*ObjectAdjustmentApi* | [**adjustmentGetCommunicationsendersV1**](docs/ObjectAdjustmentApi.md#adjustmentGetCommunicationsendersV1) | **GET** /1/object/adjustment/{pkiAdjustmentID}/getCommunicationsenders | Retrieve Communication senders
+*ObjectAdjustmentApi* | [**adjustmentImportIntoEDMV1**](docs/ObjectAdjustmentApi.md#adjustmentImportIntoEDMV1) | **POST** /1/object/adjustment/{pkiAdjustmentID}/importIntoEDM | Import attachments into the Adjustment
+*ObjectAgentApi* | [**agentBatchDownloadV1**](docs/ObjectAgentApi.md#agentBatchDownloadV1) | **POST** /1/object/agent/{pkiAgentID}/batchDownload | Download multiples attachments from a Agent
+*ObjectAgentApi* | [**agentGetAttachmentsV1**](docs/ObjectAgentApi.md#agentGetAttachmentsV1) | **GET** /1/object/agent/{pkiAgentID}/getAttachments | Retrieve Agent&#39;s attachments
 *ObjectAgentApi* | [**agentGetAutocompleteV2**](docs/ObjectAgentApi.md#agentGetAutocompleteV2) | **GET** /2/object/agent/getAutocomplete/{sSelector} | Retrieve Agents and IDs
 *ObjectAgentApi* | [**agentGetListV1**](docs/ObjectAgentApi.md#agentGetListV1) | **GET** /1/object/agent/getList | Retrieve Agent list
 *ObjectAgentApi* | [**agentImportIntoEDMV1**](docs/ObjectAgentApi.md#agentImportIntoEDMV1) | **POST** /1/object/agent/{pkiAgentID}/importIntoEDM | Import attachments into the Agent
@@ -110,6 +119,7 @@ Class | Method | HTTP request | Description
 *ObjectApikeyApi* | [**apikeyRegenerateV1**](docs/ObjectApikeyApi.md#apikeyRegenerateV1) | **POST** /1/object/apikey/{pkiApikeyID}/regenerate | Regenerate the Apikey
 *ObjectAttachmentApi* | [**attachmentDownloadV1**](docs/ObjectAttachmentApi.md#attachmentDownloadV1) | **GET** /1/object/attachment/{pkiAttachmentID}/download | Retrieve the content
 *ObjectAttachmentApi* | [**attachmentGetAttachmentlogsV1**](docs/ObjectAttachmentApi.md#attachmentGetAttachmentlogsV1) | **GET** /1/object/attachment/{pkiAttachmentID}/getAttachmentlogs | Retrieve the Attachmentlogs
+*ObjectAttachmentApi* | [**attachmentRenameV1**](docs/ObjectAttachmentApi.md#attachmentRenameV1) | **POST** /1/object/attachment/{pkiAttachmentID}/rename | Rename an Attachment
 *ObjectAuthenticationexternalApi* | [**authenticationexternalCreateObjectV1**](docs/ObjectAuthenticationexternalApi.md#authenticationexternalCreateObjectV1) | **POST** /1/object/authenticationexternal | Create a new Authenticationexternal
 *ObjectAuthenticationexternalApi* | [**authenticationexternalDeleteObjectV1**](docs/ObjectAuthenticationexternalApi.md#authenticationexternalDeleteObjectV1) | **DELETE** /1/object/authenticationexternal/{pkiAuthenticationexternalID} | Delete an existing Authenticationexternal
 *ObjectAuthenticationexternalApi* | [**authenticationexternalEditObjectV1**](docs/ObjectAuthenticationexternalApi.md#authenticationexternalEditObjectV1) | **PUT** /1/object/authenticationexternal/{pkiAuthenticationexternalID} | Edit an existing Authenticationexternal
@@ -117,7 +127,10 @@ Class | Method | HTTP request | Description
 *ObjectAuthenticationexternalApi* | [**authenticationexternalGetListV1**](docs/ObjectAuthenticationexternalApi.md#authenticationexternalGetListV1) | **GET** /1/object/authenticationexternal/getList | Retrieve Authenticationexternal list
 *ObjectAuthenticationexternalApi* | [**authenticationexternalGetObjectV2**](docs/ObjectAuthenticationexternalApi.md#authenticationexternalGetObjectV2) | **GET** /2/object/authenticationexternal/{pkiAuthenticationexternalID} | Retrieve an existing Authenticationexternal
 *ObjectAuthenticationexternalApi* | [**authenticationexternalResetAuthorizationV1**](docs/ObjectAuthenticationexternalApi.md#authenticationexternalResetAuthorizationV1) | **POST** /1/object/authenticationexternal/{pkiAuthenticationexternalID}/resetAuthorization | Reset the Authenticationexternal authorization
+*ObjectBankaccountApi* | [**bankaccountBatchDownloadV1**](docs/ObjectBankaccountApi.md#bankaccountBatchDownloadV1) | **POST** /1/object/bankaccount/{pkiBankaccountID}/batchDownload | Download multiples attachments from a Bankaccount
+*ObjectBankaccountApi* | [**bankaccountGetAttachmentsV1**](docs/ObjectBankaccountApi.md#bankaccountGetAttachmentsV1) | **GET** /1/object/bankaccount/{pkiBankaccountID}/getAttachments | Retrieve Bankaccount&#39;s attachments
 *ObjectBankaccountApi* | [**bankaccountGetAutocompleteV2**](docs/ObjectBankaccountApi.md#bankaccountGetAutocompleteV2) | **GET** /2/object/bankaccount/getAutocomplete/{sSelector} | Retrieve Bankaccounts and IDs
+*ObjectBankaccountApi* | [**bankaccountImportIntoEDMV1**](docs/ObjectBankaccountApi.md#bankaccountImportIntoEDMV1) | **POST** /1/object/bankaccount/{pkiBankaccountID}/importIntoEDM | Import attachments into the Bankaccount
 *ObjectBillingentityexternalApi* | [**billingentityexternalGenerateFederationTokenV1**](docs/ObjectBillingentityexternalApi.md#billingentityexternalGenerateFederationTokenV1) | **POST** /1/object/billingentityexternal/{pkiBillingentityexternalID}/generateFederationToken | Generate a federation token
 *ObjectBillingentityexternalApi* | [**billingentityexternalGetAutocompleteV2**](docs/ObjectBillingentityexternalApi.md#billingentityexternalGetAutocompleteV2) | **GET** /2/object/billingentityexternal/getAutocomplete/{sSelector} | Retrieve Billingentityexternals and IDs
 *ObjectBillingentityinternalApi* | [**billingentityinternalCreateObjectV1**](docs/ObjectBillingentityinternalApi.md#billingentityinternalCreateObjectV1) | **POST** /1/object/billingentityinternal | Create a new Billingentityinternal
@@ -130,10 +143,14 @@ Class | Method | HTTP request | Description
 *ObjectBrandingApi* | [**brandingGetAutocompleteV2**](docs/ObjectBrandingApi.md#brandingGetAutocompleteV2) | **GET** /2/object/branding/getAutocomplete/{sSelector} | Retrieve Brandings and IDs
 *ObjectBrandingApi* | [**brandingGetListV1**](docs/ObjectBrandingApi.md#brandingGetListV1) | **GET** /1/object/branding/getList | Retrieve Branding list
 *ObjectBrandingApi* | [**brandingGetObjectV3**](docs/ObjectBrandingApi.md#brandingGetObjectV3) | **GET** /3/object/branding/{pkiBrandingID} | Retrieve an existing Branding
+*ObjectBrokerApi* | [**brokerBatchDownloadV1**](docs/ObjectBrokerApi.md#brokerBatchDownloadV1) | **POST** /1/object/broker/{pkiBrokerID}/batchDownload | Download multiples attachments from a Broker
+*ObjectBrokerApi* | [**brokerGetAttachmentsV1**](docs/ObjectBrokerApi.md#brokerGetAttachmentsV1) | **GET** /1/object/broker/{pkiBrokerID}/getAttachments | Retrieve Broker&#39;s attachments
 *ObjectBrokerApi* | [**brokerGetAutocompleteV2**](docs/ObjectBrokerApi.md#brokerGetAutocompleteV2) | **GET** /2/object/broker/getAutocomplete/{sSelector} | Retrieve Brokers and IDs
 *ObjectBrokerApi* | [**brokerGetListV1**](docs/ObjectBrokerApi.md#brokerGetListV1) | **GET** /1/object/broker/getList | Retrieve Broker list
 *ObjectBrokerApi* | [**brokerImportIntoEDMV1**](docs/ObjectBrokerApi.md#brokerImportIntoEDMV1) | **POST** /1/object/broker/{pkiBrokerID}/importIntoEDM | Import attachments into the Broker
 *ObjectBrokertypeApi* | [**brokertypeGetAutocompleteV2**](docs/ObjectBrokertypeApi.md#brokertypeGetAutocompleteV2) | **GET** /2/object/brokertype/getAutocomplete/{sSelector} | Retrieve Brokertypes and IDs
+*ObjectBuyercontractApi* | [**buyercontractBatchDownloadV1**](docs/ObjectBuyercontractApi.md#buyercontractBatchDownloadV1) | **POST** /1/object/buyercontract/{pkiBuyercontractID}/batchDownload | Download multiples attachments from a Buyercontract
+*ObjectBuyercontractApi* | [**buyercontractGetAttachmentsV1**](docs/ObjectBuyercontractApi.md#buyercontractGetAttachmentsV1) | **GET** /1/object/buyercontract/{pkiBuyercontractID}/getAttachments | Retrieve Buyercontract&#39;s attachments
 *ObjectBuyercontractApi* | [**buyercontractGetCommunicationCountV1**](docs/ObjectBuyercontractApi.md#buyercontractGetCommunicationCountV1) | **GET** /1/object/buyercontract/{pkiBuyercontractID}/getCommunicationCount | Retrieve Communication count
 *ObjectBuyercontractApi* | [**buyercontractGetCommunicationListV1**](docs/ObjectBuyercontractApi.md#buyercontractGetCommunicationListV1) | **GET** /1/object/buyercontract/{pkiBuyercontractID}/getCommunicationList | Retrieve Communication list
 *ObjectBuyercontractApi* | [**buyercontractGetCommunicationrecipientsV1**](docs/ObjectBuyercontractApi.md#buyercontractGetCommunicationrecipientsV1) | **GET** /1/object/buyercontract/{pkiBuyercontractID}/getCommunicationrecipients | Retrieve Buyercontract&#39;s Communicationrecipient
@@ -141,6 +158,9 @@ Class | Method | HTTP request | Description
 *ObjectBuyercontractApi* | [**buyercontractGetListV1**](docs/ObjectBuyercontractApi.md#buyercontractGetListV1) | **GET** /1/object/buyercontract/getList | Retrieve Buyercontract list
 *ObjectBuyercontractApi* | [**buyercontractImportIntoEDMV1**](docs/ObjectBuyercontractApi.md#buyercontractImportIntoEDMV1) | **POST** /1/object/buyercontract/{pkiBuyercontractID}/importIntoEDM | Import attachments into the Buyercontract
 *ObjectClonehistoryApi* | [**clonehistoryGetListV1**](docs/ObjectClonehistoryApi.md#clonehistoryGetListV1) | **GET** /1/object/clonehistory/getList | Retrieve Clonehistory list
+*ObjectCommissionadvanceApi* | [**commissionadvanceBatchDownloadV1**](docs/ObjectCommissionadvanceApi.md#commissionadvanceBatchDownloadV1) | **POST** /1/object/commissionadvance/{pkiCommissionadvanceID}/batchDownload | Download multiples attachments from a Commission advance
+*ObjectCommissionadvanceApi* | [**commissionadvanceGetAttachmentsV1**](docs/ObjectCommissionadvanceApi.md#commissionadvanceGetAttachmentsV1) | **GET** /1/object/commissionadvance/{pkiCommissionadvanceID}/getAttachments | Retrieve Commissionadvance&#39;s attachments
+*ObjectCommissionadvanceApi* | [**commissionadvanceImportIntoEDMV1**](docs/ObjectCommissionadvanceApi.md#commissionadvanceImportIntoEDMV1) | **POST** /1/object/commissionadvance/{pkiCommissionadvanceID}/importIntoEDM | Import attachments into the Commissionadvance
 *ObjectCommunicationApi* | [**communicationGetCommunicationBodyV1**](docs/ObjectCommunicationApi.md#communicationGetCommunicationBodyV1) | **GET** /1/object/communication/{pkiCommunicationID}/getCommunicationBody | Retrieve the communication body
 *ObjectCommunicationApi* | [**communicationSendV1**](docs/ObjectCommunicationApi.md#communicationSendV1) | **POST** /1/object/communication/send | Send a new Communication
 *ObjectCompanyApi* | [**companyGetAutocompleteV2**](docs/ObjectCompanyApi.md#companyGetAutocompleteV2) | **GET** /2/object/company/getAutocomplete/{sSelector} | Retrieve Companys and IDs
@@ -162,10 +182,21 @@ Class | Method | HTTP request | Description
 *ObjectCreditcardmerchantApi* | [**creditcardmerchantGetObjectV2**](docs/ObjectCreditcardmerchantApi.md#creditcardmerchantGetObjectV2) | **GET** /2/object/creditcardmerchant/{pkiCreditcardmerchantID} | Retrieve an existing Creditcardmerchant
 *ObjectCreditcardtypeApi* | [**creditcardtypeGetAutocompleteV2**](docs/ObjectCreditcardtypeApi.md#creditcardtypeGetAutocompleteV2) | **GET** /2/object/creditcardtype/getAutocomplete/{sSelector} | Retrieve Creditcardtypes and IDs
 *ObjectCurrencyApi* | [**currencyGetAutocompleteV2**](docs/ObjectCurrencyApi.md#currencyGetAutocompleteV2) | **GET** /2/object/currency/getAutocomplete/{sSelector} | Retrieve Currencies and IDs
+*ObjectCustomerApi* | [**customerBatchDownloadV1**](docs/ObjectCustomerApi.md#customerBatchDownloadV1) | **POST** /1/object/customer/{pkiCustomerID}/batchDownload | Download multiples attachments from a Customer
+*ObjectCustomerApi* | [**customerGetAttachmentsV1**](docs/ObjectCustomerApi.md#customerGetAttachmentsV1) | **GET** /1/object/customer/{pkiCustomerID}/getAttachments | Retrieve Customer&#39;s attachments
 *ObjectCustomerApi* | [**customerGetAutocompleteV2**](docs/ObjectCustomerApi.md#customerGetAutocompleteV2) | **GET** /2/object/customer/getAutocomplete/{sSelector} | Retrieve Customers and IDs
 *ObjectCustomerApi* | [**customerGetObjectV2**](docs/ObjectCustomerApi.md#customerGetObjectV2) | **GET** /2/object/customer/{pkiCustomerID} | Retrieve an existing Customer
 *ObjectCustomerApi* | [**customerImportIntoEDMV1**](docs/ObjectCustomerApi.md#customerImportIntoEDMV1) | **POST** /1/object/customer/{pkiCustomerID}/importIntoEDM | Import attachments into the Customer
 *ObjectDepartmentApi* | [**departmentGetAutocompleteV2**](docs/ObjectDepartmentApi.md#departmentGetAutocompleteV2) | **GET** /2/object/department/getAutocomplete/{sSelector} | Retrieve Departments and IDs
+*ObjectDepositApi* | [**depositBatchDownloadV1**](docs/ObjectDepositApi.md#depositBatchDownloadV1) | **POST** /1/object/deposit/{pkiDepositID}/batchDownload | Download multiples attachments from a Deposit
+*ObjectDepositApi* | [**depositGetAttachmentsV1**](docs/ObjectDepositApi.md#depositGetAttachmentsV1) | **GET** /1/object/deposit/{pkiDepositID}/getAttachments | Retrieve Deposit&#39;s attachments
+*ObjectDepositApi* | [**depositImportIntoEDMV1**](docs/ObjectDepositApi.md#depositImportIntoEDMV1) | **POST** /1/object/deposit/{pkiDepositID}/importIntoEDM | Import attachments into the Deposit
+*ObjectDeposittransitchequeApi* | [**deposittransitchequeBatchDownloadV1**](docs/ObjectDeposittransitchequeApi.md#deposittransitchequeBatchDownloadV1) | **POST** /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/batchDownload | Download multiples attachments from a Deposittransitcheque
+*ObjectDeposittransitchequeApi* | [**deposittransitchequeGetAttachmentsV1**](docs/ObjectDeposittransitchequeApi.md#deposittransitchequeGetAttachmentsV1) | **GET** /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getAttachments | Retrieve Deposittransitcheque&#39;s attachments
+*ObjectDeposittransitchequeApi* | [**deposittransitchequeImportIntoEDMV1**](docs/ObjectDeposittransitchequeApi.md#deposittransitchequeImportIntoEDMV1) | **POST** /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/importIntoEDM | Import attachments into the Deposittransitcheque
+*ObjectDisclosureApi* | [**disclosureBatchDownloadV1**](docs/ObjectDisclosureApi.md#disclosureBatchDownloadV1) | **POST** /1/object/disclosure/{pkiDisclosureID}/batchDownload | Download multiples attachments from a Disclosure
+*ObjectDisclosureApi* | [**disclosureGetAttachmentsV1**](docs/ObjectDisclosureApi.md#disclosureGetAttachmentsV1) | **GET** /1/object/disclosure/{pkiDisclosureID}/getAttachments | Retrieve Disclosure&#39;s attachments
+*ObjectDisclosureApi* | [**disclosureImportIntoEDMV1**](docs/ObjectDisclosureApi.md#disclosureImportIntoEDMV1) | **POST** /1/object/disclosure/{pkiDisclosureID}/importIntoEDM | Import attachments into the Disclosure
 *ObjectDiscussionApi* | [**discussionChatV1**](docs/ObjectDiscussionApi.md#discussionChatV1) | **POST** /1/object/discussion/chat | Have a Discussion with the AI Chatbot
 *ObjectDiscussionApi* | [**discussionCreateObjectV1**](docs/ObjectDiscussionApi.md#discussionCreateObjectV1) | **POST** /1/object/discussion | Create a new Discussion
 *ObjectDiscussionApi* | [**discussionDeleteObjectV1**](docs/ObjectDiscussionApi.md#discussionDeleteObjectV1) | **DELETE** /1/object/discussion/{pkiDiscussionID} | Delete an existing Discussion
@@ -182,14 +213,20 @@ Class | Method | HTTP request | Description
 *ObjectDomainApi* | [**domainGetAutocompleteV2**](docs/ObjectDomainApi.md#domainGetAutocompleteV2) | **GET** /2/object/domain/getAutocomplete/{sSelector} | Retrieve Domain and IDs
 *ObjectDomainApi* | [**domainGetListV1**](docs/ObjectDomainApi.md#domainGetListV1) | **GET** /1/object/domain/getList | Retrieve Domain list
 *ObjectDomainApi* | [**domainGetObjectV2**](docs/ObjectDomainApi.md#domainGetObjectV2) | **GET** /2/object/domain/{pkiDomainID} | Retrieve an existing Domain
+*ObjectElectronicfundstransferApi* | [**electronicfundstransferBatchDownloadV1**](docs/ObjectElectronicfundstransferApi.md#electronicfundstransferBatchDownloadV1) | **POST** /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/batchDownload | Download multiples attachments from an Electronicfundstransfer
+*ObjectElectronicfundstransferApi* | [**electronicfundstransferGetAttachmentsV1**](docs/ObjectElectronicfundstransferApi.md#electronicfundstransferGetAttachmentsV1) | **GET** /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getAttachments | Retrieve Electronicfundstransfer&#39;s attachments
 *ObjectElectronicfundstransferApi* | [**electronicfundstransferGetCommunicationCountV1**](docs/ObjectElectronicfundstransferApi.md#electronicfundstransferGetCommunicationCountV1) | **GET** /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationCount | Retrieve Communication count
 *ObjectElectronicfundstransferApi* | [**electronicfundstransferGetCommunicationListV1**](docs/ObjectElectronicfundstransferApi.md#electronicfundstransferGetCommunicationListV1) | **GET** /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationList | Retrieve Communication list
 *ObjectElectronicfundstransferApi* | [**electronicfundstransferGetCommunicationrecipientsV1**](docs/ObjectElectronicfundstransferApi.md#electronicfundstransferGetCommunicationrecipientsV1) | **GET** /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationrecipients | Retrieve Electronicfundstransfer&#39;s Communicationrecipient
 *ObjectElectronicfundstransferApi* | [**electronicfundstransferGetCommunicationsendersV1**](docs/ObjectElectronicfundstransferApi.md#electronicfundstransferGetCommunicationsendersV1) | **GET** /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationsenders | Retrieve Electronicfundstransfer&#39;s Communicationsender
 *ObjectElectronicfundstransferApi* | [**electronicfundstransferImportIntoEDMV1**](docs/ObjectElectronicfundstransferApi.md#electronicfundstransferImportIntoEDMV1) | **POST** /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/importIntoEDM | Import attachments into the Electronicfundstransfer
 *ObjectEmailtypeApi* | [**emailtypeGetAutocompleteV2**](docs/ObjectEmailtypeApi.md#emailtypeGetAutocompleteV2) | **GET** /2/object/emailtype/getAutocomplete/{sSelector} | Retrieve Emailtypes and IDs
+*ObjectEmployeeApi* | [**employeeBatchDownloadV1**](docs/ObjectEmployeeApi.md#employeeBatchDownloadV1) | **POST** /1/object/employee/{pkiEmployeeID}/batchDownload | Download multiples attachments from a Employee
+*ObjectEmployeeApi* | [**employeeGetAttachmentsV1**](docs/ObjectEmployeeApi.md#employeeGetAttachmentsV1) | **GET** /1/object/employee/{pkiEmployeeID}/getAttachments | Retrieve Employee&#39;s attachments
 *ObjectEmployeeApi* | [**employeeGetListV1**](docs/ObjectEmployeeApi.md#employeeGetListV1) | **GET** /1/object/employee/getList | Retrieve Employee list
 *ObjectEmployeeApi* | [**employeeImportIntoEDMV1**](docs/ObjectEmployeeApi.md#employeeImportIntoEDMV1) | **POST** /1/object/employee/{pkiEmployeeID}/importIntoEDM | Import attachments into the Employee
+*ObjectExternalbrokerApi* | [**externalbrokerBatchDownloadV1**](docs/ObjectExternalbrokerApi.md#externalbrokerBatchDownloadV1) | **POST** /1/object/externalbroker/{pkiExternalbrokerID}/batchDownload | Download multiples attachments from an Externalbroker
+*ObjectExternalbrokerApi* | [**externalbrokerGetAttachmentsV1**](docs/ObjectExternalbrokerApi.md#externalbrokerGetAttachmentsV1) | **GET** /1/object/externalbroker/{pkiExternalbrokerID}/getAttachments | Retrieve Externalbroker&#39;s attachments
 *ObjectExternalbrokerApi* | [**externalbrokerImportIntoEDMV1**](docs/ObjectExternalbrokerApi.md#externalbrokerImportIntoEDMV1) | **POST** /1/object/externalbroker/{pkiExternalbrokerID}/importIntoEDM | Import attachments into the Externalbroker
 *ObjectEzdoctemplatedocumentApi* | [**ezdoctemplatedocumentCreateObjectV1**](docs/ObjectEzdoctemplatedocumentApi.md#ezdoctemplatedocumentCreateObjectV1) | **POST** /1/object/ezdoctemplatedocument | Create a new Ezdoctemplatedocument
 *ObjectEzdoctemplatedocumentApi* | [**ezdoctemplatedocumentDownloadV1**](docs/ObjectEzdoctemplatedocumentApi.md#ezdoctemplatedocumentDownloadV1) | **GET** /1/object/ezdoctemplatedocument/{pkiEzdoctemplatedocumentID}/download | Retrieve the content
@@ -478,6 +515,9 @@ Class | Method | HTTP request | Description
 *ObjectEzsigntsarequirementApi* | [**ezsigntsarequirementGetAutocompleteV2**](docs/ObjectEzsigntsarequirementApi.md#ezsigntsarequirementGetAutocompleteV2) | **GET** /2/object/ezsigntsarequirement/getAutocomplete/{sSelector} | Retrieve Ezsigntsarequirements and IDs
 *ObjectEzsignuserApi* | [**ezsignuserEditObjectV1**](docs/ObjectEzsignuserApi.md#ezsignuserEditObjectV1) | **PUT** /1/object/ezsignuser/{pkiEzsignuserID} | Edit an existing Ezsignuser
 *ObjectEzsignuserApi* | [**ezsignuserGetObjectV2**](docs/ObjectEzsignuserApi.md#ezsignuserGetObjectV2) | **GET** /2/object/ezsignuser/{pkiEzsignuserID} | Retrieve an existing Ezsignuser
+*ObjectFolderApi* | [**folderBatchDownloadV1**](docs/ObjectFolderApi.md#folderBatchDownloadV1) | **POST** /1/object/folder/{pkiFolderID}/batchDownload | Download multiples attachments from an Folder
+*ObjectFolderApi* | [**folderGetAttachmentsV1**](docs/ObjectFolderApi.md#folderGetAttachmentsV1) | **GET** /1/object/folder/{pkiFolderID}/getAttachments | Retrieve Folder&#39;s attachments
+*ObjectFolderApi* | [**folderImportIntoEDMV1**](docs/ObjectFolderApi.md#folderImportIntoEDMV1) | **POST** /1/object/folder/{pkiFolderID}/importIntoEDM | Import attachments into the Folder
 *ObjectFontApi* | [**fontGetAutocompleteV2**](docs/ObjectFontApi.md#fontGetAutocompleteV2) | **GET** /2/object/font/getAutocomplete/{sSelector} | Retrieve Fonts and IDs
 *ObjectFranchisebrokerApi* | [**franchisebrokerGetAutocompleteV2**](docs/ObjectFranchisebrokerApi.md#franchisebrokerGetAutocompleteV2) | **GET** /2/object/franchisebroker/getAutocomplete/{sSelector} | Retrieve Franchisebrokers and IDs
 *ObjectFranchiseofficeApi* | [**franchiseofficeGetAutocompleteV2**](docs/ObjectFranchiseofficeApi.md#franchiseofficeGetAutocompleteV2) | **GET** /2/object/franchiseoffice/getAutocomplete/{sSelector} | Retrieve Franchiseoffices and IDs
@@ -485,6 +525,7 @@ Class | Method | HTTP request | Description
 *ObjectGlaccountApi* | [**glaccountGetAutocompleteV2**](docs/ObjectGlaccountApi.md#glaccountGetAutocompleteV2) | **GET** /2/object/glaccount/getAutocomplete/{sSelector} | Retrieve Glaccounts and IDs
 *ObjectGlaccountcontainerApi* | [**glaccountcontainerGetAutocompleteV2**](docs/ObjectGlaccountcontainerApi.md#glaccountcontainerGetAutocompleteV2) | **GET** /2/object/glaccountcontainer/getAutocomplete/{sSelector} | Retrieve Glaccountcontainers and IDs
 *ObjectInfrastructureregionApi* | [**infrastructureregionGetAutocompleteV2**](docs/ObjectInfrastructureregionApi.md#infrastructureregionGetAutocompleteV2) | **GET** /2/object/infrastructureregion/getAutocomplete/{sSelector} | Retrieve Infrastructureregions and IDs
+*ObjectInscriptionApi* | [**inscriptionBatchDownloadV1**](docs/ObjectInscriptionApi.md#inscriptionBatchDownloadV1) | **POST** /1/object/inscription/{pkiInscriptionID}/batchDownload | Download multiples attachments from an Inscription
 *ObjectInscriptionApi* | [**inscriptionGetAttachmentsV1**](docs/ObjectInscriptionApi.md#inscriptionGetAttachmentsV1) | **GET** /1/object/inscription/{pkiInscriptionID}/getAttachments | Retrieve Inscription&#39;s Attachments
 *ObjectInscriptionApi* | [**inscriptionGetCommunicationCountV1**](docs/ObjectInscriptionApi.md#inscriptionGetCommunicationCountV1) | **GET** /1/object/inscription/{pkiInscriptionID}/getCommunicationCount | Retrieve Communication count
 *ObjectInscriptionApi* | [**inscriptionGetCommunicationListV1**](docs/ObjectInscriptionApi.md#inscriptionGetCommunicationListV1) | **GET** /1/object/inscription/{pkiInscriptionID}/getCommunicationList | Retrieve Communication list
@@ -496,7 +537,9 @@ Class | Method | HTTP request | Description
 *ObjectInscriptionApi* | [**inscriptionImportIntoEDMV1**](docs/ObjectInscriptionApi.md#inscriptionImportIntoEDMV1) | **POST** /1/object/inscription/{pkiInscriptionID}/importIntoEDM | Import attachments into the Inscription
 *ObjectInscriptionApi* | [**inscriptionPrepareFilesTransferV1**](docs/ObjectInscriptionApi.md#inscriptionPrepareFilesTransferV1) | **POST** /1/object/inscription/{pkiInscriptionID}/prepareFilesTransfer | Prepares file transfer into EDM
 *ObjectInscriptionchecklistApi* | [**inscriptionchecklistGetAutocompleteV3**](docs/ObjectInscriptionchecklistApi.md#inscriptionchecklistGetAutocompleteV3) | **GET** /3/object/inscriptionchecklist/getAutocomplete/{sSelector} | Retrieve Inscriptionchecklists and IDs
+*ObjectInscriptionnotauthenticatedApi* | [**inscriptionnotauthenticatedBatchDownloadV1**](docs/ObjectInscriptionnotauthenticatedApi.md#inscriptionnotauthenticatedBatchDownloadV1) | **POST** /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/batchDownload | Download multiples attachments from a Inscriptionnotauthenticated
 *ObjectInscriptionnotauthenticatedApi* | [**inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1**](docs/ObjectInscriptionnotauthenticatedApi.md#inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1) | **POST** /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/fillInscriptionnotauthenticatedcondition | Fills the Inscriptionnotauthenticatedcondition in the Inscriptionnotauthenticated
+*ObjectInscriptionnotauthenticatedApi* | [**inscriptionnotauthenticatedGetAttachmentsV1**](docs/ObjectInscriptionnotauthenticatedApi.md#inscriptionnotauthenticatedGetAttachmentsV1) | **GET** /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getAttachments | Retrieve Inscriptionnotauthenticated&#39;s attachments
 *ObjectInscriptionnotauthenticatedApi* | [**inscriptionnotauthenticatedGetCommunicationCountV1**](docs/ObjectInscriptionnotauthenticatedApi.md#inscriptionnotauthenticatedGetCommunicationCountV1) | **GET** /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getCommunicationCount | Retrieve Communication count
 *ObjectInscriptionnotauthenticatedApi* | [**inscriptionnotauthenticatedGetCommunicationListV1**](docs/ObjectInscriptionnotauthenticatedApi.md#inscriptionnotauthenticatedGetCommunicationListV1) | **GET** /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getCommunicationList | Retrieve Communication list
 *ObjectInscriptionnotauthenticatedApi* | [**inscriptionnotauthenticatedGetCommunicationrecipientsV1**](docs/ObjectInscriptionnotauthenticatedApi.md#inscriptionnotauthenticatedGetCommunicationrecipientsV1) | **GET** /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getCommunicationrecipients | Retrieve Inscriptionnotauthenticated&#39;s Communicationrecipient
@@ -505,6 +548,8 @@ Class | Method | HTTP request | Description
 *ObjectInscriptionnotauthenticatedApi* | [**inscriptionnotauthenticatedGetListV1**](docs/ObjectInscriptionnotauthenticatedApi.md#inscriptionnotauthenticatedGetListV1) | **GET** /1/object/inscriptionnotauthenticated/getList | Retrieve Inscriptionnotauthenticated list
 *ObjectInscriptionnotauthenticatedApi* | [**inscriptionnotauthenticatedGetObjectV2**](docs/ObjectInscriptionnotauthenticatedApi.md#inscriptionnotauthenticatedGetObjectV2) | **GET** /2/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID} | Retrieve an existing Inscriptionnotauthenticated
 *ObjectInscriptionnotauthenticatedApi* | [**inscriptionnotauthenticatedImportIntoEDMV1**](docs/ObjectInscriptionnotauthenticatedApi.md#inscriptionnotauthenticatedImportIntoEDMV1) | **POST** /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/importIntoEDM | Import attachments into the Inscriptionnotauthenticated
+*ObjectInscriptiontempApi* | [**inscriptiontempBatchDownloadV1**](docs/ObjectInscriptiontempApi.md#inscriptiontempBatchDownloadV1) | **POST** /1/object/inscriptiontemp/{pkiInscriptiontempID}/batchDownload | Download multiples attachments from a Inscriptiontemp
+*ObjectInscriptiontempApi* | [**inscriptiontempGetAttachmentsV1**](docs/ObjectInscriptiontempApi.md#inscriptiontempGetAttachmentsV1) | **GET** /1/object/inscriptiontemp/{pkiInscriptiontempID}/getAttachments | Retrieve Inscriptiontemp&#39;s attachments
 *ObjectInscriptiontempApi* | [**inscriptiontempGetCommunicationCountV1**](docs/ObjectInscriptiontempApi.md#inscriptiontempGetCommunicationCountV1) | **GET** /1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationCount | Retrieve Communication count
 *ObjectInscriptiontempApi* | [**inscriptiontempGetCommunicationListV1**](docs/ObjectInscriptiontempApi.md#inscriptiontempGetCommunicationListV1) | **GET** /1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationList | Retrieve Communication list
 *ObjectInscriptiontempApi* | [**inscriptiontempGetCommunicationrecipientsV1**](docs/ObjectInscriptiontempApi.md#inscriptiontempGetCommunicationrecipientsV1) | **GET** /1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationrecipients | Retrieve Inscriptiontemp&#39;s Communicationrecipient
@@ -512,6 +557,7 @@ Class | Method | HTTP request | Description
 *ObjectInscriptiontempApi* | [**inscriptiontempGetListV1**](docs/ObjectInscriptiontempApi.md#inscriptiontempGetListV1) | **GET** /1/object/inscriptiontemp/getList | Retrieve Inscriptiontemp list
 *ObjectInscriptiontempApi* | [**inscriptiontempImportIntoEDMV1**](docs/ObjectInscriptiontempApi.md#inscriptiontempImportIntoEDMV1) | **POST** /1/object/inscriptiontemp/{pkiInscriptiontempID}/importIntoEDM | Import attachments into the Inscriptiontemp
 *ObjectInscriptiontypeApi* | [**inscriptiontypeGetAutocompleteV2**](docs/ObjectInscriptiontypeApi.md#inscriptiontypeGetAutocompleteV2) | **GET** /2/object/inscriptiontype/getAutocomplete/{sSelector} | Retrieve Inscriptiontypes and IDs
+*ObjectInvoiceApi* | [**invoiceBatchDownloadV1**](docs/ObjectInvoiceApi.md#invoiceBatchDownloadV1) | **POST** /1/object/invoice/{pkiInvoiceID}/batchDownload | Download multiples attachments from an Invoice
 *ObjectInvoiceApi* | [**invoiceGetAttachmentsV1**](docs/ObjectInvoiceApi.md#invoiceGetAttachmentsV1) | **GET** /1/object/invoice/{pkiInvoiceID}/getAttachments | Retrieve Invoice&#39;s Attachments
 *ObjectInvoiceApi* | [**invoiceGetCommunicationCountV1**](docs/ObjectInvoiceApi.md#invoiceGetCommunicationCountV1) | **GET** /1/object/invoice/{pkiInvoiceID}/getCommunicationCount | Retrieve Communication count
 *ObjectInvoiceApi* | [**invoiceGetCommunicationListV1**](docs/ObjectInvoiceApi.md#invoiceGetCommunicationListV1) | **GET** /1/object/invoice/{pkiInvoiceID}/getCommunicationList | Retrieve Communication list
@@ -519,13 +565,23 @@ Class | Method | HTTP request | Description
 *ObjectInvoiceApi* | [**invoiceGetCommunicationsendersV1**](docs/ObjectInvoiceApi.md#invoiceGetCommunicationsendersV1) | **GET** /1/object/invoice/{pkiInvoiceID}/getCommunicationsenders | Retrieve Invoice&#39;s Communicationsender
 *ObjectInvoiceApi* | [**invoiceImportIntoEDMV1**](docs/ObjectInvoiceApi.md#invoiceImportIntoEDMV1) | **POST** /1/object/invoice/{pkiInvoiceID}/importIntoEDM | Import attachments into the Invoice
 *ObjectLanguageApi* | [**languageGetAutocompleteV2**](docs/ObjectLanguageApi.md#languageGetAutocompleteV2) | **GET** /2/object/language/getAutocomplete/{sSelector} | Retrieve Languages and IDs
+*ObjectLeadApi* | [**leadBatchDownloadV1**](docs/ObjectLeadApi.md#leadBatchDownloadV1) | **POST** /1/object/lead/{pkiLeadID}/batchDownload | Download multiples attachments from a Lead
+*ObjectLeadApi* | [**leadGetAttachmentsV1**](docs/ObjectLeadApi.md#leadGetAttachmentsV1) | **GET** /1/object/lead/{pkiLeadID}/getAttachments | Retrieve Lead&#39;s attachments
 *ObjectLeadApi* | [**leadGetListV1**](docs/ObjectLeadApi.md#leadGetListV1) | **GET** /1/object/lead/getList | Retrieve Lead list
 *ObjectLeadApi* | [**leadImportIntoEDMV1**](docs/ObjectLeadApi.md#leadImportIntoEDMV1) | **POST** /1/object/lead/{pkiLeadID}/importIntoEDM | Import attachments into the Lead
 *ObjectLeadsourceApi* | [**leadsourceGetAutocompleteV2**](docs/ObjectLeadsourceApi.md#leadsourceGetAutocompleteV2) | **GET** /2/object/leadsource/getAutocomplete/{sSelector} | Retrieve Leadsources and IDs
 *ObjectModuleApi* | [**moduleGetAutocompleteV2**](docs/ObjectModuleApi.md#moduleGetAutocompleteV2) | **GET** /2/object/module/getAutocomplete/{sSelector} | Retrieve Modules and IDs
 *ObjectModulegroupApi* | [**modulegroupGetAllV1**](docs/ObjectModulegroupApi.md#modulegroupGetAllV1) | **GET** /1/object/modulegroup/getAll/{eContext} | Retrieve all Modulegroups
+*ObjectNotaryApi* | [**notaryBatchDownloadV1**](docs/ObjectNotaryApi.md#notaryBatchDownloadV1) | **POST** /1/object/notary/{pkiNotaryID}/batchDownload | Download multiples attachments from a Notary
+*ObjectNotaryApi* | [**notaryGetAttachmentsV1**](docs/ObjectNotaryApi.md#notaryGetAttachmentsV1) | **GET** /1/object/notary/{pkiNotaryID}/getAttachments | Retrieve Notary&#39;s attachments
+*ObjectNotaryApi* | [**notaryImportIntoEDMV1**](docs/ObjectNotaryApi.md#notaryImportIntoEDMV1) | **POST** /1/object/notary/{pkiNotaryID}/importIntoEDM | Import attachments into the Notary
 *ObjectNotificationsectionApi* | [**notificationsectionGetNotificationtestsV1**](docs/ObjectNotificationsectionApi.md#notificationsectionGetNotificationtestsV1) | **GET** /1/object/notificationsection/{pkiNotificationsectionID}/getNotificationtests | Retrieve an existing Notificationsection&#39;s Notificationtests
 *ObjectNotificationtestApi* | [**notificationtestGetElementsV2**](docs/ObjectNotificationtestApi.md#notificationtestGetElementsV2) | **GET** /2/object/notificationtest/{pkiNotificationtestID}/getElements | Retrieve an existing Notificationtest&#39;s Elements
+*ObjectOfficetaxreportApi* | [**officetaxreportBatchDownloadV1**](docs/ObjectOfficetaxreportApi.md#officetaxreportBatchDownloadV1) | **POST** /1/object/officetaxreport/{pkiOfficetaxreportID}/batchDownload | Download multiples attachments from an Officetaxreport
+*ObjectOfficetaxreportApi* | [**officetaxreportGetAttachmentsV1**](docs/ObjectOfficetaxreportApi.md#officetaxreportGetAttachmentsV1) | **GET** /1/object/officetaxreport/{pkiOfficetaxreportID}/getAttachments | Retrieve Officetaxreport&#39;s attachments
+*ObjectOfficetaxreportApi* | [**officetaxreportImportIntoEDMV1**](docs/ObjectOfficetaxreportApi.md#officetaxreportImportIntoEDMV1) | **POST** /1/object/officetaxreport/{pkiOfficetaxreportID}/importIntoEDM | Import attachments into the Officetaxreport
+*ObjectOtherincomeApi* | [**otherincomeBatchDownloadV1**](docs/ObjectOtherincomeApi.md#otherincomeBatchDownloadV1) | **POST** /1/object/otherincome/{pkiOtherincomeID}/batchDownload | Download multiples attachments from a Otherincome
+*ObjectOtherincomeApi* | [**otherincomeGetAttachmentsV1**](docs/ObjectOtherincomeApi.md#otherincomeGetAttachmentsV1) | **GET** /1/object/otherincome/{pkiOtherincomeID}/getAttachments | Retrieve Otherincome&#39;s attachments
 *ObjectOtherincomeApi* | [**otherincomeGetCommunicationCountV1**](docs/ObjectOtherincomeApi.md#otherincomeGetCommunicationCountV1) | **GET** /1/object/otherincome/{pkiOtherincomeID}/getCommunicationCount | Retrieve Communication count
 *ObjectOtherincomeApi* | [**otherincomeGetCommunicationListV1**](docs/ObjectOtherincomeApi.md#otherincomeGetCommunicationListV1) | **GET** /1/object/otherincome/{pkiOtherincomeID}/getCommunicationList | Retrieve Communication list
 *ObjectOtherincomeApi* | [**otherincomeGetCommunicationrecipientsV1**](docs/ObjectOtherincomeApi.md#otherincomeGetCommunicationrecipientsV1) | **GET** /1/object/otherincome/{pkiOtherincomeID}/getCommunicationrecipients | Retrieve Otherincome&#39;s Communicationrecipient
@@ -539,6 +595,9 @@ Class | Method | HTTP request | Description
 *ObjectPaymentgatewayApi* | [**paymentgatewayGetListV1**](docs/ObjectPaymentgatewayApi.md#paymentgatewayGetListV1) | **GET** /1/object/paymentgateway/getList | Retrieve Paymentgateway list
 *ObjectPaymentgatewayApi* | [**paymentgatewayGetObjectV2**](docs/ObjectPaymentgatewayApi.md#paymentgatewayGetObjectV2) | **GET** /2/object/paymentgateway/{pkiPaymentgatewayID} | Retrieve an existing Paymentgateway
 *ObjectPaymentmethodApi* | [**paymentmethodGetAutocompleteV2**](docs/ObjectPaymentmethodApi.md#paymentmethodGetAutocompleteV2) | **GET** /2/object/paymentmethod/getAutocomplete/{sSelector} | Retrieve Paymentmethods and IDs
+*ObjectPaymentpreparationApi* | [**paymentpreparationBatchDownloadV1**](docs/ObjectPaymentpreparationApi.md#paymentpreparationBatchDownloadV1) | **POST** /1/object/paymentpreparation/{pkiPaymentpreparationID}/batchDownload | Download multiples attachments from an Paymentpreparation
+*ObjectPaymentpreparationApi* | [**paymentpreparationGetAttachmentsV1**](docs/ObjectPaymentpreparationApi.md#paymentpreparationGetAttachmentsV1) | **GET** /1/object/paymentpreparation/{pkiPaymentpreparationID}/getAttachments | Retrieve Paymentpreparation&#39;s attachments
+*ObjectPaymentpreparationApi* | [**paymentpreparationImportIntoEDMV1**](docs/ObjectPaymentpreparationApi.md#paymentpreparationImportIntoEDMV1) | **POST** /1/object/paymentpreparation/{pkiPaymentpreparationID}/importIntoEDM | Import attachments into the Paymentpreparation
 *ObjectPaymenttermApi* | [**paymenttermCreateObjectV1**](docs/ObjectPaymenttermApi.md#paymenttermCreateObjectV1) | **POST** /1/object/paymentterm | Create a new Paymentterm
 *ObjectPaymenttermApi* | [**paymenttermEditObjectV1**](docs/ObjectPaymenttermApi.md#paymenttermEditObjectV1) | **PUT** /1/object/paymentterm/{pkiPaymenttermID} | Edit an existing Paymentterm
 *ObjectPaymenttermApi* | [**paymenttermGetAutocompleteV2**](docs/ObjectPaymenttermApi.md#paymenttermGetAutocompleteV2) | **GET** /2/object/paymentterm/getAutocomplete/{sSelector} | Retrieve Paymentterms and IDs
@@ -552,14 +611,25 @@ Class | Method | HTTP request | Description
 *ObjectPermissionApi* | [**permissionGetObjectV2**](docs/ObjectPermissionApi.md#permissionGetObjectV2) | **GET** /2/object/permission/{pkiPermissionID} | Retrieve an existing Permission
 *ObjectPhonetypeApi* | [**phonetypeGetAutocompleteV2**](docs/ObjectPhonetypeApi.md#phonetypeGetAutocompleteV2) | **GET** /2/object/phonetype/getAutocomplete/{sSelector} | Retrieve Phonetypes and IDs
 *ObjectProvinceApi* | [**provinceGetAutocompleteV2**](docs/ObjectProvinceApi.md#provinceGetAutocompleteV2) | **GET** /2/object/province/getAutocomplete/{sSelector} | Retrieve Provinces and IDs
+*ObjectPurchaseApi* | [**purchaseBatchDownloadV1**](docs/ObjectPurchaseApi.md#purchaseBatchDownloadV1) | **POST** /1/object/purchase/{pkiPurchaseID}/batchDownload | Download multiples attachments from a Purchase
+*ObjectPurchaseApi* | [**purchaseGetAttachmentsV1**](docs/ObjectPurchaseApi.md#purchaseGetAttachmentsV1) | **GET** /1/object/purchase/{pkiPurchaseID}/getAttachments | Retrieve Purchase&#39;s attachments
+*ObjectPurchaseApi* | [**purchaseImportIntoEDMV1**](docs/ObjectPurchaseApi.md#purchaseImportIntoEDMV1) | **POST** /1/object/purchase/{pkiPurchaseID}/importIntoEDM | Import attachments into the Purchase
 *ObjectRealestateassociationApi* | [**realestateassociationGetAutocompleteV2**](docs/ObjectRealestateassociationApi.md#realestateassociationGetAutocompleteV2) | **GET** /2/object/realestateassociation/getAutocomplete/{sSelector} | Retrieve Realestateassociations and IDs
 *ObjectRealestateboardApi* | [**realestateboardGetAutocompleteV2**](docs/ObjectRealestateboardApi.md#realestateboardGetAutocompleteV2) | **GET** /2/object/realestateboard/getAutocomplete/{sSelector} | Retrieve Realestateboards and IDs
+*ObjectReconciliationApi* | [**reconciliationBatchDownloadV1**](docs/ObjectReconciliationApi.md#reconciliationBatchDownloadV1) | **POST** /1/object/reconciliation/{pkiReconciliationID}/batchDownload | Download multiples attachments from a Reconciliation
+*ObjectReconciliationApi* | [**reconciliationGetAttachmentsV1**](docs/ObjectReconciliationApi.md#reconciliationGetAttachmentsV1) | **GET** /1/object/reconciliation/{pkiReconciliationID}/getAttachments | Retrieve Reconciliation&#39;s attachments
+*ObjectReconciliationApi* | [**reconciliationImportIntoEDMV1**](docs/ObjectReconciliationApi.md#reconciliationImportIntoEDMV1) | **POST** /1/object/reconciliation/{pkiReconciliationID}/importIntoEDM | Import attachments into the Reconciliation
+*ObjectRejectedoffertopurchaseApi* | [**rejectedoffertopurchaseBatchDownloadV1**](docs/ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchaseBatchDownloadV1) | **POST** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/batchDownload | Download multiples attachments from a Rejectedoffertopurchase
+*ObjectRejectedoffertopurchaseApi* | [**rejectedoffertopurchaseGetAttachmentsV1**](docs/ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchaseGetAttachmentsV1) | **GET** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getAttachments | Retrieve Rejectedoffertopurchase&#39;s attachments
 *ObjectRejectedoffertopurchaseApi* | [**rejectedoffertopurchaseGetCommunicationCountV1**](docs/ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchaseGetCommunicationCountV1) | **GET** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationCount | Retrieve Communication count
 *ObjectRejectedoffertopurchaseApi* | [**rejectedoffertopurchaseGetCommunicationListV1**](docs/ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchaseGetCommunicationListV1) | **GET** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationList | Retrieve Communication list
 *ObjectRejectedoffertopurchaseApi* | [**rejectedoffertopurchaseGetCommunicationrecipientsV1**](docs/ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchaseGetCommunicationrecipientsV1) | **GET** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationrecipients | Retrieve Rejectedoffertopurchase&#39;s Communicationrecipient
 *ObjectRejectedoffertopurchaseApi* | [**rejectedoffertopurchaseGetCommunicationsendersV1**](docs/ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchaseGetCommunicationsendersV1) | **GET** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationsenders | Retrieve Rejectedoffertopurchase&#39;s Communicationsender
 *ObjectRejectedoffertopurchaseApi* | [**rejectedoffertopurchaseGetListV1**](docs/ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchaseGetListV1) | **GET** /1/object/rejectedoffertopurchase/getList | Retrieve Rejectedoffertopurchase list
 *ObjectRejectedoffertopurchaseApi* | [**rejectedoffertopurchaseImportIntoEDMV1**](docs/ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchaseImportIntoEDMV1) | **POST** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/importIntoEDM | Import attachments into the Rejectedoffertopurchase
+*ObjectSalaryApi* | [**salaryBatchDownloadV1**](docs/ObjectSalaryApi.md#salaryBatchDownloadV1) | **POST** /1/object/salary/{pkiSalaryID}/batchDownload | Download multiples attachments from a Reconciliation
+*ObjectSalaryApi* | [**salaryGetAttachmentsV1**](docs/ObjectSalaryApi.md#salaryGetAttachmentsV1) | **GET** /1/object/salary/{pkiSalaryID}/getAttachments | Retrieve Salary&#39;s attachments
+*ObjectSalaryApi* | [**salaryImportIntoEDMV1**](docs/ObjectSalaryApi.md#salaryImportIntoEDMV1) | **POST** /1/object/salary/{pkiSalaryID}/importIntoEDM | Import attachments into the Salary
 *ObjectSecretquestionApi* | [**secretquestionGetAutocompleteV2**](docs/ObjectSecretquestionApi.md#secretquestionGetAutocompleteV2) | **GET** /2/object/secretquestion/getAutocomplete/{sSelector} | Retrieve Secretquestions and IDs
 *ObjectSessionhistoryApi* | [**sessionhistoryGetListV1**](docs/ObjectSessionhistoryApi.md#sessionhistoryGetListV1) | **GET** /1/object/sessionhistory/getList | Retrieve Sessionhistory list
 *ObjectSignatureApi* | [**signatureCreateObjectV1**](docs/ObjectSignatureApi.md#signatureCreateObjectV1) | **POST** /1/object/signature | Create a new Signature
@@ -572,6 +642,8 @@ Class | Method | HTTP request | Description
 *ObjectSubnetApi* | [**subnetDeleteObjectV1**](docs/ObjectSubnetApi.md#subnetDeleteObjectV1) | **DELETE** /1/object/subnet/{pkiSubnetID} | Delete an existing Subnet
 *ObjectSubnetApi* | [**subnetEditObjectV1**](docs/ObjectSubnetApi.md#subnetEditObjectV1) | **PUT** /1/object/subnet/{pkiSubnetID} | Edit an existing Subnet
 *ObjectSubnetApi* | [**subnetGetObjectV2**](docs/ObjectSubnetApi.md#subnetGetObjectV2) | **GET** /2/object/subnet/{pkiSubnetID} | Retrieve an existing Subnet
+*ObjectSupplierApi* | [**supplierBatchDownloadV1**](docs/ObjectSupplierApi.md#supplierBatchDownloadV1) | **POST** /1/object/supplier/{pkiSupplierID}/batchDownload | Download multiples attachments from a Supplier
+*ObjectSupplierApi* | [**supplierGetAttachmentsV1**](docs/ObjectSupplierApi.md#supplierGetAttachmentsV1) | **GET** /1/object/supplier/{pkiSupplierID}/getAttachments | Retrieve Supplier&#39;s attachments
 *ObjectSupplierApi* | [**supplierGetListV1**](docs/ObjectSupplierApi.md#supplierGetListV1) | **GET** /1/object/supplier/getList | Retrieve Supplier list
 *ObjectSupplierApi* | [**supplierImportIntoEDMV1**](docs/ObjectSupplierApi.md#supplierImportIntoEDMV1) | **POST** /1/object/supplier/{pkiSupplierID}/importIntoEDM | Import attachments into the Supplier
 *ObjectSupplyApi* | [**supplyCreateObjectV1**](docs/ObjectSupplyApi.md#supplyCreateObjectV1) | **POST** /1/object/supply | Create a new Supply
@@ -689,7 +761,24 @@ Class | Method | HTTP request | Description
  - [AddressRequestCompound](docs/AddressRequestCompound.md)
  - [AddressResponse](docs/AddressResponse.md)
  - [AddressResponseCompound](docs/AddressResponseCompound.md)
+ - [AdjustmentBatchDownloadV1Request](docs/AdjustmentBatchDownloadV1Request.md)
+ - [AdjustmentGetAttachmentsV1Response](docs/AdjustmentGetAttachmentsV1Response.md)
+ - [AdjustmentGetAttachmentsV1ResponseMPayload](docs/AdjustmentGetAttachmentsV1ResponseMPayload.md)
+ - [AdjustmentGetCommunicationCountV1Response](docs/AdjustmentGetCommunicationCountV1Response.md)
+ - [AdjustmentGetCommunicationCountV1ResponseMPayload](docs/AdjustmentGetCommunicationCountV1ResponseMPayload.md)
+ - [AdjustmentGetCommunicationListV1Response](docs/AdjustmentGetCommunicationListV1Response.md)
+ - [AdjustmentGetCommunicationListV1ResponseMPayload](docs/AdjustmentGetCommunicationListV1ResponseMPayload.md)
+ - [AdjustmentGetCommunicationrecipientsV1Response](docs/AdjustmentGetCommunicationrecipientsV1Response.md)
+ - [AdjustmentGetCommunicationrecipientsV1ResponseMPayload](docs/AdjustmentGetCommunicationrecipientsV1ResponseMPayload.md)
+ - [AdjustmentGetCommunicationsendersV1Response](docs/AdjustmentGetCommunicationsendersV1Response.md)
+ - [AdjustmentGetCommunicationsendersV1ResponseMPayload](docs/AdjustmentGetCommunicationsendersV1ResponseMPayload.md)
+ - [AdjustmentImportIntoEDMV1Request](docs/AdjustmentImportIntoEDMV1Request.md)
+ - [AdjustmentImportIntoEDMV1Response](docs/AdjustmentImportIntoEDMV1Response.md)
+ - [AdjustmentImportIntoEDMV1ResponseMPayload](docs/AdjustmentImportIntoEDMV1ResponseMPayload.md)
  - [AgentAutocompleteElementResponse](docs/AgentAutocompleteElementResponse.md)
+ - [AgentBatchDownloadV1Request](docs/AgentBatchDownloadV1Request.md)
+ - [AgentGetAttachmentsV1Response](docs/AgentGetAttachmentsV1Response.md)
+ - [AgentGetAttachmentsV1ResponseMPayload](docs/AgentGetAttachmentsV1ResponseMPayload.md)
  - [AgentGetAutocompleteV2Response](docs/AgentGetAutocompleteV2Response.md)
  - [AgentGetAutocompleteV2ResponseMPayload](docs/AgentGetAutocompleteV2ResponseMPayload.md)
  - [AgentGetListV1Response](docs/AgentGetListV1Response.md)
@@ -732,6 +821,9 @@ Class | Method | HTTP request | Description
  - [ApikeyResponseCompound](docs/ApikeyResponseCompound.md)
  - [AttachmentGetAttachmentlogsV1Response](docs/AttachmentGetAttachmentlogsV1Response.md)
  - [AttachmentGetAttachmentlogsV1ResponseMPayload](docs/AttachmentGetAttachmentlogsV1ResponseMPayload.md)
+ - [AttachmentRenameV1Request](docs/AttachmentRenameV1Request.md)
+ - [AttachmentRenameV1Response](docs/AttachmentRenameV1Response.md)
+ - [AttachmentRenameV1ResponseMPayload](docs/AttachmentRenameV1ResponseMPayload.md)
  - [AttachmentResponse](docs/AttachmentResponse.md)
  - [AttachmentResponseCompound](docs/AttachmentResponseCompound.md)
  - [AttachmentlogResponse](docs/AttachmentlogResponse.md)
@@ -758,8 +850,14 @@ Class | Method | HTTP request | Description
  - [AuthenticationexternalResponse](docs/AuthenticationexternalResponse.md)
  - [AuthenticationexternalResponseCompound](docs/AuthenticationexternalResponseCompound.md)
  - [BankaccountAutocompleteElementResponse](docs/BankaccountAutocompleteElementResponse.md)
+ - [BankaccountBatchDownloadV1Request](docs/BankaccountBatchDownloadV1Request.md)
+ - [BankaccountGetAttachmentsV1Response](docs/BankaccountGetAttachmentsV1Response.md)
+ - [BankaccountGetAttachmentsV1ResponseMPayload](docs/BankaccountGetAttachmentsV1ResponseMPayload.md)
  - [BankaccountGetAutocompleteV2Response](docs/BankaccountGetAutocompleteV2Response.md)
  - [BankaccountGetAutocompleteV2ResponseMPayload](docs/BankaccountGetAutocompleteV2ResponseMPayload.md)
+ - [BankaccountImportIntoEDMV1Request](docs/BankaccountImportIntoEDMV1Request.md)
+ - [BankaccountImportIntoEDMV1Response](docs/BankaccountImportIntoEDMV1Response.md)
+ - [BankaccountImportIntoEDMV1ResponseMPayload](docs/BankaccountImportIntoEDMV1ResponseMPayload.md)
  - [BillingentityexternalAutocompleteElementResponse](docs/BillingentityexternalAutocompleteElementResponse.md)
  - [BillingentityexternalGenerateFederationTokenV1Request](docs/BillingentityexternalGenerateFederationTokenV1Request.md)
  - [BillingentityexternalGenerateFederationTokenV1Response](docs/BillingentityexternalGenerateFederationTokenV1Response.md)
@@ -805,6 +903,9 @@ Class | Method | HTTP request | Description
  - [BrandingResponseCompoundV3](docs/BrandingResponseCompoundV3.md)
  - [BrandingResponseV3](docs/BrandingResponseV3.md)
  - [BrokerAutocompleteElementResponse](docs/BrokerAutocompleteElementResponse.md)
+ - [BrokerBatchDownloadV1Request](docs/BrokerBatchDownloadV1Request.md)
+ - [BrokerGetAttachmentsV1Response](docs/BrokerGetAttachmentsV1Response.md)
+ - [BrokerGetAttachmentsV1ResponseMPayload](docs/BrokerGetAttachmentsV1ResponseMPayload.md)
  - [BrokerGetAutocompleteV2Response](docs/BrokerGetAutocompleteV2Response.md)
  - [BrokerGetAutocompleteV2ResponseMPayload](docs/BrokerGetAutocompleteV2ResponseMPayload.md)
  - [BrokerGetListV1Response](docs/BrokerGetListV1Response.md)
@@ -816,6 +917,9 @@ Class | Method | HTTP request | Description
  - [BrokertypeAutocompleteElementResponse](docs/BrokertypeAutocompleteElementResponse.md)
  - [BrokertypeGetAutocompleteV2Response](docs/BrokertypeGetAutocompleteV2Response.md)
  - [BrokertypeGetAutocompleteV2ResponseMPayload](docs/BrokertypeGetAutocompleteV2ResponseMPayload.md)
+ - [BuyercontractBatchDownloadV1Request](docs/BuyercontractBatchDownloadV1Request.md)
+ - [BuyercontractGetAttachmentsV1Response](docs/BuyercontractGetAttachmentsV1Response.md)
+ - [BuyercontractGetAttachmentsV1ResponseMPayload](docs/BuyercontractGetAttachmentsV1ResponseMPayload.md)
  - [BuyercontractGetCommunicationCountV1Response](docs/BuyercontractGetCommunicationCountV1Response.md)
  - [BuyercontractGetCommunicationCountV1ResponseMPayload](docs/BuyercontractGetCommunicationCountV1ResponseMPayload.md)
  - [BuyercontractGetCommunicationListV1Response](docs/BuyercontractGetCommunicationListV1Response.md)
@@ -830,6 +934,7 @@ Class | Method | HTTP request | Description
  - [BuyercontractImportIntoEDMV1Response](docs/BuyercontractImportIntoEDMV1Response.md)
  - [BuyercontractImportIntoEDMV1ResponseMPayload](docs/BuyercontractImportIntoEDMV1ResponseMPayload.md)
  - [BuyercontractListElement](docs/BuyercontractListElement.md)
+ - [BuyercontractResponse](docs/BuyercontractResponse.md)
  - [ClonehistoryGetListV1Response](docs/ClonehistoryGetListV1Response.md)
  - [ClonehistoryGetListV1ResponseMPayload](docs/ClonehistoryGetListV1ResponseMPayload.md)
  - [ClonehistoryListElement](docs/ClonehistoryListElement.md)
@@ -837,6 +942,12 @@ Class | Method | HTTP request | Description
  - [ColleagueRequestV2](docs/ColleagueRequestV2.md)
  - [ColleagueResponseCompoundV2](docs/ColleagueResponseCompoundV2.md)
  - [ColleagueResponseV2](docs/ColleagueResponseV2.md)
+ - [CommissionadvanceBatchDownloadV1Request](docs/CommissionadvanceBatchDownloadV1Request.md)
+ - [CommissionadvanceGetAttachmentsV1Response](docs/CommissionadvanceGetAttachmentsV1Response.md)
+ - [CommissionadvanceGetAttachmentsV1ResponseMPayload](docs/CommissionadvanceGetAttachmentsV1ResponseMPayload.md)
+ - [CommissionadvanceImportIntoEDMV1Request](docs/CommissionadvanceImportIntoEDMV1Request.md)
+ - [CommissionadvanceImportIntoEDMV1Response](docs/CommissionadvanceImportIntoEDMV1Response.md)
+ - [CommissionadvanceImportIntoEDMV1ResponseMPayload](docs/CommissionadvanceImportIntoEDMV1ResponseMPayload.md)
  - [CommonAudit](docs/CommonAudit.md)
  - [CommonAuditdetail](docs/CommonAuditdetail.md)
  - [CommonFile](docs/CommonFile.md)
@@ -1040,6 +1151,9 @@ Class | Method | HTTP request | Description
  - [CustomWordPositionOccurenceResponse](docs/CustomWordPositionOccurenceResponse.md)
  - [CustomWordPositionWordResponse](docs/CustomWordPositionWordResponse.md)
  - [CustomerAutocompleteElementResponse](docs/CustomerAutocompleteElementResponse.md)
+ - [CustomerBatchDownloadV1Request](docs/CustomerBatchDownloadV1Request.md)
+ - [CustomerGetAttachmentsV1Response](docs/CustomerGetAttachmentsV1Response.md)
+ - [CustomerGetAttachmentsV1ResponseMPayload](docs/CustomerGetAttachmentsV1ResponseMPayload.md)
  - [CustomerGetAutocompleteV2Response](docs/CustomerGetAutocompleteV2Response.md)
  - [CustomerGetAutocompleteV2ResponseMPayload](docs/CustomerGetAutocompleteV2ResponseMPayload.md)
  - [CustomerGetObjectV2Response](docs/CustomerGetObjectV2Response.md)
@@ -1052,6 +1166,24 @@ Class | Method | HTTP request | Description
  - [DepartmentAutocompleteElementResponse](docs/DepartmentAutocompleteElementResponse.md)
  - [DepartmentGetAutocompleteV2Response](docs/DepartmentGetAutocompleteV2Response.md)
  - [DepartmentGetAutocompleteV2ResponseMPayload](docs/DepartmentGetAutocompleteV2ResponseMPayload.md)
+ - [DepositBatchDownloadV1Request](docs/DepositBatchDownloadV1Request.md)
+ - [DepositGetAttachmentsV1Response](docs/DepositGetAttachmentsV1Response.md)
+ - [DepositGetAttachmentsV1ResponseMPayload](docs/DepositGetAttachmentsV1ResponseMPayload.md)
+ - [DepositImportIntoEDMV1Request](docs/DepositImportIntoEDMV1Request.md)
+ - [DepositImportIntoEDMV1Response](docs/DepositImportIntoEDMV1Response.md)
+ - [DepositImportIntoEDMV1ResponseMPayload](docs/DepositImportIntoEDMV1ResponseMPayload.md)
+ - [DeposittransitchequeBatchDownloadV1Request](docs/DeposittransitchequeBatchDownloadV1Request.md)
+ - [DeposittransitchequeGetAttachmentsV1Response](docs/DeposittransitchequeGetAttachmentsV1Response.md)
+ - [DeposittransitchequeGetAttachmentsV1ResponseMPayload](docs/DeposittransitchequeGetAttachmentsV1ResponseMPayload.md)
+ - [DeposittransitchequeImportIntoEDMV1Request](docs/DeposittransitchequeImportIntoEDMV1Request.md)
+ - [DeposittransitchequeImportIntoEDMV1Response](docs/DeposittransitchequeImportIntoEDMV1Response.md)
+ - [DeposittransitchequeImportIntoEDMV1ResponseMPayload](docs/DeposittransitchequeImportIntoEDMV1ResponseMPayload.md)
+ - [DisclosureBatchDownloadV1Request](docs/DisclosureBatchDownloadV1Request.md)
+ - [DisclosureGetAttachmentsV1Response](docs/DisclosureGetAttachmentsV1Response.md)
+ - [DisclosureGetAttachmentsV1ResponseMPayload](docs/DisclosureGetAttachmentsV1ResponseMPayload.md)
+ - [DisclosureImportIntoEDMV1Request](docs/DisclosureImportIntoEDMV1Request.md)
+ - [DisclosureImportIntoEDMV1Response](docs/DisclosureImportIntoEDMV1Response.md)
+ - [DisclosureImportIntoEDMV1ResponseMPayload](docs/DisclosureImportIntoEDMV1ResponseMPayload.md)
  - [DiscussionChatV1200Response](docs/DiscussionChatV1200Response.md)
  - [DiscussionChatV1Request](docs/DiscussionChatV1Request.md)
  - [DiscussionCreateObjectV1Request](docs/DiscussionCreateObjectV1Request.md)
@@ -1104,6 +1236,9 @@ Class | Method | HTTP request | Description
  - [DomainRequestCompound](docs/DomainRequestCompound.md)
  - [DomainResponse](docs/DomainResponse.md)
  - [DomainResponseCompound](docs/DomainResponseCompound.md)
+ - [ElectronicfundstransferBatchDownloadV1Request](docs/ElectronicfundstransferBatchDownloadV1Request.md)
+ - [ElectronicfundstransferGetAttachmentsV1Response](docs/ElectronicfundstransferGetAttachmentsV1Response.md)
+ - [ElectronicfundstransferGetAttachmentsV1ResponseMPayload](docs/ElectronicfundstransferGetAttachmentsV1ResponseMPayload.md)
  - [ElectronicfundstransferGetCommunicationCountV1Response](docs/ElectronicfundstransferGetCommunicationCountV1Response.md)
  - [ElectronicfundstransferGetCommunicationCountV1ResponseMPayload](docs/ElectronicfundstransferGetCommunicationCountV1ResponseMPayload.md)
  - [ElectronicfundstransferGetCommunicationListV1Response](docs/ElectronicfundstransferGetCommunicationListV1Response.md)
@@ -1122,6 +1257,9 @@ Class | Method | HTTP request | Description
  - [EmailtypeAutocompleteElementResponse](docs/EmailtypeAutocompleteElementResponse.md)
  - [EmailtypeGetAutocompleteV2Response](docs/EmailtypeGetAutocompleteV2Response.md)
  - [EmailtypeGetAutocompleteV2ResponseMPayload](docs/EmailtypeGetAutocompleteV2ResponseMPayload.md)
+ - [EmployeeBatchDownloadV1Request](docs/EmployeeBatchDownloadV1Request.md)
+ - [EmployeeGetAttachmentsV1Response](docs/EmployeeGetAttachmentsV1Response.md)
+ - [EmployeeGetAttachmentsV1ResponseMPayload](docs/EmployeeGetAttachmentsV1ResponseMPayload.md)
  - [EmployeeGetListV1Response](docs/EmployeeGetListV1Response.md)
  - [EmployeeGetListV1ResponseMPayload](docs/EmployeeGetListV1ResponseMPayload.md)
  - [EmployeeImportIntoEDMV1Request](docs/EmployeeImportIntoEDMV1Request.md)
@@ -1134,6 +1272,9 @@ Class | Method | HTTP request | Description
  - [EnumReportdataType](docs/EnumReportdataType.md)
  - [EnumTextvalidation](docs/EnumTextvalidation.md)
  - [EnumVerticalalignment](docs/EnumVerticalalignment.md)
+ - [ExternalbrokerBatchDownloadV1Request](docs/ExternalbrokerBatchDownloadV1Request.md)
+ - [ExternalbrokerGetAttachmentsV1Response](docs/ExternalbrokerGetAttachmentsV1Response.md)
+ - [ExternalbrokerGetAttachmentsV1ResponseMPayload](docs/ExternalbrokerGetAttachmentsV1ResponseMPayload.md)
  - [ExternalbrokerImportIntoEDMV1Request](docs/ExternalbrokerImportIntoEDMV1Request.md)
  - [ExternalbrokerImportIntoEDMV1Response](docs/ExternalbrokerImportIntoEDMV1Response.md)
  - [ExternalbrokerImportIntoEDMV1ResponseMPayload](docs/ExternalbrokerImportIntoEDMV1ResponseMPayload.md)
@@ -2038,6 +2179,7 @@ Class | Method | HTTP request | Description
  - [FieldEAuthenticationexternalType](docs/FieldEAuthenticationexternalType.md)
  - [FieldEBrandingAlignlogo](docs/FieldEBrandingAlignlogo.md)
  - [FieldEBrandingLogo](docs/FieldEBrandingLogo.md)
+ - [FieldEBuyercontractRemunerationtype](docs/FieldEBuyercontractRemunerationtype.md)
  - [FieldEBuyercontractStep](docs/FieldEBuyercontractStep.md)
  - [FieldEBuyercontractType](docs/FieldEBuyercontractType.md)
  - [FieldEColleagueEzsign](docs/FieldEColleagueEzsign.md)
@@ -2177,6 +2319,12 @@ Class | Method | HTTP request | Description
  - [FieldEWebhookRealestateevent](docs/FieldEWebhookRealestateevent.md)
  - [FieldEtInscriptionnotauthenticatedMortgagetype](docs/FieldEtInscriptionnotauthenticatedMortgagetype.md)
  - [FieldPksEzmaxclientOs](docs/FieldPksEzmaxclientOs.md)
+ - [FolderBatchDownloadV1Request](docs/FolderBatchDownloadV1Request.md)
+ - [FolderGetAttachmentsV1Response](docs/FolderGetAttachmentsV1Response.md)
+ - [FolderGetAttachmentsV1ResponseMPayload](docs/FolderGetAttachmentsV1ResponseMPayload.md)
+ - [FolderImportIntoEDMV1Request](docs/FolderImportIntoEDMV1Request.md)
+ - [FolderImportIntoEDMV1Response](docs/FolderImportIntoEDMV1Response.md)
+ - [FolderImportIntoEDMV1ResponseMPayload](docs/FolderImportIntoEDMV1ResponseMPayload.md)
  - [FontAutocompleteElementResponse](docs/FontAutocompleteElementResponse.md)
  - [FontGetAutocompleteV2Response](docs/FontGetAutocompleteV2Response.md)
  - [FontGetAutocompleteV2ResponseMPayload](docs/FontGetAutocompleteV2ResponseMPayload.md)
@@ -2204,6 +2352,7 @@ Class | Method | HTTP request | Description
  - [InfrastructureregionAutocompleteElementResponse](docs/InfrastructureregionAutocompleteElementResponse.md)
  - [InfrastructureregionGetAutocompleteV2Response](docs/InfrastructureregionGetAutocompleteV2Response.md)
  - [InfrastructureregionGetAutocompleteV2ResponseMPayload](docs/InfrastructureregionGetAutocompleteV2ResponseMPayload.md)
+ - [InscriptionBatchDownloadV1Request](docs/InscriptionBatchDownloadV1Request.md)
  - [InscriptionGetAttachmentsV1Response](docs/InscriptionGetAttachmentsV1Response.md)
  - [InscriptionGetAttachmentsV1ResponseMPayload](docs/InscriptionGetAttachmentsV1ResponseMPayload.md)
  - [InscriptionGetCommunicationCountV1Response](docs/InscriptionGetCommunicationCountV1Response.md)
@@ -2232,8 +2381,11 @@ Class | Method | HTTP request | Description
  - [InscriptionchecklistAutocompleteElementResponse](docs/InscriptionchecklistAutocompleteElementResponse.md)
  - [InscriptionchecklistGetAutocompleteV3Response](docs/InscriptionchecklistGetAutocompleteV3Response.md)
  - [InscriptionchecklistGetAutocompleteV3ResponseMPayload](docs/InscriptionchecklistGetAutocompleteV3ResponseMPayload.md)
+ - [InscriptionnotauthenticatedBatchDownloadV1Request](docs/InscriptionnotauthenticatedBatchDownloadV1Request.md)
  - [InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request](docs/InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request.md)
  - [InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Response](docs/InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Response.md)
+ - [InscriptionnotauthenticatedGetAttachmentsV1Response](docs/InscriptionnotauthenticatedGetAttachmentsV1Response.md)
+ - [InscriptionnotauthenticatedGetAttachmentsV1ResponseMPayload](docs/InscriptionnotauthenticatedGetAttachmentsV1ResponseMPayload.md)
  - [InscriptionnotauthenticatedGetCommunicationCountV1Response](docs/InscriptionnotauthenticatedGetCommunicationCountV1Response.md)
  - [InscriptionnotauthenticatedGetCommunicationCountV1ResponseMPayload](docs/InscriptionnotauthenticatedGetCommunicationCountV1ResponseMPayload.md)
  - [InscriptionnotauthenticatedGetCommunicationListV1Response](docs/InscriptionnotauthenticatedGetCommunicationListV1Response.md)
@@ -2256,6 +2408,9 @@ Class | Method | HTTP request | Description
  - [InscriptionnotauthenticatedResponseCompound](docs/InscriptionnotauthenticatedResponseCompound.md)
  - [InscriptionnotauthenticatedconditionResponse](docs/InscriptionnotauthenticatedconditionResponse.md)
  - [InscriptionnotauthenticatedconditionResponseCompound](docs/InscriptionnotauthenticatedconditionResponseCompound.md)
+ - [InscriptiontempBatchDownloadV1Request](docs/InscriptiontempBatchDownloadV1Request.md)
+ - [InscriptiontempGetAttachmentsV1Response](docs/InscriptiontempGetAttachmentsV1Response.md)
+ - [InscriptiontempGetAttachmentsV1ResponseMPayload](docs/InscriptiontempGetAttachmentsV1ResponseMPayload.md)
  - [InscriptiontempGetCommunicationCountV1Response](docs/InscriptiontempGetCommunicationCountV1Response.md)
  - [InscriptiontempGetCommunicationCountV1ResponseMPayload](docs/InscriptiontempGetCommunicationCountV1ResponseMPayload.md)
  - [InscriptiontempGetCommunicationListV1Response](docs/InscriptiontempGetCommunicationListV1Response.md)
@@ -2273,6 +2428,7 @@ Class | Method | HTTP request | Description
  - [InscriptiontypeAutocompleteElementResponse](docs/InscriptiontypeAutocompleteElementResponse.md)
  - [InscriptiontypeGetAutocompleteV2Response](docs/InscriptiontypeGetAutocompleteV2Response.md)
  - [InscriptiontypeGetAutocompleteV2ResponseMPayload](docs/InscriptiontypeGetAutocompleteV2ResponseMPayload.md)
+ - [InvoiceBatchDownloadV1Request](docs/InvoiceBatchDownloadV1Request.md)
  - [InvoiceGetAttachmentsV1Response](docs/InvoiceGetAttachmentsV1Response.md)
  - [InvoiceGetAttachmentsV1ResponseMPayload](docs/InvoiceGetAttachmentsV1ResponseMPayload.md)
  - [InvoiceGetCommunicationCountV1Response](docs/InvoiceGetCommunicationCountV1Response.md)
@@ -2289,6 +2445,9 @@ Class | Method | HTTP request | Description
  - [LanguageAutocompleteElementResponse](docs/LanguageAutocompleteElementResponse.md)
  - [LanguageGetAutocompleteV2Response](docs/LanguageGetAutocompleteV2Response.md)
  - [LanguageGetAutocompleteV2ResponseMPayload](docs/LanguageGetAutocompleteV2ResponseMPayload.md)
+ - [LeadBatchDownloadV1Request](docs/LeadBatchDownloadV1Request.md)
+ - [LeadGetAttachmentsV1Response](docs/LeadGetAttachmentsV1Response.md)
+ - [LeadGetAttachmentsV1ResponseMPayload](docs/LeadGetAttachmentsV1ResponseMPayload.md)
  - [LeadGetListV1Response](docs/LeadGetListV1Response.md)
  - [LeadGetListV1ResponseMPayload](docs/LeadGetListV1ResponseMPayload.md)
  - [LeadImportIntoEDMV1Request](docs/LeadImportIntoEDMV1Request.md)
@@ -2338,12 +2497,27 @@ Class | Method | HTTP request | Description
  - [MultilingualUserlogintypeDescription](docs/MultilingualUserlogintypeDescription.md)
  - [MultilingualVariableexpenseDescription](docs/MultilingualVariableexpenseDescription.md)
  - [MultilingualVersionhistoryDetail](docs/MultilingualVersionhistoryDetail.md)
+ - [NotaryBatchDownloadV1Request](docs/NotaryBatchDownloadV1Request.md)
+ - [NotaryGetAttachmentsV1Response](docs/NotaryGetAttachmentsV1Response.md)
+ - [NotaryGetAttachmentsV1ResponseMPayload](docs/NotaryGetAttachmentsV1ResponseMPayload.md)
+ - [NotaryImportIntoEDMV1Request](docs/NotaryImportIntoEDMV1Request.md)
+ - [NotaryImportIntoEDMV1Response](docs/NotaryImportIntoEDMV1Response.md)
+ - [NotaryImportIntoEDMV1ResponseMPayload](docs/NotaryImportIntoEDMV1ResponseMPayload.md)
  - [NotificationsectionGetNotificationtestsV1Response](docs/NotificationsectionGetNotificationtestsV1Response.md)
  - [NotificationsectionGetNotificationtestsV1ResponseMPayload](docs/NotificationsectionGetNotificationtestsV1ResponseMPayload.md)
  - [NotificationsubsectionResponse](docs/NotificationsubsectionResponse.md)
  - [NotificationtestGetElementsV2Response](docs/NotificationtestGetElementsV2Response.md)
  - [NotificationtestGetElementsV2ResponseMPayload](docs/NotificationtestGetElementsV2ResponseMPayload.md)
  - [NotificationtestResponse](docs/NotificationtestResponse.md)
+ - [OfficetaxreportBatchDownloadV1Request](docs/OfficetaxreportBatchDownloadV1Request.md)
+ - [OfficetaxreportGetAttachmentsV1Response](docs/OfficetaxreportGetAttachmentsV1Response.md)
+ - [OfficetaxreportGetAttachmentsV1ResponseMPayload](docs/OfficetaxreportGetAttachmentsV1ResponseMPayload.md)
+ - [OfficetaxreportImportIntoEDMV1Request](docs/OfficetaxreportImportIntoEDMV1Request.md)
+ - [OfficetaxreportImportIntoEDMV1Response](docs/OfficetaxreportImportIntoEDMV1Response.md)
+ - [OfficetaxreportImportIntoEDMV1ResponseMPayload](docs/OfficetaxreportImportIntoEDMV1ResponseMPayload.md)
+ - [OtherincomeBatchDownloadV1Request](docs/OtherincomeBatchDownloadV1Request.md)
+ - [OtherincomeGetAttachmentsV1Response](docs/OtherincomeGetAttachmentsV1Response.md)
+ - [OtherincomeGetAttachmentsV1ResponseMPayload](docs/OtherincomeGetAttachmentsV1ResponseMPayload.md)
  - [OtherincomeGetCommunicationCountV1Response](docs/OtherincomeGetCommunicationCountV1Response.md)
  - [OtherincomeGetCommunicationCountV1ResponseMPayload](docs/OtherincomeGetCommunicationCountV1ResponseMPayload.md)
  - [OtherincomeGetCommunicationListV1Response](docs/OtherincomeGetCommunicationListV1Response.md)
@@ -2381,6 +2555,12 @@ Class | Method | HTTP request | Description
  - [PaymentmethodAutocompleteElementResponse](docs/PaymentmethodAutocompleteElementResponse.md)
  - [PaymentmethodGetAutocompleteV2Response](docs/PaymentmethodGetAutocompleteV2Response.md)
  - [PaymentmethodGetAutocompleteV2ResponseMPayload](docs/PaymentmethodGetAutocompleteV2ResponseMPayload.md)
+ - [PaymentpreparationBatchDownloadV1Request](docs/PaymentpreparationBatchDownloadV1Request.md)
+ - [PaymentpreparationGetAttachmentsV1Response](docs/PaymentpreparationGetAttachmentsV1Response.md)
+ - [PaymentpreparationGetAttachmentsV1ResponseMPayload](docs/PaymentpreparationGetAttachmentsV1ResponseMPayload.md)
+ - [PaymentpreparationImportIntoEDMV1Request](docs/PaymentpreparationImportIntoEDMV1Request.md)
+ - [PaymentpreparationImportIntoEDMV1Response](docs/PaymentpreparationImportIntoEDMV1Response.md)
+ - [PaymentpreparationImportIntoEDMV1ResponseMPayload](docs/PaymentpreparationImportIntoEDMV1ResponseMPayload.md)
  - [PaymenttermAutocompleteElementResponse](docs/PaymenttermAutocompleteElementResponse.md)
  - [PaymenttermCreateObjectV1Request](docs/PaymenttermCreateObjectV1Request.md)
  - [PaymenttermCreateObjectV1Response](docs/PaymenttermCreateObjectV1Response.md)
@@ -2428,12 +2608,27 @@ Class | Method | HTTP request | Description
  - [ProvinceAutocompleteElementResponse](docs/ProvinceAutocompleteElementResponse.md)
  - [ProvinceGetAutocompleteV2Response](docs/ProvinceGetAutocompleteV2Response.md)
  - [ProvinceGetAutocompleteV2ResponseMPayload](docs/ProvinceGetAutocompleteV2ResponseMPayload.md)
+ - [PurchaseBatchDownloadV1Request](docs/PurchaseBatchDownloadV1Request.md)
+ - [PurchaseGetAttachmentsV1Response](docs/PurchaseGetAttachmentsV1Response.md)
+ - [PurchaseGetAttachmentsV1ResponseMPayload](docs/PurchaseGetAttachmentsV1ResponseMPayload.md)
+ - [PurchaseImportIntoEDMV1Request](docs/PurchaseImportIntoEDMV1Request.md)
+ - [PurchaseImportIntoEDMV1Response](docs/PurchaseImportIntoEDMV1Response.md)
+ - [PurchaseImportIntoEDMV1ResponseMPayload](docs/PurchaseImportIntoEDMV1ResponseMPayload.md)
  - [RealestateassociationAutocompleteElementResponse](docs/RealestateassociationAutocompleteElementResponse.md)
  - [RealestateassociationGetAutocompleteV2Response](docs/RealestateassociationGetAutocompleteV2Response.md)
  - [RealestateassociationGetAutocompleteV2ResponseMPayload](docs/RealestateassociationGetAutocompleteV2ResponseMPayload.md)
  - [RealestateboardAutocompleteElementResponse](docs/RealestateboardAutocompleteElementResponse.md)
  - [RealestateboardGetAutocompleteV2Response](docs/RealestateboardGetAutocompleteV2Response.md)
  - [RealestateboardGetAutocompleteV2ResponseMPayload](docs/RealestateboardGetAutocompleteV2ResponseMPayload.md)
+ - [ReconciliationBatchDownloadV1Request](docs/ReconciliationBatchDownloadV1Request.md)
+ - [ReconciliationGetAttachmentsV1Response](docs/ReconciliationGetAttachmentsV1Response.md)
+ - [ReconciliationGetAttachmentsV1ResponseMPayload](docs/ReconciliationGetAttachmentsV1ResponseMPayload.md)
+ - [ReconciliationImportIntoEDMV1Request](docs/ReconciliationImportIntoEDMV1Request.md)
+ - [ReconciliationImportIntoEDMV1Response](docs/ReconciliationImportIntoEDMV1Response.md)
+ - [ReconciliationImportIntoEDMV1ResponseMPayload](docs/ReconciliationImportIntoEDMV1ResponseMPayload.md)
+ - [RejectedoffertopurchaseBatchDownloadV1Request](docs/RejectedoffertopurchaseBatchDownloadV1Request.md)
+ - [RejectedoffertopurchaseGetAttachmentsV1Response](docs/RejectedoffertopurchaseGetAttachmentsV1Response.md)
+ - [RejectedoffertopurchaseGetAttachmentsV1ResponseMPayload](docs/RejectedoffertopurchaseGetAttachmentsV1ResponseMPayload.md)
  - [RejectedoffertopurchaseGetCommunicationCountV1Response](docs/RejectedoffertopurchaseGetCommunicationCountV1Response.md)
  - [RejectedoffertopurchaseGetCommunicationCountV1ResponseMPayload](docs/RejectedoffertopurchaseGetCommunicationCountV1ResponseMPayload.md)
  - [RejectedoffertopurchaseGetCommunicationListV1Response](docs/RejectedoffertopurchaseGetCommunicationListV1Response.md)
@@ -2448,6 +2643,12 @@ Class | Method | HTTP request | Description
  - [RejectedoffertopurchaseImportIntoEDMV1Response](docs/RejectedoffertopurchaseImportIntoEDMV1Response.md)
  - [RejectedoffertopurchaseImportIntoEDMV1ResponseMPayload](docs/RejectedoffertopurchaseImportIntoEDMV1ResponseMPayload.md)
  - [RejectedoffertopurchaseListElement](docs/RejectedoffertopurchaseListElement.md)
+ - [SalaryBatchDownloadV1Request](docs/SalaryBatchDownloadV1Request.md)
+ - [SalaryGetAttachmentsV1Response](docs/SalaryGetAttachmentsV1Response.md)
+ - [SalaryGetAttachmentsV1ResponseMPayload](docs/SalaryGetAttachmentsV1ResponseMPayload.md)
+ - [SalaryImportIntoEDMV1Request](docs/SalaryImportIntoEDMV1Request.md)
+ - [SalaryImportIntoEDMV1Response](docs/SalaryImportIntoEDMV1Response.md)
+ - [SalaryImportIntoEDMV1ResponseMPayload](docs/SalaryImportIntoEDMV1ResponseMPayload.md)
  - [ScimAuthenticationScheme](docs/ScimAuthenticationScheme.md)
  - [ScimEmail](docs/ScimEmail.md)
  - [ScimGroup](docs/ScimGroup.md)
@@ -2493,6 +2694,9 @@ Class | Method | HTTP request | Description
  - [SubnetRequestCompound](docs/SubnetRequestCompound.md)
  - [SubnetResponse](docs/SubnetResponse.md)
  - [SubnetResponseCompound](docs/SubnetResponseCompound.md)
+ - [SupplierBatchDownloadV1Request](docs/SupplierBatchDownloadV1Request.md)
+ - [SupplierGetAttachmentsV1Response](docs/SupplierGetAttachmentsV1Response.md)
+ - [SupplierGetAttachmentsV1ResponseMPayload](docs/SupplierGetAttachmentsV1ResponseMPayload.md)
  - [SupplierGetListV1Response](docs/SupplierGetListV1Response.md)
  - [SupplierGetListV1ResponseMPayload](docs/SupplierGetListV1ResponseMPayload.md)
  - [SupplierImportIntoEDMV1Request](docs/SupplierImportIntoEDMV1Request.md)
@@ -2742,6 +2946,8 @@ Class | Method | HTTP request | Description
  - [WebhookGetObjectV2Response](docs/WebhookGetObjectV2Response.md)
  - [WebhookGetObjectV2ResponseMPayload](docs/WebhookGetObjectV2ResponseMPayload.md)
  - [WebhookListElement](docs/WebhookListElement.md)
+ - [WebhookRealestateBuyercontractCreated](docs/WebhookRealestateBuyercontractCreated.md)
+ - [WebhookRealestateBuyercontractModified](docs/WebhookRealestateBuyercontractModified.md)
  - [WebhookRealestateInscriptionCreated](docs/WebhookRealestateInscriptionCreated.md)
  - [WebhookRealestateInscriptionModified](docs/WebhookRealestateInscriptionModified.md)
  - [WebhookRealestateInscriptionnotauthenticatedCreated](docs/WebhookRealestateInscriptionnotauthenticatedCreated.md)

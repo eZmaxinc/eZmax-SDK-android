@@ -45,7 +45,7 @@ public class EzsigntemplateelementdependencyResponse {
   /**
    * The unique ID of the Ezsigntemplateelementdependency
    * minimum: 0
-   * maximum: 65535
+   * maximum: 16777215
    **/
   @ApiModelProperty(required = true, value = "The unique ID of the Ezsigntemplateelementdependency")
   public Integer getPkiEzsigntemplateelementdependencyID() {

@@ -23,6 +23,8 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
+import org.openapitools.client.model.BrokerBatchDownloadV1Request;
+import org.openapitools.client.model.BrokerGetAttachmentsV1Response;
 import org.openapitools.client.model.BrokerGetAutocompleteV2Response;
 import org.openapitools.client.model.BrokerGetListV1Response;
 import org.openapitools.client.model.BrokerImportIntoEDMV1Request;
@@ -61,6 +63,272 @@ public class ObjectBrokerApi {
     return basePath;
   }
 
+  /**
+  * Download multiples attachments from a Broker
+  * 
+   * @param pkiBrokerID 
+   * @param brokerBatchDownloadV1Request 
+   * @return File
+  */
+  public File brokerBatchDownloadV1 (Integer pkiBrokerID, BrokerBatchDownloadV1Request brokerBatchDownloadV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = brokerBatchDownloadV1Request;
+    // verify the required parameter 'pkiBrokerID' is set
+    if (pkiBrokerID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiBrokerID' when calling brokerBatchDownloadV1",
+        new ApiException(400, "Missing the required parameter 'pkiBrokerID' when calling brokerBatchDownloadV1"));
+    }
+    // verify the required parameter 'brokerBatchDownloadV1Request' is set
+    if (brokerBatchDownloadV1Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'brokerBatchDownloadV1Request' when calling brokerBatchDownloadV1",
+        new ApiException(400, "Missing the required parameter 'brokerBatchDownloadV1Request' when calling brokerBatchDownloadV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/broker/{pkiBrokerID}/batchDownload".replaceAll("\\{" + "pkiBrokerID" + "\\}", apiInvoker.escapeString(pkiBrokerID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (File) ApiInvoker.deserialize(localVarResponse, "", File.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Download multiples attachments from a Broker
+   * 
+   * @param pkiBrokerID    * @param brokerBatchDownloadV1Request 
+  */
+  public void brokerBatchDownloadV1 (Integer pkiBrokerID, BrokerBatchDownloadV1Request brokerBatchDownloadV1Request, final Response.Listener<File> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = brokerBatchDownloadV1Request;
+
+    // verify the required parameter 'pkiBrokerID' is set
+    if (pkiBrokerID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiBrokerID' when calling brokerBatchDownloadV1",
+        new ApiException(400, "Missing the required parameter 'pkiBrokerID' when calling brokerBatchDownloadV1"));
+    }
+    // verify the required parameter 'brokerBatchDownloadV1Request' is set
+    if (brokerBatchDownloadV1Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'brokerBatchDownloadV1Request' when calling brokerBatchDownloadV1",
+        new ApiException(400, "Missing the required parameter 'brokerBatchDownloadV1Request' when calling brokerBatchDownloadV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/broker/{pkiBrokerID}/batchDownload".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiBrokerID" + "\\}", apiInvoker.escapeString(pkiBrokerID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((File) ApiInvoker.deserialize(localVarResponse,  "", File.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Retrieve Broker&#39;s attachments
+  * 
+   * @param pkiBrokerID 
+   * @return BrokerGetAttachmentsV1Response
+  */
+  public BrokerGetAttachmentsV1Response brokerGetAttachmentsV1 (Integer pkiBrokerID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiBrokerID' is set
+    if (pkiBrokerID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiBrokerID' when calling brokerGetAttachmentsV1",
+        new ApiException(400, "Missing the required parameter 'pkiBrokerID' when calling brokerGetAttachmentsV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/broker/{pkiBrokerID}/getAttachments".replaceAll("\\{" + "pkiBrokerID" + "\\}", apiInvoker.escapeString(pkiBrokerID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (BrokerGetAttachmentsV1Response) ApiInvoker.deserialize(localVarResponse, "", BrokerGetAttachmentsV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve Broker&#39;s attachments
+   * 
+   * @param pkiBrokerID 
+  */
+  public void brokerGetAttachmentsV1 (Integer pkiBrokerID, final Response.Listener<BrokerGetAttachmentsV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiBrokerID' is set
+    if (pkiBrokerID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiBrokerID' when calling brokerGetAttachmentsV1",
+        new ApiException(400, "Missing the required parameter 'pkiBrokerID' when calling brokerGetAttachmentsV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/broker/{pkiBrokerID}/getAttachments".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiBrokerID" + "\\}", apiInvoker.escapeString(pkiBrokerID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((BrokerGetAttachmentsV1Response) ApiInvoker.deserialize(localVarResponse,  "", BrokerGetAttachmentsV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
   /**
   * Retrieve Brokers and IDs
   * Get the list of Broker to be used in a dropdown or autocomplete control.

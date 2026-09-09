@@ -4,6 +4,8 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**rejectedoffertopurchaseBatchDownloadV1**](ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchaseBatchDownloadV1) | **POST** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/batchDownload | Download multiples attachments from a Rejectedoffertopurchase
+[**rejectedoffertopurchaseGetAttachmentsV1**](ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchaseGetAttachmentsV1) | **GET** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getAttachments | Retrieve Rejectedoffertopurchase&#39;s attachments
 [**rejectedoffertopurchaseGetCommunicationCountV1**](ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchaseGetCommunicationCountV1) | **GET** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationCount | Retrieve Communication count
 [**rejectedoffertopurchaseGetCommunicationListV1**](ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchaseGetCommunicationListV1) | **GET** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationList | Retrieve Communication list
 [**rejectedoffertopurchaseGetCommunicationrecipientsV1**](ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchaseGetCommunicationrecipientsV1) | **GET** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationrecipients | Retrieve Rejectedoffertopurchase&#39;s Communicationrecipient
@@ -11,6 +13,96 @@ Method | HTTP request | Description
 [**rejectedoffertopurchaseGetListV1**](ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchaseGetListV1) | **GET** /1/object/rejectedoffertopurchase/getList | Retrieve Rejectedoffertopurchase list
 [**rejectedoffertopurchaseImportIntoEDMV1**](ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchaseImportIntoEDMV1) | **POST** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/importIntoEDM | Import attachments into the Rejectedoffertopurchase
 
+
+
+## rejectedoffertopurchaseBatchDownloadV1
+
+> File rejectedoffertopurchaseBatchDownloadV1(pkiRejectedoffertopurchaseID, rejectedoffertopurchaseBatchDownloadV1Request)
+
+Download multiples attachments from a Rejectedoffertopurchase
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectRejectedoffertopurchaseApi;
+
+ObjectRejectedoffertopurchaseApi apiInstance = new ObjectRejectedoffertopurchaseApi();
+Integer pkiRejectedoffertopurchaseID = null; // Integer | 
+RejectedoffertopurchaseBatchDownloadV1Request rejectedoffertopurchaseBatchDownloadV1Request = new RejectedoffertopurchaseBatchDownloadV1Request(); // RejectedoffertopurchaseBatchDownloadV1Request | 
+try {
+    File result = apiInstance.rejectedoffertopurchaseBatchDownloadV1(pkiRejectedoffertopurchaseID, rejectedoffertopurchaseBatchDownloadV1Request);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectRejectedoffertopurchaseApi#rejectedoffertopurchaseBatchDownloadV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiRejectedoffertopurchaseID** | **Integer**|  | [default to null]
+ **rejectedoffertopurchaseBatchDownloadV1Request** | [**RejectedoffertopurchaseBatchDownloadV1Request**](RejectedoffertopurchaseBatchDownloadV1Request.md)|  |
+
+### Return type
+
+[**File**](File.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/zip, text/xml, application/json
+
+
+## rejectedoffertopurchaseGetAttachmentsV1
+
+> RejectedoffertopurchaseGetAttachmentsV1Response rejectedoffertopurchaseGetAttachmentsV1(pkiRejectedoffertopurchaseID)
+
+Retrieve Rejectedoffertopurchase&#39;s attachments
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectRejectedoffertopurchaseApi;
+
+ObjectRejectedoffertopurchaseApi apiInstance = new ObjectRejectedoffertopurchaseApi();
+Integer pkiRejectedoffertopurchaseID = null; // Integer | 
+try {
+    RejectedoffertopurchaseGetAttachmentsV1Response result = apiInstance.rejectedoffertopurchaseGetAttachmentsV1(pkiRejectedoffertopurchaseID);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectRejectedoffertopurchaseApi#rejectedoffertopurchaseGetAttachmentsV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiRejectedoffertopurchaseID** | **Integer**|  | [default to null]
+
+### Return type
+
+[**RejectedoffertopurchaseGetAttachmentsV1Response**](RejectedoffertopurchaseGetAttachmentsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
 ## rejectedoffertopurchaseGetCommunicationCountV1

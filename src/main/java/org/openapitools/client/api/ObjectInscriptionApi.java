@@ -26,6 +26,7 @@ import com.android.volley.VolleyError;
 import org.openapitools.client.model.CommonResponseError;
 import java.io.File;
 import org.openapitools.client.model.HeaderAcceptLanguage;
+import org.openapitools.client.model.InscriptionBatchDownloadV1Request;
 import org.openapitools.client.model.InscriptionGetAttachmentsV1Response;
 import org.openapitools.client.model.InscriptionGetCommunicationCountV1Response;
 import org.openapitools.client.model.InscriptionGetCommunicationListV1Response;
@@ -69,6 +70,145 @@ public class ObjectInscriptionApi {
     return basePath;
   }
 
+  /**
+  * Download multiples attachments from an Inscription
+  * 
+   * @param pkiInscriptionID 
+   * @param inscriptionBatchDownloadV1Request 
+   * @return File
+  */
+  public File inscriptionBatchDownloadV1 (Integer pkiInscriptionID, InscriptionBatchDownloadV1Request inscriptionBatchDownloadV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = inscriptionBatchDownloadV1Request;
+    // verify the required parameter 'pkiInscriptionID' is set
+    if (pkiInscriptionID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiInscriptionID' when calling inscriptionBatchDownloadV1",
+        new ApiException(400, "Missing the required parameter 'pkiInscriptionID' when calling inscriptionBatchDownloadV1"));
+    }
+    // verify the required parameter 'inscriptionBatchDownloadV1Request' is set
+    if (inscriptionBatchDownloadV1Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'inscriptionBatchDownloadV1Request' when calling inscriptionBatchDownloadV1",
+        new ApiException(400, "Missing the required parameter 'inscriptionBatchDownloadV1Request' when calling inscriptionBatchDownloadV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/inscription/{pkiInscriptionID}/batchDownload".replaceAll("\\{" + "pkiInscriptionID" + "\\}", apiInvoker.escapeString(pkiInscriptionID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (File) ApiInvoker.deserialize(localVarResponse, "", File.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Download multiples attachments from an Inscription
+   * 
+   * @param pkiInscriptionID    * @param inscriptionBatchDownloadV1Request 
+  */
+  public void inscriptionBatchDownloadV1 (Integer pkiInscriptionID, InscriptionBatchDownloadV1Request inscriptionBatchDownloadV1Request, final Response.Listener<File> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = inscriptionBatchDownloadV1Request;
+
+    // verify the required parameter 'pkiInscriptionID' is set
+    if (pkiInscriptionID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiInscriptionID' when calling inscriptionBatchDownloadV1",
+        new ApiException(400, "Missing the required parameter 'pkiInscriptionID' when calling inscriptionBatchDownloadV1"));
+    }
+    // verify the required parameter 'inscriptionBatchDownloadV1Request' is set
+    if (inscriptionBatchDownloadV1Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'inscriptionBatchDownloadV1Request' when calling inscriptionBatchDownloadV1",
+        new ApiException(400, "Missing the required parameter 'inscriptionBatchDownloadV1Request' when calling inscriptionBatchDownloadV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/inscription/{pkiInscriptionID}/batchDownload".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiInscriptionID" + "\\}", apiInvoker.escapeString(pkiInscriptionID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((File) ApiInvoker.deserialize(localVarResponse,  "", File.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
   /**
   * Retrieve Inscription&#39;s Attachments
   * 

@@ -23,6 +23,8 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
+import org.openapitools.client.model.AgentBatchDownloadV1Request;
+import org.openapitools.client.model.AgentGetAttachmentsV1Response;
 import org.openapitools.client.model.AgentGetAutocompleteV2Response;
 import org.openapitools.client.model.AgentGetListV1Response;
 import org.openapitools.client.model.AgentImportIntoEDMV1Request;
@@ -61,6 +63,272 @@ public class ObjectAgentApi {
     return basePath;
   }
 
+  /**
+  * Download multiples attachments from a Agent
+  * 
+   * @param pkiAgentID 
+   * @param agentBatchDownloadV1Request 
+   * @return File
+  */
+  public File agentBatchDownloadV1 (Integer pkiAgentID, AgentBatchDownloadV1Request agentBatchDownloadV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = agentBatchDownloadV1Request;
+    // verify the required parameter 'pkiAgentID' is set
+    if (pkiAgentID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiAgentID' when calling agentBatchDownloadV1",
+        new ApiException(400, "Missing the required parameter 'pkiAgentID' when calling agentBatchDownloadV1"));
+    }
+    // verify the required parameter 'agentBatchDownloadV1Request' is set
+    if (agentBatchDownloadV1Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'agentBatchDownloadV1Request' when calling agentBatchDownloadV1",
+        new ApiException(400, "Missing the required parameter 'agentBatchDownloadV1Request' when calling agentBatchDownloadV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/agent/{pkiAgentID}/batchDownload".replaceAll("\\{" + "pkiAgentID" + "\\}", apiInvoker.escapeString(pkiAgentID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (File) ApiInvoker.deserialize(localVarResponse, "", File.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Download multiples attachments from a Agent
+   * 
+   * @param pkiAgentID    * @param agentBatchDownloadV1Request 
+  */
+  public void agentBatchDownloadV1 (Integer pkiAgentID, AgentBatchDownloadV1Request agentBatchDownloadV1Request, final Response.Listener<File> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = agentBatchDownloadV1Request;
+
+    // verify the required parameter 'pkiAgentID' is set
+    if (pkiAgentID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiAgentID' when calling agentBatchDownloadV1",
+        new ApiException(400, "Missing the required parameter 'pkiAgentID' when calling agentBatchDownloadV1"));
+    }
+    // verify the required parameter 'agentBatchDownloadV1Request' is set
+    if (agentBatchDownloadV1Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'agentBatchDownloadV1Request' when calling agentBatchDownloadV1",
+        new ApiException(400, "Missing the required parameter 'agentBatchDownloadV1Request' when calling agentBatchDownloadV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/agent/{pkiAgentID}/batchDownload".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiAgentID" + "\\}", apiInvoker.escapeString(pkiAgentID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((File) ApiInvoker.deserialize(localVarResponse,  "", File.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Retrieve Agent&#39;s attachments
+  * 
+   * @param pkiAgentID 
+   * @return AgentGetAttachmentsV1Response
+  */
+  public AgentGetAttachmentsV1Response agentGetAttachmentsV1 (Integer pkiAgentID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiAgentID' is set
+    if (pkiAgentID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiAgentID' when calling agentGetAttachmentsV1",
+        new ApiException(400, "Missing the required parameter 'pkiAgentID' when calling agentGetAttachmentsV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/agent/{pkiAgentID}/getAttachments".replaceAll("\\{" + "pkiAgentID" + "\\}", apiInvoker.escapeString(pkiAgentID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (AgentGetAttachmentsV1Response) ApiInvoker.deserialize(localVarResponse, "", AgentGetAttachmentsV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve Agent&#39;s attachments
+   * 
+   * @param pkiAgentID 
+  */
+  public void agentGetAttachmentsV1 (Integer pkiAgentID, final Response.Listener<AgentGetAttachmentsV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiAgentID' is set
+    if (pkiAgentID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiAgentID' when calling agentGetAttachmentsV1",
+        new ApiException(400, "Missing the required parameter 'pkiAgentID' when calling agentGetAttachmentsV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/agent/{pkiAgentID}/getAttachments".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiAgentID" + "\\}", apiInvoker.escapeString(pkiAgentID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((AgentGetAttachmentsV1Response) ApiInvoker.deserialize(localVarResponse,  "", AgentGetAttachmentsV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
   /**
   * Retrieve Agents and IDs
   * Get the list of Agent to be used in a dropdown or autocomplete control.

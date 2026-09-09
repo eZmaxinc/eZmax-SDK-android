@@ -4,10 +4,102 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**brokerBatchDownloadV1**](ObjectBrokerApi.md#brokerBatchDownloadV1) | **POST** /1/object/broker/{pkiBrokerID}/batchDownload | Download multiples attachments from a Broker
+[**brokerGetAttachmentsV1**](ObjectBrokerApi.md#brokerGetAttachmentsV1) | **GET** /1/object/broker/{pkiBrokerID}/getAttachments | Retrieve Broker&#39;s attachments
 [**brokerGetAutocompleteV2**](ObjectBrokerApi.md#brokerGetAutocompleteV2) | **GET** /2/object/broker/getAutocomplete/{sSelector} | Retrieve Brokers and IDs
 [**brokerGetListV1**](ObjectBrokerApi.md#brokerGetListV1) | **GET** /1/object/broker/getList | Retrieve Broker list
 [**brokerImportIntoEDMV1**](ObjectBrokerApi.md#brokerImportIntoEDMV1) | **POST** /1/object/broker/{pkiBrokerID}/importIntoEDM | Import attachments into the Broker
 
+
+
+## brokerBatchDownloadV1
+
+> File brokerBatchDownloadV1(pkiBrokerID, brokerBatchDownloadV1Request)
+
+Download multiples attachments from a Broker
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectBrokerApi;
+
+ObjectBrokerApi apiInstance = new ObjectBrokerApi();
+Integer pkiBrokerID = null; // Integer | 
+BrokerBatchDownloadV1Request brokerBatchDownloadV1Request = new BrokerBatchDownloadV1Request(); // BrokerBatchDownloadV1Request | 
+try {
+    File result = apiInstance.brokerBatchDownloadV1(pkiBrokerID, brokerBatchDownloadV1Request);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectBrokerApi#brokerBatchDownloadV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiBrokerID** | **Integer**|  | [default to null]
+ **brokerBatchDownloadV1Request** | [**BrokerBatchDownloadV1Request**](BrokerBatchDownloadV1Request.md)|  |
+
+### Return type
+
+[**File**](File.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/zip, text/xml, application/json
+
+
+## brokerGetAttachmentsV1
+
+> BrokerGetAttachmentsV1Response brokerGetAttachmentsV1(pkiBrokerID)
+
+Retrieve Broker&#39;s attachments
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectBrokerApi;
+
+ObjectBrokerApi apiInstance = new ObjectBrokerApi();
+Integer pkiBrokerID = null; // Integer | 
+try {
+    BrokerGetAttachmentsV1Response result = apiInstance.brokerGetAttachmentsV1(pkiBrokerID);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectBrokerApi#brokerGetAttachmentsV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiBrokerID** | **Integer**|  | [default to null]
+
+### Return type
+
+[**BrokerGetAttachmentsV1Response**](BrokerGetAttachmentsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
 ## brokerGetAutocompleteV2

@@ -4,9 +4,101 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**supplierBatchDownloadV1**](ObjectSupplierApi.md#supplierBatchDownloadV1) | **POST** /1/object/supplier/{pkiSupplierID}/batchDownload | Download multiples attachments from a Supplier
+[**supplierGetAttachmentsV1**](ObjectSupplierApi.md#supplierGetAttachmentsV1) | **GET** /1/object/supplier/{pkiSupplierID}/getAttachments | Retrieve Supplier&#39;s attachments
 [**supplierGetListV1**](ObjectSupplierApi.md#supplierGetListV1) | **GET** /1/object/supplier/getList | Retrieve Supplier list
 [**supplierImportIntoEDMV1**](ObjectSupplierApi.md#supplierImportIntoEDMV1) | **POST** /1/object/supplier/{pkiSupplierID}/importIntoEDM | Import attachments into the Supplier
 
+
+
+## supplierBatchDownloadV1
+
+> File supplierBatchDownloadV1(pkiSupplierID, supplierBatchDownloadV1Request)
+
+Download multiples attachments from a Supplier
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectSupplierApi;
+
+ObjectSupplierApi apiInstance = new ObjectSupplierApi();
+Integer pkiSupplierID = null; // Integer | 
+SupplierBatchDownloadV1Request supplierBatchDownloadV1Request = new SupplierBatchDownloadV1Request(); // SupplierBatchDownloadV1Request | 
+try {
+    File result = apiInstance.supplierBatchDownloadV1(pkiSupplierID, supplierBatchDownloadV1Request);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectSupplierApi#supplierBatchDownloadV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiSupplierID** | **Integer**|  | [default to null]
+ **supplierBatchDownloadV1Request** | [**SupplierBatchDownloadV1Request**](SupplierBatchDownloadV1Request.md)|  |
+
+### Return type
+
+[**File**](File.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/zip, text/xml, application/json
+
+
+## supplierGetAttachmentsV1
+
+> SupplierGetAttachmentsV1Response supplierGetAttachmentsV1(pkiSupplierID)
+
+Retrieve Supplier&#39;s attachments
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectSupplierApi;
+
+ObjectSupplierApi apiInstance = new ObjectSupplierApi();
+Integer pkiSupplierID = null; // Integer | 
+try {
+    SupplierGetAttachmentsV1Response result = apiInstance.supplierGetAttachmentsV1(pkiSupplierID);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectSupplierApi#supplierGetAttachmentsV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiSupplierID** | **Integer**|  | [default to null]
+
+### Return type
+
+[**SupplierGetAttachmentsV1Response**](SupplierGetAttachmentsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
 ## supplierGetListV1

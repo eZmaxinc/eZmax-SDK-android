@@ -52,6 +52,8 @@ public class AgentListElement {
   private Integer iAgentBannernumber = null;
   @SerializedName("sAgentRealestateassociationlicense")
   private String sAgentRealestateassociationlicense = null;
+  @SerializedName("dtAgentPermitexpiration")
+  private String dtAgentPermitexpiration = null;
   @SerializedName("dtAgentHiredate")
   private String dtAgentHiredate = null;
   @SerializedName("dtAgentLeavedate")
@@ -290,9 +292,20 @@ public class AgentListElement {
   }
 
   /**
-   * The hiredate of the Agent
+   * The expiration date of permit of the Agent
    **/
-  @ApiModelProperty(value = "The hiredate of the Agent")
+  @ApiModelProperty(value = "The expiration date of permit of the Agent")
+  public String getDtAgentPermitexpiration() {
+    return dtAgentPermitexpiration;
+  }
+  public void setDtAgentPermitexpiration(String dtAgentPermitexpiration) {
+    this.dtAgentPermitexpiration = dtAgentPermitexpiration;
+  }
+
+  /**
+   * The hire date of the Agent
+   **/
+  @ApiModelProperty(value = "The hire date of the Agent")
   public String getDtAgentHiredate() {
     return dtAgentHiredate;
   }
@@ -301,9 +314,9 @@ public class AgentListElement {
   }
 
   /**
-   * The leavedate of the Agent
+   * The leave date of the Agent
    **/
-  @ApiModelProperty(value = "The leavedate of the Agent")
+  @ApiModelProperty(value = "The leave date of the Agent")
   public String getDtAgentLeavedate() {
     return dtAgentLeavedate;
   }
@@ -634,6 +647,7 @@ public class AgentListElement {
         (this.iAgentLongdistancecode == null ? agentListElement.iAgentLongdistancecode == null : this.iAgentLongdistancecode.equals(agentListElement.iAgentLongdistancecode)) &&
         (this.iAgentBannernumber == null ? agentListElement.iAgentBannernumber == null : this.iAgentBannernumber.equals(agentListElement.iAgentBannernumber)) &&
         (this.sAgentRealestateassociationlicense == null ? agentListElement.sAgentRealestateassociationlicense == null : this.sAgentRealestateassociationlicense.equals(agentListElement.sAgentRealestateassociationlicense)) &&
+        (this.dtAgentPermitexpiration == null ? agentListElement.dtAgentPermitexpiration == null : this.dtAgentPermitexpiration.equals(agentListElement.dtAgentPermitexpiration)) &&
         (this.dtAgentHiredate == null ? agentListElement.dtAgentHiredate == null : this.dtAgentHiredate.equals(agentListElement.dtAgentHiredate)) &&
         (this.dtAgentLeavedate == null ? agentListElement.dtAgentLeavedate == null : this.dtAgentLeavedate.equals(agentListElement.dtAgentLeavedate)) &&
         (this.dtAgentContractdate == null ? agentListElement.dtAgentContractdate == null : this.dtAgentContractdate.equals(agentListElement.dtAgentContractdate)) &&
@@ -683,6 +697,7 @@ public class AgentListElement {
     result = 31 * result + (this.iAgentLongdistancecode == null ? 0: this.iAgentLongdistancecode.hashCode());
     result = 31 * result + (this.iAgentBannernumber == null ? 0: this.iAgentBannernumber.hashCode());
     result = 31 * result + (this.sAgentRealestateassociationlicense == null ? 0: this.sAgentRealestateassociationlicense.hashCode());
+    result = 31 * result + (this.dtAgentPermitexpiration == null ? 0: this.dtAgentPermitexpiration.hashCode());
     result = 31 * result + (this.dtAgentHiredate == null ? 0: this.dtAgentHiredate.hashCode());
     result = 31 * result + (this.dtAgentLeavedate == null ? 0: this.dtAgentLeavedate.hashCode());
     result = 31 * result + (this.dtAgentContractdate == null ? 0: this.dtAgentContractdate.hashCode());
@@ -735,6 +750,7 @@ public class AgentListElement {
     sb.append("  iAgentLongdistancecode: ").append(iAgentLongdistancecode).append("\n");
     sb.append("  iAgentBannernumber: ").append(iAgentBannernumber).append("\n");
     sb.append("  sAgentRealestateassociationlicense: ").append(sAgentRealestateassociationlicense).append("\n");
+    sb.append("  dtAgentPermitexpiration: ").append(dtAgentPermitexpiration).append("\n");
     sb.append("  dtAgentHiredate: ").append(dtAgentHiredate).append("\n");
     sb.append("  dtAgentLeavedate: ").append(dtAgentLeavedate).append("\n");
     sb.append("  dtAgentContractdate: ").append(dtAgentContractdate).append("\n");

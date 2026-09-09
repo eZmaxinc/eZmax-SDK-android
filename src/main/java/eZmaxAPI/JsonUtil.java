@@ -129,8 +129,76 @@ public class JsonUtil {
       return new TypeToken<List<AddressResponseCompound>>(){}.getType();
     }
     
+    if ("AdjustmentBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<AdjustmentBatchDownloadV1Request>>(){}.getType();
+    }
+    
+    if ("AdjustmentGetAttachmentsV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<AdjustmentGetAttachmentsV1Response>>(){}.getType();
+    }
+    
+    if ("AdjustmentGetAttachmentsV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<AdjustmentGetAttachmentsV1ResponseMPayload>>(){}.getType();
+    }
+    
+    if ("AdjustmentGetCommunicationCountV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<AdjustmentGetCommunicationCountV1Response>>(){}.getType();
+    }
+    
+    if ("AdjustmentGetCommunicationCountV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<AdjustmentGetCommunicationCountV1ResponseMPayload>>(){}.getType();
+    }
+    
+    if ("AdjustmentGetCommunicationListV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<AdjustmentGetCommunicationListV1Response>>(){}.getType();
+    }
+    
+    if ("AdjustmentGetCommunicationListV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<AdjustmentGetCommunicationListV1ResponseMPayload>>(){}.getType();
+    }
+    
+    if ("AdjustmentGetCommunicationrecipientsV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<AdjustmentGetCommunicationrecipientsV1Response>>(){}.getType();
+    }
+    
+    if ("AdjustmentGetCommunicationrecipientsV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<AdjustmentGetCommunicationrecipientsV1ResponseMPayload>>(){}.getType();
+    }
+    
+    if ("AdjustmentGetCommunicationsendersV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<AdjustmentGetCommunicationsendersV1Response>>(){}.getType();
+    }
+    
+    if ("AdjustmentGetCommunicationsendersV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<AdjustmentGetCommunicationsendersV1ResponseMPayload>>(){}.getType();
+    }
+    
+    if ("AdjustmentImportIntoEDMV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<AdjustmentImportIntoEDMV1Request>>(){}.getType();
+    }
+    
+    if ("AdjustmentImportIntoEDMV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<AdjustmentImportIntoEDMV1Response>>(){}.getType();
+    }
+    
+    if ("AdjustmentImportIntoEDMV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<AdjustmentImportIntoEDMV1ResponseMPayload>>(){}.getType();
+    }
+    
     if ("AgentAutocompleteElementResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<AgentAutocompleteElementResponse>>(){}.getType();
+    }
+    
+    if ("AgentBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<AgentBatchDownloadV1Request>>(){}.getType();
+    }
+    
+    if ("AgentGetAttachmentsV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<AgentGetAttachmentsV1Response>>(){}.getType();
+    }
+    
+    if ("AgentGetAttachmentsV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<AgentGetAttachmentsV1ResponseMPayload>>(){}.getType();
     }
     
     if ("AgentGetAutocompleteV2Response".equalsIgnoreCase(className)) {
@@ -301,6 +369,18 @@ public class JsonUtil {
       return new TypeToken<List<AttachmentGetAttachmentlogsV1ResponseMPayload>>(){}.getType();
     }
     
+    if ("AttachmentRenameV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<AttachmentRenameV1Request>>(){}.getType();
+    }
+    
+    if ("AttachmentRenameV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<AttachmentRenameV1Response>>(){}.getType();
+    }
+    
+    if ("AttachmentRenameV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<AttachmentRenameV1ResponseMPayload>>(){}.getType();
+    }
+    
     if ("AttachmentResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<AttachmentResponse>>(){}.getType();
     }
@@ -405,12 +485,36 @@ public class JsonUtil {
       return new TypeToken<List<BankaccountAutocompleteElementResponse>>(){}.getType();
     }
     
+    if ("BankaccountBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<BankaccountBatchDownloadV1Request>>(){}.getType();
+    }
+    
+    if ("BankaccountGetAttachmentsV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<BankaccountGetAttachmentsV1Response>>(){}.getType();
+    }
+    
+    if ("BankaccountGetAttachmentsV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<BankaccountGetAttachmentsV1ResponseMPayload>>(){}.getType();
+    }
+    
     if ("BankaccountGetAutocompleteV2Response".equalsIgnoreCase(className)) {
       return new TypeToken<List<BankaccountGetAutocompleteV2Response>>(){}.getType();
     }
     
     if ("BankaccountGetAutocompleteV2ResponseMPayload".equalsIgnoreCase(className)) {
       return new TypeToken<List<BankaccountGetAutocompleteV2ResponseMPayload>>(){}.getType();
+    }
+    
+    if ("BankaccountImportIntoEDMV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<BankaccountImportIntoEDMV1Request>>(){}.getType();
+    }
+    
+    if ("BankaccountImportIntoEDMV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<BankaccountImportIntoEDMV1Response>>(){}.getType();
+    }
+    
+    if ("BankaccountImportIntoEDMV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<BankaccountImportIntoEDMV1ResponseMPayload>>(){}.getType();
     }
     
     if ("BillingentityexternalAutocompleteElementResponse".equalsIgnoreCase(className)) {
@@ -593,6 +697,18 @@ public class JsonUtil {
       return new TypeToken<List<BrokerAutocompleteElementResponse>>(){}.getType();
     }
     
+    if ("BrokerBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<BrokerBatchDownloadV1Request>>(){}.getType();
+    }
+    
+    if ("BrokerGetAttachmentsV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<BrokerGetAttachmentsV1Response>>(){}.getType();
+    }
+    
+    if ("BrokerGetAttachmentsV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<BrokerGetAttachmentsV1ResponseMPayload>>(){}.getType();
+    }
+    
     if ("BrokerGetAutocompleteV2Response".equalsIgnoreCase(className)) {
       return new TypeToken<List<BrokerGetAutocompleteV2Response>>(){}.getType();
     }
@@ -635,6 +751,18 @@ public class JsonUtil {
     
     if ("BrokertypeGetAutocompleteV2ResponseMPayload".equalsIgnoreCase(className)) {
       return new TypeToken<List<BrokertypeGetAutocompleteV2ResponseMPayload>>(){}.getType();
+    }
+    
+    if ("BuyercontractBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<BuyercontractBatchDownloadV1Request>>(){}.getType();
+    }
+    
+    if ("BuyercontractGetAttachmentsV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<BuyercontractGetAttachmentsV1Response>>(){}.getType();
+    }
+    
+    if ("BuyercontractGetAttachmentsV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<BuyercontractGetAttachmentsV1ResponseMPayload>>(){}.getType();
     }
     
     if ("BuyercontractGetCommunicationCountV1Response".equalsIgnoreCase(className)) {
@@ -693,6 +821,10 @@ public class JsonUtil {
       return new TypeToken<List<BuyercontractListElement>>(){}.getType();
     }
     
+    if ("BuyercontractResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<BuyercontractResponse>>(){}.getType();
+    }
+    
     if ("ClonehistoryGetListV1Response".equalsIgnoreCase(className)) {
       return new TypeToken<List<ClonehistoryGetListV1Response>>(){}.getType();
     }
@@ -719,6 +851,30 @@ public class JsonUtil {
     
     if ("ColleagueResponseV2".equalsIgnoreCase(className)) {
       return new TypeToken<List<ColleagueResponseV2>>(){}.getType();
+    }
+    
+    if ("CommissionadvanceBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CommissionadvanceBatchDownloadV1Request>>(){}.getType();
+    }
+    
+    if ("CommissionadvanceGetAttachmentsV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CommissionadvanceGetAttachmentsV1Response>>(){}.getType();
+    }
+    
+    if ("CommissionadvanceGetAttachmentsV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CommissionadvanceGetAttachmentsV1ResponseMPayload>>(){}.getType();
+    }
+    
+    if ("CommissionadvanceImportIntoEDMV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CommissionadvanceImportIntoEDMV1Request>>(){}.getType();
+    }
+    
+    if ("CommissionadvanceImportIntoEDMV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CommissionadvanceImportIntoEDMV1Response>>(){}.getType();
+    }
+    
+    if ("CommissionadvanceImportIntoEDMV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CommissionadvanceImportIntoEDMV1ResponseMPayload>>(){}.getType();
     }
     
     if ("CommonAudit".equalsIgnoreCase(className)) {
@@ -1533,6 +1689,18 @@ public class JsonUtil {
       return new TypeToken<List<CustomerAutocompleteElementResponse>>(){}.getType();
     }
     
+    if ("CustomerBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CustomerBatchDownloadV1Request>>(){}.getType();
+    }
+    
+    if ("CustomerGetAttachmentsV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CustomerGetAttachmentsV1Response>>(){}.getType();
+    }
+    
+    if ("CustomerGetAttachmentsV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CustomerGetAttachmentsV1ResponseMPayload>>(){}.getType();
+    }
+    
     if ("CustomerGetAutocompleteV2Response".equalsIgnoreCase(className)) {
       return new TypeToken<List<CustomerGetAutocompleteV2Response>>(){}.getType();
     }
@@ -1579,6 +1747,78 @@ public class JsonUtil {
     
     if ("DepartmentGetAutocompleteV2ResponseMPayload".equalsIgnoreCase(className)) {
       return new TypeToken<List<DepartmentGetAutocompleteV2ResponseMPayload>>(){}.getType();
+    }
+    
+    if ("DepositBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<DepositBatchDownloadV1Request>>(){}.getType();
+    }
+    
+    if ("DepositGetAttachmentsV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<DepositGetAttachmentsV1Response>>(){}.getType();
+    }
+    
+    if ("DepositGetAttachmentsV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<DepositGetAttachmentsV1ResponseMPayload>>(){}.getType();
+    }
+    
+    if ("DepositImportIntoEDMV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<DepositImportIntoEDMV1Request>>(){}.getType();
+    }
+    
+    if ("DepositImportIntoEDMV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<DepositImportIntoEDMV1Response>>(){}.getType();
+    }
+    
+    if ("DepositImportIntoEDMV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<DepositImportIntoEDMV1ResponseMPayload>>(){}.getType();
+    }
+    
+    if ("DeposittransitchequeBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<DeposittransitchequeBatchDownloadV1Request>>(){}.getType();
+    }
+    
+    if ("DeposittransitchequeGetAttachmentsV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<DeposittransitchequeGetAttachmentsV1Response>>(){}.getType();
+    }
+    
+    if ("DeposittransitchequeGetAttachmentsV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<DeposittransitchequeGetAttachmentsV1ResponseMPayload>>(){}.getType();
+    }
+    
+    if ("DeposittransitchequeImportIntoEDMV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<DeposittransitchequeImportIntoEDMV1Request>>(){}.getType();
+    }
+    
+    if ("DeposittransitchequeImportIntoEDMV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<DeposittransitchequeImportIntoEDMV1Response>>(){}.getType();
+    }
+    
+    if ("DeposittransitchequeImportIntoEDMV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<DeposittransitchequeImportIntoEDMV1ResponseMPayload>>(){}.getType();
+    }
+    
+    if ("DisclosureBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<DisclosureBatchDownloadV1Request>>(){}.getType();
+    }
+    
+    if ("DisclosureGetAttachmentsV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<DisclosureGetAttachmentsV1Response>>(){}.getType();
+    }
+    
+    if ("DisclosureGetAttachmentsV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<DisclosureGetAttachmentsV1ResponseMPayload>>(){}.getType();
+    }
+    
+    if ("DisclosureImportIntoEDMV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<DisclosureImportIntoEDMV1Request>>(){}.getType();
+    }
+    
+    if ("DisclosureImportIntoEDMV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<DisclosureImportIntoEDMV1Response>>(){}.getType();
+    }
+    
+    if ("DisclosureImportIntoEDMV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<DisclosureImportIntoEDMV1ResponseMPayload>>(){}.getType();
     }
     
     if ("DiscussionChatV1200Response".equalsIgnoreCase(className)) {
@@ -1789,6 +2029,18 @@ public class JsonUtil {
       return new TypeToken<List<DomainResponseCompound>>(){}.getType();
     }
     
+    if ("ElectronicfundstransferBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ElectronicfundstransferBatchDownloadV1Request>>(){}.getType();
+    }
+    
+    if ("ElectronicfundstransferGetAttachmentsV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ElectronicfundstransferGetAttachmentsV1Response>>(){}.getType();
+    }
+    
+    if ("ElectronicfundstransferGetAttachmentsV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ElectronicfundstransferGetAttachmentsV1ResponseMPayload>>(){}.getType();
+    }
+    
     if ("ElectronicfundstransferGetCommunicationCountV1Response".equalsIgnoreCase(className)) {
       return new TypeToken<List<ElectronicfundstransferGetCommunicationCountV1Response>>(){}.getType();
     }
@@ -1861,6 +2113,18 @@ public class JsonUtil {
       return new TypeToken<List<EmailtypeGetAutocompleteV2ResponseMPayload>>(){}.getType();
     }
     
+    if ("EmployeeBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EmployeeBatchDownloadV1Request>>(){}.getType();
+    }
+    
+    if ("EmployeeGetAttachmentsV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EmployeeGetAttachmentsV1Response>>(){}.getType();
+    }
+    
+    if ("EmployeeGetAttachmentsV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EmployeeGetAttachmentsV1ResponseMPayload>>(){}.getType();
+    }
+    
     if ("EmployeeGetListV1Response".equalsIgnoreCase(className)) {
       return new TypeToken<List<EmployeeGetListV1Response>>(){}.getType();
     }
@@ -1907,6 +2171,18 @@ public class JsonUtil {
     
     if ("EnumVerticalalignment".equalsIgnoreCase(className)) {
       return new TypeToken<List<EnumVerticalalignment>>(){}.getType();
+    }
+    
+    if ("ExternalbrokerBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ExternalbrokerBatchDownloadV1Request>>(){}.getType();
+    }
+    
+    if ("ExternalbrokerGetAttachmentsV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ExternalbrokerGetAttachmentsV1Response>>(){}.getType();
+    }
+    
+    if ("ExternalbrokerGetAttachmentsV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ExternalbrokerGetAttachmentsV1ResponseMPayload>>(){}.getType();
     }
     
     if ("ExternalbrokerImportIntoEDMV1Request".equalsIgnoreCase(className)) {
@@ -5525,6 +5801,10 @@ public class JsonUtil {
       return new TypeToken<List<FieldEBrandingLogo>>(){}.getType();
     }
     
+    if ("FieldEBuyercontractRemunerationtype".equalsIgnoreCase(className)) {
+      return new TypeToken<List<FieldEBuyercontractRemunerationtype>>(){}.getType();
+    }
+    
     if ("FieldEBuyercontractStep".equalsIgnoreCase(className)) {
       return new TypeToken<List<FieldEBuyercontractStep>>(){}.getType();
     }
@@ -6081,6 +6361,30 @@ public class JsonUtil {
       return new TypeToken<List<FieldPksEzmaxclientOs>>(){}.getType();
     }
     
+    if ("FolderBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<FolderBatchDownloadV1Request>>(){}.getType();
+    }
+    
+    if ("FolderGetAttachmentsV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<FolderGetAttachmentsV1Response>>(){}.getType();
+    }
+    
+    if ("FolderGetAttachmentsV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<FolderGetAttachmentsV1ResponseMPayload>>(){}.getType();
+    }
+    
+    if ("FolderImportIntoEDMV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<FolderImportIntoEDMV1Request>>(){}.getType();
+    }
+    
+    if ("FolderImportIntoEDMV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<FolderImportIntoEDMV1Response>>(){}.getType();
+    }
+    
+    if ("FolderImportIntoEDMV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<FolderImportIntoEDMV1ResponseMPayload>>(){}.getType();
+    }
+    
     if ("FontAutocompleteElementResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<FontAutocompleteElementResponse>>(){}.getType();
     }
@@ -6187,6 +6491,10 @@ public class JsonUtil {
     
     if ("InfrastructureregionGetAutocompleteV2ResponseMPayload".equalsIgnoreCase(className)) {
       return new TypeToken<List<InfrastructureregionGetAutocompleteV2ResponseMPayload>>(){}.getType();
+    }
+    
+    if ("InscriptionBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<InscriptionBatchDownloadV1Request>>(){}.getType();
     }
     
     if ("InscriptionGetAttachmentsV1Response".equalsIgnoreCase(className)) {
@@ -6301,12 +6609,24 @@ public class JsonUtil {
       return new TypeToken<List<InscriptionchecklistGetAutocompleteV3ResponseMPayload>>(){}.getType();
     }
     
+    if ("InscriptionnotauthenticatedBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<InscriptionnotauthenticatedBatchDownloadV1Request>>(){}.getType();
+    }
+    
     if ("InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request".equalsIgnoreCase(className)) {
       return new TypeToken<List<InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request>>(){}.getType();
     }
     
     if ("InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Response".equalsIgnoreCase(className)) {
       return new TypeToken<List<InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Response>>(){}.getType();
+    }
+    
+    if ("InscriptionnotauthenticatedGetAttachmentsV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<InscriptionnotauthenticatedGetAttachmentsV1Response>>(){}.getType();
+    }
+    
+    if ("InscriptionnotauthenticatedGetAttachmentsV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<InscriptionnotauthenticatedGetAttachmentsV1ResponseMPayload>>(){}.getType();
     }
     
     if ("InscriptionnotauthenticatedGetCommunicationCountV1Response".equalsIgnoreCase(className)) {
@@ -6397,6 +6717,18 @@ public class JsonUtil {
       return new TypeToken<List<InscriptionnotauthenticatedconditionResponseCompound>>(){}.getType();
     }
     
+    if ("InscriptiontempBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<InscriptiontempBatchDownloadV1Request>>(){}.getType();
+    }
+    
+    if ("InscriptiontempGetAttachmentsV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<InscriptiontempGetAttachmentsV1Response>>(){}.getType();
+    }
+    
+    if ("InscriptiontempGetAttachmentsV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<InscriptiontempGetAttachmentsV1ResponseMPayload>>(){}.getType();
+    }
+    
     if ("InscriptiontempGetCommunicationCountV1Response".equalsIgnoreCase(className)) {
       return new TypeToken<List<InscriptiontempGetCommunicationCountV1Response>>(){}.getType();
     }
@@ -6465,6 +6797,10 @@ public class JsonUtil {
       return new TypeToken<List<InscriptiontypeGetAutocompleteV2ResponseMPayload>>(){}.getType();
     }
     
+    if ("InvoiceBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<InvoiceBatchDownloadV1Request>>(){}.getType();
+    }
+    
     if ("InvoiceGetAttachmentsV1Response".equalsIgnoreCase(className)) {
       return new TypeToken<List<InvoiceGetAttachmentsV1Response>>(){}.getType();
     }
@@ -6527,6 +6863,18 @@ public class JsonUtil {
     
     if ("LanguageGetAutocompleteV2ResponseMPayload".equalsIgnoreCase(className)) {
       return new TypeToken<List<LanguageGetAutocompleteV2ResponseMPayload>>(){}.getType();
+    }
+    
+    if ("LeadBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<LeadBatchDownloadV1Request>>(){}.getType();
+    }
+    
+    if ("LeadGetAttachmentsV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<LeadGetAttachmentsV1Response>>(){}.getType();
+    }
+    
+    if ("LeadGetAttachmentsV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<LeadGetAttachmentsV1ResponseMPayload>>(){}.getType();
     }
     
     if ("LeadGetListV1Response".equalsIgnoreCase(className)) {
@@ -6725,6 +7073,30 @@ public class JsonUtil {
       return new TypeToken<List<MultilingualVersionhistoryDetail>>(){}.getType();
     }
     
+    if ("NotaryBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<NotaryBatchDownloadV1Request>>(){}.getType();
+    }
+    
+    if ("NotaryGetAttachmentsV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<NotaryGetAttachmentsV1Response>>(){}.getType();
+    }
+    
+    if ("NotaryGetAttachmentsV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<NotaryGetAttachmentsV1ResponseMPayload>>(){}.getType();
+    }
+    
+    if ("NotaryImportIntoEDMV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<NotaryImportIntoEDMV1Request>>(){}.getType();
+    }
+    
+    if ("NotaryImportIntoEDMV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<NotaryImportIntoEDMV1Response>>(){}.getType();
+    }
+    
+    if ("NotaryImportIntoEDMV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<NotaryImportIntoEDMV1ResponseMPayload>>(){}.getType();
+    }
+    
     if ("NotificationsectionGetNotificationtestsV1Response".equalsIgnoreCase(className)) {
       return new TypeToken<List<NotificationsectionGetNotificationtestsV1Response>>(){}.getType();
     }
@@ -6747,6 +7119,42 @@ public class JsonUtil {
     
     if ("NotificationtestResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<NotificationtestResponse>>(){}.getType();
+    }
+    
+    if ("OfficetaxreportBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<OfficetaxreportBatchDownloadV1Request>>(){}.getType();
+    }
+    
+    if ("OfficetaxreportGetAttachmentsV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<OfficetaxreportGetAttachmentsV1Response>>(){}.getType();
+    }
+    
+    if ("OfficetaxreportGetAttachmentsV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<OfficetaxreportGetAttachmentsV1ResponseMPayload>>(){}.getType();
+    }
+    
+    if ("OfficetaxreportImportIntoEDMV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<OfficetaxreportImportIntoEDMV1Request>>(){}.getType();
+    }
+    
+    if ("OfficetaxreportImportIntoEDMV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<OfficetaxreportImportIntoEDMV1Response>>(){}.getType();
+    }
+    
+    if ("OfficetaxreportImportIntoEDMV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<OfficetaxreportImportIntoEDMV1ResponseMPayload>>(){}.getType();
+    }
+    
+    if ("OtherincomeBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<OtherincomeBatchDownloadV1Request>>(){}.getType();
+    }
+    
+    if ("OtherincomeGetAttachmentsV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<OtherincomeGetAttachmentsV1Response>>(){}.getType();
+    }
+    
+    if ("OtherincomeGetAttachmentsV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<OtherincomeGetAttachmentsV1ResponseMPayload>>(){}.getType();
     }
     
     if ("OtherincomeGetCommunicationCountV1Response".equalsIgnoreCase(className)) {
@@ -6895,6 +7303,30 @@ public class JsonUtil {
     
     if ("PaymentmethodGetAutocompleteV2ResponseMPayload".equalsIgnoreCase(className)) {
       return new TypeToken<List<PaymentmethodGetAutocompleteV2ResponseMPayload>>(){}.getType();
+    }
+    
+    if ("PaymentpreparationBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<PaymentpreparationBatchDownloadV1Request>>(){}.getType();
+    }
+    
+    if ("PaymentpreparationGetAttachmentsV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<PaymentpreparationGetAttachmentsV1Response>>(){}.getType();
+    }
+    
+    if ("PaymentpreparationGetAttachmentsV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<PaymentpreparationGetAttachmentsV1ResponseMPayload>>(){}.getType();
+    }
+    
+    if ("PaymentpreparationImportIntoEDMV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<PaymentpreparationImportIntoEDMV1Request>>(){}.getType();
+    }
+    
+    if ("PaymentpreparationImportIntoEDMV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<PaymentpreparationImportIntoEDMV1Response>>(){}.getType();
+    }
+    
+    if ("PaymentpreparationImportIntoEDMV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<PaymentpreparationImportIntoEDMV1ResponseMPayload>>(){}.getType();
     }
     
     if ("PaymenttermAutocompleteElementResponse".equalsIgnoreCase(className)) {
@@ -7085,6 +7517,30 @@ public class JsonUtil {
       return new TypeToken<List<ProvinceGetAutocompleteV2ResponseMPayload>>(){}.getType();
     }
     
+    if ("PurchaseBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<PurchaseBatchDownloadV1Request>>(){}.getType();
+    }
+    
+    if ("PurchaseGetAttachmentsV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<PurchaseGetAttachmentsV1Response>>(){}.getType();
+    }
+    
+    if ("PurchaseGetAttachmentsV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<PurchaseGetAttachmentsV1ResponseMPayload>>(){}.getType();
+    }
+    
+    if ("PurchaseImportIntoEDMV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<PurchaseImportIntoEDMV1Request>>(){}.getType();
+    }
+    
+    if ("PurchaseImportIntoEDMV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<PurchaseImportIntoEDMV1Response>>(){}.getType();
+    }
+    
+    if ("PurchaseImportIntoEDMV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<PurchaseImportIntoEDMV1ResponseMPayload>>(){}.getType();
+    }
+    
     if ("RealestateassociationAutocompleteElementResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<RealestateassociationAutocompleteElementResponse>>(){}.getType();
     }
@@ -7107,6 +7563,42 @@ public class JsonUtil {
     
     if ("RealestateboardGetAutocompleteV2ResponseMPayload".equalsIgnoreCase(className)) {
       return new TypeToken<List<RealestateboardGetAutocompleteV2ResponseMPayload>>(){}.getType();
+    }
+    
+    if ("ReconciliationBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ReconciliationBatchDownloadV1Request>>(){}.getType();
+    }
+    
+    if ("ReconciliationGetAttachmentsV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ReconciliationGetAttachmentsV1Response>>(){}.getType();
+    }
+    
+    if ("ReconciliationGetAttachmentsV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ReconciliationGetAttachmentsV1ResponseMPayload>>(){}.getType();
+    }
+    
+    if ("ReconciliationImportIntoEDMV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ReconciliationImportIntoEDMV1Request>>(){}.getType();
+    }
+    
+    if ("ReconciliationImportIntoEDMV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ReconciliationImportIntoEDMV1Response>>(){}.getType();
+    }
+    
+    if ("ReconciliationImportIntoEDMV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ReconciliationImportIntoEDMV1ResponseMPayload>>(){}.getType();
+    }
+    
+    if ("RejectedoffertopurchaseBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<RejectedoffertopurchaseBatchDownloadV1Request>>(){}.getType();
+    }
+    
+    if ("RejectedoffertopurchaseGetAttachmentsV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<RejectedoffertopurchaseGetAttachmentsV1Response>>(){}.getType();
+    }
+    
+    if ("RejectedoffertopurchaseGetAttachmentsV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<RejectedoffertopurchaseGetAttachmentsV1ResponseMPayload>>(){}.getType();
     }
     
     if ("RejectedoffertopurchaseGetCommunicationCountV1Response".equalsIgnoreCase(className)) {
@@ -7163,6 +7655,30 @@ public class JsonUtil {
     
     if ("RejectedoffertopurchaseListElement".equalsIgnoreCase(className)) {
       return new TypeToken<List<RejectedoffertopurchaseListElement>>(){}.getType();
+    }
+    
+    if ("SalaryBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<SalaryBatchDownloadV1Request>>(){}.getType();
+    }
+    
+    if ("SalaryGetAttachmentsV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<SalaryGetAttachmentsV1Response>>(){}.getType();
+    }
+    
+    if ("SalaryGetAttachmentsV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<SalaryGetAttachmentsV1ResponseMPayload>>(){}.getType();
+    }
+    
+    if ("SalaryImportIntoEDMV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<SalaryImportIntoEDMV1Request>>(){}.getType();
+    }
+    
+    if ("SalaryImportIntoEDMV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<SalaryImportIntoEDMV1Response>>(){}.getType();
+    }
+    
+    if ("SalaryImportIntoEDMV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<SalaryImportIntoEDMV1ResponseMPayload>>(){}.getType();
     }
     
     if ("ScimAuthenticationScheme".equalsIgnoreCase(className)) {
@@ -7343,6 +7859,18 @@ public class JsonUtil {
     
     if ("SubnetResponseCompound".equalsIgnoreCase(className)) {
       return new TypeToken<List<SubnetResponseCompound>>(){}.getType();
+    }
+    
+    if ("SupplierBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<List<SupplierBatchDownloadV1Request>>(){}.getType();
+    }
+    
+    if ("SupplierGetAttachmentsV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<SupplierGetAttachmentsV1Response>>(){}.getType();
+    }
+    
+    if ("SupplierGetAttachmentsV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<List<SupplierGetAttachmentsV1ResponseMPayload>>(){}.getType();
     }
     
     if ("SupplierGetListV1Response".equalsIgnoreCase(className)) {
@@ -8341,6 +8869,14 @@ public class JsonUtil {
       return new TypeToken<List<WebhookListElement>>(){}.getType();
     }
     
+    if ("WebhookRealestateBuyercontractCreated".equalsIgnoreCase(className)) {
+      return new TypeToken<List<WebhookRealestateBuyercontractCreated>>(){}.getType();
+    }
+    
+    if ("WebhookRealestateBuyercontractModified".equalsIgnoreCase(className)) {
+      return new TypeToken<List<WebhookRealestateBuyercontractModified>>(){}.getType();
+    }
+    
     if ("WebhookRealestateInscriptionCreated".equalsIgnoreCase(className)) {
       return new TypeToken<List<WebhookRealestateInscriptionCreated>>(){}.getType();
     }
@@ -8543,8 +9079,76 @@ public class JsonUtil {
       return new TypeToken<AddressResponseCompound>(){}.getType();
     }
     
+    if ("AdjustmentBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<AdjustmentBatchDownloadV1Request>(){}.getType();
+    }
+    
+    if ("AdjustmentGetAttachmentsV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<AdjustmentGetAttachmentsV1Response>(){}.getType();
+    }
+    
+    if ("AdjustmentGetAttachmentsV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<AdjustmentGetAttachmentsV1ResponseMPayload>(){}.getType();
+    }
+    
+    if ("AdjustmentGetCommunicationCountV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<AdjustmentGetCommunicationCountV1Response>(){}.getType();
+    }
+    
+    if ("AdjustmentGetCommunicationCountV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<AdjustmentGetCommunicationCountV1ResponseMPayload>(){}.getType();
+    }
+    
+    if ("AdjustmentGetCommunicationListV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<AdjustmentGetCommunicationListV1Response>(){}.getType();
+    }
+    
+    if ("AdjustmentGetCommunicationListV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<AdjustmentGetCommunicationListV1ResponseMPayload>(){}.getType();
+    }
+    
+    if ("AdjustmentGetCommunicationrecipientsV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<AdjustmentGetCommunicationrecipientsV1Response>(){}.getType();
+    }
+    
+    if ("AdjustmentGetCommunicationrecipientsV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<AdjustmentGetCommunicationrecipientsV1ResponseMPayload>(){}.getType();
+    }
+    
+    if ("AdjustmentGetCommunicationsendersV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<AdjustmentGetCommunicationsendersV1Response>(){}.getType();
+    }
+    
+    if ("AdjustmentGetCommunicationsendersV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<AdjustmentGetCommunicationsendersV1ResponseMPayload>(){}.getType();
+    }
+    
+    if ("AdjustmentImportIntoEDMV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<AdjustmentImportIntoEDMV1Request>(){}.getType();
+    }
+    
+    if ("AdjustmentImportIntoEDMV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<AdjustmentImportIntoEDMV1Response>(){}.getType();
+    }
+    
+    if ("AdjustmentImportIntoEDMV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<AdjustmentImportIntoEDMV1ResponseMPayload>(){}.getType();
+    }
+    
     if ("AgentAutocompleteElementResponse".equalsIgnoreCase(className)) {
       return new TypeToken<AgentAutocompleteElementResponse>(){}.getType();
+    }
+    
+    if ("AgentBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<AgentBatchDownloadV1Request>(){}.getType();
+    }
+    
+    if ("AgentGetAttachmentsV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<AgentGetAttachmentsV1Response>(){}.getType();
+    }
+    
+    if ("AgentGetAttachmentsV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<AgentGetAttachmentsV1ResponseMPayload>(){}.getType();
     }
     
     if ("AgentGetAutocompleteV2Response".equalsIgnoreCase(className)) {
@@ -8715,6 +9319,18 @@ public class JsonUtil {
       return new TypeToken<AttachmentGetAttachmentlogsV1ResponseMPayload>(){}.getType();
     }
     
+    if ("AttachmentRenameV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<AttachmentRenameV1Request>(){}.getType();
+    }
+    
+    if ("AttachmentRenameV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<AttachmentRenameV1Response>(){}.getType();
+    }
+    
+    if ("AttachmentRenameV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<AttachmentRenameV1ResponseMPayload>(){}.getType();
+    }
+    
     if ("AttachmentResponse".equalsIgnoreCase(className)) {
       return new TypeToken<AttachmentResponse>(){}.getType();
     }
@@ -8819,12 +9435,36 @@ public class JsonUtil {
       return new TypeToken<BankaccountAutocompleteElementResponse>(){}.getType();
     }
     
+    if ("BankaccountBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<BankaccountBatchDownloadV1Request>(){}.getType();
+    }
+    
+    if ("BankaccountGetAttachmentsV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<BankaccountGetAttachmentsV1Response>(){}.getType();
+    }
+    
+    if ("BankaccountGetAttachmentsV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<BankaccountGetAttachmentsV1ResponseMPayload>(){}.getType();
+    }
+    
     if ("BankaccountGetAutocompleteV2Response".equalsIgnoreCase(className)) {
       return new TypeToken<BankaccountGetAutocompleteV2Response>(){}.getType();
     }
     
     if ("BankaccountGetAutocompleteV2ResponseMPayload".equalsIgnoreCase(className)) {
       return new TypeToken<BankaccountGetAutocompleteV2ResponseMPayload>(){}.getType();
+    }
+    
+    if ("BankaccountImportIntoEDMV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<BankaccountImportIntoEDMV1Request>(){}.getType();
+    }
+    
+    if ("BankaccountImportIntoEDMV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<BankaccountImportIntoEDMV1Response>(){}.getType();
+    }
+    
+    if ("BankaccountImportIntoEDMV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<BankaccountImportIntoEDMV1ResponseMPayload>(){}.getType();
     }
     
     if ("BillingentityexternalAutocompleteElementResponse".equalsIgnoreCase(className)) {
@@ -9007,6 +9647,18 @@ public class JsonUtil {
       return new TypeToken<BrokerAutocompleteElementResponse>(){}.getType();
     }
     
+    if ("BrokerBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<BrokerBatchDownloadV1Request>(){}.getType();
+    }
+    
+    if ("BrokerGetAttachmentsV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<BrokerGetAttachmentsV1Response>(){}.getType();
+    }
+    
+    if ("BrokerGetAttachmentsV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<BrokerGetAttachmentsV1ResponseMPayload>(){}.getType();
+    }
+    
     if ("BrokerGetAutocompleteV2Response".equalsIgnoreCase(className)) {
       return new TypeToken<BrokerGetAutocompleteV2Response>(){}.getType();
     }
@@ -9049,6 +9701,18 @@ public class JsonUtil {
     
     if ("BrokertypeGetAutocompleteV2ResponseMPayload".equalsIgnoreCase(className)) {
       return new TypeToken<BrokertypeGetAutocompleteV2ResponseMPayload>(){}.getType();
+    }
+    
+    if ("BuyercontractBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<BuyercontractBatchDownloadV1Request>(){}.getType();
+    }
+    
+    if ("BuyercontractGetAttachmentsV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<BuyercontractGetAttachmentsV1Response>(){}.getType();
+    }
+    
+    if ("BuyercontractGetAttachmentsV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<BuyercontractGetAttachmentsV1ResponseMPayload>(){}.getType();
     }
     
     if ("BuyercontractGetCommunicationCountV1Response".equalsIgnoreCase(className)) {
@@ -9107,6 +9771,10 @@ public class JsonUtil {
       return new TypeToken<BuyercontractListElement>(){}.getType();
     }
     
+    if ("BuyercontractResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<BuyercontractResponse>(){}.getType();
+    }
+    
     if ("ClonehistoryGetListV1Response".equalsIgnoreCase(className)) {
       return new TypeToken<ClonehistoryGetListV1Response>(){}.getType();
     }
@@ -9133,6 +9801,30 @@ public class JsonUtil {
     
     if ("ColleagueResponseV2".equalsIgnoreCase(className)) {
       return new TypeToken<ColleagueResponseV2>(){}.getType();
+    }
+    
+    if ("CommissionadvanceBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<CommissionadvanceBatchDownloadV1Request>(){}.getType();
+    }
+    
+    if ("CommissionadvanceGetAttachmentsV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<CommissionadvanceGetAttachmentsV1Response>(){}.getType();
+    }
+    
+    if ("CommissionadvanceGetAttachmentsV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<CommissionadvanceGetAttachmentsV1ResponseMPayload>(){}.getType();
+    }
+    
+    if ("CommissionadvanceImportIntoEDMV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<CommissionadvanceImportIntoEDMV1Request>(){}.getType();
+    }
+    
+    if ("CommissionadvanceImportIntoEDMV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<CommissionadvanceImportIntoEDMV1Response>(){}.getType();
+    }
+    
+    if ("CommissionadvanceImportIntoEDMV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<CommissionadvanceImportIntoEDMV1ResponseMPayload>(){}.getType();
     }
     
     if ("CommonAudit".equalsIgnoreCase(className)) {
@@ -9947,6 +10639,18 @@ public class JsonUtil {
       return new TypeToken<CustomerAutocompleteElementResponse>(){}.getType();
     }
     
+    if ("CustomerBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<CustomerBatchDownloadV1Request>(){}.getType();
+    }
+    
+    if ("CustomerGetAttachmentsV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<CustomerGetAttachmentsV1Response>(){}.getType();
+    }
+    
+    if ("CustomerGetAttachmentsV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<CustomerGetAttachmentsV1ResponseMPayload>(){}.getType();
+    }
+    
     if ("CustomerGetAutocompleteV2Response".equalsIgnoreCase(className)) {
       return new TypeToken<CustomerGetAutocompleteV2Response>(){}.getType();
     }
@@ -9993,6 +10697,78 @@ public class JsonUtil {
     
     if ("DepartmentGetAutocompleteV2ResponseMPayload".equalsIgnoreCase(className)) {
       return new TypeToken<DepartmentGetAutocompleteV2ResponseMPayload>(){}.getType();
+    }
+    
+    if ("DepositBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<DepositBatchDownloadV1Request>(){}.getType();
+    }
+    
+    if ("DepositGetAttachmentsV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<DepositGetAttachmentsV1Response>(){}.getType();
+    }
+    
+    if ("DepositGetAttachmentsV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<DepositGetAttachmentsV1ResponseMPayload>(){}.getType();
+    }
+    
+    if ("DepositImportIntoEDMV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<DepositImportIntoEDMV1Request>(){}.getType();
+    }
+    
+    if ("DepositImportIntoEDMV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<DepositImportIntoEDMV1Response>(){}.getType();
+    }
+    
+    if ("DepositImportIntoEDMV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<DepositImportIntoEDMV1ResponseMPayload>(){}.getType();
+    }
+    
+    if ("DeposittransitchequeBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<DeposittransitchequeBatchDownloadV1Request>(){}.getType();
+    }
+    
+    if ("DeposittransitchequeGetAttachmentsV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<DeposittransitchequeGetAttachmentsV1Response>(){}.getType();
+    }
+    
+    if ("DeposittransitchequeGetAttachmentsV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<DeposittransitchequeGetAttachmentsV1ResponseMPayload>(){}.getType();
+    }
+    
+    if ("DeposittransitchequeImportIntoEDMV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<DeposittransitchequeImportIntoEDMV1Request>(){}.getType();
+    }
+    
+    if ("DeposittransitchequeImportIntoEDMV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<DeposittransitchequeImportIntoEDMV1Response>(){}.getType();
+    }
+    
+    if ("DeposittransitchequeImportIntoEDMV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<DeposittransitchequeImportIntoEDMV1ResponseMPayload>(){}.getType();
+    }
+    
+    if ("DisclosureBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<DisclosureBatchDownloadV1Request>(){}.getType();
+    }
+    
+    if ("DisclosureGetAttachmentsV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<DisclosureGetAttachmentsV1Response>(){}.getType();
+    }
+    
+    if ("DisclosureGetAttachmentsV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<DisclosureGetAttachmentsV1ResponseMPayload>(){}.getType();
+    }
+    
+    if ("DisclosureImportIntoEDMV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<DisclosureImportIntoEDMV1Request>(){}.getType();
+    }
+    
+    if ("DisclosureImportIntoEDMV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<DisclosureImportIntoEDMV1Response>(){}.getType();
+    }
+    
+    if ("DisclosureImportIntoEDMV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<DisclosureImportIntoEDMV1ResponseMPayload>(){}.getType();
     }
     
     if ("DiscussionChatV1200Response".equalsIgnoreCase(className)) {
@@ -10203,6 +10979,18 @@ public class JsonUtil {
       return new TypeToken<DomainResponseCompound>(){}.getType();
     }
     
+    if ("ElectronicfundstransferBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<ElectronicfundstransferBatchDownloadV1Request>(){}.getType();
+    }
+    
+    if ("ElectronicfundstransferGetAttachmentsV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<ElectronicfundstransferGetAttachmentsV1Response>(){}.getType();
+    }
+    
+    if ("ElectronicfundstransferGetAttachmentsV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<ElectronicfundstransferGetAttachmentsV1ResponseMPayload>(){}.getType();
+    }
+    
     if ("ElectronicfundstransferGetCommunicationCountV1Response".equalsIgnoreCase(className)) {
       return new TypeToken<ElectronicfundstransferGetCommunicationCountV1Response>(){}.getType();
     }
@@ -10275,6 +11063,18 @@ public class JsonUtil {
       return new TypeToken<EmailtypeGetAutocompleteV2ResponseMPayload>(){}.getType();
     }
     
+    if ("EmployeeBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<EmployeeBatchDownloadV1Request>(){}.getType();
+    }
+    
+    if ("EmployeeGetAttachmentsV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<EmployeeGetAttachmentsV1Response>(){}.getType();
+    }
+    
+    if ("EmployeeGetAttachmentsV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<EmployeeGetAttachmentsV1ResponseMPayload>(){}.getType();
+    }
+    
     if ("EmployeeGetListV1Response".equalsIgnoreCase(className)) {
       return new TypeToken<EmployeeGetListV1Response>(){}.getType();
     }
@@ -10321,6 +11121,18 @@ public class JsonUtil {
     
     if ("EnumVerticalalignment".equalsIgnoreCase(className)) {
       return new TypeToken<EnumVerticalalignment>(){}.getType();
+    }
+    
+    if ("ExternalbrokerBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<ExternalbrokerBatchDownloadV1Request>(){}.getType();
+    }
+    
+    if ("ExternalbrokerGetAttachmentsV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<ExternalbrokerGetAttachmentsV1Response>(){}.getType();
+    }
+    
+    if ("ExternalbrokerGetAttachmentsV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<ExternalbrokerGetAttachmentsV1ResponseMPayload>(){}.getType();
     }
     
     if ("ExternalbrokerImportIntoEDMV1Request".equalsIgnoreCase(className)) {
@@ -13939,6 +14751,10 @@ public class JsonUtil {
       return new TypeToken<FieldEBrandingLogo>(){}.getType();
     }
     
+    if ("FieldEBuyercontractRemunerationtype".equalsIgnoreCase(className)) {
+      return new TypeToken<FieldEBuyercontractRemunerationtype>(){}.getType();
+    }
+    
     if ("FieldEBuyercontractStep".equalsIgnoreCase(className)) {
       return new TypeToken<FieldEBuyercontractStep>(){}.getType();
     }
@@ -14495,6 +15311,30 @@ public class JsonUtil {
       return new TypeToken<FieldPksEzmaxclientOs>(){}.getType();
     }
     
+    if ("FolderBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<FolderBatchDownloadV1Request>(){}.getType();
+    }
+    
+    if ("FolderGetAttachmentsV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<FolderGetAttachmentsV1Response>(){}.getType();
+    }
+    
+    if ("FolderGetAttachmentsV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<FolderGetAttachmentsV1ResponseMPayload>(){}.getType();
+    }
+    
+    if ("FolderImportIntoEDMV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<FolderImportIntoEDMV1Request>(){}.getType();
+    }
+    
+    if ("FolderImportIntoEDMV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<FolderImportIntoEDMV1Response>(){}.getType();
+    }
+    
+    if ("FolderImportIntoEDMV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<FolderImportIntoEDMV1ResponseMPayload>(){}.getType();
+    }
+    
     if ("FontAutocompleteElementResponse".equalsIgnoreCase(className)) {
       return new TypeToken<FontAutocompleteElementResponse>(){}.getType();
     }
@@ -14601,6 +15441,10 @@ public class JsonUtil {
     
     if ("InfrastructureregionGetAutocompleteV2ResponseMPayload".equalsIgnoreCase(className)) {
       return new TypeToken<InfrastructureregionGetAutocompleteV2ResponseMPayload>(){}.getType();
+    }
+    
+    if ("InscriptionBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<InscriptionBatchDownloadV1Request>(){}.getType();
     }
     
     if ("InscriptionGetAttachmentsV1Response".equalsIgnoreCase(className)) {
@@ -14715,12 +15559,24 @@ public class JsonUtil {
       return new TypeToken<InscriptionchecklistGetAutocompleteV3ResponseMPayload>(){}.getType();
     }
     
+    if ("InscriptionnotauthenticatedBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<InscriptionnotauthenticatedBatchDownloadV1Request>(){}.getType();
+    }
+    
     if ("InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request".equalsIgnoreCase(className)) {
       return new TypeToken<InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request>(){}.getType();
     }
     
     if ("InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Response".equalsIgnoreCase(className)) {
       return new TypeToken<InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Response>(){}.getType();
+    }
+    
+    if ("InscriptionnotauthenticatedGetAttachmentsV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<InscriptionnotauthenticatedGetAttachmentsV1Response>(){}.getType();
+    }
+    
+    if ("InscriptionnotauthenticatedGetAttachmentsV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<InscriptionnotauthenticatedGetAttachmentsV1ResponseMPayload>(){}.getType();
     }
     
     if ("InscriptionnotauthenticatedGetCommunicationCountV1Response".equalsIgnoreCase(className)) {
@@ -14811,6 +15667,18 @@ public class JsonUtil {
       return new TypeToken<InscriptionnotauthenticatedconditionResponseCompound>(){}.getType();
     }
     
+    if ("InscriptiontempBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<InscriptiontempBatchDownloadV1Request>(){}.getType();
+    }
+    
+    if ("InscriptiontempGetAttachmentsV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<InscriptiontempGetAttachmentsV1Response>(){}.getType();
+    }
+    
+    if ("InscriptiontempGetAttachmentsV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<InscriptiontempGetAttachmentsV1ResponseMPayload>(){}.getType();
+    }
+    
     if ("InscriptiontempGetCommunicationCountV1Response".equalsIgnoreCase(className)) {
       return new TypeToken<InscriptiontempGetCommunicationCountV1Response>(){}.getType();
     }
@@ -14879,6 +15747,10 @@ public class JsonUtil {
       return new TypeToken<InscriptiontypeGetAutocompleteV2ResponseMPayload>(){}.getType();
     }
     
+    if ("InvoiceBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<InvoiceBatchDownloadV1Request>(){}.getType();
+    }
+    
     if ("InvoiceGetAttachmentsV1Response".equalsIgnoreCase(className)) {
       return new TypeToken<InvoiceGetAttachmentsV1Response>(){}.getType();
     }
@@ -14941,6 +15813,18 @@ public class JsonUtil {
     
     if ("LanguageGetAutocompleteV2ResponseMPayload".equalsIgnoreCase(className)) {
       return new TypeToken<LanguageGetAutocompleteV2ResponseMPayload>(){}.getType();
+    }
+    
+    if ("LeadBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<LeadBatchDownloadV1Request>(){}.getType();
+    }
+    
+    if ("LeadGetAttachmentsV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<LeadGetAttachmentsV1Response>(){}.getType();
+    }
+    
+    if ("LeadGetAttachmentsV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<LeadGetAttachmentsV1ResponseMPayload>(){}.getType();
     }
     
     if ("LeadGetListV1Response".equalsIgnoreCase(className)) {
@@ -15139,6 +16023,30 @@ public class JsonUtil {
       return new TypeToken<MultilingualVersionhistoryDetail>(){}.getType();
     }
     
+    if ("NotaryBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<NotaryBatchDownloadV1Request>(){}.getType();
+    }
+    
+    if ("NotaryGetAttachmentsV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<NotaryGetAttachmentsV1Response>(){}.getType();
+    }
+    
+    if ("NotaryGetAttachmentsV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<NotaryGetAttachmentsV1ResponseMPayload>(){}.getType();
+    }
+    
+    if ("NotaryImportIntoEDMV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<NotaryImportIntoEDMV1Request>(){}.getType();
+    }
+    
+    if ("NotaryImportIntoEDMV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<NotaryImportIntoEDMV1Response>(){}.getType();
+    }
+    
+    if ("NotaryImportIntoEDMV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<NotaryImportIntoEDMV1ResponseMPayload>(){}.getType();
+    }
+    
     if ("NotificationsectionGetNotificationtestsV1Response".equalsIgnoreCase(className)) {
       return new TypeToken<NotificationsectionGetNotificationtestsV1Response>(){}.getType();
     }
@@ -15161,6 +16069,42 @@ public class JsonUtil {
     
     if ("NotificationtestResponse".equalsIgnoreCase(className)) {
       return new TypeToken<NotificationtestResponse>(){}.getType();
+    }
+    
+    if ("OfficetaxreportBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<OfficetaxreportBatchDownloadV1Request>(){}.getType();
+    }
+    
+    if ("OfficetaxreportGetAttachmentsV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<OfficetaxreportGetAttachmentsV1Response>(){}.getType();
+    }
+    
+    if ("OfficetaxreportGetAttachmentsV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<OfficetaxreportGetAttachmentsV1ResponseMPayload>(){}.getType();
+    }
+    
+    if ("OfficetaxreportImportIntoEDMV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<OfficetaxreportImportIntoEDMV1Request>(){}.getType();
+    }
+    
+    if ("OfficetaxreportImportIntoEDMV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<OfficetaxreportImportIntoEDMV1Response>(){}.getType();
+    }
+    
+    if ("OfficetaxreportImportIntoEDMV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<OfficetaxreportImportIntoEDMV1ResponseMPayload>(){}.getType();
+    }
+    
+    if ("OtherincomeBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<OtherincomeBatchDownloadV1Request>(){}.getType();
+    }
+    
+    if ("OtherincomeGetAttachmentsV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<OtherincomeGetAttachmentsV1Response>(){}.getType();
+    }
+    
+    if ("OtherincomeGetAttachmentsV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<OtherincomeGetAttachmentsV1ResponseMPayload>(){}.getType();
     }
     
     if ("OtherincomeGetCommunicationCountV1Response".equalsIgnoreCase(className)) {
@@ -15309,6 +16253,30 @@ public class JsonUtil {
     
     if ("PaymentmethodGetAutocompleteV2ResponseMPayload".equalsIgnoreCase(className)) {
       return new TypeToken<PaymentmethodGetAutocompleteV2ResponseMPayload>(){}.getType();
+    }
+    
+    if ("PaymentpreparationBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<PaymentpreparationBatchDownloadV1Request>(){}.getType();
+    }
+    
+    if ("PaymentpreparationGetAttachmentsV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<PaymentpreparationGetAttachmentsV1Response>(){}.getType();
+    }
+    
+    if ("PaymentpreparationGetAttachmentsV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<PaymentpreparationGetAttachmentsV1ResponseMPayload>(){}.getType();
+    }
+    
+    if ("PaymentpreparationImportIntoEDMV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<PaymentpreparationImportIntoEDMV1Request>(){}.getType();
+    }
+    
+    if ("PaymentpreparationImportIntoEDMV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<PaymentpreparationImportIntoEDMV1Response>(){}.getType();
+    }
+    
+    if ("PaymentpreparationImportIntoEDMV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<PaymentpreparationImportIntoEDMV1ResponseMPayload>(){}.getType();
     }
     
     if ("PaymenttermAutocompleteElementResponse".equalsIgnoreCase(className)) {
@@ -15499,6 +16467,30 @@ public class JsonUtil {
       return new TypeToken<ProvinceGetAutocompleteV2ResponseMPayload>(){}.getType();
     }
     
+    if ("PurchaseBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<PurchaseBatchDownloadV1Request>(){}.getType();
+    }
+    
+    if ("PurchaseGetAttachmentsV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<PurchaseGetAttachmentsV1Response>(){}.getType();
+    }
+    
+    if ("PurchaseGetAttachmentsV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<PurchaseGetAttachmentsV1ResponseMPayload>(){}.getType();
+    }
+    
+    if ("PurchaseImportIntoEDMV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<PurchaseImportIntoEDMV1Request>(){}.getType();
+    }
+    
+    if ("PurchaseImportIntoEDMV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<PurchaseImportIntoEDMV1Response>(){}.getType();
+    }
+    
+    if ("PurchaseImportIntoEDMV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<PurchaseImportIntoEDMV1ResponseMPayload>(){}.getType();
+    }
+    
     if ("RealestateassociationAutocompleteElementResponse".equalsIgnoreCase(className)) {
       return new TypeToken<RealestateassociationAutocompleteElementResponse>(){}.getType();
     }
@@ -15521,6 +16513,42 @@ public class JsonUtil {
     
     if ("RealestateboardGetAutocompleteV2ResponseMPayload".equalsIgnoreCase(className)) {
       return new TypeToken<RealestateboardGetAutocompleteV2ResponseMPayload>(){}.getType();
+    }
+    
+    if ("ReconciliationBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<ReconciliationBatchDownloadV1Request>(){}.getType();
+    }
+    
+    if ("ReconciliationGetAttachmentsV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<ReconciliationGetAttachmentsV1Response>(){}.getType();
+    }
+    
+    if ("ReconciliationGetAttachmentsV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<ReconciliationGetAttachmentsV1ResponseMPayload>(){}.getType();
+    }
+    
+    if ("ReconciliationImportIntoEDMV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<ReconciliationImportIntoEDMV1Request>(){}.getType();
+    }
+    
+    if ("ReconciliationImportIntoEDMV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<ReconciliationImportIntoEDMV1Response>(){}.getType();
+    }
+    
+    if ("ReconciliationImportIntoEDMV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<ReconciliationImportIntoEDMV1ResponseMPayload>(){}.getType();
+    }
+    
+    if ("RejectedoffertopurchaseBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<RejectedoffertopurchaseBatchDownloadV1Request>(){}.getType();
+    }
+    
+    if ("RejectedoffertopurchaseGetAttachmentsV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<RejectedoffertopurchaseGetAttachmentsV1Response>(){}.getType();
+    }
+    
+    if ("RejectedoffertopurchaseGetAttachmentsV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<RejectedoffertopurchaseGetAttachmentsV1ResponseMPayload>(){}.getType();
     }
     
     if ("RejectedoffertopurchaseGetCommunicationCountV1Response".equalsIgnoreCase(className)) {
@@ -15577,6 +16605,30 @@ public class JsonUtil {
     
     if ("RejectedoffertopurchaseListElement".equalsIgnoreCase(className)) {
       return new TypeToken<RejectedoffertopurchaseListElement>(){}.getType();
+    }
+    
+    if ("SalaryBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<SalaryBatchDownloadV1Request>(){}.getType();
+    }
+    
+    if ("SalaryGetAttachmentsV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<SalaryGetAttachmentsV1Response>(){}.getType();
+    }
+    
+    if ("SalaryGetAttachmentsV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<SalaryGetAttachmentsV1ResponseMPayload>(){}.getType();
+    }
+    
+    if ("SalaryImportIntoEDMV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<SalaryImportIntoEDMV1Request>(){}.getType();
+    }
+    
+    if ("SalaryImportIntoEDMV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<SalaryImportIntoEDMV1Response>(){}.getType();
+    }
+    
+    if ("SalaryImportIntoEDMV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<SalaryImportIntoEDMV1ResponseMPayload>(){}.getType();
     }
     
     if ("ScimAuthenticationScheme".equalsIgnoreCase(className)) {
@@ -15757,6 +16809,18 @@ public class JsonUtil {
     
     if ("SubnetResponseCompound".equalsIgnoreCase(className)) {
       return new TypeToken<SubnetResponseCompound>(){}.getType();
+    }
+    
+    if ("SupplierBatchDownloadV1Request".equalsIgnoreCase(className)) {
+      return new TypeToken<SupplierBatchDownloadV1Request>(){}.getType();
+    }
+    
+    if ("SupplierGetAttachmentsV1Response".equalsIgnoreCase(className)) {
+      return new TypeToken<SupplierGetAttachmentsV1Response>(){}.getType();
+    }
+    
+    if ("SupplierGetAttachmentsV1ResponseMPayload".equalsIgnoreCase(className)) {
+      return new TypeToken<SupplierGetAttachmentsV1ResponseMPayload>(){}.getType();
     }
     
     if ("SupplierGetListV1Response".equalsIgnoreCase(className)) {
@@ -16753,6 +17817,14 @@ public class JsonUtil {
     
     if ("WebhookListElement".equalsIgnoreCase(className)) {
       return new TypeToken<WebhookListElement>(){}.getType();
+    }
+    
+    if ("WebhookRealestateBuyercontractCreated".equalsIgnoreCase(className)) {
+      return new TypeToken<WebhookRealestateBuyercontractCreated>(){}.getType();
+    }
+    
+    if ("WebhookRealestateBuyercontractModified".equalsIgnoreCase(className)) {
+      return new TypeToken<WebhookRealestateBuyercontractModified>(){}.getType();
     }
     
     if ("WebhookRealestateInscriptionCreated".equalsIgnoreCase(className)) {

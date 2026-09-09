@@ -4,6 +4,8 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**inscriptiontempBatchDownloadV1**](ObjectInscriptiontempApi.md#inscriptiontempBatchDownloadV1) | **POST** /1/object/inscriptiontemp/{pkiInscriptiontempID}/batchDownload | Download multiples attachments from a Inscriptiontemp
+[**inscriptiontempGetAttachmentsV1**](ObjectInscriptiontempApi.md#inscriptiontempGetAttachmentsV1) | **GET** /1/object/inscriptiontemp/{pkiInscriptiontempID}/getAttachments | Retrieve Inscriptiontemp&#39;s attachments
 [**inscriptiontempGetCommunicationCountV1**](ObjectInscriptiontempApi.md#inscriptiontempGetCommunicationCountV1) | **GET** /1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationCount | Retrieve Communication count
 [**inscriptiontempGetCommunicationListV1**](ObjectInscriptiontempApi.md#inscriptiontempGetCommunicationListV1) | **GET** /1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationList | Retrieve Communication list
 [**inscriptiontempGetCommunicationrecipientsV1**](ObjectInscriptiontempApi.md#inscriptiontempGetCommunicationrecipientsV1) | **GET** /1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationrecipients | Retrieve Inscriptiontemp&#39;s Communicationrecipient
@@ -11,6 +13,96 @@ Method | HTTP request | Description
 [**inscriptiontempGetListV1**](ObjectInscriptiontempApi.md#inscriptiontempGetListV1) | **GET** /1/object/inscriptiontemp/getList | Retrieve Inscriptiontemp list
 [**inscriptiontempImportIntoEDMV1**](ObjectInscriptiontempApi.md#inscriptiontempImportIntoEDMV1) | **POST** /1/object/inscriptiontemp/{pkiInscriptiontempID}/importIntoEDM | Import attachments into the Inscriptiontemp
 
+
+
+## inscriptiontempBatchDownloadV1
+
+> File inscriptiontempBatchDownloadV1(pkiInscriptiontempID, inscriptiontempBatchDownloadV1Request)
+
+Download multiples attachments from a Inscriptiontemp
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectInscriptiontempApi;
+
+ObjectInscriptiontempApi apiInstance = new ObjectInscriptiontempApi();
+Integer pkiInscriptiontempID = null; // Integer | 
+InscriptiontempBatchDownloadV1Request inscriptiontempBatchDownloadV1Request = new InscriptiontempBatchDownloadV1Request(); // InscriptiontempBatchDownloadV1Request | 
+try {
+    File result = apiInstance.inscriptiontempBatchDownloadV1(pkiInscriptiontempID, inscriptiontempBatchDownloadV1Request);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectInscriptiontempApi#inscriptiontempBatchDownloadV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiInscriptiontempID** | **Integer**|  | [default to null]
+ **inscriptiontempBatchDownloadV1Request** | [**InscriptiontempBatchDownloadV1Request**](InscriptiontempBatchDownloadV1Request.md)|  |
+
+### Return type
+
+[**File**](File.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/zip, text/xml, application/json
+
+
+## inscriptiontempGetAttachmentsV1
+
+> InscriptiontempGetAttachmentsV1Response inscriptiontempGetAttachmentsV1(pkiInscriptiontempID)
+
+Retrieve Inscriptiontemp&#39;s attachments
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectInscriptiontempApi;
+
+ObjectInscriptiontempApi apiInstance = new ObjectInscriptiontempApi();
+Integer pkiInscriptiontempID = null; // Integer | 
+try {
+    InscriptiontempGetAttachmentsV1Response result = apiInstance.inscriptiontempGetAttachmentsV1(pkiInscriptiontempID);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectInscriptiontempApi#inscriptiontempGetAttachmentsV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiInscriptiontempID** | **Integer**|  | [default to null]
+
+### Return type
+
+[**InscriptiontempGetAttachmentsV1Response**](InscriptiontempGetAttachmentsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
 ## inscriptiontempGetCommunicationCountV1

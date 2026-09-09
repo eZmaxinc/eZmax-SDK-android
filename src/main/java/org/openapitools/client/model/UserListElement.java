@@ -26,6 +26,10 @@ public class UserListElement {
   
   @SerializedName("pkiUserID")
   private Integer pkiUserID = null;
+  @SerializedName("fkiAgentID")
+  private Integer fkiAgentID = null;
+  @SerializedName("fkiBrokerID")
+  private Integer fkiBrokerID = null;
   @SerializedName("sUserFirstname")
   private String sUserFirstname = null;
   @SerializedName("sUserLastname")
@@ -59,6 +63,30 @@ public class UserListElement {
   }
   public void setPkiUserID(Integer pkiUserID) {
     this.pkiUserID = pkiUserID;
+  }
+
+  /**
+   * The unique ID of the Agent.
+   * minimum: 0
+   **/
+  @ApiModelProperty(value = "The unique ID of the Agent.")
+  public Integer getFkiAgentID() {
+    return fkiAgentID;
+  }
+  public void setFkiAgentID(Integer fkiAgentID) {
+    this.fkiAgentID = fkiAgentID;
+  }
+
+  /**
+   * The unique ID of the Broker.
+   * minimum: 0
+   **/
+  @ApiModelProperty(value = "The unique ID of the Broker.")
+  public Integer getFkiBrokerID() {
+    return fkiBrokerID;
+  }
+  public void setFkiBrokerID(Integer fkiBrokerID) {
+    this.fkiBrokerID = fkiBrokerID;
   }
 
   /**
@@ -190,6 +218,8 @@ public class UserListElement {
     }
     UserListElement userListElement = (UserListElement) o;
     return (this.pkiUserID == null ? userListElement.pkiUserID == null : this.pkiUserID.equals(userListElement.pkiUserID)) &&
+        (this.fkiAgentID == null ? userListElement.fkiAgentID == null : this.fkiAgentID.equals(userListElement.fkiAgentID)) &&
+        (this.fkiBrokerID == null ? userListElement.fkiBrokerID == null : this.fkiBrokerID.equals(userListElement.fkiBrokerID)) &&
         (this.sUserFirstname == null ? userListElement.sUserFirstname == null : this.sUserFirstname.equals(userListElement.sUserFirstname)) &&
         (this.sUserLastname == null ? userListElement.sUserLastname == null : this.sUserLastname.equals(userListElement.sUserLastname)) &&
         (this.sUserLoginname == null ? userListElement.sUserLoginname == null : this.sUserLoginname.equals(userListElement.sUserLoginname)) &&
@@ -207,6 +237,8 @@ public class UserListElement {
   public int hashCode() {
     int result = 17;
     result = 31 * result + (this.pkiUserID == null ? 0: this.pkiUserID.hashCode());
+    result = 31 * result + (this.fkiAgentID == null ? 0: this.fkiAgentID.hashCode());
+    result = 31 * result + (this.fkiBrokerID == null ? 0: this.fkiBrokerID.hashCode());
     result = 31 * result + (this.sUserFirstname == null ? 0: this.sUserFirstname.hashCode());
     result = 31 * result + (this.sUserLastname == null ? 0: this.sUserLastname.hashCode());
     result = 31 * result + (this.sUserLoginname == null ? 0: this.sUserLoginname.hashCode());
@@ -227,6 +259,8 @@ public class UserListElement {
     sb.append("class UserListElement {\n");
     
     sb.append("  pkiUserID: ").append(pkiUserID).append("\n");
+    sb.append("  fkiAgentID: ").append(fkiAgentID).append("\n");
+    sb.append("  fkiBrokerID: ").append(fkiBrokerID).append("\n");
     sb.append("  sUserFirstname: ").append(sUserFirstname).append("\n");
     sb.append("  sUserLastname: ").append(sUserLastname).append("\n");
     sb.append("  sUserLoginname: ").append(sUserLoginname).append("\n");

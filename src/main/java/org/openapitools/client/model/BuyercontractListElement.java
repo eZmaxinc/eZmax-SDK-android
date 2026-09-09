@@ -98,9 +98,9 @@ public class BuyercontractListElement {
   }
 
   /**
-   * The minimumprice of the Buyercontract
+   * The minimum price of the Buyercontract
    **/
-  @ApiModelProperty(required = true, value = "The minimumprice of the Buyercontract")
+  @ApiModelProperty(required = true, value = "The minimum price of the Buyercontract")
   public String getDBuyercontractMinimumprice() {
     return dBuyercontractMinimumprice;
   }
@@ -109,9 +109,9 @@ public class BuyercontractListElement {
   }
 
   /**
-   * The maximumprice of the Buyercontract
+   * The maximum price of the Buyercontract
    **/
-  @ApiModelProperty(required = true, value = "The maximumprice of the Buyercontract")
+  @ApiModelProperty(required = true, value = "The maximum price of the Buyercontract")
   public String getDBuyercontractMaximumprice() {
     return dBuyercontractMaximumprice;
   }
@@ -152,9 +152,9 @@ public class BuyercontractListElement {
   }
 
   /**
-   * The expirationdate of the Buyercontract
+   * The expiration date of the Buyercontract
    **/
-  @ApiModelProperty(value = "The expirationdate of the Buyercontract")
+  @ApiModelProperty(value = "The expiration date of the Buyercontract")
   public String getDtBuyercontractExpirationdate() {
     return dtBuyercontractExpirationdate;
   }
