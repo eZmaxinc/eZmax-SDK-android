@@ -26,6 +26,10 @@ import com.android.volley.VolleyError;
 import org.openapitools.client.model.CommonResponseError;
 import org.openapitools.client.model.DeposittransitchequeBatchDownloadV1Request;
 import org.openapitools.client.model.DeposittransitchequeGetAttachmentsV1Response;
+import org.openapitools.client.model.DeposittransitchequeGetCommunicationCountV1Response;
+import org.openapitools.client.model.DeposittransitchequeGetCommunicationListV1Response;
+import org.openapitools.client.model.DeposittransitchequeGetCommunicationrecipientsV1Response;
+import org.openapitools.client.model.DeposittransitchequeGetCommunicationsendersV1Response;
 import org.openapitools.client.model.DeposittransitchequeImportIntoEDMV1Request;
 import org.openapitools.client.model.DeposittransitchequeImportIntoEDMV1Response;
 import java.io.File;
@@ -312,6 +316,514 @@ public class ObjectDeposittransitchequeApi {
           public void onResponse(String localVarResponse) {
             try {
               responseListener.onResponse((DeposittransitchequeGetAttachmentsV1Response) ApiInvoker.deserialize(localVarResponse,  "", DeposittransitchequeGetAttachmentsV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Retrieve Communication count
+  * 
+   * @param pkiDeposittransitchequeID 
+   * @return DeposittransitchequeGetCommunicationCountV1Response
+  */
+  public DeposittransitchequeGetCommunicationCountV1Response deposittransitchequeGetCommunicationCountV1 (Integer pkiDeposittransitchequeID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiDeposittransitchequeID' is set
+    if (pkiDeposittransitchequeID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiDeposittransitchequeID' when calling deposittransitchequeGetCommunicationCountV1",
+        new ApiException(400, "Missing the required parameter 'pkiDeposittransitchequeID' when calling deposittransitchequeGetCommunicationCountV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationCount".replaceAll("\\{" + "pkiDeposittransitchequeID" + "\\}", apiInvoker.escapeString(pkiDeposittransitchequeID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (DeposittransitchequeGetCommunicationCountV1Response) ApiInvoker.deserialize(localVarResponse, "", DeposittransitchequeGetCommunicationCountV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve Communication count
+   * 
+   * @param pkiDeposittransitchequeID 
+  */
+  public void deposittransitchequeGetCommunicationCountV1 (Integer pkiDeposittransitchequeID, final Response.Listener<DeposittransitchequeGetCommunicationCountV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiDeposittransitchequeID' is set
+    if (pkiDeposittransitchequeID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiDeposittransitchequeID' when calling deposittransitchequeGetCommunicationCountV1",
+        new ApiException(400, "Missing the required parameter 'pkiDeposittransitchequeID' when calling deposittransitchequeGetCommunicationCountV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationCount".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiDeposittransitchequeID" + "\\}", apiInvoker.escapeString(pkiDeposittransitchequeID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((DeposittransitchequeGetCommunicationCountV1Response) ApiInvoker.deserialize(localVarResponse,  "", DeposittransitchequeGetCommunicationCountV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Retrieve Communication list
+  * 
+   * @param pkiDeposittransitchequeID 
+   * @return DeposittransitchequeGetCommunicationListV1Response
+  */
+  public DeposittransitchequeGetCommunicationListV1Response deposittransitchequeGetCommunicationListV1 (Integer pkiDeposittransitchequeID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiDeposittransitchequeID' is set
+    if (pkiDeposittransitchequeID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiDeposittransitchequeID' when calling deposittransitchequeGetCommunicationListV1",
+        new ApiException(400, "Missing the required parameter 'pkiDeposittransitchequeID' when calling deposittransitchequeGetCommunicationListV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationList".replaceAll("\\{" + "pkiDeposittransitchequeID" + "\\}", apiInvoker.escapeString(pkiDeposittransitchequeID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (DeposittransitchequeGetCommunicationListV1Response) ApiInvoker.deserialize(localVarResponse, "", DeposittransitchequeGetCommunicationListV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve Communication list
+   * 
+   * @param pkiDeposittransitchequeID 
+  */
+  public void deposittransitchequeGetCommunicationListV1 (Integer pkiDeposittransitchequeID, final Response.Listener<DeposittransitchequeGetCommunicationListV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiDeposittransitchequeID' is set
+    if (pkiDeposittransitchequeID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiDeposittransitchequeID' when calling deposittransitchequeGetCommunicationListV1",
+        new ApiException(400, "Missing the required parameter 'pkiDeposittransitchequeID' when calling deposittransitchequeGetCommunicationListV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationList".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiDeposittransitchequeID" + "\\}", apiInvoker.escapeString(pkiDeposittransitchequeID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((DeposittransitchequeGetCommunicationListV1Response) ApiInvoker.deserialize(localVarResponse,  "", DeposittransitchequeGetCommunicationListV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Retrieve Communication recipients
+  * 
+   * @param pkiDeposittransitchequeID 
+   * @return DeposittransitchequeGetCommunicationrecipientsV1Response
+  */
+  public DeposittransitchequeGetCommunicationrecipientsV1Response deposittransitchequeGetCommunicationrecipientsV1 (Integer pkiDeposittransitchequeID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiDeposittransitchequeID' is set
+    if (pkiDeposittransitchequeID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiDeposittransitchequeID' when calling deposittransitchequeGetCommunicationrecipientsV1",
+        new ApiException(400, "Missing the required parameter 'pkiDeposittransitchequeID' when calling deposittransitchequeGetCommunicationrecipientsV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationrecipients".replaceAll("\\{" + "pkiDeposittransitchequeID" + "\\}", apiInvoker.escapeString(pkiDeposittransitchequeID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (DeposittransitchequeGetCommunicationrecipientsV1Response) ApiInvoker.deserialize(localVarResponse, "", DeposittransitchequeGetCommunicationrecipientsV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve Communication recipients
+   * 
+   * @param pkiDeposittransitchequeID 
+  */
+  public void deposittransitchequeGetCommunicationrecipientsV1 (Integer pkiDeposittransitchequeID, final Response.Listener<DeposittransitchequeGetCommunicationrecipientsV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiDeposittransitchequeID' is set
+    if (pkiDeposittransitchequeID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiDeposittransitchequeID' when calling deposittransitchequeGetCommunicationrecipientsV1",
+        new ApiException(400, "Missing the required parameter 'pkiDeposittransitchequeID' when calling deposittransitchequeGetCommunicationrecipientsV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationrecipients".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiDeposittransitchequeID" + "\\}", apiInvoker.escapeString(pkiDeposittransitchequeID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((DeposittransitchequeGetCommunicationrecipientsV1Response) ApiInvoker.deserialize(localVarResponse,  "", DeposittransitchequeGetCommunicationrecipientsV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Retrieve Communication senders
+  * 
+   * @param pkiDeposittransitchequeID 
+   * @return DeposittransitchequeGetCommunicationsendersV1Response
+  */
+  public DeposittransitchequeGetCommunicationsendersV1Response deposittransitchequeGetCommunicationsendersV1 (Integer pkiDeposittransitchequeID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiDeposittransitchequeID' is set
+    if (pkiDeposittransitchequeID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiDeposittransitchequeID' when calling deposittransitchequeGetCommunicationsendersV1",
+        new ApiException(400, "Missing the required parameter 'pkiDeposittransitchequeID' when calling deposittransitchequeGetCommunicationsendersV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationsenders".replaceAll("\\{" + "pkiDeposittransitchequeID" + "\\}", apiInvoker.escapeString(pkiDeposittransitchequeID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (DeposittransitchequeGetCommunicationsendersV1Response) ApiInvoker.deserialize(localVarResponse, "", DeposittransitchequeGetCommunicationsendersV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve Communication senders
+   * 
+   * @param pkiDeposittransitchequeID 
+  */
+  public void deposittransitchequeGetCommunicationsendersV1 (Integer pkiDeposittransitchequeID, final Response.Listener<DeposittransitchequeGetCommunicationsendersV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiDeposittransitchequeID' is set
+    if (pkiDeposittransitchequeID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiDeposittransitchequeID' when calling deposittransitchequeGetCommunicationsendersV1",
+        new ApiException(400, "Missing the required parameter 'pkiDeposittransitchequeID' when calling deposittransitchequeGetCommunicationsendersV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationsenders".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiDeposittransitchequeID" + "\\}", apiInvoker.escapeString(pkiDeposittransitchequeID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((DeposittransitchequeGetCommunicationsendersV1Response) ApiInvoker.deserialize(localVarResponse,  "", DeposittransitchequeGetCommunicationsendersV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

@@ -55,6 +55,7 @@ Name | Type | Description | Notes
 **fkiEzsigndocumentIDReference** | **Integer** | The unique ID of the Ezsigndocument |  [optional]
 **eAttachmentDocumenttype** | [**FieldEAttachmentDocumenttype**](FieldEAttachmentDocumenttype.md) |  | 
 **sAttachmentName** | **String** | The name of the Attachment | 
+**sAttachmentCategory** | **String** | The attachment category | 
 **eAttachmentPrivacy** | [**FieldEAttachmentPrivacy**](FieldEAttachmentPrivacy.md) |  | 
 **fkiUserIDSpecific** | **Integer** | The unique ID of the User |  [optional]
 **eAttachmentType** | [**FieldEAttachmentType**](FieldEAttachmentType.md) |  | 

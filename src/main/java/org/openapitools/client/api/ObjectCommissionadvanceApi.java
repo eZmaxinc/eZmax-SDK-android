@@ -25,6 +25,10 @@ import com.android.volley.VolleyError;
 
 import org.openapitools.client.model.CommissionadvanceBatchDownloadV1Request;
 import org.openapitools.client.model.CommissionadvanceGetAttachmentsV1Response;
+import org.openapitools.client.model.CommissionadvanceGetCommunicationCountV1Response;
+import org.openapitools.client.model.CommissionadvanceGetCommunicationListV1Response;
+import org.openapitools.client.model.CommissionadvanceGetCommunicationrecipientsV1Response;
+import org.openapitools.client.model.CommissionadvanceGetCommunicationsendersV1Response;
 import org.openapitools.client.model.CommissionadvanceImportIntoEDMV1Request;
 import org.openapitools.client.model.CommissionadvanceImportIntoEDMV1Response;
 import org.openapitools.client.model.CommonResponseError;
@@ -312,6 +316,514 @@ public class ObjectCommissionadvanceApi {
           public void onResponse(String localVarResponse) {
             try {
               responseListener.onResponse((CommissionadvanceGetAttachmentsV1Response) ApiInvoker.deserialize(localVarResponse,  "", CommissionadvanceGetAttachmentsV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Retrieve Communication count
+  * 
+   * @param pkiCommissionadvanceID 
+   * @return CommissionadvanceGetCommunicationCountV1Response
+  */
+  public CommissionadvanceGetCommunicationCountV1Response commissionadvanceGetCommunicationCountV1 (Integer pkiCommissionadvanceID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiCommissionadvanceID' is set
+    if (pkiCommissionadvanceID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiCommissionadvanceID' when calling commissionadvanceGetCommunicationCountV1",
+        new ApiException(400, "Missing the required parameter 'pkiCommissionadvanceID' when calling commissionadvanceGetCommunicationCountV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/commissionadvance/{pkiCommissionadvanceID}/getCommunicationCount".replaceAll("\\{" + "pkiCommissionadvanceID" + "\\}", apiInvoker.escapeString(pkiCommissionadvanceID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (CommissionadvanceGetCommunicationCountV1Response) ApiInvoker.deserialize(localVarResponse, "", CommissionadvanceGetCommunicationCountV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve Communication count
+   * 
+   * @param pkiCommissionadvanceID 
+  */
+  public void commissionadvanceGetCommunicationCountV1 (Integer pkiCommissionadvanceID, final Response.Listener<CommissionadvanceGetCommunicationCountV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiCommissionadvanceID' is set
+    if (pkiCommissionadvanceID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiCommissionadvanceID' when calling commissionadvanceGetCommunicationCountV1",
+        new ApiException(400, "Missing the required parameter 'pkiCommissionadvanceID' when calling commissionadvanceGetCommunicationCountV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/commissionadvance/{pkiCommissionadvanceID}/getCommunicationCount".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiCommissionadvanceID" + "\\}", apiInvoker.escapeString(pkiCommissionadvanceID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((CommissionadvanceGetCommunicationCountV1Response) ApiInvoker.deserialize(localVarResponse,  "", CommissionadvanceGetCommunicationCountV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Retrieve Communication list
+  * 
+   * @param pkiCommissionadvanceID 
+   * @return CommissionadvanceGetCommunicationListV1Response
+  */
+  public CommissionadvanceGetCommunicationListV1Response commissionadvanceGetCommunicationListV1 (Integer pkiCommissionadvanceID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiCommissionadvanceID' is set
+    if (pkiCommissionadvanceID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiCommissionadvanceID' when calling commissionadvanceGetCommunicationListV1",
+        new ApiException(400, "Missing the required parameter 'pkiCommissionadvanceID' when calling commissionadvanceGetCommunicationListV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/commissionadvance/{pkiCommissionadvanceID}/getCommunicationList".replaceAll("\\{" + "pkiCommissionadvanceID" + "\\}", apiInvoker.escapeString(pkiCommissionadvanceID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (CommissionadvanceGetCommunicationListV1Response) ApiInvoker.deserialize(localVarResponse, "", CommissionadvanceGetCommunicationListV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve Communication list
+   * 
+   * @param pkiCommissionadvanceID 
+  */
+  public void commissionadvanceGetCommunicationListV1 (Integer pkiCommissionadvanceID, final Response.Listener<CommissionadvanceGetCommunicationListV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiCommissionadvanceID' is set
+    if (pkiCommissionadvanceID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiCommissionadvanceID' when calling commissionadvanceGetCommunicationListV1",
+        new ApiException(400, "Missing the required parameter 'pkiCommissionadvanceID' when calling commissionadvanceGetCommunicationListV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/commissionadvance/{pkiCommissionadvanceID}/getCommunicationList".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiCommissionadvanceID" + "\\}", apiInvoker.escapeString(pkiCommissionadvanceID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((CommissionadvanceGetCommunicationListV1Response) ApiInvoker.deserialize(localVarResponse,  "", CommissionadvanceGetCommunicationListV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Retrieve Communication recipients
+  * 
+   * @param pkiCommissionadvanceID 
+   * @return CommissionadvanceGetCommunicationrecipientsV1Response
+  */
+  public CommissionadvanceGetCommunicationrecipientsV1Response commissionadvanceGetCommunicationrecipientsV1 (Integer pkiCommissionadvanceID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiCommissionadvanceID' is set
+    if (pkiCommissionadvanceID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiCommissionadvanceID' when calling commissionadvanceGetCommunicationrecipientsV1",
+        new ApiException(400, "Missing the required parameter 'pkiCommissionadvanceID' when calling commissionadvanceGetCommunicationrecipientsV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/commissionadvance/{pkiCommissionadvanceID}/getCommunicationrecipients".replaceAll("\\{" + "pkiCommissionadvanceID" + "\\}", apiInvoker.escapeString(pkiCommissionadvanceID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (CommissionadvanceGetCommunicationrecipientsV1Response) ApiInvoker.deserialize(localVarResponse, "", CommissionadvanceGetCommunicationrecipientsV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve Communication recipients
+   * 
+   * @param pkiCommissionadvanceID 
+  */
+  public void commissionadvanceGetCommunicationrecipientsV1 (Integer pkiCommissionadvanceID, final Response.Listener<CommissionadvanceGetCommunicationrecipientsV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiCommissionadvanceID' is set
+    if (pkiCommissionadvanceID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiCommissionadvanceID' when calling commissionadvanceGetCommunicationrecipientsV1",
+        new ApiException(400, "Missing the required parameter 'pkiCommissionadvanceID' when calling commissionadvanceGetCommunicationrecipientsV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/commissionadvance/{pkiCommissionadvanceID}/getCommunicationrecipients".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiCommissionadvanceID" + "\\}", apiInvoker.escapeString(pkiCommissionadvanceID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((CommissionadvanceGetCommunicationrecipientsV1Response) ApiInvoker.deserialize(localVarResponse,  "", CommissionadvanceGetCommunicationrecipientsV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Retrieve Communication senders
+  * 
+   * @param pkiCommissionadvanceID 
+   * @return CommissionadvanceGetCommunicationsendersV1Response
+  */
+  public CommissionadvanceGetCommunicationsendersV1Response commissionadvanceGetCommunicationsendersV1 (Integer pkiCommissionadvanceID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiCommissionadvanceID' is set
+    if (pkiCommissionadvanceID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiCommissionadvanceID' when calling commissionadvanceGetCommunicationsendersV1",
+        new ApiException(400, "Missing the required parameter 'pkiCommissionadvanceID' when calling commissionadvanceGetCommunicationsendersV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/commissionadvance/{pkiCommissionadvanceID}/getCommunicationsenders".replaceAll("\\{" + "pkiCommissionadvanceID" + "\\}", apiInvoker.escapeString(pkiCommissionadvanceID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (CommissionadvanceGetCommunicationsendersV1Response) ApiInvoker.deserialize(localVarResponse, "", CommissionadvanceGetCommunicationsendersV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve Communication senders
+   * 
+   * @param pkiCommissionadvanceID 
+  */
+  public void commissionadvanceGetCommunicationsendersV1 (Integer pkiCommissionadvanceID, final Response.Listener<CommissionadvanceGetCommunicationsendersV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiCommissionadvanceID' is set
+    if (pkiCommissionadvanceID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiCommissionadvanceID' when calling commissionadvanceGetCommunicationsendersV1",
+        new ApiException(400, "Missing the required parameter 'pkiCommissionadvanceID' when calling commissionadvanceGetCommunicationsendersV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/commissionadvance/{pkiCommissionadvanceID}/getCommunicationsenders".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiCommissionadvanceID" + "\\}", apiInvoker.escapeString(pkiCommissionadvanceID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((CommissionadvanceGetCommunicationsendersV1Response) ApiInvoker.deserialize(localVarResponse,  "", CommissionadvanceGetCommunicationsendersV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

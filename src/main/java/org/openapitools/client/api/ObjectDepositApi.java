@@ -26,6 +26,10 @@ import com.android.volley.VolleyError;
 import org.openapitools.client.model.CommonResponseError;
 import org.openapitools.client.model.DepositBatchDownloadV1Request;
 import org.openapitools.client.model.DepositGetAttachmentsV1Response;
+import org.openapitools.client.model.DepositGetCommunicationCountV1Response;
+import org.openapitools.client.model.DepositGetCommunicationListV1Response;
+import org.openapitools.client.model.DepositGetCommunicationrecipientsV1Response;
+import org.openapitools.client.model.DepositGetCommunicationsendersV1Response;
 import org.openapitools.client.model.DepositImportIntoEDMV1Request;
 import org.openapitools.client.model.DepositImportIntoEDMV1Response;
 import java.io.File;
@@ -312,6 +316,514 @@ public class ObjectDepositApi {
           public void onResponse(String localVarResponse) {
             try {
               responseListener.onResponse((DepositGetAttachmentsV1Response) ApiInvoker.deserialize(localVarResponse,  "", DepositGetAttachmentsV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Retrieve Communication count
+  * 
+   * @param pkiDepositID 
+   * @return DepositGetCommunicationCountV1Response
+  */
+  public DepositGetCommunicationCountV1Response depositGetCommunicationCountV1 (Integer pkiDepositID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiDepositID' is set
+    if (pkiDepositID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiDepositID' when calling depositGetCommunicationCountV1",
+        new ApiException(400, "Missing the required parameter 'pkiDepositID' when calling depositGetCommunicationCountV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/deposit/{pkiDepositID}/getCommunicationCount".replaceAll("\\{" + "pkiDepositID" + "\\}", apiInvoker.escapeString(pkiDepositID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (DepositGetCommunicationCountV1Response) ApiInvoker.deserialize(localVarResponse, "", DepositGetCommunicationCountV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve Communication count
+   * 
+   * @param pkiDepositID 
+  */
+  public void depositGetCommunicationCountV1 (Integer pkiDepositID, final Response.Listener<DepositGetCommunicationCountV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiDepositID' is set
+    if (pkiDepositID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiDepositID' when calling depositGetCommunicationCountV1",
+        new ApiException(400, "Missing the required parameter 'pkiDepositID' when calling depositGetCommunicationCountV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/deposit/{pkiDepositID}/getCommunicationCount".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiDepositID" + "\\}", apiInvoker.escapeString(pkiDepositID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((DepositGetCommunicationCountV1Response) ApiInvoker.deserialize(localVarResponse,  "", DepositGetCommunicationCountV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Retrieve Communication list
+  * 
+   * @param pkiDepositID 
+   * @return DepositGetCommunicationListV1Response
+  */
+  public DepositGetCommunicationListV1Response depositGetCommunicationListV1 (Integer pkiDepositID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiDepositID' is set
+    if (pkiDepositID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiDepositID' when calling depositGetCommunicationListV1",
+        new ApiException(400, "Missing the required parameter 'pkiDepositID' when calling depositGetCommunicationListV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/deposit/{pkiDepositID}/getCommunicationList".replaceAll("\\{" + "pkiDepositID" + "\\}", apiInvoker.escapeString(pkiDepositID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (DepositGetCommunicationListV1Response) ApiInvoker.deserialize(localVarResponse, "", DepositGetCommunicationListV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve Communication list
+   * 
+   * @param pkiDepositID 
+  */
+  public void depositGetCommunicationListV1 (Integer pkiDepositID, final Response.Listener<DepositGetCommunicationListV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiDepositID' is set
+    if (pkiDepositID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiDepositID' when calling depositGetCommunicationListV1",
+        new ApiException(400, "Missing the required parameter 'pkiDepositID' when calling depositGetCommunicationListV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/deposit/{pkiDepositID}/getCommunicationList".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiDepositID" + "\\}", apiInvoker.escapeString(pkiDepositID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((DepositGetCommunicationListV1Response) ApiInvoker.deserialize(localVarResponse,  "", DepositGetCommunicationListV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Retrieve Communication recipients
+  * 
+   * @param pkiDepositID 
+   * @return DepositGetCommunicationrecipientsV1Response
+  */
+  public DepositGetCommunicationrecipientsV1Response depositGetCommunicationrecipientsV1 (Integer pkiDepositID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiDepositID' is set
+    if (pkiDepositID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiDepositID' when calling depositGetCommunicationrecipientsV1",
+        new ApiException(400, "Missing the required parameter 'pkiDepositID' when calling depositGetCommunicationrecipientsV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/deposit/{pkiDepositID}/getCommunicationrecipients".replaceAll("\\{" + "pkiDepositID" + "\\}", apiInvoker.escapeString(pkiDepositID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (DepositGetCommunicationrecipientsV1Response) ApiInvoker.deserialize(localVarResponse, "", DepositGetCommunicationrecipientsV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve Communication recipients
+   * 
+   * @param pkiDepositID 
+  */
+  public void depositGetCommunicationrecipientsV1 (Integer pkiDepositID, final Response.Listener<DepositGetCommunicationrecipientsV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiDepositID' is set
+    if (pkiDepositID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiDepositID' when calling depositGetCommunicationrecipientsV1",
+        new ApiException(400, "Missing the required parameter 'pkiDepositID' when calling depositGetCommunicationrecipientsV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/deposit/{pkiDepositID}/getCommunicationrecipients".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiDepositID" + "\\}", apiInvoker.escapeString(pkiDepositID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((DepositGetCommunicationrecipientsV1Response) ApiInvoker.deserialize(localVarResponse,  "", DepositGetCommunicationrecipientsV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Retrieve Communication senders
+  * 
+   * @param pkiDepositID 
+   * @return DepositGetCommunicationsendersV1Response
+  */
+  public DepositGetCommunicationsendersV1Response depositGetCommunicationsendersV1 (Integer pkiDepositID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiDepositID' is set
+    if (pkiDepositID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiDepositID' when calling depositGetCommunicationsendersV1",
+        new ApiException(400, "Missing the required parameter 'pkiDepositID' when calling depositGetCommunicationsendersV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/deposit/{pkiDepositID}/getCommunicationsenders".replaceAll("\\{" + "pkiDepositID" + "\\}", apiInvoker.escapeString(pkiDepositID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (DepositGetCommunicationsendersV1Response) ApiInvoker.deserialize(localVarResponse, "", DepositGetCommunicationsendersV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve Communication senders
+   * 
+   * @param pkiDepositID 
+  */
+  public void depositGetCommunicationsendersV1 (Integer pkiDepositID, final Response.Listener<DepositGetCommunicationsendersV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiDepositID' is set
+    if (pkiDepositID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiDepositID' when calling depositGetCommunicationsendersV1",
+        new ApiException(400, "Missing the required parameter 'pkiDepositID' when calling depositGetCommunicationsendersV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/deposit/{pkiDepositID}/getCommunicationsenders".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiDepositID" + "\\}", apiInvoker.escapeString(pkiDepositID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((DepositGetCommunicationsendersV1Response) ApiInvoker.deserialize(localVarResponse,  "", DepositGetCommunicationsendersV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

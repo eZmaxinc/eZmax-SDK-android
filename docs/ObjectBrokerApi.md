@@ -7,6 +7,10 @@ Method | HTTP request | Description
 [**brokerBatchDownloadV1**](ObjectBrokerApi.md#brokerBatchDownloadV1) | **POST** /1/object/broker/{pkiBrokerID}/batchDownload | Download multiples attachments from a Broker
 [**brokerGetAttachmentsV1**](ObjectBrokerApi.md#brokerGetAttachmentsV1) | **GET** /1/object/broker/{pkiBrokerID}/getAttachments | Retrieve Broker&#39;s attachments
 [**brokerGetAutocompleteV2**](ObjectBrokerApi.md#brokerGetAutocompleteV2) | **GET** /2/object/broker/getAutocomplete/{sSelector} | Retrieve Brokers and IDs
+[**brokerGetCommunicationCountV1**](ObjectBrokerApi.md#brokerGetCommunicationCountV1) | **GET** /1/object/broker/{pkiBrokerID}/getCommunicationCount | Retrieve Communication count
+[**brokerGetCommunicationListV1**](ObjectBrokerApi.md#brokerGetCommunicationListV1) | **GET** /1/object/broker/{pkiBrokerID}/getCommunicationList | Retrieve Communication list
+[**brokerGetCommunicationrecipientsV1**](ObjectBrokerApi.md#brokerGetCommunicationrecipientsV1) | **GET** /1/object/broker/{pkiBrokerID}/getCommunicationrecipients | Retrieve Communication recipients
+[**brokerGetCommunicationsendersV1**](ObjectBrokerApi.md#brokerGetCommunicationsendersV1) | **GET** /1/object/broker/{pkiBrokerID}/getCommunicationsenders | Retrieve Communication senders
 [**brokerGetListV1**](ObjectBrokerApi.md#brokerGetListV1) | **GET** /1/object/broker/getList | Retrieve Broker list
 [**brokerImportIntoEDMV1**](ObjectBrokerApi.md#brokerImportIntoEDMV1) | **POST** /1/object/broker/{pkiBrokerID}/importIntoEDM | Import attachments into the Broker
 
@@ -143,6 +147,182 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**BrokerGetAutocompleteV2Response**](BrokerGetAutocompleteV2Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## brokerGetCommunicationCountV1
+
+> BrokerGetCommunicationCountV1Response brokerGetCommunicationCountV1(pkiBrokerID)
+
+Retrieve Communication count
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectBrokerApi;
+
+ObjectBrokerApi apiInstance = new ObjectBrokerApi();
+Integer pkiBrokerID = null; // Integer | 
+try {
+    BrokerGetCommunicationCountV1Response result = apiInstance.brokerGetCommunicationCountV1(pkiBrokerID);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectBrokerApi#brokerGetCommunicationCountV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiBrokerID** | **Integer**|  | [default to null]
+
+### Return type
+
+[**BrokerGetCommunicationCountV1Response**](BrokerGetCommunicationCountV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## brokerGetCommunicationListV1
+
+> BrokerGetCommunicationListV1Response brokerGetCommunicationListV1(pkiBrokerID)
+
+Retrieve Communication list
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectBrokerApi;
+
+ObjectBrokerApi apiInstance = new ObjectBrokerApi();
+Integer pkiBrokerID = null; // Integer | 
+try {
+    BrokerGetCommunicationListV1Response result = apiInstance.brokerGetCommunicationListV1(pkiBrokerID);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectBrokerApi#brokerGetCommunicationListV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiBrokerID** | **Integer**|  | [default to null]
+
+### Return type
+
+[**BrokerGetCommunicationListV1Response**](BrokerGetCommunicationListV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## brokerGetCommunicationrecipientsV1
+
+> BrokerGetCommunicationrecipientsV1Response brokerGetCommunicationrecipientsV1(pkiBrokerID)
+
+Retrieve Communication recipients
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectBrokerApi;
+
+ObjectBrokerApi apiInstance = new ObjectBrokerApi();
+Integer pkiBrokerID = null; // Integer | 
+try {
+    BrokerGetCommunicationrecipientsV1Response result = apiInstance.brokerGetCommunicationrecipientsV1(pkiBrokerID);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectBrokerApi#brokerGetCommunicationrecipientsV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiBrokerID** | **Integer**|  | [default to null]
+
+### Return type
+
+[**BrokerGetCommunicationrecipientsV1Response**](BrokerGetCommunicationrecipientsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## brokerGetCommunicationsendersV1
+
+> BrokerGetCommunicationsendersV1Response brokerGetCommunicationsendersV1(pkiBrokerID)
+
+Retrieve Communication senders
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectBrokerApi;
+
+ObjectBrokerApi apiInstance = new ObjectBrokerApi();
+Integer pkiBrokerID = null; // Integer | 
+try {
+    BrokerGetCommunicationsendersV1Response result = apiInstance.brokerGetCommunicationsendersV1(pkiBrokerID);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectBrokerApi#brokerGetCommunicationsendersV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiBrokerID** | **Integer**|  | [default to null]
+
+### Return type
+
+[**BrokerGetCommunicationsendersV1Response**](BrokerGetCommunicationsendersV1Response.md)
 
 ### Authorization
 

@@ -26,6 +26,10 @@ import com.android.volley.VolleyError;
 import org.openapitools.client.model.CommonResponseError;
 import org.openapitools.client.model.EmployeeBatchDownloadV1Request;
 import org.openapitools.client.model.EmployeeGetAttachmentsV1Response;
+import org.openapitools.client.model.EmployeeGetCommunicationCountV1Response;
+import org.openapitools.client.model.EmployeeGetCommunicationListV1Response;
+import org.openapitools.client.model.EmployeeGetCommunicationrecipientsV1Response;
+import org.openapitools.client.model.EmployeeGetCommunicationsendersV1Response;
 import org.openapitools.client.model.EmployeeGetListV1Response;
 import org.openapitools.client.model.EmployeeImportIntoEDMV1Request;
 import org.openapitools.client.model.EmployeeImportIntoEDMV1Response;
@@ -314,6 +318,514 @@ public class ObjectEmployeeApi {
           public void onResponse(String localVarResponse) {
             try {
               responseListener.onResponse((EmployeeGetAttachmentsV1Response) ApiInvoker.deserialize(localVarResponse,  "", EmployeeGetAttachmentsV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Retrieve Communication count
+  * 
+   * @param pkiEmployeeID 
+   * @return EmployeeGetCommunicationCountV1Response
+  */
+  public EmployeeGetCommunicationCountV1Response employeeGetCommunicationCountV1 (Integer pkiEmployeeID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiEmployeeID' is set
+    if (pkiEmployeeID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiEmployeeID' when calling employeeGetCommunicationCountV1",
+        new ApiException(400, "Missing the required parameter 'pkiEmployeeID' when calling employeeGetCommunicationCountV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/employee/{pkiEmployeeID}/getCommunicationCount".replaceAll("\\{" + "pkiEmployeeID" + "\\}", apiInvoker.escapeString(pkiEmployeeID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (EmployeeGetCommunicationCountV1Response) ApiInvoker.deserialize(localVarResponse, "", EmployeeGetCommunicationCountV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve Communication count
+   * 
+   * @param pkiEmployeeID 
+  */
+  public void employeeGetCommunicationCountV1 (Integer pkiEmployeeID, final Response.Listener<EmployeeGetCommunicationCountV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiEmployeeID' is set
+    if (pkiEmployeeID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiEmployeeID' when calling employeeGetCommunicationCountV1",
+        new ApiException(400, "Missing the required parameter 'pkiEmployeeID' when calling employeeGetCommunicationCountV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/employee/{pkiEmployeeID}/getCommunicationCount".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiEmployeeID" + "\\}", apiInvoker.escapeString(pkiEmployeeID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((EmployeeGetCommunicationCountV1Response) ApiInvoker.deserialize(localVarResponse,  "", EmployeeGetCommunicationCountV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Retrieve Communication list
+  * 
+   * @param pkiEmployeeID 
+   * @return EmployeeGetCommunicationListV1Response
+  */
+  public EmployeeGetCommunicationListV1Response employeeGetCommunicationListV1 (Integer pkiEmployeeID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiEmployeeID' is set
+    if (pkiEmployeeID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiEmployeeID' when calling employeeGetCommunicationListV1",
+        new ApiException(400, "Missing the required parameter 'pkiEmployeeID' when calling employeeGetCommunicationListV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/employee/{pkiEmployeeID}/getCommunicationList".replaceAll("\\{" + "pkiEmployeeID" + "\\}", apiInvoker.escapeString(pkiEmployeeID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (EmployeeGetCommunicationListV1Response) ApiInvoker.deserialize(localVarResponse, "", EmployeeGetCommunicationListV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve Communication list
+   * 
+   * @param pkiEmployeeID 
+  */
+  public void employeeGetCommunicationListV1 (Integer pkiEmployeeID, final Response.Listener<EmployeeGetCommunicationListV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiEmployeeID' is set
+    if (pkiEmployeeID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiEmployeeID' when calling employeeGetCommunicationListV1",
+        new ApiException(400, "Missing the required parameter 'pkiEmployeeID' when calling employeeGetCommunicationListV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/employee/{pkiEmployeeID}/getCommunicationList".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiEmployeeID" + "\\}", apiInvoker.escapeString(pkiEmployeeID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((EmployeeGetCommunicationListV1Response) ApiInvoker.deserialize(localVarResponse,  "", EmployeeGetCommunicationListV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Retrieve Communication recipients
+  * 
+   * @param pkiEmployeeID 
+   * @return EmployeeGetCommunicationrecipientsV1Response
+  */
+  public EmployeeGetCommunicationrecipientsV1Response employeeGetCommunicationrecipientsV1 (Integer pkiEmployeeID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiEmployeeID' is set
+    if (pkiEmployeeID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiEmployeeID' when calling employeeGetCommunicationrecipientsV1",
+        new ApiException(400, "Missing the required parameter 'pkiEmployeeID' when calling employeeGetCommunicationrecipientsV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/employee/{pkiEmployeeID}/getCommunicationrecipients".replaceAll("\\{" + "pkiEmployeeID" + "\\}", apiInvoker.escapeString(pkiEmployeeID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (EmployeeGetCommunicationrecipientsV1Response) ApiInvoker.deserialize(localVarResponse, "", EmployeeGetCommunicationrecipientsV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve Communication recipients
+   * 
+   * @param pkiEmployeeID 
+  */
+  public void employeeGetCommunicationrecipientsV1 (Integer pkiEmployeeID, final Response.Listener<EmployeeGetCommunicationrecipientsV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiEmployeeID' is set
+    if (pkiEmployeeID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiEmployeeID' when calling employeeGetCommunicationrecipientsV1",
+        new ApiException(400, "Missing the required parameter 'pkiEmployeeID' when calling employeeGetCommunicationrecipientsV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/employee/{pkiEmployeeID}/getCommunicationrecipients".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiEmployeeID" + "\\}", apiInvoker.escapeString(pkiEmployeeID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((EmployeeGetCommunicationrecipientsV1Response) ApiInvoker.deserialize(localVarResponse,  "", EmployeeGetCommunicationrecipientsV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Retrieve Communication senders
+  * 
+   * @param pkiEmployeeID 
+   * @return EmployeeGetCommunicationsendersV1Response
+  */
+  public EmployeeGetCommunicationsendersV1Response employeeGetCommunicationsendersV1 (Integer pkiEmployeeID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiEmployeeID' is set
+    if (pkiEmployeeID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiEmployeeID' when calling employeeGetCommunicationsendersV1",
+        new ApiException(400, "Missing the required parameter 'pkiEmployeeID' when calling employeeGetCommunicationsendersV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/employee/{pkiEmployeeID}/getCommunicationsenders".replaceAll("\\{" + "pkiEmployeeID" + "\\}", apiInvoker.escapeString(pkiEmployeeID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (EmployeeGetCommunicationsendersV1Response) ApiInvoker.deserialize(localVarResponse, "", EmployeeGetCommunicationsendersV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve Communication senders
+   * 
+   * @param pkiEmployeeID 
+  */
+  public void employeeGetCommunicationsendersV1 (Integer pkiEmployeeID, final Response.Listener<EmployeeGetCommunicationsendersV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiEmployeeID' is set
+    if (pkiEmployeeID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiEmployeeID' when calling employeeGetCommunicationsendersV1",
+        new ApiException(400, "Missing the required parameter 'pkiEmployeeID' when calling employeeGetCommunicationsendersV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/employee/{pkiEmployeeID}/getCommunicationsenders".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiEmployeeID" + "\\}", apiInvoker.escapeString(pkiEmployeeID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((EmployeeGetCommunicationsendersV1Response) ApiInvoker.deserialize(localVarResponse,  "", EmployeeGetCommunicationsendersV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

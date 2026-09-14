@@ -26,6 +26,10 @@ import com.android.volley.VolleyError;
 import org.openapitools.client.model.BankaccountBatchDownloadV1Request;
 import org.openapitools.client.model.BankaccountGetAttachmentsV1Response;
 import org.openapitools.client.model.BankaccountGetAutocompleteV2Response;
+import org.openapitools.client.model.BankaccountGetCommunicationCountV1Response;
+import org.openapitools.client.model.BankaccountGetCommunicationListV1Response;
+import org.openapitools.client.model.BankaccountGetCommunicationrecipientsV1Response;
+import org.openapitools.client.model.BankaccountGetCommunicationsendersV1Response;
 import org.openapitools.client.model.BankaccountImportIntoEDMV1Request;
 import org.openapitools.client.model.BankaccountImportIntoEDMV1Response;
 import org.openapitools.client.model.CommonResponseError;
@@ -450,6 +454,514 @@ public class ObjectBankaccountApi {
           public void onResponse(String localVarResponse) {
             try {
               responseListener.onResponse((BankaccountGetAutocompleteV2Response) ApiInvoker.deserialize(localVarResponse,  "", BankaccountGetAutocompleteV2Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Retrieve Communication count
+  * 
+   * @param pkiBankaccountID 
+   * @return BankaccountGetCommunicationCountV1Response
+  */
+  public BankaccountGetCommunicationCountV1Response bankaccountGetCommunicationCountV1 (Integer pkiBankaccountID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiBankaccountID' is set
+    if (pkiBankaccountID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiBankaccountID' when calling bankaccountGetCommunicationCountV1",
+        new ApiException(400, "Missing the required parameter 'pkiBankaccountID' when calling bankaccountGetCommunicationCountV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/bankaccount/{pkiBankaccountID}/getCommunicationCount".replaceAll("\\{" + "pkiBankaccountID" + "\\}", apiInvoker.escapeString(pkiBankaccountID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (BankaccountGetCommunicationCountV1Response) ApiInvoker.deserialize(localVarResponse, "", BankaccountGetCommunicationCountV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve Communication count
+   * 
+   * @param pkiBankaccountID 
+  */
+  public void bankaccountGetCommunicationCountV1 (Integer pkiBankaccountID, final Response.Listener<BankaccountGetCommunicationCountV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiBankaccountID' is set
+    if (pkiBankaccountID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiBankaccountID' when calling bankaccountGetCommunicationCountV1",
+        new ApiException(400, "Missing the required parameter 'pkiBankaccountID' when calling bankaccountGetCommunicationCountV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/bankaccount/{pkiBankaccountID}/getCommunicationCount".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiBankaccountID" + "\\}", apiInvoker.escapeString(pkiBankaccountID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((BankaccountGetCommunicationCountV1Response) ApiInvoker.deserialize(localVarResponse,  "", BankaccountGetCommunicationCountV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Retrieve Communication list
+  * 
+   * @param pkiBankaccountID 
+   * @return BankaccountGetCommunicationListV1Response
+  */
+  public BankaccountGetCommunicationListV1Response bankaccountGetCommunicationListV1 (Integer pkiBankaccountID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiBankaccountID' is set
+    if (pkiBankaccountID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiBankaccountID' when calling bankaccountGetCommunicationListV1",
+        new ApiException(400, "Missing the required parameter 'pkiBankaccountID' when calling bankaccountGetCommunicationListV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/bankaccount/{pkiBankaccountID}/getCommunicationList".replaceAll("\\{" + "pkiBankaccountID" + "\\}", apiInvoker.escapeString(pkiBankaccountID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (BankaccountGetCommunicationListV1Response) ApiInvoker.deserialize(localVarResponse, "", BankaccountGetCommunicationListV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve Communication list
+   * 
+   * @param pkiBankaccountID 
+  */
+  public void bankaccountGetCommunicationListV1 (Integer pkiBankaccountID, final Response.Listener<BankaccountGetCommunicationListV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiBankaccountID' is set
+    if (pkiBankaccountID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiBankaccountID' when calling bankaccountGetCommunicationListV1",
+        new ApiException(400, "Missing the required parameter 'pkiBankaccountID' when calling bankaccountGetCommunicationListV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/bankaccount/{pkiBankaccountID}/getCommunicationList".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiBankaccountID" + "\\}", apiInvoker.escapeString(pkiBankaccountID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((BankaccountGetCommunicationListV1Response) ApiInvoker.deserialize(localVarResponse,  "", BankaccountGetCommunicationListV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Retrieve Communication recipients
+  * 
+   * @param pkiBankaccountID 
+   * @return BankaccountGetCommunicationrecipientsV1Response
+  */
+  public BankaccountGetCommunicationrecipientsV1Response bankaccountGetCommunicationrecipientsV1 (Integer pkiBankaccountID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiBankaccountID' is set
+    if (pkiBankaccountID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiBankaccountID' when calling bankaccountGetCommunicationrecipientsV1",
+        new ApiException(400, "Missing the required parameter 'pkiBankaccountID' when calling bankaccountGetCommunicationrecipientsV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/bankaccount/{pkiBankaccountID}/getCommunicationrecipients".replaceAll("\\{" + "pkiBankaccountID" + "\\}", apiInvoker.escapeString(pkiBankaccountID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (BankaccountGetCommunicationrecipientsV1Response) ApiInvoker.deserialize(localVarResponse, "", BankaccountGetCommunicationrecipientsV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve Communication recipients
+   * 
+   * @param pkiBankaccountID 
+  */
+  public void bankaccountGetCommunicationrecipientsV1 (Integer pkiBankaccountID, final Response.Listener<BankaccountGetCommunicationrecipientsV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiBankaccountID' is set
+    if (pkiBankaccountID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiBankaccountID' when calling bankaccountGetCommunicationrecipientsV1",
+        new ApiException(400, "Missing the required parameter 'pkiBankaccountID' when calling bankaccountGetCommunicationrecipientsV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/bankaccount/{pkiBankaccountID}/getCommunicationrecipients".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiBankaccountID" + "\\}", apiInvoker.escapeString(pkiBankaccountID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((BankaccountGetCommunicationrecipientsV1Response) ApiInvoker.deserialize(localVarResponse,  "", BankaccountGetCommunicationrecipientsV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Retrieve Communication senders
+  * 
+   * @param pkiBankaccountID 
+   * @return BankaccountGetCommunicationsendersV1Response
+  */
+  public BankaccountGetCommunicationsendersV1Response bankaccountGetCommunicationsendersV1 (Integer pkiBankaccountID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiBankaccountID' is set
+    if (pkiBankaccountID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiBankaccountID' when calling bankaccountGetCommunicationsendersV1",
+        new ApiException(400, "Missing the required parameter 'pkiBankaccountID' when calling bankaccountGetCommunicationsendersV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/bankaccount/{pkiBankaccountID}/getCommunicationsenders".replaceAll("\\{" + "pkiBankaccountID" + "\\}", apiInvoker.escapeString(pkiBankaccountID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (BankaccountGetCommunicationsendersV1Response) ApiInvoker.deserialize(localVarResponse, "", BankaccountGetCommunicationsendersV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve Communication senders
+   * 
+   * @param pkiBankaccountID 
+  */
+  public void bankaccountGetCommunicationsendersV1 (Integer pkiBankaccountID, final Response.Listener<BankaccountGetCommunicationsendersV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiBankaccountID' is set
+    if (pkiBankaccountID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiBankaccountID' when calling bankaccountGetCommunicationsendersV1",
+        new ApiException(400, "Missing the required parameter 'pkiBankaccountID' when calling bankaccountGetCommunicationsendersV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/bankaccount/{pkiBankaccountID}/getCommunicationsenders".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiBankaccountID" + "\\}", apiInvoker.escapeString(pkiBankaccountID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((BankaccountGetCommunicationsendersV1Response) ApiInvoker.deserialize(localVarResponse,  "", BankaccountGetCommunicationsendersV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

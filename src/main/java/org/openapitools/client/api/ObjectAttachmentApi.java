@@ -23,9 +23,14 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
+import org.openapitools.client.model.AttachmentDeleteV1Response;
 import org.openapitools.client.model.AttachmentGetAttachmentlogsV1Response;
 import org.openapitools.client.model.AttachmentRenameV1Request;
 import org.openapitools.client.model.AttachmentRenameV1Response;
+import org.openapitools.client.model.AttachmentRestoreV1Request;
+import org.openapitools.client.model.AttachmentRestoreV1Response;
+import org.openapitools.client.model.AttachmentValidateV1Request;
+import org.openapitools.client.model.AttachmentValidateV1Response;
 import org.openapitools.client.model.CommonResponseError;
 
 import org.apache.http.HttpEntity;
@@ -58,6 +63,145 @@ public class ObjectAttachmentApi {
     return basePath;
   }
 
+  /**
+  * Delete an existing attachment
+  * Te endpoint allows to delete an attachment.
+   * @param pkiAttachmentID 
+   * @param body 
+   * @return AttachmentDeleteV1Response
+  */
+  public AttachmentDeleteV1Response attachmentDeleteV1 (Integer pkiAttachmentID, Object body) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = body;
+    // verify the required parameter 'pkiAttachmentID' is set
+    if (pkiAttachmentID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiAttachmentID' when calling attachmentDeleteV1",
+        new ApiException(400, "Missing the required parameter 'pkiAttachmentID' when calling attachmentDeleteV1"));
+    }
+    // verify the required parameter 'body' is set
+    if (body == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'body' when calling attachmentDeleteV1",
+        new ApiException(400, "Missing the required parameter 'body' when calling attachmentDeleteV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/attachment/{pkiAttachmentID}/delete".replaceAll("\\{" + "pkiAttachmentID" + "\\}", apiInvoker.escapeString(pkiAttachmentID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (AttachmentDeleteV1Response) ApiInvoker.deserialize(localVarResponse, "", AttachmentDeleteV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Delete an existing attachment
+   * Te endpoint allows to delete an attachment.
+   * @param pkiAttachmentID    * @param body 
+  */
+  public void attachmentDeleteV1 (Integer pkiAttachmentID, Object body, final Response.Listener<AttachmentDeleteV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = body;
+
+    // verify the required parameter 'pkiAttachmentID' is set
+    if (pkiAttachmentID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiAttachmentID' when calling attachmentDeleteV1",
+        new ApiException(400, "Missing the required parameter 'pkiAttachmentID' when calling attachmentDeleteV1"));
+    }
+    // verify the required parameter 'body' is set
+    if (body == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'body' when calling attachmentDeleteV1",
+        new ApiException(400, "Missing the required parameter 'body' when calling attachmentDeleteV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/attachment/{pkiAttachmentID}/delete".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiAttachmentID" + "\\}", apiInvoker.escapeString(pkiAttachmentID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((AttachmentDeleteV1Response) ApiInvoker.deserialize(localVarResponse,  "", AttachmentDeleteV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
   /**
   * Retrieve the content
   * Using this endpoint, you can retrieve the content of an attachment.
@@ -309,7 +453,7 @@ public class ObjectAttachmentApi {
     }
   }
   /**
-  * Rename an Attachment
+  * Rename an attachment
   * The endpoint allows to change the attachment&#39;s file name and category.
    * @param pkiAttachmentID 
    * @param attachmentRenameV1Request 
@@ -378,7 +522,7 @@ public class ObjectAttachmentApi {
   }
 
       /**
-   * Rename an Attachment
+   * Rename an attachment
    * The endpoint allows to change the attachment&#39;s file name and category.
    * @param pkiAttachmentID    * @param attachmentRenameV1Request 
   */
@@ -433,6 +577,284 @@ public class ObjectAttachmentApi {
           public void onResponse(String localVarResponse) {
             try {
               responseListener.onResponse((AttachmentRenameV1Response) ApiInvoker.deserialize(localVarResponse,  "", AttachmentRenameV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Restore a deleted attachment
+  * The endpoints allows to restore a previously deleted attachment.
+   * @param pkiAttachmentID 
+   * @param attachmentRestoreV1Request 
+   * @return AttachmentRestoreV1Response
+  */
+  public AttachmentRestoreV1Response attachmentRestoreV1 (Integer pkiAttachmentID, AttachmentRestoreV1Request attachmentRestoreV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = attachmentRestoreV1Request;
+    // verify the required parameter 'pkiAttachmentID' is set
+    if (pkiAttachmentID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiAttachmentID' when calling attachmentRestoreV1",
+        new ApiException(400, "Missing the required parameter 'pkiAttachmentID' when calling attachmentRestoreV1"));
+    }
+    // verify the required parameter 'attachmentRestoreV1Request' is set
+    if (attachmentRestoreV1Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'attachmentRestoreV1Request' when calling attachmentRestoreV1",
+        new ApiException(400, "Missing the required parameter 'attachmentRestoreV1Request' when calling attachmentRestoreV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/attachment/{pkiAttachmentID}/restore".replaceAll("\\{" + "pkiAttachmentID" + "\\}", apiInvoker.escapeString(pkiAttachmentID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (AttachmentRestoreV1Response) ApiInvoker.deserialize(localVarResponse, "", AttachmentRestoreV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Restore a deleted attachment
+   * The endpoints allows to restore a previously deleted attachment.
+   * @param pkiAttachmentID    * @param attachmentRestoreV1Request 
+  */
+  public void attachmentRestoreV1 (Integer pkiAttachmentID, AttachmentRestoreV1Request attachmentRestoreV1Request, final Response.Listener<AttachmentRestoreV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = attachmentRestoreV1Request;
+
+    // verify the required parameter 'pkiAttachmentID' is set
+    if (pkiAttachmentID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiAttachmentID' when calling attachmentRestoreV1",
+        new ApiException(400, "Missing the required parameter 'pkiAttachmentID' when calling attachmentRestoreV1"));
+    }
+    // verify the required parameter 'attachmentRestoreV1Request' is set
+    if (attachmentRestoreV1Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'attachmentRestoreV1Request' when calling attachmentRestoreV1",
+        new ApiException(400, "Missing the required parameter 'attachmentRestoreV1Request' when calling attachmentRestoreV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/attachment/{pkiAttachmentID}/restore".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiAttachmentID" + "\\}", apiInvoker.escapeString(pkiAttachmentID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((AttachmentRestoreV1Response) ApiInvoker.deserialize(localVarResponse,  "", AttachmentRestoreV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Validate an existing attachment
+  * This endpoint allows to validate or reject an attachment.
+   * @param pkiAttachmentID 
+   * @param attachmentValidateV1Request 
+   * @return AttachmentValidateV1Response
+  */
+  public AttachmentValidateV1Response attachmentValidateV1 (Integer pkiAttachmentID, AttachmentValidateV1Request attachmentValidateV1Request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = attachmentValidateV1Request;
+    // verify the required parameter 'pkiAttachmentID' is set
+    if (pkiAttachmentID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiAttachmentID' when calling attachmentValidateV1",
+        new ApiException(400, "Missing the required parameter 'pkiAttachmentID' when calling attachmentValidateV1"));
+    }
+    // verify the required parameter 'attachmentValidateV1Request' is set
+    if (attachmentValidateV1Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'attachmentValidateV1Request' when calling attachmentValidateV1",
+        new ApiException(400, "Missing the required parameter 'attachmentValidateV1Request' when calling attachmentValidateV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/attachment/{pkiAttachmentID}/validate".replaceAll("\\{" + "pkiAttachmentID" + "\\}", apiInvoker.escapeString(pkiAttachmentID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PATCH", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (AttachmentValidateV1Response) ApiInvoker.deserialize(localVarResponse, "", AttachmentValidateV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Validate an existing attachment
+   * This endpoint allows to validate or reject an attachment.
+   * @param pkiAttachmentID    * @param attachmentValidateV1Request 
+  */
+  public void attachmentValidateV1 (Integer pkiAttachmentID, AttachmentValidateV1Request attachmentValidateV1Request, final Response.Listener<AttachmentValidateV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = attachmentValidateV1Request;
+
+    // verify the required parameter 'pkiAttachmentID' is set
+    if (pkiAttachmentID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiAttachmentID' when calling attachmentValidateV1",
+        new ApiException(400, "Missing the required parameter 'pkiAttachmentID' when calling attachmentValidateV1"));
+    }
+    // verify the required parameter 'attachmentValidateV1Request' is set
+    if (attachmentValidateV1Request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'attachmentValidateV1Request' when calling attachmentValidateV1",
+        new ApiException(400, "Missing the required parameter 'attachmentValidateV1Request' when calling attachmentValidateV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/attachment/{pkiAttachmentID}/validate".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiAttachmentID" + "\\}", apiInvoker.escapeString(pkiAttachmentID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "PATCH", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((AttachmentValidateV1Response) ApiInvoker.deserialize(localVarResponse,  "", AttachmentValidateV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

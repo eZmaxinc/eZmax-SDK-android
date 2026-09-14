@@ -26,6 +26,10 @@ import com.android.volley.VolleyError;
 import org.openapitools.client.model.CommonResponseError;
 import org.openapitools.client.model.DisclosureBatchDownloadV1Request;
 import org.openapitools.client.model.DisclosureGetAttachmentsV1Response;
+import org.openapitools.client.model.DisclosureGetCommunicationCountV1Response;
+import org.openapitools.client.model.DisclosureGetCommunicationListV1Response;
+import org.openapitools.client.model.DisclosureGetCommunicationrecipientsV1Response;
+import org.openapitools.client.model.DisclosureGetCommunicationsendersV1Response;
 import org.openapitools.client.model.DisclosureImportIntoEDMV1Request;
 import org.openapitools.client.model.DisclosureImportIntoEDMV1Response;
 import java.io.File;
@@ -312,6 +316,514 @@ public class ObjectDisclosureApi {
           public void onResponse(String localVarResponse) {
             try {
               responseListener.onResponse((DisclosureGetAttachmentsV1Response) ApiInvoker.deserialize(localVarResponse,  "", DisclosureGetAttachmentsV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Retrieve Communication count
+  * 
+   * @param pkiDisclosureID 
+   * @return DisclosureGetCommunicationCountV1Response
+  */
+  public DisclosureGetCommunicationCountV1Response disclosureGetCommunicationCountV1 (Integer pkiDisclosureID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiDisclosureID' is set
+    if (pkiDisclosureID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiDisclosureID' when calling disclosureGetCommunicationCountV1",
+        new ApiException(400, "Missing the required parameter 'pkiDisclosureID' when calling disclosureGetCommunicationCountV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/disclosure/{pkiDisclosureID}/getCommunicationCount".replaceAll("\\{" + "pkiDisclosureID" + "\\}", apiInvoker.escapeString(pkiDisclosureID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (DisclosureGetCommunicationCountV1Response) ApiInvoker.deserialize(localVarResponse, "", DisclosureGetCommunicationCountV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve Communication count
+   * 
+   * @param pkiDisclosureID 
+  */
+  public void disclosureGetCommunicationCountV1 (Integer pkiDisclosureID, final Response.Listener<DisclosureGetCommunicationCountV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiDisclosureID' is set
+    if (pkiDisclosureID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiDisclosureID' when calling disclosureGetCommunicationCountV1",
+        new ApiException(400, "Missing the required parameter 'pkiDisclosureID' when calling disclosureGetCommunicationCountV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/disclosure/{pkiDisclosureID}/getCommunicationCount".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiDisclosureID" + "\\}", apiInvoker.escapeString(pkiDisclosureID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((DisclosureGetCommunicationCountV1Response) ApiInvoker.deserialize(localVarResponse,  "", DisclosureGetCommunicationCountV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Retrieve Communication list
+  * 
+   * @param pkiDisclosureID 
+   * @return DisclosureGetCommunicationListV1Response
+  */
+  public DisclosureGetCommunicationListV1Response disclosureGetCommunicationListV1 (Integer pkiDisclosureID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiDisclosureID' is set
+    if (pkiDisclosureID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiDisclosureID' when calling disclosureGetCommunicationListV1",
+        new ApiException(400, "Missing the required parameter 'pkiDisclosureID' when calling disclosureGetCommunicationListV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/disclosure/{pkiDisclosureID}/getCommunicationList".replaceAll("\\{" + "pkiDisclosureID" + "\\}", apiInvoker.escapeString(pkiDisclosureID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (DisclosureGetCommunicationListV1Response) ApiInvoker.deserialize(localVarResponse, "", DisclosureGetCommunicationListV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve Communication list
+   * 
+   * @param pkiDisclosureID 
+  */
+  public void disclosureGetCommunicationListV1 (Integer pkiDisclosureID, final Response.Listener<DisclosureGetCommunicationListV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiDisclosureID' is set
+    if (pkiDisclosureID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiDisclosureID' when calling disclosureGetCommunicationListV1",
+        new ApiException(400, "Missing the required parameter 'pkiDisclosureID' when calling disclosureGetCommunicationListV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/disclosure/{pkiDisclosureID}/getCommunicationList".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiDisclosureID" + "\\}", apiInvoker.escapeString(pkiDisclosureID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((DisclosureGetCommunicationListV1Response) ApiInvoker.deserialize(localVarResponse,  "", DisclosureGetCommunicationListV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Retrieve Communication recipients
+  * 
+   * @param pkiDisclosureID 
+   * @return DisclosureGetCommunicationrecipientsV1Response
+  */
+  public DisclosureGetCommunicationrecipientsV1Response disclosureGetCommunicationrecipientsV1 (Integer pkiDisclosureID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiDisclosureID' is set
+    if (pkiDisclosureID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiDisclosureID' when calling disclosureGetCommunicationrecipientsV1",
+        new ApiException(400, "Missing the required parameter 'pkiDisclosureID' when calling disclosureGetCommunicationrecipientsV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/disclosure/{pkiDisclosureID}/getCommunicationrecipients".replaceAll("\\{" + "pkiDisclosureID" + "\\}", apiInvoker.escapeString(pkiDisclosureID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (DisclosureGetCommunicationrecipientsV1Response) ApiInvoker.deserialize(localVarResponse, "", DisclosureGetCommunicationrecipientsV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve Communication recipients
+   * 
+   * @param pkiDisclosureID 
+  */
+  public void disclosureGetCommunicationrecipientsV1 (Integer pkiDisclosureID, final Response.Listener<DisclosureGetCommunicationrecipientsV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiDisclosureID' is set
+    if (pkiDisclosureID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiDisclosureID' when calling disclosureGetCommunicationrecipientsV1",
+        new ApiException(400, "Missing the required parameter 'pkiDisclosureID' when calling disclosureGetCommunicationrecipientsV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/disclosure/{pkiDisclosureID}/getCommunicationrecipients".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiDisclosureID" + "\\}", apiInvoker.escapeString(pkiDisclosureID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((DisclosureGetCommunicationrecipientsV1Response) ApiInvoker.deserialize(localVarResponse,  "", DisclosureGetCommunicationrecipientsV1Response.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Retrieve Communication senders
+  * 
+   * @param pkiDisclosureID 
+   * @return DisclosureGetCommunicationsendersV1Response
+  */
+  public DisclosureGetCommunicationsendersV1Response disclosureGetCommunicationsendersV1 (Integer pkiDisclosureID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'pkiDisclosureID' is set
+    if (pkiDisclosureID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiDisclosureID' when calling disclosureGetCommunicationsendersV1",
+        new ApiException(400, "Missing the required parameter 'pkiDisclosureID' when calling disclosureGetCommunicationsendersV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/disclosure/{pkiDisclosureID}/getCommunicationsenders".replaceAll("\\{" + "pkiDisclosureID" + "\\}", apiInvoker.escapeString(pkiDisclosureID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (DisclosureGetCommunicationsendersV1Response) ApiInvoker.deserialize(localVarResponse, "", DisclosureGetCommunicationsendersV1Response.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve Communication senders
+   * 
+   * @param pkiDisclosureID 
+  */
+  public void disclosureGetCommunicationsendersV1 (Integer pkiDisclosureID, final Response.Listener<DisclosureGetCommunicationsendersV1Response> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'pkiDisclosureID' is set
+    if (pkiDisclosureID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'pkiDisclosureID' when calling disclosureGetCommunicationsendersV1",
+        new ApiException(400, "Missing the required parameter 'pkiDisclosureID' when calling disclosureGetCommunicationsendersV1"));
+    }
+
+    // create path and map variables
+    String path = "/1/object/disclosure/{pkiDisclosureID}/getCommunicationsenders".replaceAll("\\{format\\}","json").replaceAll("\\{" + "pkiDisclosureID" + "\\}", apiInvoker.escapeString(pkiDisclosureID.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] { "Authorization" };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((DisclosureGetCommunicationsendersV1Response) ApiInvoker.deserialize(localVarResponse,  "", DisclosureGetCommunicationsendersV1Response.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

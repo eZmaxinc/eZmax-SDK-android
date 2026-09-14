@@ -7,6 +7,10 @@ Method | HTTP request | Description
 [**agentBatchDownloadV1**](ObjectAgentApi.md#agentBatchDownloadV1) | **POST** /1/object/agent/{pkiAgentID}/batchDownload | Download multiples attachments from a Agent
 [**agentGetAttachmentsV1**](ObjectAgentApi.md#agentGetAttachmentsV1) | **GET** /1/object/agent/{pkiAgentID}/getAttachments | Retrieve Agent&#39;s attachments
 [**agentGetAutocompleteV2**](ObjectAgentApi.md#agentGetAutocompleteV2) | **GET** /2/object/agent/getAutocomplete/{sSelector} | Retrieve Agents and IDs
+[**agentGetCommunicationCountV1**](ObjectAgentApi.md#agentGetCommunicationCountV1) | **GET** /1/object/agent/{pkiAgentID}/getCommunicationCount | Retrieve Communication count
+[**agentGetCommunicationListV1**](ObjectAgentApi.md#agentGetCommunicationListV1) | **GET** /1/object/agent/{pkiAgentID}/getCommunicationList | Retrieve Communication list
+[**agentGetCommunicationrecipientsV1**](ObjectAgentApi.md#agentGetCommunicationrecipientsV1) | **GET** /1/object/agent/{pkiAgentID}/getCommunicationrecipients | Retrieve Communication recipients
+[**agentGetCommunicationsendersV1**](ObjectAgentApi.md#agentGetCommunicationsendersV1) | **GET** /1/object/agent/{pkiAgentID}/getCommunicationsenders | Retrieve Communication senders
 [**agentGetListV1**](ObjectAgentApi.md#agentGetListV1) | **GET** /1/object/agent/getList | Retrieve Agent list
 [**agentImportIntoEDMV1**](ObjectAgentApi.md#agentImportIntoEDMV1) | **POST** /1/object/agent/{pkiAgentID}/importIntoEDM | Import attachments into the Agent
 
@@ -143,6 +147,182 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AgentGetAutocompleteV2Response**](AgentGetAutocompleteV2Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## agentGetCommunicationCountV1
+
+> AgentGetCommunicationCountV1Response agentGetCommunicationCountV1(pkiAgentID)
+
+Retrieve Communication count
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectAgentApi;
+
+ObjectAgentApi apiInstance = new ObjectAgentApi();
+Integer pkiAgentID = null; // Integer | 
+try {
+    AgentGetCommunicationCountV1Response result = apiInstance.agentGetCommunicationCountV1(pkiAgentID);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectAgentApi#agentGetCommunicationCountV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiAgentID** | **Integer**|  | [default to null]
+
+### Return type
+
+[**AgentGetCommunicationCountV1Response**](AgentGetCommunicationCountV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## agentGetCommunicationListV1
+
+> AgentGetCommunicationListV1Response agentGetCommunicationListV1(pkiAgentID)
+
+Retrieve Communication list
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectAgentApi;
+
+ObjectAgentApi apiInstance = new ObjectAgentApi();
+Integer pkiAgentID = null; // Integer | 
+try {
+    AgentGetCommunicationListV1Response result = apiInstance.agentGetCommunicationListV1(pkiAgentID);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectAgentApi#agentGetCommunicationListV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiAgentID** | **Integer**|  | [default to null]
+
+### Return type
+
+[**AgentGetCommunicationListV1Response**](AgentGetCommunicationListV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## agentGetCommunicationrecipientsV1
+
+> AgentGetCommunicationrecipientsV1Response agentGetCommunicationrecipientsV1(pkiAgentID)
+
+Retrieve Communication recipients
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectAgentApi;
+
+ObjectAgentApi apiInstance = new ObjectAgentApi();
+Integer pkiAgentID = null; // Integer | 
+try {
+    AgentGetCommunicationrecipientsV1Response result = apiInstance.agentGetCommunicationrecipientsV1(pkiAgentID);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectAgentApi#agentGetCommunicationrecipientsV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiAgentID** | **Integer**|  | [default to null]
+
+### Return type
+
+[**AgentGetCommunicationrecipientsV1Response**](AgentGetCommunicationrecipientsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## agentGetCommunicationsendersV1
+
+> AgentGetCommunicationsendersV1Response agentGetCommunicationsendersV1(pkiAgentID)
+
+Retrieve Communication senders
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.ObjectAgentApi;
+
+ObjectAgentApi apiInstance = new ObjectAgentApi();
+Integer pkiAgentID = null; // Integer | 
+try {
+    AgentGetCommunicationsendersV1Response result = apiInstance.agentGetCommunicationsendersV1(pkiAgentID);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ObjectAgentApi#agentGetCommunicationsendersV1");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiAgentID** | **Integer**|  | [default to null]
+
+### Return type
+
+[**AgentGetCommunicationsendersV1Response**](AgentGetCommunicationsendersV1Response.md)
 
 ### Authorization
 

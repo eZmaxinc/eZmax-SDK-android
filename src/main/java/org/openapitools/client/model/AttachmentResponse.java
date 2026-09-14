@@ -124,6 +124,8 @@ public class AttachmentResponse {
   private FieldEAttachmentDocumenttype eAttachmentDocumenttype = null;
   @SerializedName("sAttachmentName")
   private String sAttachmentName = null;
+  @SerializedName("sAttachmentCategory")
+  private String sAttachmentCategory = null;
   @SerializedName("eAttachmentPrivacy")
   private FieldEAttachmentPrivacy eAttachmentPrivacy = null;
   @SerializedName("fkiUserIDSpecific")
@@ -764,6 +766,17 @@ public class AttachmentResponse {
   }
 
   /**
+   * The attachment category
+   **/
+  @ApiModelProperty(required = true, value = "The attachment category")
+  public String getSAttachmentCategory() {
+    return sAttachmentCategory;
+  }
+  public void setSAttachmentCategory(String sAttachmentCategory) {
+    this.sAttachmentCategory = sAttachmentCategory;
+  }
+
+  /**
    **/
   @ApiModelProperty(required = true, value = "")
   public FieldEAttachmentPrivacy getEAttachmentPrivacy() {
@@ -956,6 +969,7 @@ public class AttachmentResponse {
         (this.fkiEzsigndocumentIDReference == null ? attachmentResponse.fkiEzsigndocumentIDReference == null : this.fkiEzsigndocumentIDReference.equals(attachmentResponse.fkiEzsigndocumentIDReference)) &&
         (this.eAttachmentDocumenttype == null ? attachmentResponse.eAttachmentDocumenttype == null : this.eAttachmentDocumenttype.equals(attachmentResponse.eAttachmentDocumenttype)) &&
         (this.sAttachmentName == null ? attachmentResponse.sAttachmentName == null : this.sAttachmentName.equals(attachmentResponse.sAttachmentName)) &&
+        (this.sAttachmentCategory == null ? attachmentResponse.sAttachmentCategory == null : this.sAttachmentCategory.equals(attachmentResponse.sAttachmentCategory)) &&
         (this.eAttachmentPrivacy == null ? attachmentResponse.eAttachmentPrivacy == null : this.eAttachmentPrivacy.equals(attachmentResponse.eAttachmentPrivacy)) &&
         (this.fkiUserIDSpecific == null ? attachmentResponse.fkiUserIDSpecific == null : this.fkiUserIDSpecific.equals(attachmentResponse.fkiUserIDSpecific)) &&
         (this.eAttachmentType == null ? attachmentResponse.eAttachmentType == null : this.eAttachmentType.equals(attachmentResponse.eAttachmentType)) &&
@@ -1022,6 +1036,7 @@ public class AttachmentResponse {
     result = 31 * result + (this.fkiEzsigndocumentIDReference == null ? 0: this.fkiEzsigndocumentIDReference.hashCode());
     result = 31 * result + (this.eAttachmentDocumenttype == null ? 0: this.eAttachmentDocumenttype.hashCode());
     result = 31 * result + (this.sAttachmentName == null ? 0: this.sAttachmentName.hashCode());
+    result = 31 * result + (this.sAttachmentCategory == null ? 0: this.sAttachmentCategory.hashCode());
     result = 31 * result + (this.eAttachmentPrivacy == null ? 0: this.eAttachmentPrivacy.hashCode());
     result = 31 * result + (this.fkiUserIDSpecific == null ? 0: this.fkiUserIDSpecific.hashCode());
     result = 31 * result + (this.eAttachmentType == null ? 0: this.eAttachmentType.hashCode());
@@ -1091,6 +1106,7 @@ public class AttachmentResponse {
     sb.append("  fkiEzsigndocumentIDReference: ").append(fkiEzsigndocumentIDReference).append("\n");
     sb.append("  eAttachmentDocumenttype: ").append(eAttachmentDocumenttype).append("\n");
     sb.append("  sAttachmentName: ").append(sAttachmentName).append("\n");
+    sb.append("  sAttachmentCategory: ").append(sAttachmentCategory).append("\n");
     sb.append("  eAttachmentPrivacy: ").append(eAttachmentPrivacy).append("\n");
     sb.append("  fkiUserIDSpecific: ").append(fkiUserIDSpecific).append("\n");
     sb.append("  eAttachmentType: ").append(eAttachmentType).append("\n");
